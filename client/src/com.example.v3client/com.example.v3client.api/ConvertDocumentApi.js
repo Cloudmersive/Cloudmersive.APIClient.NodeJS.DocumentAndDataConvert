@@ -16,32 +16,32 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['com.example.v3client/ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.Convertapi) {
-      root.Convertapi = {};
+    if (!root.CloudmersiveConvertApiClient) {
+      root.CloudmersiveConvertApiClient = {};
     }
-    root.Convertapi.ConvertDocumentApi = factory(root.Convertapi.ApiClient);
+    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
    * ConvertDocument service.
-   * @module api/ConvertDocumentApi
+   * @module com.example.v3client/com.example.v3client.api/ConvertDocumentApi
    * @version v1
    */
 
   /**
    * Constructs a new ConvertDocumentApi. 
-   * @alias module:api/ConvertDocumentApi
+   * @alias module:com.example.v3client/com.example.v3client.api/ConvertDocumentApi
    * @class
-   * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-   * default to {@link module:ApiClient#instance} if unspecified.
+   * @param {module:com.example.v3client/ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:com.example.v3client/ApiClient#instance} if unspecified.
    */
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
@@ -49,7 +49,7 @@
 
     /**
      * Callback function to receive the result of the convertDocumentAutodetectToPdf operation.
-     * @callback module:api/ConvertDocumentApi~convertDocumentAutodetectToPdfCallback
+     * @callback module:com.example.v3client/com.example.v3client.api/ConvertDocumentApi~convertDocumentAutodetectToPdfCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -59,7 +59,7 @@
      * Convert Document to PDF
      * Automatically detect file type and convert it to PDF.
      * @param {File} inputFile Input file to perform the operation on.
-     * @param {module:api/ConvertDocumentApi~convertDocumentAutodetectToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.example.v3client/com.example.v3client.api/ConvertDocumentApi~convertDocumentAutodetectToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertDocumentAutodetectToPdf = function(inputFile, callback) {
@@ -97,7 +97,7 @@
 
     /**
      * Callback function to receive the result of the convertDocumentDocxToPdf operation.
-     * @callback module:api/ConvertDocumentApi~convertDocumentDocxToPdfCallback
+     * @callback module:com.example.v3client/com.example.v3client.api/ConvertDocumentApi~convertDocumentDocxToPdfCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -107,7 +107,7 @@
      * Word DOCX to PDF
      * Convert Office Word Documents (docx) to standard PDF
      * @param {File} inputFile Input file to perform the operation on.
-     * @param {module:api/ConvertDocumentApi~convertDocumentDocxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.example.v3client/com.example.v3client.api/ConvertDocumentApi~convertDocumentDocxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertDocumentDocxToPdf = function(inputFile, callback) {
@@ -145,7 +145,7 @@
 
     /**
      * Callback function to receive the result of the convertDocumentPptxToPdf operation.
-     * @callback module:api/ConvertDocumentApi~convertDocumentPptxToPdfCallback
+     * @callback module:com.example.v3client/com.example.v3client.api/ConvertDocumentApi~convertDocumentPptxToPdfCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -155,7 +155,7 @@
      * PowerPoint PPTX to PDF
      * Convert Office PowerPoint Documents (pptx) to standard PDF
      * @param {File} inputFile Input file to perform the operation on.
-     * @param {module:api/ConvertDocumentApi~convertDocumentPptxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.example.v3client/com.example.v3client.api/ConvertDocumentApi~convertDocumentPptxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertDocumentPptxToPdf = function(inputFile, callback) {
@@ -193,7 +193,7 @@
 
     /**
      * Callback function to receive the result of the convertDocumentXlsxToCsv operation.
-     * @callback module:api/ConvertDocumentApi~convertDocumentXlsxToCsvCallback
+     * @callback module:com.example.v3client/com.example.v3client.api/ConvertDocumentApi~convertDocumentXlsxToCsvCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -203,7 +203,7 @@
      * Excel XLSX to CSV
      * Convert Office Excel Workbooks (xlsx) to standard Comma-Separated Values (CSV) format.
      * @param {File} inputFile Input file to perform the operation on.
-     * @param {module:api/ConvertDocumentApi~convertDocumentXlsxToCsvCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.example.v3client/com.example.v3client.api/ConvertDocumentApi~convertDocumentXlsxToCsvCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertDocumentXlsxToCsv = function(inputFile, callback) {
@@ -241,7 +241,7 @@
 
     /**
      * Callback function to receive the result of the convertDocumentXlsxToPdf operation.
-     * @callback module:api/ConvertDocumentApi~convertDocumentXlsxToPdfCallback
+     * @callback module:com.example.v3client/com.example.v3client.api/ConvertDocumentApi~convertDocumentXlsxToPdfCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -251,7 +251,7 @@
      * Excel XLSX to PDF
      * Convert Office Excel Workbooks (xlsx) to standard PDF.  Converts all worksheets in the workbook to PDF.
      * @param {File} inputFile Input file to perform the operation on.
-     * @param {module:api/ConvertDocumentApi~convertDocumentXlsxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.example.v3client/com.example.v3client.api/ConvertDocumentApi~convertDocumentXlsxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertDocumentXlsxToPdf = function(inputFile, callback) {

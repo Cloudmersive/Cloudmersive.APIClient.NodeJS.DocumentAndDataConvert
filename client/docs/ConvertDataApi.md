@@ -1,4 +1,4 @@
-# Convertapi.ConvertDataApi
+# CloudmersiveConvertApiClient.ConvertDataApi
 
 All URIs are relative to *https://api.cloudmersive.com*
 
@@ -18,9 +18,9 @@ Convert a CSV file to a JSON object array
 
 ### Example
 ```javascript
-var Convertapi = require('convertapi');
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
 
-var apiInstance = new Convertapi.ConvertDataApi();
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDataApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
@@ -64,9 +64,9 @@ Convert an XML string or file into JSON
 
 ### Example
 ```javascript
-var Convertapi = require('convertapi');
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
 
-var apiInstance = new Convertapi.ConvertDataApi();
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDataApi();
 
 var callback = function(error, data, response) {
   if (error) {

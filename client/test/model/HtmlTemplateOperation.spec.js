@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.Convertapi);
+    factory(root.expect, root.CloudmersiveConvertApiClient);
   }
-}(this, function(expect, Convertapi) {
+}(this, function(expect, CloudmersiveConvertApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new Convertapi.HtmlTemplateOperation();
+    instance = new CloudmersiveConvertApiClient.HtmlTemplateOperation();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('HtmlTemplateOperation', function() {
     it('should create an instance of HtmlTemplateOperation', function() {
       // uncomment below and update the code to test HtmlTemplateOperation
-      //var instane = new Convertapi.HtmlTemplateOperation();
-      //expect(instance).to.be.a(Convertapi.HtmlTemplateOperation);
+      //var instane = new CloudmersiveConvertApiClient.HtmlTemplateOperation();
+      //expect(instance).to.be.a(CloudmersiveConvertApiClient.HtmlTemplateOperation);
     });
 
     it('should have the property action (base name: "Action")', function() {
       // uncomment below and update the code to test the property action
-      //var instane = new Convertapi.HtmlTemplateOperation();
+      //var instane = new CloudmersiveConvertApiClient.HtmlTemplateOperation();
       //expect(instance).to.be();
     });
 
     it('should have the property matchAgsint (base name: "MatchAgsint")', function() {
       // uncomment below and update the code to test the property matchAgsint
-      //var instane = new Convertapi.HtmlTemplateOperation();
+      //var instane = new CloudmersiveConvertApiClient.HtmlTemplateOperation();
       //expect(instance).to.be();
     });
 
     it('should have the property replaceWith (base name: "ReplaceWith")', function() {
       // uncomment below and update the code to test the property replaceWith
-      //var instane = new Convertapi.HtmlTemplateOperation();
+      //var instane = new CloudmersiveConvertApiClient.HtmlTemplateOperation();
       //expect(instance).to.be();
     });
 

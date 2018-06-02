@@ -16,10 +16,10 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/HtmlTemplateApplicationRequest', 'model/HtmlTemplateApplicationResponse', 'model/HtmlTemplateOperation', 'model/HtmlToPdfRequest', 'model/ScreenshotRequest', 'api/ConvertDataApi', 'api/ConvertDocumentApi', 'api/ConvertImageApi', 'api/ConvertTemplateApi', 'api/ConvertWebApi'], factory);
+    define(['com.example.v3client/ApiClient', 'com.example.v3client/com.example.v3client.model/HtmlTemplateApplicationRequest', 'com.example.v3client/com.example.v3client.model/HtmlTemplateApplicationResponse', 'com.example.v3client/com.example.v3client.model/HtmlTemplateOperation', 'com.example.v3client/com.example.v3client.model/HtmlToPdfRequest', 'com.example.v3client/com.example.v3client.model/ScreenshotRequest', 'com.example.v3client/com.example.v3client.api/ConvertDataApi', 'com.example.v3client/com.example.v3client.api/ConvertDocumentApi', 'com.example.v3client/com.example.v3client.api/ConvertImageApi', 'com.example.v3client/com.example.v3client.api/ConvertTemplateApi', 'com.example.v3client/com.example.v3client.api/ConvertWebApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/HtmlTemplateApplicationRequest'), require('./model/HtmlTemplateApplicationResponse'), require('./model/HtmlTemplateOperation'), require('./model/HtmlToPdfRequest'), require('./model/ScreenshotRequest'), require('./api/ConvertDataApi'), require('./api/ConvertDocumentApi'), require('./api/ConvertImageApi'), require('./api/ConvertTemplateApi'), require('./api/ConvertWebApi'));
+    module.exports = factory(require('./ApiClient'), require('./com.example.v3client.model/HtmlTemplateApplicationRequest'), require('./com.example.v3client.model/HtmlTemplateApplicationResponse'), require('./com.example.v3client.model/HtmlTemplateOperation'), require('./com.example.v3client.model/HtmlToPdfRequest'), require('./com.example.v3client.model/ScreenshotRequest'), require('./com.example.v3client.api/ConvertDataApi'), require('./com.example.v3client.api/ConvertDocumentApi'), require('./com.example.v3client.api/ConvertImageApi'), require('./com.example.v3client.api/ConvertTemplateApi'), require('./com.example.v3client.api/ConvertWebApi'));
   }
 }(function(ApiClient, HtmlTemplateApplicationRequest, HtmlTemplateApplicationResponse, HtmlTemplateOperation, HtmlToPdfRequest, ScreenshotRequest, ConvertDataApi, ConvertDocumentApi, ConvertImageApi, ConvertTemplateApi, ConvertWebApi) {
   'use strict';
@@ -30,85 +30,85 @@
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
    * <pre>
-   * var Convertapi = require('index'); // See note below*.
-   * var xxxSvc = new Convertapi.XxxApi(); // Allocate the API class we're going to use.
-   * var yyyModel = new Convertapi.Yyy(); // Construct a model instance.
+   * var CloudmersiveConvertApiClient = require('com.example.v3client/index'); // See note below*.
+   * var xxxSvc = new CloudmersiveConvertApiClient.XxxApi(); // Allocate the API class we're going to use.
+   * var yyyModel = new CloudmersiveConvertApiClient.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
    * ...
    * </pre>
-   * <em>*NOTE: For a top-level AMD script, use require(['index'], function(){...})
+   * <em>*NOTE: For a top-level AMD script, use require(['com.example.v3client/index'], function(){...})
    * and put the application logic within the callback function.</em>
    * </p>
    * <p>
    * A non-AMD browser application (discouraged) might do something like this:
    * <pre>
-   * var xxxSvc = new Convertapi.XxxApi(); // Allocate the API class we're going to use.
-   * var yyy = new Convertapi.Yyy(); // Construct a model instance.
+   * var xxxSvc = new CloudmersiveConvertApiClient.XxxApi(); // Allocate the API class we're going to use.
+   * var yyy = new CloudmersiveConvertApiClient.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
    * ...
    * </pre>
    * </p>
-   * @module index
+   * @module com.example.v3client/index
    * @version v1
    */
   var exports = {
     /**
      * The ApiClient constructor.
-     * @property {module:ApiClient}
+     * @property {module:com.example.v3client/ApiClient}
      */
     ApiClient: ApiClient,
     /**
      * The HtmlTemplateApplicationRequest model constructor.
-     * @property {module:model/HtmlTemplateApplicationRequest}
+     * @property {module:com.example.v3client/com.example.v3client.model/HtmlTemplateApplicationRequest}
      */
     HtmlTemplateApplicationRequest: HtmlTemplateApplicationRequest,
     /**
      * The HtmlTemplateApplicationResponse model constructor.
-     * @property {module:model/HtmlTemplateApplicationResponse}
+     * @property {module:com.example.v3client/com.example.v3client.model/HtmlTemplateApplicationResponse}
      */
     HtmlTemplateApplicationResponse: HtmlTemplateApplicationResponse,
     /**
      * The HtmlTemplateOperation model constructor.
-     * @property {module:model/HtmlTemplateOperation}
+     * @property {module:com.example.v3client/com.example.v3client.model/HtmlTemplateOperation}
      */
     HtmlTemplateOperation: HtmlTemplateOperation,
     /**
      * The HtmlToPdfRequest model constructor.
-     * @property {module:model/HtmlToPdfRequest}
+     * @property {module:com.example.v3client/com.example.v3client.model/HtmlToPdfRequest}
      */
     HtmlToPdfRequest: HtmlToPdfRequest,
     /**
      * The ScreenshotRequest model constructor.
-     * @property {module:model/ScreenshotRequest}
+     * @property {module:com.example.v3client/com.example.v3client.model/ScreenshotRequest}
      */
     ScreenshotRequest: ScreenshotRequest,
     /**
      * The ConvertDataApi service constructor.
-     * @property {module:api/ConvertDataApi}
+     * @property {module:com.example.v3client/com.example.v3client.api/ConvertDataApi}
      */
     ConvertDataApi: ConvertDataApi,
     /**
      * The ConvertDocumentApi service constructor.
-     * @property {module:api/ConvertDocumentApi}
+     * @property {module:com.example.v3client/com.example.v3client.api/ConvertDocumentApi}
      */
     ConvertDocumentApi: ConvertDocumentApi,
     /**
      * The ConvertImageApi service constructor.
-     * @property {module:api/ConvertImageApi}
+     * @property {module:com.example.v3client/com.example.v3client.api/ConvertImageApi}
      */
     ConvertImageApi: ConvertImageApi,
     /**
      * The ConvertTemplateApi service constructor.
-     * @property {module:api/ConvertTemplateApi}
+     * @property {module:com.example.v3client/com.example.v3client.api/ConvertTemplateApi}
      */
     ConvertTemplateApi: ConvertTemplateApi,
     /**
      * The ConvertWebApi service constructor.
-     * @property {module:api/ConvertWebApi}
+     * @property {module:com.example.v3client/com.example.v3client.api/ConvertWebApi}
      */
     ConvertWebApi: ConvertWebApi
   };

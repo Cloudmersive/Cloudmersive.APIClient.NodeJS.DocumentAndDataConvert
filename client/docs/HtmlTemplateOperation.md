@@ -1,4 +1,4 @@
-# Convertapi.HtmlTemplateOperation
+# CloudmersiveConvertApiClient.HtmlTemplateOperation
 
 ## Properties
 Name | Type | Description | Notes

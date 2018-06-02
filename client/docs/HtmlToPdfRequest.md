@@ -1,4 +1,4 @@
-# Convertapi.HtmlToPdfRequest
+# CloudmersiveConvertApiClient.HtmlToPdfRequest
 
 ## Properties
 Name | Type | Description | Notes

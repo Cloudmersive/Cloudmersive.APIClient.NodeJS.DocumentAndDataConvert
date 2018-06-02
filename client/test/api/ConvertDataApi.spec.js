@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.Convertapi);
+    factory(root.expect, root.CloudmersiveConvertApiClient);
   }
-}(this, function(expect, Convertapi) {
+}(this, function(expect, CloudmersiveConvertApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new Convertapi.ConvertDataApi();
+    instance = new CloudmersiveConvertApiClient.ConvertDataApi();
   });
 
   var getProperty = function(object, getter, property) {

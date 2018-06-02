@@ -16,32 +16,32 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/HtmlTemplateApplicationRequest', 'model/HtmlTemplateApplicationResponse'], factory);
+    define(['com.example.v3client/ApiClient', 'com.example.v3client/com.example.v3client.model/HtmlTemplateApplicationRequest', 'com.example.v3client/com.example.v3client.model/HtmlTemplateApplicationResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/HtmlTemplateApplicationRequest'), require('../model/HtmlTemplateApplicationResponse'));
+    module.exports = factory(require('../ApiClient'), require('../com.example.v3client.model/HtmlTemplateApplicationRequest'), require('../com.example.v3client.model/HtmlTemplateApplicationResponse'));
   } else {
     // Browser globals (root is window)
-    if (!root.Convertapi) {
-      root.Convertapi = {};
+    if (!root.CloudmersiveConvertApiClient) {
+      root.CloudmersiveConvertApiClient = {};
     }
-    root.Convertapi.ConvertTemplateApi = factory(root.Convertapi.ApiClient, root.Convertapi.HtmlTemplateApplicationRequest, root.Convertapi.HtmlTemplateApplicationResponse);
+    root.CloudmersiveConvertApiClient.ConvertTemplateApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.HtmlTemplateApplicationRequest, root.CloudmersiveConvertApiClient.HtmlTemplateApplicationResponse);
   }
 }(this, function(ApiClient, HtmlTemplateApplicationRequest, HtmlTemplateApplicationResponse) {
   'use strict';
 
   /**
    * ConvertTemplate service.
-   * @module api/ConvertTemplateApi
+   * @module com.example.v3client/com.example.v3client.api/ConvertTemplateApi
    * @version v1
    */
 
   /**
    * Constructs a new ConvertTemplateApi. 
-   * @alias module:api/ConvertTemplateApi
+   * @alias module:com.example.v3client/com.example.v3client.api/ConvertTemplateApi
    * @class
-   * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-   * default to {@link module:ApiClient#instance} if unspecified.
+   * @param {module:com.example.v3client/ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:com.example.v3client/ApiClient#instance} if unspecified.
    */
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
@@ -49,18 +49,18 @@
 
     /**
      * Callback function to receive the result of the convertTemplateApplyHtmlTemplate operation.
-     * @callback module:api/ConvertTemplateApi~convertTemplateApplyHtmlTemplateCallback
+     * @callback module:com.example.v3client/com.example.v3client.api/ConvertTemplateApi~convertTemplateApplyHtmlTemplateCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HtmlTemplateApplicationResponse} data The data returned by the service call.
+     * @param {module:com.example.v3client/com.example.v3client.model/HtmlTemplateApplicationResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Apply HTML template
      * Apply operations to fill in an HTML template, generating a final HTML result
-     * @param {module:model/HtmlTemplateApplicationRequest} value Operations to apply to template
-     * @param {module:api/ConvertTemplateApi~convertTemplateApplyHtmlTemplateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HtmlTemplateApplicationResponse}
+     * @param {module:com.example.v3client/com.example.v3client.model/HtmlTemplateApplicationRequest} value Operations to apply to template
+     * @param {module:com.example.v3client/com.example.v3client.api/ConvertTemplateApi~convertTemplateApplyHtmlTemplateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:com.example.v3client/com.example.v3client.model/HtmlTemplateApplicationResponse}
      */
     this.convertTemplateApplyHtmlTemplate = function(value, callback) {
       var postBody = value;

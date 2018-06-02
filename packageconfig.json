@@ -1,0 +1,6 @@
+﻿{
+  "modelPackage" : "com.example.v3client.model",
+  "apiPackage"   : "com.example.v3client.api",
+  "invokerPackage" : "com.example.v3client",
+  "projectName" : "cloudmersive-convert-api-client"
+}  

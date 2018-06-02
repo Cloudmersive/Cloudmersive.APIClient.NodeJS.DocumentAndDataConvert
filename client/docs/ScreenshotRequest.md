@@ -1,4 +1,4 @@
-# Convertapi.ScreenshotRequest
+# CloudmersiveConvertApiClient.ScreenshotRequest
 
 ## Properties
 Name | Type | Description | Notes

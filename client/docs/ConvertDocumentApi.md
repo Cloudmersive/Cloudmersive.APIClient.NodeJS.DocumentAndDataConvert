@@ -1,4 +1,4 @@
-# Convertapi.ConvertDocumentApi
+# CloudmersiveConvertApiClient.ConvertDocumentApi
 
 All URIs are relative to *https://api.cloudmersive.com*
 
@@ -21,9 +21,9 @@ Automatically detect file type and convert it to PDF.
 
 ### Example
 ```javascript
-var Convertapi = require('convertapi');
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
 
-var apiInstance = new Convertapi.ConvertDocumentApi();
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
@@ -67,9 +67,9 @@ Convert Office Word Documents (docx) to standard PDF
 
 ### Example
 ```javascript
-var Convertapi = require('convertapi');
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
 
-var apiInstance = new Convertapi.ConvertDocumentApi();
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
@@ -113,9 +113,9 @@ Convert Office PowerPoint Documents (pptx) to standard PDF
 
 ### Example
 ```javascript
-var Convertapi = require('convertapi');
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
 
-var apiInstance = new Convertapi.ConvertDocumentApi();
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
@@ -159,9 +159,9 @@ Convert Office Excel Workbooks (xlsx) to standard Comma-Separated Values (CSV) f
 
 ### Example
 ```javascript
-var Convertapi = require('convertapi');
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
 
-var apiInstance = new Convertapi.ConvertDocumentApi();
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
@@ -205,9 +205,9 @@ Convert Office Excel Workbooks (xlsx) to standard PDF.  Converts all worksheets 
 
 ### Example
 ```javascript
-var Convertapi = require('convertapi');
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
 
-var apiInstance = new Convertapi.ConvertDocumentApi();
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 

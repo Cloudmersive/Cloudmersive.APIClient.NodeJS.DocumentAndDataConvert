@@ -16,16 +16,16 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['com.example.v3client/ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.Convertapi) {
-      root.Convertapi = {};
+    if (!root.CloudmersiveConvertApiClient) {
+      root.CloudmersiveConvertApiClient = {};
     }
-    root.Convertapi.HtmlTemplateOperation = factory(root.Convertapi.ApiClient);
+    root.CloudmersiveConvertApiClient.HtmlTemplateOperation = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -35,13 +35,13 @@
 
   /**
    * The HtmlTemplateOperation model module.
-   * @module model/HtmlTemplateOperation
+   * @module com.example.v3client/com.example.v3client.model/HtmlTemplateOperation
    * @version v1
    */
 
   /**
    * Constructs a new <code>HtmlTemplateOperation</code>.
-   * @alias module:model/HtmlTemplateOperation
+   * @alias module:com.example.v3client/com.example.v3client.model/HtmlTemplateOperation
    * @class
    */
   var exports = function() {
@@ -56,8 +56,8 @@
    * Constructs a <code>HtmlTemplateOperation</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/HtmlTemplateOperation} obj Optional instance to populate.
-   * @return {module:model/HtmlTemplateOperation} The populated <code>HtmlTemplateOperation</code> instance.
+   * @param {module:com.example.v3client/com.example.v3client.model/HtmlTemplateOperation} obj Optional instance to populate.
+   * @return {module:com.example.v3client/com.example.v3client.model/HtmlTemplateOperation} The populated <code>HtmlTemplateOperation</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -77,7 +77,7 @@
   }
 
   /**
-   * @member {module:model/HtmlTemplateOperation.ActionEnum} Action
+   * @member {module:com.example.v3client/com.example.v3client.model/HtmlTemplateOperation.ActionEnum} Action
    */
   exports.prototype['Action'] = undefined;
   /**

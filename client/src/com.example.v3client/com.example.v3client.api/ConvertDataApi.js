@@ -16,32 +16,32 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['com.example.v3client/ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.Convertapi) {
-      root.Convertapi = {};
+    if (!root.CloudmersiveConvertApiClient) {
+      root.CloudmersiveConvertApiClient = {};
     }
-    root.Convertapi.ConvertDataApi = factory(root.Convertapi.ApiClient);
+    root.CloudmersiveConvertApiClient.ConvertDataApi = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
    * ConvertData service.
-   * @module api/ConvertDataApi
+   * @module com.example.v3client/com.example.v3client.api/ConvertDataApi
    * @version v1
    */
 
   /**
    * Constructs a new ConvertDataApi. 
-   * @alias module:api/ConvertDataApi
+   * @alias module:com.example.v3client/com.example.v3client.api/ConvertDataApi
    * @class
-   * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-   * default to {@link module:ApiClient#instance} if unspecified.
+   * @param {module:com.example.v3client/ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:com.example.v3client/ApiClient#instance} if unspecified.
    */
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
@@ -49,7 +49,7 @@
 
     /**
      * Callback function to receive the result of the convertDataCsvToJson operation.
-     * @callback module:api/ConvertDataApi~convertDataCsvToJsonCallback
+     * @callback module:com.example.v3client/com.example.v3client.api/ConvertDataApi~convertDataCsvToJsonCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -59,7 +59,7 @@
      * CSV to JSON conversion
      * Convert a CSV file to a JSON object array
      * @param {File} inputFile Input file to perform the operation on.
-     * @param {module:api/ConvertDataApi~convertDataCsvToJsonCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.example.v3client/com.example.v3client.api/ConvertDataApi~convertDataCsvToJsonCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     this.convertDataCsvToJson = function(inputFile, callback) {
@@ -97,7 +97,7 @@
 
     /**
      * Callback function to receive the result of the convertDataXmlToJson operation.
-     * @callback module:api/ConvertDataApi~convertDataXmlToJsonCallback
+     * @callback module:com.example.v3client/com.example.v3client.api/ConvertDataApi~convertDataXmlToJsonCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -106,7 +106,7 @@
     /**
      * XML to JSON conversion
      * Convert an XML string or file into JSON
-     * @param {module:api/ConvertDataApi~convertDataXmlToJsonCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.example.v3client/com.example.v3client.api/ConvertDataApi~convertDataXmlToJsonCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     this.convertDataXmlToJson = function(callback) {

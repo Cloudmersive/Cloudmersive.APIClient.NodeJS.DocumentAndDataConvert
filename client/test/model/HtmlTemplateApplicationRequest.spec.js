@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.Convertapi);
+    factory(root.expect, root.CloudmersiveConvertApiClient);
   }
-}(this, function(expect, Convertapi) {
+}(this, function(expect, CloudmersiveConvertApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new Convertapi.HtmlTemplateApplicationRequest();
+    instance = new CloudmersiveConvertApiClient.HtmlTemplateApplicationRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('HtmlTemplateApplicationRequest', function() {
     it('should create an instance of HtmlTemplateApplicationRequest', function() {
       // uncomment below and update the code to test HtmlTemplateApplicationRequest
-      //var instane = new Convertapi.HtmlTemplateApplicationRequest();
-      //expect(instance).to.be.a(Convertapi.HtmlTemplateApplicationRequest);
+      //var instane = new CloudmersiveConvertApiClient.HtmlTemplateApplicationRequest();
+      //expect(instance).to.be.a(CloudmersiveConvertApiClient.HtmlTemplateApplicationRequest);
     });
 
     it('should have the property htmlTemplate (base name: "HtmlTemplate")', function() {
       // uncomment below and update the code to test the property htmlTemplate
-      //var instane = new Convertapi.HtmlTemplateApplicationRequest();
+      //var instane = new CloudmersiveConvertApiClient.HtmlTemplateApplicationRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property htmlTemplateUrl (base name: "HtmlTemplateUrl")', function() {
       // uncomment below and update the code to test the property htmlTemplateUrl
-      //var instane = new Convertapi.HtmlTemplateApplicationRequest();
+      //var instane = new CloudmersiveConvertApiClient.HtmlTemplateApplicationRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property operations (base name: "Operations")', function() {
       // uncomment below and update the code to test the property operations
-      //var instane = new Convertapi.HtmlTemplateApplicationRequest();
+      //var instane = new CloudmersiveConvertApiClient.HtmlTemplateApplicationRequest();
       //expect(instance).to.be();
     });
 

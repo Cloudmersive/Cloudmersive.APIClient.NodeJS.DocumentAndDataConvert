@@ -1,4 +1,4 @@
-# Convertapi.ConvertTemplateApi
+# CloudmersiveConvertApiClient.ConvertTemplateApi
 
 All URIs are relative to *https://api.cloudmersive.com*
 
@@ -17,11 +17,11 @@ Apply operations to fill in an HTML template, generating a final HTML result
 
 ### Example
 ```javascript
-var Convertapi = require('convertapi');
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
 
-var apiInstance = new Convertapi.ConvertTemplateApi();
+var apiInstance = new CloudmersiveConvertApiClient.ConvertTemplateApi();
 
-var value = new Convertapi.HtmlTemplateApplicationRequest(); // HtmlTemplateApplicationRequest | Operations to apply to template
+var value = new CloudmersiveConvertApiClient.HtmlTemplateApplicationRequest(); // HtmlTemplateApplicationRequest | Operations to apply to template
 
 
 var callback = function(error, data, response) {

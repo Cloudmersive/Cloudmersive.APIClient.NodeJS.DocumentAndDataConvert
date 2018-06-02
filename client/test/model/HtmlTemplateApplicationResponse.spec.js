@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.Convertapi);
+    factory(root.expect, root.CloudmersiveConvertApiClient);
   }
-}(this, function(expect, Convertapi) {
+}(this, function(expect, CloudmersiveConvertApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new Convertapi.HtmlTemplateApplicationResponse();
+    instance = new CloudmersiveConvertApiClient.HtmlTemplateApplicationResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('HtmlTemplateApplicationResponse', function() {
     it('should create an instance of HtmlTemplateApplicationResponse', function() {
       // uncomment below and update the code to test HtmlTemplateApplicationResponse
-      //var instane = new Convertapi.HtmlTemplateApplicationResponse();
-      //expect(instance).to.be.a(Convertapi.HtmlTemplateApplicationResponse);
+      //var instane = new CloudmersiveConvertApiClient.HtmlTemplateApplicationResponse();
+      //expect(instance).to.be.a(CloudmersiveConvertApiClient.HtmlTemplateApplicationResponse);
     });
 
     it('should have the property successful (base name: "Successful")', function() {
       // uncomment below and update the code to test the property successful
-      //var instane = new Convertapi.HtmlTemplateApplicationResponse();
+      //var instane = new CloudmersiveConvertApiClient.HtmlTemplateApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property finalHtml (base name: "FinalHtml")', function() {
       // uncomment below and update the code to test the property finalHtml
-      //var instane = new Convertapi.HtmlTemplateApplicationResponse();
+      //var instane = new CloudmersiveConvertApiClient.HtmlTemplateApplicationResponse();
       //expect(instance).to.be();
     });
 

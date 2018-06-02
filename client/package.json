@@ -1,9 +1,9 @@
 {
-  "name": "convertapi",
+  "name": "cloudmersive-convert-api-client",
   "version": "1.0.0",
   "description": "ERROR_UNKNOWN",
   "license": "Unlicense",
-  "main": "src/index.js",
+  "main": "src/com.example.v3client/index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --recursive"
   },

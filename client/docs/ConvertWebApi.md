@@ -1,4 +1,4 @@
-# Convertapi.ConvertWebApi
+# CloudmersiveConvertApiClient.ConvertWebApi
 
 All URIs are relative to *https://api.cloudmersive.com*
 
@@ -19,11 +19,11 @@ Fully renders a website and returns a PDF of the HTML.  Javascript, HTML5, CSS a
 
 ### Example
 ```javascript
-var Convertapi = require('convertapi');
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
 
-var apiInstance = new Convertapi.ConvertWebApi();
+var apiInstance = new CloudmersiveConvertApiClient.ConvertWebApi();
 
-var input = new Convertapi.HtmlToPdfRequest(); // HtmlToPdfRequest | HTML to PDF request parameters
+var input = new CloudmersiveConvertApiClient.HtmlToPdfRequest(); // HtmlToPdfRequest | HTML to PDF request parameters
 
 
 var callback = function(error, data, response) {
@@ -65,11 +65,11 @@ Fully renders a website and returns a PDF of the full page.  Javascript, HTML5, 
 
 ### Example
 ```javascript
-var Convertapi = require('convertapi');
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
 
-var apiInstance = new Convertapi.ConvertWebApi();
+var apiInstance = new CloudmersiveConvertApiClient.ConvertWebApi();
 
-var input = new Convertapi.ScreenshotRequest(); // ScreenshotRequest | URL to PDF request parameters
+var input = new CloudmersiveConvertApiClient.ScreenshotRequest(); // ScreenshotRequest | URL to PDF request parameters
 
 
 var callback = function(error, data, response) {
@@ -111,11 +111,11 @@ Fully renders a website and returns a PNG screenshot of the full page image.  Ja
 
 ### Example
 ```javascript
-var Convertapi = require('convertapi');
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
 
-var apiInstance = new Convertapi.ConvertWebApi();
+var apiInstance = new CloudmersiveConvertApiClient.ConvertWebApi();
 
-var input = new Convertapi.ScreenshotRequest(); // ScreenshotRequest | Screenshot request parameters
+var input = new CloudmersiveConvertApiClient.ScreenshotRequest(); // ScreenshotRequest | Screenshot request parameters
 
 
 var callback = function(error, data, response) {

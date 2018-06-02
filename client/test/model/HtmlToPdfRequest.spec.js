@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.Convertapi);
+    factory(root.expect, root.CloudmersiveConvertApiClient);
   }
-}(this, function(expect, Convertapi) {
+}(this, function(expect, CloudmersiveConvertApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new Convertapi.HtmlToPdfRequest();
+    instance = new CloudmersiveConvertApiClient.HtmlToPdfRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('HtmlToPdfRequest', function() {
     it('should create an instance of HtmlToPdfRequest', function() {
       // uncomment below and update the code to test HtmlToPdfRequest
-      //var instane = new Convertapi.HtmlToPdfRequest();
-      //expect(instance).to.be.a(Convertapi.HtmlToPdfRequest);
+      //var instane = new CloudmersiveConvertApiClient.HtmlToPdfRequest();
+      //expect(instance).to.be.a(CloudmersiveConvertApiClient.HtmlToPdfRequest);
     });
 
     it('should have the property html (base name: "Html")', function() {
       // uncomment below and update the code to test the property html
-      //var instane = new Convertapi.HtmlToPdfRequest();
+      //var instane = new CloudmersiveConvertApiClient.HtmlToPdfRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property extraLoadingWait (base name: "ExtraLoadingWait")', function() {
       // uncomment below and update the code to test the property extraLoadingWait
-      //var instane = new Convertapi.HtmlToPdfRequest();
+      //var instane = new CloudmersiveConvertApiClient.HtmlToPdfRequest();
       //expect(instance).to.be();
     });
 

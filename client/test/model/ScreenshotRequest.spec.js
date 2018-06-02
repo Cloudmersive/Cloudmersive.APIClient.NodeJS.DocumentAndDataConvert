@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.Convertapi);
+    factory(root.expect, root.CloudmersiveConvertApiClient);
   }
-}(this, function(expect, Convertapi) {
+}(this, function(expect, CloudmersiveConvertApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new Convertapi.ScreenshotRequest();
+    instance = new CloudmersiveConvertApiClient.ScreenshotRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('ScreenshotRequest', function() {
     it('should create an instance of ScreenshotRequest', function() {
       // uncomment below and update the code to test ScreenshotRequest
-      //var instane = new Convertapi.ScreenshotRequest();
-      //expect(instance).to.be.a(Convertapi.ScreenshotRequest);
+      //var instane = new CloudmersiveConvertApiClient.ScreenshotRequest();
+      //expect(instance).to.be.a(CloudmersiveConvertApiClient.ScreenshotRequest);
     });
 
     it('should have the property url (base name: "Url")', function() {
       // uncomment below and update the code to test the property url
-      //var instane = new Convertapi.ScreenshotRequest();
+      //var instane = new CloudmersiveConvertApiClient.ScreenshotRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property extraLoadingWait (base name: "ExtraLoadingWait")', function() {
       // uncomment below and update the code to test the property extraLoadingWait
-      //var instane = new Convertapi.ScreenshotRequest();
+      //var instane = new CloudmersiveConvertApiClient.ScreenshotRequest();
       //expect(instance).to.be();
     });
 

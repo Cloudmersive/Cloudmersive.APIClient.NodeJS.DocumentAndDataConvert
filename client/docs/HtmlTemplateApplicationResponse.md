@@ -1,4 +1,4 @@
-# Convertapi.HtmlTemplateApplicationResponse
+# CloudmersiveConvertApiClient.HtmlTemplateApplicationResponse
 
 ## Properties
 Name | Type | Description | Notes

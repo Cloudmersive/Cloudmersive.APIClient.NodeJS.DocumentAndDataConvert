@@ -16,32 +16,32 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/HtmlToPdfRequest', 'model/ScreenshotRequest'], factory);
+    define(['com.example.v3client/ApiClient', 'com.example.v3client/com.example.v3client.model/HtmlToPdfRequest', 'com.example.v3client/com.example.v3client.model/ScreenshotRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/HtmlToPdfRequest'), require('../model/ScreenshotRequest'));
+    module.exports = factory(require('../ApiClient'), require('../com.example.v3client.model/HtmlToPdfRequest'), require('../com.example.v3client.model/ScreenshotRequest'));
   } else {
     // Browser globals (root is window)
-    if (!root.Convertapi) {
-      root.Convertapi = {};
+    if (!root.CloudmersiveConvertApiClient) {
+      root.CloudmersiveConvertApiClient = {};
     }
-    root.Convertapi.ConvertWebApi = factory(root.Convertapi.ApiClient, root.Convertapi.HtmlToPdfRequest, root.Convertapi.ScreenshotRequest);
+    root.CloudmersiveConvertApiClient.ConvertWebApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.HtmlToPdfRequest, root.CloudmersiveConvertApiClient.ScreenshotRequest);
   }
 }(this, function(ApiClient, HtmlToPdfRequest, ScreenshotRequest) {
   'use strict';
 
   /**
    * ConvertWeb service.
-   * @module api/ConvertWebApi
+   * @module com.example.v3client/com.example.v3client.api/ConvertWebApi
    * @version v1
    */
 
   /**
    * Constructs a new ConvertWebApi. 
-   * @alias module:api/ConvertWebApi
+   * @alias module:com.example.v3client/com.example.v3client.api/ConvertWebApi
    * @class
-   * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
-   * default to {@link module:ApiClient#instance} if unspecified.
+   * @param {module:com.example.v3client/ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:com.example.v3client/ApiClient#instance} if unspecified.
    */
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
@@ -49,7 +49,7 @@
 
     /**
      * Callback function to receive the result of the convertWebHtmlToPdf operation.
-     * @callback module:api/ConvertWebApi~convertWebHtmlToPdfCallback
+     * @callback module:com.example.v3client/com.example.v3client.api/ConvertWebApi~convertWebHtmlToPdfCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -58,8 +58,8 @@
     /**
      * Convert HTML string to PDF
      * Fully renders a website and returns a PDF of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
-     * @param {module:model/HtmlToPdfRequest} input HTML to PDF request parameters
-     * @param {module:api/ConvertWebApi~convertWebHtmlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.example.v3client/com.example.v3client.model/HtmlToPdfRequest} input HTML to PDF request parameters
+     * @param {module:com.example.v3client/com.example.v3client.api/ConvertWebApi~convertWebHtmlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     this.convertWebHtmlToPdf = function(input, callback) {
@@ -96,7 +96,7 @@
 
     /**
      * Callback function to receive the result of the convertWebUrlToPdf operation.
-     * @callback module:api/ConvertWebApi~convertWebUrlToPdfCallback
+     * @callback module:com.example.v3client/com.example.v3client.api/ConvertWebApi~convertWebUrlToPdfCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -105,8 +105,8 @@
     /**
      * Convert a URL to PDF
      * Fully renders a website and returns a PDF of the full page.  Javascript, HTML5, CSS and other advanced features are all supported.
-     * @param {module:model/ScreenshotRequest} input URL to PDF request parameters
-     * @param {module:api/ConvertWebApi~convertWebUrlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.example.v3client/com.example.v3client.model/ScreenshotRequest} input URL to PDF request parameters
+     * @param {module:com.example.v3client/com.example.v3client.api/ConvertWebApi~convertWebUrlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertWebUrlToPdf = function(input, callback) {
@@ -143,7 +143,7 @@
 
     /**
      * Callback function to receive the result of the convertWebUrlToScreenshot operation.
-     * @callback module:api/ConvertWebApi~convertWebUrlToScreenshotCallback
+     * @callback module:com.example.v3client/com.example.v3client.api/ConvertWebApi~convertWebUrlToScreenshotCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -152,8 +152,8 @@
     /**
      * Take screenshot of URL
      * Fully renders a website and returns a PNG screenshot of the full page image.  Javascript, HTML5, CSS and other advanced features are all supported.
-     * @param {module:model/ScreenshotRequest} input Screenshot request parameters
-     * @param {module:api/ConvertWebApi~convertWebUrlToScreenshotCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:com.example.v3client/com.example.v3client.model/ScreenshotRequest} input Screenshot request parameters
+     * @param {module:com.example.v3client/com.example.v3client.api/ConvertWebApi~convertWebUrlToScreenshotCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertWebUrlToScreenshot = function(input, callback) {

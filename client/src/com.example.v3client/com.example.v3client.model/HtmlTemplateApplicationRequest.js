@@ -16,16 +16,16 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/HtmlTemplateOperation'], factory);
+    define(['com.example.v3client/ApiClient', 'com.example.v3client/com.example.v3client.model/HtmlTemplateOperation'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'), require('./HtmlTemplateOperation'));
   } else {
     // Browser globals (root is window)
-    if (!root.Convertapi) {
-      root.Convertapi = {};
+    if (!root.CloudmersiveConvertApiClient) {
+      root.CloudmersiveConvertApiClient = {};
     }
-    root.Convertapi.HtmlTemplateApplicationRequest = factory(root.Convertapi.ApiClient, root.Convertapi.HtmlTemplateOperation);
+    root.CloudmersiveConvertApiClient.HtmlTemplateApplicationRequest = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.HtmlTemplateOperation);
   }
 }(this, function(ApiClient, HtmlTemplateOperation) {
   'use strict';
@@ -35,14 +35,14 @@
 
   /**
    * The HtmlTemplateApplicationRequest model module.
-   * @module model/HtmlTemplateApplicationRequest
+   * @module com.example.v3client/com.example.v3client.model/HtmlTemplateApplicationRequest
    * @version v1
    */
 
   /**
    * Constructs a new <code>HtmlTemplateApplicationRequest</code>.
    * HTML template application request
-   * @alias module:model/HtmlTemplateApplicationRequest
+   * @alias module:com.example.v3client/com.example.v3client.model/HtmlTemplateApplicationRequest
    * @class
    */
   var exports = function() {
@@ -57,8 +57,8 @@
    * Constructs a <code>HtmlTemplateApplicationRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/HtmlTemplateApplicationRequest} obj Optional instance to populate.
-   * @return {module:model/HtmlTemplateApplicationRequest} The populated <code>HtmlTemplateApplicationRequest</code> instance.
+   * @param {module:com.example.v3client/com.example.v3client.model/HtmlTemplateApplicationRequest} obj Optional instance to populate.
+   * @return {module:com.example.v3client/com.example.v3client.model/HtmlTemplateApplicationRequest} The populated <code>HtmlTemplateApplicationRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -86,7 +86,7 @@
    */
   exports.prototype['HtmlTemplateUrl'] = undefined;
   /**
-   * @member {Array.<module:model/HtmlTemplateOperation>} Operations
+   * @member {Array.<module:com.example.v3client/com.example.v3client.model/HtmlTemplateOperation>} Operations
    */
   exports.prototype['Operations'] = undefined;
 
