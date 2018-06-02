@@ -33,7 +33,7 @@
   /**
    * ConvertTemplate service.
    * @module cloudmersive.client.convert.invoke/cloudmersive.client.convert.api/ConvertTemplateApi
-   * @version v1
+   * @version 1.0.2
    */
 
   /**

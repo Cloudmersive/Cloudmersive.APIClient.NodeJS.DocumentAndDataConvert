@@ -36,7 +36,7 @@
   /**
    * The HtmlTemplateOperation model module.
    * @module cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/HtmlTemplateOperation
-   * @version v1
+   * @version 1.0.2
    */
 
   /**
