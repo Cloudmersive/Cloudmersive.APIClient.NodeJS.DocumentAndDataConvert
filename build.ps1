@@ -1,0 +1,1 @@
+﻿& java -jar swagger-codegen-cli.jar generate -i https://api.cloudmersive.com/convert/docs/v1/swagger -l javascript # -projectName cloudmersive-convert-api-client
