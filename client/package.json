@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "ERROR_UNKNOWN",
   "license": "Unlicense",
-  "main": "src/com.example.v3client/index.js",
+  "main": "src/cloudmersive.client.convert.invoke/index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --recursive"
   },

@@ -16,7 +16,7 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['com.example.v3client/ApiClient'], factory);
+    define(['cloudmersive.client.convert.invoke/ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'));
@@ -35,14 +35,14 @@
 
   /**
    * The HtmlToPdfRequest model module.
-   * @module com.example.v3client/com.example.v3client.model/HtmlToPdfRequest
+   * @module cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/HtmlToPdfRequest
    * @version v1
    */
 
   /**
    * Constructs a new <code>HtmlToPdfRequest</code>.
    * Details of the HTML to PDF request
-   * @alias module:com.example.v3client/com.example.v3client.model/HtmlToPdfRequest
+   * @alias module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/HtmlToPdfRequest
    * @class
    */
   var exports = function() {
@@ -56,8 +56,8 @@
    * Constructs a <code>HtmlToPdfRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.example.v3client/com.example.v3client.model/HtmlToPdfRequest} obj Optional instance to populate.
-   * @return {module:com.example.v3client/com.example.v3client.model/HtmlToPdfRequest} The populated <code>HtmlToPdfRequest</code> instance.
+   * @param {module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/HtmlToPdfRequest} obj Optional instance to populate.
+   * @return {module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/HtmlToPdfRequest} The populated <code>HtmlToPdfRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {

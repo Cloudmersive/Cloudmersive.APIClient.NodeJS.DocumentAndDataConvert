@@ -16,7 +16,7 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['com.example.v3client/ApiClient'], factory);
+    define(['cloudmersive.client.convert.invoke/ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'));
@@ -32,16 +32,16 @@
 
   /**
    * ConvertImage service.
-   * @module com.example.v3client/com.example.v3client.api/ConvertImageApi
+   * @module cloudmersive.client.convert.invoke/cloudmersive.client.convert.api/ConvertImageApi
    * @version v1
    */
 
   /**
    * Constructs a new ConvertImageApi. 
-   * @alias module:com.example.v3client/com.example.v3client.api/ConvertImageApi
+   * @alias module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.api/ConvertImageApi
    * @class
-   * @param {module:com.example.v3client/ApiClient} [apiClient] Optional API client implementation to use,
-   * default to {@link module:com.example.v3client/ApiClient#instance} if unspecified.
+   * @param {module:cloudmersive.client.convert.invoke/ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:cloudmersive.client.convert.invoke/ApiClient#instance} if unspecified.
    */
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
@@ -49,7 +49,7 @@
 
     /**
      * Callback function to receive the result of the convertImageImageFormatConvert operation.
-     * @callback module:com.example.v3client/com.example.v3client.api/ConvertImageApi~convertImageImageFormatConvertCallback
+     * @callback module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.api/ConvertImageApi~convertImageImageFormatConvertCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -61,7 +61,7 @@
      * @param {String} format1 Input file format as a 3+ letter file extension.  Supported formats include AAI, ART, ARW, AVS, BPG, BMP, BMP2, BMP3, BRF, CALS, CGM, CIN, CMYK, CMYKA, CR2, CRW, CUR, CUT, DCM, DCR, DCX, DDS, DIB, DJVU, DNG, DOT, DPX, EMF, EPDF, EPI, EPS, EPS2, EPS3, EPSF, EPSI, EPT, EXR, FAX, FIG, FITS, FPX, GIF, GPLT, GRAY, HDR, HEIC, HPGL, HRZ, ICO, ISOBRL, ISBRL6, JBIG, JNG, JP2, JPT, J2C, J2K, JPEG/JPG, JXR, MAT, MONO, MNG, M2V, MRW, MTV, NEF, ORF, OTB, P7, PALM, PAM, PBM, PCD, PCDS, PCL, PCX, PEF, PES, PFA, PFB, PFM, PGM, PICON, PICT, PIX, PNG, PNG8, PNG00, PNG24, PNG32, PNG48, PNG64, PNM, PPM, PSB, PSD, PTIF, PWB, RAD, RAF, RGB, RGBA, RGF, RLA, RLE, SCT, SFW, SGI, SID, SUN, SVG, TGA, TIFF, TIM, UIL, VIFF, VICAR, VBMP, WDP, WEBP, WPG, X, XBM, XCF, XPM, XWD, X3F, YCbCr, YCbCrA, YUV
      * @param {String} format2 Output (convert to this format) file format as a 3+ letter file extension.  Supported formats include AAI, ART, ARW, AVS, BPG, BMP, BMP2, BMP3, BRF, CALS, CGM, CIN, CMYK, CMYKA, CR2, CRW, CUR, CUT, DCM, DCR, DCX, DDS, DIB, DJVU, DNG, DOT, DPX, EMF, EPDF, EPI, EPS, EPS2, EPS3, EPSF, EPSI, EPT, EXR, FAX, FIG, FITS, FPX, GIF, GPLT, GRAY, HDR, HEIC, HPGL, HRZ, ICO, ISOBRL, ISBRL6, JBIG, JNG, JP2, JPT, J2C, J2K, JPEG/JPG, JXR, MAT, MONO, MNG, M2V, MRW, MTV, NEF, ORF, OTB, P7, PALM, PAM, PBM, PCD, PCDS, PCL, PCX, PEF, PES, PFA, PFB, PFM, PGM, PICON, PICT, PIX, PNG, PNG8, PNG00, PNG24, PNG32, PNG48, PNG64, PNM, PPM, PSB, PSD, PTIF, PWB, RAD, RAF, RGB, RGBA, RGF, RLA, RLE, SCT, SFW, SGI, SID, SUN, SVG, TGA, TIFF, TIM, UIL, VIFF, VICAR, VBMP, WDP, WEBP, WPG, X, XBM, XCF, XPM, XWD, X3F, YCbCr, YCbCrA, YUV
      * @param {File} inputFile Input file to perform the operation on.
-     * @param {module:com.example.v3client/com.example.v3client.api/ConvertImageApi~convertImageImageFormatConvertCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.api/ConvertImageApi~convertImageImageFormatConvertCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertImageImageFormatConvert = function(format1, format2, inputFile, callback) {

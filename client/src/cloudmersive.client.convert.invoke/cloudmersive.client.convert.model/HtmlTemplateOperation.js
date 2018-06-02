@@ -16,7 +16,7 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['com.example.v3client/ApiClient'], factory);
+    define(['cloudmersive.client.convert.invoke/ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'));
@@ -35,13 +35,13 @@
 
   /**
    * The HtmlTemplateOperation model module.
-   * @module com.example.v3client/com.example.v3client.model/HtmlTemplateOperation
+   * @module cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/HtmlTemplateOperation
    * @version v1
    */
 
   /**
    * Constructs a new <code>HtmlTemplateOperation</code>.
-   * @alias module:com.example.v3client/com.example.v3client.model/HtmlTemplateOperation
+   * @alias module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/HtmlTemplateOperation
    * @class
    */
   var exports = function() {
@@ -56,8 +56,8 @@
    * Constructs a <code>HtmlTemplateOperation</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:com.example.v3client/com.example.v3client.model/HtmlTemplateOperation} obj Optional instance to populate.
-   * @return {module:com.example.v3client/com.example.v3client.model/HtmlTemplateOperation} The populated <code>HtmlTemplateOperation</code> instance.
+   * @param {module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/HtmlTemplateOperation} obj Optional instance to populate.
+   * @return {module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/HtmlTemplateOperation} The populated <code>HtmlTemplateOperation</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -77,7 +77,7 @@
   }
 
   /**
-   * @member {module:com.example.v3client/com.example.v3client.model/HtmlTemplateOperation.ActionEnum} Action
+   * @member {module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/HtmlTemplateOperation.ActionEnum} Action
    */
   exports.prototype['Action'] = undefined;
   /**
