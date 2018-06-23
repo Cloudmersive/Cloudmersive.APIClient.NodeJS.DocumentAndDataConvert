@@ -20,6 +20,13 @@ Fully renders a website and returns a PDF of the HTML.  Javascript, HTML5, CSS a
 ### Example
 ```javascript
 var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveConvertApiClient.ConvertWebApi();
 
@@ -48,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 
@@ -66,6 +73,13 @@ Fully renders a website and returns a PDF of the full page.  Javascript, HTML5, 
 ### Example
 ```javascript
 var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveConvertApiClient.ConvertWebApi();
 
@@ -94,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 
@@ -112,6 +126,13 @@ Fully renders a website and returns a PNG screenshot of the full page image.  Ja
 ### Example
 ```javascript
 var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveConvertApiClient.ConvertWebApi();
 
@@ -140,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 

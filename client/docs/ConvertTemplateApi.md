@@ -18,6 +18,13 @@ Apply operations to fill in an HTML template, generating a final HTML result
 ### Example
 ```javascript
 var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveConvertApiClient.ConvertTemplateApi();
 
@@ -46,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 

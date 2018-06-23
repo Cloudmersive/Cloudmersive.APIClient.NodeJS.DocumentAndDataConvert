@@ -22,6 +22,13 @@ Automatically detect file type and convert it to PDF.
 ### Example
 ```javascript
 var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
 
@@ -50,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 
@@ -68,6 +75,13 @@ Convert Office Word Documents (docx) to standard PDF
 ### Example
 ```javascript
 var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
 
@@ -96,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 
@@ -114,6 +128,13 @@ Convert Office PowerPoint Documents (pptx) to standard PDF
 ### Example
 ```javascript
 var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
 
@@ -142,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 
@@ -160,6 +181,13 @@ Convert Office Excel Workbooks (xlsx) to standard Comma-Separated Values (CSV) f
 ### Example
 ```javascript
 var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
 
@@ -188,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 
@@ -206,6 +234,13 @@ Convert Office Excel Workbooks (xlsx) to standard PDF.  Converts all worksheets 
 ### Example
 ```javascript
 var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
 
 var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
 
@@ -234,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Apikey](../README.md#Apikey)
 
 ### HTTP request headers
 

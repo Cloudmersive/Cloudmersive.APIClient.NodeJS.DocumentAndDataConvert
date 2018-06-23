@@ -95,6 +95,14 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```javascript
 var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
 
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix['Apikey'] = "Token"
+
 var api = new CloudmersiveConvertApiClient.ConvertDataApi()
 
 var inputFile = "/path/to/file.txt"; // {File} Input file to perform the operation on.
