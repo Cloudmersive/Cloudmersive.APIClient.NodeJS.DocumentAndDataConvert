@@ -16,7 +16,7 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['cloudmersive-convert-api-client/ApiClient'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'));
@@ -35,14 +35,14 @@
 
   /**
    * The HtmlTemplateApplicationResponse model module.
-   * @module cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationResponse
-   * @version 1.0.7
+   * @module model/HtmlTemplateApplicationResponse
+   * @version 1.0.8
    */
 
   /**
    * Constructs a new <code>HtmlTemplateApplicationResponse</code>.
    * Response from an HTML template application
-   * @alias module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationResponse
+   * @alias module:model/HtmlTemplateApplicationResponse
    * @class
    */
   var exports = function() {
@@ -56,8 +56,8 @@
    * Constructs a <code>HtmlTemplateApplicationResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationResponse} obj Optional instance to populate.
-   * @return {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationResponse} The populated <code>HtmlTemplateApplicationResponse</code> instance.
+   * @param {module:model/HtmlTemplateApplicationResponse} obj Optional instance to populate.
+   * @return {module:model/HtmlTemplateApplicationResponse} The populated <code>HtmlTemplateApplicationResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {

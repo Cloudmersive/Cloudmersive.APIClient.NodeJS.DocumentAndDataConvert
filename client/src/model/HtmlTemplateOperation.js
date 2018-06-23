@@ -16,7 +16,7 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['cloudmersive-convert-api-client/ApiClient'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'));
@@ -35,13 +35,13 @@
 
   /**
    * The HtmlTemplateOperation model module.
-   * @module cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateOperation
-   * @version 1.0.7
+   * @module model/HtmlTemplateOperation
+   * @version 1.0.8
    */
 
   /**
    * Constructs a new <code>HtmlTemplateOperation</code>.
-   * @alias module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateOperation
+   * @alias module:model/HtmlTemplateOperation
    * @class
    */
   var exports = function() {
@@ -56,8 +56,8 @@
    * Constructs a <code>HtmlTemplateOperation</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateOperation} obj Optional instance to populate.
-   * @return {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateOperation} The populated <code>HtmlTemplateOperation</code> instance.
+   * @param {module:model/HtmlTemplateOperation} obj Optional instance to populate.
+   * @return {module:model/HtmlTemplateOperation} The populated <code>HtmlTemplateOperation</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -77,7 +77,7 @@
   }
 
   /**
-   * @member {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateOperation.ActionEnum} Action
+   * @member {module:model/HtmlTemplateOperation.ActionEnum} Action
    */
   exports.prototype['Action'] = undefined;
   /**

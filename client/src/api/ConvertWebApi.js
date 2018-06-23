@@ -16,10 +16,10 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['cloudmersive-convert-api-client/ApiClient', 'cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlToPdfRequest', 'cloudmersive-convert-api-client/cloudmersive-convert-api-client/ScreenshotRequest'], factory);
+    define(['ApiClient', 'model/HtmlToPdfRequest', 'model/ScreenshotRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../cloudmersive-convert-api-client/HtmlToPdfRequest'), require('../cloudmersive-convert-api-client/ScreenshotRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/HtmlToPdfRequest'), require('../model/ScreenshotRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
@@ -32,16 +32,16 @@
 
   /**
    * ConvertWeb service.
-   * @module cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertWebApi
-   * @version 1.0.7
+   * @module api/ConvertWebApi
+   * @version 1.0.8
    */
 
   /**
    * Constructs a new ConvertWebApi. 
-   * @alias module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertWebApi
+   * @alias module:api/ConvertWebApi
    * @class
-   * @param {module:cloudmersive-convert-api-client/ApiClient} [apiClient] Optional API client implementation to use,
-   * default to {@link module:cloudmersive-convert-api-client/ApiClient#instance} if unspecified.
+   * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:ApiClient#instance} if unspecified.
    */
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
@@ -49,7 +49,7 @@
 
     /**
      * Callback function to receive the result of the convertWebHtmlToPdf operation.
-     * @callback module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertWebApi~convertWebHtmlToPdfCallback
+     * @callback module:api/ConvertWebApi~convertWebHtmlToPdfCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -58,8 +58,8 @@
     /**
      * Convert HTML string to PDF
      * Fully renders a website and returns a PDF of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
-     * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlToPdfRequest} input HTML to PDF request parameters
-     * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertWebApi~convertWebHtmlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/HtmlToPdfRequest} input HTML to PDF request parameters
+     * @param {module:api/ConvertWebApi~convertWebHtmlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     this.convertWebHtmlToPdf = function(input, callback) {
@@ -96,7 +96,7 @@
 
     /**
      * Callback function to receive the result of the convertWebUrlToPdf operation.
-     * @callback module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertWebApi~convertWebUrlToPdfCallback
+     * @callback module:api/ConvertWebApi~convertWebUrlToPdfCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -105,8 +105,8 @@
     /**
      * Convert a URL to PDF
      * Fully renders a website and returns a PDF of the full page.  Javascript, HTML5, CSS and other advanced features are all supported.
-     * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ScreenshotRequest} input URL to PDF request parameters
-     * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertWebApi~convertWebUrlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/ScreenshotRequest} input URL to PDF request parameters
+     * @param {module:api/ConvertWebApi~convertWebUrlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertWebUrlToPdf = function(input, callback) {
@@ -143,7 +143,7 @@
 
     /**
      * Callback function to receive the result of the convertWebUrlToScreenshot operation.
-     * @callback module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertWebApi~convertWebUrlToScreenshotCallback
+     * @callback module:api/ConvertWebApi~convertWebUrlToScreenshotCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -152,8 +152,8 @@
     /**
      * Take screenshot of URL
      * Fully renders a website and returns a PNG screenshot of the full page image.  Javascript, HTML5, CSS and other advanced features are all supported.
-     * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ScreenshotRequest} input Screenshot request parameters
-     * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertWebApi~convertWebUrlToScreenshotCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/ScreenshotRequest} input Screenshot request parameters
+     * @param {module:api/ConvertWebApi~convertWebUrlToScreenshotCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertWebUrlToScreenshot = function(input, callback) {

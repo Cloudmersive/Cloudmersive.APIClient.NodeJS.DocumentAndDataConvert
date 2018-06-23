@@ -16,7 +16,7 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['cloudmersive-convert-api-client/ApiClient'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'));
@@ -25,7 +25,7 @@
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ScreenshotRequest = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.HtmlToPdfRequest = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The ScreenshotRequest model module.
-   * @module cloudmersive-convert-api-client/cloudmersive-convert-api-client/ScreenshotRequest
-   * @version 1.0.7
+   * The HtmlToPdfRequest model module.
+   * @module model/HtmlToPdfRequest
+   * @version 1.0.8
    */
 
   /**
-   * Constructs a new <code>ScreenshotRequest</code>.
-   * Details of the screenshot request
-   * @alias module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ScreenshotRequest
+   * Constructs a new <code>HtmlToPdfRequest</code>.
+   * Details of the HTML to PDF request
+   * @alias module:model/HtmlToPdfRequest
    * @class
    */
   var exports = function() {
@@ -53,18 +53,18 @@
   };
 
   /**
-   * Constructs a <code>ScreenshotRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>HtmlToPdfRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ScreenshotRequest} obj Optional instance to populate.
-   * @return {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ScreenshotRequest} The populated <code>ScreenshotRequest</code> instance.
+   * @param {module:model/HtmlToPdfRequest} obj Optional instance to populate.
+   * @return {module:model/HtmlToPdfRequest} The populated <code>HtmlToPdfRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Url')) {
-        obj['Url'] = ApiClient.convertToType(data['Url'], 'String');
+      if (data.hasOwnProperty('Html')) {
+        obj['Html'] = ApiClient.convertToType(data['Html'], 'String');
       }
       if (data.hasOwnProperty('ExtraLoadingWait')) {
         obj['ExtraLoadingWait'] = ApiClient.convertToType(data['ExtraLoadingWait'], 'Number');
@@ -74,9 +74,9 @@
   }
 
   /**
-   * @member {String} Url
+   * @member {String} Html
    */
-  exports.prototype['Url'] = undefined;
+  exports.prototype['Html'] = undefined;
   /**
    * @member {Number} ExtraLoadingWait
    */
