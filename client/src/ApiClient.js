@@ -31,15 +31,15 @@
   'use strict';
 
   /**
-   * @module cloudmersive.client.convert.invoke/ApiClient
-   * @version 1.0.3
+   * @module cloudmersive-client-convert/ApiClient
+   * @version 1.0.6
    */
 
   /**
    * Manages low level client-server communications, parameter marshalling, etc. There should not be any need for an
    * application to use this class directly - the *Api and model classes provide the public API for the service. The
    * contents of this file should be regarded as internal but are documented for completeness.
-   * @alias module:cloudmersive.client.convert.invoke/ApiClient
+   * @alias module:cloudmersive-client-convert/ApiClient
    * @class
    */
   var exports = function() {
@@ -261,7 +261,7 @@
   /**
    * Builds a string representation of an array-type actual parameter, according to the given collection format.
    * @param {Array} param An array parameter.
-   * @param {module:cloudmersive.client.convert.invoke/ApiClient.CollectionFormatEnum} collectionFormat The array element separator strategy.
+   * @param {module:cloudmersive-client-convert/ApiClient.CollectionFormatEnum} collectionFormat The array element separator strategy.
    * @returns {String|Array} A string representation of the supplied collection, using the specified delimiter. Returns
    * <code>param</code> as is if <code>collectionFormat</code> is <code>multi</code>.
    */
@@ -352,7 +352,7 @@
 
   /**
    * Callback function to receive the result of the operation.
-   * @callback module:cloudmersive.client.convert.invoke/ApiClient~callApiCallback
+   * @callback module:cloudmersive-client-convert/ApiClient~callApiCallback
    * @param {String} error Error message, if any.
    * @param data The data returned by the service call.
    * @param {String} response The complete HTTP response.
@@ -373,7 +373,7 @@
    * @param {Array.<String>} accepts An array of acceptable response MIME types.
    * @param {(String|Array|ObjectFunction)} returnType The required type to return; can be a string for simple types or the
    * constructor for a complex type.
-   * @param {module:cloudmersive.client.convert.invoke/ApiClient~callApiCallback} callback The callback function.
+   * @param {module:cloudmersive-client-convert/ApiClient~callApiCallback} callback The callback function.
    * @returns {Object} The SuperAgent request object.
    */
   exports.prototype.callApi = function callApi(path, httpMethod, pathParams,
@@ -589,7 +589,7 @@
 
   /**
    * The default API client implementation.
-   * @type {module:cloudmersive.client.convert.invoke/ApiClient}
+   * @type {module:cloudmersive-client-convert/ApiClient}
    */
   exports.instance = new exports();
 

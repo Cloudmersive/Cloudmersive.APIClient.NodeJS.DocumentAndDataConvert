@@ -1,7 +1,7 @@
 ﻿{
-  "modelPackage" : "cloudmersive.client.convert.model",
-  "apiPackage"   : "cloudmersive.client.convert.api",
-  "invokerPackage" : "cloudmersive.client.convert.invoke",
+  "modelPackage" : "cloudmersive-client-convert",
+  "apiPackage"   : "cloudmersive-client-convert",
+  "invokerPackage" : "cloudmersive-client-convert",
   "projectName" : "cloudmersive-convert-api-client",
-  "projectVersion": "1.0.3"
+  "projectVersion": "1.0.6"
 }  

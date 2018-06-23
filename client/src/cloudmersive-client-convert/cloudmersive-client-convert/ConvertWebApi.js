@@ -16,10 +16,10 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['cloudmersive.client.convert.invoke/ApiClient', 'cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/HtmlToPdfRequest', 'cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/ScreenshotRequest'], factory);
+    define(['cloudmersive-client-convert/ApiClient', 'cloudmersive-client-convert/cloudmersive-client-convert/HtmlToPdfRequest', 'cloudmersive-client-convert/cloudmersive-client-convert/ScreenshotRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../cloudmersive.client.convert.model/HtmlToPdfRequest'), require('../cloudmersive.client.convert.model/ScreenshotRequest'));
+    module.exports = factory(require('../ApiClient'), require('../cloudmersive-client-convert/HtmlToPdfRequest'), require('../cloudmersive-client-convert/ScreenshotRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
@@ -32,16 +32,16 @@
 
   /**
    * ConvertWeb service.
-   * @module cloudmersive.client.convert.invoke/cloudmersive.client.convert.api/ConvertWebApi
-   * @version 1.0.3
+   * @module cloudmersive-client-convert/cloudmersive-client-convert/ConvertWebApi
+   * @version 1.0.6
    */
 
   /**
    * Constructs a new ConvertWebApi. 
-   * @alias module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.api/ConvertWebApi
+   * @alias module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertWebApi
    * @class
-   * @param {module:cloudmersive.client.convert.invoke/ApiClient} [apiClient] Optional API client implementation to use,
-   * default to {@link module:cloudmersive.client.convert.invoke/ApiClient#instance} if unspecified.
+   * @param {module:cloudmersive-client-convert/ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:cloudmersive-client-convert/ApiClient#instance} if unspecified.
    */
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
@@ -49,7 +49,7 @@
 
     /**
      * Callback function to receive the result of the convertWebHtmlToPdf operation.
-     * @callback module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.api/ConvertWebApi~convertWebHtmlToPdfCallback
+     * @callback module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertWebApi~convertWebHtmlToPdfCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -58,8 +58,8 @@
     /**
      * Convert HTML string to PDF
      * Fully renders a website and returns a PDF of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
-     * @param {module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/HtmlToPdfRequest} input HTML to PDF request parameters
-     * @param {module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.api/ConvertWebApi~convertWebHtmlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/HtmlToPdfRequest} input HTML to PDF request parameters
+     * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertWebApi~convertWebHtmlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     this.convertWebHtmlToPdf = function(input, callback) {
@@ -96,7 +96,7 @@
 
     /**
      * Callback function to receive the result of the convertWebUrlToPdf operation.
-     * @callback module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.api/ConvertWebApi~convertWebUrlToPdfCallback
+     * @callback module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertWebApi~convertWebUrlToPdfCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -105,8 +105,8 @@
     /**
      * Convert a URL to PDF
      * Fully renders a website and returns a PDF of the full page.  Javascript, HTML5, CSS and other advanced features are all supported.
-     * @param {module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/ScreenshotRequest} input URL to PDF request parameters
-     * @param {module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.api/ConvertWebApi~convertWebUrlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/ScreenshotRequest} input URL to PDF request parameters
+     * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertWebApi~convertWebUrlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertWebUrlToPdf = function(input, callback) {
@@ -143,7 +143,7 @@
 
     /**
      * Callback function to receive the result of the convertWebUrlToScreenshot operation.
-     * @callback module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.api/ConvertWebApi~convertWebUrlToScreenshotCallback
+     * @callback module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertWebApi~convertWebUrlToScreenshotCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -152,8 +152,8 @@
     /**
      * Take screenshot of URL
      * Fully renders a website and returns a PNG screenshot of the full page image.  Javascript, HTML5, CSS and other advanced features are all supported.
-     * @param {module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/ScreenshotRequest} input Screenshot request parameters
-     * @param {module:cloudmersive.client.convert.invoke/cloudmersive.client.convert.api/ConvertWebApi~convertWebUrlToScreenshotCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/ScreenshotRequest} input Screenshot request parameters
+     * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertWebApi~convertWebUrlToScreenshotCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertWebUrlToScreenshot = function(input, callback) {
