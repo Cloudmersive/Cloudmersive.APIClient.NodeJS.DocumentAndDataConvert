@@ -1,9 +1,9 @@
 {
   "name": "cloudmersive-convert-api-client",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Convert_API_lets_you_effortlessly_convert_file_formats_and_types_",
   "license": "Unlicense",
-  "main": "src/cloudmersive-client-convert/index.js",
+  "main": "src/cloudmersive-convert-api-client/index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --recursive"
   },

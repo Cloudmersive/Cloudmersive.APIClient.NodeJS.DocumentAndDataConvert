@@ -16,10 +16,10 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['cloudmersive-client-convert/ApiClient', 'cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateApplicationRequest', 'cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateApplicationResponse'], factory);
+    define(['cloudmersive-convert-api-client/ApiClient', 'cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationRequest', 'cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../cloudmersive-client-convert/HtmlTemplateApplicationRequest'), require('../cloudmersive-client-convert/HtmlTemplateApplicationResponse'));
+    module.exports = factory(require('../ApiClient'), require('../cloudmersive-convert-api-client/HtmlTemplateApplicationRequest'), require('../cloudmersive-convert-api-client/HtmlTemplateApplicationResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
@@ -32,16 +32,16 @@
 
   /**
    * ConvertTemplate service.
-   * @module cloudmersive-client-convert/cloudmersive-client-convert/ConvertTemplateApi
-   * @version 1.0.6
+   * @module cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertTemplateApi
+   * @version 1.0.7
    */
 
   /**
    * Constructs a new ConvertTemplateApi. 
-   * @alias module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertTemplateApi
+   * @alias module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertTemplateApi
    * @class
-   * @param {module:cloudmersive-client-convert/ApiClient} [apiClient] Optional API client implementation to use,
-   * default to {@link module:cloudmersive-client-convert/ApiClient#instance} if unspecified.
+   * @param {module:cloudmersive-convert-api-client/ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:cloudmersive-convert-api-client/ApiClient#instance} if unspecified.
    */
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
@@ -49,18 +49,18 @@
 
     /**
      * Callback function to receive the result of the convertTemplateApplyHtmlTemplate operation.
-     * @callback module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertTemplateApi~convertTemplateApplyHtmlTemplateCallback
+     * @callback module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertTemplateApi~convertTemplateApplyHtmlTemplateCallback
      * @param {String} error Error message, if any.
-     * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateApplicationResponse} data The data returned by the service call.
+     * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Apply HTML template
      * Apply operations to fill in an HTML template, generating a final HTML result
-     * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateApplicationRequest} value Operations to apply to template
-     * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertTemplateApi~convertTemplateApplyHtmlTemplateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateApplicationResponse}
+     * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationRequest} value Operations to apply to template
+     * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertTemplateApi~convertTemplateApplyHtmlTemplateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationResponse}
      */
     this.convertTemplateApplyHtmlTemplate = function(value, callback) {
       var postBody = value;

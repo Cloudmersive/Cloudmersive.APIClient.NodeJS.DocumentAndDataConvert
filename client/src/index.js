@@ -16,10 +16,10 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['cloudmersive-client-convert/ApiClient', 'cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateApplicationRequest', 'cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateApplicationResponse', 'cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateOperation', 'cloudmersive-client-convert/cloudmersive-client-convert/HtmlToPdfRequest', 'cloudmersive-client-convert/cloudmersive-client-convert/ScreenshotRequest', 'cloudmersive-client-convert/cloudmersive-client-convert/ConvertDataApi', 'cloudmersive-client-convert/cloudmersive-client-convert/ConvertDocumentApi', 'cloudmersive-client-convert/cloudmersive-client-convert/ConvertImageApi', 'cloudmersive-client-convert/cloudmersive-client-convert/ConvertTemplateApi', 'cloudmersive-client-convert/cloudmersive-client-convert/ConvertWebApi'], factory);
+    define(['cloudmersive-convert-api-client/ApiClient', 'cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationRequest', 'cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationResponse', 'cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateOperation', 'cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlToPdfRequest', 'cloudmersive-convert-api-client/cloudmersive-convert-api-client/ScreenshotRequest', 'cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDataApi', 'cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDocumentApi', 'cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertImageApi', 'cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertTemplateApi', 'cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertWebApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./cloudmersive-client-convert/HtmlTemplateApplicationRequest'), require('./cloudmersive-client-convert/HtmlTemplateApplicationResponse'), require('./cloudmersive-client-convert/HtmlTemplateOperation'), require('./cloudmersive-client-convert/HtmlToPdfRequest'), require('./cloudmersive-client-convert/ScreenshotRequest'), require('./cloudmersive-client-convert/ConvertDataApi'), require('./cloudmersive-client-convert/ConvertDocumentApi'), require('./cloudmersive-client-convert/ConvertImageApi'), require('./cloudmersive-client-convert/ConvertTemplateApi'), require('./cloudmersive-client-convert/ConvertWebApi'));
+    module.exports = factory(require('./ApiClient'), require('./cloudmersive-convert-api-client/HtmlTemplateApplicationRequest'), require('./cloudmersive-convert-api-client/HtmlTemplateApplicationResponse'), require('./cloudmersive-convert-api-client/HtmlTemplateOperation'), require('./cloudmersive-convert-api-client/HtmlToPdfRequest'), require('./cloudmersive-convert-api-client/ScreenshotRequest'), require('./cloudmersive-convert-api-client/ConvertDataApi'), require('./cloudmersive-convert-api-client/ConvertDocumentApi'), require('./cloudmersive-convert-api-client/ConvertImageApi'), require('./cloudmersive-convert-api-client/ConvertTemplateApi'), require('./cloudmersive-convert-api-client/ConvertWebApi'));
   }
 }(function(ApiClient, HtmlTemplateApplicationRequest, HtmlTemplateApplicationResponse, HtmlTemplateOperation, HtmlToPdfRequest, ScreenshotRequest, ConvertDataApi, ConvertDocumentApi, ConvertImageApi, ConvertTemplateApi, ConvertWebApi) {
   'use strict';
@@ -30,7 +30,7 @@
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
    * <pre>
-   * var CloudmersiveConvertApiClient = require('cloudmersive-client-convert/index'); // See note below*.
+   * var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client/index'); // See note below*.
    * var xxxSvc = new CloudmersiveConvertApiClient.XxxApi(); // Allocate the API class we're going to use.
    * var yyyModel = new CloudmersiveConvertApiClient.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
@@ -38,7 +38,7 @@
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
    * ...
    * </pre>
-   * <em>*NOTE: For a top-level AMD script, use require(['cloudmersive-client-convert/index'], function(){...})
+   * <em>*NOTE: For a top-level AMD script, use require(['cloudmersive-convert-api-client/index'], function(){...})
    * and put the application logic within the callback function.</em>
    * </p>
    * <p>
@@ -52,63 +52,63 @@
    * ...
    * </pre>
    * </p>
-   * @module cloudmersive-client-convert/index
-   * @version 1.0.6
+   * @module cloudmersive-convert-api-client/index
+   * @version 1.0.7
    */
   var exports = {
     /**
      * The ApiClient constructor.
-     * @property {module:cloudmersive-client-convert/ApiClient}
+     * @property {module:cloudmersive-convert-api-client/ApiClient}
      */
     ApiClient: ApiClient,
     /**
      * The HtmlTemplateApplicationRequest model constructor.
-     * @property {module:cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateApplicationRequest}
+     * @property {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationRequest}
      */
     HtmlTemplateApplicationRequest: HtmlTemplateApplicationRequest,
     /**
      * The HtmlTemplateApplicationResponse model constructor.
-     * @property {module:cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateApplicationResponse}
+     * @property {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationResponse}
      */
     HtmlTemplateApplicationResponse: HtmlTemplateApplicationResponse,
     /**
      * The HtmlTemplateOperation model constructor.
-     * @property {module:cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateOperation}
+     * @property {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateOperation}
      */
     HtmlTemplateOperation: HtmlTemplateOperation,
     /**
      * The HtmlToPdfRequest model constructor.
-     * @property {module:cloudmersive-client-convert/cloudmersive-client-convert/HtmlToPdfRequest}
+     * @property {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlToPdfRequest}
      */
     HtmlToPdfRequest: HtmlToPdfRequest,
     /**
      * The ScreenshotRequest model constructor.
-     * @property {module:cloudmersive-client-convert/cloudmersive-client-convert/ScreenshotRequest}
+     * @property {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ScreenshotRequest}
      */
     ScreenshotRequest: ScreenshotRequest,
     /**
      * The ConvertDataApi service constructor.
-     * @property {module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDataApi}
+     * @property {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDataApi}
      */
     ConvertDataApi: ConvertDataApi,
     /**
      * The ConvertDocumentApi service constructor.
-     * @property {module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDocumentApi}
+     * @property {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDocumentApi}
      */
     ConvertDocumentApi: ConvertDocumentApi,
     /**
      * The ConvertImageApi service constructor.
-     * @property {module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertImageApi}
+     * @property {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertImageApi}
      */
     ConvertImageApi: ConvertImageApi,
     /**
      * The ConvertTemplateApi service constructor.
-     * @property {module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertTemplateApi}
+     * @property {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertTemplateApi}
      */
     ConvertTemplateApi: ConvertTemplateApi,
     /**
      * The ConvertWebApi service constructor.
-     * @property {module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertWebApi}
+     * @property {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertWebApi}
      */
     ConvertWebApi: ConvertWebApi
   };

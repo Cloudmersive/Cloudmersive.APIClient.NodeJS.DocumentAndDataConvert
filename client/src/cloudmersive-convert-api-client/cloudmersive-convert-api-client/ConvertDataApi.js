@@ -16,7 +16,7 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['cloudmersive-client-convert/ApiClient'], factory);
+    define(['cloudmersive-convert-api-client/ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'));
@@ -32,16 +32,16 @@
 
   /**
    * ConvertData service.
-   * @module cloudmersive-client-convert/cloudmersive-client-convert/ConvertDataApi
-   * @version 1.0.6
+   * @module cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDataApi
+   * @version 1.0.7
    */
 
   /**
    * Constructs a new ConvertDataApi. 
-   * @alias module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDataApi
+   * @alias module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDataApi
    * @class
-   * @param {module:cloudmersive-client-convert/ApiClient} [apiClient] Optional API client implementation to use,
-   * default to {@link module:cloudmersive-client-convert/ApiClient#instance} if unspecified.
+   * @param {module:cloudmersive-convert-api-client/ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:cloudmersive-convert-api-client/ApiClient#instance} if unspecified.
    */
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
@@ -49,7 +49,7 @@
 
     /**
      * Callback function to receive the result of the convertDataCsvToJson operation.
-     * @callback module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDataApi~convertDataCsvToJsonCallback
+     * @callback module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDataApi~convertDataCsvToJsonCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -59,7 +59,7 @@
      * CSV to JSON conversion
      * Convert a CSV file to a JSON object array
      * @param {File} inputFile Input file to perform the operation on.
-     * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDataApi~convertDataCsvToJsonCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDataApi~convertDataCsvToJsonCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     this.convertDataCsvToJson = function(inputFile, callback) {
@@ -97,7 +97,7 @@
 
     /**
      * Callback function to receive the result of the convertDataXmlToJson operation.
-     * @callback module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDataApi~convertDataXmlToJsonCallback
+     * @callback module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDataApi~convertDataXmlToJsonCallback
      * @param {String} error Error message, if any.
      * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -106,7 +106,7 @@
     /**
      * XML to JSON conversion
      * Convert an XML string or file into JSON
-     * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDataApi~convertDataXmlToJsonCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDataApi~convertDataXmlToJsonCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     this.convertDataXmlToJson = function(callback) {

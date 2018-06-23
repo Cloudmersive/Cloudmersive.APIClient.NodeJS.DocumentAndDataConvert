@@ -16,7 +16,7 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['cloudmersive-client-convert/ApiClient'], factory);
+    define(['cloudmersive-convert-api-client/ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'));
@@ -32,16 +32,16 @@
 
   /**
    * ConvertDocument service.
-   * @module cloudmersive-client-convert/cloudmersive-client-convert/ConvertDocumentApi
-   * @version 1.0.6
+   * @module cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDocumentApi
+   * @version 1.0.7
    */
 
   /**
    * Constructs a new ConvertDocumentApi. 
-   * @alias module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDocumentApi
+   * @alias module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDocumentApi
    * @class
-   * @param {module:cloudmersive-client-convert/ApiClient} [apiClient] Optional API client implementation to use,
-   * default to {@link module:cloudmersive-client-convert/ApiClient#instance} if unspecified.
+   * @param {module:cloudmersive-convert-api-client/ApiClient} [apiClient] Optional API client implementation to use,
+   * default to {@link module:cloudmersive-convert-api-client/ApiClient#instance} if unspecified.
    */
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
@@ -49,7 +49,7 @@
 
     /**
      * Callback function to receive the result of the convertDocumentAutodetectToPdf operation.
-     * @callback module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDocumentApi~convertDocumentAutodetectToPdfCallback
+     * @callback module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDocumentApi~convertDocumentAutodetectToPdfCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -59,7 +59,7 @@
      * Convert Document to PDF
      * Automatically detect file type and convert it to PDF.
      * @param {File} inputFile Input file to perform the operation on.
-     * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDocumentApi~convertDocumentAutodetectToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDocumentApi~convertDocumentAutodetectToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertDocumentAutodetectToPdf = function(inputFile, callback) {
@@ -97,7 +97,7 @@
 
     /**
      * Callback function to receive the result of the convertDocumentDocxToPdf operation.
-     * @callback module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDocumentApi~convertDocumentDocxToPdfCallback
+     * @callback module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDocumentApi~convertDocumentDocxToPdfCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -107,7 +107,7 @@
      * Word DOCX to PDF
      * Convert Office Word Documents (docx) to standard PDF
      * @param {File} inputFile Input file to perform the operation on.
-     * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDocumentApi~convertDocumentDocxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDocumentApi~convertDocumentDocxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertDocumentDocxToPdf = function(inputFile, callback) {
@@ -145,7 +145,7 @@
 
     /**
      * Callback function to receive the result of the convertDocumentPptxToPdf operation.
-     * @callback module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDocumentApi~convertDocumentPptxToPdfCallback
+     * @callback module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDocumentApi~convertDocumentPptxToPdfCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -155,7 +155,7 @@
      * PowerPoint PPTX to PDF
      * Convert Office PowerPoint Documents (pptx) to standard PDF
      * @param {File} inputFile Input file to perform the operation on.
-     * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDocumentApi~convertDocumentPptxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDocumentApi~convertDocumentPptxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertDocumentPptxToPdf = function(inputFile, callback) {
@@ -193,7 +193,7 @@
 
     /**
      * Callback function to receive the result of the convertDocumentXlsxToCsv operation.
-     * @callback module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDocumentApi~convertDocumentXlsxToCsvCallback
+     * @callback module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDocumentApi~convertDocumentXlsxToCsvCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -203,7 +203,7 @@
      * Excel XLSX to CSV
      * Convert Office Excel Workbooks (xlsx) to standard Comma-Separated Values (CSV) format.
      * @param {File} inputFile Input file to perform the operation on.
-     * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDocumentApi~convertDocumentXlsxToCsvCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDocumentApi~convertDocumentXlsxToCsvCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertDocumentXlsxToCsv = function(inputFile, callback) {
@@ -241,7 +241,7 @@
 
     /**
      * Callback function to receive the result of the convertDocumentXlsxToPdf operation.
-     * @callback module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDocumentApi~convertDocumentXlsxToPdfCallback
+     * @callback module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDocumentApi~convertDocumentXlsxToPdfCallback
      * @param {String} error Error message, if any.
      * @param {File} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -251,7 +251,7 @@
      * Excel XLSX to PDF
      * Convert Office Excel Workbooks (xlsx) to standard PDF.  Converts all worksheets in the workbook to PDF.
      * @param {File} inputFile Input file to perform the operation on.
-     * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/ConvertDocumentApi~convertDocumentXlsxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/ConvertDocumentApi~convertDocumentXlsxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */
     this.convertDocumentXlsxToPdf = function(inputFile, callback) {

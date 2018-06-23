@@ -16,7 +16,7 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['cloudmersive-client-convert/ApiClient', 'cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateOperation'], factory);
+    define(['cloudmersive-convert-api-client/ApiClient', 'cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateOperation'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('../ApiClient'), require('./HtmlTemplateOperation'));
@@ -35,14 +35,14 @@
 
   /**
    * The HtmlTemplateApplicationRequest model module.
-   * @module cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateApplicationRequest
-   * @version 1.0.6
+   * @module cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationRequest
+   * @version 1.0.7
    */
 
   /**
    * Constructs a new <code>HtmlTemplateApplicationRequest</code>.
    * HTML template application request
-   * @alias module:cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateApplicationRequest
+   * @alias module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationRequest
    * @class
    */
   var exports = function() {
@@ -57,8 +57,8 @@
    * Constructs a <code>HtmlTemplateApplicationRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateApplicationRequest} obj Optional instance to populate.
-   * @return {module:cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateApplicationRequest} The populated <code>HtmlTemplateApplicationRequest</code> instance.
+   * @param {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationRequest} obj Optional instance to populate.
+   * @return {module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateApplicationRequest} The populated <code>HtmlTemplateApplicationRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -86,7 +86,7 @@
    */
   exports.prototype['HtmlTemplateUrl'] = undefined;
   /**
-   * @member {Array.<module:cloudmersive-client-convert/cloudmersive-client-convert/HtmlTemplateOperation>} Operations
+   * @member {Array.<module:cloudmersive-convert-api-client/cloudmersive-convert-api-client/HtmlTemplateOperation>} Operations
    */
   exports.prototype['Operations'] = undefined;
 
