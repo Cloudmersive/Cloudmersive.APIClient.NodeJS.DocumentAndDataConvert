@@ -3,5 +3,5 @@
   "apiPackage"   : "cloudmersive.client.convert.api",
   "invokerPackage" : "cloudmersive.client.convert.invoke",
   "projectName" : "cloudmersive-convert-api-client",
-  "projectVersion": "1.0.2"
+  "projectVersion": "1.0.3"
 }  

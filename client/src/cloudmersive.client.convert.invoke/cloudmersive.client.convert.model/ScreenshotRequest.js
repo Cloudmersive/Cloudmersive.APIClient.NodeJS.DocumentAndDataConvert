@@ -36,7 +36,7 @@
   /**
    * The ScreenshotRequest model module.
    * @module cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/ScreenshotRequest
-   * @version 1.0.2
+   * @version 1.0.3
    */
 
   /**

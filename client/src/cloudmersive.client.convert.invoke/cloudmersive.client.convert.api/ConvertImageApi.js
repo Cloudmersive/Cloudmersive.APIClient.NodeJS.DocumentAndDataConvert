@@ -33,7 +33,7 @@
   /**
    * ConvertImage service.
    * @module cloudmersive.client.convert.invoke/cloudmersive.client.convert.api/ConvertImageApi
-   * @version 1.0.2
+   * @version 1.0.3
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The HtmlTemplateApplicationRequest model module.
    * @module cloudmersive.client.convert.invoke/cloudmersive.client.convert.model/HtmlTemplateApplicationRequest
-   * @version 1.0.2
+   * @version 1.0.3
    */
 
   /**
