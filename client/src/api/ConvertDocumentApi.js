@@ -33,7 +33,7 @@
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 1.1.0
+   * @version 1.1.1
    */
 
   /**
@@ -51,7 +51,7 @@
      * Callback function to receive the result of the convertDocumentAutodetectToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentAutodetectToPdfCallback
      * @param {String} error Error message, if any.
-     * @param {File} data The data returned by the service call.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -60,7 +60,7 @@
      * Automatically detect file type and convert it to PDF.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentAutodetectToPdfCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link File}
+     * data is of type: {@link Object}
      */
     this.convertDocumentAutodetectToPdf = function(inputFile, callback) {
       var postBody = null;
@@ -86,7 +86,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/pdf'];
-      var returnType = File;
+      var returnType = Object;
 
       return this.apiClient.callApi(
         '/convert/autodetect/to/pdf', 'POST',
@@ -99,7 +99,7 @@
      * Callback function to receive the result of the convertDocumentDocxToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentDocxToPdfCallback
      * @param {String} error Error message, if any.
-     * @param {File} data The data returned by the service call.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -108,7 +108,7 @@
      * Convert Office Word Documents (docx) to standard PDF
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentDocxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link File}
+     * data is of type: {@link Object}
      */
     this.convertDocumentDocxToPdf = function(inputFile, callback) {
       var postBody = null;
@@ -134,7 +134,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/pdf'];
-      var returnType = File;
+      var returnType = Object;
 
       return this.apiClient.callApi(
         '/convert/docx/to/pdf', 'POST',
@@ -147,7 +147,7 @@
      * Callback function to receive the result of the convertDocumentPptxToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentPptxToPdfCallback
      * @param {String} error Error message, if any.
-     * @param {File} data The data returned by the service call.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -156,7 +156,7 @@
      * Convert Office PowerPoint Documents (pptx) to standard PDF
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentPptxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link File}
+     * data is of type: {@link Object}
      */
     this.convertDocumentPptxToPdf = function(inputFile, callback) {
       var postBody = null;
@@ -182,7 +182,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/pdf'];
-      var returnType = File;
+      var returnType = Object;
 
       return this.apiClient.callApi(
         '/convert/pptx/to/pdf', 'POST',
@@ -195,7 +195,7 @@
      * Callback function to receive the result of the convertDocumentXlsxToCsv operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentXlsxToCsvCallback
      * @param {String} error Error message, if any.
-     * @param {File} data The data returned by the service call.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -204,7 +204,7 @@
      * Convert Office Excel Workbooks (xlsx) to standard Comma-Separated Values (CSV) format.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentXlsxToCsvCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link File}
+     * data is of type: {@link Object}
      */
     this.convertDocumentXlsxToCsv = function(inputFile, callback) {
       var postBody = null;
@@ -230,7 +230,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/csv'];
-      var returnType = File;
+      var returnType = Object;
 
       return this.apiClient.callApi(
         '/convert/xlsx/to/csv', 'POST',
@@ -243,7 +243,7 @@
      * Callback function to receive the result of the convertDocumentXlsxToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentXlsxToPdfCallback
      * @param {String} error Error message, if any.
-     * @param {File} data The data returned by the service call.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -252,7 +252,7 @@
      * Convert Office Excel Workbooks (xlsx) to standard PDF.  Converts all worksheets in the workbook to PDF.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentXlsxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link File}
+     * data is of type: {@link Object}
      */
     this.convertDocumentXlsxToPdf = function(inputFile, callback) {
       var postBody = null;
@@ -278,7 +278,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/pdf'];
-      var returnType = File;
+      var returnType = Object;
 
       return this.apiClient.callApi(
         '/convert/xlsx/to/pdf', 'POST',

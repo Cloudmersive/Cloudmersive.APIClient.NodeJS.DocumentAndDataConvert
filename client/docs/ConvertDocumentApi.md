@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="convertDocumentAutodetectToPdf"></a>
 # **convertDocumentAutodetectToPdf**
-> File convertDocumentAutodetectToPdf(inputFile)
+> Object convertDocumentAutodetectToPdf(inputFile)
 
 Convert Document to PDF
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Object**
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 <a name="convertDocumentDocxToPdf"></a>
 # **convertDocumentDocxToPdf**
-> File convertDocumentDocxToPdf(inputFile)
+> Object convertDocumentDocxToPdf(inputFile)
 
 Word DOCX to PDF
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Object**
 
 ### Authorization
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 <a name="convertDocumentPptxToPdf"></a>
 # **convertDocumentPptxToPdf**
-> File convertDocumentPptxToPdf(inputFile)
+> Object convertDocumentPptxToPdf(inputFile)
 
 PowerPoint PPTX to PDF
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Object**
 
 ### Authorization
 
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 <a name="convertDocumentXlsxToCsv"></a>
 # **convertDocumentXlsxToCsv**
-> File convertDocumentXlsxToCsv(inputFile)
+> Object convertDocumentXlsxToCsv(inputFile)
 
 Excel XLSX to CSV
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Object**
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 <a name="convertDocumentXlsxToPdf"></a>
 # **convertDocumentXlsxToPdf**
-> File convertDocumentXlsxToPdf(inputFile)
+> Object convertDocumentXlsxToPdf(inputFile)
 
 Excel XLSX to PDF
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Object**
 
 ### Authorization
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="convertImageImageFormatConvert"></a>
 # **convertImageImageFormatConvert**
-> File convertImageImageFormatConvert(format1, format2, inputFile)
+> Object convertImageImageFormatConvert(format1, format2, inputFile)
 
 Image format conversion
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Object**
 
 ### Authorization
 

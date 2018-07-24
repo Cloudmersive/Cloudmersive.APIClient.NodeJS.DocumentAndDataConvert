@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 <a name="convertWebUrlToPdf"></a>
 # **convertWebUrlToPdf**
-> File convertWebUrlToPdf(input)
+> Object convertWebUrlToPdf(input)
 
 Convert a URL to PDF
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Object**
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 <a name="convertWebUrlToScreenshot"></a>
 # **convertWebUrlToScreenshot**
-> File convertWebUrlToScreenshot(input)
+> Object convertWebUrlToScreenshot(input)
 
 Take screenshot of URL
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**File**
+**Object**
 
 ### Authorization
 

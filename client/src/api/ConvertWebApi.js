@@ -33,7 +33,7 @@
   /**
    * ConvertWeb service.
    * @module api/ConvertWebApi
-   * @version 1.1.0
+   * @version 1.1.1
    */
 
   /**
@@ -98,7 +98,7 @@
      * Callback function to receive the result of the convertWebUrlToPdf operation.
      * @callback module:api/ConvertWebApi~convertWebUrlToPdfCallback
      * @param {String} error Error message, if any.
-     * @param {File} data The data returned by the service call.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -107,7 +107,7 @@
      * Fully renders a website and returns a PDF of the full page.  Javascript, HTML5, CSS and other advanced features are all supported.
      * @param {module:model/ScreenshotRequest} input URL to PDF request parameters
      * @param {module:api/ConvertWebApi~convertWebUrlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link File}
+     * data is of type: {@link Object}
      */
     this.convertWebUrlToPdf = function(input, callback) {
       var postBody = input;
@@ -132,7 +132,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/pdf'];
-      var returnType = File;
+      var returnType = Object;
 
       return this.apiClient.callApi(
         '/convert/web/url/to/pdf', 'POST',
@@ -145,7 +145,7 @@
      * Callback function to receive the result of the convertWebUrlToScreenshot operation.
      * @callback module:api/ConvertWebApi~convertWebUrlToScreenshotCallback
      * @param {String} error Error message, if any.
-     * @param {File} data The data returned by the service call.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -154,7 +154,7 @@
      * Fully renders a website and returns a PNG screenshot of the full page image.  Javascript, HTML5, CSS and other advanced features are all supported.
      * @param {module:model/ScreenshotRequest} input Screenshot request parameters
      * @param {module:api/ConvertWebApi~convertWebUrlToScreenshotCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link File}
+     * data is of type: {@link Object}
      */
     this.convertWebUrlToScreenshot = function(input, callback) {
       var postBody = input;
@@ -179,7 +179,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['image/png'];
-      var returnType = File;
+      var returnType = Object;
 
       return this.apiClient.callApi(
         '/convert/web/url/to/screenshot', 'POST',
