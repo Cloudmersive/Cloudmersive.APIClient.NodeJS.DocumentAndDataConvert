@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 <a name="convertDataXmlToJson"></a>
 # **convertDataXmlToJson**
-> Object convertDataXmlToJson()
+> Object convertDataXmlToJson(inputFile)
 
 XML to JSON conversion
 
@@ -82,6 +82,9 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.ConvertDataApi();
 
+var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
+
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -89,11 +92,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.convertDataXmlToJson(callback);
+apiInstance.convertDataXmlToJson(inputFile, callback);
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Input file to perform the operation on. | 
 
 ### Return type
 
@@ -105,6 +111,6 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml
 

@@ -33,7 +33,7 @@
   /**
    * ConvertData service.
    * @module api/ConvertDataApi
-   * @version 1.0.9
+   * @version 1.1.0
    */
 
   /**
@@ -106,11 +106,17 @@
     /**
      * XML to JSON conversion
      * Convert an XML string or file into JSON
+     * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDataApi~convertDataXmlToJsonCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
-    this.convertDataXmlToJson = function(callback) {
+    this.convertDataXmlToJson = function(inputFile, callback) {
       var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDataXmlToJson");
+      }
 
 
       var pathParams = {
@@ -122,10 +128,11 @@
       var headerParams = {
       };
       var formParams = {
+        'inputFile': inputFile
       };
 
       var authNames = ['Apikey'];
-      var contentTypes = [];
+      var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = Object;
 

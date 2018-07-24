@@ -36,7 +36,7 @@
   /**
    * The ScreenshotRequest model module.
    * @module model/ScreenshotRequest
-   * @version 1.0.9
+   * @version 1.1.0
    */
 
   /**
