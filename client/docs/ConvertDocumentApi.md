@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/pdf
+ - **Accept**: application/octet-stream
 
 <a name="convertDocumentPptxToPdf"></a>
 # **convertDocumentPptxToPdf**

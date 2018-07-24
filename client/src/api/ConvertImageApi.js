@@ -33,7 +33,7 @@
   /**
    * ConvertImage service.
    * @module api/ConvertImageApi
-   * @version 1.1.1
+   * @version 1.1.2
    */
 
   /**

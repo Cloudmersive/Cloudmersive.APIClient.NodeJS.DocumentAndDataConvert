@@ -33,7 +33,7 @@
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 1.1.1
+   * @version 1.1.2
    */
 
   /**
@@ -133,7 +133,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/pdf'];
+      var accepts = ['application/octet-stream'];
       var returnType = Object;
 
       return this.apiClient.callApi(
