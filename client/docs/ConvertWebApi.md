@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/pdf
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="convertWebUrlToPdf"></a>
 # **convertWebUrlToPdf**
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/pdf
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="convertWebUrlToScreenshot"></a>
 # **convertWebUrlToScreenshot**
@@ -166,5 +166,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: image/png
+ - **Accept**: application/json, text/json, application/xml, text/xml
 

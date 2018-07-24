@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/pdf
+ - **Accept**: application/octet-stream
 
 <a name="convertDocumentDocxToPdf"></a>
 # **convertDocumentDocxToPdf**
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/pdf
+ - **Accept**: application/octet-stream
 
 <a name="convertDocumentXlsxToCsv"></a>
 # **convertDocumentXlsxToCsv**
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/csv
+ - **Accept**: application/octet-stream
 
 <a name="convertDocumentXlsxToPdf"></a>
 # **convertDocumentXlsxToPdf**
@@ -274,5 +274,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/pdf
+ - **Accept**: application/octet-stream
 

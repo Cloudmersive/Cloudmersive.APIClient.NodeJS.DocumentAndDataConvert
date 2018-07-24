@@ -33,7 +33,7 @@
   /**
    * ConvertWeb service.
    * @module api/ConvertWebApi
-   * @version 1.1.2
+   * @version 1.1.4
    */
 
   /**
@@ -84,7 +84,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/pdf'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = Object;
 
       return this.apiClient.callApi(
@@ -131,7 +131,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/pdf'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = Object;
 
       return this.apiClient.callApi(
@@ -178,7 +178,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['image/png'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = Object;
 
       return this.apiClient.callApi(
