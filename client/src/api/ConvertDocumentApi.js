@@ -33,7 +33,7 @@
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 1.1.4
+   * @version 1.1.6
    */
 
   /**
@@ -86,7 +86,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/octet-stream'];
-      var returnType = Object;
+      var returnType = 'Blob';
 
       return this.apiClient.callApi(
         '/convert/autodetect/to/pdf', 'POST',
@@ -134,7 +134,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/octet-stream'];
-      var returnType = Object;
+      var returnType = 'Blob';
 
       return this.apiClient.callApi(
         '/convert/docx/to/pdf', 'POST',
@@ -182,7 +182,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/octet-stream'];
-      var returnType = Object;
+      var returnType = 'Blob';
 
       return this.apiClient.callApi(
         '/convert/pptx/to/pdf', 'POST',
@@ -230,7 +230,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/octet-stream'];
-      var returnType = Object;
+      var returnType = 'Blob';
 
       return this.apiClient.callApi(
         '/convert/xlsx/to/csv', 'POST',
@@ -278,7 +278,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/octet-stream'];
-      var returnType = Object;
+      var returnType = 'Blob';
 
       return this.apiClient.callApi(
         '/convert/xlsx/to/pdf', 'POST',
