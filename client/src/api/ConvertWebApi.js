@@ -33,7 +33,7 @@
   /**
    * ConvertWeb service.
    * @module api/ConvertWebApi
-   * @version 1.1.6
+   * @version 1.1.7
    */
 
   /**
@@ -85,7 +85,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
-      var returnType = Object;
+      var returnType = 'Blob';
 
       return this.apiClient.callApi(
         '/convert/web/html/to/pdf', 'POST',
@@ -132,7 +132,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
-      var returnType = Object;
+      var returnType = 'Blob';
 
       return this.apiClient.callApi(
         '/convert/web/url/to/pdf', 'POST',
@@ -179,7 +179,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
-      var returnType = Object;
+      var returnType = 'Blob';
 
       return this.apiClient.callApi(
         '/convert/web/url/to/screenshot', 'POST',
