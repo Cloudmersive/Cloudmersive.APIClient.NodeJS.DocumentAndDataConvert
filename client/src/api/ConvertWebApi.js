@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/HtmlToPdfRequest', 'model/ScreenshotRequest'], factory);
+    define(['ApiClient', 'model/HtmlMdResult', 'model/HtmlToPdfRequest', 'model/ScreenshotRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/HtmlToPdfRequest'), require('../model/ScreenshotRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/HtmlMdResult'), require('../model/HtmlToPdfRequest'), require('../model/ScreenshotRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ConvertWebApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.HtmlToPdfRequest, root.CloudmersiveConvertApiClient.ScreenshotRequest);
+    root.CloudmersiveConvertApiClient.ConvertWebApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.HtmlMdResult, root.CloudmersiveConvertApiClient.HtmlToPdfRequest, root.CloudmersiveConvertApiClient.ScreenshotRequest);
   }
-}(this, function(ApiClient, HtmlToPdfRequest, ScreenshotRequest) {
+}(this, function(ApiClient, HtmlMdResult, HtmlToPdfRequest, ScreenshotRequest) {
   'use strict';
 
   /**
    * ConvertWeb service.
    * @module api/ConvertWebApi
-   * @version 1.1.7
+   * @version 1.1.8
    */
 
   /**
@@ -89,6 +89,54 @@
 
       return this.apiClient.callApi(
         '/convert/web/html/to/pdf', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertWebMdToHtml operation.
+     * @callback module:api/ConvertWebApi~convertWebMdToHtmlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/HtmlMdResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Markdown to HTML
+     * Convert a markdown file (.md) to HTML
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertWebApi~convertWebMdToHtmlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/HtmlMdResult}
+     */
+    this.convertWebMdToHtml = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertWebMdToHtml");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = HtmlMdResult;
+
+      return this.apiClient.callApi(
+        '/convert/web/md/to/html', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
