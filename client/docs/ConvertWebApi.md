@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 <a name="convertWebUrlToPdf"></a>
 # **convertWebUrlToPdf**
-> Object convertWebUrlToPdf(input)
+> &#39;Blob&#39; convertWebUrlToPdf(input)
 
 Convert a URL to PDF
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**&#39;Blob&#39;**
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 <a name="convertWebUrlToScreenshot"></a>
 # **convertWebUrlToScreenshot**
-> Object convertWebUrlToScreenshot(input)
+> &#39;Blob&#39; convertWebUrlToScreenshot(input)
 
 Take screenshot of URL
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**&#39;Blob&#39;**
 
 ### Authorization
 

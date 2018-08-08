@@ -33,7 +33,7 @@
   /**
    * ConvertWeb service.
    * @module api/ConvertWebApi
-   * @version 1.1.8
+   * @version 1.1.9
    */
 
   /**
@@ -146,7 +146,7 @@
      * Callback function to receive the result of the convertWebUrlToPdf operation.
      * @callback module:api/ConvertWebApi~convertWebUrlToPdfCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {'Blob'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -155,7 +155,7 @@
      * Fully renders a website and returns a PDF of the full page.  Javascript, HTML5, CSS and other advanced features are all supported.
      * @param {module:model/ScreenshotRequest} input URL to PDF request parameters
      * @param {module:api/ConvertWebApi~convertWebUrlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link 'Blob'}
      */
     this.convertWebUrlToPdf = function(input, callback) {
       var postBody = input;
@@ -193,7 +193,7 @@
      * Callback function to receive the result of the convertWebUrlToScreenshot operation.
      * @callback module:api/ConvertWebApi~convertWebUrlToScreenshotCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {'Blob'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -202,7 +202,7 @@
      * Fully renders a website and returns a PNG screenshot of the full page image.  Javascript, HTML5, CSS and other advanced features are all supported.
      * @param {module:model/ScreenshotRequest} input Screenshot request parameters
      * @param {module:api/ConvertWebApi~convertWebUrlToScreenshotCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link 'Blob'}
      */
     this.convertWebUrlToScreenshot = function(input, callback) {
       var postBody = input;

@@ -33,7 +33,7 @@
   /**
    * ConvertTemplate service.
    * @module api/ConvertTemplateApi
-   * @version 1.1.8
+   * @version 1.1.9
    */
 
   /**
