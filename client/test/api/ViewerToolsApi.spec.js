@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveConvertApiClient.MergeDocumentApi();
+    instance = new CloudmersiveConvertApiClient.ViewerToolsApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,31 +49,11 @@
       object[property] = value;
   }
 
-  describe('MergeDocumentApi', function() {
-    describe('mergeDocumentDocx', function() {
-      it('should call mergeDocumentDocx successfully', function(done) {
-        //uncomment below and update the code to test mergeDocumentDocx
-        //instance.mergeDocumentDocx(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('mergeDocumentPptx', function() {
-      it('should call mergeDocumentPptx successfully', function(done) {
-        //uncomment below and update the code to test mergeDocumentPptx
-        //instance.mergeDocumentPptx(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('mergeDocumentXlsx', function() {
-      it('should call mergeDocumentXlsx successfully', function(done) {
-        //uncomment below and update the code to test mergeDocumentXlsx
-        //instance.mergeDocumentXlsx(function(error) {
+  describe('ViewerToolsApi', function() {
+    describe('viewerToolsCreateSimple', function() {
+      it('should call viewerToolsCreateSimple successfully', function(done) {
+        //uncomment below and update the code to test viewerToolsCreateSimple
+        //instance.viewerToolsCreateSimple(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

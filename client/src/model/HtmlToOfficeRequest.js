@@ -25,7 +25,7 @@
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.HtmlMdResult = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.HtmlToOfficeRequest = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,38 +34,34 @@
 
 
   /**
-   * The HtmlMdResult model module.
-   * @module model/HtmlMdResult
+   * The HtmlToOfficeRequest model module.
+   * @module model/HtmlToOfficeRequest
    * @version 1.2.1
    */
 
   /**
-   * Constructs a new <code>HtmlMdResult</code>.
-   * Result from converting a Markdown file to HTML
-   * @alias module:model/HtmlMdResult
+   * Constructs a new <code>HtmlToOfficeRequest</code>.
+   * Details of the HTML to Office request
+   * @alias module:model/HtmlToOfficeRequest
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
-
   };
 
   /**
-   * Constructs a <code>HtmlMdResult</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>HtmlToOfficeRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/HtmlMdResult} obj Optional instance to populate.
-   * @return {module:model/HtmlMdResult} The populated <code>HtmlMdResult</code> instance.
+   * @param {module:model/HtmlToOfficeRequest} obj Optional instance to populate.
+   * @return {module:model/HtmlToOfficeRequest} The populated <code>HtmlToOfficeRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Successful')) {
-        obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
-      }
       if (data.hasOwnProperty('Html')) {
         obj['Html'] = ApiClient.convertToType(data['Html'], 'String');
       }
@@ -74,12 +70,6 @@
   }
 
   /**
-   * True if operation was successful, false otherwise
-   * @member {Boolean} Successful
-   */
-  exports.prototype['Successful'] = undefined;
-  /**
-   * Resulting HTML from the conversion
    * @member {String} Html
    */
   exports.prototype['Html'] = undefined;

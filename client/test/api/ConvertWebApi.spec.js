@@ -50,6 +50,16 @@
   }
 
   describe('ConvertWebApi', function() {
+    describe('convertWebHtmlToDocx', function() {
+      it('should call convertWebHtmlToDocx successfully', function(done) {
+        //uncomment below and update the code to test convertWebHtmlToDocx
+        //instance.convertWebHtmlToDocx(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertWebHtmlToPdf', function() {
       it('should call convertWebHtmlToPdf successfully', function(done) {
         //uncomment below and update the code to test convertWebHtmlToPdf

@@ -25,7 +25,7 @@
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.HtmlMdResult = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.ViewerResponse = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The HtmlMdResult model module.
-   * @module model/HtmlMdResult
+   * The ViewerResponse model module.
+   * @module model/ViewerResponse
    * @version 1.2.1
    */
 
   /**
-   * Constructs a new <code>HtmlMdResult</code>.
-   * Result from converting a Markdown file to HTML
-   * @alias module:model/HtmlMdResult
+   * Constructs a new <code>ViewerResponse</code>.
+   * Result of creating a viewer
+   * @alias module:model/ViewerResponse
    * @class
    */
   var exports = function() {
@@ -53,36 +53,34 @@
   };
 
   /**
-   * Constructs a <code>HtmlMdResult</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ViewerResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/HtmlMdResult} obj Optional instance to populate.
-   * @return {module:model/HtmlMdResult} The populated <code>HtmlMdResult</code> instance.
+   * @param {module:model/ViewerResponse} obj Optional instance to populate.
+   * @return {module:model/ViewerResponse} The populated <code>ViewerResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('HtmlEmbed')) {
+        obj['HtmlEmbed'] = ApiClient.convertToType(data['HtmlEmbed'], 'String');
+      }
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
-      }
-      if (data.hasOwnProperty('Html')) {
-        obj['Html'] = ApiClient.convertToType(data['Html'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * True if operation was successful, false otherwise
+   * @member {String} HtmlEmbed
+   */
+  exports.prototype['HtmlEmbed'] = undefined;
+  /**
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
-  /**
-   * Resulting HTML from the conversion
-   * @member {String} Html
-   */
-  exports.prototype['Html'] = undefined;
 
 
 

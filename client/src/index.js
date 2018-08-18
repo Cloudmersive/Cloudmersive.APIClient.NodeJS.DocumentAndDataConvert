@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/HtmlMdResult', 'model/HtmlTemplateApplicationRequest', 'model/HtmlTemplateApplicationResponse', 'model/HtmlTemplateOperation', 'model/HtmlToPdfRequest', 'model/ScreenshotRequest', 'api/ConvertDataApi', 'api/ConvertDocumentApi', 'api/ConvertImageApi', 'api/ConvertTemplateApi', 'api/ConvertWebApi', 'api/MergeDocumentApi'], factory);
+    define(['ApiClient', 'model/ConvertedPngPage', 'model/HtmlMdResult', 'model/HtmlTemplateApplicationRequest', 'model/HtmlTemplateApplicationResponse', 'model/HtmlTemplateOperation', 'model/HtmlToOfficeRequest', 'model/HtmlToPdfRequest', 'model/PdfToPngResult', 'model/ReplaceStringRequest', 'model/ScreenshotRequest', 'model/ViewerResponse', 'api/CompareDocumentApi', 'api/ConvertDataApi', 'api/ConvertDocumentApi', 'api/ConvertImageApi', 'api/ConvertTemplateApi', 'api/ConvertWebApi', 'api/EditDocumentApi', 'api/MergeDocumentApi', 'api/ViewerToolsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/HtmlMdResult'), require('./model/HtmlTemplateApplicationRequest'), require('./model/HtmlTemplateApplicationResponse'), require('./model/HtmlTemplateOperation'), require('./model/HtmlToPdfRequest'), require('./model/ScreenshotRequest'), require('./api/ConvertDataApi'), require('./api/ConvertDocumentApi'), require('./api/ConvertImageApi'), require('./api/ConvertTemplateApi'), require('./api/ConvertWebApi'), require('./api/MergeDocumentApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/ConvertedPngPage'), require('./model/HtmlMdResult'), require('./model/HtmlTemplateApplicationRequest'), require('./model/HtmlTemplateApplicationResponse'), require('./model/HtmlTemplateOperation'), require('./model/HtmlToOfficeRequest'), require('./model/HtmlToPdfRequest'), require('./model/PdfToPngResult'), require('./model/ReplaceStringRequest'), require('./model/ScreenshotRequest'), require('./model/ViewerResponse'), require('./api/CompareDocumentApi'), require('./api/ConvertDataApi'), require('./api/ConvertDocumentApi'), require('./api/ConvertImageApi'), require('./api/ConvertTemplateApi'), require('./api/ConvertWebApi'), require('./api/EditDocumentApi'), require('./api/MergeDocumentApi'), require('./api/ViewerToolsApi'));
   }
-}(function(ApiClient, HtmlMdResult, HtmlTemplateApplicationRequest, HtmlTemplateApplicationResponse, HtmlTemplateOperation, HtmlToPdfRequest, ScreenshotRequest, ConvertDataApi, ConvertDocumentApi, ConvertImageApi, ConvertTemplateApi, ConvertWebApi, MergeDocumentApi) {
+}(function(ApiClient, ConvertedPngPage, HtmlMdResult, HtmlTemplateApplicationRequest, HtmlTemplateApplicationResponse, HtmlTemplateOperation, HtmlToOfficeRequest, HtmlToPdfRequest, PdfToPngResult, ReplaceStringRequest, ScreenshotRequest, ViewerResponse, CompareDocumentApi, ConvertDataApi, ConvertDocumentApi, ConvertImageApi, ConvertTemplateApi, ConvertWebApi, EditDocumentApi, MergeDocumentApi, ViewerToolsApi) {
   'use strict';
 
   /**
@@ -53,7 +53,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 1.1.9
+   * @version 1.2.1
    */
   var exports = {
     /**
@@ -61,6 +61,11 @@
      * @property {module:ApiClient}
      */
     ApiClient: ApiClient,
+    /**
+     * The ConvertedPngPage model constructor.
+     * @property {module:model/ConvertedPngPage}
+     */
+    ConvertedPngPage: ConvertedPngPage,
     /**
      * The HtmlMdResult model constructor.
      * @property {module:model/HtmlMdResult}
@@ -82,15 +87,40 @@
      */
     HtmlTemplateOperation: HtmlTemplateOperation,
     /**
+     * The HtmlToOfficeRequest model constructor.
+     * @property {module:model/HtmlToOfficeRequest}
+     */
+    HtmlToOfficeRequest: HtmlToOfficeRequest,
+    /**
      * The HtmlToPdfRequest model constructor.
      * @property {module:model/HtmlToPdfRequest}
      */
     HtmlToPdfRequest: HtmlToPdfRequest,
     /**
+     * The PdfToPngResult model constructor.
+     * @property {module:model/PdfToPngResult}
+     */
+    PdfToPngResult: PdfToPngResult,
+    /**
+     * The ReplaceStringRequest model constructor.
+     * @property {module:model/ReplaceStringRequest}
+     */
+    ReplaceStringRequest: ReplaceStringRequest,
+    /**
      * The ScreenshotRequest model constructor.
      * @property {module:model/ScreenshotRequest}
      */
     ScreenshotRequest: ScreenshotRequest,
+    /**
+     * The ViewerResponse model constructor.
+     * @property {module:model/ViewerResponse}
+     */
+    ViewerResponse: ViewerResponse,
+    /**
+     * The CompareDocumentApi service constructor.
+     * @property {module:api/CompareDocumentApi}
+     */
+    CompareDocumentApi: CompareDocumentApi,
     /**
      * The ConvertDataApi service constructor.
      * @property {module:api/ConvertDataApi}
@@ -117,10 +147,20 @@
      */
     ConvertWebApi: ConvertWebApi,
     /**
+     * The EditDocumentApi service constructor.
+     * @property {module:api/EditDocumentApi}
+     */
+    EditDocumentApi: EditDocumentApi,
+    /**
      * The MergeDocumentApi service constructor.
      * @property {module:api/MergeDocumentApi}
      */
-    MergeDocumentApi: MergeDocumentApi
+    MergeDocumentApi: MergeDocumentApi,
+    /**
+     * The ViewerToolsApi service constructor.
+     * @property {module:api/ViewerToolsApi}
+     */
+    ViewerToolsApi: ViewerToolsApi
   };
 
   return exports;

@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveConvertApiClient.MergeDocumentApi();
+    instance = new CloudmersiveConvertApiClient.HtmlToOfficeRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,37 +49,19 @@
       object[property] = value;
   }
 
-  describe('MergeDocumentApi', function() {
-    describe('mergeDocumentDocx', function() {
-      it('should call mergeDocumentDocx successfully', function(done) {
-        //uncomment below and update the code to test mergeDocumentDocx
-        //instance.mergeDocumentDocx(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('HtmlToOfficeRequest', function() {
+    it('should create an instance of HtmlToOfficeRequest', function() {
+      // uncomment below and update the code to test HtmlToOfficeRequest
+      //var instane = new CloudmersiveConvertApiClient.HtmlToOfficeRequest();
+      //expect(instance).to.be.a(CloudmersiveConvertApiClient.HtmlToOfficeRequest);
     });
-    describe('mergeDocumentPptx', function() {
-      it('should call mergeDocumentPptx successfully', function(done) {
-        //uncomment below and update the code to test mergeDocumentPptx
-        //instance.mergeDocumentPptx(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property html (base name: "Html")', function() {
+      // uncomment below and update the code to test the property html
+      //var instane = new CloudmersiveConvertApiClient.HtmlToOfficeRequest();
+      //expect(instance).to.be();
     });
-    describe('mergeDocumentXlsx', function() {
-      it('should call mergeDocumentXlsx successfully', function(done) {
-        //uncomment below and update the code to test mergeDocumentXlsx
-        //instance.mergeDocumentXlsx(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));

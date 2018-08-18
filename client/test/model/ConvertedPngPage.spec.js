@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveConvertApiClient.MergeDocumentApi();
+    instance = new CloudmersiveConvertApiClient.ConvertedPngPage();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,37 +49,25 @@
       object[property] = value;
   }
 
-  describe('MergeDocumentApi', function() {
-    describe('mergeDocumentDocx', function() {
-      it('should call mergeDocumentDocx successfully', function(done) {
-        //uncomment below and update the code to test mergeDocumentDocx
-        //instance.mergeDocumentDocx(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ConvertedPngPage', function() {
+    it('should create an instance of ConvertedPngPage', function() {
+      // uncomment below and update the code to test ConvertedPngPage
+      //var instane = new CloudmersiveConvertApiClient.ConvertedPngPage();
+      //expect(instance).to.be.a(CloudmersiveConvertApiClient.ConvertedPngPage);
     });
-    describe('mergeDocumentPptx', function() {
-      it('should call mergeDocumentPptx successfully', function(done) {
-        //uncomment below and update the code to test mergeDocumentPptx
-        //instance.mergeDocumentPptx(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property pageNumber (base name: "PageNumber")', function() {
+      // uncomment below and update the code to test the property pageNumber
+      //var instane = new CloudmersiveConvertApiClient.ConvertedPngPage();
+      //expect(instance).to.be();
     });
-    describe('mergeDocumentXlsx', function() {
-      it('should call mergeDocumentXlsx successfully', function(done) {
-        //uncomment below and update the code to test mergeDocumentXlsx
-        //instance.mergeDocumentXlsx(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property URL (base name: "URL")', function() {
+      // uncomment below and update the code to test the property URL
+      //var instane = new CloudmersiveConvertApiClient.ConvertedPngPage();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

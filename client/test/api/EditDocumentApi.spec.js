@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveConvertApiClient.MergeDocumentApi();
+    instance = new CloudmersiveConvertApiClient.EditDocumentApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,31 +49,31 @@
       object[property] = value;
   }
 
-  describe('MergeDocumentApi', function() {
-    describe('mergeDocumentDocx', function() {
-      it('should call mergeDocumentDocx successfully', function(done) {
-        //uncomment below and update the code to test mergeDocumentDocx
-        //instance.mergeDocumentDocx(function(error) {
+  describe('EditDocumentApi', function() {
+    describe('editDocumentBeginEditing', function() {
+      it('should call editDocumentBeginEditing successfully', function(done) {
+        //uncomment below and update the code to test editDocumentBeginEditing
+        //instance.editDocumentBeginEditing(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('mergeDocumentPptx', function() {
-      it('should call mergeDocumentPptx successfully', function(done) {
-        //uncomment below and update the code to test mergeDocumentPptx
-        //instance.mergeDocumentPptx(function(error) {
+    describe('editDocumentDocxReplace', function() {
+      it('should call editDocumentDocxReplace successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxReplace
+        //instance.editDocumentDocxReplace(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('mergeDocumentXlsx', function() {
-      it('should call mergeDocumentXlsx successfully', function(done) {
-        //uncomment below and update the code to test mergeDocumentXlsx
-        //instance.mergeDocumentXlsx(function(error) {
+    describe('editDocumentPptxReplace', function() {
+      it('should call editDocumentPptxReplace successfully', function(done) {
+        //uncomment below and update the code to test editDocumentPptxReplace
+        //instance.editDocumentPptxReplace(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

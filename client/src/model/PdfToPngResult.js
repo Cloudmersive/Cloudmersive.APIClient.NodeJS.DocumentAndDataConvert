@@ -16,33 +16,33 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/ConvertedPngPage'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ConvertedPngPage'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.HtmlMdResult = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.PdfToPngResult = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.ConvertedPngPage);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ConvertedPngPage) {
   'use strict';
 
 
 
 
   /**
-   * The HtmlMdResult model module.
-   * @module model/HtmlMdResult
+   * The PdfToPngResult model module.
+   * @module model/PdfToPngResult
    * @version 1.2.1
    */
 
   /**
-   * Constructs a new <code>HtmlMdResult</code>.
-   * Result from converting a Markdown file to HTML
-   * @alias module:model/HtmlMdResult
+   * Constructs a new <code>PdfToPngResult</code>.
+   * Result of converting a PDF to a PNG array
+   * @alias module:model/PdfToPngResult
    * @class
    */
   var exports = function() {
@@ -53,11 +53,11 @@
   };
 
   /**
-   * Constructs a <code>HtmlMdResult</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PdfToPngResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/HtmlMdResult} obj Optional instance to populate.
-   * @return {module:model/HtmlMdResult} The populated <code>HtmlMdResult</code> instance.
+   * @param {module:model/PdfToPngResult} obj Optional instance to populate.
+   * @return {module:model/PdfToPngResult} The populated <code>PdfToPngResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -66,23 +66,23 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
-      if (data.hasOwnProperty('Html')) {
-        obj['Html'] = ApiClient.convertToType(data['Html'], 'String');
+      if (data.hasOwnProperty('PngResultPages')) {
+        obj['PngResultPages'] = ApiClient.convertToType(data['PngResultPages'], [ConvertedPngPage]);
       }
     }
     return obj;
   }
 
   /**
-   * True if operation was successful, false otherwise
+   * True if the operation was successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * Resulting HTML from the conversion
-   * @member {String} Html
+   * Array of converted pages
+   * @member {Array.<module:model/ConvertedPngPage>} PngResultPages
    */
-  exports.prototype['Html'] = undefined;
+  exports.prototype['PngResultPages'] = undefined;
 
 
 

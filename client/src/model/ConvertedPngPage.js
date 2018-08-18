@@ -25,7 +25,7 @@
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.HtmlMdResult = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.ConvertedPngPage = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The HtmlMdResult model module.
-   * @module model/HtmlMdResult
+   * The ConvertedPngPage model module.
+   * @module model/ConvertedPngPage
    * @version 1.2.1
    */
 
   /**
-   * Constructs a new <code>HtmlMdResult</code>.
-   * Result from converting a Markdown file to HTML
-   * @alias module:model/HtmlMdResult
+   * Constructs a new <code>ConvertedPngPage</code>.
+   * A single converted page
+   * @alias module:model/ConvertedPngPage
    * @class
    */
   var exports = function() {
@@ -53,36 +53,36 @@
   };
 
   /**
-   * Constructs a <code>HtmlMdResult</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ConvertedPngPage</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/HtmlMdResult} obj Optional instance to populate.
-   * @return {module:model/HtmlMdResult} The populated <code>HtmlMdResult</code> instance.
+   * @param {module:model/ConvertedPngPage} obj Optional instance to populate.
+   * @return {module:model/ConvertedPngPage} The populated <code>ConvertedPngPage</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Successful')) {
-        obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
+      if (data.hasOwnProperty('PageNumber')) {
+        obj['PageNumber'] = ApiClient.convertToType(data['PageNumber'], 'Number');
       }
-      if (data.hasOwnProperty('Html')) {
-        obj['Html'] = ApiClient.convertToType(data['Html'], 'String');
+      if (data.hasOwnProperty('URL')) {
+        obj['URL'] = ApiClient.convertToType(data['URL'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * True if operation was successful, false otherwise
-   * @member {Boolean} Successful
+   * Page number of the converted page, starting with 1
+   * @member {Number} PageNumber
    */
-  exports.prototype['Successful'] = undefined;
+  exports.prototype['PageNumber'] = undefined;
   /**
-   * Resulting HTML from the conversion
-   * @member {String} Html
+   * URL to the PNG file of this page; file is stored in an in-memory cache and will be deleted
+   * @member {String} URL
    */
-  exports.prototype['Html'] = undefined;
+  exports.prototype['URL'] = undefined;
 
 
 

@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveConvertApiClient.MergeDocumentApi();
+    instance = new CloudmersiveConvertApiClient.ViewerResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,37 +49,25 @@
       object[property] = value;
   }
 
-  describe('MergeDocumentApi', function() {
-    describe('mergeDocumentDocx', function() {
-      it('should call mergeDocumentDocx successfully', function(done) {
-        //uncomment below and update the code to test mergeDocumentDocx
-        //instance.mergeDocumentDocx(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ViewerResponse', function() {
+    it('should create an instance of ViewerResponse', function() {
+      // uncomment below and update the code to test ViewerResponse
+      //var instane = new CloudmersiveConvertApiClient.ViewerResponse();
+      //expect(instance).to.be.a(CloudmersiveConvertApiClient.ViewerResponse);
     });
-    describe('mergeDocumentPptx', function() {
-      it('should call mergeDocumentPptx successfully', function(done) {
-        //uncomment below and update the code to test mergeDocumentPptx
-        //instance.mergeDocumentPptx(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property htmlEmbed (base name: "HtmlEmbed")', function() {
+      // uncomment below and update the code to test the property htmlEmbed
+      //var instane = new CloudmersiveConvertApiClient.ViewerResponse();
+      //expect(instance).to.be();
     });
-    describe('mergeDocumentXlsx', function() {
-      it('should call mergeDocumentXlsx successfully', function(done) {
-        //uncomment below and update the code to test mergeDocumentXlsx
-        //instance.mergeDocumentXlsx(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property successful (base name: "Successful")', function() {
+      // uncomment below and update the code to test the property successful
+      //var instane = new CloudmersiveConvertApiClient.ViewerResponse();
+      //expect(instance).to.be();
     });
+
   });
 
 }));
