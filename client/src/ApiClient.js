@@ -32,7 +32,7 @@
 
   /**
    * @module ApiClient
-   * @version 1.2.1
+   * @version 1.2.2
    */
 
   /**
@@ -69,7 +69,7 @@
      * @type {Number}
      * @default 60000
      */
-    this.timeout = 60000;
+    this.timeout = 180000;
 
     /**
      * If set to false an additional timestamp parameter is added to all API GET calls to
