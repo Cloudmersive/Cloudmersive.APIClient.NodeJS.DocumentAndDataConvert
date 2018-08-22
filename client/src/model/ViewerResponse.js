@@ -36,7 +36,7 @@
   /**
    * The ViewerResponse model module.
    * @module model/ViewerResponse
-   * @version 1.2.2
+   * @version 1.2.3
    */
 
   /**

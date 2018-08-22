@@ -1,0 +1,14 @@
+# CloudmersiveConvertApiClient.DocxTableCell
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**cellIndex** | **Number** | The index of the cell, 0-based | [optional] 
+**paragraphs** | [**[DocxParagraph]**](DocxParagraph.md) | Paragraphs inside the cell; this is where the contents of the cell are stored | [optional] 
+**cellShadingColor** | **String** | Color of the cell shading | [optional] 
+**cellShadingFill** | **String** | Fill of the cell shading | [optional] 
+**cellShadingPattern** | **String** | Pattern of the cell shading | [optional] 
+**cellWidthMode** | **String** | Width mode of the cell; can be auto (for automatic) or manual | [optional] 
+**cellWidth** | **String** | Width of the cell | [optional] 
+
+

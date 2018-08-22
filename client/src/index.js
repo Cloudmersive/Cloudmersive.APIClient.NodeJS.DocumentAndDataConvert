@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ConvertedPngPage', 'model/HtmlMdResult', 'model/HtmlTemplateApplicationRequest', 'model/HtmlTemplateApplicationResponse', 'model/HtmlTemplateOperation', 'model/HtmlToOfficeRequest', 'model/HtmlToPdfRequest', 'model/PdfToPngResult', 'model/ReplaceStringRequest', 'model/ScreenshotRequest', 'model/ViewerResponse', 'api/CompareDocumentApi', 'api/ConvertDataApi', 'api/ConvertDocumentApi', 'api/ConvertImageApi', 'api/ConvertTemplateApi', 'api/ConvertWebApi', 'api/EditDocumentApi', 'api/MergeDocumentApi', 'api/ViewerToolsApi'], factory);
+    define(['ApiClient', 'model/ConvertedPngPage', 'model/DocumentValidationError', 'model/DocumentValidationResult', 'model/DocxFooter', 'model/DocxHeader', 'model/DocxInsertImageRequest', 'model/DocxInsertImageResponse', 'model/DocxParagraph', 'model/DocxRun', 'model/DocxSection', 'model/DocxSetFooterRequest', 'model/DocxSetFooterResponse', 'model/DocxSetHeaderRequest', 'model/DocxSetHeaderResponse', 'model/DocxStyle', 'model/DocxTable', 'model/DocxTableCell', 'model/DocxTableRow', 'model/DocxText', 'model/FinishEditingRequest', 'model/GetDocxHeadersAndFootersRequest', 'model/GetDocxHeadersAndFootersResponse', 'model/GetDocxStylesRequest', 'model/GetDocxStylesResponse', 'model/GetDocxTablesRequest', 'model/GetDocxTablesResponse', 'model/HtmlMdResult', 'model/HtmlTemplateApplicationRequest', 'model/HtmlTemplateApplicationResponse', 'model/HtmlTemplateOperation', 'model/HtmlToOfficeRequest', 'model/HtmlToPdfRequest', 'model/InsertDocxTablesRequest', 'model/InsertDocxTablesResponse', 'model/PdfToPngResult', 'model/RemoveDocxHeadersAndFootersRequest', 'model/RemoveDocxHeadersAndFootersResponse', 'model/ReplaceStringRequest', 'model/ScreenshotRequest', 'model/ViewerResponse', 'api/CompareDocumentApi', 'api/ConvertDataApi', 'api/ConvertDocumentApi', 'api/ConvertImageApi', 'api/ConvertTemplateApi', 'api/ConvertWebApi', 'api/EditDocumentApi', 'api/MergeDocumentApi', 'api/ValidateDocumentApi', 'api/ViewerToolsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/ConvertedPngPage'), require('./model/HtmlMdResult'), require('./model/HtmlTemplateApplicationRequest'), require('./model/HtmlTemplateApplicationResponse'), require('./model/HtmlTemplateOperation'), require('./model/HtmlToOfficeRequest'), require('./model/HtmlToPdfRequest'), require('./model/PdfToPngResult'), require('./model/ReplaceStringRequest'), require('./model/ScreenshotRequest'), require('./model/ViewerResponse'), require('./api/CompareDocumentApi'), require('./api/ConvertDataApi'), require('./api/ConvertDocumentApi'), require('./api/ConvertImageApi'), require('./api/ConvertTemplateApi'), require('./api/ConvertWebApi'), require('./api/EditDocumentApi'), require('./api/MergeDocumentApi'), require('./api/ViewerToolsApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/ConvertedPngPage'), require('./model/DocumentValidationError'), require('./model/DocumentValidationResult'), require('./model/DocxFooter'), require('./model/DocxHeader'), require('./model/DocxInsertImageRequest'), require('./model/DocxInsertImageResponse'), require('./model/DocxParagraph'), require('./model/DocxRun'), require('./model/DocxSection'), require('./model/DocxSetFooterRequest'), require('./model/DocxSetFooterResponse'), require('./model/DocxSetHeaderRequest'), require('./model/DocxSetHeaderResponse'), require('./model/DocxStyle'), require('./model/DocxTable'), require('./model/DocxTableCell'), require('./model/DocxTableRow'), require('./model/DocxText'), require('./model/FinishEditingRequest'), require('./model/GetDocxHeadersAndFootersRequest'), require('./model/GetDocxHeadersAndFootersResponse'), require('./model/GetDocxStylesRequest'), require('./model/GetDocxStylesResponse'), require('./model/GetDocxTablesRequest'), require('./model/GetDocxTablesResponse'), require('./model/HtmlMdResult'), require('./model/HtmlTemplateApplicationRequest'), require('./model/HtmlTemplateApplicationResponse'), require('./model/HtmlTemplateOperation'), require('./model/HtmlToOfficeRequest'), require('./model/HtmlToPdfRequest'), require('./model/InsertDocxTablesRequest'), require('./model/InsertDocxTablesResponse'), require('./model/PdfToPngResult'), require('./model/RemoveDocxHeadersAndFootersRequest'), require('./model/RemoveDocxHeadersAndFootersResponse'), require('./model/ReplaceStringRequest'), require('./model/ScreenshotRequest'), require('./model/ViewerResponse'), require('./api/CompareDocumentApi'), require('./api/ConvertDataApi'), require('./api/ConvertDocumentApi'), require('./api/ConvertImageApi'), require('./api/ConvertTemplateApi'), require('./api/ConvertWebApi'), require('./api/EditDocumentApi'), require('./api/MergeDocumentApi'), require('./api/ValidateDocumentApi'), require('./api/ViewerToolsApi'));
   }
-}(function(ApiClient, ConvertedPngPage, HtmlMdResult, HtmlTemplateApplicationRequest, HtmlTemplateApplicationResponse, HtmlTemplateOperation, HtmlToOfficeRequest, HtmlToPdfRequest, PdfToPngResult, ReplaceStringRequest, ScreenshotRequest, ViewerResponse, CompareDocumentApi, ConvertDataApi, ConvertDocumentApi, ConvertImageApi, ConvertTemplateApi, ConvertWebApi, EditDocumentApi, MergeDocumentApi, ViewerToolsApi) {
+}(function(ApiClient, ConvertedPngPage, DocumentValidationError, DocumentValidationResult, DocxFooter, DocxHeader, DocxInsertImageRequest, DocxInsertImageResponse, DocxParagraph, DocxRun, DocxSection, DocxSetFooterRequest, DocxSetFooterResponse, DocxSetHeaderRequest, DocxSetHeaderResponse, DocxStyle, DocxTable, DocxTableCell, DocxTableRow, DocxText, FinishEditingRequest, GetDocxHeadersAndFootersRequest, GetDocxHeadersAndFootersResponse, GetDocxStylesRequest, GetDocxStylesResponse, GetDocxTablesRequest, GetDocxTablesResponse, HtmlMdResult, HtmlTemplateApplicationRequest, HtmlTemplateApplicationResponse, HtmlTemplateOperation, HtmlToOfficeRequest, HtmlToPdfRequest, InsertDocxTablesRequest, InsertDocxTablesResponse, PdfToPngResult, RemoveDocxHeadersAndFootersRequest, RemoveDocxHeadersAndFootersResponse, ReplaceStringRequest, ScreenshotRequest, ViewerResponse, CompareDocumentApi, ConvertDataApi, ConvertDocumentApi, ConvertImageApi, ConvertTemplateApi, ConvertWebApi, EditDocumentApi, MergeDocumentApi, ValidateDocumentApi, ViewerToolsApi) {
   'use strict';
 
   /**
@@ -53,7 +53,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 1.2.2
+   * @version 1.2.3
    */
   var exports = {
     /**
@@ -66,6 +66,131 @@
      * @property {module:model/ConvertedPngPage}
      */
     ConvertedPngPage: ConvertedPngPage,
+    /**
+     * The DocumentValidationError model constructor.
+     * @property {module:model/DocumentValidationError}
+     */
+    DocumentValidationError: DocumentValidationError,
+    /**
+     * The DocumentValidationResult model constructor.
+     * @property {module:model/DocumentValidationResult}
+     */
+    DocumentValidationResult: DocumentValidationResult,
+    /**
+     * The DocxFooter model constructor.
+     * @property {module:model/DocxFooter}
+     */
+    DocxFooter: DocxFooter,
+    /**
+     * The DocxHeader model constructor.
+     * @property {module:model/DocxHeader}
+     */
+    DocxHeader: DocxHeader,
+    /**
+     * The DocxInsertImageRequest model constructor.
+     * @property {module:model/DocxInsertImageRequest}
+     */
+    DocxInsertImageRequest: DocxInsertImageRequest,
+    /**
+     * The DocxInsertImageResponse model constructor.
+     * @property {module:model/DocxInsertImageResponse}
+     */
+    DocxInsertImageResponse: DocxInsertImageResponse,
+    /**
+     * The DocxParagraph model constructor.
+     * @property {module:model/DocxParagraph}
+     */
+    DocxParagraph: DocxParagraph,
+    /**
+     * The DocxRun model constructor.
+     * @property {module:model/DocxRun}
+     */
+    DocxRun: DocxRun,
+    /**
+     * The DocxSection model constructor.
+     * @property {module:model/DocxSection}
+     */
+    DocxSection: DocxSection,
+    /**
+     * The DocxSetFooterRequest model constructor.
+     * @property {module:model/DocxSetFooterRequest}
+     */
+    DocxSetFooterRequest: DocxSetFooterRequest,
+    /**
+     * The DocxSetFooterResponse model constructor.
+     * @property {module:model/DocxSetFooterResponse}
+     */
+    DocxSetFooterResponse: DocxSetFooterResponse,
+    /**
+     * The DocxSetHeaderRequest model constructor.
+     * @property {module:model/DocxSetHeaderRequest}
+     */
+    DocxSetHeaderRequest: DocxSetHeaderRequest,
+    /**
+     * The DocxSetHeaderResponse model constructor.
+     * @property {module:model/DocxSetHeaderResponse}
+     */
+    DocxSetHeaderResponse: DocxSetHeaderResponse,
+    /**
+     * The DocxStyle model constructor.
+     * @property {module:model/DocxStyle}
+     */
+    DocxStyle: DocxStyle,
+    /**
+     * The DocxTable model constructor.
+     * @property {module:model/DocxTable}
+     */
+    DocxTable: DocxTable,
+    /**
+     * The DocxTableCell model constructor.
+     * @property {module:model/DocxTableCell}
+     */
+    DocxTableCell: DocxTableCell,
+    /**
+     * The DocxTableRow model constructor.
+     * @property {module:model/DocxTableRow}
+     */
+    DocxTableRow: DocxTableRow,
+    /**
+     * The DocxText model constructor.
+     * @property {module:model/DocxText}
+     */
+    DocxText: DocxText,
+    /**
+     * The FinishEditingRequest model constructor.
+     * @property {module:model/FinishEditingRequest}
+     */
+    FinishEditingRequest: FinishEditingRequest,
+    /**
+     * The GetDocxHeadersAndFootersRequest model constructor.
+     * @property {module:model/GetDocxHeadersAndFootersRequest}
+     */
+    GetDocxHeadersAndFootersRequest: GetDocxHeadersAndFootersRequest,
+    /**
+     * The GetDocxHeadersAndFootersResponse model constructor.
+     * @property {module:model/GetDocxHeadersAndFootersResponse}
+     */
+    GetDocxHeadersAndFootersResponse: GetDocxHeadersAndFootersResponse,
+    /**
+     * The GetDocxStylesRequest model constructor.
+     * @property {module:model/GetDocxStylesRequest}
+     */
+    GetDocxStylesRequest: GetDocxStylesRequest,
+    /**
+     * The GetDocxStylesResponse model constructor.
+     * @property {module:model/GetDocxStylesResponse}
+     */
+    GetDocxStylesResponse: GetDocxStylesResponse,
+    /**
+     * The GetDocxTablesRequest model constructor.
+     * @property {module:model/GetDocxTablesRequest}
+     */
+    GetDocxTablesRequest: GetDocxTablesRequest,
+    /**
+     * The GetDocxTablesResponse model constructor.
+     * @property {module:model/GetDocxTablesResponse}
+     */
+    GetDocxTablesResponse: GetDocxTablesResponse,
     /**
      * The HtmlMdResult model constructor.
      * @property {module:model/HtmlMdResult}
@@ -97,10 +222,30 @@
      */
     HtmlToPdfRequest: HtmlToPdfRequest,
     /**
+     * The InsertDocxTablesRequest model constructor.
+     * @property {module:model/InsertDocxTablesRequest}
+     */
+    InsertDocxTablesRequest: InsertDocxTablesRequest,
+    /**
+     * The InsertDocxTablesResponse model constructor.
+     * @property {module:model/InsertDocxTablesResponse}
+     */
+    InsertDocxTablesResponse: InsertDocxTablesResponse,
+    /**
      * The PdfToPngResult model constructor.
      * @property {module:model/PdfToPngResult}
      */
     PdfToPngResult: PdfToPngResult,
+    /**
+     * The RemoveDocxHeadersAndFootersRequest model constructor.
+     * @property {module:model/RemoveDocxHeadersAndFootersRequest}
+     */
+    RemoveDocxHeadersAndFootersRequest: RemoveDocxHeadersAndFootersRequest,
+    /**
+     * The RemoveDocxHeadersAndFootersResponse model constructor.
+     * @property {module:model/RemoveDocxHeadersAndFootersResponse}
+     */
+    RemoveDocxHeadersAndFootersResponse: RemoveDocxHeadersAndFootersResponse,
     /**
      * The ReplaceStringRequest model constructor.
      * @property {module:model/ReplaceStringRequest}
@@ -156,6 +301,11 @@
      * @property {module:api/MergeDocumentApi}
      */
     MergeDocumentApi: MergeDocumentApi,
+    /**
+     * The ValidateDocumentApi service constructor.
+     * @property {module:api/ValidateDocumentApi}
+     */
+    ValidateDocumentApi: ValidateDocumentApi,
     /**
      * The ViewerToolsApi service constructor.
      * @property {module:api/ViewerToolsApi}

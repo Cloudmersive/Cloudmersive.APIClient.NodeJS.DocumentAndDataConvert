@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ReplaceStringRequest'], factory);
+    define(['ApiClient', 'model/DocxInsertImageRequest', 'model/DocxInsertImageResponse', 'model/DocxSetFooterRequest', 'model/DocxSetFooterResponse', 'model/DocxSetHeaderRequest', 'model/DocxSetHeaderResponse', 'model/FinishEditingRequest', 'model/GetDocxHeadersAndFootersRequest', 'model/GetDocxHeadersAndFootersResponse', 'model/GetDocxStylesRequest', 'model/GetDocxStylesResponse', 'model/GetDocxTablesRequest', 'model/GetDocxTablesResponse', 'model/InsertDocxTablesRequest', 'model/InsertDocxTablesResponse', 'model/RemoveDocxHeadersAndFootersRequest', 'model/RemoveDocxHeadersAndFootersResponse', 'model/ReplaceStringRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ReplaceStringRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/DocxInsertImageRequest'), require('../model/DocxInsertImageResponse'), require('../model/DocxSetFooterRequest'), require('../model/DocxSetFooterResponse'), require('../model/DocxSetHeaderRequest'), require('../model/DocxSetHeaderResponse'), require('../model/FinishEditingRequest'), require('../model/GetDocxHeadersAndFootersRequest'), require('../model/GetDocxHeadersAndFootersResponse'), require('../model/GetDocxStylesRequest'), require('../model/GetDocxStylesResponse'), require('../model/GetDocxTablesRequest'), require('../model/GetDocxTablesResponse'), require('../model/InsertDocxTablesRequest'), require('../model/InsertDocxTablesResponse'), require('../model/RemoveDocxHeadersAndFootersRequest'), require('../model/RemoveDocxHeadersAndFootersResponse'), require('../model/ReplaceStringRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.EditDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.ReplaceStringRequest);
+    root.CloudmersiveConvertApiClient.EditDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.DocxInsertImageRequest, root.CloudmersiveConvertApiClient.DocxInsertImageResponse, root.CloudmersiveConvertApiClient.DocxSetFooterRequest, root.CloudmersiveConvertApiClient.DocxSetFooterResponse, root.CloudmersiveConvertApiClient.DocxSetHeaderRequest, root.CloudmersiveConvertApiClient.DocxSetHeaderResponse, root.CloudmersiveConvertApiClient.FinishEditingRequest, root.CloudmersiveConvertApiClient.GetDocxHeadersAndFootersRequest, root.CloudmersiveConvertApiClient.GetDocxHeadersAndFootersResponse, root.CloudmersiveConvertApiClient.GetDocxStylesRequest, root.CloudmersiveConvertApiClient.GetDocxStylesResponse, root.CloudmersiveConvertApiClient.GetDocxTablesRequest, root.CloudmersiveConvertApiClient.GetDocxTablesResponse, root.CloudmersiveConvertApiClient.InsertDocxTablesRequest, root.CloudmersiveConvertApiClient.InsertDocxTablesResponse, root.CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersRequest, root.CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersResponse, root.CloudmersiveConvertApiClient.ReplaceStringRequest);
   }
-}(this, function(ApiClient, ReplaceStringRequest) {
+}(this, function(ApiClient, DocxInsertImageRequest, DocxInsertImageResponse, DocxSetFooterRequest, DocxSetFooterResponse, DocxSetHeaderRequest, DocxSetHeaderResponse, FinishEditingRequest, GetDocxHeadersAndFootersRequest, GetDocxHeadersAndFootersResponse, GetDocxStylesRequest, GetDocxStylesResponse, GetDocxTablesRequest, GetDocxTablesResponse, InsertDocxTablesRequest, InsertDocxTablesResponse, RemoveDocxHeadersAndFootersRequest, RemoveDocxHeadersAndFootersResponse, ReplaceStringRequest) {
   'use strict';
 
   /**
    * EditDocument service.
    * @module api/EditDocumentApi
-   * @version 1.2.2
+   * @version 1.2.3
    */
 
   /**
@@ -96,6 +96,288 @@
     }
 
     /**
+     * Callback function to receive the result of the editDocumentDocxGetHeadersAndFooters operation.
+     * @callback module:api/EditDocumentApi~editDocumentDocxGetHeadersAndFootersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetDocxHeadersAndFootersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get content of a footer from a DOCX
+     * Returns the footer content from a Word Document (DOCX) format file
+     * @param {module:model/GetDocxHeadersAndFootersRequest} reqConfig 
+     * @param {module:api/EditDocumentApi~editDocumentDocxGetHeadersAndFootersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetDocxHeadersAndFootersResponse}
+     */
+    this.editDocumentDocxGetHeadersAndFooters = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentDocxGetHeadersAndFooters");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = GetDocxHeadersAndFootersResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/docx/get-headers-and-footers', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentDocxGetStyles operation.
+     * @callback module:api/EditDocumentApi~editDocumentDocxGetStylesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetDocxStylesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get styles from a DOCX
+     * Returns the styles defined in the Word Document (DOCX) format file
+     * @param {module:model/GetDocxStylesRequest} reqConfig 
+     * @param {module:api/EditDocumentApi~editDocumentDocxGetStylesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetDocxStylesResponse}
+     */
+    this.editDocumentDocxGetStyles = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentDocxGetStyles");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = GetDocxStylesResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/docx/get-styles', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentDocxGetTables operation.
+     * @callback module:api/EditDocumentApi~editDocumentDocxGetTablesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetDocxTablesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get tables in DOCX
+     * Returns all the table objects in an Office Word Document (docx)
+     * @param {module:model/GetDocxTablesRequest} reqConfig 
+     * @param {module:api/EditDocumentApi~editDocumentDocxGetTablesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetDocxTablesResponse}
+     */
+    this.editDocumentDocxGetTables = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentDocxGetTables");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = GetDocxTablesResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/docx/get-tables', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentDocxInsertImage operation.
+     * @callback module:api/EditDocumentApi~editDocumentDocxInsertImageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DocxInsertImageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert image into a DOCX
+     * Set the footer in a Word Document (DOCX)
+     * @param {module:model/DocxInsertImageRequest} reqConfig 
+     * @param {module:api/EditDocumentApi~editDocumentDocxInsertImageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DocxInsertImageResponse}
+     */
+    this.editDocumentDocxInsertImage = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentDocxInsertImage");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = DocxInsertImageResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/docx/insert-image', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentDocxInsertTable operation.
+     * @callback module:api/EditDocumentApi~editDocumentDocxInsertTableCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InsertDocxTablesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert a new table into a DOCX
+     * Adds a new table into a DOCX and returns the result
+     * @param {module:model/InsertDocxTablesRequest} reqConfig 
+     * @param {module:api/EditDocumentApi~editDocumentDocxInsertTableCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InsertDocxTablesResponse}
+     */
+    this.editDocumentDocxInsertTable = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentDocxInsertTable");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = InsertDocxTablesResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/docx/insert-table', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentDocxRemoveHeadersAndFooters operation.
+     * @callback module:api/EditDocumentApi~editDocumentDocxRemoveHeadersAndFootersCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/RemoveDocxHeadersAndFootersResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Remove headers and footers from DOCX
+     * Remove all headers, or footers, or both from a Word Document (DOCX)
+     * @param {module:model/RemoveDocxHeadersAndFootersRequest} reqConfig 
+     * @param {module:api/EditDocumentApi~editDocumentDocxRemoveHeadersAndFootersCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/RemoveDocxHeadersAndFootersResponse}
+     */
+    this.editDocumentDocxRemoveHeadersAndFooters = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentDocxRemoveHeadersAndFooters");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = RemoveDocxHeadersAndFootersResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/docx/remove-headers-and-footers', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the editDocumentDocxReplace operation.
      * @callback module:api/EditDocumentApi~editDocumentDocxReplaceCallback
      * @param {String} error Error message, if any.
@@ -137,6 +419,147 @@
 
       return this.apiClient.callApi(
         '/convert/edit/docx/replace-all', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentDocxSetFooter operation.
+     * @callback module:api/EditDocumentApi~editDocumentDocxSetFooterCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DocxSetFooterResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Set the footer in a DOCX
+     * Set the footer in a Word Document (DOCX)
+     * @param {module:model/DocxSetFooterRequest} reqConfig 
+     * @param {module:api/EditDocumentApi~editDocumentDocxSetFooterCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DocxSetFooterResponse}
+     */
+    this.editDocumentDocxSetFooter = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentDocxSetFooter");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = DocxSetFooterResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/docx/set-footer', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentDocxSetHeader operation.
+     * @callback module:api/EditDocumentApi~editDocumentDocxSetHeaderCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DocxSetHeaderResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Set the header in a DOCX
+     * Set the header in a Word Document (DOCX)
+     * @param {module:model/DocxSetHeaderRequest} reqConfig 
+     * @param {module:api/EditDocumentApi~editDocumentDocxSetHeaderCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DocxSetHeaderResponse}
+     */
+    this.editDocumentDocxSetHeader = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentDocxSetHeader");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = DocxSetHeaderResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/docx/set-header', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentFinishEditing operation.
+     * @callback module:api/EditDocumentApi~editDocumentFinishEditingCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Download result from document editing
+     * Once done editing a document, download the result.  Begin editing a document by calling begin-editing, then perform operations, then call finish-editing to get the result.
+     * @param {module:model/FinishEditingRequest} reqConfig 
+     * @param {module:api/EditDocumentApi~editDocumentFinishEditingCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.editDocumentFinishEditing = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentFinishEditing");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/finish-editing', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

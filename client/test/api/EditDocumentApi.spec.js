@@ -60,10 +60,100 @@
         done();
       });
     });
+    describe('editDocumentDocxGetHeadersAndFooters', function() {
+      it('should call editDocumentDocxGetHeadersAndFooters successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxGetHeadersAndFooters
+        //instance.editDocumentDocxGetHeadersAndFooters(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxGetStyles', function() {
+      it('should call editDocumentDocxGetStyles successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxGetStyles
+        //instance.editDocumentDocxGetStyles(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxGetTables', function() {
+      it('should call editDocumentDocxGetTables successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxGetTables
+        //instance.editDocumentDocxGetTables(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxInsertImage', function() {
+      it('should call editDocumentDocxInsertImage successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxInsertImage
+        //instance.editDocumentDocxInsertImage(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxInsertTable', function() {
+      it('should call editDocumentDocxInsertTable successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxInsertTable
+        //instance.editDocumentDocxInsertTable(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxRemoveHeadersAndFooters', function() {
+      it('should call editDocumentDocxRemoveHeadersAndFooters successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxRemoveHeadersAndFooters
+        //instance.editDocumentDocxRemoveHeadersAndFooters(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentDocxReplace', function() {
       it('should call editDocumentDocxReplace successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxReplace
         //instance.editDocumentDocxReplace(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxSetFooter', function() {
+      it('should call editDocumentDocxSetFooter successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxSetFooter
+        //instance.editDocumentDocxSetFooter(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxSetHeader', function() {
+      it('should call editDocumentDocxSetHeader successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxSetHeader
+        //instance.editDocumentDocxSetHeader(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentFinishEditing', function() {
+      it('should call editDocumentFinishEditing successfully', function(done) {
+        //uncomment below and update the code to test editDocumentFinishEditing
+        //instance.editDocumentFinishEditing(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
