@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/DocxImage'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./DocxImage'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.DocxInsertImageRequest = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.DocxInsertImageRequest = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.DocxImage);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, DocxImage) {
   'use strict';
 
 
@@ -36,7 +36,7 @@
   /**
    * The DocxInsertImageRequest model module.
    * @module model/DocxInsertImageRequest
-   * @version 1.2.3
+   * @version 1.2.4
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -79,11 +80,14 @@
       if (data.hasOwnProperty('InputImageFileUrl')) {
         obj['InputImageFileUrl'] = ApiClient.convertToType(data['InputImageFileUrl'], 'String');
       }
-      if (data.hasOwnProperty('ImageWidth')) {
-        obj['ImageWidth'] = ApiClient.convertToType(data['ImageWidth'], 'Number');
+      if (data.hasOwnProperty('ImageToAdd')) {
+        obj['ImageToAdd'] = DocxImage.constructFromObject(data['ImageToAdd']);
       }
-      if (data.hasOwnProperty('ImageHeight')) {
-        obj['ImageHeight'] = ApiClient.convertToType(data['ImageHeight'], 'Number');
+      if (data.hasOwnProperty('InsertPlacement')) {
+        obj['InsertPlacement'] = ApiClient.convertToType(data['InsertPlacement'], 'String');
+      }
+      if (data.hasOwnProperty('InsertPath')) {
+        obj['InsertPath'] = ApiClient.convertToType(data['InsertPath'], 'String');
       }
     }
     return obj;
@@ -100,25 +104,30 @@
    */
   exports.prototype['InputDocumentFileUrl'] = undefined;
   /**
-   * Optional: Bytes of the input image file to operate on
+   * Optional: Bytes of the input image file to operate on; if you supply this value do not supply InputImageFileUrl or ImageToAdd.
    * @member {Blob} InputImageFileBytes
    */
   exports.prototype['InputImageFileBytes'] = undefined;
   /**
-   * Optional: URL of an image file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
+   * Optional: URL of an image file to operate on as input; if you supply this value do not supply InputImageFileBytes or ImageToAdd.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @member {String} InputImageFileUrl
    */
   exports.prototype['InputImageFileUrl'] = undefined;
   /**
-   * Width in points of the image, set to 0 for default
-   * @member {Number} ImageWidth
+   * Optional: Image to add; if you supply in this object, do not supply InputImageFileBytes or InputImageFileUrl.
+   * @member {module:model/DocxImage} ImageToAdd
    */
-  exports.prototype['ImageWidth'] = undefined;
+  exports.prototype['ImageToAdd'] = undefined;
   /**
-   * Height in point of the image, set to 0 for default
-   * @member {Number} ImageHeight
+   * Optional; default is DocumentEnd.  Placement Type of the insert; possible values are: DocumentStart (very beginning of the document), DocumentEnd (very end of the document), BeforeExistingObject (right before an existing object - fill in the InsertPath field using the Path value from an existing object), AfterExistingObject (right after an existing object - fill in the InsertPath field using the Path value from an existing object)
+   * @member {String} InsertPlacement
    */
-  exports.prototype['ImageHeight'] = undefined;
+  exports.prototype['InsertPlacement'] = undefined;
+  /**
+   * Optional; location within the document to insert the object; fill in the InsertPath field using the Path value from an existing object.  Used with InsertPlacement of BeforeExistingObject or AfterExistingObject
+   * @member {String} InsertPath
+   */
+  exports.prototype['InsertPath'] = undefined;
 
 
 

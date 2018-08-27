@@ -62,6 +62,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property path (base name: "Path")', function() {
+      // uncomment below and update the code to test the property path
+      //var instane = new CloudmersiveConvertApiClient.DocxText();
+      //expect(instance).to.be();
+    });
+
     it('should have the property textContent (base name: "TextContent")', function() {
       // uncomment below and update the code to test the property textContent
       //var instane = new CloudmersiveConvertApiClient.DocxText();

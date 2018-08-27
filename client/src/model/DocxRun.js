@@ -36,7 +36,7 @@
   /**
    * The DocxRun model module.
    * @module model/DocxRun
-   * @version 1.2.3
+   * @version 1.2.4
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -70,6 +71,9 @@
 
       if (data.hasOwnProperty('RunIndex')) {
         obj['RunIndex'] = ApiClient.convertToType(data['RunIndex'], 'Number');
+      }
+      if (data.hasOwnProperty('Path')) {
+        obj['Path'] = ApiClient.convertToType(data['Path'], 'String');
       }
       if (data.hasOwnProperty('TextItems')) {
         obj['TextItems'] = ApiClient.convertToType(data['TextItems'], [DocxText]);
@@ -98,6 +102,11 @@
    * @member {Number} RunIndex
    */
   exports.prototype['RunIndex'] = undefined;
+  /**
+   * The Path of the location of this object; leave blank for new tables
+   * @member {String} Path
+   */
+  exports.prototype['Path'] = undefined;
   /**
    * Text items inside the run; this is where the actual text content is stored
    * @member {Array.<module:model/DocxText>} TextItems

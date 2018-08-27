@@ -62,6 +62,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property path (base name: "Path")', function() {
+      // uncomment below and update the code to test the property path
+      //var instane = new CloudmersiveConvertApiClient.DocxStyle();
+      //expect(instance).to.be();
+    });
+
     it('should have the property bold (base name: "Bold")', function() {
       // uncomment below and update the code to test the property bold
       //var instane = new CloudmersiveConvertApiClient.DocxStyle();

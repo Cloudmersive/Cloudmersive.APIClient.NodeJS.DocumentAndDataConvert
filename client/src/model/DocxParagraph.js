@@ -36,7 +36,7 @@
   /**
    * The DocxParagraph model module.
    * @module model/DocxParagraph
-   * @version 1.2.3
+   * @version 1.2.4
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -67,6 +68,9 @@
       if (data.hasOwnProperty('ParagraphIndex')) {
         obj['ParagraphIndex'] = ApiClient.convertToType(data['ParagraphIndex'], 'Number');
       }
+      if (data.hasOwnProperty('Path')) {
+        obj['Path'] = ApiClient.convertToType(data['Path'], 'String');
+      }
       if (data.hasOwnProperty('ContentRuns')) {
         obj['ContentRuns'] = ApiClient.convertToType(data['ContentRuns'], [DocxRun]);
       }
@@ -82,6 +86,11 @@
    * @member {Number} ParagraphIndex
    */
   exports.prototype['ParagraphIndex'] = undefined;
+  /**
+   * The Path of the location of this object; leave blank for new tables
+   * @member {String} Path
+   */
+  exports.prototype['Path'] = undefined;
   /**
    * The content runs in the paragraph - this is where text is stored; similar to a span in HTML
    * @member {Array.<module:model/DocxRun>} ContentRuns

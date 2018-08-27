@@ -36,7 +36,7 @@
   /**
    * The DocxHeader model module.
    * @module model/DocxHeader
-   * @version 1.2.3
+   * @version 1.2.4
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -63,6 +64,9 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('Path')) {
+        obj['Path'] = ApiClient.convertToType(data['Path'], 'String');
+      }
       if (data.hasOwnProperty('Paragraphs')) {
         obj['Paragraphs'] = ApiClient.convertToType(data['Paragraphs'], [DocxParagraph]);
       }
@@ -73,6 +77,11 @@
     return obj;
   }
 
+  /**
+   * The Path of the location of this object; leave blank for new tables
+   * @member {String} Path
+   */
+  exports.prototype['Path'] = undefined;
   /**
    * Paragraphs in this header
    * @member {Array.<module:model/DocxParagraph>} Paragraphs

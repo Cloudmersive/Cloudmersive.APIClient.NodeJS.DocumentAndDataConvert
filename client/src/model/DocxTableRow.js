@@ -36,7 +36,7 @@
   /**
    * The DocxTableRow model module.
    * @module model/DocxTableRow
-   * @version 1.2.3
+   * @version 1.2.4
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -66,6 +67,9 @@
       if (data.hasOwnProperty('RowIndex')) {
         obj['RowIndex'] = ApiClient.convertToType(data['RowIndex'], 'Number');
       }
+      if (data.hasOwnProperty('Path')) {
+        obj['Path'] = ApiClient.convertToType(data['Path'], 'String');
+      }
       if (data.hasOwnProperty('RowCells')) {
         obj['RowCells'] = ApiClient.convertToType(data['RowCells'], [DocxTableCell]);
       }
@@ -78,6 +82,11 @@
    * @member {Number} RowIndex
    */
   exports.prototype['RowIndex'] = undefined;
+  /**
+   * The Path of the location of this object; leave blank for new tables
+   * @member {String} Path
+   */
+  exports.prototype['Path'] = undefined;
   /**
    * Cells in the row; this is where the contents of the row is stored
    * @member {Array.<module:model/DocxTableCell>} RowCells

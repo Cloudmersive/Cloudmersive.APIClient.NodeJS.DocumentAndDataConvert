@@ -60,10 +60,40 @@
         done();
       });
     });
+    describe('editDocumentDocxBody', function() {
+      it('should call editDocumentDocxBody successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxBody
+        //instance.editDocumentDocxBody(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentDocxGetHeadersAndFooters', function() {
       it('should call editDocumentDocxGetHeadersAndFooters successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxGetHeadersAndFooters
         //instance.editDocumentDocxGetHeadersAndFooters(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxGetImages', function() {
+      it('should call editDocumentDocxGetImages successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxGetImages
+        //instance.editDocumentDocxGetImages(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxGetSections', function() {
+      it('should call editDocumentDocxGetSections successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxGetSections
+        //instance.editDocumentDocxGetSections(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -100,6 +130,16 @@
         done();
       });
     });
+    describe('editDocumentDocxInsertParagraph', function() {
+      it('should call editDocumentDocxInsertParagraph successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxInsertParagraph
+        //instance.editDocumentDocxInsertParagraph(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentDocxInsertTable', function() {
       it('should call editDocumentDocxInsertTable successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxInsertTable
@@ -114,6 +154,16 @@
       it('should call editDocumentDocxRemoveHeadersAndFooters successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxRemoveHeadersAndFooters
         //instance.editDocumentDocxRemoveHeadersAndFooters(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxRemoveObject', function() {
+      it('should call editDocumentDocxRemoveObject successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxRemoveObject
+        //instance.editDocumentDocxRemoveObject(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -164,6 +214,66 @@
       it('should call editDocumentPptxReplace successfully', function(done) {
         //uncomment below and update the code to test editDocumentPptxReplace
         //instance.editDocumentPptxReplace(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentXlsxGetColumns', function() {
+      it('should call editDocumentXlsxGetColumns successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxGetColumns
+        //instance.editDocumentXlsxGetColumns(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentXlsxGetImages', function() {
+      it('should call editDocumentXlsxGetImages successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxGetImages
+        //instance.editDocumentXlsxGetImages(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentXlsxGetRowsAndCells', function() {
+      it('should call editDocumentXlsxGetRowsAndCells successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxGetRowsAndCells
+        //instance.editDocumentXlsxGetRowsAndCells(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentXlsxGetStyles', function() {
+      it('should call editDocumentXlsxGetStyles successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxGetStyles
+        //instance.editDocumentXlsxGetStyles(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentXlsxGetWorksheets', function() {
+      it('should call editDocumentXlsxGetWorksheets successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxGetWorksheets
+        //instance.editDocumentXlsxGetWorksheets(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentXlsxInsertWorksheet', function() {
+      it('should call editDocumentXlsxInsertWorksheet successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxInsertWorksheet
+        //instance.editDocumentXlsxInsertWorksheet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

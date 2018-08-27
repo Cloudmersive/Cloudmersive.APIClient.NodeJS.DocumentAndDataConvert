@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DocxInsertImageRequest', 'model/DocxInsertImageResponse', 'model/DocxSetFooterRequest', 'model/DocxSetFooterResponse', 'model/DocxSetHeaderRequest', 'model/DocxSetHeaderResponse', 'model/FinishEditingRequest', 'model/GetDocxHeadersAndFootersRequest', 'model/GetDocxHeadersAndFootersResponse', 'model/GetDocxStylesRequest', 'model/GetDocxStylesResponse', 'model/GetDocxTablesRequest', 'model/GetDocxTablesResponse', 'model/InsertDocxTablesRequest', 'model/InsertDocxTablesResponse', 'model/RemoveDocxHeadersAndFootersRequest', 'model/RemoveDocxHeadersAndFootersResponse', 'model/ReplaceStringRequest'], factory);
+    define(['ApiClient', 'model/DocxInsertImageRequest', 'model/DocxInsertImageResponse', 'model/DocxRemoveObjectRequest', 'model/DocxRemoveObjectResponse', 'model/DocxSetFooterRequest', 'model/DocxSetFooterResponse', 'model/DocxSetHeaderRequest', 'model/DocxSetHeaderResponse', 'model/FinishEditingRequest', 'model/GetDocxBodyRequest', 'model/GetDocxBodyResponse', 'model/GetDocxHeadersAndFootersRequest', 'model/GetDocxHeadersAndFootersResponse', 'model/GetDocxImagesRequest', 'model/GetDocxImagesResponse', 'model/GetDocxSectionsRequest', 'model/GetDocxSectionsResponse', 'model/GetDocxStylesRequest', 'model/GetDocxStylesResponse', 'model/GetDocxTablesRequest', 'model/GetDocxTablesResponse', 'model/GetXlsxColumnsRequest', 'model/GetXlsxColumnsResponse', 'model/GetXlsxImagesRequest', 'model/GetXlsxImagesResponse', 'model/GetXlsxRowsAndCellsRequest', 'model/GetXlsxRowsAndCellsResponse', 'model/GetXlsxStylesRequest', 'model/GetXlsxStylesResponse', 'model/GetXlsxWorksheetsRequest', 'model/GetXlsxWorksheetsResponse', 'model/InsertDocxInsertParagraphRequest', 'model/InsertDocxInsertParagraphResponse', 'model/InsertDocxTablesRequest', 'model/InsertDocxTablesResponse', 'model/InsertXlsxWorksheetRequest', 'model/InsertXlsxWorksheetResponse', 'model/RemoveDocxHeadersAndFootersRequest', 'model/RemoveDocxHeadersAndFootersResponse', 'model/ReplaceStringRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/DocxInsertImageRequest'), require('../model/DocxInsertImageResponse'), require('../model/DocxSetFooterRequest'), require('../model/DocxSetFooterResponse'), require('../model/DocxSetHeaderRequest'), require('../model/DocxSetHeaderResponse'), require('../model/FinishEditingRequest'), require('../model/GetDocxHeadersAndFootersRequest'), require('../model/GetDocxHeadersAndFootersResponse'), require('../model/GetDocxStylesRequest'), require('../model/GetDocxStylesResponse'), require('../model/GetDocxTablesRequest'), require('../model/GetDocxTablesResponse'), require('../model/InsertDocxTablesRequest'), require('../model/InsertDocxTablesResponse'), require('../model/RemoveDocxHeadersAndFootersRequest'), require('../model/RemoveDocxHeadersAndFootersResponse'), require('../model/ReplaceStringRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/DocxInsertImageRequest'), require('../model/DocxInsertImageResponse'), require('../model/DocxRemoveObjectRequest'), require('../model/DocxRemoveObjectResponse'), require('../model/DocxSetFooterRequest'), require('../model/DocxSetFooterResponse'), require('../model/DocxSetHeaderRequest'), require('../model/DocxSetHeaderResponse'), require('../model/FinishEditingRequest'), require('../model/GetDocxBodyRequest'), require('../model/GetDocxBodyResponse'), require('../model/GetDocxHeadersAndFootersRequest'), require('../model/GetDocxHeadersAndFootersResponse'), require('../model/GetDocxImagesRequest'), require('../model/GetDocxImagesResponse'), require('../model/GetDocxSectionsRequest'), require('../model/GetDocxSectionsResponse'), require('../model/GetDocxStylesRequest'), require('../model/GetDocxStylesResponse'), require('../model/GetDocxTablesRequest'), require('../model/GetDocxTablesResponse'), require('../model/GetXlsxColumnsRequest'), require('../model/GetXlsxColumnsResponse'), require('../model/GetXlsxImagesRequest'), require('../model/GetXlsxImagesResponse'), require('../model/GetXlsxRowsAndCellsRequest'), require('../model/GetXlsxRowsAndCellsResponse'), require('../model/GetXlsxStylesRequest'), require('../model/GetXlsxStylesResponse'), require('../model/GetXlsxWorksheetsRequest'), require('../model/GetXlsxWorksheetsResponse'), require('../model/InsertDocxInsertParagraphRequest'), require('../model/InsertDocxInsertParagraphResponse'), require('../model/InsertDocxTablesRequest'), require('../model/InsertDocxTablesResponse'), require('../model/InsertXlsxWorksheetRequest'), require('../model/InsertXlsxWorksheetResponse'), require('../model/RemoveDocxHeadersAndFootersRequest'), require('../model/RemoveDocxHeadersAndFootersResponse'), require('../model/ReplaceStringRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.EditDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.DocxInsertImageRequest, root.CloudmersiveConvertApiClient.DocxInsertImageResponse, root.CloudmersiveConvertApiClient.DocxSetFooterRequest, root.CloudmersiveConvertApiClient.DocxSetFooterResponse, root.CloudmersiveConvertApiClient.DocxSetHeaderRequest, root.CloudmersiveConvertApiClient.DocxSetHeaderResponse, root.CloudmersiveConvertApiClient.FinishEditingRequest, root.CloudmersiveConvertApiClient.GetDocxHeadersAndFootersRequest, root.CloudmersiveConvertApiClient.GetDocxHeadersAndFootersResponse, root.CloudmersiveConvertApiClient.GetDocxStylesRequest, root.CloudmersiveConvertApiClient.GetDocxStylesResponse, root.CloudmersiveConvertApiClient.GetDocxTablesRequest, root.CloudmersiveConvertApiClient.GetDocxTablesResponse, root.CloudmersiveConvertApiClient.InsertDocxTablesRequest, root.CloudmersiveConvertApiClient.InsertDocxTablesResponse, root.CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersRequest, root.CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersResponse, root.CloudmersiveConvertApiClient.ReplaceStringRequest);
+    root.CloudmersiveConvertApiClient.EditDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.DocxInsertImageRequest, root.CloudmersiveConvertApiClient.DocxInsertImageResponse, root.CloudmersiveConvertApiClient.DocxRemoveObjectRequest, root.CloudmersiveConvertApiClient.DocxRemoveObjectResponse, root.CloudmersiveConvertApiClient.DocxSetFooterRequest, root.CloudmersiveConvertApiClient.DocxSetFooterResponse, root.CloudmersiveConvertApiClient.DocxSetHeaderRequest, root.CloudmersiveConvertApiClient.DocxSetHeaderResponse, root.CloudmersiveConvertApiClient.FinishEditingRequest, root.CloudmersiveConvertApiClient.GetDocxBodyRequest, root.CloudmersiveConvertApiClient.GetDocxBodyResponse, root.CloudmersiveConvertApiClient.GetDocxHeadersAndFootersRequest, root.CloudmersiveConvertApiClient.GetDocxHeadersAndFootersResponse, root.CloudmersiveConvertApiClient.GetDocxImagesRequest, root.CloudmersiveConvertApiClient.GetDocxImagesResponse, root.CloudmersiveConvertApiClient.GetDocxSectionsRequest, root.CloudmersiveConvertApiClient.GetDocxSectionsResponse, root.CloudmersiveConvertApiClient.GetDocxStylesRequest, root.CloudmersiveConvertApiClient.GetDocxStylesResponse, root.CloudmersiveConvertApiClient.GetDocxTablesRequest, root.CloudmersiveConvertApiClient.GetDocxTablesResponse, root.CloudmersiveConvertApiClient.GetXlsxColumnsRequest, root.CloudmersiveConvertApiClient.GetXlsxColumnsResponse, root.CloudmersiveConvertApiClient.GetXlsxImagesRequest, root.CloudmersiveConvertApiClient.GetXlsxImagesResponse, root.CloudmersiveConvertApiClient.GetXlsxRowsAndCellsRequest, root.CloudmersiveConvertApiClient.GetXlsxRowsAndCellsResponse, root.CloudmersiveConvertApiClient.GetXlsxStylesRequest, root.CloudmersiveConvertApiClient.GetXlsxStylesResponse, root.CloudmersiveConvertApiClient.GetXlsxWorksheetsRequest, root.CloudmersiveConvertApiClient.GetXlsxWorksheetsResponse, root.CloudmersiveConvertApiClient.InsertDocxInsertParagraphRequest, root.CloudmersiveConvertApiClient.InsertDocxInsertParagraphResponse, root.CloudmersiveConvertApiClient.InsertDocxTablesRequest, root.CloudmersiveConvertApiClient.InsertDocxTablesResponse, root.CloudmersiveConvertApiClient.InsertXlsxWorksheetRequest, root.CloudmersiveConvertApiClient.InsertXlsxWorksheetResponse, root.CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersRequest, root.CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersResponse, root.CloudmersiveConvertApiClient.ReplaceStringRequest);
   }
-}(this, function(ApiClient, DocxInsertImageRequest, DocxInsertImageResponse, DocxSetFooterRequest, DocxSetFooterResponse, DocxSetHeaderRequest, DocxSetHeaderResponse, FinishEditingRequest, GetDocxHeadersAndFootersRequest, GetDocxHeadersAndFootersResponse, GetDocxStylesRequest, GetDocxStylesResponse, GetDocxTablesRequest, GetDocxTablesResponse, InsertDocxTablesRequest, InsertDocxTablesResponse, RemoveDocxHeadersAndFootersRequest, RemoveDocxHeadersAndFootersResponse, ReplaceStringRequest) {
+}(this, function(ApiClient, DocxInsertImageRequest, DocxInsertImageResponse, DocxRemoveObjectRequest, DocxRemoveObjectResponse, DocxSetFooterRequest, DocxSetFooterResponse, DocxSetHeaderRequest, DocxSetHeaderResponse, FinishEditingRequest, GetDocxBodyRequest, GetDocxBodyResponse, GetDocxHeadersAndFootersRequest, GetDocxHeadersAndFootersResponse, GetDocxImagesRequest, GetDocxImagesResponse, GetDocxSectionsRequest, GetDocxSectionsResponse, GetDocxStylesRequest, GetDocxStylesResponse, GetDocxTablesRequest, GetDocxTablesResponse, GetXlsxColumnsRequest, GetXlsxColumnsResponse, GetXlsxImagesRequest, GetXlsxImagesResponse, GetXlsxRowsAndCellsRequest, GetXlsxRowsAndCellsResponse, GetXlsxStylesRequest, GetXlsxStylesResponse, GetXlsxWorksheetsRequest, GetXlsxWorksheetsResponse, InsertDocxInsertParagraphRequest, InsertDocxInsertParagraphResponse, InsertDocxTablesRequest, InsertDocxTablesResponse, InsertXlsxWorksheetRequest, InsertXlsxWorksheetResponse, RemoveDocxHeadersAndFootersRequest, RemoveDocxHeadersAndFootersResponse, ReplaceStringRequest) {
   'use strict';
 
   /**
    * EditDocument service.
    * @module api/EditDocumentApi
-   * @version 1.2.3
+   * @version 1.2.4
    */
 
   /**
@@ -96,6 +96,53 @@
     }
 
     /**
+     * Callback function to receive the result of the editDocumentDocxBody operation.
+     * @callback module:api/EditDocumentApi~editDocumentDocxBodyCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetDocxBodyResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get body from a DOCX
+     * Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
+     * @param {module:model/GetDocxBodyRequest} reqConfig 
+     * @param {module:api/EditDocumentApi~editDocumentDocxBodyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetDocxBodyResponse}
+     */
+    this.editDocumentDocxBody = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentDocxBody");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = GetDocxBodyResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/docx/get-body', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the editDocumentDocxGetHeadersAndFooters operation.
      * @callback module:api/EditDocumentApi~editDocumentDocxGetHeadersAndFootersCallback
      * @param {String} error Error message, if any.
@@ -137,6 +184,100 @@
 
       return this.apiClient.callApi(
         '/convert/edit/docx/get-headers-and-footers', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentDocxGetImages operation.
+     * @callback module:api/EditDocumentApi~editDocumentDocxGetImagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetDocxImagesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get images from a DOCX
+     * Returns the images defined in the Word Document (DOCX) format file
+     * @param {module:model/GetDocxImagesRequest} reqConfig 
+     * @param {module:api/EditDocumentApi~editDocumentDocxGetImagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetDocxImagesResponse}
+     */
+    this.editDocumentDocxGetImages = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentDocxGetImages");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = GetDocxImagesResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/docx/get-images', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentDocxGetSections operation.
+     * @callback module:api/EditDocumentApi~editDocumentDocxGetSectionsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetDocxSectionsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get sections from a DOCX
+     * Returns the sections defined in the Word Document (DOCX) format file
+     * @param {module:model/GetDocxSectionsRequest} reqConfig 
+     * @param {module:api/EditDocumentApi~editDocumentDocxGetSectionsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetDocxSectionsResponse}
+     */
+    this.editDocumentDocxGetSections = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentDocxGetSections");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = GetDocxSectionsResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/docx/get-sections', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -284,6 +425,53 @@
     }
 
     /**
+     * Callback function to receive the result of the editDocumentDocxInsertParagraph operation.
+     * @callback module:api/EditDocumentApi~editDocumentDocxInsertParagraphCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InsertDocxInsertParagraphResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert a new paragraph into a DOCX
+     * Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+     * @param {module:model/InsertDocxInsertParagraphRequest} reqConfig 
+     * @param {module:api/EditDocumentApi~editDocumentDocxInsertParagraphCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InsertDocxInsertParagraphResponse}
+     */
+    this.editDocumentDocxInsertParagraph = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentDocxInsertParagraph");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = InsertDocxInsertParagraphResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/docx/insert-paragraph', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the editDocumentDocxInsertTable operation.
      * @callback module:api/EditDocumentApi~editDocumentDocxInsertTableCallback
      * @param {String} error Error message, if any.
@@ -372,6 +560,53 @@
 
       return this.apiClient.callApi(
         '/convert/edit/docx/remove-headers-and-footers', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentDocxRemoveObject operation.
+     * @callback module:api/EditDocumentApi~editDocumentDocxRemoveObjectCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DocxRemoveObjectResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete any object in a DOCX
+     * Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+     * @param {module:model/DocxRemoveObjectRequest} reqConfig 
+     * @param {module:api/EditDocumentApi~editDocumentDocxRemoveObjectCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DocxRemoveObjectResponse}
+     */
+    this.editDocumentDocxRemoveObject = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentDocxRemoveObject");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = DocxRemoveObjectResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/docx/remove-object', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -607,6 +842,288 @@
 
       return this.apiClient.callApi(
         '/convert/edit/pptx/replace-all', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentXlsxGetColumns operation.
+     * @callback module:api/EditDocumentApi~editDocumentXlsxGetColumnsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetXlsxColumnsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get rows and cells from a XLSX worksheet
+     * Returns the rows and cells defined in the Excel Spreadsheet worksheet
+     * @param {module:model/GetXlsxColumnsRequest} input 
+     * @param {module:api/EditDocumentApi~editDocumentXlsxGetColumnsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetXlsxColumnsResponse}
+     */
+    this.editDocumentXlsxGetColumns = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling editDocumentXlsxGetColumns");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = GetXlsxColumnsResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/xlsx/get-columns', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentXlsxGetImages operation.
+     * @callback module:api/EditDocumentApi~editDocumentXlsxGetImagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetXlsxImagesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get images from a XLSX worksheet
+     * Returns the images defined in the Excel Spreadsheet worksheet
+     * @param {module:model/GetXlsxImagesRequest} input 
+     * @param {module:api/EditDocumentApi~editDocumentXlsxGetImagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetXlsxImagesResponse}
+     */
+    this.editDocumentXlsxGetImages = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling editDocumentXlsxGetImages");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = GetXlsxImagesResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/xlsx/get-images', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentXlsxGetRowsAndCells operation.
+     * @callback module:api/EditDocumentApi~editDocumentXlsxGetRowsAndCellsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetXlsxRowsAndCellsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get rows and cells from a XLSX worksheet
+     * Returns the rows and cells defined in the Excel Spreadsheet worksheet
+     * @param {module:model/GetXlsxRowsAndCellsRequest} input 
+     * @param {module:api/EditDocumentApi~editDocumentXlsxGetRowsAndCellsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetXlsxRowsAndCellsResponse}
+     */
+    this.editDocumentXlsxGetRowsAndCells = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling editDocumentXlsxGetRowsAndCells");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = GetXlsxRowsAndCellsResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/xlsx/get-rows-and-cells', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentXlsxGetStyles operation.
+     * @callback module:api/EditDocumentApi~editDocumentXlsxGetStylesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetXlsxStylesResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get styles from a XLSX worksheet
+     * Returns the style defined in the Excel Spreadsheet
+     * @param {module:model/GetXlsxStylesRequest} input 
+     * @param {module:api/EditDocumentApi~editDocumentXlsxGetStylesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetXlsxStylesResponse}
+     */
+    this.editDocumentXlsxGetStyles = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling editDocumentXlsxGetStyles");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = GetXlsxStylesResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/xlsx/get-styles', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentXlsxGetWorksheets operation.
+     * @callback module:api/EditDocumentApi~editDocumentXlsxGetWorksheetsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetXlsxWorksheetsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get worksheets from a XLSX
+     * Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
+     * @param {module:model/GetXlsxWorksheetsRequest} input 
+     * @param {module:api/EditDocumentApi~editDocumentXlsxGetWorksheetsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetXlsxWorksheetsResponse}
+     */
+    this.editDocumentXlsxGetWorksheets = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling editDocumentXlsxGetWorksheets");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = GetXlsxWorksheetsResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/xlsx/get-worksheets', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentXlsxInsertWorksheet operation.
+     * @callback module:api/EditDocumentApi~editDocumentXlsxInsertWorksheetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InsertXlsxWorksheetResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert a new worksheet into an XLSX spreadsheet
+     * Inserts a new worksheet into an Excel Spreadsheet
+     * @param {module:model/InsertXlsxWorksheetRequest} input 
+     * @param {module:api/EditDocumentApi~editDocumentXlsxInsertWorksheetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InsertXlsxWorksheetResponse}
+     */
+    this.editDocumentXlsxInsertWorksheet = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling editDocumentXlsxInsertWorksheet");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = InsertXlsxWorksheetResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/xlsx/insert-worksheet', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

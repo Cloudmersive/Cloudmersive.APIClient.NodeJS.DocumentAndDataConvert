@@ -80,14 +80,20 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property imageWidth (base name: "ImageWidth")', function() {
-      // uncomment below and update the code to test the property imageWidth
+    it('should have the property imageToAdd (base name: "ImageToAdd")', function() {
+      // uncomment below and update the code to test the property imageToAdd
       //var instane = new CloudmersiveConvertApiClient.DocxInsertImageRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property imageHeight (base name: "ImageHeight")', function() {
-      // uncomment below and update the code to test the property imageHeight
+    it('should have the property insertPlacement (base name: "InsertPlacement")', function() {
+      // uncomment below and update the code to test the property insertPlacement
+      //var instane = new CloudmersiveConvertApiClient.DocxInsertImageRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property insertPath (base name: "InsertPath")', function() {
+      // uncomment below and update the code to test the property insertPath
       //var instane = new CloudmersiveConvertApiClient.DocxInsertImageRequest();
       //expect(instance).to.be();
     });

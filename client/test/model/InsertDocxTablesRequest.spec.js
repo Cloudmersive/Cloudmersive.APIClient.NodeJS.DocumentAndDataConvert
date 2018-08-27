@@ -74,6 +74,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property insertPlacement (base name: "InsertPlacement")', function() {
+      // uncomment below and update the code to test the property insertPlacement
+      //var instane = new CloudmersiveConvertApiClient.InsertDocxTablesRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property insertPath (base name: "InsertPath")', function() {
+      // uncomment below and update the code to test the property insertPath
+      //var instane = new CloudmersiveConvertApiClient.InsertDocxTablesRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

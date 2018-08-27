@@ -36,7 +36,7 @@
   /**
    * The DocxSection model module.
    * @module model/DocxSection
-   * @version 1.2.3
+   * @version 1.2.4
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
   };
@@ -65,6 +66,9 @@
       if (data.hasOwnProperty('StartingPageNumbers')) {
         obj['StartingPageNumbers'] = ApiClient.convertToType(data['StartingPageNumbers'], ['Number']);
       }
+      if (data.hasOwnProperty('Path')) {
+        obj['Path'] = ApiClient.convertToType(data['Path'], 'String');
+      }
     }
     return obj;
   }
@@ -74,6 +78,11 @@
    * @member {Array.<Number>} StartingPageNumbers
    */
   exports.prototype['StartingPageNumbers'] = undefined;
+  /**
+   * The Path of the location of this object; leave blank for new tables
+   * @member {String} Path
+   */
+  exports.prototype['Path'] = undefined;
 
 
 

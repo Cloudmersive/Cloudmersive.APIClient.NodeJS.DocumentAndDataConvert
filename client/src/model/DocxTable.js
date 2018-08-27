@@ -36,7 +36,7 @@
   /**
    * The DocxTable model module.
    * @module model/DocxTable
-   * @version 1.2.3
+   * @version 1.2.4
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -101,6 +102,9 @@
 
       if (data.hasOwnProperty('TableID')) {
         obj['TableID'] = ApiClient.convertToType(data['TableID'], 'String');
+      }
+      if (data.hasOwnProperty('Path')) {
+        obj['Path'] = ApiClient.convertToType(data['Path'], 'String');
       }
       if (data.hasOwnProperty('Width')) {
         obj['Width'] = ApiClient.convertToType(data['Width'], 'String');
@@ -218,10 +222,15 @@
   }
 
   /**
-   * The ID of the table
+   * The ID of the table; leave blank for new tables
    * @member {String} TableID
    */
   exports.prototype['TableID'] = undefined;
+  /**
+   * The Path of the location of this object; leave blank for new tables
+   * @member {String} Path
+   */
+  exports.prototype['Path'] = undefined;
   /**
    * The Width of the table, or 0 if not specified
    * @member {String} Width

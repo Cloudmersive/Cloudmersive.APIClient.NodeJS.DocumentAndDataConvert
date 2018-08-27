@@ -36,7 +36,7 @@
   /**
    * The InsertDocxTablesRequest model module.
    * @module model/InsertDocxTablesRequest
-   * @version 1.2.3
+   * @version 1.2.4
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -73,6 +75,12 @@
       if (data.hasOwnProperty('TableToInsert')) {
         obj['TableToInsert'] = DocxTable.constructFromObject(data['TableToInsert']);
       }
+      if (data.hasOwnProperty('InsertPlacement')) {
+        obj['InsertPlacement'] = ApiClient.convertToType(data['InsertPlacement'], 'String');
+      }
+      if (data.hasOwnProperty('InsertPath')) {
+        obj['InsertPath'] = ApiClient.convertToType(data['InsertPath'], 'String');
+      }
     }
     return obj;
   }
@@ -92,6 +100,16 @@
    * @member {module:model/DocxTable} TableToInsert
    */
   exports.prototype['TableToInsert'] = undefined;
+  /**
+   * Optional; default is DocumentEnd.  Placement Type of the insert; possible values are: DocumentStart (very beginning of the document), DocumentEnd (very end of the document), BeforeExistingObject (right before an existing object - fill in the InsertPath field using the Path value from an existing object), AfterExistingObject (right after an existing object - fill in the InsertPath field using the Path value from an existing object)
+   * @member {String} InsertPlacement
+   */
+  exports.prototype['InsertPlacement'] = undefined;
+  /**
+   * Optional; location within the document to insert the object; fill in the InsertPath field using the Path value from an existing object.  Used with InsertPlacement of BeforeExistingObject or AfterExistingObject
+   * @member {String} InsertPath
+   */
+  exports.prototype['InsertPath'] = undefined;
 
 
 

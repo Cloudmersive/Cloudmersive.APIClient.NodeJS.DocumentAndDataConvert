@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ConvertedPngPage', 'model/DocumentValidationError', 'model/DocumentValidationResult', 'model/DocxFooter', 'model/DocxHeader', 'model/DocxInsertImageRequest', 'model/DocxInsertImageResponse', 'model/DocxParagraph', 'model/DocxRun', 'model/DocxSection', 'model/DocxSetFooterRequest', 'model/DocxSetFooterResponse', 'model/DocxSetHeaderRequest', 'model/DocxSetHeaderResponse', 'model/DocxStyle', 'model/DocxTable', 'model/DocxTableCell', 'model/DocxTableRow', 'model/DocxText', 'model/FinishEditingRequest', 'model/GetDocxHeadersAndFootersRequest', 'model/GetDocxHeadersAndFootersResponse', 'model/GetDocxStylesRequest', 'model/GetDocxStylesResponse', 'model/GetDocxTablesRequest', 'model/GetDocxTablesResponse', 'model/HtmlMdResult', 'model/HtmlTemplateApplicationRequest', 'model/HtmlTemplateApplicationResponse', 'model/HtmlTemplateOperation', 'model/HtmlToOfficeRequest', 'model/HtmlToPdfRequest', 'model/InsertDocxTablesRequest', 'model/InsertDocxTablesResponse', 'model/PdfToPngResult', 'model/RemoveDocxHeadersAndFootersRequest', 'model/RemoveDocxHeadersAndFootersResponse', 'model/ReplaceStringRequest', 'model/ScreenshotRequest', 'model/ViewerResponse', 'api/CompareDocumentApi', 'api/ConvertDataApi', 'api/ConvertDocumentApi', 'api/ConvertImageApi', 'api/ConvertTemplateApi', 'api/ConvertWebApi', 'api/EditDocumentApi', 'api/MergeDocumentApi', 'api/ValidateDocumentApi', 'api/ViewerToolsApi'], factory);
+    define(['ApiClient', 'model/ConvertedPngPage', 'model/DocumentValidationError', 'model/DocumentValidationResult', 'model/DocxBody', 'model/DocxCellStyle', 'model/DocxFooter', 'model/DocxHeader', 'model/DocxImage', 'model/DocxInsertImageRequest', 'model/DocxInsertImageResponse', 'model/DocxParagraph', 'model/DocxRemoveObjectRequest', 'model/DocxRemoveObjectResponse', 'model/DocxRun', 'model/DocxSection', 'model/DocxSetFooterRequest', 'model/DocxSetFooterResponse', 'model/DocxSetHeaderRequest', 'model/DocxSetHeaderResponse', 'model/DocxStyle', 'model/DocxTable', 'model/DocxTableCell', 'model/DocxTableRow', 'model/DocxText', 'model/FinishEditingRequest', 'model/GetDocxBodyRequest', 'model/GetDocxBodyResponse', 'model/GetDocxHeadersAndFootersRequest', 'model/GetDocxHeadersAndFootersResponse', 'model/GetDocxImagesRequest', 'model/GetDocxImagesResponse', 'model/GetDocxSectionsRequest', 'model/GetDocxSectionsResponse', 'model/GetDocxStylesRequest', 'model/GetDocxStylesResponse', 'model/GetDocxTablesRequest', 'model/GetDocxTablesResponse', 'model/GetXlsxColumnsRequest', 'model/GetXlsxColumnsResponse', 'model/GetXlsxImagesRequest', 'model/GetXlsxImagesResponse', 'model/GetXlsxRowsAndCellsRequest', 'model/GetXlsxRowsAndCellsResponse', 'model/GetXlsxStylesRequest', 'model/GetXlsxStylesResponse', 'model/GetXlsxWorksheetsRequest', 'model/GetXlsxWorksheetsResponse', 'model/HtmlMdResult', 'model/HtmlTemplateApplicationRequest', 'model/HtmlTemplateApplicationResponse', 'model/HtmlTemplateOperation', 'model/HtmlToOfficeRequest', 'model/HtmlToPdfRequest', 'model/InsertDocxInsertParagraphRequest', 'model/InsertDocxInsertParagraphResponse', 'model/InsertDocxTablesRequest', 'model/InsertDocxTablesResponse', 'model/InsertXlsxWorksheetRequest', 'model/InsertXlsxWorksheetResponse', 'model/PdfToPngResult', 'model/RemoveDocxHeadersAndFootersRequest', 'model/RemoveDocxHeadersAndFootersResponse', 'model/ReplaceStringRequest', 'model/ScreenshotRequest', 'model/ViewerResponse', 'model/XlsxImage', 'model/XlsxSpreadsheetCell', 'model/XlsxSpreadsheetColumn', 'model/XlsxSpreadsheetRow', 'model/XlsxWorksheet', 'api/CompareDocumentApi', 'api/ConvertDataApi', 'api/ConvertDocumentApi', 'api/ConvertImageApi', 'api/ConvertTemplateApi', 'api/ConvertWebApi', 'api/EditDocumentApi', 'api/MergeDocumentApi', 'api/ValidateDocumentApi', 'api/ViewerToolsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/ConvertedPngPage'), require('./model/DocumentValidationError'), require('./model/DocumentValidationResult'), require('./model/DocxFooter'), require('./model/DocxHeader'), require('./model/DocxInsertImageRequest'), require('./model/DocxInsertImageResponse'), require('./model/DocxParagraph'), require('./model/DocxRun'), require('./model/DocxSection'), require('./model/DocxSetFooterRequest'), require('./model/DocxSetFooterResponse'), require('./model/DocxSetHeaderRequest'), require('./model/DocxSetHeaderResponse'), require('./model/DocxStyle'), require('./model/DocxTable'), require('./model/DocxTableCell'), require('./model/DocxTableRow'), require('./model/DocxText'), require('./model/FinishEditingRequest'), require('./model/GetDocxHeadersAndFootersRequest'), require('./model/GetDocxHeadersAndFootersResponse'), require('./model/GetDocxStylesRequest'), require('./model/GetDocxStylesResponse'), require('./model/GetDocxTablesRequest'), require('./model/GetDocxTablesResponse'), require('./model/HtmlMdResult'), require('./model/HtmlTemplateApplicationRequest'), require('./model/HtmlTemplateApplicationResponse'), require('./model/HtmlTemplateOperation'), require('./model/HtmlToOfficeRequest'), require('./model/HtmlToPdfRequest'), require('./model/InsertDocxTablesRequest'), require('./model/InsertDocxTablesResponse'), require('./model/PdfToPngResult'), require('./model/RemoveDocxHeadersAndFootersRequest'), require('./model/RemoveDocxHeadersAndFootersResponse'), require('./model/ReplaceStringRequest'), require('./model/ScreenshotRequest'), require('./model/ViewerResponse'), require('./api/CompareDocumentApi'), require('./api/ConvertDataApi'), require('./api/ConvertDocumentApi'), require('./api/ConvertImageApi'), require('./api/ConvertTemplateApi'), require('./api/ConvertWebApi'), require('./api/EditDocumentApi'), require('./api/MergeDocumentApi'), require('./api/ValidateDocumentApi'), require('./api/ViewerToolsApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/ConvertedPngPage'), require('./model/DocumentValidationError'), require('./model/DocumentValidationResult'), require('./model/DocxBody'), require('./model/DocxCellStyle'), require('./model/DocxFooter'), require('./model/DocxHeader'), require('./model/DocxImage'), require('./model/DocxInsertImageRequest'), require('./model/DocxInsertImageResponse'), require('./model/DocxParagraph'), require('./model/DocxRemoveObjectRequest'), require('./model/DocxRemoveObjectResponse'), require('./model/DocxRun'), require('./model/DocxSection'), require('./model/DocxSetFooterRequest'), require('./model/DocxSetFooterResponse'), require('./model/DocxSetHeaderRequest'), require('./model/DocxSetHeaderResponse'), require('./model/DocxStyle'), require('./model/DocxTable'), require('./model/DocxTableCell'), require('./model/DocxTableRow'), require('./model/DocxText'), require('./model/FinishEditingRequest'), require('./model/GetDocxBodyRequest'), require('./model/GetDocxBodyResponse'), require('./model/GetDocxHeadersAndFootersRequest'), require('./model/GetDocxHeadersAndFootersResponse'), require('./model/GetDocxImagesRequest'), require('./model/GetDocxImagesResponse'), require('./model/GetDocxSectionsRequest'), require('./model/GetDocxSectionsResponse'), require('./model/GetDocxStylesRequest'), require('./model/GetDocxStylesResponse'), require('./model/GetDocxTablesRequest'), require('./model/GetDocxTablesResponse'), require('./model/GetXlsxColumnsRequest'), require('./model/GetXlsxColumnsResponse'), require('./model/GetXlsxImagesRequest'), require('./model/GetXlsxImagesResponse'), require('./model/GetXlsxRowsAndCellsRequest'), require('./model/GetXlsxRowsAndCellsResponse'), require('./model/GetXlsxStylesRequest'), require('./model/GetXlsxStylesResponse'), require('./model/GetXlsxWorksheetsRequest'), require('./model/GetXlsxWorksheetsResponse'), require('./model/HtmlMdResult'), require('./model/HtmlTemplateApplicationRequest'), require('./model/HtmlTemplateApplicationResponse'), require('./model/HtmlTemplateOperation'), require('./model/HtmlToOfficeRequest'), require('./model/HtmlToPdfRequest'), require('./model/InsertDocxInsertParagraphRequest'), require('./model/InsertDocxInsertParagraphResponse'), require('./model/InsertDocxTablesRequest'), require('./model/InsertDocxTablesResponse'), require('./model/InsertXlsxWorksheetRequest'), require('./model/InsertXlsxWorksheetResponse'), require('./model/PdfToPngResult'), require('./model/RemoveDocxHeadersAndFootersRequest'), require('./model/RemoveDocxHeadersAndFootersResponse'), require('./model/ReplaceStringRequest'), require('./model/ScreenshotRequest'), require('./model/ViewerResponse'), require('./model/XlsxImage'), require('./model/XlsxSpreadsheetCell'), require('./model/XlsxSpreadsheetColumn'), require('./model/XlsxSpreadsheetRow'), require('./model/XlsxWorksheet'), require('./api/CompareDocumentApi'), require('./api/ConvertDataApi'), require('./api/ConvertDocumentApi'), require('./api/ConvertImageApi'), require('./api/ConvertTemplateApi'), require('./api/ConvertWebApi'), require('./api/EditDocumentApi'), require('./api/MergeDocumentApi'), require('./api/ValidateDocumentApi'), require('./api/ViewerToolsApi'));
   }
-}(function(ApiClient, ConvertedPngPage, DocumentValidationError, DocumentValidationResult, DocxFooter, DocxHeader, DocxInsertImageRequest, DocxInsertImageResponse, DocxParagraph, DocxRun, DocxSection, DocxSetFooterRequest, DocxSetFooterResponse, DocxSetHeaderRequest, DocxSetHeaderResponse, DocxStyle, DocxTable, DocxTableCell, DocxTableRow, DocxText, FinishEditingRequest, GetDocxHeadersAndFootersRequest, GetDocxHeadersAndFootersResponse, GetDocxStylesRequest, GetDocxStylesResponse, GetDocxTablesRequest, GetDocxTablesResponse, HtmlMdResult, HtmlTemplateApplicationRequest, HtmlTemplateApplicationResponse, HtmlTemplateOperation, HtmlToOfficeRequest, HtmlToPdfRequest, InsertDocxTablesRequest, InsertDocxTablesResponse, PdfToPngResult, RemoveDocxHeadersAndFootersRequest, RemoveDocxHeadersAndFootersResponse, ReplaceStringRequest, ScreenshotRequest, ViewerResponse, CompareDocumentApi, ConvertDataApi, ConvertDocumentApi, ConvertImageApi, ConvertTemplateApi, ConvertWebApi, EditDocumentApi, MergeDocumentApi, ValidateDocumentApi, ViewerToolsApi) {
+}(function(ApiClient, ConvertedPngPage, DocumentValidationError, DocumentValidationResult, DocxBody, DocxCellStyle, DocxFooter, DocxHeader, DocxImage, DocxInsertImageRequest, DocxInsertImageResponse, DocxParagraph, DocxRemoveObjectRequest, DocxRemoveObjectResponse, DocxRun, DocxSection, DocxSetFooterRequest, DocxSetFooterResponse, DocxSetHeaderRequest, DocxSetHeaderResponse, DocxStyle, DocxTable, DocxTableCell, DocxTableRow, DocxText, FinishEditingRequest, GetDocxBodyRequest, GetDocxBodyResponse, GetDocxHeadersAndFootersRequest, GetDocxHeadersAndFootersResponse, GetDocxImagesRequest, GetDocxImagesResponse, GetDocxSectionsRequest, GetDocxSectionsResponse, GetDocxStylesRequest, GetDocxStylesResponse, GetDocxTablesRequest, GetDocxTablesResponse, GetXlsxColumnsRequest, GetXlsxColumnsResponse, GetXlsxImagesRequest, GetXlsxImagesResponse, GetXlsxRowsAndCellsRequest, GetXlsxRowsAndCellsResponse, GetXlsxStylesRequest, GetXlsxStylesResponse, GetXlsxWorksheetsRequest, GetXlsxWorksheetsResponse, HtmlMdResult, HtmlTemplateApplicationRequest, HtmlTemplateApplicationResponse, HtmlTemplateOperation, HtmlToOfficeRequest, HtmlToPdfRequest, InsertDocxInsertParagraphRequest, InsertDocxInsertParagraphResponse, InsertDocxTablesRequest, InsertDocxTablesResponse, InsertXlsxWorksheetRequest, InsertXlsxWorksheetResponse, PdfToPngResult, RemoveDocxHeadersAndFootersRequest, RemoveDocxHeadersAndFootersResponse, ReplaceStringRequest, ScreenshotRequest, ViewerResponse, XlsxImage, XlsxSpreadsheetCell, XlsxSpreadsheetColumn, XlsxSpreadsheetRow, XlsxWorksheet, CompareDocumentApi, ConvertDataApi, ConvertDocumentApi, ConvertImageApi, ConvertTemplateApi, ConvertWebApi, EditDocumentApi, MergeDocumentApi, ValidateDocumentApi, ViewerToolsApi) {
   'use strict';
 
   /**
@@ -53,7 +53,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 1.2.3
+   * @version 1.2.4
    */
   var exports = {
     /**
@@ -77,6 +77,16 @@
      */
     DocumentValidationResult: DocumentValidationResult,
     /**
+     * The DocxBody model constructor.
+     * @property {module:model/DocxBody}
+     */
+    DocxBody: DocxBody,
+    /**
+     * The DocxCellStyle model constructor.
+     * @property {module:model/DocxCellStyle}
+     */
+    DocxCellStyle: DocxCellStyle,
+    /**
      * The DocxFooter model constructor.
      * @property {module:model/DocxFooter}
      */
@@ -86,6 +96,11 @@
      * @property {module:model/DocxHeader}
      */
     DocxHeader: DocxHeader,
+    /**
+     * The DocxImage model constructor.
+     * @property {module:model/DocxImage}
+     */
+    DocxImage: DocxImage,
     /**
      * The DocxInsertImageRequest model constructor.
      * @property {module:model/DocxInsertImageRequest}
@@ -101,6 +116,16 @@
      * @property {module:model/DocxParagraph}
      */
     DocxParagraph: DocxParagraph,
+    /**
+     * The DocxRemoveObjectRequest model constructor.
+     * @property {module:model/DocxRemoveObjectRequest}
+     */
+    DocxRemoveObjectRequest: DocxRemoveObjectRequest,
+    /**
+     * The DocxRemoveObjectResponse model constructor.
+     * @property {module:model/DocxRemoveObjectResponse}
+     */
+    DocxRemoveObjectResponse: DocxRemoveObjectResponse,
     /**
      * The DocxRun model constructor.
      * @property {module:model/DocxRun}
@@ -162,6 +187,16 @@
      */
     FinishEditingRequest: FinishEditingRequest,
     /**
+     * The GetDocxBodyRequest model constructor.
+     * @property {module:model/GetDocxBodyRequest}
+     */
+    GetDocxBodyRequest: GetDocxBodyRequest,
+    /**
+     * The GetDocxBodyResponse model constructor.
+     * @property {module:model/GetDocxBodyResponse}
+     */
+    GetDocxBodyResponse: GetDocxBodyResponse,
+    /**
      * The GetDocxHeadersAndFootersRequest model constructor.
      * @property {module:model/GetDocxHeadersAndFootersRequest}
      */
@@ -171,6 +206,26 @@
      * @property {module:model/GetDocxHeadersAndFootersResponse}
      */
     GetDocxHeadersAndFootersResponse: GetDocxHeadersAndFootersResponse,
+    /**
+     * The GetDocxImagesRequest model constructor.
+     * @property {module:model/GetDocxImagesRequest}
+     */
+    GetDocxImagesRequest: GetDocxImagesRequest,
+    /**
+     * The GetDocxImagesResponse model constructor.
+     * @property {module:model/GetDocxImagesResponse}
+     */
+    GetDocxImagesResponse: GetDocxImagesResponse,
+    /**
+     * The GetDocxSectionsRequest model constructor.
+     * @property {module:model/GetDocxSectionsRequest}
+     */
+    GetDocxSectionsRequest: GetDocxSectionsRequest,
+    /**
+     * The GetDocxSectionsResponse model constructor.
+     * @property {module:model/GetDocxSectionsResponse}
+     */
+    GetDocxSectionsResponse: GetDocxSectionsResponse,
     /**
      * The GetDocxStylesRequest model constructor.
      * @property {module:model/GetDocxStylesRequest}
@@ -191,6 +246,56 @@
      * @property {module:model/GetDocxTablesResponse}
      */
     GetDocxTablesResponse: GetDocxTablesResponse,
+    /**
+     * The GetXlsxColumnsRequest model constructor.
+     * @property {module:model/GetXlsxColumnsRequest}
+     */
+    GetXlsxColumnsRequest: GetXlsxColumnsRequest,
+    /**
+     * The GetXlsxColumnsResponse model constructor.
+     * @property {module:model/GetXlsxColumnsResponse}
+     */
+    GetXlsxColumnsResponse: GetXlsxColumnsResponse,
+    /**
+     * The GetXlsxImagesRequest model constructor.
+     * @property {module:model/GetXlsxImagesRequest}
+     */
+    GetXlsxImagesRequest: GetXlsxImagesRequest,
+    /**
+     * The GetXlsxImagesResponse model constructor.
+     * @property {module:model/GetXlsxImagesResponse}
+     */
+    GetXlsxImagesResponse: GetXlsxImagesResponse,
+    /**
+     * The GetXlsxRowsAndCellsRequest model constructor.
+     * @property {module:model/GetXlsxRowsAndCellsRequest}
+     */
+    GetXlsxRowsAndCellsRequest: GetXlsxRowsAndCellsRequest,
+    /**
+     * The GetXlsxRowsAndCellsResponse model constructor.
+     * @property {module:model/GetXlsxRowsAndCellsResponse}
+     */
+    GetXlsxRowsAndCellsResponse: GetXlsxRowsAndCellsResponse,
+    /**
+     * The GetXlsxStylesRequest model constructor.
+     * @property {module:model/GetXlsxStylesRequest}
+     */
+    GetXlsxStylesRequest: GetXlsxStylesRequest,
+    /**
+     * The GetXlsxStylesResponse model constructor.
+     * @property {module:model/GetXlsxStylesResponse}
+     */
+    GetXlsxStylesResponse: GetXlsxStylesResponse,
+    /**
+     * The GetXlsxWorksheetsRequest model constructor.
+     * @property {module:model/GetXlsxWorksheetsRequest}
+     */
+    GetXlsxWorksheetsRequest: GetXlsxWorksheetsRequest,
+    /**
+     * The GetXlsxWorksheetsResponse model constructor.
+     * @property {module:model/GetXlsxWorksheetsResponse}
+     */
+    GetXlsxWorksheetsResponse: GetXlsxWorksheetsResponse,
     /**
      * The HtmlMdResult model constructor.
      * @property {module:model/HtmlMdResult}
@@ -222,6 +327,16 @@
      */
     HtmlToPdfRequest: HtmlToPdfRequest,
     /**
+     * The InsertDocxInsertParagraphRequest model constructor.
+     * @property {module:model/InsertDocxInsertParagraphRequest}
+     */
+    InsertDocxInsertParagraphRequest: InsertDocxInsertParagraphRequest,
+    /**
+     * The InsertDocxInsertParagraphResponse model constructor.
+     * @property {module:model/InsertDocxInsertParagraphResponse}
+     */
+    InsertDocxInsertParagraphResponse: InsertDocxInsertParagraphResponse,
+    /**
      * The InsertDocxTablesRequest model constructor.
      * @property {module:model/InsertDocxTablesRequest}
      */
@@ -231,6 +346,16 @@
      * @property {module:model/InsertDocxTablesResponse}
      */
     InsertDocxTablesResponse: InsertDocxTablesResponse,
+    /**
+     * The InsertXlsxWorksheetRequest model constructor.
+     * @property {module:model/InsertXlsxWorksheetRequest}
+     */
+    InsertXlsxWorksheetRequest: InsertXlsxWorksheetRequest,
+    /**
+     * The InsertXlsxWorksheetResponse model constructor.
+     * @property {module:model/InsertXlsxWorksheetResponse}
+     */
+    InsertXlsxWorksheetResponse: InsertXlsxWorksheetResponse,
     /**
      * The PdfToPngResult model constructor.
      * @property {module:model/PdfToPngResult}
@@ -261,6 +386,31 @@
      * @property {module:model/ViewerResponse}
      */
     ViewerResponse: ViewerResponse,
+    /**
+     * The XlsxImage model constructor.
+     * @property {module:model/XlsxImage}
+     */
+    XlsxImage: XlsxImage,
+    /**
+     * The XlsxSpreadsheetCell model constructor.
+     * @property {module:model/XlsxSpreadsheetCell}
+     */
+    XlsxSpreadsheetCell: XlsxSpreadsheetCell,
+    /**
+     * The XlsxSpreadsheetColumn model constructor.
+     * @property {module:model/XlsxSpreadsheetColumn}
+     */
+    XlsxSpreadsheetColumn: XlsxSpreadsheetColumn,
+    /**
+     * The XlsxSpreadsheetRow model constructor.
+     * @property {module:model/XlsxSpreadsheetRow}
+     */
+    XlsxSpreadsheetRow: XlsxSpreadsheetRow,
+    /**
+     * The XlsxWorksheet model constructor.
+     * @property {module:model/XlsxWorksheet}
+     */
+    XlsxWorksheet: XlsxWorksheet,
     /**
      * The CompareDocumentApi service constructor.
      * @property {module:api/CompareDocumentApi}

@@ -36,7 +36,7 @@
   /**
    * The DocxText model module.
    * @module model/DocxText
-   * @version 1.2.3
+   * @version 1.2.4
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -66,6 +67,9 @@
       if (data.hasOwnProperty('TextIndex')) {
         obj['TextIndex'] = ApiClient.convertToType(data['TextIndex'], 'Number');
       }
+      if (data.hasOwnProperty('Path')) {
+        obj['Path'] = ApiClient.convertToType(data['Path'], 'String');
+      }
       if (data.hasOwnProperty('TextContent')) {
         obj['TextContent'] = ApiClient.convertToType(data['TextContent'], 'String');
       }
@@ -78,6 +82,11 @@
    * @member {Number} TextIndex
    */
   exports.prototype['TextIndex'] = undefined;
+  /**
+   * The Path of the location of this object; leave blank for new tables
+   * @member {String} Path
+   */
+  exports.prototype['Path'] = undefined;
   /**
    * Text string containing the text content of this text content item
    * @member {String} TextContent

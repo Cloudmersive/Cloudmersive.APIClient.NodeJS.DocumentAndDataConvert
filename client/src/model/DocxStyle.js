@@ -36,7 +36,7 @@
   /**
    * The DocxStyle model module.
    * @module model/DocxStyle
-   * @version 1.2.3
+   * @version 1.2.4
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -69,6 +70,9 @@
 
       if (data.hasOwnProperty('StyleID')) {
         obj['StyleID'] = ApiClient.convertToType(data['StyleID'], 'String');
+      }
+      if (data.hasOwnProperty('Path')) {
+        obj['Path'] = ApiClient.convertToType(data['Path'], 'String');
       }
       if (data.hasOwnProperty('Bold')) {
         obj['Bold'] = ApiClient.convertToType(data['Bold'], 'Boolean');
@@ -94,6 +98,11 @@
    * @member {String} StyleID
    */
   exports.prototype['StyleID'] = undefined;
+  /**
+   * The Path of the location of this object; leave blank for new tables
+   * @member {String} Path
+   */
+  exports.prototype['Path'] = undefined;
   /**
    * Style applies bold formatting
    * @member {Boolean} Bold
