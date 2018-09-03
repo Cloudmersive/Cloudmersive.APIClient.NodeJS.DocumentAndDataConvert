@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveConvertApiClient.ConvertImageApi();
+    instance = new CloudmersiveConvertApiClient.ExifValue();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,37 +49,31 @@
       object[property] = value;
   }
 
-  describe('ConvertImageApi', function() {
-    describe('convertImageGetImageInfo', function() {
-      it('should call convertImageGetImageInfo successfully', function(done) {
-        //uncomment below and update the code to test convertImageGetImageInfo
-        //instance.convertImageGetImageInfo(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ExifValue', function() {
+    it('should create an instance of ExifValue', function() {
+      // uncomment below and update the code to test ExifValue
+      //var instane = new CloudmersiveConvertApiClient.ExifValue();
+      //expect(instance).to.be.a(CloudmersiveConvertApiClient.ExifValue);
     });
-    describe('convertImageImageFormatConvert', function() {
-      it('should call convertImageImageFormatConvert successfully', function(done) {
-        //uncomment below and update the code to test convertImageImageFormatConvert
-        //instance.convertImageImageFormatConvert(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property tag (base name: "Tag")', function() {
+      // uncomment below and update the code to test the property tag
+      //var instane = new CloudmersiveConvertApiClient.ExifValue();
+      //expect(instance).to.be();
     });
-    describe('convertImageImageSetDPI', function() {
-      it('should call convertImageImageSetDPI successfully', function(done) {
-        //uncomment below and update the code to test convertImageImageSetDPI
-        //instance.convertImageImageSetDPI(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property dataType (base name: "DataType")', function() {
+      // uncomment below and update the code to test the property dataType
+      //var instane = new CloudmersiveConvertApiClient.ExifValue();
+      //expect(instance).to.be();
     });
+
+    it('should have the property dataValue (base name: "DataValue")', function() {
+      // uncomment below and update the code to test the property dataValue
+      //var instane = new CloudmersiveConvertApiClient.ExifValue();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

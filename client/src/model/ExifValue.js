@@ -25,7 +25,7 @@
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.HtmlToOfficeRequest = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.ExifValue = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,45 +34,61 @@
 
 
   /**
-   * The HtmlToOfficeRequest model module.
-   * @module model/HtmlToOfficeRequest
+   * The ExifValue model module.
+   * @module model/ExifValue
    * @version 1.2.5
    */
 
   /**
-   * Constructs a new <code>HtmlToOfficeRequest</code>.
-   * Details of the HTML to Office request
-   * @alias module:model/HtmlToOfficeRequest
+   * Constructs a new <code>ExifValue</code>.
+   * EXIF tag and value
+   * @alias module:model/ExifValue
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
+
+
   };
 
   /**
-   * Constructs a <code>HtmlToOfficeRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ExifValue</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/HtmlToOfficeRequest} obj Optional instance to populate.
-   * @return {module:model/HtmlToOfficeRequest} The populated <code>HtmlToOfficeRequest</code> instance.
+   * @param {module:model/ExifValue} obj Optional instance to populate.
+   * @return {module:model/ExifValue} The populated <code>ExifValue</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Html')) {
-        obj['Html'] = ApiClient.convertToType(data['Html'], 'String');
+      if (data.hasOwnProperty('Tag')) {
+        obj['Tag'] = ApiClient.convertToType(data['Tag'], 'String');
+      }
+      if (data.hasOwnProperty('DataType')) {
+        obj['DataType'] = ApiClient.convertToType(data['DataType'], 'String');
+      }
+      if (data.hasOwnProperty('DataValue')) {
+        obj['DataValue'] = ApiClient.convertToType(data['DataValue'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} Html
+   * @member {String} Tag
    */
-  exports.prototype['Html'] = undefined;
+  exports.prototype['Tag'] = undefined;
+  /**
+   * @member {String} DataType
+   */
+  exports.prototype['DataType'] = undefined;
+  /**
+   * @member {String} DataValue
+   */
+  exports.prototype['DataValue'] = undefined;
 
 
 
