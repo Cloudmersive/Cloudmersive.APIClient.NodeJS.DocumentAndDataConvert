@@ -36,7 +36,7 @@
   /**
    * The GetXlsxImagesRequest model module.
    * @module model/GetXlsxImagesRequest
-   * @version 1.2.5
+   * @version 1.2.6
    */
 
   /**

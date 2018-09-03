@@ -36,7 +36,7 @@
   /**
    * The XlsxSpreadsheetRow model module.
    * @module model/XlsxSpreadsheetRow
-   * @version 1.2.5
+   * @version 1.2.6
    */
 
   /**
