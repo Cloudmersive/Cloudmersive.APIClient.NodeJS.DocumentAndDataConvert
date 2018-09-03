@@ -36,7 +36,7 @@
   /**
    * The GetDocxSectionsRequest model module.
    * @module model/GetDocxSectionsRequest
-   * @version 1.2.6
+   * @version 1.2.7
    */
 
   /**
