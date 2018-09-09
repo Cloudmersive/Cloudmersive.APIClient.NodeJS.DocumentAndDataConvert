@@ -36,7 +36,7 @@
   /**
    * The DocxImage model module.
    * @module model/DocxImage
-   * @version 1.2.7
+   * @version 1.2.8
    */
 
   /**
@@ -109,8 +109,8 @@
       if (data.hasOwnProperty('ImageContentsURL')) {
         obj['ImageContentsURL'] = ApiClient.convertToType(data['ImageContentsURL'], 'String');
       }
-      if (data.hasOwnProperty('Inline')) {
-        obj['Inline'] = ApiClient.convertToType(data['Inline'], 'Boolean');
+      if (data.hasOwnProperty('InlineWithText')) {
+        obj['InlineWithText'] = ApiClient.convertToType(data['InlineWithText'], 'Boolean');
       }
     }
     return obj;
@@ -178,9 +178,9 @@
   exports.prototype['ImageContentsURL'] = undefined;
   /**
    * True if the image is inline with the text; false if it is floating
-   * @member {Boolean} Inline
+   * @member {Boolean} InlineWithText
    */
-  exports.prototype['Inline'] = undefined;
+  exports.prototype['InlineWithText'] = undefined;
 
 
 

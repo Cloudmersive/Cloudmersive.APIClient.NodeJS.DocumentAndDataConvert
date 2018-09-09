@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/PdfToPngResult'], factory);
+    define(['ApiClient', 'model/AutodetectGetInfoResult', 'model/PdfToPngResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/PdfToPngResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/AutodetectGetInfoResult'), require('../model/PdfToPngResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.PdfToPngResult);
+    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectGetInfoResult, root.CloudmersiveConvertApiClient.PdfToPngResult);
   }
-}(this, function(ApiClient, PdfToPngResult) {
+}(this, function(ApiClient, AutodetectGetInfoResult, PdfToPngResult) {
   'use strict';
 
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 1.2.7
+   * @version 1.2.8
    */
 
   /**
@@ -46,6 +46,54 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the convertDocumentAutodetectGetInfo operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentAutodetectGetInfoCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/AutodetectGetInfoResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get document type information
+     * Auto-detects a document&#39;s type information; does not require file extension.  Analyzes file contents to confirm file type.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentAutodetectGetInfoCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/AutodetectGetInfoResult}
+     */
+    this.convertDocumentAutodetectGetInfo = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentAutodetectGetInfo");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = AutodetectGetInfoResult;
+
+      return this.apiClient.callApi(
+        '/convert/autodetect/get-info', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the convertDocumentAutodetectToPdf operation.

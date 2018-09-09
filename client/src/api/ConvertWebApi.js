@@ -33,7 +33,7 @@
   /**
    * ConvertWeb service.
    * @module api/ConvertWebApi
-   * @version 1.2.7
+   * @version 1.2.8
    */
 
   /**

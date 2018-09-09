@@ -128,8 +128,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property inline (base name: "Inline")', function() {
-      // uncomment below and update the code to test the property inline
+    it('should have the property inlineWithText (base name: "InlineWithText")', function() {
+      // uncomment below and update the code to test the property inlineWithText
       //var instane = new CloudmersiveConvertApiClient.DocxImage();
       //expect(instance).to.be();
     });

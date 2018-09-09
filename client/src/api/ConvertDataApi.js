@@ -33,7 +33,7 @@
   /**
    * ConvertData service.
    * @module api/ConvertDataApi
-   * @version 1.2.7
+   * @version 1.2.8
    */
 
   /**

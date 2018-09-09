@@ -50,6 +50,16 @@
   }
 
   describe('ConvertDocumentApi', function() {
+    describe('convertDocumentAutodetectGetInfo', function() {
+      it('should call convertDocumentAutodetectGetInfo successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentAutodetectGetInfo
+        //instance.convertDocumentAutodetectGetInfo(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentAutodetectToPdf', function() {
       it('should call convertDocumentAutodetectToPdf successfully', function(done) {
         //uncomment below and update the code to test convertDocumentAutodetectToPdf
