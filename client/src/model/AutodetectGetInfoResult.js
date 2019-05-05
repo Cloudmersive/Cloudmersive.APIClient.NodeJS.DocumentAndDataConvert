@@ -36,7 +36,7 @@
   /**
    * The AutodetectGetInfoResult model module.
    * @module model/AutodetectGetInfoResult
-   * @version 1.2.8
+   * @version 1.2.9
    */
 
   /**

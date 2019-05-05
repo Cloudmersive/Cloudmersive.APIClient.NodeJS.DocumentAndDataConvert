@@ -36,7 +36,7 @@
   /**
    * The ConvertedPngPage model module.
    * @module model/ConvertedPngPage
-   * @version 1.2.8
+   * @version 1.2.9
    */
 
   /**

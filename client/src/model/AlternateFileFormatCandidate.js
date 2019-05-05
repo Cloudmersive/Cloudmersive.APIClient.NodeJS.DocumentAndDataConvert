@@ -36,7 +36,7 @@
   /**
    * The AlternateFileFormatCandidate model module.
    * @module model/AlternateFileFormatCandidate
-   * @version 1.2.8
+   * @version 1.2.9
    */
 
   /**

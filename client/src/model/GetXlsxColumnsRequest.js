@@ -36,7 +36,7 @@
   /**
    * The GetXlsxColumnsRequest model module.
    * @module model/GetXlsxColumnsRequest
-   * @version 1.2.8
+   * @version 1.2.9
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The DocxCellStyle model module.
    * @module model/DocxCellStyle
-   * @version 1.2.8
+   * @version 1.2.9
    */
 
   /**

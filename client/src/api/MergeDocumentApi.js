@@ -33,7 +33,7 @@
   /**
    * MergeDocument service.
    * @module api/MergeDocumentApi
-   * @version 1.2.8
+   * @version 1.2.9
    */
 
   /**

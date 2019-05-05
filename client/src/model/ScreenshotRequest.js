@@ -36,7 +36,7 @@
   /**
    * The ScreenshotRequest model module.
    * @module model/ScreenshotRequest
-   * @version 1.2.8
+   * @version 1.2.9
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -69,6 +71,12 @@
       if (data.hasOwnProperty('ExtraLoadingWait')) {
         obj['ExtraLoadingWait'] = ApiClient.convertToType(data['ExtraLoadingWait'], 'Number');
       }
+      if (data.hasOwnProperty('ScreenshotWidth')) {
+        obj['ScreenshotWidth'] = ApiClient.convertToType(data['ScreenshotWidth'], 'Number');
+      }
+      if (data.hasOwnProperty('ScreenshotHeight')) {
+        obj['ScreenshotHeight'] = ApiClient.convertToType(data['ScreenshotHeight'], 'Number');
+      }
     }
     return obj;
   }
@@ -81,6 +89,14 @@
    * @member {Number} ExtraLoadingWait
    */
   exports.prototype['ExtraLoadingWait'] = undefined;
+  /**
+   * @member {Number} ScreenshotWidth
+   */
+  exports.prototype['ScreenshotWidth'] = undefined;
+  /**
+   * @member {Number} ScreenshotHeight
+   */
+  exports.prototype['ScreenshotHeight'] = undefined;
 
 
 

@@ -68,6 +68,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property screenshotWidth (base name: "ScreenshotWidth")', function() {
+      // uncomment below and update the code to test the property screenshotWidth
+      //var instane = new CloudmersiveConvertApiClient.ScreenshotRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property screenshotHeight (base name: "ScreenshotHeight")', function() {
+      // uncomment below and update the code to test the property screenshotHeight
+      //var instane = new CloudmersiveConvertApiClient.ScreenshotRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

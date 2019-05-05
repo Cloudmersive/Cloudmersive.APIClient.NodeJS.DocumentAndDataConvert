@@ -36,7 +36,7 @@
   /**
    * The GetDocxHeadersAndFootersRequest model module.
    * @module model/GetDocxHeadersAndFootersRequest
-   * @version 1.2.8
+   * @version 1.2.9
    */
 
   /**
