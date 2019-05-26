@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 1.2.9
+- Package version: 1.3.0
 
 
 ## Installation
@@ -129,6 +129,8 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *CloudmersiveConvertApiClient.CompareDocumentApi* | [**compareDocumentDocx**](docs/CompareDocumentApi.md#compareDocumentDocx) | **POST** /convert/compare/docx | Compare Two Word DOCX
 *CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataCsvToJson**](docs/ConvertDataApi.md#convertDataCsvToJson) | **POST** /convert/csv/to/json | CSV to JSON conversion
+*CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXlsToJson**](docs/ConvertDataApi.md#convertDataXlsToJson) | **POST** /convert/xls/to/json | Excel (97-2003) XLS to JSON conversion
+*CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXlsxToJson**](docs/ConvertDataApi.md#convertDataXlsxToJson) | **POST** /convert/xlsx/to/json | Excel XLSX to JSON conversion
 *CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlToJson**](docs/ConvertDataApi.md#convertDataXmlToJson) | **POST** /convert/xml/to/json | XML to JSON conversion
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectGetInfo**](docs/ConvertDocumentApi.md#convertDocumentAutodetectGetInfo) | **POST** /convert/autodetect/get-info | Get document type information
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectToPdf**](docs/ConvertDocumentApi.md#convertDocumentAutodetectToPdf) | **POST** /convert/autodetect/to/pdf | Convert Document to PDF
