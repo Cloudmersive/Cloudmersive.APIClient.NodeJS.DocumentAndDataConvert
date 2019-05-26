@@ -36,7 +36,7 @@
   /**
    * The GetXlsxStylesRequest model module.
    * @module model/GetXlsxStylesRequest
-   * @version 1.3.0
+   * @version 1.3.1
    */
 
   /**
