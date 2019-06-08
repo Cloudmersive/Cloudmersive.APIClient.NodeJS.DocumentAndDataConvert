@@ -36,7 +36,7 @@
   /**
    * The HtmlTemplateOperation model module.
    * @module model/HtmlTemplateOperation
-   * @version 2.0.1
+   * @version 2.0.2
    */
 
   /**
