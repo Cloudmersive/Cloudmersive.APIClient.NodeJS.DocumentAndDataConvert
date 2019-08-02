@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 
 <a name="convertDocumentXlsToPdf"></a>
 # **convertDocumentXlsToPdf**
-> Object convertDocumentXlsToPdf(inputFile)
+> &#39;Blob&#39; convertDocumentXlsToPdf(inputFile)
 
 Excel XLS (97-03) to PDF
 
@@ -592,7 +592,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**&#39;Blob&#39;**
 
 ### Authorization
 

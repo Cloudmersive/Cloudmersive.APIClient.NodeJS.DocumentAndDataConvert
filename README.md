@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.0.2
+- Package version: 2.0.3
 
 
 ## Installation
@@ -149,6 +149,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ConvertImageApi* | [**convertImageGetImageInfo**](docs/ConvertImageApi.md#convertImageGetImageInfo) | **POST** /convert/image/get-info | Get information about an image
 *CloudmersiveConvertApiClient.ConvertImageApi* | [**convertImageImageFormatConvert**](docs/ConvertImageApi.md#convertImageImageFormatConvert) | **POST** /convert/image/{format1}/to/{format2} | Image format conversion
 *CloudmersiveConvertApiClient.ConvertImageApi* | [**convertImageImageSetDPI**](docs/ConvertImageApi.md#convertImageImageSetDPI) | **POST** /convert/image/set-dpi/{dpi} | Change image DPI
+*CloudmersiveConvertApiClient.ConvertImageApi* | [**convertImageMultipageImageFormatConvert**](docs/ConvertImageApi.md#convertImageMultipageImageFormatConvert) | **POST** /convert/image-multipage/{format1}/to/{format2} | Multi-page format conversion
 *CloudmersiveConvertApiClient.ConvertTemplateApi* | [**convertTemplateApplyHtmlTemplate**](docs/ConvertTemplateApi.md#convertTemplateApplyHtmlTemplate) | **POST** /convert/template/html/apply | Apply HTML template
 *CloudmersiveConvertApiClient.ConvertWebApi* | [**convertWebHtmlToDocx**](docs/ConvertWebApi.md#convertWebHtmlToDocx) | **POST** /convert/html/to/docx | HTML to DOCX
 *CloudmersiveConvertApiClient.ConvertWebApi* | [**convertWebHtmlToPdf**](docs/ConvertWebApi.md#convertWebHtmlToPdf) | **POST** /convert/web/html/to/pdf | Convert HTML string to PDF
@@ -252,6 +253,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.InsertDocxTablesResponse](docs/InsertDocxTablesResponse.md)
  - [CloudmersiveConvertApiClient.InsertXlsxWorksheetRequest](docs/InsertXlsxWorksheetRequest.md)
  - [CloudmersiveConvertApiClient.InsertXlsxWorksheetResponse](docs/InsertXlsxWorksheetResponse.md)
+ - [CloudmersiveConvertApiClient.MultipageImageFormatConversionResult](docs/MultipageImageFormatConversionResult.md)
+ - [CloudmersiveConvertApiClient.PageConversionResult](docs/PageConversionResult.md)
  - [CloudmersiveConvertApiClient.PdfToPngResult](docs/PdfToPngResult.md)
  - [CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersRequest](docs/RemoveDocxHeadersAndFootersRequest.md)
  - [CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersResponse](docs/RemoveDocxHeadersAndFootersResponse.md)

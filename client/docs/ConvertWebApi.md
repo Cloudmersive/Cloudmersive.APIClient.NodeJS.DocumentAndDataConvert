@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 <a name="convertWebHtmlToPdf"></a>
 # **convertWebHtmlToPdf**
-> Object convertWebHtmlToPdf(input)
+> &#39;Blob&#39; convertWebHtmlToPdf(input)
 
 Convert HTML string to PDF
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**&#39;Blob&#39;**
 
 ### Authorization
 
