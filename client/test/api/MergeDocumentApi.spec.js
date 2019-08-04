@@ -60,6 +60,16 @@
         done();
       });
     });
+    describe('mergeDocumentPdf', function() {
+      it('should call mergeDocumentPdf successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentPdf
+        //instance.mergeDocumentPdf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('mergeDocumentPptx', function() {
       it('should call mergeDocumentPptx successfully', function(done) {
         //uncomment below and update the code to test mergeDocumentPptx

@@ -33,7 +33,7 @@
   /**
    * MergeDocument service.
    * @module api/MergeDocumentApi
-   * @version 2.0.3
+   * @version 2.0.4
    */
 
   /**
@@ -97,6 +97,61 @@
 
       return this.apiClient.callApi(
         '/convert/merge/docx', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the mergeDocumentPdf operation.
+     * @callback module:api/MergeDocumentApi~mergeDocumentPdfCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Merge Multple PDF Files Together
+     * Combine multiple PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
+     * @param {File} inputFile1 First input file to perform the operation on.
+     * @param {File} inputFile2 Second input file to perform the operation on (more than 2 can be supplied).
+     * @param {module:api/MergeDocumentApi~mergeDocumentPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.mergeDocumentPdf = function(inputFile1, inputFile2, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile1' is set
+      if (inputFile1 === undefined || inputFile1 === null) {
+        throw new Error("Missing the required parameter 'inputFile1' when calling mergeDocumentPdf");
+      }
+
+      // verify the required parameter 'inputFile2' is set
+      if (inputFile2 === undefined || inputFile2 === null) {
+        throw new Error("Missing the required parameter 'inputFile2' when calling mergeDocumentPdf");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile1': inputFile1,
+        'inputFile2': inputFile2
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/merge/pdf', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -110,10 +110,30 @@
         done();
       });
     });
+    describe('convertDocumentPdfToDocx', function() {
+      it('should call convertDocumentPdfToDocx successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentPdfToDocx
+        //instance.convertDocumentPdfToDocx(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentPdfToPngArray', function() {
       it('should call convertDocumentPdfToPngArray successfully', function(done) {
         //uncomment below and update the code to test convertDocumentPdfToPngArray
         //instance.convertDocumentPdfToPngArray(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentPdfToPptx', function() {
+      it('should call convertDocumentPdfToPptx successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentPdfToPptx
+        //instance.convertDocumentPdfToPptx(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
