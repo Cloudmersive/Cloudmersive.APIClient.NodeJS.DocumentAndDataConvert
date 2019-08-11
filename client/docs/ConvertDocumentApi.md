@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**convertDocumentAutodetectGetInfo**](ConvertDocumentApi.md#convertDocumentAutodetectGetInfo) | **POST** /convert/autodetect/get-info | Get document type information
 [**convertDocumentAutodetectToPdf**](ConvertDocumentApi.md#convertDocumentAutodetectToPdf) | **POST** /convert/autodetect/to/pdf | Convert Document to PDF
+[**convertDocumentAutodetectToPngArray**](ConvertDocumentApi.md#convertDocumentAutodetectToPngArray) | **POST** /convert/autodetect/to/png | Convert Document to PNG array
 [**convertDocumentCsvToXlsx**](ConvertDocumentApi.md#convertDocumentCsvToXlsx) | **POST** /convert/csv/to/xlsx | CSV to Excel XLSX
 [**convertDocumentDocToDocx**](ConvertDocumentApi.md#convertDocumentDocToDocx) | **POST** /convert/doc/to/docx | Word DOC (97-03) to DOCX
 [**convertDocumentDocToPdf**](ConvertDocumentApi.md#convertDocumentDocToPdf) | **POST** /convert/doc/to/pdf | Word DOC (97-03) to PDF
@@ -28,7 +29,7 @@ Method | HTTP request | Description
 
 Get document type information
 
-Auto-detects a document&#39;s type information; does not require file extension.  Analyzes file contents to confirm file type.
+Auto-detects a document&#39;s type information; does not require file extension.  Analyzes file contents to confirm file type.  Even if no file extension is present, the auto-detect system will reliably analyze the contents of the file and identify its file type.  Supports over 100 image file formats, Office document file formats, PDF, and more.
 
 ### Example
 ```javascript
@@ -81,7 +82,7 @@ Name | Type | Description  | Notes
 
 Convert Document to PDF
 
-Automatically detect file type and convert it to PDF.
+Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats, over 100 image formats, and even multi-page TIFF files.
 
 ### Example
 ```javascript
@@ -118,6 +119,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 **&#39;Blob&#39;**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+<a name="convertDocumentAutodetectToPngArray"></a>
+# **convertDocumentAutodetectToPngArray**
+> AutodetectToPngResult convertDocumentAutodetectToPngArray(inputFile)
+
+Convert Document to PNG array
+
+Automatically detect file type and convert it to an array of PNG images.  Supports all of the major Office document file formats, over 100 image formats, and even multi-page TIFF files.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
+
+var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.convertDocumentAutodetectToPngArray(inputFile, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Input file to perform the operation on. | 
+
+### Return type
+
+[**AutodetectToPngResult**](AutodetectToPngResult.md)
 
 ### Authorization
 

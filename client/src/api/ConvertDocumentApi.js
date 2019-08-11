@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AutodetectGetInfoResult', 'model/PdfToPngResult'], factory);
+    define(['ApiClient', 'model/AutodetectGetInfoResult', 'model/AutodetectToPngResult', 'model/PdfToPngResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AutodetectGetInfoResult'), require('../model/PdfToPngResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/AutodetectGetInfoResult'), require('../model/AutodetectToPngResult'), require('../model/PdfToPngResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectGetInfoResult, root.CloudmersiveConvertApiClient.PdfToPngResult);
+    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectGetInfoResult, root.CloudmersiveConvertApiClient.AutodetectToPngResult, root.CloudmersiveConvertApiClient.PdfToPngResult);
   }
-}(this, function(ApiClient, AutodetectGetInfoResult, PdfToPngResult) {
+}(this, function(ApiClient, AutodetectGetInfoResult, AutodetectToPngResult, PdfToPngResult) {
   'use strict';
 
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.0.4
+   * @version 2.0.5
    */
 
   /**
@@ -57,7 +57,7 @@
 
     /**
      * Get document type information
-     * Auto-detects a document&#39;s type information; does not require file extension.  Analyzes file contents to confirm file type.
+     * Auto-detects a document&#39;s type information; does not require file extension.  Analyzes file contents to confirm file type.  Even if no file extension is present, the auto-detect system will reliably analyze the contents of the file and identify its file type.  Supports over 100 image file formats, Office document file formats, PDF, and more.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentAutodetectGetInfoCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/AutodetectGetInfoResult}
@@ -105,7 +105,7 @@
 
     /**
      * Convert Document to PDF
-     * Automatically detect file type and convert it to PDF.
+     * Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats, over 100 image formats, and even multi-page TIFF files.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentAutodetectToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
@@ -138,6 +138,54 @@
 
       return this.apiClient.callApi(
         '/convert/autodetect/to/pdf', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentAutodetectToPngArray operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentAutodetectToPngArrayCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/AutodetectToPngResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Document to PNG array
+     * Automatically detect file type and convert it to an array of PNG images.  Supports all of the major Office document file formats, over 100 image formats, and even multi-page TIFF files.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentAutodetectToPngArrayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/AutodetectToPngResult}
+     */
+    this.convertDocumentAutodetectToPngArray = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentAutodetectToPngArray");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = AutodetectToPngResult;
+
+      return this.apiClient.callApi(
+        '/convert/autodetect/to/png', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

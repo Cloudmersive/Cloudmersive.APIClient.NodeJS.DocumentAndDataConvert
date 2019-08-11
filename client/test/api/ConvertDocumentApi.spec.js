@@ -70,6 +70,16 @@
         done();
       });
     });
+    describe('convertDocumentAutodetectToPngArray', function() {
+      it('should call convertDocumentAutodetectToPngArray successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentAutodetectToPngArray
+        //instance.convertDocumentAutodetectToPngArray(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentCsvToXlsx', function() {
       it('should call convertDocumentCsvToXlsx successfully', function(done) {
         //uncomment below and update the code to test convertDocumentCsvToXlsx
