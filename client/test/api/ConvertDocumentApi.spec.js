@@ -120,6 +120,26 @@
         done();
       });
     });
+    describe('convertDocumentHtmlToPdf', function() {
+      it('should call convertDocumentHtmlToPdf successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentHtmlToPdf
+        //instance.convertDocumentHtmlToPdf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentHtmlToPng', function() {
+      it('should call convertDocumentHtmlToPng successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentHtmlToPng
+        //instance.convertDocumentHtmlToPng(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentPdfToDocx', function() {
       it('should call convertDocumentPdfToDocx successfully', function(done) {
         //uncomment below and update the code to test convertDocumentPdfToDocx
