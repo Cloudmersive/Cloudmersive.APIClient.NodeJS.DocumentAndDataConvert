@@ -25,7 +25,7 @@
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.HtmlTemplateOperation = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.DocxTemplateOperation = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,14 +34,14 @@
 
 
   /**
-   * The HtmlTemplateOperation model module.
-   * @module model/HtmlTemplateOperation
+   * The DocxTemplateOperation model module.
+   * @module model/DocxTemplateOperation
    * @version 2.0.7
    */
 
   /**
-   * Constructs a new <code>HtmlTemplateOperation</code>.
-   * @alias module:model/HtmlTemplateOperation
+   * Constructs a new <code>DocxTemplateOperation</code>.
+   * @alias module:model/DocxTemplateOperation
    * @class
    */
   var exports = function() {
@@ -53,11 +53,11 @@
   };
 
   /**
-   * Constructs a <code>HtmlTemplateOperation</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>DocxTemplateOperation</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/HtmlTemplateOperation} obj Optional instance to populate.
-   * @return {module:model/HtmlTemplateOperation} The populated <code>HtmlTemplateOperation</code> instance.
+   * @param {module:model/DocxTemplateOperation} obj Optional instance to populate.
+   * @return {module:model/DocxTemplateOperation} The populated <code>DocxTemplateOperation</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -66,8 +66,8 @@
       if (data.hasOwnProperty('Action')) {
         obj['Action'] = ApiClient.convertToType(data['Action'], 'Number');
       }
-      if (data.hasOwnProperty('MatchAgsint')) {
-        obj['MatchAgsint'] = ApiClient.convertToType(data['MatchAgsint'], 'String');
+      if (data.hasOwnProperty('MatchAgainst')) {
+        obj['MatchAgainst'] = ApiClient.convertToType(data['MatchAgainst'], 'String');
       }
       if (data.hasOwnProperty('ReplaceWith')) {
         obj['ReplaceWith'] = ApiClient.convertToType(data['ReplaceWith'], 'String');
@@ -78,14 +78,14 @@
 
   /**
    * Operation action to take; possible values are \"Replace\"
-   * @member {module:model/HtmlTemplateOperation.ActionEnum} Action
+   * @member {module:model/DocxTemplateOperation.ActionEnum} Action
    */
   exports.prototype['Action'] = undefined;
   /**
    * For Replace operations, the string to match against (to be replaced with ReplaceWith string)
-   * @member {String} MatchAgsint
+   * @member {String} MatchAgainst
    */
-  exports.prototype['MatchAgsint'] = undefined;
+  exports.prototype['MatchAgainst'] = undefined;
   /**
    * For Replace operations, the string to Replace the original string with
    * @member {String} ReplaceWith

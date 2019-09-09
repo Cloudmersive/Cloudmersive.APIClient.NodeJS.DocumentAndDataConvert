@@ -36,7 +36,7 @@
   /**
    * The HtmlTemplateApplicationRequest model module.
    * @module model/HtmlTemplateApplicationRequest
-   * @version 2.0.6
+   * @version 2.0.7
    */
 
   /**
@@ -78,14 +78,17 @@
   }
 
   /**
+   * HTML template input as a string
    * @member {String} HtmlTemplate
    */
   exports.prototype['HtmlTemplate'] = undefined;
   /**
+   * URL to HTML template input
    * @member {String} HtmlTemplateUrl
    */
   exports.prototype['HtmlTemplateUrl'] = undefined;
   /**
+   * Operations to apply to this template
    * @member {Array.<module:model/HtmlTemplateOperation>} Operations
    */
   exports.prototype['Operations'] = undefined;

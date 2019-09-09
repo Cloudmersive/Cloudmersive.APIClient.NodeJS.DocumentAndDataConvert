@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveConvertApiClient.ConvertTemplateApi();
+    instance = new CloudmersiveConvertApiClient.DocxTemplateApplicationRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,27 +49,19 @@
       object[property] = value;
   }
 
-  describe('ConvertTemplateApi', function() {
-    describe('convertTemplateApplyDocxTemplate', function() {
-      it('should call convertTemplateApplyDocxTemplate successfully', function(done) {
-        //uncomment below and update the code to test convertTemplateApplyDocxTemplate
-        //instance.convertTemplateApplyDocxTemplate(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('DocxTemplateApplicationRequest', function() {
+    it('should create an instance of DocxTemplateApplicationRequest', function() {
+      // uncomment below and update the code to test DocxTemplateApplicationRequest
+      //var instance = new CloudmersiveConvertApiClient.DocxTemplateApplicationRequest();
+      //expect(instance).to.be.a(CloudmersiveConvertApiClient.DocxTemplateApplicationRequest);
     });
-    describe('convertTemplateApplyHtmlTemplate', function() {
-      it('should call convertTemplateApplyHtmlTemplate successfully', function(done) {
-        //uncomment below and update the code to test convertTemplateApplyHtmlTemplate
-        //instance.convertTemplateApplyHtmlTemplate(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property operations (base name: "Operations")', function() {
+      // uncomment below and update the code to test the property operations
+      //var instance = new CloudmersiveConvertApiClient.DocxTemplateApplicationRequest();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveConvertApiClient.ConvertTemplateApi();
+    instance = new CloudmersiveConvertApiClient.DocxTemplateOperation();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,27 +49,31 @@
       object[property] = value;
   }
 
-  describe('ConvertTemplateApi', function() {
-    describe('convertTemplateApplyDocxTemplate', function() {
-      it('should call convertTemplateApplyDocxTemplate successfully', function(done) {
-        //uncomment below and update the code to test convertTemplateApplyDocxTemplate
-        //instance.convertTemplateApplyDocxTemplate(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('DocxTemplateOperation', function() {
+    it('should create an instance of DocxTemplateOperation', function() {
+      // uncomment below and update the code to test DocxTemplateOperation
+      //var instance = new CloudmersiveConvertApiClient.DocxTemplateOperation();
+      //expect(instance).to.be.a(CloudmersiveConvertApiClient.DocxTemplateOperation);
     });
-    describe('convertTemplateApplyHtmlTemplate', function() {
-      it('should call convertTemplateApplyHtmlTemplate successfully', function(done) {
-        //uncomment below and update the code to test convertTemplateApplyHtmlTemplate
-        //instance.convertTemplateApplyHtmlTemplate(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property action (base name: "Action")', function() {
+      // uncomment below and update the code to test the property action
+      //var instance = new CloudmersiveConvertApiClient.DocxTemplateOperation();
+      //expect(instance).to.be();
     });
+
+    it('should have the property matchAgainst (base name: "MatchAgainst")', function() {
+      // uncomment below and update the code to test the property matchAgainst
+      //var instance = new CloudmersiveConvertApiClient.DocxTemplateOperation();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property replaceWith (base name: "ReplaceWith")', function() {
+      // uncomment below and update the code to test the property replaceWith
+      //var instance = new CloudmersiveConvertApiClient.DocxTemplateOperation();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

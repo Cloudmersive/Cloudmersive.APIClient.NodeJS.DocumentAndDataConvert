@@ -36,7 +36,7 @@
   /**
    * The MultipageImageFormatConversionResult model module.
    * @module model/MultipageImageFormatConversionResult
-   * @version 2.0.6
+   * @version 2.0.7
    */
 
   /**
@@ -78,14 +78,17 @@
   }
 
   /**
+   * True if successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
   /**
+   * The number of pages in the converted output
    * @member {Number} PageCount
    */
   exports.prototype['PageCount'] = undefined;
   /**
+   * Converted page results
    * @member {Array.<module:model/PageConversionResult>} Pages
    */
   exports.prototype['Pages'] = undefined;

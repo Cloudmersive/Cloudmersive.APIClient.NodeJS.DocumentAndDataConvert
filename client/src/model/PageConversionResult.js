@@ -36,7 +36,7 @@
   /**
    * The PageConversionResult model module.
    * @module model/PageConversionResult
-   * @version 2.0.6
+   * @version 2.0.7
    */
 
   /**
@@ -74,10 +74,12 @@
   }
 
   /**
+   * File name of the image in the converted file format
    * @member {String} Filename
    */
   exports.prototype['Filename'] = undefined;
   /**
+   * File bytes (contents) of the image in converted file format
    * @member {Blob} FileBytes
    */
   exports.prototype['FileBytes'] = undefined;
