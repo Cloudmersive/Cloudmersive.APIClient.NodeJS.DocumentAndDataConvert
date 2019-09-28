@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AutodetectGetInfoResult', 'model/AutodetectToPngResult', 'model/PdfToPngResult'], factory);
+    define(['ApiClient', 'model/AutodetectGetInfoResult', 'model/AutodetectToPngResult', 'model/PdfToPngResult', 'model/TextConversionResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AutodetectGetInfoResult'), require('../model/AutodetectToPngResult'), require('../model/PdfToPngResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/AutodetectGetInfoResult'), require('../model/AutodetectToPngResult'), require('../model/PdfToPngResult'), require('../model/TextConversionResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectGetInfoResult, root.CloudmersiveConvertApiClient.AutodetectToPngResult, root.CloudmersiveConvertApiClient.PdfToPngResult);
+    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectGetInfoResult, root.CloudmersiveConvertApiClient.AutodetectToPngResult, root.CloudmersiveConvertApiClient.PdfToPngResult, root.CloudmersiveConvertApiClient.TextConversionResult);
   }
-}(this, function(ApiClient, AutodetectGetInfoResult, AutodetectToPngResult, PdfToPngResult) {
+}(this, function(ApiClient, AutodetectGetInfoResult, AutodetectToPngResult, PdfToPngResult, TextConversionResult) {
   'use strict';
 
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.0.7
+   * @version 2.0.8
    */
 
   /**
@@ -186,6 +186,54 @@
 
       return this.apiClient.callApi(
         '/convert/autodetect/to/png', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentAutodetectToTxt operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentAutodetectToTxtCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TextConversionResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Document to Text
+     * Automatically detect file type and convert it to Text.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT) and PDF files.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentAutodetectToTxtCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/TextConversionResult}
+     */
+    this.convertDocumentAutodetectToTxt = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentAutodetectToTxt");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = TextConversionResult;
+
+      return this.apiClient.callApi(
+        '/convert/autodetect/to/txt', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -378,6 +426,54 @@
 
       return this.apiClient.callApi(
         '/convert/docx/to/pdf', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentDocxToTxt operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentDocxToTxtCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TextConversionResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Word DOCX to Text
+     * Convert Office Word Documents (docx) to text
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentDocxToTxtCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/TextConversionResult}
+     */
+    this.convertDocumentDocxToTxt = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentDocxToTxt");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = TextConversionResult;
+
+      return this.apiClient.callApi(
+        '/convert/docx/to/txt', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -624,6 +720,54 @@
     }
 
     /**
+     * Callback function to receive the result of the convertDocumentPdfToTxt operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentPdfToTxtCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TextConversionResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PDF to Text
+     * PDF document to text
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentPdfToTxtCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/TextConversionResult}
+     */
+    this.convertDocumentPdfToTxt = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentPdfToTxt");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = TextConversionResult;
+
+      return this.apiClient.callApi(
+        '/convert/pdf/to/txt', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the convertDocumentPptToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentPptToPdfCallback
      * @param {String} error Error message, if any.
@@ -762,6 +906,54 @@
 
       return this.apiClient.callApi(
         '/convert/pptx/to/pdf', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentPptxToTxt operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentPptxToTxtCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TextConversionResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PowerPoint PPTX to Text
+     * Convert Office PowerPoint Documents (pptx) to standard Text
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentPptxToTxtCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/TextConversionResult}
+     */
+    this.convertDocumentPptxToTxt = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentPptxToTxt");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = TextConversionResult;
+
+      return this.apiClient.callApi(
+        '/convert/pptx/to/txt', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -954,6 +1146,54 @@
 
       return this.apiClient.callApi(
         '/convert/xlsx/to/pdf', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentXlsxToTxt operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentXlsxToTxtCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TextConversionResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Excel XLSX to Text
+     * Convert Office Excel Workbooks (xlsx) to standard Text.  Converts all worksheets in the workbook to Text.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentXlsxToTxtCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/TextConversionResult}
+     */
+    this.convertDocumentXlsxToTxt = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentXlsxToTxt");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = TextConversionResult;
+
+      return this.apiClient.callApi(
+        '/convert/xlsx/to/txt', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

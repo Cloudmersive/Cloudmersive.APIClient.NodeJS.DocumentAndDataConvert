@@ -36,7 +36,7 @@
   /**
    * The HtmlToPdfRequest model module.
    * @module model/HtmlToPdfRequest
-   * @version 2.0.7
+   * @version 2.0.8
    */
 
   /**
@@ -74,10 +74,12 @@
   }
 
   /**
+   * HTML to render to PDF
    * @member {String} Html
    */
   exports.prototype['Html'] = undefined;
   /**
+   * Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites.
    * @member {Number} ExtraLoadingWait
    */
   exports.prototype['ExtraLoadingWait'] = undefined;

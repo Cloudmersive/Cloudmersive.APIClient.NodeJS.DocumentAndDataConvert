@@ -16,33 +16,33 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/XlsxImage'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./XlsxImage'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.GetXlsxImagesResponse = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.XlsxImage);
+    root.CloudmersiveConvertApiClient.TextConversionResult = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
-}(this, function(ApiClient, XlsxImage) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
 
   /**
-   * The GetXlsxImagesResponse model module.
-   * @module model/GetXlsxImagesResponse
+   * The TextConversionResult model module.
+   * @module model/TextConversionResult
    * @version 2.0.8
    */
 
   /**
-   * Constructs a new <code>GetXlsxImagesResponse</code>.
-   * Result of running a Get-Images command
-   * @alias module:model/GetXlsxImagesResponse
+   * Constructs a new <code>TextConversionResult</code>.
+   * Text conversion result from converting a document to Plain Text (TXT) format
+   * @alias module:model/TextConversionResult
    * @class
    */
   var exports = function() {
@@ -53,11 +53,11 @@
   };
 
   /**
-   * Constructs a <code>GetXlsxImagesResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>TextConversionResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetXlsxImagesResponse} obj Optional instance to populate.
-   * @return {module:model/GetXlsxImagesResponse} The populated <code>GetXlsxImagesResponse</code> instance.
+   * @param {module:model/TextConversionResult} obj Optional instance to populate.
+   * @return {module:model/TextConversionResult} The populated <code>TextConversionResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -66,23 +66,23 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
-      if (data.hasOwnProperty('Images')) {
-        obj['Images'] = ApiClient.convertToType(data['Images'], [XlsxImage]);
+      if (data.hasOwnProperty('TextResult')) {
+        obj['TextResult'] = ApiClient.convertToType(data['TextResult'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * True if successful, false otherwise
+   * True if the operation was successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * Spreadsheet Columns in the DOCX document
-   * @member {Array.<module:model/XlsxImage>} Images
+   * Plain Text (TXT) format conversion result of the input document.  The text result is returned as a string.
+   * @member {String} TextResult
    */
-  exports.prototype['Images'] = undefined;
+  exports.prototype['TextResult'] = undefined;
 
 
 

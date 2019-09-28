@@ -1,9 +1,9 @@
-# CloudmersiveConvertApiClient.HtmlTemplateApplicationResponse
+# CloudmersiveConvertApiClient.TextConversionResult
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **successful** | **Boolean** | True if the operation was successful, false otherwise | [optional] 
-**finalHtml** | **String** | Final HTML result of all operations on input | [optional] 
+**textResult** | **String** | Plain Text (TXT) format conversion result of the input document.  The text result is returned as a string. | [optional] 
 
 

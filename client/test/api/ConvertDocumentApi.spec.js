@@ -80,6 +80,16 @@
         done();
       });
     });
+    describe('convertDocumentAutodetectToTxt', function() {
+      it('should call convertDocumentAutodetectToTxt successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentAutodetectToTxt
+        //instance.convertDocumentAutodetectToTxt(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentCsvToXlsx', function() {
       it('should call convertDocumentCsvToXlsx successfully', function(done) {
         //uncomment below and update the code to test convertDocumentCsvToXlsx
@@ -114,6 +124,16 @@
       it('should call convertDocumentDocxToPdf successfully', function(done) {
         //uncomment below and update the code to test convertDocumentDocxToPdf
         //instance.convertDocumentDocxToPdf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentDocxToTxt', function() {
+      it('should call convertDocumentDocxToTxt successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentDocxToTxt
+        //instance.convertDocumentDocxToTxt(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -170,6 +190,16 @@
         done();
       });
     });
+    describe('convertDocumentPdfToTxt', function() {
+      it('should call convertDocumentPdfToTxt successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentPdfToTxt
+        //instance.convertDocumentPdfToTxt(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentPptToPdf', function() {
       it('should call convertDocumentPptToPdf successfully', function(done) {
         //uncomment below and update the code to test convertDocumentPptToPdf
@@ -194,6 +224,16 @@
       it('should call convertDocumentPptxToPdf successfully', function(done) {
         //uncomment below and update the code to test convertDocumentPptxToPdf
         //instance.convertDocumentPptxToPdf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentPptxToTxt', function() {
+      it('should call convertDocumentPptxToTxt successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentPptxToTxt
+        //instance.convertDocumentPptxToTxt(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -234,6 +274,16 @@
       it('should call convertDocumentXlsxToPdf successfully', function(done) {
         //uncomment below and update the code to test convertDocumentXlsxToPdf
         //instance.convertDocumentXlsxToPdf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentXlsxToTxt', function() {
+      it('should call convertDocumentXlsxToTxt successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentXlsxToTxt
+        //instance.convertDocumentXlsxToTxt(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

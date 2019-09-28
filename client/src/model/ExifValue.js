@@ -36,7 +36,7 @@
   /**
    * The ExifValue model module.
    * @module model/ExifValue
-   * @version 2.0.7
+   * @version 2.0.8
    */
 
   /**
@@ -78,14 +78,17 @@
   }
 
   /**
+   * Tag name for the EXIF value
    * @member {String} Tag
    */
   exports.prototype['Tag'] = undefined;
   /**
+   * Date type of the EXIF value
    * @member {String} DataType
    */
   exports.prototype['DataType'] = undefined;
   /**
+   * Value, formatted as a string of the EXIF value
    * @member {String} DataValue
    */
   exports.prototype['DataValue'] = undefined;

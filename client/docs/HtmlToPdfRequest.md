@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**html** | **String** |  | [optional] 
-**extraLoadingWait** | **Number** |  | [optional] 
+**html** | **String** | HTML to render to PDF | [optional] 
+**extraLoadingWait** | **Number** | Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites. | [optional] 
 
 

@@ -36,7 +36,7 @@
   /**
    * The DocxParagraph model module.
    * @module model/DocxParagraph
-   * @version 2.0.7
+   * @version 2.0.8
    */
 
   /**

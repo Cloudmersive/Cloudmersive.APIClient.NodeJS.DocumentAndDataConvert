@@ -36,7 +36,7 @@
   /**
    * The HtmlToOfficeRequest model module.
    * @module model/HtmlToOfficeRequest
-   * @version 2.0.7
+   * @version 2.0.8
    */
 
   /**
@@ -70,6 +70,7 @@
   }
 
   /**
+   * HTML to render to Office format
    * @member {String} Html
    */
   exports.prototype['Html'] = undefined;

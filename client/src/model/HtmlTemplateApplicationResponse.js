@@ -36,7 +36,7 @@
   /**
    * The HtmlTemplateApplicationResponse model module.
    * @module model/HtmlTemplateApplicationResponse
-   * @version 2.0.7
+   * @version 2.0.8
    */
 
   /**
@@ -74,10 +74,12 @@
   }
 
   /**
+   * True if the operation was successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
   /**
+   * Final HTML result of all operations on input
    * @member {String} FinalHtml
    */
   exports.prototype['FinalHtml'] = undefined;
