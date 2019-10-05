@@ -240,6 +240,16 @@
         done();
       });
     });
+    describe('convertDocumentXlsToCsv', function() {
+      it('should call convertDocumentXlsToCsv successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentXlsToCsv
+        //instance.convertDocumentXlsToCsv(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentXlsToPdf', function() {
       it('should call convertDocumentXlsToPdf successfully', function(done) {
         //uncomment below and update the code to test convertDocumentXlsToPdf

@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/octet-stream
 
 <a name="convertImageImageSetDPI"></a>
 # **convertImageImageSetDPI**
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml
+ - **Accept**: application/octet-stream
 
 <a name="convertImageMultipageImageFormatConvert"></a>
 # **convertImageMultipageImageFormatConvert**

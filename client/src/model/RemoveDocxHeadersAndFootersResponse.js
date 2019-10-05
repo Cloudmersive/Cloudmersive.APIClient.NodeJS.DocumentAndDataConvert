@@ -36,7 +36,7 @@
   /**
    * The RemoveDocxHeadersAndFootersResponse model module.
    * @module model/RemoveDocxHeadersAndFootersResponse
-   * @version 2.0.8
+   * @version 2.0.9
    */
 
   /**

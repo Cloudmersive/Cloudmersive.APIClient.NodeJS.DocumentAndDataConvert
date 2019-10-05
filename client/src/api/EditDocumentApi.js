@@ -33,7 +33,7 @@
   /**
    * EditDocument service.
    * @module api/EditDocumentApi
-   * @version 2.0.8
+   * @version 2.0.9
    */
 
   /**
@@ -85,7 +85,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = 'String';
 
       return this.apiClient.callApi(
@@ -132,7 +132,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = GetDocxBodyResponse;
 
       return this.apiClient.callApi(
@@ -179,7 +179,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = GetDocxHeadersAndFootersResponse;
 
       return this.apiClient.callApi(
@@ -226,7 +226,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = GetDocxImagesResponse;
 
       return this.apiClient.callApi(
@@ -273,7 +273,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = GetDocxSectionsResponse;
 
       return this.apiClient.callApi(
@@ -320,7 +320,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = GetDocxStylesResponse;
 
       return this.apiClient.callApi(
@@ -414,7 +414,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = DocxInsertImageResponse;
 
       return this.apiClient.callApi(
@@ -461,7 +461,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = InsertDocxInsertParagraphResponse;
 
       return this.apiClient.callApi(
@@ -508,7 +508,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = InsertDocxTablesResponse;
 
       return this.apiClient.callApi(
@@ -555,7 +555,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = RemoveDocxHeadersAndFootersResponse;
 
       return this.apiClient.callApi(
@@ -602,7 +602,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = DocxRemoveObjectResponse;
 
       return this.apiClient.callApi(
@@ -696,7 +696,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = DocxSetFooterResponse;
 
       return this.apiClient.callApi(
@@ -743,7 +743,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = DocxSetHeaderResponse;
 
       return this.apiClient.callApi(
@@ -884,7 +884,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = GetXlsxColumnsResponse;
 
       return this.apiClient.callApi(
@@ -931,7 +931,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = GetXlsxImagesResponse;
 
       return this.apiClient.callApi(
@@ -978,7 +978,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = GetXlsxRowsAndCellsResponse;
 
       return this.apiClient.callApi(
@@ -1025,7 +1025,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = GetXlsxStylesResponse;
 
       return this.apiClient.callApi(
@@ -1072,7 +1072,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = GetXlsxWorksheetsResponse;
 
       return this.apiClient.callApi(
@@ -1119,7 +1119,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = InsertXlsxWorksheetResponse;
 
       return this.apiClient.callApi(

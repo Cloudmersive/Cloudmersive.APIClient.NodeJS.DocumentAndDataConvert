@@ -36,7 +36,7 @@
   /**
    * The DocumentValidationResult model module.
    * @module model/DocumentValidationResult
-   * @version 2.0.8
+   * @version 2.0.9
    */
 
   /**

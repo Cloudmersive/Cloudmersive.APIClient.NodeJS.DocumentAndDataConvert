@@ -33,7 +33,7 @@
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.0.8
+   * @version 2.0.9
    */
 
   /**
@@ -85,7 +85,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = AutodetectGetInfoResult;
 
       return this.apiClient.callApi(
@@ -960,6 +960,54 @@
     }
 
     /**
+     * Callback function to receive the result of the convertDocumentXlsToCsv operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentXlsToCsvCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Excel XLS (97-03) to CSV
+     * Convert/upgrade Office Excel (97-2003) Workbooks (xls) to standard CSV format.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentXlsToCsvCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDocumentXlsToCsv = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentXlsToCsv");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/xls/to/csv', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the convertDocumentXlsToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentXlsToPdfCallback
      * @param {String} error Error message, if any.
@@ -1065,7 +1113,7 @@
 
     /**
      * Excel XLSX to CSV
-     * Convert Office Excel Workbooks (xlsx) to standard Comma-Separated Values (CSV) format.
+     * Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentXlsxToCsvCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
@@ -1113,7 +1161,7 @@
 
     /**
      * Excel XLSX to PDF
-     * Convert Office Excel Workbooks (xlsx) to standard PDF.  Converts all worksheets in the workbook to PDF.
+     * Convert Office Excel Workbooks (XLSX) to standard PDF.  Converts all worksheets in the workbook to PDF.  Supports both XLSX and XLSB Excel file formats.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentXlsxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
@@ -1161,7 +1209,7 @@
 
     /**
      * Excel XLSX to Text
-     * Convert Office Excel Workbooks (xlsx) to standard Text.  Converts all worksheets in the workbook to Text.
+     * Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentXlsxToTxtCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/TextConversionResult}

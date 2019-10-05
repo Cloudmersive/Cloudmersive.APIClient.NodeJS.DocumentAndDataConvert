@@ -33,7 +33,7 @@
   /**
    * ConvertImage service.
    * @module api/ConvertImageApi
-   * @version 2.0.8
+   * @version 2.0.9
    */
 
   /**
@@ -147,7 +147,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var accepts = ['application/octet-stream'];
       var returnType = 'Blob';
 
       return this.apiClient.callApi(
@@ -202,7 +202,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var accepts = ['application/octet-stream'];
       var returnType = 'Blob';
 
       return this.apiClient.callApi(
