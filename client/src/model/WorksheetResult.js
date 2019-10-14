@@ -25,7 +25,7 @@
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ConvertedPngPage = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.WorksheetResult = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The ConvertedPngPage model module.
-   * @module model/ConvertedPngPage
+   * The WorksheetResult model module.
+   * @module model/WorksheetResult
    * @version 2.1.0
    */
 
   /**
-   * Constructs a new <code>ConvertedPngPage</code>.
-   * A single converted page
-   * @alias module:model/ConvertedPngPage
+   * Constructs a new <code>WorksheetResult</code>.
+   * A single Excel XLSX file corresponding to one worksheet (tab) in the original spreadsheet
+   * @alias module:model/WorksheetResult
    * @class
    */
   var exports = function() {
@@ -50,21 +50,25 @@
 
 
 
+
   };
 
   /**
-   * Constructs a <code>ConvertedPngPage</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>WorksheetResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ConvertedPngPage} obj Optional instance to populate.
-   * @return {module:model/ConvertedPngPage} The populated <code>ConvertedPngPage</code> instance.
+   * @param {module:model/WorksheetResult} obj Optional instance to populate.
+   * @return {module:model/WorksheetResult} The populated <code>WorksheetResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('PageNumber')) {
-        obj['PageNumber'] = ApiClient.convertToType(data['PageNumber'], 'Number');
+      if (data.hasOwnProperty('WorksheetNumber')) {
+        obj['WorksheetNumber'] = ApiClient.convertToType(data['WorksheetNumber'], 'Number');
+      }
+      if (data.hasOwnProperty('WorksheetName')) {
+        obj['WorksheetName'] = ApiClient.convertToType(data['WorksheetName'], 'String');
       }
       if (data.hasOwnProperty('URL')) {
         obj['URL'] = ApiClient.convertToType(data['URL'], 'String');
@@ -74,12 +78,17 @@
   }
 
   /**
-   * Page number of the converted page, starting with 1
-   * @member {Number} PageNumber
+   * Worksheet number of the converted page, starting with 1 for the left-most worksheet
+   * @member {Number} WorksheetNumber
    */
-  exports.prototype['PageNumber'] = undefined;
+  exports.prototype['WorksheetNumber'] = undefined;
   /**
-   * URL to the PNG file of this page; file is stored in an in-memory cache and will be deleted
+   * The name of the worksheet
+   * @member {String} WorksheetName
+   */
+  exports.prototype['WorksheetName'] = undefined;
+  /**
+   * URL to the XLSX file of this worksheet; file is stored in an in-memory cache and will be deleted
    * @member {String} URL
    */
   exports.prototype['URL'] = undefined;

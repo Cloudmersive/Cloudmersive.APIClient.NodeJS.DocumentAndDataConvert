@@ -16,29 +16,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/SplitXlsxWorksheetResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('../model/SplitXlsxWorksheetResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.CompareDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.SplitDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.SplitXlsxWorksheetResult);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, SplitXlsxWorksheetResult) {
   'use strict';
 
   /**
-   * CompareDocument service.
-   * @module api/CompareDocumentApi
+   * SplitDocument service.
+   * @module api/SplitDocumentApi
    * @version 2.1.0
    */
 
   /**
-   * Constructs a new CompareDocumentApi. 
-   * @alias module:api/CompareDocumentApi
+   * Constructs a new SplitDocumentApi. 
+   * @alias module:api/SplitDocumentApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -48,32 +48,26 @@
 
 
     /**
-     * Callback function to receive the result of the compareDocumentDocx operation.
-     * @callback module:api/CompareDocumentApi~compareDocumentDocxCallback
+     * Callback function to receive the result of the splitDocumentXlsx operation.
+     * @callback module:api/SplitDocumentApi~splitDocumentXlsxCallback
      * @param {String} error Error message, if any.
-     * @param {'Blob'} data The data returned by the service call.
+     * @param {module:model/SplitXlsxWorksheetResult} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Compare Two Word DOCX
-     * Compare two Office Word Documents (docx) files and highlight the differences
-     * @param {File} inputFile1 First input file to perform the operation on.
-     * @param {File} inputFile2 Second input file to perform the operation on (more than 2 can be supplied).
-     * @param {module:api/CompareDocumentApi~compareDocumentDocxCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'Blob'}
+     * Split a single Excel XLSX into Separate Worksheets
+     * Split an Excel XLSX Spreadsheet, comprised of multiple Worksheets (or Tabs) into separate Excel XLSX spreadsheet files, with each containing exactly one Worksheet.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/SplitDocumentApi~splitDocumentXlsxCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SplitXlsxWorksheetResult}
      */
-    this.compareDocumentDocx = function(inputFile1, inputFile2, callback) {
+    this.splitDocumentXlsx = function(inputFile, callback) {
       var postBody = null;
 
-      // verify the required parameter 'inputFile1' is set
-      if (inputFile1 === undefined || inputFile1 === null) {
-        throw new Error("Missing the required parameter 'inputFile1' when calling compareDocumentDocx");
-      }
-
-      // verify the required parameter 'inputFile2' is set
-      if (inputFile2 === undefined || inputFile2 === null) {
-        throw new Error("Missing the required parameter 'inputFile2' when calling compareDocumentDocx");
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling splitDocumentXlsx");
       }
 
 
@@ -86,17 +80,16 @@
       var headerParams = {
       };
       var formParams = {
-        'inputFile1': inputFile1,
-        'inputFile2': inputFile2
+        'inputFile': inputFile
       };
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/octet-stream'];
-      var returnType = 'Blob';
+      var returnType = SplitXlsxWorksheetResult;
 
       return this.apiClient.callApi(
-        '/convert/compare/docx', 'POST',
+        '/convert/split/xlsx', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
