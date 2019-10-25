@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveConvertApiClient.GetXlsxRowsAndCellsRequest();
+    instance = new CloudmersiveConvertApiClient.DocxSetFooterAddPageNumberRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,28 +49,28 @@
       object[property] = value;
   }
 
-  describe('GetXlsxRowsAndCellsRequest', function() {
-    it('should create an instance of GetXlsxRowsAndCellsRequest', function() {
-      // uncomment below and update the code to test GetXlsxRowsAndCellsRequest
-      //var instance = new CloudmersiveConvertApiClient.GetXlsxRowsAndCellsRequest();
-      //expect(instance).to.be.a(CloudmersiveConvertApiClient.GetXlsxRowsAndCellsRequest);
+  describe('DocxSetFooterAddPageNumberRequest', function() {
+    it('should create an instance of DocxSetFooterAddPageNumberRequest', function() {
+      // uncomment below and update the code to test DocxSetFooterAddPageNumberRequest
+      //var instance = new CloudmersiveConvertApiClient.DocxSetFooterAddPageNumberRequest();
+      //expect(instance).to.be.a(CloudmersiveConvertApiClient.DocxSetFooterAddPageNumberRequest);
+    });
+
+    it('should have the property prependText (base name: "PrependText")', function() {
+      // uncomment below and update the code to test the property prependText
+      //var instance = new CloudmersiveConvertApiClient.DocxSetFooterAddPageNumberRequest();
+      //expect(instance).to.be();
     });
 
     it('should have the property inputFileBytes (base name: "InputFileBytes")', function() {
       // uncomment below and update the code to test the property inputFileBytes
-      //var instance = new CloudmersiveConvertApiClient.GetXlsxRowsAndCellsRequest();
+      //var instance = new CloudmersiveConvertApiClient.DocxSetFooterAddPageNumberRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property inputFileUrl (base name: "InputFileUrl")', function() {
       // uncomment below and update the code to test the property inputFileUrl
-      //var instance = new CloudmersiveConvertApiClient.GetXlsxRowsAndCellsRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property worksheetToQuery (base name: "WorksheetToQuery")', function() {
-      // uncomment below and update the code to test the property worksheetToQuery
-      //var instance = new CloudmersiveConvertApiClient.GetXlsxRowsAndCellsRequest();
+      //var instance = new CloudmersiveConvertApiClient.DocxSetFooterAddPageNumberRequest();
       //expect(instance).to.be();
     });
 

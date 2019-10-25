@@ -18,6 +18,7 @@ Method | HTTP request | Description
 [**editDocumentDocxRemoveObject**](EditDocumentApi.md#editDocumentDocxRemoveObject) | **POST** /convert/edit/docx/remove-object | Delete any object in a DOCX
 [**editDocumentDocxReplace**](EditDocumentApi.md#editDocumentDocxReplace) | **POST** /convert/edit/docx/replace-all | Replace string in DOCX
 [**editDocumentDocxSetFooter**](EditDocumentApi.md#editDocumentDocxSetFooter) | **POST** /convert/edit/docx/set-footer | Set the footer in a DOCX
+[**editDocumentDocxSetFooterAddPageNumber**](EditDocumentApi.md#editDocumentDocxSetFooterAddPageNumber) | **POST** /convert/edit/docx/set-footer/add-page-number | Add page number to footer in a DOCX
 [**editDocumentDocxSetHeader**](EditDocumentApi.md#editDocumentDocxSetHeader) | **POST** /convert/edit/docx/set-header | Set the header in a DOCX
 [**editDocumentFinishEditing**](EditDocumentApi.md#editDocumentFinishEditing) | **POST** /convert/edit/finish-editing | Download result from document editing
 [**editDocumentPptxReplace**](EditDocumentApi.md#editDocumentPptxReplace) | **POST** /convert/edit/pptx/replace-all | Replace string in PPTX
@@ -757,6 +758,59 @@ apiInstance.editDocumentDocxSetFooter(reqConfig, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reqConfig** | [**DocxSetFooterRequest**](DocxSetFooterRequest.md)|  | 
+
+### Return type
+
+[**DocxSetFooterResponse**](DocxSetFooterResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="editDocumentDocxSetFooterAddPageNumber"></a>
+# **editDocumentDocxSetFooterAddPageNumber**
+> DocxSetFooterResponse editDocumentDocxSetFooterAddPageNumber(reqConfig)
+
+Add page number to footer in a DOCX
+
+Set the footer in a Word Document (DOCX) to contain a page number
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
+
+var reqConfig = new CloudmersiveConvertApiClient.DocxSetFooterAddPageNumberRequest(); // DocxSetFooterAddPageNumberRequest | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editDocumentDocxSetFooterAddPageNumber(reqConfig, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **reqConfig** | [**DocxSetFooterAddPageNumberRequest**](DocxSetFooterAddPageNumberRequest.md)|  | 
 
 ### Return type
 

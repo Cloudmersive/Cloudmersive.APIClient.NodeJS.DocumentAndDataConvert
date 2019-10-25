@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.1.1
+- Package version: 2.1.2
 
 
 ## Installation
@@ -182,6 +182,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxRemoveObject**](docs/EditDocumentApi.md#editDocumentDocxRemoveObject) | **POST** /convert/edit/docx/remove-object | Delete any object in a DOCX
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxReplace**](docs/EditDocumentApi.md#editDocumentDocxReplace) | **POST** /convert/edit/docx/replace-all | Replace string in DOCX
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxSetFooter**](docs/EditDocumentApi.md#editDocumentDocxSetFooter) | **POST** /convert/edit/docx/set-footer | Set the footer in a DOCX
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxSetFooterAddPageNumber**](docs/EditDocumentApi.md#editDocumentDocxSetFooterAddPageNumber) | **POST** /convert/edit/docx/set-footer/add-page-number | Add page number to footer in a DOCX
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxSetHeader**](docs/EditDocumentApi.md#editDocumentDocxSetHeader) | **POST** /convert/edit/docx/set-header | Set the header in a DOCX
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentFinishEditing**](docs/EditDocumentApi.md#editDocumentFinishEditing) | **POST** /convert/edit/finish-editing | Download result from document editing
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentPptxReplace**](docs/EditDocumentApi.md#editDocumentPptxReplace) | **POST** /convert/edit/pptx/replace-all | Replace string in PPTX
@@ -225,6 +226,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.DocxRemoveObjectResponse](docs/DocxRemoveObjectResponse.md)
  - [CloudmersiveConvertApiClient.DocxRun](docs/DocxRun.md)
  - [CloudmersiveConvertApiClient.DocxSection](docs/DocxSection.md)
+ - [CloudmersiveConvertApiClient.DocxSetFooterAddPageNumberRequest](docs/DocxSetFooterAddPageNumberRequest.md)
  - [CloudmersiveConvertApiClient.DocxSetFooterRequest](docs/DocxSetFooterRequest.md)
  - [CloudmersiveConvertApiClient.DocxSetFooterResponse](docs/DocxSetFooterResponse.md)
  - [CloudmersiveConvertApiClient.DocxSetHeaderRequest](docs/DocxSetHeaderRequest.md)

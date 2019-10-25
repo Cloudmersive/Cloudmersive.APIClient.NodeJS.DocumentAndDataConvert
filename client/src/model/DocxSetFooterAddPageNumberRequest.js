@@ -25,7 +25,7 @@
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.GetDocxBodyRequest = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.DocxSetFooterAddPageNumberRequest = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The GetDocxBodyRequest model module.
-   * @module model/GetDocxBodyRequest
+   * The DocxSetFooterAddPageNumberRequest model module.
+   * @module model/DocxSetFooterAddPageNumberRequest
    * @version 2.1.2
    */
 
   /**
-   * Constructs a new <code>GetDocxBodyRequest</code>.
-   * Input to a Get Body request
-   * @alias module:model/GetDocxBodyRequest
+   * Constructs a new <code>DocxSetFooterAddPageNumberRequest</code>.
+   * Input to set-footer/add-page-number command
+   * @alias module:model/DocxSetFooterAddPageNumberRequest
    * @class
    */
   var exports = function() {
@@ -50,19 +50,23 @@
 
 
 
+
   };
 
   /**
-   * Constructs a <code>GetDocxBodyRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>DocxSetFooterAddPageNumberRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetDocxBodyRequest} obj Optional instance to populate.
-   * @return {module:model/GetDocxBodyRequest} The populated <code>GetDocxBodyRequest</code> instance.
+   * @param {module:model/DocxSetFooterAddPageNumberRequest} obj Optional instance to populate.
+   * @return {module:model/DocxSetFooterAddPageNumberRequest} The populated <code>DocxSetFooterAddPageNumberRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('PrependText')) {
+        obj['PrependText'] = ApiClient.convertToType(data['PrependText'], 'String');
+      }
       if (data.hasOwnProperty('InputFileBytes')) {
         obj['InputFileBytes'] = ApiClient.convertToType(data['InputFileBytes'], 'Blob');
       }
@@ -73,6 +77,10 @@
     return obj;
   }
 
+  /**
+   * @member {String} PrependText
+   */
+  exports.prototype['PrependText'] = undefined;
   /**
    * Optional: Bytes of the input file to operate on
    * @member {Blob} InputFileBytes
