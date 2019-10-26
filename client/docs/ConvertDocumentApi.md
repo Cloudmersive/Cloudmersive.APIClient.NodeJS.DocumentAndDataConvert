@@ -1199,7 +1199,7 @@ Name | Type | Description  | Notes
 
 <a name="convertDocumentXlsxToCsv"></a>
 # **convertDocumentXlsxToCsv**
-> &#39;Blob&#39; convertDocumentXlsxToCsv(inputFile)
+> &#39;Blob&#39; convertDocumentXlsxToCsv(inputFile, opts)
 
 Excel XLSX to CSV
 
@@ -1220,6 +1220,9 @@ var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
+var opts = { 
+  'outputEncoding': "outputEncoding_example" // String | Optional, set the output text encoding for the result; possible values are UTF-8 and UTF-32.  Default is UTF-32.
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1228,7 +1231,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.convertDocumentXlsxToCsv(inputFile, callback);
+apiInstance.convertDocumentXlsxToCsv(inputFile, opts, callback);
 ```
 
 ### Parameters
@@ -1236,6 +1239,7 @@ apiInstance.convertDocumentXlsxToCsv(inputFile, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **File**| Input file to perform the operation on. | 
+ **outputEncoding** | **String**| Optional, set the output text encoding for the result; possible values are UTF-8 and UTF-32.  Default is UTF-32. | [optional] 
 
 ### Return type
 
