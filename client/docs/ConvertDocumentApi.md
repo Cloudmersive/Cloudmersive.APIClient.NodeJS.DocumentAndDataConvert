@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**convertDocumentHtmlToPng**](ConvertDocumentApi.md#convertDocumentHtmlToPng) | **POST** /convert/html/to/png | HTML to PNG array
 [**convertDocumentPdfToDocx**](ConvertDocumentApi.md#convertDocumentPdfToDocx) | **POST** /convert/pdf/to/docx | PDF to Word DOCX
 [**convertDocumentPdfToPngArray**](ConvertDocumentApi.md#convertDocumentPdfToPngArray) | **POST** /convert/pdf/to/png | PDF to PNG Array
+[**convertDocumentPdfToPngSingle**](ConvertDocumentApi.md#convertDocumentPdfToPngSingle) | **POST** /convert/pdf/to/png/merge-single | PDF to Single PNG image
 [**convertDocumentPdfToPptx**](ConvertDocumentApi.md#convertDocumentPdfToPptx) | **POST** /convert/pdf/to/pptx | PDF to PowerPoint PPTX
 [**convertDocumentPdfToTxt**](ConvertDocumentApi.md#convertDocumentPdfToTxt) | **POST** /convert/pdf/to/txt | PDF to Text
 [**convertDocumentPptToPdf**](ConvertDocumentApi.md#convertDocumentPptToPdf) | **POST** /convert/ppt/to/pdf | PowerPoint PPT (97-03) to PDF
@@ -710,6 +711,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PdfToPngResult**](PdfToPngResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+<a name="convertDocumentPdfToPngSingle"></a>
+# **convertDocumentPdfToPngSingle**
+> &#39;Blob&#39; convertDocumentPdfToPngSingle(inputFile)
+
+PDF to Single PNG image
+
+Convert PDF document to a single tall PNG image, by stacking/concatenating the images vertically into a single \&quot;tall\&quot; image
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
+
+var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.convertDocumentPdfToPngSingle(inputFile, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Input file to perform the operation on. | 
+
+### Return type
+
+**&#39;Blob&#39;**
 
 ### Authorization
 

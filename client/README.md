@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.1.3
+- Package version: 2.1.4
 
 
 ## Installation
@@ -145,6 +145,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentHtmlToPng**](docs/ConvertDocumentApi.md#convertDocumentHtmlToPng) | **POST** /convert/html/to/png | HTML to PNG array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToDocx**](docs/ConvertDocumentApi.md#convertDocumentPdfToDocx) | **POST** /convert/pdf/to/docx | PDF to Word DOCX
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToPngArray**](docs/ConvertDocumentApi.md#convertDocumentPdfToPngArray) | **POST** /convert/pdf/to/png | PDF to PNG Array
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToPngSingle**](docs/ConvertDocumentApi.md#convertDocumentPdfToPngSingle) | **POST** /convert/pdf/to/png/merge-single | PDF to Single PNG image
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToPptx**](docs/ConvertDocumentApi.md#convertDocumentPdfToPptx) | **POST** /convert/pdf/to/pptx | PDF to PowerPoint PPTX
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToTxt**](docs/ConvertDocumentApi.md#convertDocumentPdfToTxt) | **POST** /convert/pdf/to/txt | PDF to Text
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPptToPdf**](docs/ConvertDocumentApi.md#convertDocumentPptToPdf) | **POST** /convert/ppt/to/pdf | PowerPoint PPT (97-03) to PDF

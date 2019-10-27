@@ -180,6 +180,16 @@
         done();
       });
     });
+    describe('convertDocumentPdfToPngSingle', function() {
+      it('should call convertDocumentPdfToPngSingle successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentPdfToPngSingle
+        //instance.convertDocumentPdfToPngSingle(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentPdfToPptx', function() {
       it('should call convertDocumentPdfToPptx successfully', function(done) {
         //uncomment below and update the code to test convertDocumentPdfToPptx

@@ -33,7 +33,7 @@
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.1.3
+   * @version 2.1.4
    */
 
   /**
@@ -666,6 +666,54 @@
 
       return this.apiClient.callApi(
         '/convert/pdf/to/png', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentPdfToPngSingle operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentPdfToPngSingleCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PDF to Single PNG image
+     * Convert PDF document to a single tall PNG image, by stacking/concatenating the images vertically into a single \&quot;tall\&quot; image
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentPdfToPngSingleCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDocumentPdfToPngSingle = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentPdfToPngSingle");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/pdf/to/png/merge-single', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
