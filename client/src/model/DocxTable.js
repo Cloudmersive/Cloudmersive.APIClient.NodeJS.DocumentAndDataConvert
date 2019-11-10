@@ -36,7 +36,7 @@
   /**
    * The DocxTable model module.
    * @module model/DocxTable
-   * @version 2.1.5
+   * @version 2.1.6
    */
 
   /**

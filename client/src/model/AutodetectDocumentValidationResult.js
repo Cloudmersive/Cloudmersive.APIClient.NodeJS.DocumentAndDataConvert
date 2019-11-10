@@ -25,7 +25,7 @@
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.DocumentValidationResult = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.DocumentValidationError);
+    root.CloudmersiveConvertApiClient.AutodetectDocumentValidationResult = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.DocumentValidationError);
   }
 }(this, function(ApiClient, DocumentValidationError) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The DocumentValidationResult model module.
-   * @module model/DocumentValidationResult
+   * The AutodetectDocumentValidationResult model module.
+   * @module model/AutodetectDocumentValidationResult
    * @version 2.1.6
    */
 
   /**
-   * Constructs a new <code>DocumentValidationResult</code>.
+   * Constructs a new <code>AutodetectDocumentValidationResult</code>.
    * Document validation result
-   * @alias module:model/DocumentValidationResult
+   * @alias module:model/AutodetectDocumentValidationResult
    * @class
    */
   var exports = function() {
@@ -52,19 +52,23 @@
 
 
 
+
   };
 
   /**
-   * Constructs a <code>DocumentValidationResult</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>AutodetectDocumentValidationResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/DocumentValidationResult} obj Optional instance to populate.
-   * @return {module:model/DocumentValidationResult} The populated <code>DocumentValidationResult</code> instance.
+   * @param {module:model/AutodetectDocumentValidationResult} obj Optional instance to populate.
+   * @return {module:model/AutodetectDocumentValidationResult} The populated <code>AutodetectDocumentValidationResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('FileFormatExtension')) {
+        obj['FileFormatExtension'] = ApiClient.convertToType(data['FileFormatExtension'], 'String');
+      }
       if (data.hasOwnProperty('DocumentIsValid')) {
         obj['DocumentIsValid'] = ApiClient.convertToType(data['DocumentIsValid'], 'Boolean');
       }
@@ -81,6 +85,10 @@
     return obj;
   }
 
+  /**
+   * @member {String} FileFormatExtension
+   */
+  exports.prototype['FileFormatExtension'] = undefined;
   /**
    * True if the document is valid and has no errors, false otherwise
    * @member {Boolean} DocumentIsValid

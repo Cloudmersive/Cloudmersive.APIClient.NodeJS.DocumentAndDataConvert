@@ -50,10 +50,30 @@
   }
 
   describe('ValidateDocumentApi', function() {
+    describe('validateDocumentAutodetectValidation', function() {
+      it('should call validateDocumentAutodetectValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentAutodetectValidation
+        //instance.validateDocumentAutodetectValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('validateDocumentDocxValidation', function() {
       it('should call validateDocumentDocxValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentDocxValidation
         //instance.validateDocumentDocxValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('validateDocumentExecutableValidation', function() {
+      it('should call validateDocumentExecutableValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentExecutableValidation
+        //instance.validateDocumentExecutableValidation(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
