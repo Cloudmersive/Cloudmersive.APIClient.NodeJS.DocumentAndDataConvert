@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**convertDocumentPdfToPngSingle**](ConvertDocumentApi.md#convertDocumentPdfToPngSingle) | **POST** /convert/pdf/to/png/merge-single | PDF to Single PNG image
 [**convertDocumentPdfToPptx**](ConvertDocumentApi.md#convertDocumentPdfToPptx) | **POST** /convert/pdf/to/pptx | PDF to PowerPoint PPTX
 [**convertDocumentPdfToTxt**](ConvertDocumentApi.md#convertDocumentPdfToTxt) | **POST** /convert/pdf/to/txt | PDF to Text
+[**convertDocumentPngArrayToPdf**](ConvertDocumentApi.md#convertDocumentPngArrayToPdf) | **POST** /convert/png/to/pdf | PNG Array to PDF
 [**convertDocumentPptToPdf**](ConvertDocumentApi.md#convertDocumentPptToPdf) | **POST** /convert/ppt/to/pdf | PowerPoint PPT (97-03) to PDF
 [**convertDocumentPptToPptx**](ConvertDocumentApi.md#convertDocumentPptToPptx) | **POST** /convert/ppt/to/pptx | PowerPoint PPT (97-03) to PPTX
 [**convertDocumentPptxToPdf**](ConvertDocumentApi.md#convertDocumentPptxToPdf) | **POST** /convert/pptx/to/pdf | PowerPoint PPTX to PDF
@@ -870,6 +871,80 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TextConversionResult**](TextConversionResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+<a name="convertDocumentPngArrayToPdf"></a>
+# **convertDocumentPngArrayToPdf**
+> &#39;Blob&#39; convertDocumentPngArrayToPdf(inputFile1, inputFile2, opts)
+
+PNG Array to PDF
+
+Convert an array of PNG images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
+
+var inputFile1 = "/path/to/file.txt"; // File | First input file to perform the operation on.
+
+var inputFile2 = "/path/to/file.txt"; // File | Second input file to perform the operation on.
+
+var opts = { 
+  'inputFile3': "/path/to/file.txt", // File | Third input file to perform the operation on.
+  'inputFile4': "/path/to/file.txt", // File | Fourth input file to perform the operation on.
+  'inputFile5': "/path/to/file.txt", // File | Fifth input file to perform the operation on.
+  'inputFile6': "/path/to/file.txt", // File | Sixth input file to perform the operation on.
+  'inputFile7': "/path/to/file.txt", // File | Seventh input file to perform the operation on.
+  'inputFile8': "/path/to/file.txt", // File | Eighth input file to perform the operation on.
+  'inputFile9': "/path/to/file.txt", // File | Ninth input file to perform the operation on.
+  'inputFile10': "/path/to/file.txt" // File | Tenth input file to perform the operation on.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.convertDocumentPngArrayToPdf(inputFile1, inputFile2, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile1** | **File**| First input file to perform the operation on. | 
+ **inputFile2** | **File**| Second input file to perform the operation on. | 
+ **inputFile3** | **File**| Third input file to perform the operation on. | [optional] 
+ **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional] 
+ **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional] 
+ **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional] 
+ **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional] 
+ **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional] 
+ **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional] 
+ **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional] 
+
+### Return type
+
+**&#39;Blob&#39;**
 
 ### Authorization
 

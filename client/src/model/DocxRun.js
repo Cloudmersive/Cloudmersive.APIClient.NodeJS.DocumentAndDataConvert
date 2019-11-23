@@ -36,7 +36,7 @@
   /**
    * The DocxRun model module.
    * @module model/DocxRun
-   * @version 2.1.6
+   * @version 2.1.7
    */
 
   /**

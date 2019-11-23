@@ -210,6 +210,16 @@
         done();
       });
     });
+    describe('convertDocumentPngArrayToPdf', function() {
+      it('should call convertDocumentPngArrayToPdf successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentPngArrayToPdf
+        //instance.convertDocumentPngArrayToPdf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentPptToPdf', function() {
       it('should call convertDocumentPptToPdf successfully', function(done) {
         //uncomment below and update the code to test convertDocumentPptToPdf

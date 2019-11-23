@@ -36,7 +36,7 @@
   /**
    * The DocxRemoveObjectResponse model module.
    * @module model/DocxRemoveObjectResponse
-   * @version 2.1.6
+   * @version 2.1.7
    */
 
   /**

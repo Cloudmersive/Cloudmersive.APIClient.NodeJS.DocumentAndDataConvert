@@ -60,10 +60,30 @@
         done();
       });
     });
+    describe('mergeDocumentDocxMulti', function() {
+      it('should call mergeDocumentDocxMulti successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentDocxMulti
+        //instance.mergeDocumentDocxMulti(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('mergeDocumentPdf', function() {
       it('should call mergeDocumentPdf successfully', function(done) {
         //uncomment below and update the code to test mergeDocumentPdf
         //instance.mergeDocumentPdf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('mergeDocumentPdfMulti', function() {
+      it('should call mergeDocumentPdfMulti successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentPdfMulti
+        //instance.mergeDocumentPdfMulti(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -90,10 +110,30 @@
         done();
       });
     });
+    describe('mergeDocumentPptxMulti', function() {
+      it('should call mergeDocumentPptxMulti successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentPptxMulti
+        //instance.mergeDocumentPptxMulti(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('mergeDocumentXlsx', function() {
       it('should call mergeDocumentXlsx successfully', function(done) {
         //uncomment below and update the code to test mergeDocumentXlsx
         //instance.mergeDocumentXlsx(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('mergeDocumentXlsxMulti', function() {
+      it('should call mergeDocumentXlsxMulti successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentXlsxMulti
+        //instance.mergeDocumentXlsxMulti(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

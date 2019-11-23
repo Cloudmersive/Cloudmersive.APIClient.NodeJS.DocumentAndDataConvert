@@ -36,7 +36,7 @@
   /**
    * The TextConversionResult model module.
    * @module model/TextConversionResult
-   * @version 2.1.6
+   * @version 2.1.7
    */
 
   /**

@@ -60,6 +60,16 @@
         done();
       });
     });
+    describe('editPdfRasterize', function() {
+      it('should call editPdfRasterize successfully', function(done) {
+        //uncomment below and update the code to test editPdfRasterize
+        //instance.editPdfRasterize(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editPdfSetPermissions', function() {
       it('should call editPdfSetPermissions successfully', function(done) {
         //uncomment below and update the code to test editPdfSetPermissions
