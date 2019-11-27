@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/PdfFormFields', 'model/PdfMetadata', 'model/SetPdfFormFieldsRequest', 'model/SetPdfMetadataRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('../model/PdfFormFields'), require('../model/PdfMetadata'), require('../model/SetPdfFormFieldsRequest'), require('../model/SetPdfMetadataRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.EditPdfApi = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.EditPdfApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.PdfFormFields, root.CloudmersiveConvertApiClient.PdfMetadata, root.CloudmersiveConvertApiClient.SetPdfFormFieldsRequest, root.CloudmersiveConvertApiClient.SetPdfMetadataRequest);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, PdfFormFields, PdfMetadata, SetPdfFormFieldsRequest, SetPdfMetadataRequest) {
   'use strict';
 
   /**
    * EditPdf service.
    * @module api/EditPdfApi
-   * @version 2.1.7
+   * @version 2.1.8
    */
 
   /**
@@ -102,6 +102,102 @@
     }
 
     /**
+     * Callback function to receive the result of the editPdfGetFormFields operation.
+     * @callback module:api/EditPdfApi~editPdfGetFormFieldsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PdfFormFields} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets PDF Form fields and values
+     * Encrypt a PDF document with a password.  Set an owner password to control owner (editor/creator) permissions, and set a user (reader) password to control the viewer of the PDF.  Set the password fields null to omit the given password.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/EditPdfApi~editPdfGetFormFieldsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/PdfFormFields}
+     */
+    this.editPdfGetFormFields = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling editPdfGetFormFields");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = PdfFormFields;
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/form/get-fields', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editPdfGetMetadata operation.
+     * @callback module:api/EditPdfApi~editPdfGetMetadataCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PdfMetadata} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get PDF document metadata
+     * Returns the metadata from the PDF document, including Title, Author, etc.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/EditPdfApi~editPdfGetMetadataCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/PdfMetadata}
+     */
+    this.editPdfGetMetadata = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling editPdfGetMetadata");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = PdfMetadata;
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/get-metadata', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the editPdfRasterize operation.
      * @callback module:api/EditPdfApi~editPdfRasterizeCallback
      * @param {String} error Error message, if any.
@@ -144,6 +240,100 @@
 
       return this.apiClient.callApi(
         '/convert/edit/pdf/rasterize', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editPdfSetFormFields operation.
+     * @callback module:api/EditPdfApi~editPdfSetFormFieldsCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Sets ands fills PDF Form field values
+     * Fill in the form fields in a PDF form with specific values.  Use form/get-fields to enumerate the available fields and their data types in an input form.
+     * @param {module:model/SetPdfFormFieldsRequest} fieldValues 
+     * @param {module:api/EditPdfApi~editPdfSetFormFieldsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.editPdfSetFormFields = function(fieldValues, callback) {
+      var postBody = fieldValues;
+
+      // verify the required parameter 'fieldValues' is set
+      if (fieldValues === undefined || fieldValues === null) {
+        throw new Error("Missing the required parameter 'fieldValues' when calling editPdfSetFormFields");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/form/set-fields', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editPdfSetMetadata operation.
+     * @callback module:api/EditPdfApi~editPdfSetMetadataCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Sets PDF document metadata
+     * Sets (writes) metadata into the input PDF document, including Title, Author, etc.
+     * @param {module:model/SetPdfMetadataRequest} request 
+     * @param {module:api/EditPdfApi~editPdfSetMetadataCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.editPdfSetMetadata = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling editPdfSetMetadata");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/set-metadata', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

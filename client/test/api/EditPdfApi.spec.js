@@ -60,10 +60,50 @@
         done();
       });
     });
+    describe('editPdfGetFormFields', function() {
+      it('should call editPdfGetFormFields successfully', function(done) {
+        //uncomment below and update the code to test editPdfGetFormFields
+        //instance.editPdfGetFormFields(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editPdfGetMetadata', function() {
+      it('should call editPdfGetMetadata successfully', function(done) {
+        //uncomment below and update the code to test editPdfGetMetadata
+        //instance.editPdfGetMetadata(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editPdfRasterize', function() {
       it('should call editPdfRasterize successfully', function(done) {
         //uncomment below and update the code to test editPdfRasterize
         //instance.editPdfRasterize(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editPdfSetFormFields', function() {
+      it('should call editPdfSetFormFields successfully', function(done) {
+        //uncomment below and update the code to test editPdfSetFormFields
+        //instance.editPdfSetFormFields(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editPdfSetMetadata', function() {
+      it('should call editPdfSetMetadata successfully', function(done) {
+        //uncomment below and update the code to test editPdfSetMetadata
+        //instance.editPdfSetMetadata(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
