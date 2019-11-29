@@ -4,6 +4,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**editPdfDecrypt**](EditPdfApi.md#editPdfDecrypt) | **POST** /convert/edit/pdf/decrypt | Decrypt and password-protect a PDF
 [**editPdfDeletePages**](EditPdfApi.md#editPdfDeletePages) | **POST** /convert/edit/pdf/pages/delete | Remove / delete pages from a PDF document
 [**editPdfEncrypt**](EditPdfApi.md#editPdfEncrypt) | **POST** /convert/edit/pdf/encrypt | Encrypt and password-protect a PDF
 [**editPdfGetFormFields**](EditPdfApi.md#editPdfGetFormFields) | **POST** /convert/edit/pdf/form/get-fields | Gets PDF Form fields and values
@@ -15,6 +16,62 @@ Method | HTTP request | Description
 [**editPdfSetPermissions**](EditPdfApi.md#editPdfSetPermissions) | **POST** /convert/edit/pdf/encrypt/set-permissions | Encrypt, password-protect and set restricted permissions on a PDF
 [**editPdfWatermarkText**](EditPdfApi.md#editPdfWatermarkText) | **POST** /convert/edit/pdf/watermark/text | Add a text watermark to a PDF
 
+
+<a name="editPdfDecrypt"></a>
+# **editPdfDecrypt**
+> &#39;Blob&#39; editPdfDecrypt(password, inputFile)
+
+Decrypt and password-protect a PDF
+
+Decrypt a PDF document with a password.  Decrypted PDF will no longer require a password to open.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditPdfApi();
+
+var password = "password_example"; // String | Valid password for the PDF file
+
+var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editPdfDecrypt(password, inputFile, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **password** | **String**| Valid password for the PDF file | 
+ **inputFile** | **File**| Input file to perform the operation on. | 
+
+### Return type
+
+**&#39;Blob&#39;**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
 
 <a name="editPdfDeletePages"></a>
 # **editPdfDeletePages**
@@ -100,7 +157,8 @@ var inputFile = "/path/to/file.txt"; // File | Input file to perform the operati
 
 var opts = { 
   'userPassword': "userPassword_example", // String | Password of a user (reader) of the PDF file
-  'ownerPassword': "ownerPassword_example" // String | Password of a owner (creator/editor) of the PDF file
+  'ownerPassword': "ownerPassword_example", // String | Password of a owner (creator/editor) of the PDF file
+  'encryptionKeyLength': "encryptionKeyLength_example" // String | Possible values are \"128\" (128-bit RC4 encryption) and \"256\" (256-bit AES encryption).  Default is 256.
 };
 
 var callback = function(error, data, response) {
@@ -120,6 +178,7 @@ Name | Type | Description  | Notes
  **inputFile** | **File**| Input file to perform the operation on. | 
  **userPassword** | **String**| Password of a user (reader) of the PDF file | [optional] 
  **ownerPassword** | **String**| Password of a owner (creator/editor) of the PDF file | [optional] 
+ **encryptionKeyLength** | **String**| Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. | [optional] 
 
 ### Return type
 
@@ -466,7 +525,7 @@ Name | Type | Description  | Notes
 
 <a name="editPdfSetPermissions"></a>
 # **editPdfSetPermissions**
-> &#39;Blob&#39; editPdfSetPermissions(ownerPassword, inputFile, opts)
+> &#39;Blob&#39; editPdfSetPermissions(ownerPassword, userPassword, inputFile, opts)
 
 Encrypt, password-protect and set restricted permissions on a PDF
 
@@ -487,10 +546,12 @@ var apiInstance = new CloudmersiveConvertApiClient.EditPdfApi();
 
 var ownerPassword = "ownerPassword_example"; // String | Password of a owner (creator/editor) of the PDF file (required)
 
+var userPassword = "userPassword_example"; // String | Password of a user (reader) of the PDF file (optional)
+
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
 var opts = { 
-  'userPassword': "userPassword_example", // String | Password of a user (reader) of the PDF file (optional)
+  'encryptionKeyLength': "encryptionKeyLength_example", // String | Possible values are \"128\" (128-bit RC4 encryption) and \"256\" (256-bit AES encryption).  Default is 256.
   'allowPrinting': true, // Boolean | Set to false to disable printing through DRM.  Default is true.
   'allowDocumentAssembly': true, // Boolean | Set to false to disable document assembly through DRM.  Default is true.
   'allowContentExtraction': true, // Boolean | Set to false to disable copying/extracting content out of the PDF through DRM.  Default is true.
@@ -507,7 +568,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.editPdfSetPermissions(ownerPassword, inputFile, opts, callback);
+apiInstance.editPdfSetPermissions(ownerPassword, userPassword, inputFile, opts, callback);
 ```
 
 ### Parameters
@@ -515,8 +576,9 @@ apiInstance.editPdfSetPermissions(ownerPassword, inputFile, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ownerPassword** | **String**| Password of a owner (creator/editor) of the PDF file (required) | 
+ **userPassword** | **String**| Password of a user (reader) of the PDF file (optional) | 
  **inputFile** | **File**| Input file to perform the operation on. | 
- **userPassword** | **String**| Password of a user (reader) of the PDF file (optional) | [optional] 
+ **encryptionKeyLength** | **String**| Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256. | [optional] 
  **allowPrinting** | **Boolean**| Set to false to disable printing through DRM.  Default is true. | [optional] 
  **allowDocumentAssembly** | **Boolean**| Set to false to disable document assembly through DRM.  Default is true. | [optional] 
  **allowContentExtraction** | **Boolean**| Set to false to disable copying/extracting content out of the PDF through DRM.  Default is true. | [optional] 

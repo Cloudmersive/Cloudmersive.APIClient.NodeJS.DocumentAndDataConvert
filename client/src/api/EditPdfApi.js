@@ -33,7 +33,7 @@
   /**
    * EditPdf service.
    * @module api/EditPdfApi
-   * @version 2.1.9
+   * @version 2.2.0
    */
 
   /**
@@ -46,6 +46,61 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the editPdfDecrypt operation.
+     * @callback module:api/EditPdfApi~editPdfDecryptCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Decrypt and password-protect a PDF
+     * Decrypt a PDF document with a password.  Decrypted PDF will no longer require a password to open.
+     * @param {String} password Valid password for the PDF file
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/EditPdfApi~editPdfDecryptCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.editPdfDecrypt = function(password, inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'password' is set
+      if (password === undefined || password === null) {
+        throw new Error("Missing the required parameter 'password' when calling editPdfDecrypt");
+      }
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling editPdfDecrypt");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'password': password
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/decrypt', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the editPdfDeletePages operation.
@@ -124,6 +179,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.userPassword Password of a user (reader) of the PDF file
      * @param {String} opts.ownerPassword Password of a owner (creator/editor) of the PDF file
+     * @param {String} opts.encryptionKeyLength Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256.
      * @param {module:api/EditPdfApi~editPdfEncryptCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */
@@ -145,7 +201,8 @@
       };
       var headerParams = {
         'userPassword': opts['userPassword'],
-        'ownerPassword': opts['ownerPassword']
+        'ownerPassword': opts['ownerPassword'],
+        'encryptionKeyLength': opts['encryptionKeyLength']
       };
       var formParams = {
         'inputFile': inputFile
@@ -489,9 +546,10 @@
      * Encrypt, password-protect and set restricted permissions on a PDF
      * Encrypt a PDF document with a password, and set permissions on the PDF.  Set an owner password to control owner (editor/creator) permissions [required], and set a user (reader) password to control the viewer of the PDF [optional].  Set the reader password to null to omit the password.  Restrict or allow printing, copying content, document assembly, editing (read-only), form filling, modification of annotations, and degraded printing through document Digital Rights Management (DRM).
      * @param {String} ownerPassword Password of a owner (creator/editor) of the PDF file (required)
+     * @param {String} userPassword Password of a user (reader) of the PDF file (optional)
      * @param {File} inputFile Input file to perform the operation on.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.userPassword Password of a user (reader) of the PDF file (optional)
+     * @param {String} opts.encryptionKeyLength Possible values are \&quot;128\&quot; (128-bit RC4 encryption) and \&quot;256\&quot; (256-bit AES encryption).  Default is 256.
      * @param {Boolean} opts.allowPrinting Set to false to disable printing through DRM.  Default is true.
      * @param {Boolean} opts.allowDocumentAssembly Set to false to disable document assembly through DRM.  Default is true.
      * @param {Boolean} opts.allowContentExtraction Set to false to disable copying/extracting content out of the PDF through DRM.  Default is true.
@@ -502,13 +560,18 @@
      * @param {module:api/EditPdfApi~editPdfSetPermissionsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */
-    this.editPdfSetPermissions = function(ownerPassword, inputFile, opts, callback) {
+    this.editPdfSetPermissions = function(ownerPassword, userPassword, inputFile, opts, callback) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'ownerPassword' is set
       if (ownerPassword === undefined || ownerPassword === null) {
         throw new Error("Missing the required parameter 'ownerPassword' when calling editPdfSetPermissions");
+      }
+
+      // verify the required parameter 'userPassword' is set
+      if (userPassword === undefined || userPassword === null) {
+        throw new Error("Missing the required parameter 'userPassword' when calling editPdfSetPermissions");
       }
 
       // verify the required parameter 'inputFile' is set
@@ -525,7 +588,8 @@
       };
       var headerParams = {
         'ownerPassword': ownerPassword,
-        'userPassword': opts['userPassword'],
+        'userPassword': userPassword,
+        'encryptionKeyLength': opts['encryptionKeyLength'],
         'allowPrinting': opts['allowPrinting'],
         'allowDocumentAssembly': opts['allowDocumentAssembly'],
         'allowContentExtraction': opts['allowContentExtraction'],

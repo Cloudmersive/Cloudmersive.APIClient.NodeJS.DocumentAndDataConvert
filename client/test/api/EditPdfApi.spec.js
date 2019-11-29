@@ -50,6 +50,16 @@
   }
 
   describe('EditPdfApi', function() {
+    describe('editPdfDecrypt', function() {
+      it('should call editPdfDecrypt successfully', function(done) {
+        //uncomment below and update the code to test editPdfDecrypt
+        //instance.editPdfDecrypt(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editPdfDeletePages', function() {
       it('should call editPdfDeletePages successfully', function(done) {
         //uncomment below and update the code to test editPdfDeletePages

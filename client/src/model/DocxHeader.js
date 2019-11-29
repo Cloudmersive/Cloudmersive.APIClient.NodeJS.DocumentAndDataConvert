@@ -36,7 +36,7 @@
   /**
    * The DocxHeader model module.
    * @module model/DocxHeader
-   * @version 2.1.9
+   * @version 2.2.0
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The AutodetectToPngResult model module.
    * @module model/AutodetectToPngResult
-   * @version 2.1.9
+   * @version 2.2.0
    */
 
   /**
