@@ -33,7 +33,7 @@
   /**
    * ConvertData service.
    * @module api/ConvertDataApi
-   * @version 2.1.8
+   * @version 2.1.9
    */
 
   /**
@@ -56,7 +56,7 @@
      */
 
     /**
-     * CSV to JSON conversion
+     * Convert CSV to JSON conversion
      * Convert a CSV file to a JSON object array
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDataApi~convertDataCsvToJsonCallback} callback The callback function, accepting three arguments: error, data, response
@@ -104,7 +104,7 @@
      */
 
     /**
-     * Excel (97-2003) XLS to JSON conversion
+     * Convert Excel (97-2003) XLS to JSON conversion
      * Convert an Excel (97-2003) XLS file to a JSON object array
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDataApi~convertDataXlsToJsonCallback} callback The callback function, accepting three arguments: error, data, response
@@ -152,7 +152,7 @@
      */
 
     /**
-     * Excel XLSX to JSON conversion
+     * Convert Excel XLSX to JSON conversion
      * Convert an Excel XLSX file to a JSON object array
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDataApi~convertDataXlsxToJsonCallback} callback The callback function, accepting three arguments: error, data, response
@@ -200,7 +200,7 @@
      */
 
     /**
-     * XML to JSON conversion
+     * Convert XML to JSON conversion
      * Convert an XML string or file into JSON
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDataApi~convertDataXmlToJsonCallback} callback The callback function, accepting three arguments: error, data, response

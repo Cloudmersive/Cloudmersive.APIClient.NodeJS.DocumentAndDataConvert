@@ -33,7 +33,7 @@
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.1.8
+   * @version 2.1.9
    */
 
   /**
@@ -181,7 +181,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = AutodetectToPngResult;
 
       return this.apiClient.callApi(
@@ -248,7 +248,7 @@
      */
 
     /**
-     * CSV to Excel XLSX
+     * Convert CSV to Excel XLSX Spreadsheet
      * Convert CSV file to Office Excel XLSX Workbooks file format.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentCsvToXlsxCallback} callback The callback function, accepting three arguments: error, data, response
@@ -296,7 +296,7 @@
      */
 
     /**
-     * Word DOC (97-03) to DOCX
+     * Convert Word DOC (97-03) Document to DOCX
      * Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentDocToDocxCallback} callback The callback function, accepting three arguments: error, data, response
@@ -344,7 +344,7 @@
      */
 
     /**
-     * Word DOC (97-03) to PDF
+     * Convert Word DOC (97-03) Document to PDF
      * Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentDocToPdfCallback} callback The callback function, accepting three arguments: error, data, response
@@ -392,7 +392,7 @@
      */
 
     /**
-     * Word DOCX to PDF
+     * Convert Word DOCX Document to PDF
      * Convert Office Word Documents (docx) to standard PDF
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentDocxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
@@ -440,7 +440,7 @@
      */
 
     /**
-     * Word DOCX to Text
+     * Convert Word DOCX Document to Text
      * Convert Office Word Documents (docx) to text
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentDocxToTxtCallback} callback The callback function, accepting three arguments: error, data, response
@@ -488,7 +488,7 @@
      */
 
     /**
-     * HTML to PDF
+     * Convert HTML to PDF Document
      * Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentHtmlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
@@ -536,7 +536,7 @@
      */
 
     /**
-     * HTML to PNG array
+     * Convert HTML to PNG image array
      * Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to an array of PNG images, one for each page.  To use external files in your HTML such as images, use an absolute URL to the file.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentHtmlToPngCallback} callback The callback function, accepting three arguments: error, data, response
@@ -565,7 +565,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = PdfToPngResult;
 
       return this.apiClient.callApi(
@@ -584,7 +584,7 @@
      */
 
     /**
-     * PDF to Word DOCX
+     * Convert PDF to Word DOCX Document
      * Convert standard PDF to Office Word Documents (docx).    Converts a PDF at high fidelity into Word format, where it can be easily edited and processed.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentPdfToDocxCallback} callback The callback function, accepting three arguments: error, data, response
@@ -632,7 +632,7 @@
      */
 
     /**
-     * PDF to PNG Array
+     * Convert PDF to PNG Image Array
      * Convert PDF document to PNG array, one image per page.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentPdfToPngArrayCallback} callback The callback function, accepting three arguments: error, data, response
@@ -661,7 +661,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = PdfToPngResult;
 
       return this.apiClient.callApi(
@@ -680,7 +680,7 @@
      */
 
     /**
-     * PDF to Single PNG image
+     * Convert PDF to Single PNG image
      * Convert PDF document to a single tall PNG image, by stacking/concatenating the images vertically into a single \&quot;tall\&quot; image
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentPdfToPngSingleCallback} callback The callback function, accepting three arguments: error, data, response
@@ -728,7 +728,7 @@
      */
 
     /**
-     * PDF to PowerPoint PPTX
+     * Convert PDF to PowerPoint PPTX Presentation
      * Convert standard PDF to Office PowerPoint Presentation (pptx).  Converts a PDF file at high fidelity into PowerPoint format, where it can be easily edited and processed.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentPdfToPptxCallback} callback The callback function, accepting three arguments: error, data, response
@@ -776,7 +776,7 @@
      */
 
     /**
-     * PDF to Text
+     * Convert PDF Document to Text
      * PDF document to text
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentPdfToTxtCallback} callback The callback function, accepting three arguments: error, data, response
@@ -805,7 +805,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = TextConversionResult;
 
       return this.apiClient.callApi(
@@ -824,7 +824,7 @@
      */
 
     /**
-     * PNG Array to PDF
+     * Convert PNG Array to PDF
      * Convert an array of PNG images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
      * @param {File} inputFile1 First input file to perform the operation on.
      * @param {File} inputFile2 Second input file to perform the operation on.
@@ -897,7 +897,7 @@
      */
 
     /**
-     * PowerPoint PPT (97-03) to PDF
+     * Convert PowerPoint PPT (97-03) Presentation to PDF
      * Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentPptToPdfCallback} callback The callback function, accepting three arguments: error, data, response
@@ -945,7 +945,7 @@
      */
 
     /**
-     * PowerPoint PPT (97-03) to PPTX
+     * Convert PowerPoint PPT (97-03) Presentation to PPTX
      * Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentPptToPptxCallback} callback The callback function, accepting three arguments: error, data, response
@@ -993,7 +993,7 @@
      */
 
     /**
-     * PowerPoint PPTX to PDF
+     * Convert PowerPoint PPTX Presentation to PDF
      * Convert Office PowerPoint Documents (pptx) to standard PDF
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentPptxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
@@ -1041,7 +1041,7 @@
      */
 
     /**
-     * PowerPoint PPTX to Text
+     * Convert PowerPoint PPTX Presentation to Text
      * Convert Office PowerPoint Documents (pptx) to standard Text
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentPptxToTxtCallback} callback The callback function, accepting three arguments: error, data, response
@@ -1089,7 +1089,7 @@
      */
 
     /**
-     * Excel XLS (97-03) to CSV
+     * Convert Excel XLS (97-03) Spreadsheet to CSV
      * Convert/upgrade Office Excel (97-2003) Workbooks (xls) to standard CSV format.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentXlsToCsvCallback} callback The callback function, accepting three arguments: error, data, response
@@ -1137,7 +1137,7 @@
      */
 
     /**
-     * Excel XLS (97-03) to PDF
+     * Convert Excel XLS (97-03) Spreadsheet to PDF
      * Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentXlsToPdfCallback} callback The callback function, accepting three arguments: error, data, response
@@ -1185,7 +1185,7 @@
      */
 
     /**
-     * Excel XLS (97-03) to XLSX
+     * Convert Excel XLS (97-03) Spreadsheet to XLSX
      * Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentXlsToXlsxCallback} callback The callback function, accepting three arguments: error, data, response
@@ -1233,7 +1233,7 @@
      */
 
     /**
-     * Excel XLSX to CSV
+     * Convert Excel XLSX Spreadsheet to CSV
      * Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {Object} opts Optional parameters
@@ -1285,7 +1285,7 @@
      */
 
     /**
-     * Excel XLSX to PDF
+     * Convert Excel XLSX Spreadsheet to PDF
      * Convert Office Excel Workbooks (XLSX) to standard PDF.  Converts all worksheets in the workbook to PDF.  Supports both XLSX and XLSB Excel file formats.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentXlsxToPdfCallback} callback The callback function, accepting three arguments: error, data, response
@@ -1333,7 +1333,7 @@
      */
 
     /**
-     * Excel XLSX to Text
+     * Convert Excel XLSX Spreadsheet to Text
      * Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentXlsxToTxtCallback} callback The callback function, accepting three arguments: error, data, response

@@ -25,7 +25,7 @@
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ScreenshotRequest = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.HtmlToPngRequest = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The ScreenshotRequest model module.
-   * @module model/ScreenshotRequest
+   * The HtmlToPngRequest model module.
+   * @module model/HtmlToPngRequest
    * @version 2.1.9
    */
 
   /**
-   * Constructs a new <code>ScreenshotRequest</code>.
-   * Details of the screenshot request
-   * @alias module:model/ScreenshotRequest
+   * Constructs a new <code>HtmlToPngRequest</code>.
+   * Details of the HTML to PNG request
+   * @alias module:model/HtmlToPngRequest
    * @class
    */
   var exports = function() {
@@ -55,18 +55,18 @@
   };
 
   /**
-   * Constructs a <code>ScreenshotRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>HtmlToPngRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ScreenshotRequest} obj Optional instance to populate.
-   * @return {module:model/ScreenshotRequest} The populated <code>ScreenshotRequest</code> instance.
+   * @param {module:model/HtmlToPngRequest} obj Optional instance to populate.
+   * @return {module:model/HtmlToPngRequest} The populated <code>HtmlToPngRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('Url')) {
-        obj['Url'] = ApiClient.convertToType(data['Url'], 'String');
+      if (data.hasOwnProperty('Html')) {
+        obj['Html'] = ApiClient.convertToType(data['Html'], 'String');
       }
       if (data.hasOwnProperty('ExtraLoadingWait')) {
         obj['ExtraLoadingWait'] = ApiClient.convertToType(data['ExtraLoadingWait'], 'Number');
@@ -82,12 +82,12 @@
   }
 
   /**
-   * URL address of the website to screenshot.  HTTP and HTTPS are both supported, as are custom ports.
-   * @member {String} Url
+   * HTML to render to PNG (screenshot)
+   * @member {String} Html
    */
-  exports.prototype['Url'] = undefined;
+  exports.prototype['Html'] = undefined;
   /**
-   * Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites.  Provide a value of 0 for the default of 5000 milliseconds (5 seconds)
+   * Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites.
    * @member {Number} ExtraLoadingWait
    */
   exports.prototype['ExtraLoadingWait'] = undefined;

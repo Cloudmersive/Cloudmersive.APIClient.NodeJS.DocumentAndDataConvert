@@ -36,7 +36,7 @@
   /**
    * The GetDocxStylesRequest model module.
    * @module model/GetDocxStylesRequest
-   * @version 2.1.8
+   * @version 2.1.9
    */
 
   /**

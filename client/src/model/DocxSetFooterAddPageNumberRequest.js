@@ -36,7 +36,7 @@
   /**
    * The DocxSetFooterAddPageNumberRequest model module.
    * @module model/DocxSetFooterAddPageNumberRequest
-   * @version 2.1.8
+   * @version 2.1.9
    */
 
   /**

@@ -4,15 +4,76 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**editPdfDeletePages**](EditPdfApi.md#editPdfDeletePages) | **POST** /convert/edit/pdf/pages/delete | Remove / delete pages from a PDF document
 [**editPdfEncrypt**](EditPdfApi.md#editPdfEncrypt) | **POST** /convert/edit/pdf/encrypt | Encrypt and password-protect a PDF
 [**editPdfGetFormFields**](EditPdfApi.md#editPdfGetFormFields) | **POST** /convert/edit/pdf/form/get-fields | Gets PDF Form fields and values
 [**editPdfGetMetadata**](EditPdfApi.md#editPdfGetMetadata) | **POST** /convert/edit/pdf/get-metadata | Get PDF document metadata
+[**editPdfInsertPages**](EditPdfApi.md#editPdfInsertPages) | **POST** /convert/edit/pdf/pages/insert | Insert / copy pages from one PDF document into another
 [**editPdfRasterize**](EditPdfApi.md#editPdfRasterize) | **POST** /convert/edit/pdf/rasterize | Rasterize a PDF to an image-based PDF
 [**editPdfSetFormFields**](EditPdfApi.md#editPdfSetFormFields) | **POST** /convert/edit/pdf/form/set-fields | Sets ands fills PDF Form field values
 [**editPdfSetMetadata**](EditPdfApi.md#editPdfSetMetadata) | **POST** /convert/edit/pdf/set-metadata | Sets PDF document metadata
 [**editPdfSetPermissions**](EditPdfApi.md#editPdfSetPermissions) | **POST** /convert/edit/pdf/encrypt/set-permissions | Encrypt, password-protect and set restricted permissions on a PDF
 [**editPdfWatermarkText**](EditPdfApi.md#editPdfWatermarkText) | **POST** /convert/edit/pdf/watermark/text | Add a text watermark to a PDF
 
+
+<a name="editPdfDeletePages"></a>
+# **editPdfDeletePages**
+> &#39;Blob&#39; editPdfDeletePages(inputFile, pageStart, pageEnd)
+
+Remove / delete pages from a PDF document
+
+Remove one or more pages from a PDF document
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditPdfApi();
+
+var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
+
+var pageStart = 56; // Number | Page number (1 based) to start deleting pages from (inclusive).
+
+var pageEnd = 56; // Number | Page number (1 based) to stop deleting pages from (inclusive).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editPdfDeletePages(inputFile, pageStart, pageEnd, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Input file to perform the operation on. | 
+ **pageStart** | **Number**| Page number (1 based) to start deleting pages from (inclusive). | 
+ **pageEnd** | **Number**| Page number (1 based) to stop deleting pages from (inclusive). | 
+
+### Return type
+
+**&#39;Blob&#39;**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
 
 <a name="editPdfEncrypt"></a>
 # **editPdfEncrypt**
@@ -179,6 +240,71 @@ Name | Type | Description  | Notes
  - **Content-Type**: multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml
 
+<a name="editPdfInsertPages"></a>
+# **editPdfInsertPages**
+> &#39;Blob&#39; editPdfInsertPages(sourceFile, destinationFile, pageStartSource, pageEndSource, pageInsertBeforeDesitnation)
+
+Insert / copy pages from one PDF document into another
+
+Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditPdfApi();
+
+var sourceFile = "/path/to/file.txt"; // File | Source PDF file to copy pages from.
+
+var destinationFile = "/path/to/file.txt"; // File | Destination PDF file to copy pages into.
+
+var pageStartSource = 56; // Number | Page number (1 based) to start copying pages from (inclusive) in the Source file.
+
+var pageEndSource = 56; // Number | Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.
+
+var pageInsertBeforeDesitnation = 56; // Number | Page number (1 based) to insert the pages before in the Destination file.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editPdfInsertPages(sourceFile, destinationFile, pageStartSource, pageEndSource, pageInsertBeforeDesitnation, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sourceFile** | **File**| Source PDF file to copy pages from. | 
+ **destinationFile** | **File**| Destination PDF file to copy pages into. | 
+ **pageStartSource** | **Number**| Page number (1 based) to start copying pages from (inclusive) in the Source file. | 
+ **pageEndSource** | **Number**| Page number (1 based) to stop copying pages pages from (inclusive) in the Source file. | 
+ **pageInsertBeforeDesitnation** | **Number**| Page number (1 based) to insert the pages before in the Destination file. | 
+
+### Return type
+
+**&#39;Blob&#39;**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
 <a name="editPdfRasterize"></a>
 # **editPdfRasterize**
 > &#39;Blob&#39; editPdfRasterize(inputFile)
@@ -287,7 +413,7 @@ Name | Type | Description  | Notes
 
 <a name="editPdfSetMetadata"></a>
 # **editPdfSetMetadata**
-> Object editPdfSetMetadata(request)
+> &#39;Blob&#39; editPdfSetMetadata(request)
 
 Sets PDF document metadata
 
@@ -327,7 +453,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**&#39;Blob&#39;**
 
 ### Authorization
 

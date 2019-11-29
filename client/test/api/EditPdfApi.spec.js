@@ -50,6 +50,16 @@
   }
 
   describe('EditPdfApi', function() {
+    describe('editPdfDeletePages', function() {
+      it('should call editPdfDeletePages successfully', function(done) {
+        //uncomment below and update the code to test editPdfDeletePages
+        //instance.editPdfDeletePages(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editPdfEncrypt', function() {
       it('should call editPdfEncrypt successfully', function(done) {
         //uncomment below and update the code to test editPdfEncrypt
@@ -74,6 +84,16 @@
       it('should call editPdfGetMetadata successfully', function(done) {
         //uncomment below and update the code to test editPdfGetMetadata
         //instance.editPdfGetMetadata(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editPdfInsertPages', function() {
+      it('should call editPdfInsertPages successfully', function(done) {
+        //uncomment below and update the code to test editPdfInsertPages
+        //instance.editPdfInsertPages(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

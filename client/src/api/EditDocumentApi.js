@@ -33,7 +33,7 @@
   /**
    * EditDocument service.
    * @module api/EditDocumentApi
-   * @version 2.1.8
+   * @version 2.1.9
    */
 
   /**
@@ -104,9 +104,9 @@
      */
 
     /**
-     * Get body from a DOCX
+     * Get body from a Word DOCX document
      * Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
-     * @param {module:model/GetDocxBodyRequest} reqConfig 
+     * @param {module:model/GetDocxBodyRequest} reqConfig Document input request
      * @param {module:api/EditDocumentApi~editDocumentDocxBodyCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetDocxBodyResponse}
      */
@@ -151,9 +151,9 @@
      */
 
     /**
-     * Get content of a footer from a DOCX
+     * Get content of a footer from a Word DOCX document
      * Returns the footer content from a Word Document (DOCX) format file
-     * @param {module:model/GetDocxHeadersAndFootersRequest} reqConfig 
+     * @param {module:model/GetDocxHeadersAndFootersRequest} reqConfig Document input request
      * @param {module:api/EditDocumentApi~editDocumentDocxGetHeadersAndFootersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetDocxHeadersAndFootersResponse}
      */
@@ -198,9 +198,9 @@
      */
 
     /**
-     * Get images from a DOCX
+     * Get images from a Word DOCX document
      * Returns the images defined in the Word Document (DOCX) format file
-     * @param {module:model/GetDocxImagesRequest} reqConfig 
+     * @param {module:model/GetDocxImagesRequest} reqConfig Document input request
      * @param {module:api/EditDocumentApi~editDocumentDocxGetImagesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetDocxImagesResponse}
      */
@@ -245,9 +245,9 @@
      */
 
     /**
-     * Get sections from a DOCX
+     * Get sections from a Word DOCX document
      * Returns the sections defined in the Word Document (DOCX) format file
-     * @param {module:model/GetDocxSectionsRequest} reqConfig 
+     * @param {module:model/GetDocxSectionsRequest} reqConfig Document input request
      * @param {module:api/EditDocumentApi~editDocumentDocxGetSectionsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetDocxSectionsResponse}
      */
@@ -292,9 +292,9 @@
      */
 
     /**
-     * Get styles from a DOCX
+     * Get styles from a Word DOCX document
      * Returns the styles defined in the Word Document (DOCX) format file
-     * @param {module:model/GetDocxStylesRequest} reqConfig 
+     * @param {module:model/GetDocxStylesRequest} reqConfig Document input request
      * @param {module:api/EditDocumentApi~editDocumentDocxGetStylesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetDocxStylesResponse}
      */
@@ -339,9 +339,9 @@
      */
 
     /**
-     * Get tables in DOCX
+     * Get tables in Word DOCX document
      * Returns all the table objects in an Office Word Document (docx)
-     * @param {module:model/GetDocxTablesRequest} reqConfig 
+     * @param {module:model/GetDocxTablesRequest} reqConfig Document input request
      * @param {module:api/EditDocumentApi~editDocumentDocxGetTablesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetDocxTablesResponse}
      */
@@ -386,9 +386,9 @@
      */
 
     /**
-     * Insert image into a DOCX
-     * Set the footer in a Word Document (DOCX)
-     * @param {module:model/DocxInsertImageRequest} reqConfig 
+     * Insert image into a Word DOCX document
+     * Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
+     * @param {module:model/DocxInsertImageRequest} reqConfig Document input request
      * @param {module:api/EditDocumentApi~editDocumentDocxInsertImageCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DocxInsertImageResponse}
      */
@@ -433,9 +433,9 @@
      */
 
     /**
-     * Insert a new paragraph into a DOCX
-     * Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
-     * @param {module:model/InsertDocxInsertParagraphRequest} reqConfig 
+     * Insert a new paragraph into a Word DOCX document
+     * Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).  Call Finish Editing on the output URL to complete the operation.
+     * @param {module:model/InsertDocxInsertParagraphRequest} reqConfig Document input request
      * @param {module:api/EditDocumentApi~editDocumentDocxInsertParagraphCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InsertDocxInsertParagraphResponse}
      */
@@ -480,9 +480,9 @@
      */
 
     /**
-     * Insert a new table into a DOCX
-     * Adds a new table into a DOCX and returns the result
-     * @param {module:model/InsertDocxTablesRequest} reqConfig 
+     * Insert a new table into a Word DOCX document
+     * Adds a new table into a DOCX and returns the result.  Call Finish Editing on the output URL to complete the operation.
+     * @param {module:model/InsertDocxTablesRequest} reqConfig Document input request
      * @param {module:api/EditDocumentApi~editDocumentDocxInsertTableCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InsertDocxTablesResponse}
      */
@@ -527,9 +527,9 @@
      */
 
     /**
-     * Remove headers and footers from DOCX
-     * Remove all headers, or footers, or both from a Word Document (DOCX)
-     * @param {module:model/RemoveDocxHeadersAndFootersRequest} reqConfig 
+     * Remove headers and footers from Word DOCX document
+     * Remove all headers, or footers, or both from a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
+     * @param {module:model/RemoveDocxHeadersAndFootersRequest} reqConfig Document input request
      * @param {module:api/EditDocumentApi~editDocumentDocxRemoveHeadersAndFootersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/RemoveDocxHeadersAndFootersResponse}
      */
@@ -574,9 +574,9 @@
      */
 
     /**
-     * Delete any object in a DOCX
-     * Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
-     * @param {module:model/DocxRemoveObjectRequest} reqConfig 
+     * Delete any object in a Word DOCX document
+     * Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.  Call Finish Editing on the output URL to complete the operation.
+     * @param {module:model/DocxRemoveObjectRequest} reqConfig Document input request
      * @param {module:api/EditDocumentApi~editDocumentDocxRemoveObjectCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DocxRemoveObjectResponse}
      */
@@ -621,9 +621,9 @@
      */
 
     /**
-     * Replace string in DOCX
+     * Replace string in Word DOCX document
      * Replace all instances of a string in an Office Word Document (docx)
-     * @param {module:model/ReplaceStringRequest} reqConfig 
+     * @param {module:model/ReplaceStringRequest} reqConfig Document string replacement configuration input
      * @param {module:api/EditDocumentApi~editDocumentDocxReplaceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */
@@ -668,9 +668,9 @@
      */
 
     /**
-     * Set the footer in a DOCX
-     * Set the footer in a Word Document (DOCX)
-     * @param {module:model/DocxSetFooterRequest} reqConfig 
+     * Set the footer in a Word DOCX document
+     * Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
+     * @param {module:model/DocxSetFooterRequest} reqConfig Document input request
      * @param {module:api/EditDocumentApi~editDocumentDocxSetFooterCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DocxSetFooterResponse}
      */
@@ -715,9 +715,9 @@
      */
 
     /**
-     * Add page number to footer in a DOCX
-     * Set the footer in a Word Document (DOCX) to contain a page number
-     * @param {module:model/DocxSetFooterAddPageNumberRequest} reqConfig 
+     * Add page number to footer in a Word DOCX document
+     * Set the footer in a Word Document (DOCX) to contain a page number.  Call Finish Editing on the output URL to complete the operation.
+     * @param {module:model/DocxSetFooterAddPageNumberRequest} reqConfig Document input request
      * @param {module:api/EditDocumentApi~editDocumentDocxSetFooterAddPageNumberCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DocxSetFooterResponse}
      */
@@ -762,9 +762,9 @@
      */
 
     /**
-     * Set the header in a DOCX
-     * Set the header in a Word Document (DOCX)
-     * @param {module:model/DocxSetHeaderRequest} reqConfig 
+     * Set the header in a Word DOCX document
+     * Set the header in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
+     * @param {module:model/DocxSetHeaderRequest} reqConfig Document input request
      * @param {module:api/EditDocumentApi~editDocumentDocxSetHeaderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DocxSetHeaderResponse}
      */
@@ -811,7 +811,7 @@
     /**
      * Download result from document editing
      * Once done editing a document, download the result.  Begin editing a document by calling begin-editing, then perform operations, then call finish-editing to get the result.
-     * @param {module:model/FinishEditingRequest} reqConfig 
+     * @param {module:model/FinishEditingRequest} reqConfig Cloudmersive Document URL to complete editing on
      * @param {module:api/EditDocumentApi~editDocumentFinishEditingCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */
@@ -856,9 +856,9 @@
      */
 
     /**
-     * Replace string in PPTX
+     * Replace string in PowerPoint PPTX presentation
      * Replace all instances of a string in an Office PowerPoint Document (pptx)
-     * @param {module:model/ReplaceStringRequest} reqConfig 
+     * @param {module:model/ReplaceStringRequest} reqConfig Replacement document configuration input
      * @param {module:api/EditDocumentApi~editDocumentPptxReplaceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */
@@ -903,9 +903,9 @@
      */
 
     /**
-     * Get rows and cells from a XLSX worksheet
+     * Get rows and cells from a Excel XLSX spreadsheet, worksheet
      * Returns the rows and cells defined in the Excel Spreadsheet worksheet
-     * @param {module:model/GetXlsxColumnsRequest} input 
+     * @param {module:model/GetXlsxColumnsRequest} input Document input request
      * @param {module:api/EditDocumentApi~editDocumentXlsxGetColumnsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetXlsxColumnsResponse}
      */
@@ -950,9 +950,9 @@
      */
 
     /**
-     * Get images from a XLSX worksheet
+     * Get images from a Excel XLSX spreadsheet, worksheet
      * Returns the images defined in the Excel Spreadsheet worksheet
-     * @param {module:model/GetXlsxImagesRequest} input 
+     * @param {module:model/GetXlsxImagesRequest} input Document input request
      * @param {module:api/EditDocumentApi~editDocumentXlsxGetImagesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetXlsxImagesResponse}
      */
@@ -997,9 +997,9 @@
      */
 
     /**
-     * Get rows and cells from a XLSX worksheet
+     * Get rows and cells from a Word XLSX spreadsheet, worksheet
      * Returns the rows and cells defined in the Excel Spreadsheet worksheet
-     * @param {module:model/GetXlsxRowsAndCellsRequest} input 
+     * @param {module:model/GetXlsxRowsAndCellsRequest} input Document input request
      * @param {module:api/EditDocumentApi~editDocumentXlsxGetRowsAndCellsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetXlsxRowsAndCellsResponse}
      */
@@ -1044,9 +1044,9 @@
      */
 
     /**
-     * Get styles from a XLSX worksheet
+     * Get styles from a Excel XLSX spreadsheet, worksheet
      * Returns the style defined in the Excel Spreadsheet
-     * @param {module:model/GetXlsxStylesRequest} input 
+     * @param {module:model/GetXlsxStylesRequest} input Document input request
      * @param {module:api/EditDocumentApi~editDocumentXlsxGetStylesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetXlsxStylesResponse}
      */
@@ -1091,9 +1091,9 @@
      */
 
     /**
-     * Get worksheets from a XLSX
+     * Get worksheets from a Excel XLSX spreadsheet
      * Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
-     * @param {module:model/GetXlsxWorksheetsRequest} input 
+     * @param {module:model/GetXlsxWorksheetsRequest} input Document input request
      * @param {module:api/EditDocumentApi~editDocumentXlsxGetWorksheetsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetXlsxWorksheetsResponse}
      */
@@ -1138,9 +1138,9 @@
      */
 
     /**
-     * Insert a new worksheet into an XLSX spreadsheet
+     * Insert a new worksheet into an Excel XLSX spreadsheet
      * Inserts a new worksheet into an Excel Spreadsheet
-     * @param {module:model/InsertXlsxWorksheetRequest} input 
+     * @param {module:model/InsertXlsxWorksheetRequest} input Document input request
      * @param {module:api/EditDocumentApi~editDocumentXlsxInsertWorksheetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InsertXlsxWorksheetResponse}
      */

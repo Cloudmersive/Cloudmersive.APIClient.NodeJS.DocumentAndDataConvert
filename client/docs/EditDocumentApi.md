@@ -5,29 +5,29 @@ All URIs are relative to *https://api.cloudmersive.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**editDocumentBeginEditing**](EditDocumentApi.md#editDocumentBeginEditing) | **POST** /convert/edit/begin-editing | Begin editing a document
-[**editDocumentDocxBody**](EditDocumentApi.md#editDocumentDocxBody) | **POST** /convert/edit/docx/get-body | Get body from a DOCX
-[**editDocumentDocxGetHeadersAndFooters**](EditDocumentApi.md#editDocumentDocxGetHeadersAndFooters) | **POST** /convert/edit/docx/get-headers-and-footers | Get content of a footer from a DOCX
-[**editDocumentDocxGetImages**](EditDocumentApi.md#editDocumentDocxGetImages) | **POST** /convert/edit/docx/get-images | Get images from a DOCX
-[**editDocumentDocxGetSections**](EditDocumentApi.md#editDocumentDocxGetSections) | **POST** /convert/edit/docx/get-sections | Get sections from a DOCX
-[**editDocumentDocxGetStyles**](EditDocumentApi.md#editDocumentDocxGetStyles) | **POST** /convert/edit/docx/get-styles | Get styles from a DOCX
-[**editDocumentDocxGetTables**](EditDocumentApi.md#editDocumentDocxGetTables) | **POST** /convert/edit/docx/get-tables | Get tables in DOCX
-[**editDocumentDocxInsertImage**](EditDocumentApi.md#editDocumentDocxInsertImage) | **POST** /convert/edit/docx/insert-image | Insert image into a DOCX
-[**editDocumentDocxInsertParagraph**](EditDocumentApi.md#editDocumentDocxInsertParagraph) | **POST** /convert/edit/docx/insert-paragraph | Insert a new paragraph into a DOCX
-[**editDocumentDocxInsertTable**](EditDocumentApi.md#editDocumentDocxInsertTable) | **POST** /convert/edit/docx/insert-table | Insert a new table into a DOCX
-[**editDocumentDocxRemoveHeadersAndFooters**](EditDocumentApi.md#editDocumentDocxRemoveHeadersAndFooters) | **POST** /convert/edit/docx/remove-headers-and-footers | Remove headers and footers from DOCX
-[**editDocumentDocxRemoveObject**](EditDocumentApi.md#editDocumentDocxRemoveObject) | **POST** /convert/edit/docx/remove-object | Delete any object in a DOCX
-[**editDocumentDocxReplace**](EditDocumentApi.md#editDocumentDocxReplace) | **POST** /convert/edit/docx/replace-all | Replace string in DOCX
-[**editDocumentDocxSetFooter**](EditDocumentApi.md#editDocumentDocxSetFooter) | **POST** /convert/edit/docx/set-footer | Set the footer in a DOCX
-[**editDocumentDocxSetFooterAddPageNumber**](EditDocumentApi.md#editDocumentDocxSetFooterAddPageNumber) | **POST** /convert/edit/docx/set-footer/add-page-number | Add page number to footer in a DOCX
-[**editDocumentDocxSetHeader**](EditDocumentApi.md#editDocumentDocxSetHeader) | **POST** /convert/edit/docx/set-header | Set the header in a DOCX
+[**editDocumentDocxBody**](EditDocumentApi.md#editDocumentDocxBody) | **POST** /convert/edit/docx/get-body | Get body from a Word DOCX document
+[**editDocumentDocxGetHeadersAndFooters**](EditDocumentApi.md#editDocumentDocxGetHeadersAndFooters) | **POST** /convert/edit/docx/get-headers-and-footers | Get content of a footer from a Word DOCX document
+[**editDocumentDocxGetImages**](EditDocumentApi.md#editDocumentDocxGetImages) | **POST** /convert/edit/docx/get-images | Get images from a Word DOCX document
+[**editDocumentDocxGetSections**](EditDocumentApi.md#editDocumentDocxGetSections) | **POST** /convert/edit/docx/get-sections | Get sections from a Word DOCX document
+[**editDocumentDocxGetStyles**](EditDocumentApi.md#editDocumentDocxGetStyles) | **POST** /convert/edit/docx/get-styles | Get styles from a Word DOCX document
+[**editDocumentDocxGetTables**](EditDocumentApi.md#editDocumentDocxGetTables) | **POST** /convert/edit/docx/get-tables | Get tables in Word DOCX document
+[**editDocumentDocxInsertImage**](EditDocumentApi.md#editDocumentDocxInsertImage) | **POST** /convert/edit/docx/insert-image | Insert image into a Word DOCX document
+[**editDocumentDocxInsertParagraph**](EditDocumentApi.md#editDocumentDocxInsertParagraph) | **POST** /convert/edit/docx/insert-paragraph | Insert a new paragraph into a Word DOCX document
+[**editDocumentDocxInsertTable**](EditDocumentApi.md#editDocumentDocxInsertTable) | **POST** /convert/edit/docx/insert-table | Insert a new table into a Word DOCX document
+[**editDocumentDocxRemoveHeadersAndFooters**](EditDocumentApi.md#editDocumentDocxRemoveHeadersAndFooters) | **POST** /convert/edit/docx/remove-headers-and-footers | Remove headers and footers from Word DOCX document
+[**editDocumentDocxRemoveObject**](EditDocumentApi.md#editDocumentDocxRemoveObject) | **POST** /convert/edit/docx/remove-object | Delete any object in a Word DOCX document
+[**editDocumentDocxReplace**](EditDocumentApi.md#editDocumentDocxReplace) | **POST** /convert/edit/docx/replace-all | Replace string in Word DOCX document
+[**editDocumentDocxSetFooter**](EditDocumentApi.md#editDocumentDocxSetFooter) | **POST** /convert/edit/docx/set-footer | Set the footer in a Word DOCX document
+[**editDocumentDocxSetFooterAddPageNumber**](EditDocumentApi.md#editDocumentDocxSetFooterAddPageNumber) | **POST** /convert/edit/docx/set-footer/add-page-number | Add page number to footer in a Word DOCX document
+[**editDocumentDocxSetHeader**](EditDocumentApi.md#editDocumentDocxSetHeader) | **POST** /convert/edit/docx/set-header | Set the header in a Word DOCX document
 [**editDocumentFinishEditing**](EditDocumentApi.md#editDocumentFinishEditing) | **POST** /convert/edit/finish-editing | Download result from document editing
-[**editDocumentPptxReplace**](EditDocumentApi.md#editDocumentPptxReplace) | **POST** /convert/edit/pptx/replace-all | Replace string in PPTX
-[**editDocumentXlsxGetColumns**](EditDocumentApi.md#editDocumentXlsxGetColumns) | **POST** /convert/edit/xlsx/get-columns | Get rows and cells from a XLSX worksheet
-[**editDocumentXlsxGetImages**](EditDocumentApi.md#editDocumentXlsxGetImages) | **POST** /convert/edit/xlsx/get-images | Get images from a XLSX worksheet
-[**editDocumentXlsxGetRowsAndCells**](EditDocumentApi.md#editDocumentXlsxGetRowsAndCells) | **POST** /convert/edit/xlsx/get-rows-and-cells | Get rows and cells from a XLSX worksheet
-[**editDocumentXlsxGetStyles**](EditDocumentApi.md#editDocumentXlsxGetStyles) | **POST** /convert/edit/xlsx/get-styles | Get styles from a XLSX worksheet
-[**editDocumentXlsxGetWorksheets**](EditDocumentApi.md#editDocumentXlsxGetWorksheets) | **POST** /convert/edit/xlsx/get-worksheets | Get worksheets from a XLSX
-[**editDocumentXlsxInsertWorksheet**](EditDocumentApi.md#editDocumentXlsxInsertWorksheet) | **POST** /convert/edit/xlsx/insert-worksheet | Insert a new worksheet into an XLSX spreadsheet
+[**editDocumentPptxReplace**](EditDocumentApi.md#editDocumentPptxReplace) | **POST** /convert/edit/pptx/replace-all | Replace string in PowerPoint PPTX presentation
+[**editDocumentXlsxGetColumns**](EditDocumentApi.md#editDocumentXlsxGetColumns) | **POST** /convert/edit/xlsx/get-columns | Get rows and cells from a Excel XLSX spreadsheet, worksheet
+[**editDocumentXlsxGetImages**](EditDocumentApi.md#editDocumentXlsxGetImages) | **POST** /convert/edit/xlsx/get-images | Get images from a Excel XLSX spreadsheet, worksheet
+[**editDocumentXlsxGetRowsAndCells**](EditDocumentApi.md#editDocumentXlsxGetRowsAndCells) | **POST** /convert/edit/xlsx/get-rows-and-cells | Get rows and cells from a Word XLSX spreadsheet, worksheet
+[**editDocumentXlsxGetStyles**](EditDocumentApi.md#editDocumentXlsxGetStyles) | **POST** /convert/edit/xlsx/get-styles | Get styles from a Excel XLSX spreadsheet, worksheet
+[**editDocumentXlsxGetWorksheets**](EditDocumentApi.md#editDocumentXlsxGetWorksheets) | **POST** /convert/edit/xlsx/get-worksheets | Get worksheets from a Excel XLSX spreadsheet
+[**editDocumentXlsxInsertWorksheet**](EditDocumentApi.md#editDocumentXlsxInsertWorksheet) | **POST** /convert/edit/xlsx/insert-worksheet | Insert a new worksheet into an Excel XLSX spreadsheet
 
 
 <a name="editDocumentBeginEditing"></a>
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 # **editDocumentDocxBody**
 > GetDocxBodyResponse editDocumentDocxBody(reqConfig)
 
-Get body from a DOCX
+Get body from a Word DOCX document
 
 Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
 
@@ -104,7 +104,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.GetDocxBodyRequest(); // GetDocxBodyRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.GetDocxBodyRequest(); // GetDocxBodyRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -121,7 +121,7 @@ apiInstance.editDocumentDocxBody(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxBodyRequest**](GetDocxBodyRequest.md)|  | 
+ **reqConfig** | [**GetDocxBodyRequest**](GetDocxBodyRequest.md)| Document input request | 
 
 ### Return type
 
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 # **editDocumentDocxGetHeadersAndFooters**
 > GetDocxHeadersAndFootersResponse editDocumentDocxGetHeadersAndFooters(reqConfig)
 
-Get content of a footer from a DOCX
+Get content of a footer from a Word DOCX document
 
 Returns the footer content from a Word Document (DOCX) format file
 
@@ -157,7 +157,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.GetDocxHeadersAndFootersRequest(); // GetDocxHeadersAndFootersRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.GetDocxHeadersAndFootersRequest(); // GetDocxHeadersAndFootersRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -174,7 +174,7 @@ apiInstance.editDocumentDocxGetHeadersAndFooters(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxHeadersAndFootersRequest**](GetDocxHeadersAndFootersRequest.md)|  | 
+ **reqConfig** | [**GetDocxHeadersAndFootersRequest**](GetDocxHeadersAndFootersRequest.md)| Document input request | 
 
 ### Return type
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 # **editDocumentDocxGetImages**
 > GetDocxImagesResponse editDocumentDocxGetImages(reqConfig)
 
-Get images from a DOCX
+Get images from a Word DOCX document
 
 Returns the images defined in the Word Document (DOCX) format file
 
@@ -210,7 +210,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.GetDocxImagesRequest(); // GetDocxImagesRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.GetDocxImagesRequest(); // GetDocxImagesRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -227,7 +227,7 @@ apiInstance.editDocumentDocxGetImages(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxImagesRequest**](GetDocxImagesRequest.md)|  | 
+ **reqConfig** | [**GetDocxImagesRequest**](GetDocxImagesRequest.md)| Document input request | 
 
 ### Return type
 
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 # **editDocumentDocxGetSections**
 > GetDocxSectionsResponse editDocumentDocxGetSections(reqConfig)
 
-Get sections from a DOCX
+Get sections from a Word DOCX document
 
 Returns the sections defined in the Word Document (DOCX) format file
 
@@ -263,7 +263,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.GetDocxSectionsRequest(); // GetDocxSectionsRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.GetDocxSectionsRequest(); // GetDocxSectionsRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -280,7 +280,7 @@ apiInstance.editDocumentDocxGetSections(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxSectionsRequest**](GetDocxSectionsRequest.md)|  | 
+ **reqConfig** | [**GetDocxSectionsRequest**](GetDocxSectionsRequest.md)| Document input request | 
 
 ### Return type
 
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 # **editDocumentDocxGetStyles**
 > GetDocxStylesResponse editDocumentDocxGetStyles(reqConfig)
 
-Get styles from a DOCX
+Get styles from a Word DOCX document
 
 Returns the styles defined in the Word Document (DOCX) format file
 
@@ -316,7 +316,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.GetDocxStylesRequest(); // GetDocxStylesRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.GetDocxStylesRequest(); // GetDocxStylesRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -333,7 +333,7 @@ apiInstance.editDocumentDocxGetStyles(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxStylesRequest**](GetDocxStylesRequest.md)|  | 
+ **reqConfig** | [**GetDocxStylesRequest**](GetDocxStylesRequest.md)| Document input request | 
 
 ### Return type
 
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 # **editDocumentDocxGetTables**
 > GetDocxTablesResponse editDocumentDocxGetTables(reqConfig)
 
-Get tables in DOCX
+Get tables in Word DOCX document
 
 Returns all the table objects in an Office Word Document (docx)
 
@@ -369,7 +369,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.GetDocxTablesRequest(); // GetDocxTablesRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.GetDocxTablesRequest(); // GetDocxTablesRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -386,7 +386,7 @@ apiInstance.editDocumentDocxGetTables(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxTablesRequest**](GetDocxTablesRequest.md)|  | 
+ **reqConfig** | [**GetDocxTablesRequest**](GetDocxTablesRequest.md)| Document input request | 
 
 ### Return type
 
@@ -405,9 +405,9 @@ Name | Type | Description  | Notes
 # **editDocumentDocxInsertImage**
 > DocxInsertImageResponse editDocumentDocxInsertImage(reqConfig)
 
-Insert image into a DOCX
+Insert image into a Word DOCX document
 
-Set the footer in a Word Document (DOCX)
+Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
 
 ### Example
 ```javascript
@@ -422,7 +422,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.DocxInsertImageRequest(); // DocxInsertImageRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.DocxInsertImageRequest(); // DocxInsertImageRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -439,7 +439,7 @@ apiInstance.editDocumentDocxInsertImage(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxInsertImageRequest**](DocxInsertImageRequest.md)|  | 
+ **reqConfig** | [**DocxInsertImageRequest**](DocxInsertImageRequest.md)| Document input request | 
 
 ### Return type
 
@@ -458,9 +458,9 @@ Name | Type | Description  | Notes
 # **editDocumentDocxInsertParagraph**
 > InsertDocxInsertParagraphResponse editDocumentDocxInsertParagraph(reqConfig)
 
-Insert a new paragraph into a DOCX
+Insert a new paragraph into a Word DOCX document
 
-Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).
+Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).  Call Finish Editing on the output URL to complete the operation.
 
 ### Example
 ```javascript
@@ -475,7 +475,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.InsertDocxInsertParagraphRequest(); // InsertDocxInsertParagraphRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.InsertDocxInsertParagraphRequest(); // InsertDocxInsertParagraphRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -492,7 +492,7 @@ apiInstance.editDocumentDocxInsertParagraph(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**InsertDocxInsertParagraphRequest**](InsertDocxInsertParagraphRequest.md)|  | 
+ **reqConfig** | [**InsertDocxInsertParagraphRequest**](InsertDocxInsertParagraphRequest.md)| Document input request | 
 
 ### Return type
 
@@ -511,9 +511,9 @@ Name | Type | Description  | Notes
 # **editDocumentDocxInsertTable**
 > InsertDocxTablesResponse editDocumentDocxInsertTable(reqConfig)
 
-Insert a new table into a DOCX
+Insert a new table into a Word DOCX document
 
-Adds a new table into a DOCX and returns the result
+Adds a new table into a DOCX and returns the result.  Call Finish Editing on the output URL to complete the operation.
 
 ### Example
 ```javascript
@@ -528,7 +528,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.InsertDocxTablesRequest(); // InsertDocxTablesRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.InsertDocxTablesRequest(); // InsertDocxTablesRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -545,7 +545,7 @@ apiInstance.editDocumentDocxInsertTable(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**InsertDocxTablesRequest**](InsertDocxTablesRequest.md)|  | 
+ **reqConfig** | [**InsertDocxTablesRequest**](InsertDocxTablesRequest.md)| Document input request | 
 
 ### Return type
 
@@ -564,9 +564,9 @@ Name | Type | Description  | Notes
 # **editDocumentDocxRemoveHeadersAndFooters**
 > RemoveDocxHeadersAndFootersResponse editDocumentDocxRemoveHeadersAndFooters(reqConfig)
 
-Remove headers and footers from DOCX
+Remove headers and footers from Word DOCX document
 
-Remove all headers, or footers, or both from a Word Document (DOCX)
+Remove all headers, or footers, or both from a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
 
 ### Example
 ```javascript
@@ -581,7 +581,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersRequest(); // RemoveDocxHeadersAndFootersRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersRequest(); // RemoveDocxHeadersAndFootersRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -598,7 +598,7 @@ apiInstance.editDocumentDocxRemoveHeadersAndFooters(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**RemoveDocxHeadersAndFootersRequest**](RemoveDocxHeadersAndFootersRequest.md)|  | 
+ **reqConfig** | [**RemoveDocxHeadersAndFootersRequest**](RemoveDocxHeadersAndFootersRequest.md)| Document input request | 
 
 ### Return type
 
@@ -617,9 +617,9 @@ Name | Type | Description  | Notes
 # **editDocumentDocxRemoveObject**
 > DocxRemoveObjectResponse editDocumentDocxRemoveObject(reqConfig)
 
-Delete any object in a DOCX
+Delete any object in a Word DOCX document
 
-Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.
+Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.  Call Finish Editing on the output URL to complete the operation.
 
 ### Example
 ```javascript
@@ -634,7 +634,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.DocxRemoveObjectRequest(); // DocxRemoveObjectRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.DocxRemoveObjectRequest(); // DocxRemoveObjectRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -651,7 +651,7 @@ apiInstance.editDocumentDocxRemoveObject(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxRemoveObjectRequest**](DocxRemoveObjectRequest.md)|  | 
+ **reqConfig** | [**DocxRemoveObjectRequest**](DocxRemoveObjectRequest.md)| Document input request | 
 
 ### Return type
 
@@ -670,7 +670,7 @@ Name | Type | Description  | Notes
 # **editDocumentDocxReplace**
 > &#39;Blob&#39; editDocumentDocxReplace(reqConfig)
 
-Replace string in DOCX
+Replace string in Word DOCX document
 
 Replace all instances of a string in an Office Word Document (docx)
 
@@ -687,7 +687,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.ReplaceStringRequest(); // ReplaceStringRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.ReplaceStringRequest(); // ReplaceStringRequest | Document string replacement configuration input
 
 
 var callback = function(error, data, response) {
@@ -704,7 +704,7 @@ apiInstance.editDocumentDocxReplace(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**ReplaceStringRequest**](ReplaceStringRequest.md)|  | 
+ **reqConfig** | [**ReplaceStringRequest**](ReplaceStringRequest.md)| Document string replacement configuration input | 
 
 ### Return type
 
@@ -723,9 +723,9 @@ Name | Type | Description  | Notes
 # **editDocumentDocxSetFooter**
 > DocxSetFooterResponse editDocumentDocxSetFooter(reqConfig)
 
-Set the footer in a DOCX
+Set the footer in a Word DOCX document
 
-Set the footer in a Word Document (DOCX)
+Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
 
 ### Example
 ```javascript
@@ -740,7 +740,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.DocxSetFooterRequest(); // DocxSetFooterRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.DocxSetFooterRequest(); // DocxSetFooterRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -757,7 +757,7 @@ apiInstance.editDocumentDocxSetFooter(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxSetFooterRequest**](DocxSetFooterRequest.md)|  | 
+ **reqConfig** | [**DocxSetFooterRequest**](DocxSetFooterRequest.md)| Document input request | 
 
 ### Return type
 
@@ -776,9 +776,9 @@ Name | Type | Description  | Notes
 # **editDocumentDocxSetFooterAddPageNumber**
 > DocxSetFooterResponse editDocumentDocxSetFooterAddPageNumber(reqConfig)
 
-Add page number to footer in a DOCX
+Add page number to footer in a Word DOCX document
 
-Set the footer in a Word Document (DOCX) to contain a page number
+Set the footer in a Word Document (DOCX) to contain a page number.  Call Finish Editing on the output URL to complete the operation.
 
 ### Example
 ```javascript
@@ -793,7 +793,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.DocxSetFooterAddPageNumberRequest(); // DocxSetFooterAddPageNumberRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.DocxSetFooterAddPageNumberRequest(); // DocxSetFooterAddPageNumberRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -810,7 +810,7 @@ apiInstance.editDocumentDocxSetFooterAddPageNumber(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxSetFooterAddPageNumberRequest**](DocxSetFooterAddPageNumberRequest.md)|  | 
+ **reqConfig** | [**DocxSetFooterAddPageNumberRequest**](DocxSetFooterAddPageNumberRequest.md)| Document input request | 
 
 ### Return type
 
@@ -829,9 +829,9 @@ Name | Type | Description  | Notes
 # **editDocumentDocxSetHeader**
 > DocxSetHeaderResponse editDocumentDocxSetHeader(reqConfig)
 
-Set the header in a DOCX
+Set the header in a Word DOCX document
 
-Set the header in a Word Document (DOCX)
+Set the header in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
 
 ### Example
 ```javascript
@@ -846,7 +846,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.DocxSetHeaderRequest(); // DocxSetHeaderRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.DocxSetHeaderRequest(); // DocxSetHeaderRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -863,7 +863,7 @@ apiInstance.editDocumentDocxSetHeader(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxSetHeaderRequest**](DocxSetHeaderRequest.md)|  | 
+ **reqConfig** | [**DocxSetHeaderRequest**](DocxSetHeaderRequest.md)| Document input request | 
 
 ### Return type
 
@@ -899,7 +899,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.FinishEditingRequest(); // FinishEditingRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.FinishEditingRequest(); // FinishEditingRequest | Cloudmersive Document URL to complete editing on
 
 
 var callback = function(error, data, response) {
@@ -916,7 +916,7 @@ apiInstance.editDocumentFinishEditing(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**FinishEditingRequest**](FinishEditingRequest.md)|  | 
+ **reqConfig** | [**FinishEditingRequest**](FinishEditingRequest.md)| Cloudmersive Document URL to complete editing on | 
 
 ### Return type
 
@@ -935,7 +935,7 @@ Name | Type | Description  | Notes
 # **editDocumentPptxReplace**
 > &#39;Blob&#39; editDocumentPptxReplace(reqConfig)
 
-Replace string in PPTX
+Replace string in PowerPoint PPTX presentation
 
 Replace all instances of a string in an Office PowerPoint Document (pptx)
 
@@ -952,7 +952,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var reqConfig = new CloudmersiveConvertApiClient.ReplaceStringRequest(); // ReplaceStringRequest | 
+var reqConfig = new CloudmersiveConvertApiClient.ReplaceStringRequest(); // ReplaceStringRequest | Replacement document configuration input
 
 
 var callback = function(error, data, response) {
@@ -969,7 +969,7 @@ apiInstance.editDocumentPptxReplace(reqConfig, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reqConfig** | [**ReplaceStringRequest**](ReplaceStringRequest.md)|  | 
+ **reqConfig** | [**ReplaceStringRequest**](ReplaceStringRequest.md)| Replacement document configuration input | 
 
 ### Return type
 
@@ -988,7 +988,7 @@ Name | Type | Description  | Notes
 # **editDocumentXlsxGetColumns**
 > GetXlsxColumnsResponse editDocumentXlsxGetColumns(input)
 
-Get rows and cells from a XLSX worksheet
+Get rows and cells from a Excel XLSX spreadsheet, worksheet
 
 Returns the rows and cells defined in the Excel Spreadsheet worksheet
 
@@ -1005,7 +1005,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var input = new CloudmersiveConvertApiClient.GetXlsxColumnsRequest(); // GetXlsxColumnsRequest | 
+var input = new CloudmersiveConvertApiClient.GetXlsxColumnsRequest(); // GetXlsxColumnsRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -1022,7 +1022,7 @@ apiInstance.editDocumentXlsxGetColumns(input, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxColumnsRequest**](GetXlsxColumnsRequest.md)|  | 
+ **input** | [**GetXlsxColumnsRequest**](GetXlsxColumnsRequest.md)| Document input request | 
 
 ### Return type
 
@@ -1041,7 +1041,7 @@ Name | Type | Description  | Notes
 # **editDocumentXlsxGetImages**
 > GetXlsxImagesResponse editDocumentXlsxGetImages(input)
 
-Get images from a XLSX worksheet
+Get images from a Excel XLSX spreadsheet, worksheet
 
 Returns the images defined in the Excel Spreadsheet worksheet
 
@@ -1058,7 +1058,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var input = new CloudmersiveConvertApiClient.GetXlsxImagesRequest(); // GetXlsxImagesRequest | 
+var input = new CloudmersiveConvertApiClient.GetXlsxImagesRequest(); // GetXlsxImagesRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -1075,7 +1075,7 @@ apiInstance.editDocumentXlsxGetImages(input, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxImagesRequest**](GetXlsxImagesRequest.md)|  | 
+ **input** | [**GetXlsxImagesRequest**](GetXlsxImagesRequest.md)| Document input request | 
 
 ### Return type
 
@@ -1094,7 +1094,7 @@ Name | Type | Description  | Notes
 # **editDocumentXlsxGetRowsAndCells**
 > GetXlsxRowsAndCellsResponse editDocumentXlsxGetRowsAndCells(input)
 
-Get rows and cells from a XLSX worksheet
+Get rows and cells from a Word XLSX spreadsheet, worksheet
 
 Returns the rows and cells defined in the Excel Spreadsheet worksheet
 
@@ -1111,7 +1111,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var input = new CloudmersiveConvertApiClient.GetXlsxRowsAndCellsRequest(); // GetXlsxRowsAndCellsRequest | 
+var input = new CloudmersiveConvertApiClient.GetXlsxRowsAndCellsRequest(); // GetXlsxRowsAndCellsRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -1128,7 +1128,7 @@ apiInstance.editDocumentXlsxGetRowsAndCells(input, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxRowsAndCellsRequest**](GetXlsxRowsAndCellsRequest.md)|  | 
+ **input** | [**GetXlsxRowsAndCellsRequest**](GetXlsxRowsAndCellsRequest.md)| Document input request | 
 
 ### Return type
 
@@ -1147,7 +1147,7 @@ Name | Type | Description  | Notes
 # **editDocumentXlsxGetStyles**
 > GetXlsxStylesResponse editDocumentXlsxGetStyles(input)
 
-Get styles from a XLSX worksheet
+Get styles from a Excel XLSX spreadsheet, worksheet
 
 Returns the style defined in the Excel Spreadsheet
 
@@ -1164,7 +1164,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var input = new CloudmersiveConvertApiClient.GetXlsxStylesRequest(); // GetXlsxStylesRequest | 
+var input = new CloudmersiveConvertApiClient.GetXlsxStylesRequest(); // GetXlsxStylesRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -1181,7 +1181,7 @@ apiInstance.editDocumentXlsxGetStyles(input, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxStylesRequest**](GetXlsxStylesRequest.md)|  | 
+ **input** | [**GetXlsxStylesRequest**](GetXlsxStylesRequest.md)| Document input request | 
 
 ### Return type
 
@@ -1200,7 +1200,7 @@ Name | Type | Description  | Notes
 # **editDocumentXlsxGetWorksheets**
 > GetXlsxWorksheetsResponse editDocumentXlsxGetWorksheets(input)
 
-Get worksheets from a XLSX
+Get worksheets from a Excel XLSX spreadsheet
 
 Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
 
@@ -1217,7 +1217,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var input = new CloudmersiveConvertApiClient.GetXlsxWorksheetsRequest(); // GetXlsxWorksheetsRequest | 
+var input = new CloudmersiveConvertApiClient.GetXlsxWorksheetsRequest(); // GetXlsxWorksheetsRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -1234,7 +1234,7 @@ apiInstance.editDocumentXlsxGetWorksheets(input, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxWorksheetsRequest**](GetXlsxWorksheetsRequest.md)|  | 
+ **input** | [**GetXlsxWorksheetsRequest**](GetXlsxWorksheetsRequest.md)| Document input request | 
 
 ### Return type
 
@@ -1253,7 +1253,7 @@ Name | Type | Description  | Notes
 # **editDocumentXlsxInsertWorksheet**
 > InsertXlsxWorksheetResponse editDocumentXlsxInsertWorksheet(input)
 
-Insert a new worksheet into an XLSX spreadsheet
+Insert a new worksheet into an Excel XLSX spreadsheet
 
 Inserts a new worksheet into an Excel Spreadsheet
 
@@ -1270,7 +1270,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
-var input = new CloudmersiveConvertApiClient.InsertXlsxWorksheetRequest(); // InsertXlsxWorksheetRequest | 
+var input = new CloudmersiveConvertApiClient.InsertXlsxWorksheetRequest(); // InsertXlsxWorksheetRequest | Document input request
 
 
 var callback = function(error, data, response) {
@@ -1287,7 +1287,7 @@ apiInstance.editDocumentXlsxInsertWorksheet(input, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **input** | [**InsertXlsxWorksheetRequest**](InsertXlsxWorksheetRequest.md)|  | 
+ **input** | [**InsertXlsxWorksheetRequest**](InsertXlsxWorksheetRequest.md)| Document input request | 
 
 ### Return type
 

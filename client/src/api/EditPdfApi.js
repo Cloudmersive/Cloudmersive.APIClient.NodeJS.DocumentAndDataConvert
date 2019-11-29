@@ -33,7 +33,7 @@
   /**
    * EditPdf service.
    * @module api/EditPdfApi
-   * @version 2.1.8
+   * @version 2.1.9
    */
 
   /**
@@ -46,6 +46,68 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the editPdfDeletePages operation.
+     * @callback module:api/EditPdfApi~editPdfDeletePagesCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Remove / delete pages from a PDF document
+     * Remove one or more pages from a PDF document
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Number} pageStart Page number (1 based) to start deleting pages from (inclusive).
+     * @param {Number} pageEnd Page number (1 based) to stop deleting pages from (inclusive).
+     * @param {module:api/EditPdfApi~editPdfDeletePagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.editPdfDeletePages = function(inputFile, pageStart, pageEnd, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling editPdfDeletePages");
+      }
+
+      // verify the required parameter 'pageStart' is set
+      if (pageStart === undefined || pageStart === null) {
+        throw new Error("Missing the required parameter 'pageStart' when calling editPdfDeletePages");
+      }
+
+      // verify the required parameter 'pageEnd' is set
+      if (pageEnd === undefined || pageEnd === null) {
+        throw new Error("Missing the required parameter 'pageEnd' when calling editPdfDeletePages");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'pageStart': pageStart,
+        'pageEnd': pageEnd
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/pages/delete', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the editPdfEncrypt operation.
@@ -198,6 +260,82 @@
     }
 
     /**
+     * Callback function to receive the result of the editPdfInsertPages operation.
+     * @callback module:api/EditPdfApi~editPdfInsertPagesCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert / copy pages from one PDF document into another
+     * Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
+     * @param {File} sourceFile Source PDF file to copy pages from.
+     * @param {File} destinationFile Destination PDF file to copy pages into.
+     * @param {Number} pageStartSource Page number (1 based) to start copying pages from (inclusive) in the Source file.
+     * @param {Number} pageEndSource Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.
+     * @param {Number} pageInsertBeforeDesitnation Page number (1 based) to insert the pages before in the Destination file.
+     * @param {module:api/EditPdfApi~editPdfInsertPagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.editPdfInsertPages = function(sourceFile, destinationFile, pageStartSource, pageEndSource, pageInsertBeforeDesitnation, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'sourceFile' is set
+      if (sourceFile === undefined || sourceFile === null) {
+        throw new Error("Missing the required parameter 'sourceFile' when calling editPdfInsertPages");
+      }
+
+      // verify the required parameter 'destinationFile' is set
+      if (destinationFile === undefined || destinationFile === null) {
+        throw new Error("Missing the required parameter 'destinationFile' when calling editPdfInsertPages");
+      }
+
+      // verify the required parameter 'pageStartSource' is set
+      if (pageStartSource === undefined || pageStartSource === null) {
+        throw new Error("Missing the required parameter 'pageStartSource' when calling editPdfInsertPages");
+      }
+
+      // verify the required parameter 'pageEndSource' is set
+      if (pageEndSource === undefined || pageEndSource === null) {
+        throw new Error("Missing the required parameter 'pageEndSource' when calling editPdfInsertPages");
+      }
+
+      // verify the required parameter 'pageInsertBeforeDesitnation' is set
+      if (pageInsertBeforeDesitnation === undefined || pageInsertBeforeDesitnation === null) {
+        throw new Error("Missing the required parameter 'pageInsertBeforeDesitnation' when calling editPdfInsertPages");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'pageStartSource': pageStartSource,
+        'pageEndSource': pageEndSource,
+        'pageInsertBeforeDesitnation': pageInsertBeforeDesitnation
+      };
+      var formParams = {
+        'sourceFile': sourceFile,
+        'destinationFile': destinationFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/pages/insert', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the editPdfRasterize operation.
      * @callback module:api/EditPdfApi~editPdfRasterizeCallback
      * @param {String} error Error message, if any.
@@ -296,7 +434,7 @@
      * Callback function to receive the result of the editPdfSetMetadata operation.
      * @callback module:api/EditPdfApi~editPdfSetMetadataCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {'Blob'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -305,7 +443,7 @@
      * Sets (writes) metadata into the input PDF document, including Title, Author, etc.
      * @param {module:model/SetPdfMetadataRequest} request 
      * @param {module:api/EditPdfApi~editPdfSetMetadataCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link 'Blob'}
      */
     this.editPdfSetMetadata = function(request, callback) {
       var postBody = request;
@@ -330,7 +468,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
       var accepts = ['application/octet-stream'];
-      var returnType = Object;
+      var returnType = 'Blob';
 
       return this.apiClient.callApi(
         '/convert/edit/pdf/set-metadata', 'POST',

@@ -70,6 +70,16 @@
         done();
       });
     });
+    describe('convertWebHtmlToPng', function() {
+      it('should call convertWebHtmlToPng successfully', function(done) {
+        //uncomment below and update the code to test convertWebHtmlToPng
+        //instance.convertWebHtmlToPng(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertWebMdToHtml', function() {
       it('should call convertWebMdToHtml successfully', function(done) {
         //uncomment below and update the code to test convertWebMdToHtml
