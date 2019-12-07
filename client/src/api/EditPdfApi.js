@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/PdfFormFields', 'model/PdfMetadata', 'model/SetPdfFormFieldsRequest', 'model/SetPdfMetadataRequest'], factory);
+    define(['ApiClient', 'model/PdfFormFields', 'model/PdfMetadata', 'model/PdfTextByPageResult', 'model/SetPdfFormFieldsRequest', 'model/SetPdfMetadataRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/PdfFormFields'), require('../model/PdfMetadata'), require('../model/SetPdfFormFieldsRequest'), require('../model/SetPdfMetadataRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/PdfFormFields'), require('../model/PdfMetadata'), require('../model/PdfTextByPageResult'), require('../model/SetPdfFormFieldsRequest'), require('../model/SetPdfMetadataRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.EditPdfApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.PdfFormFields, root.CloudmersiveConvertApiClient.PdfMetadata, root.CloudmersiveConvertApiClient.SetPdfFormFieldsRequest, root.CloudmersiveConvertApiClient.SetPdfMetadataRequest);
+    root.CloudmersiveConvertApiClient.EditPdfApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.PdfFormFields, root.CloudmersiveConvertApiClient.PdfMetadata, root.CloudmersiveConvertApiClient.PdfTextByPageResult, root.CloudmersiveConvertApiClient.SetPdfFormFieldsRequest, root.CloudmersiveConvertApiClient.SetPdfMetadataRequest);
   }
-}(this, function(ApiClient, PdfFormFields, PdfMetadata, SetPdfFormFieldsRequest, SetPdfMetadataRequest) {
+}(this, function(ApiClient, PdfFormFields, PdfMetadata, PdfTextByPageResult, SetPdfFormFieldsRequest, SetPdfMetadataRequest) {
   'use strict';
 
   /**
    * EditPdf service.
    * @module api/EditPdfApi
-   * @version 2.2.0
+   * @version 2.2.1
    */
 
   /**
@@ -311,6 +311,54 @@
 
       return this.apiClient.callApi(
         '/convert/edit/pdf/get-metadata', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editPdfGetPdfTextByPages operation.
+     * @callback module:api/EditPdfApi~editPdfGetPdfTextByPagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PdfTextByPageResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get text in a PDF document by page
+     * Gets the text in a PDF by page
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/EditPdfApi~editPdfGetPdfTextByPagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/PdfTextByPageResult}
+     */
+    this.editPdfGetPdfTextByPages = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling editPdfGetPdfTextByPages");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = PdfTextByPageResult;
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/pages/get-text', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

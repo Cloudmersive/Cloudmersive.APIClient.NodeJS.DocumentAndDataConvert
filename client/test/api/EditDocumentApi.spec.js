@@ -70,6 +70,16 @@
         done();
       });
     });
+    describe('editDocumentDocxDeletePages', function() {
+      it('should call editDocumentDocxDeletePages successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxDeletePages
+        //instance.editDocumentDocxDeletePages(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentDocxGetHeadersAndFooters', function() {
       it('should call editDocumentDocxGetHeadersAndFooters successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxGetHeadersAndFooters
@@ -144,6 +154,26 @@
       it('should call editDocumentDocxInsertTable successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxInsertTable
         //instance.editDocumentDocxInsertTable(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxInsertTableRow', function() {
+      it('should call editDocumentDocxInsertTableRow successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxInsertTableRow
+        //instance.editDocumentDocxInsertTableRow(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxPages', function() {
+      it('should call editDocumentDocxPages successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxPages
+        //instance.editDocumentDocxPages(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

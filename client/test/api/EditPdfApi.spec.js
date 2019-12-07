@@ -100,6 +100,16 @@
         done();
       });
     });
+    describe('editPdfGetPdfTextByPages', function() {
+      it('should call editPdfGetPdfTextByPages successfully', function(done) {
+        //uncomment below and update the code to test editPdfGetPdfTextByPages
+        //instance.editPdfGetPdfTextByPages(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editPdfInsertPages', function() {
       it('should call editPdfInsertPages successfully', function(done) {
         //uncomment below and update the code to test editPdfInsertPages
