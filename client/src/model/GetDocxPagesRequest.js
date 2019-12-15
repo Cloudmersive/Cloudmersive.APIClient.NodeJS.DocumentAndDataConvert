@@ -36,7 +36,7 @@
   /**
    * The GetDocxPagesRequest model module.
    * @module model/GetDocxPagesRequest
-   * @version 2.2.1
+   * @version 2.2.2
    */
 
   /**

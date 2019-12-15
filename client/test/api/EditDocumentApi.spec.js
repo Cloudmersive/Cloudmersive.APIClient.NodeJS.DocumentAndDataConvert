@@ -80,6 +80,16 @@
         done();
       });
     });
+    describe('editDocumentDocxDeleteTableRow', function() {
+      it('should call editDocumentDocxDeleteTableRow successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxDeleteTableRow
+        //instance.editDocumentDocxDeleteTableRow(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentDocxGetHeadersAndFooters', function() {
       it('should call editDocumentDocxGetHeadersAndFooters successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxGetHeadersAndFooters
@@ -114,6 +124,26 @@
       it('should call editDocumentDocxGetStyles successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxGetStyles
         //instance.editDocumentDocxGetStyles(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxGetTableByIndex', function() {
+      it('should call editDocumentDocxGetTableByIndex successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxGetTableByIndex
+        //instance.editDocumentDocxGetTableByIndex(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxGetTableRow', function() {
+      it('should call editDocumentDocxGetTableRow successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxGetTableRow
+        //instance.editDocumentDocxGetTableRow(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -234,6 +264,16 @@
       it('should call editDocumentDocxSetHeader successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxSetHeader
         //instance.editDocumentDocxSetHeader(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxUpdateTableRow', function() {
+      it('should call editDocumentDocxUpdateTableRow successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxUpdateTableRow
+        //instance.editDocumentDocxUpdateTableRow(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

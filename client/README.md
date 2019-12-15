@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.2.1
+- Package version: 2.2.2
 
 
 ## Installation
@@ -174,11 +174,14 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentBeginEditing**](docs/EditDocumentApi.md#editDocumentBeginEditing) | **POST** /convert/edit/begin-editing | Begin editing a document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxBody**](docs/EditDocumentApi.md#editDocumentDocxBody) | **POST** /convert/edit/docx/get-body | Get body from a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxDeletePages**](docs/EditDocumentApi.md#editDocumentDocxDeletePages) | **POST** /convert/edit/docx/delete-pages | Delete, remove pages from a Word DOCX document
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxDeleteTableRow**](docs/EditDocumentApi.md#editDocumentDocxDeleteTableRow) | **POST** /convert/edit/docx/delete-table-row | Deletes a table row in an existing table in a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetHeadersAndFooters**](docs/EditDocumentApi.md#editDocumentDocxGetHeadersAndFooters) | **POST** /convert/edit/docx/get-headers-and-footers | Get content of a footer from a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetImages**](docs/EditDocumentApi.md#editDocumentDocxGetImages) | **POST** /convert/edit/docx/get-images | Get images from a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetSections**](docs/EditDocumentApi.md#editDocumentDocxGetSections) | **POST** /convert/edit/docx/get-sections | Get sections from a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetStyles**](docs/EditDocumentApi.md#editDocumentDocxGetStyles) | **POST** /convert/edit/docx/get-styles | Get styles from a Word DOCX document
-*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetTables**](docs/EditDocumentApi.md#editDocumentDocxGetTables) | **POST** /convert/edit/docx/get-tables | Get tables in Word DOCX document
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetTableByIndex**](docs/EditDocumentApi.md#editDocumentDocxGetTableByIndex) | **POST** /convert/edit/docx/get-table/by-index | Get a specific table by index in a Word DOCX document
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetTableRow**](docs/EditDocumentApi.md#editDocumentDocxGetTableRow) | **POST** /convert/edit/docx/get-table-row | Gets the contents of an existing table row in an existing table in a Word DOCX document
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetTables**](docs/EditDocumentApi.md#editDocumentDocxGetTables) | **POST** /convert/edit/docx/get-tables | Get all tables in Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxInsertImage**](docs/EditDocumentApi.md#editDocumentDocxInsertImage) | **POST** /convert/edit/docx/insert-image | Insert image into a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxInsertParagraph**](docs/EditDocumentApi.md#editDocumentDocxInsertParagraph) | **POST** /convert/edit/docx/insert-paragraph | Insert a new paragraph into a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxInsertTable**](docs/EditDocumentApi.md#editDocumentDocxInsertTable) | **POST** /convert/edit/docx/insert-table | Insert a new table into a Word DOCX document
@@ -190,6 +193,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxSetFooter**](docs/EditDocumentApi.md#editDocumentDocxSetFooter) | **POST** /convert/edit/docx/set-footer | Set the footer in a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxSetFooterAddPageNumber**](docs/EditDocumentApi.md#editDocumentDocxSetFooterAddPageNumber) | **POST** /convert/edit/docx/set-footer/add-page-number | Add page number to footer in a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxSetHeader**](docs/EditDocumentApi.md#editDocumentDocxSetHeader) | **POST** /convert/edit/docx/set-header | Set the header in a Word DOCX document
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxUpdateTableRow**](docs/EditDocumentApi.md#editDocumentDocxUpdateTableRow) | **POST** /convert/edit/docx/update-table-row | Update, set contents of a table row in an existing table in a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentFinishEditing**](docs/EditDocumentApi.md#editDocumentFinishEditing) | **POST** /convert/edit/finish-editing | Download result from document editing
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentPptxReplace**](docs/EditDocumentApi.md#editDocumentPptxReplace) | **POST** /convert/edit/pptx/replace-all | Replace string in PowerPoint PPTX presentation
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetColumns**](docs/EditDocumentApi.md#editDocumentXlsxGetColumns) | **POST** /convert/edit/xlsx/get-columns | Get rows and cells from a Excel XLSX spreadsheet, worksheet
@@ -239,6 +243,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.AutodetectGetInfoResult](docs/AutodetectGetInfoResult.md)
  - [CloudmersiveConvertApiClient.AutodetectToPngResult](docs/AutodetectToPngResult.md)
  - [CloudmersiveConvertApiClient.ConvertedPngPage](docs/ConvertedPngPage.md)
+ - [CloudmersiveConvertApiClient.DeleteDocxTableRowRequest](docs/DeleteDocxTableRowRequest.md)
+ - [CloudmersiveConvertApiClient.DeleteDocxTableRowResponse](docs/DeleteDocxTableRowResponse.md)
  - [CloudmersiveConvertApiClient.DocumentValidationError](docs/DocumentValidationError.md)
  - [CloudmersiveConvertApiClient.DocumentValidationResult](docs/DocumentValidationResult.md)
  - [CloudmersiveConvertApiClient.DocxBody](docs/DocxBody.md)
@@ -280,6 +286,10 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.GetDocxSectionsResponse](docs/GetDocxSectionsResponse.md)
  - [CloudmersiveConvertApiClient.GetDocxStylesRequest](docs/GetDocxStylesRequest.md)
  - [CloudmersiveConvertApiClient.GetDocxStylesResponse](docs/GetDocxStylesResponse.md)
+ - [CloudmersiveConvertApiClient.GetDocxTableByIndexRequest](docs/GetDocxTableByIndexRequest.md)
+ - [CloudmersiveConvertApiClient.GetDocxTableByIndexResponse](docs/GetDocxTableByIndexResponse.md)
+ - [CloudmersiveConvertApiClient.GetDocxTableRowRequest](docs/GetDocxTableRowRequest.md)
+ - [CloudmersiveConvertApiClient.GetDocxTableRowResponse](docs/GetDocxTableRowResponse.md)
  - [CloudmersiveConvertApiClient.GetDocxTablesRequest](docs/GetDocxTablesRequest.md)
  - [CloudmersiveConvertApiClient.GetDocxTablesResponse](docs/GetDocxTablesResponse.md)
  - [CloudmersiveConvertApiClient.GetImageInfoResult](docs/GetImageInfoResult.md)
@@ -328,6 +338,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.SplitPdfResult](docs/SplitPdfResult.md)
  - [CloudmersiveConvertApiClient.SplitXlsxWorksheetResult](docs/SplitXlsxWorksheetResult.md)
  - [CloudmersiveConvertApiClient.TextConversionResult](docs/TextConversionResult.md)
+ - [CloudmersiveConvertApiClient.UpdateDocxTableRowRequest](docs/UpdateDocxTableRowRequest.md)
+ - [CloudmersiveConvertApiClient.UpdateDocxTableRowResponse](docs/UpdateDocxTableRowResponse.md)
  - [CloudmersiveConvertApiClient.ViewerResponse](docs/ViewerResponse.md)
  - [CloudmersiveConvertApiClient.WorksheetResult](docs/WorksheetResult.md)
  - [CloudmersiveConvertApiClient.XlsxImage](docs/XlsxImage.md)

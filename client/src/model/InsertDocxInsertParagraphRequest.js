@@ -36,7 +36,7 @@
   /**
    * The InsertDocxInsertParagraphRequest model module.
    * @module model/InsertDocxInsertParagraphRequest
-   * @version 2.2.1
+   * @version 2.2.2
    */
 
   /**

@@ -104,6 +104,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property pageCount (base name: "PageCount")', function() {
+      // uncomment below and update the code to test the property pageCount
+      //var instance = new CloudmersiveConvertApiClient.PdfMetadata();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

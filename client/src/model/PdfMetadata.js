@@ -36,7 +36,7 @@
   /**
    * The PdfMetadata model module.
    * @module model/PdfMetadata
-   * @version 2.2.1
+   * @version 2.2.2
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -93,6 +94,9 @@
       if (data.hasOwnProperty('DateCreated')) {
         obj['DateCreated'] = ApiClient.convertToType(data['DateCreated'], 'Date');
       }
+      if (data.hasOwnProperty('PageCount')) {
+        obj['PageCount'] = ApiClient.convertToType(data['PageCount'], 'Number');
+      }
     }
     return obj;
   }
@@ -137,6 +141,11 @@
    * @member {Date} DateCreated
    */
   exports.prototype['DateCreated'] = undefined;
+  /**
+   * The number of pages in the document
+   * @member {Number} PageCount
+   */
+  exports.prototype['PageCount'] = undefined;
 
 
 
