@@ -36,7 +36,7 @@
   /**
    * The DocxImage model module.
    * @module model/DocxImage
-   * @version 2.2.2
+   * @version 2.2.3
    */
 
   /**

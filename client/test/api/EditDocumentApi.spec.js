@@ -70,6 +70,16 @@
         done();
       });
     });
+    describe('editDocumentDocxCreateBlankDocument', function() {
+      it('should call editDocumentDocxCreateBlankDocument successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxCreateBlankDocument
+        //instance.editDocumentDocxCreateBlankDocument(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentDocxDeletePages', function() {
       it('should call editDocumentDocxDeletePages successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxDeletePages
@@ -270,6 +280,16 @@
         done();
       });
     });
+    describe('editDocumentDocxUpdateTableCell', function() {
+      it('should call editDocumentDocxUpdateTableCell successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxUpdateTableCell
+        //instance.editDocumentDocxUpdateTableCell(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentDocxUpdateTableRow', function() {
       it('should call editDocumentDocxUpdateTableRow successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxUpdateTableRow
@@ -294,6 +314,16 @@
       it('should call editDocumentPptxReplace successfully', function(done) {
         //uncomment below and update the code to test editDocumentPptxReplace
         //instance.editDocumentPptxReplace(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentXlsxCreateBlankSpreadsheet', function() {
+      it('should call editDocumentXlsxCreateBlankSpreadsheet successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxCreateBlankSpreadsheet
+        //instance.editDocumentXlsxCreateBlankSpreadsheet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

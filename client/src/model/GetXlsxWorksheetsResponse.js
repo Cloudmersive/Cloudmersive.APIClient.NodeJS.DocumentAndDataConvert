@@ -36,7 +36,7 @@
   /**
    * The GetXlsxWorksheetsResponse model module.
    * @module model/GetXlsxWorksheetsResponse
-   * @version 2.2.2
+   * @version 2.2.3
    */
 
   /**
@@ -79,7 +79,7 @@
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * Styles in the DOCX document
+   * Worksheets in the Excel XLSX spreadsheet
    * @member {Array.<module:model/XlsxWorksheet>} Worksheets
    */
   exports.prototype['Worksheets'] = undefined;

@@ -36,7 +36,7 @@
   /**
    * The UpdateDocxTableRowRequest model module.
    * @module model/UpdateDocxTableRowRequest
-   * @version 2.2.2
+   * @version 2.2.3
    */
 
   /**
@@ -75,8 +75,8 @@
       if (data.hasOwnProperty('RowToUpdate')) {
         obj['RowToUpdate'] = DocxTableRow.constructFromObject(data['RowToUpdate']);
       }
-      if (data.hasOwnProperty('TableRowRowIndex')) {
-        obj['TableRowRowIndex'] = ApiClient.convertToType(data['TableRowRowIndex'], 'Number');
+      if (data.hasOwnProperty('TableRowIndex')) {
+        obj['TableRowIndex'] = ApiClient.convertToType(data['TableRowIndex'], 'Number');
       }
       if (data.hasOwnProperty('ExistingTablePath')) {
         obj['ExistingTablePath'] = ApiClient.convertToType(data['ExistingTablePath'], 'String');
@@ -102,9 +102,9 @@
   exports.prototype['RowToUpdate'] = undefined;
   /**
    * 0-based index of the Table Row to update
-   * @member {Number} TableRowRowIndex
+   * @member {Number} TableRowIndex
    */
-  exports.prototype['TableRowRowIndex'] = undefined;
+  exports.prototype['TableRowIndex'] = undefined;
   /**
    * Required; the path to the existing table to modify
    * @member {String} ExistingTablePath

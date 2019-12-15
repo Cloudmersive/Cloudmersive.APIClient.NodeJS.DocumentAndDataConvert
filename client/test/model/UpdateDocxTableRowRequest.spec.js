@@ -74,8 +74,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property tableRowRowIndex (base name: "TableRowRowIndex")', function() {
-      // uncomment below and update the code to test the property tableRowRowIndex
+    it('should have the property tableRowIndex (base name: "TableRowIndex")', function() {
+      // uncomment below and update the code to test the property tableRowIndex
       //var instance = new CloudmersiveConvertApiClient.UpdateDocxTableRowRequest();
       //expect(instance).to.be();
     });
