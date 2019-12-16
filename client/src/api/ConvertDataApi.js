@@ -33,7 +33,7 @@
   /**
    * ConvertData service.
    * @module api/ConvertDataApi
-   * @version 2.2.3
+   * @version 2.2.4
    */
 
   /**
@@ -85,11 +85,58 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var accepts = ['application/json'];
       var returnType = Object;
 
       return this.apiClient.callApi(
         '/convert/csv/to/json', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDataJsonToXml operation.
+     * @callback module:api/ConvertDataApi~convertDataJsonToXmlCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert JSON to XML conversion
+     * Convert a JSON object into XML
+     * @param {Object} jsonObject 
+     * @param {module:api/ConvertDataApi~convertDataJsonToXmlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.convertDataJsonToXml = function(jsonObject, callback) {
+      var postBody = jsonObject;
+
+      // verify the required parameter 'jsonObject' is set
+      if (jsonObject === undefined || jsonObject === null) {
+        throw new Error("Missing the required parameter 'jsonObject' when calling convertDataJsonToXml");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/xml'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/convert/json/to/xml', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -133,7 +180,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var accepts = ['application/json'];
       var returnType = Object;
 
       return this.apiClient.callApi(
@@ -181,7 +228,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var accepts = ['application/json'];
       var returnType = Object;
 
       return this.apiClient.callApi(
@@ -229,7 +276,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var accepts = ['application/json'];
       var returnType = Object;
 
       return this.apiClient.callApi(

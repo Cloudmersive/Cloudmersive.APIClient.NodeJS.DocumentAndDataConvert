@@ -36,7 +36,7 @@
   /**
    * The GetXlsxColumnsResponse model module.
    * @module model/GetXlsxColumnsResponse
-   * @version 2.2.3
+   * @version 2.2.4
    */
 
   /**
@@ -79,7 +79,7 @@
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * Spreadsheet Columns in the DOCX document
+   * Spreadsheet Columns in the XLSX document
    * @member {Array.<module:model/XlsxSpreadsheetColumn>} Columns
    */
   exports.prototype['Columns'] = undefined;

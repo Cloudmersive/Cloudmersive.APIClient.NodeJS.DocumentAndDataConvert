@@ -60,6 +60,16 @@
         done();
       });
     });
+    describe('convertDataJsonToXml', function() {
+      it('should call convertDataJsonToXml successfully', function(done) {
+        //uncomment below and update the code to test convertDataJsonToXml
+        //instance.convertDataJsonToXml(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDataXlsToJson', function() {
       it('should call convertDataXlsToJson successfully', function(done) {
         //uncomment below and update the code to test convertDataXlsToJson

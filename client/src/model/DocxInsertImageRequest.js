@@ -36,7 +36,7 @@
   /**
    * The DocxInsertImageRequest model module.
    * @module model/DocxInsertImageRequest
-   * @version 2.2.3
+   * @version 2.2.4
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -89,6 +91,12 @@
       if (data.hasOwnProperty('InsertPath')) {
         obj['InsertPath'] = ApiClient.convertToType(data['InsertPath'], 'String');
       }
+      if (data.hasOwnProperty('WidthInEMUs')) {
+        obj['WidthInEMUs'] = ApiClient.convertToType(data['WidthInEMUs'], 'Number');
+      }
+      if (data.hasOwnProperty('HeightInEMUs')) {
+        obj['HeightInEMUs'] = ApiClient.convertToType(data['HeightInEMUs'], 'Number');
+      }
     }
     return obj;
   }
@@ -128,6 +136,16 @@
    * @member {String} InsertPath
    */
   exports.prototype['InsertPath'] = undefined;
+  /**
+   * Optional: The width of the image in EMUs
+   * @member {Number} WidthInEMUs
+   */
+  exports.prototype['WidthInEMUs'] = undefined;
+  /**
+   * Optional: The height of the image in EMUs
+   * @member {Number} HeightInEMUs
+   */
+  exports.prototype['HeightInEMUs'] = undefined;
 
 
 

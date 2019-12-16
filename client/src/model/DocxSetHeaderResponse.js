@@ -36,7 +36,7 @@
   /**
    * The DocxSetHeaderResponse model module.
    * @module model/DocxSetHeaderResponse
-   * @version 2.2.3
+   * @version 2.2.4
    */
 
   /**

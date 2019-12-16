@@ -10,5 +10,7 @@ Name | Type | Description | Notes
 **imageToAdd** | [**DocxImage**](DocxImage.md) | Optional: Image to add; if you supply in this object, do not supply InputImageFileBytes or InputImageFileUrl. | [optional] 
 **insertPlacement** | **String** | Optional; default is DocumentEnd.  Placement Type of the insert; possible values are: DocumentStart (very beginning of the document), DocumentEnd (very end of the document), BeforeExistingObject (right before an existing object - fill in the InsertPath field using the Path value from an existing object), AfterExistingObject (right after an existing object - fill in the InsertPath field using the Path value from an existing object) | [optional] 
 **insertPath** | **String** | Optional; location within the document to insert the object; fill in the InsertPath field using the Path value from an existing object.  Used with InsertPlacement of BeforeExistingObject or AfterExistingObject | [optional] 
+**widthInEMUs** | **Number** | Optional: The width of the image in EMUs | [optional] 
+**heightInEMUs** | **Number** | Optional: The height of the image in EMUs | [optional] 
 
 

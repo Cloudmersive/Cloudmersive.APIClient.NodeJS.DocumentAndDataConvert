@@ -36,7 +36,7 @@
   /**
    * The GetImageInfoResult model module.
    * @module model/GetImageInfoResult
-   * @version 2.2.3
+   * @version 2.2.4
    */
 
   /**

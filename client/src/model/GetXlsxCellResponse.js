@@ -16,33 +16,33 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/XlsxSpreadsheetCell'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./XlsxSpreadsheetCell'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.DocxInsertImageResponse = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.GetXlsxCellResponse = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.XlsxSpreadsheetCell);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, XlsxSpreadsheetCell) {
   'use strict';
 
 
 
 
   /**
-   * The DocxInsertImageResponse model module.
-   * @module model/DocxInsertImageResponse
+   * The GetXlsxCellResponse model module.
+   * @module model/GetXlsxCellResponse
    * @version 2.2.4
    */
 
   /**
-   * Constructs a new <code>DocxInsertImageResponse</code>.
-   * Result of running a set-footer command
-   * @alias module:model/DocxInsertImageResponse
+   * Constructs a new <code>GetXlsxCellResponse</code>.
+   * Result of running a Get-Cell command
+   * @alias module:model/GetXlsxCellResponse
    * @class
    */
   var exports = function() {
@@ -53,11 +53,11 @@
   };
 
   /**
-   * Constructs a <code>DocxInsertImageResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetXlsxCellResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/DocxInsertImageResponse} obj Optional instance to populate.
-   * @return {module:model/DocxInsertImageResponse} The populated <code>DocxInsertImageResponse</code> instance.
+   * @param {module:model/GetXlsxCellResponse} obj Optional instance to populate.
+   * @return {module:model/GetXlsxCellResponse} The populated <code>GetXlsxCellResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -66,8 +66,8 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
-      if (data.hasOwnProperty('EditedDocumentURL')) {
-        obj['EditedDocumentURL'] = ApiClient.convertToType(data['EditedDocumentURL'], 'String');
+      if (data.hasOwnProperty('Cell')) {
+        obj['Cell'] = XlsxSpreadsheetCell.constructFromObject(data['Cell']);
       }
     }
     return obj;
@@ -79,10 +79,10 @@
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * URL to the edited DOCX file; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the result document contents.
-   * @member {String} EditedDocumentURL
+   * Requested Cell in the Excel XLSX document
+   * @member {module:model/XlsxSpreadsheetCell} Cell
    */
-  exports.prototype['EditedDocumentURL'] = undefined;
+  exports.prototype['Cell'] = undefined;
 
 
 

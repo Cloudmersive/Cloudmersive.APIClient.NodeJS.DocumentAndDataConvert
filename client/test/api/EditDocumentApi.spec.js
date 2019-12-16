@@ -330,6 +330,16 @@
         done();
       });
     });
+    describe('editDocumentXlsxGetCellByIndex', function() {
+      it('should call editDocumentXlsxGetCellByIndex successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxGetCellByIndex
+        //instance.editDocumentXlsxGetCellByIndex(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentXlsxGetColumns', function() {
       it('should call editDocumentXlsxGetColumns successfully', function(done) {
         //uncomment below and update the code to test editDocumentXlsxGetColumns

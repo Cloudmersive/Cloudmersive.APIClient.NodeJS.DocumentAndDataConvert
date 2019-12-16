@@ -25,7 +25,7 @@
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.InsertXlsxWorksheetRequest = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.XlsxWorksheet);
+    root.CloudmersiveConvertApiClient.GetXlsxCellRequest = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.XlsxWorksheet);
   }
 }(this, function(ApiClient, XlsxWorksheet) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The InsertXlsxWorksheetRequest model module.
-   * @module model/InsertXlsxWorksheetRequest
+   * The GetXlsxCellRequest model module.
+   * @module model/GetXlsxCellRequest
    * @version 2.2.4
    */
 
   /**
-   * Constructs a new <code>InsertXlsxWorksheetRequest</code>.
-   * Input to a Get Worksheets request
-   * @alias module:model/InsertXlsxWorksheetRequest
+   * Constructs a new <code>GetXlsxCellRequest</code>.
+   * Input to a Get Cell request
+   * @alias module:model/GetXlsxCellRequest
    * @class
    */
   var exports = function() {
@@ -51,14 +51,16 @@
 
 
 
+
+
   };
 
   /**
-   * Constructs a <code>InsertXlsxWorksheetRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetXlsxCellRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/InsertXlsxWorksheetRequest} obj Optional instance to populate.
-   * @return {module:model/InsertXlsxWorksheetRequest} The populated <code>InsertXlsxWorksheetRequest</code> instance.
+   * @param {module:model/GetXlsxCellRequest} obj Optional instance to populate.
+   * @return {module:model/GetXlsxCellRequest} The populated <code>GetXlsxCellRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -70,8 +72,14 @@
       if (data.hasOwnProperty('InputFileUrl')) {
         obj['InputFileUrl'] = ApiClient.convertToType(data['InputFileUrl'], 'String');
       }
-      if (data.hasOwnProperty('WorksheetToInsert')) {
-        obj['WorksheetToInsert'] = XlsxWorksheet.constructFromObject(data['WorksheetToInsert']);
+      if (data.hasOwnProperty('WorksheetToQuery')) {
+        obj['WorksheetToQuery'] = XlsxWorksheet.constructFromObject(data['WorksheetToQuery']);
+      }
+      if (data.hasOwnProperty('RowIndex')) {
+        obj['RowIndex'] = ApiClient.convertToType(data['RowIndex'], 'Number');
+      }
+      if (data.hasOwnProperty('CellIndex')) {
+        obj['CellIndex'] = ApiClient.convertToType(data['CellIndex'], 'Number');
       }
     }
     return obj;
@@ -88,10 +96,20 @@
    */
   exports.prototype['InputFileUrl'] = undefined;
   /**
-   * Workersheet to insert
-   * @member {module:model/XlsxWorksheet} WorksheetToInsert
+   * Optional; Worksheet (tab) within the spreadsheet to get the rows and cells of; leave blank to default to the first worksheet
+   * @member {module:model/XlsxWorksheet} WorksheetToQuery
    */
-  exports.prototype['WorksheetToInsert'] = undefined;
+  exports.prototype['WorksheetToQuery'] = undefined;
+  /**
+   * 0-based index of the row, 0, 1, 2, ... to retrieve
+   * @member {Number} RowIndex
+   */
+  exports.prototype['RowIndex'] = undefined;
+  /**
+   * 0-based index of the cell, 0, 1, 2, ... in the row to retrieve
+   * @member {Number} CellIndex
+   */
+  exports.prototype['CellIndex'] = undefined;
 
 
 

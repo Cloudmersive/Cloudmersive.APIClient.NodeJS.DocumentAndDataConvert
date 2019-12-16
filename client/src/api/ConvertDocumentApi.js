@@ -33,7 +33,7 @@
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.2.3
+   * @version 2.2.4
    */
 
   /**
@@ -618,6 +618,54 @@
 
       return this.apiClient.callApi(
         '/convert/pdf/to/docx', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentPdfToDocxRasterize operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentPdfToDocxRasterizeCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert PDF to Word DOCX Document based on rasterized version of the PDF
+     * Convert standard PDF to Office Word Documents (docx), but first rasterize the PDF.    Converts a PDF at high fidelity into Word format.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentPdfToDocxRasterizeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDocumentPdfToDocxRasterize = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentPdfToDocxRasterize");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/pdf/to/docx/rasterize', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

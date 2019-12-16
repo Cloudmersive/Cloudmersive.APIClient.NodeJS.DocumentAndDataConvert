@@ -36,7 +36,7 @@
   /**
    * The GetXlsxRowsAndCellsResponse model module.
    * @module model/GetXlsxRowsAndCellsResponse
-   * @version 2.2.3
+   * @version 2.2.4
    */
 
   /**
@@ -79,7 +79,7 @@
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * Spreadsheet Rows in the DOCX document
+   * Spreadsheet Rows in the Excel XLSX document
    * @member {Array.<module:model/XlsxSpreadsheetRow>} Rows
    */
   exports.prototype['Rows'] = undefined;

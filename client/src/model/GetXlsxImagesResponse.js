@@ -36,7 +36,7 @@
   /**
    * The GetXlsxImagesResponse model module.
    * @module model/GetXlsxImagesResponse
-   * @version 2.2.3
+   * @version 2.2.4
    */
 
   /**
@@ -79,7 +79,7 @@
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * Spreadsheet Columns in the DOCX document
+   * Spreadsheet Images in the XLSX document
    * @member {Array.<module:model/XlsxImage>} Images
    */
   exports.prototype['Images'] = undefined;

@@ -98,6 +98,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property widthInEMUs (base name: "WidthInEMUs")', function() {
+      // uncomment below and update the code to test the property widthInEMUs
+      //var instance = new CloudmersiveConvertApiClient.DocxInsertImageRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property heightInEMUs (base name: "HeightInEMUs")', function() {
+      // uncomment below and update the code to test the property heightInEMUs
+      //var instance = new CloudmersiveConvertApiClient.DocxInsertImageRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
