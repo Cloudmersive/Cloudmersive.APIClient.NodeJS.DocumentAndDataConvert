@@ -36,7 +36,7 @@
   /**
    * The PdfDocument model module.
    * @module model/PdfDocument
-   * @version 2.2.4
+   * @version 2.2.5
    */
 
   /**

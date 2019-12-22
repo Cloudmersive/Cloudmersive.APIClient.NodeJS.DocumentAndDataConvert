@@ -36,7 +36,7 @@
   /**
    * The DocxTemplateApplicationRequest model module.
    * @module model/DocxTemplateApplicationRequest
-   * @version 2.2.4
+   * @version 2.2.5
    */
 
   /**

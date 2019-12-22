@@ -36,7 +36,7 @@
   /**
    * The InsertDocxInsertParagraphResponse model module.
    * @module model/InsertDocxInsertParagraphResponse
-   * @version 2.2.4
+   * @version 2.2.5
    */
 
   /**

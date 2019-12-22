@@ -160,6 +160,16 @@
         done();
       });
     });
+    describe('convertDocumentHtmlToTxt', function() {
+      it('should call convertDocumentHtmlToTxt successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentHtmlToTxt
+        //instance.convertDocumentHtmlToTxt(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentPdfToDocx', function() {
       it('should call convertDocumentPdfToDocx successfully', function(done) {
         //uncomment below and update the code to test convertDocumentPdfToDocx

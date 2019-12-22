@@ -33,7 +33,7 @@
   /**
    * ViewerTools service.
    * @module api/ViewerToolsApi
-   * @version 2.2.4
+   * @version 2.2.5
    */
 
   /**

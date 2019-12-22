@@ -33,7 +33,7 @@
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.2.4
+   * @version 2.2.5
    */
 
   /**
@@ -200,7 +200,7 @@
      */
 
     /**
-     * Convert Document to Text
+     * Convert Document to Text (txt)
      * Automatically detect file type and convert it to Text.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT) and PDF files.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentAutodetectToTxtCallback} callback The callback function, accepting three arguments: error, data, response
@@ -440,7 +440,7 @@
      */
 
     /**
-     * Convert Word DOCX Document to Text
+     * Convert Word DOCX Document to Text (txt)
      * Convert Office Word Documents (docx) to text
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentDocxToTxtCallback} callback The callback function, accepting three arguments: error, data, response
@@ -488,7 +488,7 @@
      */
 
     /**
-     * Convert HTML to PDF Document
+     * Convert HTML document file to PDF Document
      * Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentHtmlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
@@ -536,7 +536,7 @@
      */
 
     /**
-     * Convert HTML to PNG image array
+     * Convert HTML document file to PNG image array
      * Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to an array of PNG images, one for each page.  To use external files in your HTML such as images, use an absolute URL to the file.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentHtmlToPngCallback} callback The callback function, accepting three arguments: error, data, response
@@ -570,6 +570,54 @@
 
       return this.apiClient.callApi(
         '/convert/html/to/png', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentHtmlToTxt operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentHtmlToTxtCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TextConversionResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * HTML Document file to Text (txt)
+     * HTML document to text
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentHtmlToTxtCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/TextConversionResult}
+     */
+    this.convertDocumentHtmlToTxt = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentHtmlToTxt");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = TextConversionResult;
+
+      return this.apiClient.callApi(
+        '/convert/html/to/txt', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -824,7 +872,7 @@
      */
 
     /**
-     * Convert PDF Document to Text
+     * Convert PDF Document to Text (txt)
      * PDF document to text
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentPdfToTxtCallback} callback The callback function, accepting three arguments: error, data, response
@@ -1089,7 +1137,7 @@
      */
 
     /**
-     * Convert PowerPoint PPTX Presentation to Text
+     * Convert PowerPoint PPTX Presentation to Text (txt)
      * Convert Office PowerPoint Documents (pptx) to standard Text
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentPptxToTxtCallback} callback The callback function, accepting three arguments: error, data, response
@@ -1381,7 +1429,7 @@
      */
 
     /**
-     * Convert Excel XLSX Spreadsheet to Text
+     * Convert Excel XLSX Spreadsheet to Text (txt)
      * Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentXlsxToTxtCallback} callback The callback function, accepting three arguments: error, data, response

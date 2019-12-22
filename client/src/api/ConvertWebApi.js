@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/HtmlMdResult', 'model/HtmlToOfficeRequest', 'model/HtmlToPdfRequest', 'model/HtmlToPngRequest', 'model/ScreenshotRequest'], factory);
+    define(['ApiClient', 'model/HtmlMdResult', 'model/HtmlToOfficeRequest', 'model/HtmlToPdfRequest', 'model/HtmlToPngRequest', 'model/HtmlToTextRequest', 'model/HtmlToTextResponse', 'model/ScreenshotRequest', 'model/UrlToTextRequest', 'model/UrlToTextResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/HtmlMdResult'), require('../model/HtmlToOfficeRequest'), require('../model/HtmlToPdfRequest'), require('../model/HtmlToPngRequest'), require('../model/ScreenshotRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/HtmlMdResult'), require('../model/HtmlToOfficeRequest'), require('../model/HtmlToPdfRequest'), require('../model/HtmlToPngRequest'), require('../model/HtmlToTextRequest'), require('../model/HtmlToTextResponse'), require('../model/ScreenshotRequest'), require('../model/UrlToTextRequest'), require('../model/UrlToTextResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ConvertWebApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.HtmlMdResult, root.CloudmersiveConvertApiClient.HtmlToOfficeRequest, root.CloudmersiveConvertApiClient.HtmlToPdfRequest, root.CloudmersiveConvertApiClient.HtmlToPngRequest, root.CloudmersiveConvertApiClient.ScreenshotRequest);
+    root.CloudmersiveConvertApiClient.ConvertWebApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.HtmlMdResult, root.CloudmersiveConvertApiClient.HtmlToOfficeRequest, root.CloudmersiveConvertApiClient.HtmlToPdfRequest, root.CloudmersiveConvertApiClient.HtmlToPngRequest, root.CloudmersiveConvertApiClient.HtmlToTextRequest, root.CloudmersiveConvertApiClient.HtmlToTextResponse, root.CloudmersiveConvertApiClient.ScreenshotRequest, root.CloudmersiveConvertApiClient.UrlToTextRequest, root.CloudmersiveConvertApiClient.UrlToTextResponse);
   }
-}(this, function(ApiClient, HtmlMdResult, HtmlToOfficeRequest, HtmlToPdfRequest, HtmlToPngRequest, ScreenshotRequest) {
+}(this, function(ApiClient, HtmlMdResult, HtmlToOfficeRequest, HtmlToPdfRequest, HtmlToPngRequest, HtmlToTextRequest, HtmlToTextResponse, ScreenshotRequest, UrlToTextRequest, UrlToTextResponse) {
   'use strict';
 
   /**
    * ConvertWeb service.
    * @module api/ConvertWebApi
-   * @version 2.2.4
+   * @version 2.2.5
    */
 
   /**
@@ -150,7 +150,7 @@
      */
 
     /**
-     * Convert HTML string to PNG
+     * Convert HTML string to PNG screenshot
      * Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
      * @param {module:model/HtmlToPngRequest} input HTML to PNG request parameters
      * @param {module:api/ConvertWebApi~convertWebHtmlToPngCallback} callback The callback function, accepting three arguments: error, data, response
@@ -183,6 +183,100 @@
 
       return this.apiClient.callApi(
         '/convert/web/html/to/png', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertWebHtmlToTxt operation.
+     * @callback module:api/ConvertWebApi~convertWebHtmlToTxtCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/UrlToTextResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert website URL page to text (txt)
+     * Converts a website URL page into text (txt); extracts text from HTML
+     * @param {module:model/UrlToTextRequest} input HTML to Text request parameters
+     * @param {module:api/ConvertWebApi~convertWebHtmlToTxtCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/UrlToTextResponse}
+     */
+    this.convertWebHtmlToTxt = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling convertWebHtmlToTxt");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = UrlToTextResponse;
+
+      return this.apiClient.callApi(
+        '/convert/web/url/to/txt', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertWebHtmlToTxt_0 operation.
+     * @callback module:api/ConvertWebApi~convertWebHtmlToTxt_0Callback
+     * @param {String} error Error message, if any.
+     * @param {module:model/HtmlToTextResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert HTML string to text (txt)
+     * Converts an HTML string input into text (txt); extracts text from HTML
+     * @param {module:model/HtmlToTextRequest} input HTML to Text request parameters
+     * @param {module:api/ConvertWebApi~convertWebHtmlToTxt_0Callback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/HtmlToTextResponse}
+     */
+    this.convertWebHtmlToTxt_0 = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling convertWebHtmlToTxt_0");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = HtmlToTextResponse;
+
+      return this.apiClient.callApi(
+        '/convert/web/html/to/txt', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

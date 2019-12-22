@@ -6,7 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**convertWebHtmlToDocx**](ConvertWebApi.md#convertWebHtmlToDocx) | **POST** /convert/html/to/docx | Convert HTML to Word DOCX Document
 [**convertWebHtmlToPdf**](ConvertWebApi.md#convertWebHtmlToPdf) | **POST** /convert/web/html/to/pdf | Convert HTML string to PDF
-[**convertWebHtmlToPng**](ConvertWebApi.md#convertWebHtmlToPng) | **POST** /convert/web/html/to/png | Convert HTML string to PNG
+[**convertWebHtmlToPng**](ConvertWebApi.md#convertWebHtmlToPng) | **POST** /convert/web/html/to/png | Convert HTML string to PNG screenshot
+[**convertWebHtmlToTxt**](ConvertWebApi.md#convertWebHtmlToTxt) | **POST** /convert/web/url/to/txt | Convert website URL page to text (txt)
+[**convertWebHtmlToTxt_0**](ConvertWebApi.md#convertWebHtmlToTxt_0) | **POST** /convert/web/html/to/txt | Convert HTML string to text (txt)
 [**convertWebMdToHtml**](ConvertWebApi.md#convertWebMdToHtml) | **POST** /convert/web/md/to/html | Convert Markdown to HTML
 [**convertWebUrlToPdf**](ConvertWebApi.md#convertWebUrlToPdf) | **POST** /convert/web/url/to/pdf | Convert a URL to PDF
 [**convertWebUrlToScreenshot**](ConvertWebApi.md#convertWebUrlToScreenshot) | **POST** /convert/web/url/to/screenshot | Take screenshot of URL
@@ -122,7 +124,7 @@ Name | Type | Description  | Notes
 # **convertWebHtmlToPng**
 > Object convertWebHtmlToPng(input)
 
-Convert HTML string to PNG
+Convert HTML string to PNG screenshot
 
 Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
 
@@ -161,6 +163,112 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/octet-stream
+
+<a name="convertWebHtmlToTxt"></a>
+# **convertWebHtmlToTxt**
+> UrlToTextResponse convertWebHtmlToTxt(input)
+
+Convert website URL page to text (txt)
+
+Converts a website URL page into text (txt); extracts text from HTML
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.ConvertWebApi();
+
+var input = new CloudmersiveConvertApiClient.UrlToTextRequest(); // UrlToTextRequest | HTML to Text request parameters
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.convertWebHtmlToTxt(input, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**UrlToTextRequest**](UrlToTextRequest.md)| HTML to Text request parameters | 
+
+### Return type
+
+[**UrlToTextResponse**](UrlToTextResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/octet-stream
+
+<a name="convertWebHtmlToTxt_0"></a>
+# **convertWebHtmlToTxt_0**
+> HtmlToTextResponse convertWebHtmlToTxt_0(input)
+
+Convert HTML string to text (txt)
+
+Converts an HTML string input into text (txt); extracts text from HTML
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.ConvertWebApi();
+
+var input = new CloudmersiveConvertApiClient.HtmlToTextRequest(); // HtmlToTextRequest | HTML to Text request parameters
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.convertWebHtmlToTxt_0(input, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**HtmlToTextRequest**](HtmlToTextRequest.md)| HTML to Text request parameters | 
+
+### Return type
+
+[**HtmlToTextResponse**](HtmlToTextResponse.md)
 
 ### Authorization
 

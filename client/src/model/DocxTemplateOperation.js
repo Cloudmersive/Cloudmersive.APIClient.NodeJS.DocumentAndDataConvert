@@ -36,7 +36,7 @@
   /**
    * The DocxTemplateOperation model module.
    * @module model/DocxTemplateOperation
-   * @version 2.2.4
+   * @version 2.2.5
    */
 
   /**
