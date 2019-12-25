@@ -36,7 +36,7 @@
   /**
    * The FinishEditingRequest model module.
    * @module model/FinishEditingRequest
-   * @version 2.2.5
+   * @version 2.2.6
    */
 
   /**

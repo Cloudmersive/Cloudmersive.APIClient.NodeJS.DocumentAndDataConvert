@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.2.5
+- Package version: 2.2.6
 
 
 ## Installation
@@ -132,7 +132,15 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataJsonToXml**](docs/ConvertDataApi.md#convertDataJsonToXml) | **POST** /convert/json/to/xml | Convert JSON to XML conversion
 *CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXlsToJson**](docs/ConvertDataApi.md#convertDataXlsToJson) | **POST** /convert/xls/to/json | Convert Excel (97-2003) XLS to JSON conversion
 *CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXlsxToJson**](docs/ConvertDataApi.md#convertDataXlsxToJson) | **POST** /convert/xlsx/to/json | Convert Excel XLSX to JSON conversion
+*CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlEditAddAttributeWithXPath**](docs/ConvertDataApi.md#convertDataXmlEditAddAttributeWithXPath) | **POST** /convert/xml/edit/xpath/add-attribute | Adds an attribute to all XML nodes matching XPath expression
+*CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlEditAddChildWithXPath**](docs/ConvertDataApi.md#convertDataXmlEditAddChildWithXPath) | **POST** /convert/xml/edit/xpath/add-child | Adds an XML node as a child to XML nodes matching XPath expression
+*CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlEditRemoveAllChildNodesWithXPath**](docs/ConvertDataApi.md#convertDataXmlEditRemoveAllChildNodesWithXPath) | **POST** /convert/xml/edit/xpath/remove-all-children | Removes, deletes all children of nodes matching XPath expression, but does not remove the nodes
+*CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlEditReplaceWithXPath**](docs/ConvertDataApi.md#convertDataXmlEditReplaceWithXPath) | **POST** /convert/xml/edit/xpath/replace | Replaces XML nodes matching XPath expression with new node
+*CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlEditSetValueWithXPath**](docs/ConvertDataApi.md#convertDataXmlEditSetValueWithXPath) | **POST** /convert/xml/edit/xpath/set-value | Sets the value contents of XML nodes matching XPath expression
+*CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlFilterWithXPath**](docs/ConvertDataApi.md#convertDataXmlFilterWithXPath) | **POST** /convert/xml/select/xpath | Filter, select XML nodes using XPath expression, get results
+*CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlRemoveWithXPath**](docs/ConvertDataApi.md#convertDataXmlRemoveWithXPath) | **POST** /convert/xml/edit/xpath/remove | Remove, delete XML nodes and items matching XPath expression
 *CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlToJson**](docs/ConvertDataApi.md#convertDataXmlToJson) | **POST** /convert/xml/to/json | Convert XML to JSON conversion
+*CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlTransformWithXsltToXml**](docs/ConvertDataApi.md#convertDataXmlTransformWithXsltToXml) | **POST** /convert/xml/transform/xslt/to/xml | Transform XML document file with XSLT into a new XML document
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectGetInfo**](docs/ConvertDocumentApi.md#convertDocumentAutodetectGetInfo) | **POST** /convert/autodetect/get-info | Get document type information
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectToPdf**](docs/ConvertDocumentApi.md#convertDocumentAutodetectToPdf) | **POST** /convert/autodetect/to/pdf | Convert Document to PDF
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectToPngArray**](docs/ConvertDocumentApi.md#convertDocumentAutodetectToPngArray) | **POST** /convert/autodetect/to/png | Convert Document to PNG array
@@ -368,6 +376,13 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.XlsxSpreadsheetColumn](docs/XlsxSpreadsheetColumn.md)
  - [CloudmersiveConvertApiClient.XlsxSpreadsheetRow](docs/XlsxSpreadsheetRow.md)
  - [CloudmersiveConvertApiClient.XlsxWorksheet](docs/XlsxWorksheet.md)
+ - [CloudmersiveConvertApiClient.XmlAddAttributeWithXPathResult](docs/XmlAddAttributeWithXPathResult.md)
+ - [CloudmersiveConvertApiClient.XmlAddChildWithXPathResult](docs/XmlAddChildWithXPathResult.md)
+ - [CloudmersiveConvertApiClient.XmlFIlterWithXPathResult](docs/XmlFIlterWithXPathResult.md)
+ - [CloudmersiveConvertApiClient.XmlRemoveAllChildrenWithXPathResult](docs/XmlRemoveAllChildrenWithXPathResult.md)
+ - [CloudmersiveConvertApiClient.XmlRemoveWithXPathResult](docs/XmlRemoveWithXPathResult.md)
+ - [CloudmersiveConvertApiClient.XmlReplaceWithXPathResult](docs/XmlReplaceWithXPathResult.md)
+ - [CloudmersiveConvertApiClient.XmlSetValueWithXPathResult](docs/XmlSetValueWithXPathResult.md)
 
 
 ## Documentation for Authorization

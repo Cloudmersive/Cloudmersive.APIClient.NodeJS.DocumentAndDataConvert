@@ -90,10 +90,90 @@
         done();
       });
     });
+    describe('convertDataXmlEditAddAttributeWithXPath', function() {
+      it('should call convertDataXmlEditAddAttributeWithXPath successfully', function(done) {
+        //uncomment below and update the code to test convertDataXmlEditAddAttributeWithXPath
+        //instance.convertDataXmlEditAddAttributeWithXPath(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDataXmlEditAddChildWithXPath', function() {
+      it('should call convertDataXmlEditAddChildWithXPath successfully', function(done) {
+        //uncomment below and update the code to test convertDataXmlEditAddChildWithXPath
+        //instance.convertDataXmlEditAddChildWithXPath(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDataXmlEditRemoveAllChildNodesWithXPath', function() {
+      it('should call convertDataXmlEditRemoveAllChildNodesWithXPath successfully', function(done) {
+        //uncomment below and update the code to test convertDataXmlEditRemoveAllChildNodesWithXPath
+        //instance.convertDataXmlEditRemoveAllChildNodesWithXPath(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDataXmlEditReplaceWithXPath', function() {
+      it('should call convertDataXmlEditReplaceWithXPath successfully', function(done) {
+        //uncomment below and update the code to test convertDataXmlEditReplaceWithXPath
+        //instance.convertDataXmlEditReplaceWithXPath(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDataXmlEditSetValueWithXPath', function() {
+      it('should call convertDataXmlEditSetValueWithXPath successfully', function(done) {
+        //uncomment below and update the code to test convertDataXmlEditSetValueWithXPath
+        //instance.convertDataXmlEditSetValueWithXPath(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDataXmlFilterWithXPath', function() {
+      it('should call convertDataXmlFilterWithXPath successfully', function(done) {
+        //uncomment below and update the code to test convertDataXmlFilterWithXPath
+        //instance.convertDataXmlFilterWithXPath(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDataXmlRemoveWithXPath', function() {
+      it('should call convertDataXmlRemoveWithXPath successfully', function(done) {
+        //uncomment below and update the code to test convertDataXmlRemoveWithXPath
+        //instance.convertDataXmlRemoveWithXPath(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDataXmlToJson', function() {
       it('should call convertDataXmlToJson successfully', function(done) {
         //uncomment below and update the code to test convertDataXmlToJson
         //instance.convertDataXmlToJson(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDataXmlTransformWithXsltToXml', function() {
+      it('should call convertDataXmlTransformWithXsltToXml successfully', function(done) {
+        //uncomment below and update the code to test convertDataXmlTransformWithXsltToXml
+        //instance.convertDataXmlTransformWithXsltToXml(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
