@@ -150,6 +150,26 @@
         done();
       });
     });
+    describe('convertDataXmlQueryWithXQuery', function() {
+      it('should call convertDataXmlQueryWithXQuery successfully', function(done) {
+        //uncomment below and update the code to test convertDataXmlQueryWithXQuery
+        //instance.convertDataXmlQueryWithXQuery(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDataXmlQueryWithXQueryMulti', function() {
+      it('should call convertDataXmlQueryWithXQueryMulti successfully', function(done) {
+        //uncomment below and update the code to test convertDataXmlQueryWithXQueryMulti
+        //instance.convertDataXmlQueryWithXQueryMulti(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDataXmlRemoveWithXPath', function() {
       it('should call convertDataXmlRemoveWithXPath successfully', function(done) {
         //uncomment below and update the code to test convertDataXmlRemoveWithXPath

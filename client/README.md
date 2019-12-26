@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.2.6
+- Package version: 2.2.7
 
 
 ## Installation
@@ -138,6 +138,8 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlEditReplaceWithXPath**](docs/ConvertDataApi.md#convertDataXmlEditReplaceWithXPath) | **POST** /convert/xml/edit/xpath/replace | Replaces XML nodes matching XPath expression with new node
 *CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlEditSetValueWithXPath**](docs/ConvertDataApi.md#convertDataXmlEditSetValueWithXPath) | **POST** /convert/xml/edit/xpath/set-value | Sets the value contents of XML nodes matching XPath expression
 *CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlFilterWithXPath**](docs/ConvertDataApi.md#convertDataXmlFilterWithXPath) | **POST** /convert/xml/select/xpath | Filter, select XML nodes using XPath expression, get results
+*CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlQueryWithXQuery**](docs/ConvertDataApi.md#convertDataXmlQueryWithXQuery) | **POST** /convert/xml/query/xquery | Query an XML file using XQuery query, get results
+*CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlQueryWithXQueryMulti**](docs/ConvertDataApi.md#convertDataXmlQueryWithXQueryMulti) | **POST** /convert/xml/query/xquery/multi | Query multiple XML files using XQuery query, get results
 *CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlRemoveWithXPath**](docs/ConvertDataApi.md#convertDataXmlRemoveWithXPath) | **POST** /convert/xml/edit/xpath/remove | Remove, delete XML nodes and items matching XPath expression
 *CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlToJson**](docs/ConvertDataApi.md#convertDataXmlToJson) | **POST** /convert/xml/to/json | Convert XML to JSON conversion
 *CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlTransformWithXsltToXml**](docs/ConvertDataApi.md#convertDataXmlTransformWithXsltToXml) | **POST** /convert/xml/transform/xslt/to/xml | Transform XML document file with XSLT into a new XML document
@@ -378,7 +380,9 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.XlsxWorksheet](docs/XlsxWorksheet.md)
  - [CloudmersiveConvertApiClient.XmlAddAttributeWithXPathResult](docs/XmlAddAttributeWithXPathResult.md)
  - [CloudmersiveConvertApiClient.XmlAddChildWithXPathResult](docs/XmlAddChildWithXPathResult.md)
- - [CloudmersiveConvertApiClient.XmlFIlterWithXPathResult](docs/XmlFIlterWithXPathResult.md)
+ - [CloudmersiveConvertApiClient.XmlFilterWithXPathResult](docs/XmlFilterWithXPathResult.md)
+ - [CloudmersiveConvertApiClient.XmlQueryWithXQueryMultiResult](docs/XmlQueryWithXQueryMultiResult.md)
+ - [CloudmersiveConvertApiClient.XmlQueryWithXQueryResult](docs/XmlQueryWithXQueryResult.md)
  - [CloudmersiveConvertApiClient.XmlRemoveAllChildrenWithXPathResult](docs/XmlRemoveAllChildrenWithXPathResult.md)
  - [CloudmersiveConvertApiClient.XmlRemoveWithXPathResult](docs/XmlRemoveWithXPathResult.md)
  - [CloudmersiveConvertApiClient.XmlReplaceWithXPathResult](docs/XmlReplaceWithXPathResult.md)

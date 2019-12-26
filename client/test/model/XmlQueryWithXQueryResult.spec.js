@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CloudmersiveConvertApiClient.XmlFilterWithXPathResult();
+    instance = new CloudmersiveConvertApiClient.XmlQueryWithXQueryResult();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,28 +49,28 @@
       object[property] = value;
   }
 
-  describe('XmlFilterWithXPathResult', function() {
-    it('should create an instance of XmlFilterWithXPathResult', function() {
-      // uncomment below and update the code to test XmlFilterWithXPathResult
-      //var instance = new CloudmersiveConvertApiClient.XmlFilterWithXPathResult();
-      //expect(instance).to.be.a(CloudmersiveConvertApiClient.XmlFilterWithXPathResult);
+  describe('XmlQueryWithXQueryResult', function() {
+    it('should create an instance of XmlQueryWithXQueryResult', function() {
+      // uncomment below and update the code to test XmlQueryWithXQueryResult
+      //var instance = new CloudmersiveConvertApiClient.XmlQueryWithXQueryResult();
+      //expect(instance).to.be.a(CloudmersiveConvertApiClient.XmlQueryWithXQueryResult);
     });
 
     it('should have the property successful (base name: "Successful")', function() {
       // uncomment below and update the code to test the property successful
-      //var instance = new CloudmersiveConvertApiClient.XmlFilterWithXPathResult();
+      //var instance = new CloudmersiveConvertApiClient.XmlQueryWithXQueryResult();
       //expect(instance).to.be();
     });
 
-    it('should have the property xmlNodes (base name: "XmlNodes")', function() {
-      // uncomment below and update the code to test the property xmlNodes
-      //var instance = new CloudmersiveConvertApiClient.XmlFilterWithXPathResult();
+    it('should have the property resultingXml (base name: "ResultingXml")', function() {
+      // uncomment below and update the code to test the property resultingXml
+      //var instance = new CloudmersiveConvertApiClient.XmlQueryWithXQueryResult();
       //expect(instance).to.be();
     });
 
-    it('should have the property resultCount (base name: "ResultCount")', function() {
-      // uncomment below and update the code to test the property resultCount
-      //var instance = new CloudmersiveConvertApiClient.XmlFilterWithXPathResult();
+    it('should have the property errorMessage (base name: "ErrorMessage")', function() {
+      // uncomment below and update the code to test the property errorMessage
+      //var instance = new CloudmersiveConvertApiClient.XmlQueryWithXQueryResult();
       //expect(instance).to.be();
     });
 

@@ -25,7 +25,7 @@
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.XmlFIlterWithXPathResult = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.XmlFilterWithXPathResult = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The XmlFIlterWithXPathResult model module.
-   * @module model/XmlFIlterWithXPathResult
-   * @version 2.2.6
+   * The XmlFilterWithXPathResult model module.
+   * @module model/XmlFilterWithXPathResult
+   * @version 2.2.7
    */
 
   /**
-   * Constructs a new <code>XmlFIlterWithXPathResult</code>.
+   * Constructs a new <code>XmlFilterWithXPathResult</code>.
    * Result of performing a filter operation on XML input using XPath
-   * @alias module:model/XmlFIlterWithXPathResult
+   * @alias module:model/XmlFilterWithXPathResult
    * @class
    */
   var exports = function() {
@@ -54,11 +54,11 @@
   };
 
   /**
-   * Constructs a <code>XmlFIlterWithXPathResult</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>XmlFilterWithXPathResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/XmlFIlterWithXPathResult} obj Optional instance to populate.
-   * @return {module:model/XmlFIlterWithXPathResult} The populated <code>XmlFIlterWithXPathResult</code> instance.
+   * @param {module:model/XmlFilterWithXPathResult} obj Optional instance to populate.
+   * @return {module:model/XmlFilterWithXPathResult} The populated <code>XmlFilterWithXPathResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {

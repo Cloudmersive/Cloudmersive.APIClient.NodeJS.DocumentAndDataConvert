@@ -1,4 +1,4 @@
-# CloudmersiveConvertApiClient.XmlFIlterWithXPathResult
+# CloudmersiveConvertApiClient.XmlFilterWithXPathResult
 
 ## Properties
 Name | Type | Description | Notes

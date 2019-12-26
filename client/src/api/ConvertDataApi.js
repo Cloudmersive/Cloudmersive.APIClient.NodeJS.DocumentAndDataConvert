@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/XmlAddAttributeWithXPathResult', 'model/XmlAddChildWithXPathResult', 'model/XmlFIlterWithXPathResult', 'model/XmlRemoveAllChildrenWithXPathResult', 'model/XmlRemoveWithXPathResult', 'model/XmlReplaceWithXPathResult', 'model/XmlSetValueWithXPathResult'], factory);
+    define(['ApiClient', 'model/XmlAddAttributeWithXPathResult', 'model/XmlAddChildWithXPathResult', 'model/XmlFilterWithXPathResult', 'model/XmlQueryWithXQueryMultiResult', 'model/XmlQueryWithXQueryResult', 'model/XmlRemoveAllChildrenWithXPathResult', 'model/XmlRemoveWithXPathResult', 'model/XmlReplaceWithXPathResult', 'model/XmlSetValueWithXPathResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/XmlAddAttributeWithXPathResult'), require('../model/XmlAddChildWithXPathResult'), require('../model/XmlFIlterWithXPathResult'), require('../model/XmlRemoveAllChildrenWithXPathResult'), require('../model/XmlRemoveWithXPathResult'), require('../model/XmlReplaceWithXPathResult'), require('../model/XmlSetValueWithXPathResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/XmlAddAttributeWithXPathResult'), require('../model/XmlAddChildWithXPathResult'), require('../model/XmlFilterWithXPathResult'), require('../model/XmlQueryWithXQueryMultiResult'), require('../model/XmlQueryWithXQueryResult'), require('../model/XmlRemoveAllChildrenWithXPathResult'), require('../model/XmlRemoveWithXPathResult'), require('../model/XmlReplaceWithXPathResult'), require('../model/XmlSetValueWithXPathResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ConvertDataApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.XmlAddAttributeWithXPathResult, root.CloudmersiveConvertApiClient.XmlAddChildWithXPathResult, root.CloudmersiveConvertApiClient.XmlFIlterWithXPathResult, root.CloudmersiveConvertApiClient.XmlRemoveAllChildrenWithXPathResult, root.CloudmersiveConvertApiClient.XmlRemoveWithXPathResult, root.CloudmersiveConvertApiClient.XmlReplaceWithXPathResult, root.CloudmersiveConvertApiClient.XmlSetValueWithXPathResult);
+    root.CloudmersiveConvertApiClient.ConvertDataApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.XmlAddAttributeWithXPathResult, root.CloudmersiveConvertApiClient.XmlAddChildWithXPathResult, root.CloudmersiveConvertApiClient.XmlFilterWithXPathResult, root.CloudmersiveConvertApiClient.XmlQueryWithXQueryMultiResult, root.CloudmersiveConvertApiClient.XmlQueryWithXQueryResult, root.CloudmersiveConvertApiClient.XmlRemoveAllChildrenWithXPathResult, root.CloudmersiveConvertApiClient.XmlRemoveWithXPathResult, root.CloudmersiveConvertApiClient.XmlReplaceWithXPathResult, root.CloudmersiveConvertApiClient.XmlSetValueWithXPathResult);
   }
-}(this, function(ApiClient, XmlAddAttributeWithXPathResult, XmlAddChildWithXPathResult, XmlFIlterWithXPathResult, XmlRemoveAllChildrenWithXPathResult, XmlRemoveWithXPathResult, XmlReplaceWithXPathResult, XmlSetValueWithXPathResult) {
+}(this, function(ApiClient, XmlAddAttributeWithXPathResult, XmlAddChildWithXPathResult, XmlFilterWithXPathResult, XmlQueryWithXQueryMultiResult, XmlQueryWithXQueryResult, XmlRemoveAllChildrenWithXPathResult, XmlRemoveWithXPathResult, XmlReplaceWithXPathResult, XmlSetValueWithXPathResult) {
   'use strict';
 
   /**
    * ConvertData service.
    * @module api/ConvertDataApi
-   * @version 2.2.6
+   * @version 2.2.7
    */
 
   /**
@@ -552,7 +552,7 @@
      * Callback function to receive the result of the convertDataXmlFilterWithXPath operation.
      * @callback module:api/ConvertDataApi~convertDataXmlFilterWithXPathCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/XmlFIlterWithXPathResult} data The data returned by the service call.
+     * @param {module:model/XmlFilterWithXPathResult} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -562,7 +562,7 @@
      * @param {String} xPathExpression Valid XML XPath query expression
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDataApi~convertDataXmlFilterWithXPathCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/XmlFIlterWithXPathResult}
+     * data is of type: {@link module:model/XmlFilterWithXPathResult}
      */
     this.convertDataXmlFilterWithXPath = function(xPathExpression, inputFile, callback) {
       var postBody = null;
@@ -594,10 +594,140 @@
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
-      var returnType = XmlFIlterWithXPathResult;
+      var returnType = XmlFilterWithXPathResult;
 
       return this.apiClient.callApi(
         '/convert/xml/select/xpath', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDataXmlQueryWithXQuery operation.
+     * @callback module:api/ConvertDataApi~convertDataXmlQueryWithXQueryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/XmlQueryWithXQueryResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Query an XML file using XQuery query, get results
+     * Return the reuslts of querying a single XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for a single XML document as input.  Provided XML document is automatically loaded as the default context; to access elements in the document, simply refer to them without a document reference, such as bookstore/book
+     * @param {File} inputFile Input XML file to perform the operation on.
+     * @param {String} xQuery Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported
+     * @param {module:api/ConvertDataApi~convertDataXmlQueryWithXQueryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/XmlQueryWithXQueryResult}
+     */
+    this.convertDataXmlQueryWithXQuery = function(inputFile, xQuery, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDataXmlQueryWithXQuery");
+      }
+
+      // verify the required parameter 'xQuery' is set
+      if (xQuery === undefined || xQuery === null) {
+        throw new Error("Missing the required parameter 'xQuery' when calling convertDataXmlQueryWithXQuery");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'XQuery': xQuery
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = XmlQueryWithXQueryResult;
+
+      return this.apiClient.callApi(
+        '/convert/xml/query/xquery', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDataXmlQueryWithXQueryMulti operation.
+     * @callback module:api/ConvertDataApi~convertDataXmlQueryWithXQueryMultiCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/XmlQueryWithXQueryMultiResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Query multiple XML files using XQuery query, get results
+     * Return the reuslts of querying an XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for multiple XML documents as input.  You can refer to the contents of a given document by name, for example doc(\&quot;books.xml\&quot;) or doc(\&quot;restaurants.xml\&quot;) if you included two input files named books.xml and restaurants.xml.  If input files contain no file name, they will default to file names input1.xml, input2.xml and so on.
+     * @param {File} inputFile1 First input XML file to perform the operation on.
+     * @param {String} xQuery Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported
+     * @param {Object} opts Optional parameters
+     * @param {File} opts.inputFile2 Second input XML file to perform the operation on.
+     * @param {File} opts.inputFile3 Third input XML file to perform the operation on.
+     * @param {File} opts.inputFile4 Fourth input XML file to perform the operation on.
+     * @param {File} opts.inputFile5 Fifth input XML file to perform the operation on.
+     * @param {File} opts.inputFile6 Sixth input XML file to perform the operation on.
+     * @param {File} opts.inputFile7 Seventh input XML file to perform the operation on.
+     * @param {File} opts.inputFile8 Eighth input XML file to perform the operation on.
+     * @param {File} opts.inputFile9 Ninth input XML file to perform the operation on.
+     * @param {File} opts.inputFile10 Tenth input XML file to perform the operation on.
+     * @param {module:api/ConvertDataApi~convertDataXmlQueryWithXQueryMultiCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/XmlQueryWithXQueryMultiResult}
+     */
+    this.convertDataXmlQueryWithXQueryMulti = function(inputFile1, xQuery, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile1' is set
+      if (inputFile1 === undefined || inputFile1 === null) {
+        throw new Error("Missing the required parameter 'inputFile1' when calling convertDataXmlQueryWithXQueryMulti");
+      }
+
+      // verify the required parameter 'xQuery' is set
+      if (xQuery === undefined || xQuery === null) {
+        throw new Error("Missing the required parameter 'xQuery' when calling convertDataXmlQueryWithXQueryMulti");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'XQuery': xQuery
+      };
+      var formParams = {
+        'inputFile1': inputFile1,
+        'inputFile2': opts['inputFile2'],
+        'inputFile3': opts['inputFile3'],
+        'inputFile4': opts['inputFile4'],
+        'inputFile5': opts['inputFile5'],
+        'inputFile6': opts['inputFile6'],
+        'inputFile7': opts['inputFile7'],
+        'inputFile8': opts['inputFile8'],
+        'inputFile9': opts['inputFile9'],
+        'inputFile10': opts['inputFile10']
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = XmlQueryWithXQueryMultiResult;
+
+      return this.apiClient.callApi(
+        '/convert/xml/query/xquery/multi', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

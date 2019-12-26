@@ -14,6 +14,8 @@ Method | HTTP request | Description
 [**convertDataXmlEditReplaceWithXPath**](ConvertDataApi.md#convertDataXmlEditReplaceWithXPath) | **POST** /convert/xml/edit/xpath/replace | Replaces XML nodes matching XPath expression with new node
 [**convertDataXmlEditSetValueWithXPath**](ConvertDataApi.md#convertDataXmlEditSetValueWithXPath) | **POST** /convert/xml/edit/xpath/set-value | Sets the value contents of XML nodes matching XPath expression
 [**convertDataXmlFilterWithXPath**](ConvertDataApi.md#convertDataXmlFilterWithXPath) | **POST** /convert/xml/select/xpath | Filter, select XML nodes using XPath expression, get results
+[**convertDataXmlQueryWithXQuery**](ConvertDataApi.md#convertDataXmlQueryWithXQuery) | **POST** /convert/xml/query/xquery | Query an XML file using XQuery query, get results
+[**convertDataXmlQueryWithXQueryMulti**](ConvertDataApi.md#convertDataXmlQueryWithXQueryMulti) | **POST** /convert/xml/query/xquery/multi | Query multiple XML files using XQuery query, get results
 [**convertDataXmlRemoveWithXPath**](ConvertDataApi.md#convertDataXmlRemoveWithXPath) | **POST** /convert/xml/edit/xpath/remove | Remove, delete XML nodes and items matching XPath expression
 [**convertDataXmlToJson**](ConvertDataApi.md#convertDataXmlToJson) | **POST** /convert/xml/to/json | Convert XML to JSON conversion
 [**convertDataXmlTransformWithXsltToXml**](ConvertDataApi.md#convertDataXmlTransformWithXsltToXml) | **POST** /convert/xml/transform/xslt/to/xml | Transform XML document file with XSLT into a new XML document
@@ -528,7 +530,7 @@ Name | Type | Description  | Notes
 
 <a name="convertDataXmlFilterWithXPath"></a>
 # **convertDataXmlFilterWithXPath**
-> XmlFIlterWithXPathResult convertDataXmlFilterWithXPath(xPathExpression, inputFile)
+> XmlFilterWithXPathResult convertDataXmlFilterWithXPath(xPathExpression, inputFile)
 
 Filter, select XML nodes using XPath expression, get results
 
@@ -571,7 +573,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**XmlFIlterWithXPathResult**](XmlFIlterWithXPathResult.md)
+[**XmlFilterWithXPathResult**](XmlFilterWithXPathResult.md)
 
 ### Authorization
 
@@ -580,6 +582,138 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="convertDataXmlQueryWithXQuery"></a>
+# **convertDataXmlQueryWithXQuery**
+> XmlQueryWithXQueryResult convertDataXmlQueryWithXQuery(inputFile, xQuery)
+
+Query an XML file using XQuery query, get results
+
+Return the reuslts of querying a single XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for a single XML document as input.  Provided XML document is automatically loaded as the default context; to access elements in the document, simply refer to them without a document reference, such as bookstore/book
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDataApi();
+
+var inputFile = "/path/to/file.txt"; // File | Input XML file to perform the operation on.
+
+var xQuery = "xQuery_example"; // String | Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.convertDataXmlQueryWithXQuery(inputFile, xQuery, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Input XML file to perform the operation on. | 
+ **xQuery** | **String**| Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported | 
+
+### Return type
+
+[**XmlQueryWithXQueryResult**](XmlQueryWithXQueryResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="convertDataXmlQueryWithXQueryMulti"></a>
+# **convertDataXmlQueryWithXQueryMulti**
+> XmlQueryWithXQueryMultiResult convertDataXmlQueryWithXQueryMulti(inputFile1, xQuery, opts)
+
+Query multiple XML files using XQuery query, get results
+
+Return the reuslts of querying an XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for multiple XML documents as input.  You can refer to the contents of a given document by name, for example doc(\&quot;books.xml\&quot;) or doc(\&quot;restaurants.xml\&quot;) if you included two input files named books.xml and restaurants.xml.  If input files contain no file name, they will default to file names input1.xml, input2.xml and so on.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDataApi();
+
+var inputFile1 = "/path/to/file.txt"; // File | First input XML file to perform the operation on.
+
+var xQuery = "xQuery_example"; // String | Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported
+
+var opts = { 
+  'inputFile2': "/path/to/file.txt", // File | Second input XML file to perform the operation on.
+  'inputFile3': "/path/to/file.txt", // File | Third input XML file to perform the operation on.
+  'inputFile4': "/path/to/file.txt", // File | Fourth input XML file to perform the operation on.
+  'inputFile5': "/path/to/file.txt", // File | Fifth input XML file to perform the operation on.
+  'inputFile6': "/path/to/file.txt", // File | Sixth input XML file to perform the operation on.
+  'inputFile7': "/path/to/file.txt", // File | Seventh input XML file to perform the operation on.
+  'inputFile8': "/path/to/file.txt", // File | Eighth input XML file to perform the operation on.
+  'inputFile9': "/path/to/file.txt", // File | Ninth input XML file to perform the operation on.
+  'inputFile10': "/path/to/file.txt" // File | Tenth input XML file to perform the operation on.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.convertDataXmlQueryWithXQueryMulti(inputFile1, xQuery, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile1** | **File**| First input XML file to perform the operation on. | 
+ **xQuery** | **String**| Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported | 
+ **inputFile2** | **File**| Second input XML file to perform the operation on. | [optional] 
+ **inputFile3** | **File**| Third input XML file to perform the operation on. | [optional] 
+ **inputFile4** | **File**| Fourth input XML file to perform the operation on. | [optional] 
+ **inputFile5** | **File**| Fifth input XML file to perform the operation on. | [optional] 
+ **inputFile6** | **File**| Sixth input XML file to perform the operation on. | [optional] 
+ **inputFile7** | **File**| Seventh input XML file to perform the operation on. | [optional] 
+ **inputFile8** | **File**| Eighth input XML file to perform the operation on. | [optional] 
+ **inputFile9** | **File**| Ninth input XML file to perform the operation on. | [optional] 
+ **inputFile10** | **File**| Tenth input XML file to perform the operation on. | [optional] 
+
+### Return type
+
+[**XmlQueryWithXQueryMultiResult**](XmlQueryWithXQueryMultiResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="convertDataXmlRemoveWithXPath"></a>

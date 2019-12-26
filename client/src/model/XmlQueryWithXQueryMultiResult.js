@@ -25,7 +25,7 @@
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.UrlToTextResponse = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.XmlQueryWithXQueryMultiResult = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The UrlToTextResponse model module.
-   * @module model/UrlToTextResponse
+   * The XmlQueryWithXQueryMultiResult model module.
+   * @module model/XmlQueryWithXQueryMultiResult
    * @version 2.2.7
    */
 
   /**
-   * Constructs a new <code>UrlToTextResponse</code>.
-   * Result of running the URL website to Text operation
-   * @alias module:model/UrlToTextResponse
+   * Constructs a new <code>XmlQueryWithXQueryMultiResult</code>.
+   * Result of performing an XQuery operation on multiple XML documents.
+   * @alias module:model/XmlQueryWithXQueryMultiResult
    * @class
    */
   var exports = function() {
@@ -50,14 +50,15 @@
 
 
 
+
   };
 
   /**
-   * Constructs a <code>UrlToTextResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>XmlQueryWithXQueryMultiResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/UrlToTextResponse} obj Optional instance to populate.
-   * @return {module:model/UrlToTextResponse} The populated <code>UrlToTextResponse</code> instance.
+   * @param {module:model/XmlQueryWithXQueryMultiResult} obj Optional instance to populate.
+   * @return {module:model/XmlQueryWithXQueryMultiResult} The populated <code>XmlQueryWithXQueryMultiResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -66,23 +67,31 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
-      if (data.hasOwnProperty('TextContentResult')) {
-        obj['TextContentResult'] = ApiClient.convertToType(data['TextContentResult'], 'String');
+      if (data.hasOwnProperty('ResultingXml')) {
+        obj['ResultingXml'] = ApiClient.convertToType(data['ResultingXml'], 'String');
+      }
+      if (data.hasOwnProperty('ErrorMessage')) {
+        obj['ErrorMessage'] = ApiClient.convertToType(data['ErrorMessage'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * True if successful, false otherwise
+   * True if the operation was successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * Text content result from the URL website input
-   * @member {String} TextContentResult
+   * Resulting XML result output
+   * @member {String} ResultingXml
    */
-  exports.prototype['TextContentResult'] = undefined;
+  exports.prototype['ResultingXml'] = undefined;
+  /**
+   * If an error occurs, additional details on the error
+   * @member {String} ErrorMessage
+   */
+  exports.prototype['ErrorMessage'] = undefined;
 
 
 
