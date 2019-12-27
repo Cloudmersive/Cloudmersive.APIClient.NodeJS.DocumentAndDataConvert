@@ -36,7 +36,7 @@
   /**
    * The SplitXlsxWorksheetResult model module.
    * @module model/SplitXlsxWorksheetResult
-   * @version 2.2.7
+   * @version 2.2.8
    */
 
   /**

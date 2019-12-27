@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/PdfFormFields', 'model/PdfMetadata', 'model/PdfTextByPageResult', 'model/SetPdfFormFieldsRequest', 'model/SetPdfMetadataRequest'], factory);
+    define(['ApiClient', 'model/AddPdfAnnotationRequest', 'model/GetPdfAnnotationsResult', 'model/PdfFormFields', 'model/PdfMetadata', 'model/PdfTextByPageResult', 'model/SetPdfFormFieldsRequest', 'model/SetPdfMetadataRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/PdfFormFields'), require('../model/PdfMetadata'), require('../model/PdfTextByPageResult'), require('../model/SetPdfFormFieldsRequest'), require('../model/SetPdfMetadataRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/AddPdfAnnotationRequest'), require('../model/GetPdfAnnotationsResult'), require('../model/PdfFormFields'), require('../model/PdfMetadata'), require('../model/PdfTextByPageResult'), require('../model/SetPdfFormFieldsRequest'), require('../model/SetPdfMetadataRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.EditPdfApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.PdfFormFields, root.CloudmersiveConvertApiClient.PdfMetadata, root.CloudmersiveConvertApiClient.PdfTextByPageResult, root.CloudmersiveConvertApiClient.SetPdfFormFieldsRequest, root.CloudmersiveConvertApiClient.SetPdfMetadataRequest);
+    root.CloudmersiveConvertApiClient.EditPdfApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AddPdfAnnotationRequest, root.CloudmersiveConvertApiClient.GetPdfAnnotationsResult, root.CloudmersiveConvertApiClient.PdfFormFields, root.CloudmersiveConvertApiClient.PdfMetadata, root.CloudmersiveConvertApiClient.PdfTextByPageResult, root.CloudmersiveConvertApiClient.SetPdfFormFieldsRequest, root.CloudmersiveConvertApiClient.SetPdfMetadataRequest);
   }
-}(this, function(ApiClient, PdfFormFields, PdfMetadata, PdfTextByPageResult, SetPdfFormFieldsRequest, SetPdfMetadataRequest) {
+}(this, function(ApiClient, AddPdfAnnotationRequest, GetPdfAnnotationsResult, PdfFormFields, PdfMetadata, PdfTextByPageResult, SetPdfFormFieldsRequest, SetPdfMetadataRequest) {
   'use strict';
 
   /**
    * EditPdf service.
    * @module api/EditPdfApi
-   * @version 2.2.7
+   * @version 2.2.8
    */
 
   /**
@@ -46,6 +46,53 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the editPdfAddAnnotations operation.
+     * @callback module:api/EditPdfApi~editPdfAddAnnotationsCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Add one or more PDF annotations, comments in the PDF document
+     * Adds one or more annotations, comments to a PDF document.
+     * @param {module:model/AddPdfAnnotationRequest} request 
+     * @param {module:api/EditPdfApi~editPdfAddAnnotationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.editPdfAddAnnotations = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling editPdfAddAnnotations");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/annotations/add-item', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the editPdfDecrypt operation.
@@ -215,6 +262,54 @@
 
       return this.apiClient.callApi(
         '/convert/edit/pdf/encrypt', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editPdfGetAnnotations operation.
+     * @callback module:api/EditPdfApi~editPdfGetAnnotationsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetPdfAnnotationsResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get PDF annotations, including comments in the document
+     * Enumerates the annotations, including comments and notes, in a PDF document.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/EditPdfApi~editPdfGetAnnotationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetPdfAnnotationsResult}
+     */
+    this.editPdfGetAnnotations = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling editPdfGetAnnotations");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = GetPdfAnnotationsResult;
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/annotations/list', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -483,6 +578,233 @@
 
       return this.apiClient.callApi(
         '/convert/edit/pdf/rasterize', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editPdfRemoveAllAnnotations operation.
+     * @callback module:api/EditPdfApi~editPdfRemoveAllAnnotationsCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Remove all PDF annotations, including comments in the document
+     * Removes all of the annotations, including comments and notes, in a PDF document.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/EditPdfApi~editPdfRemoveAllAnnotationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.editPdfRemoveAllAnnotations = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling editPdfRemoveAllAnnotations");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/annotations/remove-all', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editPdfRemoveAnnotationItem operation.
+     * @callback module:api/EditPdfApi~editPdfRemoveAnnotationItemCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Remove a specific PDF annotation, comment in the document
+     * Removes a specific annotation in a PDF document, using the AnnotationIndex.  To enumerate AnnotationIndex for all of the annotations in the PDF document, use the /edit/pdf/annotations/list API.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Number} annotationIndex The 0-based index of the annotation in the document
+     * @param {module:api/EditPdfApi~editPdfRemoveAnnotationItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.editPdfRemoveAnnotationItem = function(inputFile, annotationIndex, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling editPdfRemoveAnnotationItem");
+      }
+
+      // verify the required parameter 'annotationIndex' is set
+      if (annotationIndex === undefined || annotationIndex === null) {
+        throw new Error("Missing the required parameter 'annotationIndex' when calling editPdfRemoveAnnotationItem");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'annotationIndex': annotationIndex
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/annotations/remove-item', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editPdfRotateAllPages operation.
+     * @callback module:api/EditPdfApi~editPdfRotateAllPagesCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Rotate all pages in a PDF document
+     * Rotate all of the pages in a PDF document by a multiple of 90 degrees
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Number} rotationAngle The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.
+     * @param {module:api/EditPdfApi~editPdfRotateAllPagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.editPdfRotateAllPages = function(inputFile, rotationAngle, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling editPdfRotateAllPages");
+      }
+
+      // verify the required parameter 'rotationAngle' is set
+      if (rotationAngle === undefined || rotationAngle === null) {
+        throw new Error("Missing the required parameter 'rotationAngle' when calling editPdfRotateAllPages");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'rotationAngle': rotationAngle
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/pages/rotate/all', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editPdfRotatePageRange operation.
+     * @callback module:api/EditPdfApi~editPdfRotatePageRangeCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Rotate a range, subset of pages in a PDF document
+     * Rotate a range of specific pages in a PDF document by a multiple of 90 degrees
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Number} rotationAngle The angle to rotate the page in degrees, must be a multiple of 90 degrees, e.g. 90, 180, 270, or -90, -180, -270, etc.
+     * @param {Number} pageStart Page number (1 based) to start rotating pages from (inclusive).
+     * @param {Number} pageEnd Page number (1 based) to stop rotating pages from (inclusive).
+     * @param {module:api/EditPdfApi~editPdfRotatePageRangeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.editPdfRotatePageRange = function(inputFile, rotationAngle, pageStart, pageEnd, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling editPdfRotatePageRange");
+      }
+
+      // verify the required parameter 'rotationAngle' is set
+      if (rotationAngle === undefined || rotationAngle === null) {
+        throw new Error("Missing the required parameter 'rotationAngle' when calling editPdfRotatePageRange");
+      }
+
+      // verify the required parameter 'pageStart' is set
+      if (pageStart === undefined || pageStart === null) {
+        throw new Error("Missing the required parameter 'pageStart' when calling editPdfRotatePageRange");
+      }
+
+      // verify the required parameter 'pageEnd' is set
+      if (pageEnd === undefined || pageEnd === null) {
+        throw new Error("Missing the required parameter 'pageEnd' when calling editPdfRotatePageRange");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'rotationAngle': rotationAngle,
+        'pageStart': pageStart,
+        'pageEnd': pageEnd
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/pages/rotate/page-range', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

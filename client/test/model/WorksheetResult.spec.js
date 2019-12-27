@@ -74,6 +74,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property worksheetContents (base name: "WorksheetContents")', function() {
+      // uncomment below and update the code to test the property worksheetContents
+      //var instance = new CloudmersiveConvertApiClient.WorksheetResult();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

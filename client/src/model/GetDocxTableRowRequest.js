@@ -36,7 +36,7 @@
   /**
    * The GetDocxTableRowRequest model module.
    * @module model/GetDocxTableRowRequest
-   * @version 2.2.7
+   * @version 2.2.8
    */
 
   /**

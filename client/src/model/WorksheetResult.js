@@ -36,7 +36,7 @@
   /**
    * The WorksheetResult model module.
    * @module model/WorksheetResult
-   * @version 2.2.7
+   * @version 2.2.8
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -73,6 +74,9 @@
       if (data.hasOwnProperty('URL')) {
         obj['URL'] = ApiClient.convertToType(data['URL'], 'String');
       }
+      if (data.hasOwnProperty('WorksheetContents')) {
+        obj['WorksheetContents'] = ApiClient.convertToType(data['WorksheetContents'], 'Blob');
+      }
     }
     return obj;
   }
@@ -92,6 +96,11 @@
    * @member {String} URL
    */
   exports.prototype['URL'] = undefined;
+  /**
+   * Contents of the worksheet in bytes
+   * @member {Blob} WorksheetContents
+   */
+  exports.prototype['WorksheetContents'] = undefined;
 
 
 

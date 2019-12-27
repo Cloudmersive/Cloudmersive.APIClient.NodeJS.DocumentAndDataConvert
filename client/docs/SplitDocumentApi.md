@@ -5,6 +5,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**splitDocumentPdfByPage**](SplitDocumentApi.md#splitDocumentPdfByPage) | **POST** /convert/split/pdf | Split a PDF file into separate PDF files, one per page
+[**splitDocumentPptx**](SplitDocumentApi.md#splitDocumentPptx) | **POST** /convert/split/pptx | Split a single PowerPoint Presentation PPTX into Separate Slides
 [**splitDocumentXlsx**](SplitDocumentApi.md#splitDocumentXlsx) | **POST** /convert/split/xlsx | Split a single Excel XLSX into Separate Worksheets
 
 
@@ -65,9 +66,66 @@ Name | Type | Description  | Notes
  - **Content-Type**: multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml
 
+<a name="splitDocumentPptx"></a>
+# **splitDocumentPptx**
+> SplitPptxPresentationResult splitDocumentPptx(inputFile, opts)
+
+Split a single PowerPoint Presentation PPTX into Separate Slides
+
+Split an PowerPoint PPTX Presentation, comprised of multiple slides into separate PowerPoint PPTX presentation files, with each containing exactly one slide.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.SplitDocumentApi();
+
+var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
+
+var opts = { 
+  'returnDocumentContents': true // Boolean | Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.splitDocumentPptx(inputFile, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Input file to perform the operation on. | 
+ **returnDocumentContents** | **Boolean**| Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true. | [optional] 
+
+### Return type
+
+[**SplitPptxPresentationResult**](SplitPptxPresentationResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
 <a name="splitDocumentXlsx"></a>
 # **splitDocumentXlsx**
-> SplitXlsxWorksheetResult splitDocumentXlsx(inputFile)
+> SplitXlsxWorksheetResult splitDocumentXlsx(inputFile, opts)
 
 Split a single Excel XLSX into Separate Worksheets
 
@@ -88,6 +146,9 @@ var apiInstance = new CloudmersiveConvertApiClient.SplitDocumentApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
+var opts = { 
+  'returnDocumentContents': true // Boolean | Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true.
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -96,7 +157,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.splitDocumentXlsx(inputFile, callback);
+apiInstance.splitDocumentXlsx(inputFile, opts, callback);
 ```
 
 ### Parameters
@@ -104,6 +165,7 @@ apiInstance.splitDocumentXlsx(inputFile, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **File**| Input file to perform the operation on. | 
+ **returnDocumentContents** | **Boolean**| Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true. | [optional] 
 
 ### Return type
 

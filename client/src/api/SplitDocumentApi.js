@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SplitPdfResult', 'model/SplitXlsxWorksheetResult'], factory);
+    define(['ApiClient', 'model/SplitPdfResult', 'model/SplitPptxPresentationResult', 'model/SplitXlsxWorksheetResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/SplitPdfResult'), require('../model/SplitXlsxWorksheetResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/SplitPdfResult'), require('../model/SplitPptxPresentationResult'), require('../model/SplitXlsxWorksheetResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.SplitDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.SplitPdfResult, root.CloudmersiveConvertApiClient.SplitXlsxWorksheetResult);
+    root.CloudmersiveConvertApiClient.SplitDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.SplitPdfResult, root.CloudmersiveConvertApiClient.SplitPptxPresentationResult, root.CloudmersiveConvertApiClient.SplitXlsxWorksheetResult);
   }
-}(this, function(ApiClient, SplitPdfResult, SplitXlsxWorksheetResult) {
+}(this, function(ApiClient, SplitPdfResult, SplitPptxPresentationResult, SplitXlsxWorksheetResult) {
   'use strict';
 
   /**
    * SplitDocument service.
    * @module api/SplitDocumentApi
-   * @version 2.2.7
+   * @version 2.2.8
    */
 
   /**
@@ -100,6 +100,58 @@
     }
 
     /**
+     * Callback function to receive the result of the splitDocumentPptx operation.
+     * @callback module:api/SplitDocumentApi~splitDocumentPptxCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SplitPptxPresentationResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Split a single PowerPoint Presentation PPTX into Separate Slides
+     * Split an PowerPoint PPTX Presentation, comprised of multiple slides into separate PowerPoint PPTX presentation files, with each containing exactly one slide.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.returnDocumentContents Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true.
+     * @param {module:api/SplitDocumentApi~splitDocumentPptxCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SplitPptxPresentationResult}
+     */
+    this.splitDocumentPptx = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling splitDocumentPptx");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'returnDocumentContents': opts['returnDocumentContents']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = SplitPptxPresentationResult;
+
+      return this.apiClient.callApi(
+        '/convert/split/pptx', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the splitDocumentXlsx operation.
      * @callback module:api/SplitDocumentApi~splitDocumentXlsxCallback
      * @param {String} error Error message, if any.
@@ -111,10 +163,13 @@
      * Split a single Excel XLSX into Separate Worksheets
      * Split an Excel XLSX Spreadsheet, comprised of multiple Worksheets (or Tabs) into separate Excel XLSX spreadsheet files, with each containing exactly one Worksheet.
      * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.returnDocumentContents Set to true to return the contents of each Worksheet directly, set to false to only return URLs to each resulting worksheet.  Default is true.
      * @param {module:api/SplitDocumentApi~splitDocumentXlsxCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SplitXlsxWorksheetResult}
      */
-    this.splitDocumentXlsx = function(inputFile, callback) {
+    this.splitDocumentXlsx = function(inputFile, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'inputFile' is set
@@ -130,6 +185,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'returnDocumentContents': opts['returnDocumentContents']
       };
       var formParams = {
         'inputFile': inputFile

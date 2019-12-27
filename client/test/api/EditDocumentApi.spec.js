@@ -310,6 +310,16 @@
         done();
       });
     });
+    describe('editDocumentPptxDeleteSlides', function() {
+      it('should call editDocumentPptxDeleteSlides successfully', function(done) {
+        //uncomment below and update the code to test editDocumentPptxDeleteSlides
+        //instance.editDocumentPptxDeleteSlides(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentPptxReplace', function() {
       it('should call editDocumentPptxReplace successfully', function(done) {
         //uncomment below and update the code to test editDocumentPptxReplace

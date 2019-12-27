@@ -36,7 +36,7 @@
   /**
    * The DocxRemoveObjectRequest model module.
    * @module model/DocxRemoveObjectRequest
-   * @version 2.2.7
+   * @version 2.2.8
    */
 
   /**

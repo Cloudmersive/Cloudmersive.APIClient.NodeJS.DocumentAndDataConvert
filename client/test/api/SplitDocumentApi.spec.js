@@ -60,6 +60,16 @@
         done();
       });
     });
+    describe('splitDocumentPptx', function() {
+      it('should call splitDocumentPptx successfully', function(done) {
+        //uncomment below and update the code to test splitDocumentPptx
+        //instance.splitDocumentPptx(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('splitDocumentXlsx', function() {
       it('should call splitDocumentXlsx successfully', function(done) {
         //uncomment below and update the code to test splitDocumentXlsx

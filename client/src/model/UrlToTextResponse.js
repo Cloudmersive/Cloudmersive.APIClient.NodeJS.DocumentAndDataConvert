@@ -36,7 +36,7 @@
   /**
    * The UrlToTextResponse model module.
    * @module model/UrlToTextResponse
-   * @version 2.2.7
+   * @version 2.2.8
    */
 
   /**

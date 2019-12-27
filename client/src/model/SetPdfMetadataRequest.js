@@ -36,11 +36,12 @@
   /**
    * The SetPdfMetadataRequest model module.
    * @module model/SetPdfMetadataRequest
-   * @version 2.2.7
+   * @version 2.2.8
    */
 
   /**
    * Constructs a new <code>SetPdfMetadataRequest</code>.
+   * Request to set PDF metadata
    * @alias module:model/SetPdfMetadataRequest
    * @class
    */
@@ -73,10 +74,12 @@
   }
 
   /**
+   * Input file contents bytes for the file to modify
    * @member {Blob} InputFileBytes
    */
   exports.prototype['InputFileBytes'] = undefined;
   /**
+   * PDF metadata to set on the file
    * @member {module:model/PdfMetadata} MetadataToSet
    */
   exports.prototype['MetadataToSet'] = undefined;

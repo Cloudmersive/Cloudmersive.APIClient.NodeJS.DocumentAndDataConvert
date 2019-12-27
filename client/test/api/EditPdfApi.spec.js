@@ -50,6 +50,16 @@
   }
 
   describe('EditPdfApi', function() {
+    describe('editPdfAddAnnotations', function() {
+      it('should call editPdfAddAnnotations successfully', function(done) {
+        //uncomment below and update the code to test editPdfAddAnnotations
+        //instance.editPdfAddAnnotations(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editPdfDecrypt', function() {
       it('should call editPdfDecrypt successfully', function(done) {
         //uncomment below and update the code to test editPdfDecrypt
@@ -74,6 +84,16 @@
       it('should call editPdfEncrypt successfully', function(done) {
         //uncomment below and update the code to test editPdfEncrypt
         //instance.editPdfEncrypt(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editPdfGetAnnotations', function() {
+      it('should call editPdfGetAnnotations successfully', function(done) {
+        //uncomment below and update the code to test editPdfGetAnnotations
+        //instance.editPdfGetAnnotations(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -124,6 +144,46 @@
       it('should call editPdfRasterize successfully', function(done) {
         //uncomment below and update the code to test editPdfRasterize
         //instance.editPdfRasterize(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editPdfRemoveAllAnnotations', function() {
+      it('should call editPdfRemoveAllAnnotations successfully', function(done) {
+        //uncomment below and update the code to test editPdfRemoveAllAnnotations
+        //instance.editPdfRemoveAllAnnotations(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editPdfRemoveAnnotationItem', function() {
+      it('should call editPdfRemoveAnnotationItem successfully', function(done) {
+        //uncomment below and update the code to test editPdfRemoveAnnotationItem
+        //instance.editPdfRemoveAnnotationItem(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editPdfRotateAllPages', function() {
+      it('should call editPdfRotateAllPages successfully', function(done) {
+        //uncomment below and update the code to test editPdfRotateAllPages
+        //instance.editPdfRotateAllPages(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editPdfRotatePageRange', function() {
+      it('should call editPdfRotatePageRange successfully', function(done) {
+        //uncomment below and update the code to test editPdfRotatePageRange
+        //instance.editPdfRotatePageRange(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

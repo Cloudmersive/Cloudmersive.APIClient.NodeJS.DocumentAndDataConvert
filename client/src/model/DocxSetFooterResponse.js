@@ -36,7 +36,7 @@
   /**
    * The DocxSetFooterResponse model module.
    * @module model/DocxSetFooterResponse
-   * @version 2.2.7
+   * @version 2.2.8
    */
 
   /**
