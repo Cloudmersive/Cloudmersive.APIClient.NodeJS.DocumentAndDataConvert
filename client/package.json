@@ -3,6 +3,10 @@
   "version": "2.2.9",
   "description": "Convert_API_lets_you_effortlessly_convert_file_formats_and_types_",
   "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cloudmersive/Cloudmersive.APIClient.NodeJS.DocumentAndDataConvert"
+  },
   "main": "src/index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --recursive"
