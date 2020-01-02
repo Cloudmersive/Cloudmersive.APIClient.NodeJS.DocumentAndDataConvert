@@ -16,33 +16,33 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/SplitDocumentResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./SplitDocumentResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.DocxSetHeaderResponse = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.SplitDocxDocumentResult = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.SplitDocumentResult);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, SplitDocumentResult) {
   'use strict';
 
 
 
 
   /**
-   * The DocxSetHeaderResponse model module.
-   * @module model/DocxSetHeaderResponse
+   * The SplitDocxDocumentResult model module.
+   * @module model/SplitDocxDocumentResult
    * @version 2.2.9
    */
 
   /**
-   * Constructs a new <code>DocxSetHeaderResponse</code>.
-   * Result of running a set-header command
-   * @alias module:model/DocxSetHeaderResponse
+   * Constructs a new <code>SplitDocxDocumentResult</code>.
+   * The result of splitting a Word document into individual Word DOCX pages
+   * @alias module:model/SplitDocxDocumentResult
    * @class
    */
   var exports = function() {
@@ -53,36 +53,35 @@
   };
 
   /**
-   * Constructs a <code>DocxSetHeaderResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>SplitDocxDocumentResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/DocxSetHeaderResponse} obj Optional instance to populate.
-   * @return {module:model/DocxSetHeaderResponse} The populated <code>DocxSetHeaderResponse</code> instance.
+   * @param {module:model/SplitDocxDocumentResult} obj Optional instance to populate.
+   * @return {module:model/SplitDocxDocumentResult} The populated <code>SplitDocxDocumentResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('ResultDocuments')) {
+        obj['ResultDocuments'] = ApiClient.convertToType(data['ResultDocuments'], [SplitDocumentResult]);
+      }
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
-      }
-      if (data.hasOwnProperty('EditedDocumentURL')) {
-        obj['EditedDocumentURL'] = ApiClient.convertToType(data['EditedDocumentURL'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * True if successful, false otherwise
+   * @member {Array.<module:model/SplitDocumentResult>} ResultDocuments
+   */
+  exports.prototype['ResultDocuments'] = undefined;
+  /**
+   * True if the operation was successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
-  /**
-   * URL to the edited DOCX file; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the result document contents.
-   * @member {String} EditedDocumentURL
-   */
-  exports.prototype['EditedDocumentURL'] = undefined;
 
 
 

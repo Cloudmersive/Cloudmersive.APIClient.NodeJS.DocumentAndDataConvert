@@ -36,7 +36,7 @@
   /**
    * The XmlQueryWithXQueryResult model module.
    * @module model/XmlQueryWithXQueryResult
-   * @version 2.2.8
+   * @version 2.2.9
    */
 
   /**

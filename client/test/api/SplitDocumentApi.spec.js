@@ -50,6 +50,16 @@
   }
 
   describe('SplitDocumentApi', function() {
+    describe('splitDocumentDocx', function() {
+      it('should call splitDocumentDocx successfully', function(done) {
+        //uncomment below and update the code to test splitDocumentDocx
+        //instance.splitDocumentDocx(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('splitDocumentPdfByPage', function() {
       it('should call splitDocumentPdfByPage successfully', function(done) {
         //uncomment below and update the code to test splitDocumentPdfByPage

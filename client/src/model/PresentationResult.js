@@ -36,7 +36,7 @@
   /**
    * The PresentationResult model module.
    * @module model/PresentationResult
-   * @version 2.2.8
+   * @version 2.2.9
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The XmlSetValueWithXPathResult model module.
    * @module model/XmlSetValueWithXPathResult
-   * @version 2.2.8
+   * @version 2.2.9
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The XmlAddChildWithXPathResult model module.
    * @module model/XmlAddChildWithXPathResult
-   * @version 2.2.8
+   * @version 2.2.9
    */
 
   /**

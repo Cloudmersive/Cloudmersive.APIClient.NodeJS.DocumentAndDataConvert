@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.2.8
+- Package version: 2.2.9
 
 
 ## Installation
@@ -249,6 +249,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPptxMulti**](docs/MergeDocumentApi.md#mergeDocumentPptxMulti) | **POST** /convert/merge/pptx/multi | Merge Multple PowerPoint PPTX Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentXlsx**](docs/MergeDocumentApi.md#mergeDocumentXlsx) | **POST** /convert/merge/xlsx | Merge Two Excel XLSX Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentXlsxMulti**](docs/MergeDocumentApi.md#mergeDocumentXlsxMulti) | **POST** /convert/merge/xlsx/multi | Merge Multple Excel XLSX Together
+*CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentDocx**](docs/SplitDocumentApi.md#splitDocumentDocx) | **POST** /convert/split/docx | Split a single Word Document DOCX into Separate Documents by Page
 *CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentPdfByPage**](docs/SplitDocumentApi.md#splitDocumentPdfByPage) | **POST** /convert/split/pdf | Split a PDF file into separate PDF files, one per page
 *CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentPptx**](docs/SplitDocumentApi.md#splitDocumentPptx) | **POST** /convert/split/pptx | Split a single PowerPoint Presentation PPTX into Separate Slides
 *CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentXlsx**](docs/SplitDocumentApi.md#splitDocumentXlsx) | **POST** /convert/split/xlsx | Split a single Excel XLSX into Separate Worksheets
@@ -375,6 +376,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.SetFormFieldValue](docs/SetFormFieldValue.md)
  - [CloudmersiveConvertApiClient.SetPdfFormFieldsRequest](docs/SetPdfFormFieldsRequest.md)
  - [CloudmersiveConvertApiClient.SetPdfMetadataRequest](docs/SetPdfMetadataRequest.md)
+ - [CloudmersiveConvertApiClient.SplitDocumentResult](docs/SplitDocumentResult.md)
+ - [CloudmersiveConvertApiClient.SplitDocxDocumentResult](docs/SplitDocxDocumentResult.md)
  - [CloudmersiveConvertApiClient.SplitPdfResult](docs/SplitPdfResult.md)
  - [CloudmersiveConvertApiClient.SplitPptxPresentationResult](docs/SplitPptxPresentationResult.md)
  - [CloudmersiveConvertApiClient.SplitXlsxWorksheetResult](docs/SplitXlsxWorksheetResult.md)

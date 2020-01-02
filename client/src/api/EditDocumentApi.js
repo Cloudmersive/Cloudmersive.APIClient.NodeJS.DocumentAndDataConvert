@@ -33,7 +33,7 @@
   /**
    * EditDocument service.
    * @module api/EditDocumentApi
-   * @version 2.2.8
+   * @version 2.2.9
    */
 
   /**

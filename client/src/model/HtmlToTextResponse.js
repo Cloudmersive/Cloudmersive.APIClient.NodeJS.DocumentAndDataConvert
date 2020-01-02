@@ -36,7 +36,7 @@
   /**
    * The HtmlToTextResponse model module.
    * @module model/HtmlToTextResponse
-   * @version 2.2.8
+   * @version 2.2.9
    */
 
   /**

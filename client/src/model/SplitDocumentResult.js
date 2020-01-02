@@ -25,7 +25,7 @@
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.PdfDocument = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.SplitDocumentResult = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The PdfDocument model module.
-   * @module model/PdfDocument
+   * The SplitDocumentResult model module.
+   * @module model/SplitDocumentResult
    * @version 2.2.9
    */
 
   /**
-   * Constructs a new <code>PdfDocument</code>.
-   * A single PDF file corresponding to one page in the original document
-   * @alias module:model/PdfDocument
+   * Constructs a new <code>SplitDocumentResult</code>.
+   * A single Word DOCX file corresponding to one page in the original document
+   * @alias module:model/SplitDocumentResult
    * @class
    */
   var exports = function() {
@@ -54,11 +54,11 @@
   };
 
   /**
-   * Constructs a <code>PdfDocument</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>SplitDocumentResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/PdfDocument} obj Optional instance to populate.
-   * @return {module:model/PdfDocument} The populated <code>PdfDocument</code> instance.
+   * @param {module:model/SplitDocumentResult} obj Optional instance to populate.
+   * @return {module:model/SplitDocumentResult} The populated <code>SplitDocumentResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -83,12 +83,12 @@
    */
   exports.prototype['PageNumber'] = undefined;
   /**
-   * URL to the PDF file of this worksheet; file is stored in an in-memory cache and will be deleted
+   * URL to the DOCX file of this slide; file is stored in an in-memory cache and will be deleted
    * @member {String} URL
    */
   exports.prototype['URL'] = undefined;
   /**
-   * If returnDocumentContents is set to true, will contain the contents of the document; otherwise will be set to null and the document contents will be available via the URL parameter
+   * Contents of the document in bytes
    * @member {Blob} DocumentContents
    */
   exports.prototype['DocumentContents'] = undefined;
