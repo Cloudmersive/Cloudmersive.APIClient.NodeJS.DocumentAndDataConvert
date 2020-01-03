@@ -16,33 +16,33 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DocxTable'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./DocxTable'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.GetDocxTablesResponse = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.DocxTable);
+    root.CloudmersiveConvertApiClient.CreateSpreadsheetFromDataResponse = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
-}(this, function(ApiClient, DocxTable) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
 
   /**
-   * The GetDocxTablesResponse model module.
-   * @module model/GetDocxTablesResponse
+   * The CreateSpreadsheetFromDataResponse model module.
+   * @module model/CreateSpreadsheetFromDataResponse
    * @version 2.3.0
    */
 
   /**
-   * Constructs a new <code>GetDocxTablesResponse</code>.
-   * Result of running a Get-Tables command
-   * @alias module:model/GetDocxTablesResponse
+   * Constructs a new <code>CreateSpreadsheetFromDataResponse</code>.
+   * Result of creating a new worksheet from rows and cells
+   * @alias module:model/CreateSpreadsheetFromDataResponse
    * @class
    */
   var exports = function() {
@@ -53,11 +53,11 @@
   };
 
   /**
-   * Constructs a <code>GetDocxTablesResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>CreateSpreadsheetFromDataResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetDocxTablesResponse} obj Optional instance to populate.
-   * @return {module:model/GetDocxTablesResponse} The populated <code>GetDocxTablesResponse</code> instance.
+   * @param {module:model/CreateSpreadsheetFromDataResponse} obj Optional instance to populate.
+   * @return {module:model/CreateSpreadsheetFromDataResponse} The populated <code>CreateSpreadsheetFromDataResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -66,8 +66,8 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
-      if (data.hasOwnProperty('Tables')) {
-        obj['Tables'] = ApiClient.convertToType(data['Tables'], [DocxTable]);
+      if (data.hasOwnProperty('EditedDocumentURL')) {
+        obj['EditedDocumentURL'] = ApiClient.convertToType(data['EditedDocumentURL'], 'String');
       }
     }
     return obj;
@@ -79,10 +79,10 @@
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * Tables in the DOCX file
-   * @member {Array.<module:model/DocxTable>} Tables
+   * URL to the edited XLSX file; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the result document contents.
+   * @member {String} EditedDocumentURL
    */
-  exports.prototype['Tables'] = undefined;
+  exports.prototype['EditedDocumentURL'] = undefined;
 
 
 

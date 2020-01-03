@@ -36,7 +36,7 @@
   /**
    * The PdfFormField model module.
    * @module model/PdfFormField
-   * @version 2.2.9
+   * @version 2.3.0
    */
 
   /**

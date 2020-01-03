@@ -340,6 +340,16 @@
         done();
       });
     });
+    describe('editDocumentXlsxCreateSpreadsheetFromData', function() {
+      it('should call editDocumentXlsxCreateSpreadsheetFromData successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxCreateSpreadsheetFromData
+        //instance.editDocumentXlsxCreateSpreadsheetFromData(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentXlsxGetCellByIndex', function() {
       it('should call editDocumentXlsxGetCellByIndex successfully', function(done) {
         //uncomment below and update the code to test editDocumentXlsxGetCellByIndex
