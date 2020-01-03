@@ -33,7 +33,7 @@
   /**
    * ValidateDocument service.
    * @module api/ValidateDocumentApi
-   * @version 2.3.0
+   * @version 2.3.1
    */
 
   /**

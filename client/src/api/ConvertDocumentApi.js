@@ -33,7 +33,7 @@
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.3.0
+   * @version 2.3.1
    */
 
   /**
