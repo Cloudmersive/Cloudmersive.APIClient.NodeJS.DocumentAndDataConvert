@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.3.1
+- Package version: 2.3.2
 
 
 ## Installation
@@ -214,8 +214,10 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentFinishEditing**](docs/EditDocumentApi.md#editDocumentFinishEditing) | **POST** /convert/edit/finish-editing | Download result from document editing
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentPptxDeleteSlides**](docs/EditDocumentApi.md#editDocumentPptxDeleteSlides) | **POST** /convert/edit/pptx/delete-slides | Delete, remove slides from a PowerPoint PPTX presentation document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentPptxReplace**](docs/EditDocumentApi.md#editDocumentPptxReplace) | **POST** /convert/edit/pptx/replace-all | Replace string in PowerPoint PPTX presentation
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxClearCellByIndex**](docs/EditDocumentApi.md#editDocumentXlsxClearCellByIndex) | **POST** /convert/edit/xlsx/clear-cell/by-index | Clear cell contents in an Excel XLSX spreadsheet, worksheet by index
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxCreateBlankSpreadsheet**](docs/EditDocumentApi.md#editDocumentXlsxCreateBlankSpreadsheet) | **POST** /convert/edit/xlsx/create/blank | Create a blank Excel XLSX spreadsheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxCreateSpreadsheetFromData**](docs/EditDocumentApi.md#editDocumentXlsxCreateSpreadsheetFromData) | **POST** /convert/edit/xlsx/create/from/data | Create a new Excel XLSX spreadsheet from column and row data
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxDeleteWorksheet**](docs/EditDocumentApi.md#editDocumentXlsxDeleteWorksheet) | **POST** /convert/edit/xlsx/delete-worksheet | Delete, remove worksheet from an Excel XLSX spreadsheet document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetCellByIndex**](docs/EditDocumentApi.md#editDocumentXlsxGetCellByIndex) | **POST** /convert/edit/xlsx/get-cell/by-index | Get cell from an Excel XLSX spreadsheet, worksheet by index
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetColumns**](docs/EditDocumentApi.md#editDocumentXlsxGetColumns) | **POST** /convert/edit/xlsx/get-columns | Get rows and cells from a Excel XLSX spreadsheet, worksheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetImages**](docs/EditDocumentApi.md#editDocumentXlsxGetImages) | **POST** /convert/edit/xlsx/get-images | Get images from a Excel XLSX spreadsheet, worksheet
@@ -223,6 +225,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetStyles**](docs/EditDocumentApi.md#editDocumentXlsxGetStyles) | **POST** /convert/edit/xlsx/get-styles | Get styles from a Excel XLSX spreadsheet, worksheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetWorksheets**](docs/EditDocumentApi.md#editDocumentXlsxGetWorksheets) | **POST** /convert/edit/xlsx/get-worksheets | Get worksheets from a Excel XLSX spreadsheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxInsertWorksheet**](docs/EditDocumentApi.md#editDocumentXlsxInsertWorksheet) | **POST** /convert/edit/xlsx/insert-worksheet | Insert a new worksheet into an Excel XLSX spreadsheet
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxSetCellByIndex**](docs/EditDocumentApi.md#editDocumentXlsxSetCellByIndex) | **POST** /convert/edit/xlsx/set-cell/by-index | Set, update cell contents in an Excel XLSX spreadsheet, worksheet by index
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfAddAnnotations**](docs/EditPdfApi.md#editPdfAddAnnotations) | **POST** /convert/edit/pdf/annotations/add-item | Add one or more PDF annotations, comments in the PDF document
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfDecrypt**](docs/EditPdfApi.md#editPdfDecrypt) | **POST** /convert/edit/pdf/decrypt | Decrypt and password-protect a PDF
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfDeletePages**](docs/EditPdfApi.md#editPdfDeletePages) | **POST** /convert/edit/pdf/pages/delete | Remove / delete pages from a PDF document
@@ -272,6 +275,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.AutodetectDocumentValidationResult](docs/AutodetectDocumentValidationResult.md)
  - [CloudmersiveConvertApiClient.AutodetectGetInfoResult](docs/AutodetectGetInfoResult.md)
  - [CloudmersiveConvertApiClient.AutodetectToPngResult](docs/AutodetectToPngResult.md)
+ - [CloudmersiveConvertApiClient.ClearXlsxCellRequest](docs/ClearXlsxCellRequest.md)
+ - [CloudmersiveConvertApiClient.ClearXlsxCellResponse](docs/ClearXlsxCellResponse.md)
  - [CloudmersiveConvertApiClient.ConvertedPngPage](docs/ConvertedPngPage.md)
  - [CloudmersiveConvertApiClient.CreateBlankDocxRequest](docs/CreateBlankDocxRequest.md)
  - [CloudmersiveConvertApiClient.CreateBlankDocxResponse](docs/CreateBlankDocxResponse.md)
@@ -374,11 +379,14 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersResponse](docs/RemoveDocxHeadersAndFootersResponse.md)
  - [CloudmersiveConvertApiClient.RemoveDocxPagesRequest](docs/RemoveDocxPagesRequest.md)
  - [CloudmersiveConvertApiClient.RemovePptxSlidesRequest](docs/RemovePptxSlidesRequest.md)
+ - [CloudmersiveConvertApiClient.RemoveXlsxWorksheetRequest](docs/RemoveXlsxWorksheetRequest.md)
  - [CloudmersiveConvertApiClient.ReplaceStringRequest](docs/ReplaceStringRequest.md)
  - [CloudmersiveConvertApiClient.ScreenshotRequest](docs/ScreenshotRequest.md)
  - [CloudmersiveConvertApiClient.SetFormFieldValue](docs/SetFormFieldValue.md)
  - [CloudmersiveConvertApiClient.SetPdfFormFieldsRequest](docs/SetPdfFormFieldsRequest.md)
  - [CloudmersiveConvertApiClient.SetPdfMetadataRequest](docs/SetPdfMetadataRequest.md)
+ - [CloudmersiveConvertApiClient.SetXlsxCellRequest](docs/SetXlsxCellRequest.md)
+ - [CloudmersiveConvertApiClient.SetXlsxCellResponse](docs/SetXlsxCellResponse.md)
  - [CloudmersiveConvertApiClient.SplitDocumentResult](docs/SplitDocumentResult.md)
  - [CloudmersiveConvertApiClient.SplitDocxDocumentResult](docs/SplitDocxDocumentResult.md)
  - [CloudmersiveConvertApiClient.SplitPdfResult](docs/SplitPdfResult.md)

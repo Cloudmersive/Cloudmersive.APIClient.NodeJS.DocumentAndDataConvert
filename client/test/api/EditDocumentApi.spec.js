@@ -330,6 +330,16 @@
         done();
       });
     });
+    describe('editDocumentXlsxClearCellByIndex', function() {
+      it('should call editDocumentXlsxClearCellByIndex successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxClearCellByIndex
+        //instance.editDocumentXlsxClearCellByIndex(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentXlsxCreateBlankSpreadsheet', function() {
       it('should call editDocumentXlsxCreateBlankSpreadsheet successfully', function(done) {
         //uncomment below and update the code to test editDocumentXlsxCreateBlankSpreadsheet
@@ -344,6 +354,16 @@
       it('should call editDocumentXlsxCreateSpreadsheetFromData successfully', function(done) {
         //uncomment below and update the code to test editDocumentXlsxCreateSpreadsheetFromData
         //instance.editDocumentXlsxCreateSpreadsheetFromData(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentXlsxDeleteWorksheet', function() {
+      it('should call editDocumentXlsxDeleteWorksheet successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxDeleteWorksheet
+        //instance.editDocumentXlsxDeleteWorksheet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -414,6 +434,16 @@
       it('should call editDocumentXlsxInsertWorksheet successfully', function(done) {
         //uncomment below and update the code to test editDocumentXlsxInsertWorksheet
         //instance.editDocumentXlsxInsertWorksheet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentXlsxSetCellByIndex', function() {
+      it('should call editDocumentXlsxSetCellByIndex successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxSetCellByIndex
+        //instance.editDocumentXlsxSetCellByIndex(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

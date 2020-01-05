@@ -36,7 +36,7 @@
   /**
    * The CreateBlankDocxRequest model module.
    * @module model/CreateBlankDocxRequest
-   * @version 2.3.1
+   * @version 2.3.2
    */
 
   /**

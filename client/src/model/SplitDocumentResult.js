@@ -36,7 +36,7 @@
   /**
    * The SplitDocumentResult model module.
    * @module model/SplitDocumentResult
-   * @version 2.3.1
+   * @version 2.3.2
    */
 
   /**

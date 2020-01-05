@@ -36,7 +36,7 @@
   /**
    * The XlsxSpreadsheetColumn model module.
    * @module model/XlsxSpreadsheetColumn
-   * @version 2.3.1
+   * @version 2.3.2
    */
 
   /**
