@@ -36,7 +36,7 @@
   /**
    * The DocxSection model module.
    * @module model/DocxSection
-   * @version 2.3.2
+   * @version 2.3.3
    */
 
   /**

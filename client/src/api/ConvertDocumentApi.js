@@ -33,7 +33,7 @@
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.3.2
+   * @version 2.3.3
    */
 
   /**
@@ -203,10 +203,13 @@
      * Convert Document to Text (txt)
      * Automatically detect file type and convert it to Text.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT) and PDF files.  For spreadsheets, all worksheets will be included.  If you wish to exclude certain pages, worksheets, slides, etc. use the Split document API first, or the delete pages/slides/worksheet APIs first to adjust the document to the target state prior to converting to text.
      * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.textFormattingMode Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;.
      * @param {module:api/ConvertDocumentApi~convertDocumentAutodetectToTxtCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/TextConversionResult}
      */
-    this.convertDocumentAutodetectToTxt = function(inputFile, callback) {
+    this.convertDocumentAutodetectToTxt = function(inputFile, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'inputFile' is set
@@ -222,6 +225,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'textFormattingMode': opts['textFormattingMode']
       };
       var formParams = {
         'inputFile': inputFile
@@ -875,10 +879,13 @@
      * Convert PDF Document to Text (txt)
      * PDF document to text
      * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.textFormattingMode Optional; specify how whitespace should be handled when converting PDF to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;.
      * @param {module:api/ConvertDocumentApi~convertDocumentPdfToTxtCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/TextConversionResult}
      */
-    this.convertDocumentPdfToTxt = function(inputFile, callback) {
+    this.convertDocumentPdfToTxt = function(inputFile, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'inputFile' is set
@@ -894,6 +901,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'textFormattingMode': opts['textFormattingMode']
       };
       var formParams = {
         'inputFile': inputFile

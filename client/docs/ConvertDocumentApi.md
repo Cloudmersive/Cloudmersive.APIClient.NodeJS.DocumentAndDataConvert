@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 <a name="convertDocumentAutodetectToTxt"></a>
 # **convertDocumentAutodetectToTxt**
-> TextConversionResult convertDocumentAutodetectToTxt(inputFile)
+> TextConversionResult convertDocumentAutodetectToTxt(inputFile, opts)
 
 Convert Document to Text (txt)
 
@@ -217,6 +217,9 @@ var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
+var opts = { 
+  'textFormattingMode': "textFormattingMode_example" // String | Optional; specify how whitespace should be handled when converting the document to text.  Possible values are 'preserveWhitespace' which will attempt to preserve whitespace in the document and relative positioning of text within the document, and 'minimizeWhitespace' which will not insert additional spaces into the document in most cases.  Default is 'preserveWhitespace'.
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -225,7 +228,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.convertDocumentAutodetectToTxt(inputFile, callback);
+apiInstance.convertDocumentAutodetectToTxt(inputFile, opts, callback);
 ```
 
 ### Parameters
@@ -233,6 +236,7 @@ apiInstance.convertDocumentAutodetectToTxt(inputFile, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **File**| Input file to perform the operation on. | 
+ **textFormattingMode** | **String**| Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;. | [optional] 
 
 ### Return type
 
@@ -938,7 +942,7 @@ Name | Type | Description  | Notes
 
 <a name="convertDocumentPdfToTxt"></a>
 # **convertDocumentPdfToTxt**
-> TextConversionResult convertDocumentPdfToTxt(inputFile)
+> TextConversionResult convertDocumentPdfToTxt(inputFile, opts)
 
 Convert PDF Document to Text (txt)
 
@@ -959,6 +963,9 @@ var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
+var opts = { 
+  'textFormattingMode': "textFormattingMode_example" // String | Optional; specify how whitespace should be handled when converting PDF to text.  Possible values are 'preserveWhitespace' which will attempt to preserve whitespace in the document and relative positioning of text within the document, and 'minimizeWhitespace' which will not insert additional spaces into the document in most cases.  Default is 'preserveWhitespace'.
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -967,7 +974,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.convertDocumentPdfToTxt(inputFile, callback);
+apiInstance.convertDocumentPdfToTxt(inputFile, opts, callback);
 ```
 
 ### Parameters
@@ -975,6 +982,7 @@ apiInstance.convertDocumentPdfToTxt(inputFile, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **File**| Input file to perform the operation on. | 
+ **textFormattingMode** | **String**| Optional; specify how whitespace should be handled when converting PDF to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;. | [optional] 
 
 ### Return type
 
