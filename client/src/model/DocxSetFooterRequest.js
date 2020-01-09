@@ -36,7 +36,7 @@
   /**
    * The DocxSetFooterRequest model module.
    * @module model/DocxSetFooterRequest
-   * @version 2.3.3
+   * @version 2.3.4
    */
 
   /**

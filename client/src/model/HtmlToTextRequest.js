@@ -36,7 +36,7 @@
   /**
    * The HtmlToTextRequest model module.
    * @module model/HtmlToTextRequest
-   * @version 2.3.3
+   * @version 2.3.4
    */
 
   /**

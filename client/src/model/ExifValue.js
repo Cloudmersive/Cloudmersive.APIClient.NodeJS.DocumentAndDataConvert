@@ -36,7 +36,7 @@
   /**
    * The ExifValue model module.
    * @module model/ExifValue
-   * @version 2.3.3
+   * @version 2.3.4
    */
 
   /**

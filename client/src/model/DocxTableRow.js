@@ -36,7 +36,7 @@
   /**
    * The DocxTableRow model module.
    * @module model/DocxTableRow
-   * @version 2.3.3
+   * @version 2.3.4
    */
 
   /**
@@ -83,7 +83,7 @@
    */
   exports.prototype['RowIndex'] = undefined;
   /**
-   * The Path of the location of this object; leave blank for new tables
+   * The Path of the location of this table row object; leave blank for new tables
    * @member {String} Path
    */
   exports.prototype['Path'] = undefined;

@@ -100,6 +100,16 @@
         done();
       });
     });
+    describe('editDocumentDocxDeleteTableRowRange', function() {
+      it('should call editDocumentDocxDeleteTableRowRange successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxDeleteTableRowRange
+        //instance.editDocumentDocxDeleteTableRowRange(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentDocxGetHeadersAndFooters', function() {
       it('should call editDocumentDocxGetHeadersAndFooters successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxGetHeadersAndFooters
@@ -370,6 +380,16 @@
         done();
       });
     });
+    describe('editDocumentXlsxGetCellByIdentifier', function() {
+      it('should call editDocumentXlsxGetCellByIdentifier successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxGetCellByIdentifier
+        //instance.editDocumentXlsxGetCellByIdentifier(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentXlsxGetCellByIndex', function() {
       it('should call editDocumentXlsxGetCellByIndex successfully', function(done) {
         //uncomment below and update the code to test editDocumentXlsxGetCellByIndex
@@ -434,6 +454,16 @@
       it('should call editDocumentXlsxInsertWorksheet successfully', function(done) {
         //uncomment below and update the code to test editDocumentXlsxInsertWorksheet
         //instance.editDocumentXlsxInsertWorksheet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentXlsxSetCellByIdentifier', function() {
+      it('should call editDocumentXlsxSetCellByIdentifier successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxSetCellByIdentifier
+        //instance.editDocumentXlsxSetCellByIdentifier(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

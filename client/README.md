@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.3.3
+- Package version: 2.3.4
 
 
 ## Installation
@@ -191,6 +191,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxCreateBlankDocument**](docs/EditDocumentApi.md#editDocumentDocxCreateBlankDocument) | **POST** /convert/edit/docx/create/blank | Create a blank Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxDeletePages**](docs/EditDocumentApi.md#editDocumentDocxDeletePages) | **POST** /convert/edit/docx/delete-pages | Delete, remove pages from a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxDeleteTableRow**](docs/EditDocumentApi.md#editDocumentDocxDeleteTableRow) | **POST** /convert/edit/docx/delete-table-row | Deletes a table row in an existing table in a Word DOCX document
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxDeleteTableRowRange**](docs/EditDocumentApi.md#editDocumentDocxDeleteTableRowRange) | **POST** /convert/edit/docx/delete-table-row/range | Deletes a range of multiple table rows in an existing table in a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetHeadersAndFooters**](docs/EditDocumentApi.md#editDocumentDocxGetHeadersAndFooters) | **POST** /convert/edit/docx/get-headers-and-footers | Get content of a footer from a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetImages**](docs/EditDocumentApi.md#editDocumentDocxGetImages) | **POST** /convert/edit/docx/get-images | Get images from a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetSections**](docs/EditDocumentApi.md#editDocumentDocxGetSections) | **POST** /convert/edit/docx/get-sections | Get sections from a Word DOCX document
@@ -218,6 +219,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxCreateBlankSpreadsheet**](docs/EditDocumentApi.md#editDocumentXlsxCreateBlankSpreadsheet) | **POST** /convert/edit/xlsx/create/blank | Create a blank Excel XLSX spreadsheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxCreateSpreadsheetFromData**](docs/EditDocumentApi.md#editDocumentXlsxCreateSpreadsheetFromData) | **POST** /convert/edit/xlsx/create/from/data | Create a new Excel XLSX spreadsheet from column and row data
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxDeleteWorksheet**](docs/EditDocumentApi.md#editDocumentXlsxDeleteWorksheet) | **POST** /convert/edit/xlsx/delete-worksheet | Delete, remove worksheet from an Excel XLSX spreadsheet document
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetCellByIdentifier**](docs/EditDocumentApi.md#editDocumentXlsxGetCellByIdentifier) | **POST** /convert/edit/xlsx/get-cell/by-identifier | Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetCellByIndex**](docs/EditDocumentApi.md#editDocumentXlsxGetCellByIndex) | **POST** /convert/edit/xlsx/get-cell/by-index | Get cell from an Excel XLSX spreadsheet, worksheet by index
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetColumns**](docs/EditDocumentApi.md#editDocumentXlsxGetColumns) | **POST** /convert/edit/xlsx/get-columns | Get rows and cells from a Excel XLSX spreadsheet, worksheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetImages**](docs/EditDocumentApi.md#editDocumentXlsxGetImages) | **POST** /convert/edit/xlsx/get-images | Get images from a Excel XLSX spreadsheet, worksheet
@@ -225,6 +227,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetStyles**](docs/EditDocumentApi.md#editDocumentXlsxGetStyles) | **POST** /convert/edit/xlsx/get-styles | Get styles from a Excel XLSX spreadsheet, worksheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetWorksheets**](docs/EditDocumentApi.md#editDocumentXlsxGetWorksheets) | **POST** /convert/edit/xlsx/get-worksheets | Get worksheets from a Excel XLSX spreadsheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxInsertWorksheet**](docs/EditDocumentApi.md#editDocumentXlsxInsertWorksheet) | **POST** /convert/edit/xlsx/insert-worksheet | Insert a new worksheet into an Excel XLSX spreadsheet
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxSetCellByIdentifier**](docs/EditDocumentApi.md#editDocumentXlsxSetCellByIdentifier) | **POST** /convert/edit/xlsx/set-cell/by-identifier | Set, update cell contents in an Excel XLSX spreadsheet, worksheet by cell identifier
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxSetCellByIndex**](docs/EditDocumentApi.md#editDocumentXlsxSetCellByIndex) | **POST** /convert/edit/xlsx/set-cell/by-index | Set, update cell contents in an Excel XLSX spreadsheet, worksheet by index
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfAddAnnotations**](docs/EditPdfApi.md#editPdfAddAnnotations) | **POST** /convert/edit/pdf/annotations/add-item | Add one or more PDF annotations, comments in the PDF document
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfDecrypt**](docs/EditPdfApi.md#editPdfDecrypt) | **POST** /convert/edit/pdf/decrypt | Decrypt and password-protect a PDF
@@ -284,6 +287,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.CreateBlankSpreadsheetResponse](docs/CreateBlankSpreadsheetResponse.md)
  - [CloudmersiveConvertApiClient.CreateSpreadsheetFromDataRequest](docs/CreateSpreadsheetFromDataRequest.md)
  - [CloudmersiveConvertApiClient.CreateSpreadsheetFromDataResponse](docs/CreateSpreadsheetFromDataResponse.md)
+ - [CloudmersiveConvertApiClient.DeleteDocxTableRowRangeRequest](docs/DeleteDocxTableRowRangeRequest.md)
+ - [CloudmersiveConvertApiClient.DeleteDocxTableRowRangeResponse](docs/DeleteDocxTableRowRangeResponse.md)
  - [CloudmersiveConvertApiClient.DeleteDocxTableRowRequest](docs/DeleteDocxTableRowRequest.md)
  - [CloudmersiveConvertApiClient.DeleteDocxTableRowResponse](docs/DeleteDocxTableRowResponse.md)
  - [CloudmersiveConvertApiClient.DocumentValidationError](docs/DocumentValidationError.md)
@@ -335,6 +340,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.GetDocxTablesResponse](docs/GetDocxTablesResponse.md)
  - [CloudmersiveConvertApiClient.GetImageInfoResult](docs/GetImageInfoResult.md)
  - [CloudmersiveConvertApiClient.GetPdfAnnotationsResult](docs/GetPdfAnnotationsResult.md)
+ - [CloudmersiveConvertApiClient.GetXlsxCellByIdentifierRequest](docs/GetXlsxCellByIdentifierRequest.md)
+ - [CloudmersiveConvertApiClient.GetXlsxCellByIdentifierResponse](docs/GetXlsxCellByIdentifierResponse.md)
  - [CloudmersiveConvertApiClient.GetXlsxCellRequest](docs/GetXlsxCellRequest.md)
  - [CloudmersiveConvertApiClient.GetXlsxCellResponse](docs/GetXlsxCellResponse.md)
  - [CloudmersiveConvertApiClient.GetXlsxColumnsRequest](docs/GetXlsxColumnsRequest.md)
@@ -385,6 +392,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.SetFormFieldValue](docs/SetFormFieldValue.md)
  - [CloudmersiveConvertApiClient.SetPdfFormFieldsRequest](docs/SetPdfFormFieldsRequest.md)
  - [CloudmersiveConvertApiClient.SetPdfMetadataRequest](docs/SetPdfMetadataRequest.md)
+ - [CloudmersiveConvertApiClient.SetXlsxCellByIdentifierRequest](docs/SetXlsxCellByIdentifierRequest.md)
+ - [CloudmersiveConvertApiClient.SetXlsxCellByIdentifierResponse](docs/SetXlsxCellByIdentifierResponse.md)
  - [CloudmersiveConvertApiClient.SetXlsxCellRequest](docs/SetXlsxCellRequest.md)
  - [CloudmersiveConvertApiClient.SetXlsxCellResponse](docs/SetXlsxCellResponse.md)
  - [CloudmersiveConvertApiClient.SplitDocumentResult](docs/SplitDocumentResult.md)
