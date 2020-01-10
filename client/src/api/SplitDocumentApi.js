@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SplitDocxDocumentResult', 'model/SplitPdfResult', 'model/SplitPptxPresentationResult', 'model/SplitXlsxWorksheetResult'], factory);
+    define(['ApiClient', 'model/SplitDocxDocumentResult', 'model/SplitPdfResult', 'model/SplitPptxPresentationResult', 'model/SplitTextDocumentByLinesResult', 'model/SplitXlsxWorksheetResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/SplitDocxDocumentResult'), require('../model/SplitPdfResult'), require('../model/SplitPptxPresentationResult'), require('../model/SplitXlsxWorksheetResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/SplitDocxDocumentResult'), require('../model/SplitPdfResult'), require('../model/SplitPptxPresentationResult'), require('../model/SplitTextDocumentByLinesResult'), require('../model/SplitXlsxWorksheetResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.SplitDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.SplitDocxDocumentResult, root.CloudmersiveConvertApiClient.SplitPdfResult, root.CloudmersiveConvertApiClient.SplitPptxPresentationResult, root.CloudmersiveConvertApiClient.SplitXlsxWorksheetResult);
+    root.CloudmersiveConvertApiClient.SplitDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.SplitDocxDocumentResult, root.CloudmersiveConvertApiClient.SplitPdfResult, root.CloudmersiveConvertApiClient.SplitPptxPresentationResult, root.CloudmersiveConvertApiClient.SplitTextDocumentByLinesResult, root.CloudmersiveConvertApiClient.SplitXlsxWorksheetResult);
   }
-}(this, function(ApiClient, SplitDocxDocumentResult, SplitPdfResult, SplitPptxPresentationResult, SplitXlsxWorksheetResult) {
+}(this, function(ApiClient, SplitDocxDocumentResult, SplitPdfResult, SplitPptxPresentationResult, SplitTextDocumentByLinesResult, SplitXlsxWorksheetResult) {
   'use strict';
 
   /**
    * SplitDocument service.
    * @module api/SplitDocumentApi
-   * @version 2.3.4
+   * @version 2.3.5
    */
 
   /**
@@ -198,6 +198,54 @@
 
       return this.apiClient.callApi(
         '/convert/split/pptx', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the splitDocumentTxtByLine operation.
+     * @callback module:api/SplitDocumentApi~splitDocumentTxtByLineCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SplitTextDocumentByLinesResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Split a single Text file (txt) into lines
+     * Split a Text (txt) Document by line, returning each line separately in order.  Supports multiple types of newlines.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/SplitDocumentApi~splitDocumentTxtByLineCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SplitTextDocumentByLinesResult}
+     */
+    this.splitDocumentTxtByLine = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling splitDocumentTxtByLine");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = SplitTextDocumentByLinesResult;
+
+      return this.apiClient.callApi(
+        '/convert/split/txt/by-line', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

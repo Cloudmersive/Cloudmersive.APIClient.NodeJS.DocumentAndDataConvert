@@ -33,7 +33,7 @@
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.3.4
+   * @version 2.3.5
    */
 
   /**
@@ -233,7 +233,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = TextConversionResult;
 
       return this.apiClient.callApi(
@@ -388,6 +388,54 @@
     }
 
     /**
+     * Callback function to receive the result of the convertDocumentDocToTxt operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentDocToTxtCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TextConversionResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Word DOC (97-03) Document to Text (txt)
+     * Convert Office Word DOC (97-03) Document (doc) to text
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentDocToTxtCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/TextConversionResult}
+     */
+    this.convertDocumentDocToTxt = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentDocToTxt");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = TextConversionResult;
+
+      return this.apiClient.callApi(
+        '/convert/doc/to/txt', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the convertDocumentDocxToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentDocxToPdfCallback
      * @param {String} error Error message, if any.
@@ -473,7 +521,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = TextConversionResult;
 
       return this.apiClient.callApi(
@@ -1174,7 +1222,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = TextConversionResult;
 
       return this.apiClient.callApi(
@@ -1466,7 +1514,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = TextConversionResult;
 
       return this.apiClient.callApi(

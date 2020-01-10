@@ -36,7 +36,7 @@
   /**
    * The HtmlToOfficeRequest model module.
    * @module model/HtmlToOfficeRequest
-   * @version 2.3.4
+   * @version 2.3.5
    */
 
   /**

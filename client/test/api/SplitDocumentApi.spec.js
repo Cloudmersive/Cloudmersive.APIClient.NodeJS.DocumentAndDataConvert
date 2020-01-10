@@ -80,6 +80,16 @@
         done();
       });
     });
+    describe('splitDocumentTxtByLine', function() {
+      it('should call splitDocumentTxtByLine successfully', function(done) {
+        //uncomment below and update the code to test splitDocumentTxtByLine
+        //instance.splitDocumentTxtByLine(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('splitDocumentXlsx', function() {
       it('should call splitDocumentXlsx successfully', function(done) {
         //uncomment below and update the code to test splitDocumentXlsx
