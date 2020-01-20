@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.3.5
+- Package version: 2.3.6
 
 
 ## Installation
@@ -193,6 +193,8 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxDeletePages**](docs/EditDocumentApi.md#editDocumentDocxDeletePages) | **POST** /convert/edit/docx/delete-pages | Delete, remove pages from a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxDeleteTableRow**](docs/EditDocumentApi.md#editDocumentDocxDeleteTableRow) | **POST** /convert/edit/docx/delete-table-row | Deletes a table row in an existing table in a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxDeleteTableRowRange**](docs/EditDocumentApi.md#editDocumentDocxDeleteTableRowRange) | **POST** /convert/edit/docx/delete-table-row/range | Deletes a range of multiple table rows in an existing table in a Word DOCX document
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetComments**](docs/EditDocumentApi.md#editDocumentDocxGetComments) | **POST** /convert/edit/docx/get-comments/flat-list | Get comments from a Word DOCX document as a flat list
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetCommentsHierarchical**](docs/EditDocumentApi.md#editDocumentDocxGetCommentsHierarchical) | **POST** /convert/edit/docx/get-comments/hierarchical | Get comments from a Word DOCX document hierarchically
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetHeadersAndFooters**](docs/EditDocumentApi.md#editDocumentDocxGetHeadersAndFooters) | **POST** /convert/edit/docx/get-headers-and-footers | Get content of a footer from a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetImages**](docs/EditDocumentApi.md#editDocumentDocxGetImages) | **POST** /convert/edit/docx/get-images | Get images from a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetSections**](docs/EditDocumentApi.md#editDocumentDocxGetSections) | **POST** /convert/edit/docx/get-sections | Get sections from a Word DOCX document
@@ -200,6 +202,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetTableByIndex**](docs/EditDocumentApi.md#editDocumentDocxGetTableByIndex) | **POST** /convert/edit/docx/get-table/by-index | Get a specific table by index in a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetTableRow**](docs/EditDocumentApi.md#editDocumentDocxGetTableRow) | **POST** /convert/edit/docx/get-table-row | Gets the contents of an existing table row in an existing table in a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetTables**](docs/EditDocumentApi.md#editDocumentDocxGetTables) | **POST** /convert/edit/docx/get-tables | Get all tables in Word DOCX document
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxInsertCommentOnParagraph**](docs/EditDocumentApi.md#editDocumentDocxInsertCommentOnParagraph) | **POST** /convert/edit/docx/insert-comment/on/paragraph | Insert a new comment into a Word DOCX document attached to a paragraph
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxInsertImage**](docs/EditDocumentApi.md#editDocumentDocxInsertImage) | **POST** /convert/edit/docx/insert-image | Insert image into a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxInsertParagraph**](docs/EditDocumentApi.md#editDocumentDocxInsertParagraph) | **POST** /convert/edit/docx/insert-paragraph | Insert a new paragraph into a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxInsertTable**](docs/EditDocumentApi.md#editDocumentDocxInsertTable) | **POST** /convert/edit/docx/insert-table | Insert a new table into a Word DOCX document
@@ -297,9 +300,11 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.DocumentValidationResult](docs/DocumentValidationResult.md)
  - [CloudmersiveConvertApiClient.DocxBody](docs/DocxBody.md)
  - [CloudmersiveConvertApiClient.DocxCellStyle](docs/DocxCellStyle.md)
+ - [CloudmersiveConvertApiClient.DocxComment](docs/DocxComment.md)
  - [CloudmersiveConvertApiClient.DocxFooter](docs/DocxFooter.md)
  - [CloudmersiveConvertApiClient.DocxHeader](docs/DocxHeader.md)
  - [CloudmersiveConvertApiClient.DocxImage](docs/DocxImage.md)
+ - [CloudmersiveConvertApiClient.DocxInsertCommentOnParagraphRequest](docs/DocxInsertCommentOnParagraphRequest.md)
  - [CloudmersiveConvertApiClient.DocxInsertImageRequest](docs/DocxInsertImageRequest.md)
  - [CloudmersiveConvertApiClient.DocxInsertImageResponse](docs/DocxInsertImageResponse.md)
  - [CloudmersiveConvertApiClient.DocxPage](docs/DocxPage.md)
@@ -320,10 +325,15 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.DocxTemplateApplicationRequest](docs/DocxTemplateApplicationRequest.md)
  - [CloudmersiveConvertApiClient.DocxTemplateOperation](docs/DocxTemplateOperation.md)
  - [CloudmersiveConvertApiClient.DocxText](docs/DocxText.md)
+ - [CloudmersiveConvertApiClient.DocxTopLevelComment](docs/DocxTopLevelComment.md)
  - [CloudmersiveConvertApiClient.ExifValue](docs/ExifValue.md)
  - [CloudmersiveConvertApiClient.FinishEditingRequest](docs/FinishEditingRequest.md)
  - [CloudmersiveConvertApiClient.GetDocxBodyRequest](docs/GetDocxBodyRequest.md)
  - [CloudmersiveConvertApiClient.GetDocxBodyResponse](docs/GetDocxBodyResponse.md)
+ - [CloudmersiveConvertApiClient.GetDocxCommentsHierarchicalResponse](docs/GetDocxCommentsHierarchicalResponse.md)
+ - [CloudmersiveConvertApiClient.GetDocxCommentsResponse](docs/GetDocxCommentsResponse.md)
+ - [CloudmersiveConvertApiClient.GetDocxGetCommentsHierarchicalRequest](docs/GetDocxGetCommentsHierarchicalRequest.md)
+ - [CloudmersiveConvertApiClient.GetDocxGetCommentsRequest](docs/GetDocxGetCommentsRequest.md)
  - [CloudmersiveConvertApiClient.GetDocxHeadersAndFootersRequest](docs/GetDocxHeadersAndFootersRequest.md)
  - [CloudmersiveConvertApiClient.GetDocxHeadersAndFootersResponse](docs/GetDocxHeadersAndFootersResponse.md)
  - [CloudmersiveConvertApiClient.GetDocxImagesRequest](docs/GetDocxImagesRequest.md)
@@ -365,6 +375,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.HtmlToPngRequest](docs/HtmlToPngRequest.md)
  - [CloudmersiveConvertApiClient.HtmlToTextRequest](docs/HtmlToTextRequest.md)
  - [CloudmersiveConvertApiClient.HtmlToTextResponse](docs/HtmlToTextResponse.md)
+ - [CloudmersiveConvertApiClient.InsertDocxCommentOnParagraphResponse](docs/InsertDocxCommentOnParagraphResponse.md)
  - [CloudmersiveConvertApiClient.InsertDocxInsertParagraphRequest](docs/InsertDocxInsertParagraphRequest.md)
  - [CloudmersiveConvertApiClient.InsertDocxInsertParagraphResponse](docs/InsertDocxInsertParagraphResponse.md)
  - [CloudmersiveConvertApiClient.InsertDocxTableRowRequest](docs/InsertDocxTableRowRequest.md)

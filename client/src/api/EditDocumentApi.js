@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ClearXlsxCellRequest', 'model/ClearXlsxCellResponse', 'model/CreateBlankDocxRequest', 'model/CreateBlankDocxResponse', 'model/CreateBlankSpreadsheetRequest', 'model/CreateBlankSpreadsheetResponse', 'model/CreateSpreadsheetFromDataRequest', 'model/CreateSpreadsheetFromDataResponse', 'model/DeleteDocxTableRowRangeRequest', 'model/DeleteDocxTableRowRangeResponse', 'model/DeleteDocxTableRowRequest', 'model/DeleteDocxTableRowResponse', 'model/DocxInsertImageRequest', 'model/DocxInsertImageResponse', 'model/DocxRemoveObjectRequest', 'model/DocxRemoveObjectResponse', 'model/DocxSetFooterAddPageNumberRequest', 'model/DocxSetFooterRequest', 'model/DocxSetFooterResponse', 'model/DocxSetHeaderRequest', 'model/DocxSetHeaderResponse', 'model/FinishEditingRequest', 'model/GetDocxBodyRequest', 'model/GetDocxBodyResponse', 'model/GetDocxHeadersAndFootersRequest', 'model/GetDocxHeadersAndFootersResponse', 'model/GetDocxImagesRequest', 'model/GetDocxImagesResponse', 'model/GetDocxPagesRequest', 'model/GetDocxPagesResponse', 'model/GetDocxSectionsRequest', 'model/GetDocxSectionsResponse', 'model/GetDocxStylesRequest', 'model/GetDocxStylesResponse', 'model/GetDocxTableByIndexRequest', 'model/GetDocxTableByIndexResponse', 'model/GetDocxTableRowRequest', 'model/GetDocxTableRowResponse', 'model/GetDocxTablesRequest', 'model/GetDocxTablesResponse', 'model/GetXlsxCellByIdentifierRequest', 'model/GetXlsxCellByIdentifierResponse', 'model/GetXlsxCellRequest', 'model/GetXlsxCellResponse', 'model/GetXlsxColumnsRequest', 'model/GetXlsxColumnsResponse', 'model/GetXlsxImagesRequest', 'model/GetXlsxImagesResponse', 'model/GetXlsxRowsAndCellsRequest', 'model/GetXlsxRowsAndCellsResponse', 'model/GetXlsxStylesRequest', 'model/GetXlsxStylesResponse', 'model/GetXlsxWorksheetsRequest', 'model/GetXlsxWorksheetsResponse', 'model/InsertDocxInsertParagraphRequest', 'model/InsertDocxInsertParagraphResponse', 'model/InsertDocxTableRowRequest', 'model/InsertDocxTableRowResponse', 'model/InsertDocxTablesRequest', 'model/InsertDocxTablesResponse', 'model/InsertXlsxWorksheetRequest', 'model/InsertXlsxWorksheetResponse', 'model/RemoveDocxHeadersAndFootersRequest', 'model/RemoveDocxHeadersAndFootersResponse', 'model/RemoveDocxPagesRequest', 'model/RemovePptxSlidesRequest', 'model/RemoveXlsxWorksheetRequest', 'model/ReplaceStringRequest', 'model/SetXlsxCellByIdentifierRequest', 'model/SetXlsxCellByIdentifierResponse', 'model/SetXlsxCellRequest', 'model/SetXlsxCellResponse', 'model/UpdateDocxTableCellRequest', 'model/UpdateDocxTableCellResponse', 'model/UpdateDocxTableRowRequest', 'model/UpdateDocxTableRowResponse'], factory);
+    define(['ApiClient', 'model/ClearXlsxCellRequest', 'model/ClearXlsxCellResponse', 'model/CreateBlankDocxRequest', 'model/CreateBlankDocxResponse', 'model/CreateBlankSpreadsheetRequest', 'model/CreateBlankSpreadsheetResponse', 'model/CreateSpreadsheetFromDataRequest', 'model/CreateSpreadsheetFromDataResponse', 'model/DeleteDocxTableRowRangeRequest', 'model/DeleteDocxTableRowRangeResponse', 'model/DeleteDocxTableRowRequest', 'model/DeleteDocxTableRowResponse', 'model/DocxInsertCommentOnParagraphRequest', 'model/DocxInsertImageRequest', 'model/DocxInsertImageResponse', 'model/DocxRemoveObjectRequest', 'model/DocxRemoveObjectResponse', 'model/DocxSetFooterAddPageNumberRequest', 'model/DocxSetFooterRequest', 'model/DocxSetFooterResponse', 'model/DocxSetHeaderRequest', 'model/DocxSetHeaderResponse', 'model/FinishEditingRequest', 'model/GetDocxBodyRequest', 'model/GetDocxBodyResponse', 'model/GetDocxCommentsHierarchicalResponse', 'model/GetDocxCommentsResponse', 'model/GetDocxGetCommentsHierarchicalRequest', 'model/GetDocxGetCommentsRequest', 'model/GetDocxHeadersAndFootersRequest', 'model/GetDocxHeadersAndFootersResponse', 'model/GetDocxImagesRequest', 'model/GetDocxImagesResponse', 'model/GetDocxPagesRequest', 'model/GetDocxPagesResponse', 'model/GetDocxSectionsRequest', 'model/GetDocxSectionsResponse', 'model/GetDocxStylesRequest', 'model/GetDocxStylesResponse', 'model/GetDocxTableByIndexRequest', 'model/GetDocxTableByIndexResponse', 'model/GetDocxTableRowRequest', 'model/GetDocxTableRowResponse', 'model/GetDocxTablesRequest', 'model/GetDocxTablesResponse', 'model/GetXlsxCellByIdentifierRequest', 'model/GetXlsxCellByIdentifierResponse', 'model/GetXlsxCellRequest', 'model/GetXlsxCellResponse', 'model/GetXlsxColumnsRequest', 'model/GetXlsxColumnsResponse', 'model/GetXlsxImagesRequest', 'model/GetXlsxImagesResponse', 'model/GetXlsxRowsAndCellsRequest', 'model/GetXlsxRowsAndCellsResponse', 'model/GetXlsxStylesRequest', 'model/GetXlsxStylesResponse', 'model/GetXlsxWorksheetsRequest', 'model/GetXlsxWorksheetsResponse', 'model/InsertDocxCommentOnParagraphResponse', 'model/InsertDocxInsertParagraphRequest', 'model/InsertDocxInsertParagraphResponse', 'model/InsertDocxTableRowRequest', 'model/InsertDocxTableRowResponse', 'model/InsertDocxTablesRequest', 'model/InsertDocxTablesResponse', 'model/InsertXlsxWorksheetRequest', 'model/InsertXlsxWorksheetResponse', 'model/RemoveDocxHeadersAndFootersRequest', 'model/RemoveDocxHeadersAndFootersResponse', 'model/RemoveDocxPagesRequest', 'model/RemovePptxSlidesRequest', 'model/RemoveXlsxWorksheetRequest', 'model/ReplaceStringRequest', 'model/SetXlsxCellByIdentifierRequest', 'model/SetXlsxCellByIdentifierResponse', 'model/SetXlsxCellRequest', 'model/SetXlsxCellResponse', 'model/UpdateDocxTableCellRequest', 'model/UpdateDocxTableCellResponse', 'model/UpdateDocxTableRowRequest', 'model/UpdateDocxTableRowResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ClearXlsxCellRequest'), require('../model/ClearXlsxCellResponse'), require('../model/CreateBlankDocxRequest'), require('../model/CreateBlankDocxResponse'), require('../model/CreateBlankSpreadsheetRequest'), require('../model/CreateBlankSpreadsheetResponse'), require('../model/CreateSpreadsheetFromDataRequest'), require('../model/CreateSpreadsheetFromDataResponse'), require('../model/DeleteDocxTableRowRangeRequest'), require('../model/DeleteDocxTableRowRangeResponse'), require('../model/DeleteDocxTableRowRequest'), require('../model/DeleteDocxTableRowResponse'), require('../model/DocxInsertImageRequest'), require('../model/DocxInsertImageResponse'), require('../model/DocxRemoveObjectRequest'), require('../model/DocxRemoveObjectResponse'), require('../model/DocxSetFooterAddPageNumberRequest'), require('../model/DocxSetFooterRequest'), require('../model/DocxSetFooterResponse'), require('../model/DocxSetHeaderRequest'), require('../model/DocxSetHeaderResponse'), require('../model/FinishEditingRequest'), require('../model/GetDocxBodyRequest'), require('../model/GetDocxBodyResponse'), require('../model/GetDocxHeadersAndFootersRequest'), require('../model/GetDocxHeadersAndFootersResponse'), require('../model/GetDocxImagesRequest'), require('../model/GetDocxImagesResponse'), require('../model/GetDocxPagesRequest'), require('../model/GetDocxPagesResponse'), require('../model/GetDocxSectionsRequest'), require('../model/GetDocxSectionsResponse'), require('../model/GetDocxStylesRequest'), require('../model/GetDocxStylesResponse'), require('../model/GetDocxTableByIndexRequest'), require('../model/GetDocxTableByIndexResponse'), require('../model/GetDocxTableRowRequest'), require('../model/GetDocxTableRowResponse'), require('../model/GetDocxTablesRequest'), require('../model/GetDocxTablesResponse'), require('../model/GetXlsxCellByIdentifierRequest'), require('../model/GetXlsxCellByIdentifierResponse'), require('../model/GetXlsxCellRequest'), require('../model/GetXlsxCellResponse'), require('../model/GetXlsxColumnsRequest'), require('../model/GetXlsxColumnsResponse'), require('../model/GetXlsxImagesRequest'), require('../model/GetXlsxImagesResponse'), require('../model/GetXlsxRowsAndCellsRequest'), require('../model/GetXlsxRowsAndCellsResponse'), require('../model/GetXlsxStylesRequest'), require('../model/GetXlsxStylesResponse'), require('../model/GetXlsxWorksheetsRequest'), require('../model/GetXlsxWorksheetsResponse'), require('../model/InsertDocxInsertParagraphRequest'), require('../model/InsertDocxInsertParagraphResponse'), require('../model/InsertDocxTableRowRequest'), require('../model/InsertDocxTableRowResponse'), require('../model/InsertDocxTablesRequest'), require('../model/InsertDocxTablesResponse'), require('../model/InsertXlsxWorksheetRequest'), require('../model/InsertXlsxWorksheetResponse'), require('../model/RemoveDocxHeadersAndFootersRequest'), require('../model/RemoveDocxHeadersAndFootersResponse'), require('../model/RemoveDocxPagesRequest'), require('../model/RemovePptxSlidesRequest'), require('../model/RemoveXlsxWorksheetRequest'), require('../model/ReplaceStringRequest'), require('../model/SetXlsxCellByIdentifierRequest'), require('../model/SetXlsxCellByIdentifierResponse'), require('../model/SetXlsxCellRequest'), require('../model/SetXlsxCellResponse'), require('../model/UpdateDocxTableCellRequest'), require('../model/UpdateDocxTableCellResponse'), require('../model/UpdateDocxTableRowRequest'), require('../model/UpdateDocxTableRowResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/ClearXlsxCellRequest'), require('../model/ClearXlsxCellResponse'), require('../model/CreateBlankDocxRequest'), require('../model/CreateBlankDocxResponse'), require('../model/CreateBlankSpreadsheetRequest'), require('../model/CreateBlankSpreadsheetResponse'), require('../model/CreateSpreadsheetFromDataRequest'), require('../model/CreateSpreadsheetFromDataResponse'), require('../model/DeleteDocxTableRowRangeRequest'), require('../model/DeleteDocxTableRowRangeResponse'), require('../model/DeleteDocxTableRowRequest'), require('../model/DeleteDocxTableRowResponse'), require('../model/DocxInsertCommentOnParagraphRequest'), require('../model/DocxInsertImageRequest'), require('../model/DocxInsertImageResponse'), require('../model/DocxRemoveObjectRequest'), require('../model/DocxRemoveObjectResponse'), require('../model/DocxSetFooterAddPageNumberRequest'), require('../model/DocxSetFooterRequest'), require('../model/DocxSetFooterResponse'), require('../model/DocxSetHeaderRequest'), require('../model/DocxSetHeaderResponse'), require('../model/FinishEditingRequest'), require('../model/GetDocxBodyRequest'), require('../model/GetDocxBodyResponse'), require('../model/GetDocxCommentsHierarchicalResponse'), require('../model/GetDocxCommentsResponse'), require('../model/GetDocxGetCommentsHierarchicalRequest'), require('../model/GetDocxGetCommentsRequest'), require('../model/GetDocxHeadersAndFootersRequest'), require('../model/GetDocxHeadersAndFootersResponse'), require('../model/GetDocxImagesRequest'), require('../model/GetDocxImagesResponse'), require('../model/GetDocxPagesRequest'), require('../model/GetDocxPagesResponse'), require('../model/GetDocxSectionsRequest'), require('../model/GetDocxSectionsResponse'), require('../model/GetDocxStylesRequest'), require('../model/GetDocxStylesResponse'), require('../model/GetDocxTableByIndexRequest'), require('../model/GetDocxTableByIndexResponse'), require('../model/GetDocxTableRowRequest'), require('../model/GetDocxTableRowResponse'), require('../model/GetDocxTablesRequest'), require('../model/GetDocxTablesResponse'), require('../model/GetXlsxCellByIdentifierRequest'), require('../model/GetXlsxCellByIdentifierResponse'), require('../model/GetXlsxCellRequest'), require('../model/GetXlsxCellResponse'), require('../model/GetXlsxColumnsRequest'), require('../model/GetXlsxColumnsResponse'), require('../model/GetXlsxImagesRequest'), require('../model/GetXlsxImagesResponse'), require('../model/GetXlsxRowsAndCellsRequest'), require('../model/GetXlsxRowsAndCellsResponse'), require('../model/GetXlsxStylesRequest'), require('../model/GetXlsxStylesResponse'), require('../model/GetXlsxWorksheetsRequest'), require('../model/GetXlsxWorksheetsResponse'), require('../model/InsertDocxCommentOnParagraphResponse'), require('../model/InsertDocxInsertParagraphRequest'), require('../model/InsertDocxInsertParagraphResponse'), require('../model/InsertDocxTableRowRequest'), require('../model/InsertDocxTableRowResponse'), require('../model/InsertDocxTablesRequest'), require('../model/InsertDocxTablesResponse'), require('../model/InsertXlsxWorksheetRequest'), require('../model/InsertXlsxWorksheetResponse'), require('../model/RemoveDocxHeadersAndFootersRequest'), require('../model/RemoveDocxHeadersAndFootersResponse'), require('../model/RemoveDocxPagesRequest'), require('../model/RemovePptxSlidesRequest'), require('../model/RemoveXlsxWorksheetRequest'), require('../model/ReplaceStringRequest'), require('../model/SetXlsxCellByIdentifierRequest'), require('../model/SetXlsxCellByIdentifierResponse'), require('../model/SetXlsxCellRequest'), require('../model/SetXlsxCellResponse'), require('../model/UpdateDocxTableCellRequest'), require('../model/UpdateDocxTableCellResponse'), require('../model/UpdateDocxTableRowRequest'), require('../model/UpdateDocxTableRowResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.EditDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.ClearXlsxCellRequest, root.CloudmersiveConvertApiClient.ClearXlsxCellResponse, root.CloudmersiveConvertApiClient.CreateBlankDocxRequest, root.CloudmersiveConvertApiClient.CreateBlankDocxResponse, root.CloudmersiveConvertApiClient.CreateBlankSpreadsheetRequest, root.CloudmersiveConvertApiClient.CreateBlankSpreadsheetResponse, root.CloudmersiveConvertApiClient.CreateSpreadsheetFromDataRequest, root.CloudmersiveConvertApiClient.CreateSpreadsheetFromDataResponse, root.CloudmersiveConvertApiClient.DeleteDocxTableRowRangeRequest, root.CloudmersiveConvertApiClient.DeleteDocxTableRowRangeResponse, root.CloudmersiveConvertApiClient.DeleteDocxTableRowRequest, root.CloudmersiveConvertApiClient.DeleteDocxTableRowResponse, root.CloudmersiveConvertApiClient.DocxInsertImageRequest, root.CloudmersiveConvertApiClient.DocxInsertImageResponse, root.CloudmersiveConvertApiClient.DocxRemoveObjectRequest, root.CloudmersiveConvertApiClient.DocxRemoveObjectResponse, root.CloudmersiveConvertApiClient.DocxSetFooterAddPageNumberRequest, root.CloudmersiveConvertApiClient.DocxSetFooterRequest, root.CloudmersiveConvertApiClient.DocxSetFooterResponse, root.CloudmersiveConvertApiClient.DocxSetHeaderRequest, root.CloudmersiveConvertApiClient.DocxSetHeaderResponse, root.CloudmersiveConvertApiClient.FinishEditingRequest, root.CloudmersiveConvertApiClient.GetDocxBodyRequest, root.CloudmersiveConvertApiClient.GetDocxBodyResponse, root.CloudmersiveConvertApiClient.GetDocxHeadersAndFootersRequest, root.CloudmersiveConvertApiClient.GetDocxHeadersAndFootersResponse, root.CloudmersiveConvertApiClient.GetDocxImagesRequest, root.CloudmersiveConvertApiClient.GetDocxImagesResponse, root.CloudmersiveConvertApiClient.GetDocxPagesRequest, root.CloudmersiveConvertApiClient.GetDocxPagesResponse, root.CloudmersiveConvertApiClient.GetDocxSectionsRequest, root.CloudmersiveConvertApiClient.GetDocxSectionsResponse, root.CloudmersiveConvertApiClient.GetDocxStylesRequest, root.CloudmersiveConvertApiClient.GetDocxStylesResponse, root.CloudmersiveConvertApiClient.GetDocxTableByIndexRequest, root.CloudmersiveConvertApiClient.GetDocxTableByIndexResponse, root.CloudmersiveConvertApiClient.GetDocxTableRowRequest, root.CloudmersiveConvertApiClient.GetDocxTableRowResponse, root.CloudmersiveConvertApiClient.GetDocxTablesRequest, root.CloudmersiveConvertApiClient.GetDocxTablesResponse, root.CloudmersiveConvertApiClient.GetXlsxCellByIdentifierRequest, root.CloudmersiveConvertApiClient.GetXlsxCellByIdentifierResponse, root.CloudmersiveConvertApiClient.GetXlsxCellRequest, root.CloudmersiveConvertApiClient.GetXlsxCellResponse, root.CloudmersiveConvertApiClient.GetXlsxColumnsRequest, root.CloudmersiveConvertApiClient.GetXlsxColumnsResponse, root.CloudmersiveConvertApiClient.GetXlsxImagesRequest, root.CloudmersiveConvertApiClient.GetXlsxImagesResponse, root.CloudmersiveConvertApiClient.GetXlsxRowsAndCellsRequest, root.CloudmersiveConvertApiClient.GetXlsxRowsAndCellsResponse, root.CloudmersiveConvertApiClient.GetXlsxStylesRequest, root.CloudmersiveConvertApiClient.GetXlsxStylesResponse, root.CloudmersiveConvertApiClient.GetXlsxWorksheetsRequest, root.CloudmersiveConvertApiClient.GetXlsxWorksheetsResponse, root.CloudmersiveConvertApiClient.InsertDocxInsertParagraphRequest, root.CloudmersiveConvertApiClient.InsertDocxInsertParagraphResponse, root.CloudmersiveConvertApiClient.InsertDocxTableRowRequest, root.CloudmersiveConvertApiClient.InsertDocxTableRowResponse, root.CloudmersiveConvertApiClient.InsertDocxTablesRequest, root.CloudmersiveConvertApiClient.InsertDocxTablesResponse, root.CloudmersiveConvertApiClient.InsertXlsxWorksheetRequest, root.CloudmersiveConvertApiClient.InsertXlsxWorksheetResponse, root.CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersRequest, root.CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersResponse, root.CloudmersiveConvertApiClient.RemoveDocxPagesRequest, root.CloudmersiveConvertApiClient.RemovePptxSlidesRequest, root.CloudmersiveConvertApiClient.RemoveXlsxWorksheetRequest, root.CloudmersiveConvertApiClient.ReplaceStringRequest, root.CloudmersiveConvertApiClient.SetXlsxCellByIdentifierRequest, root.CloudmersiveConvertApiClient.SetXlsxCellByIdentifierResponse, root.CloudmersiveConvertApiClient.SetXlsxCellRequest, root.CloudmersiveConvertApiClient.SetXlsxCellResponse, root.CloudmersiveConvertApiClient.UpdateDocxTableCellRequest, root.CloudmersiveConvertApiClient.UpdateDocxTableCellResponse, root.CloudmersiveConvertApiClient.UpdateDocxTableRowRequest, root.CloudmersiveConvertApiClient.UpdateDocxTableRowResponse);
+    root.CloudmersiveConvertApiClient.EditDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.ClearXlsxCellRequest, root.CloudmersiveConvertApiClient.ClearXlsxCellResponse, root.CloudmersiveConvertApiClient.CreateBlankDocxRequest, root.CloudmersiveConvertApiClient.CreateBlankDocxResponse, root.CloudmersiveConvertApiClient.CreateBlankSpreadsheetRequest, root.CloudmersiveConvertApiClient.CreateBlankSpreadsheetResponse, root.CloudmersiveConvertApiClient.CreateSpreadsheetFromDataRequest, root.CloudmersiveConvertApiClient.CreateSpreadsheetFromDataResponse, root.CloudmersiveConvertApiClient.DeleteDocxTableRowRangeRequest, root.CloudmersiveConvertApiClient.DeleteDocxTableRowRangeResponse, root.CloudmersiveConvertApiClient.DeleteDocxTableRowRequest, root.CloudmersiveConvertApiClient.DeleteDocxTableRowResponse, root.CloudmersiveConvertApiClient.DocxInsertCommentOnParagraphRequest, root.CloudmersiveConvertApiClient.DocxInsertImageRequest, root.CloudmersiveConvertApiClient.DocxInsertImageResponse, root.CloudmersiveConvertApiClient.DocxRemoveObjectRequest, root.CloudmersiveConvertApiClient.DocxRemoveObjectResponse, root.CloudmersiveConvertApiClient.DocxSetFooterAddPageNumberRequest, root.CloudmersiveConvertApiClient.DocxSetFooterRequest, root.CloudmersiveConvertApiClient.DocxSetFooterResponse, root.CloudmersiveConvertApiClient.DocxSetHeaderRequest, root.CloudmersiveConvertApiClient.DocxSetHeaderResponse, root.CloudmersiveConvertApiClient.FinishEditingRequest, root.CloudmersiveConvertApiClient.GetDocxBodyRequest, root.CloudmersiveConvertApiClient.GetDocxBodyResponse, root.CloudmersiveConvertApiClient.GetDocxCommentsHierarchicalResponse, root.CloudmersiveConvertApiClient.GetDocxCommentsResponse, root.CloudmersiveConvertApiClient.GetDocxGetCommentsHierarchicalRequest, root.CloudmersiveConvertApiClient.GetDocxGetCommentsRequest, root.CloudmersiveConvertApiClient.GetDocxHeadersAndFootersRequest, root.CloudmersiveConvertApiClient.GetDocxHeadersAndFootersResponse, root.CloudmersiveConvertApiClient.GetDocxImagesRequest, root.CloudmersiveConvertApiClient.GetDocxImagesResponse, root.CloudmersiveConvertApiClient.GetDocxPagesRequest, root.CloudmersiveConvertApiClient.GetDocxPagesResponse, root.CloudmersiveConvertApiClient.GetDocxSectionsRequest, root.CloudmersiveConvertApiClient.GetDocxSectionsResponse, root.CloudmersiveConvertApiClient.GetDocxStylesRequest, root.CloudmersiveConvertApiClient.GetDocxStylesResponse, root.CloudmersiveConvertApiClient.GetDocxTableByIndexRequest, root.CloudmersiveConvertApiClient.GetDocxTableByIndexResponse, root.CloudmersiveConvertApiClient.GetDocxTableRowRequest, root.CloudmersiveConvertApiClient.GetDocxTableRowResponse, root.CloudmersiveConvertApiClient.GetDocxTablesRequest, root.CloudmersiveConvertApiClient.GetDocxTablesResponse, root.CloudmersiveConvertApiClient.GetXlsxCellByIdentifierRequest, root.CloudmersiveConvertApiClient.GetXlsxCellByIdentifierResponse, root.CloudmersiveConvertApiClient.GetXlsxCellRequest, root.CloudmersiveConvertApiClient.GetXlsxCellResponse, root.CloudmersiveConvertApiClient.GetXlsxColumnsRequest, root.CloudmersiveConvertApiClient.GetXlsxColumnsResponse, root.CloudmersiveConvertApiClient.GetXlsxImagesRequest, root.CloudmersiveConvertApiClient.GetXlsxImagesResponse, root.CloudmersiveConvertApiClient.GetXlsxRowsAndCellsRequest, root.CloudmersiveConvertApiClient.GetXlsxRowsAndCellsResponse, root.CloudmersiveConvertApiClient.GetXlsxStylesRequest, root.CloudmersiveConvertApiClient.GetXlsxStylesResponse, root.CloudmersiveConvertApiClient.GetXlsxWorksheetsRequest, root.CloudmersiveConvertApiClient.GetXlsxWorksheetsResponse, root.CloudmersiveConvertApiClient.InsertDocxCommentOnParagraphResponse, root.CloudmersiveConvertApiClient.InsertDocxInsertParagraphRequest, root.CloudmersiveConvertApiClient.InsertDocxInsertParagraphResponse, root.CloudmersiveConvertApiClient.InsertDocxTableRowRequest, root.CloudmersiveConvertApiClient.InsertDocxTableRowResponse, root.CloudmersiveConvertApiClient.InsertDocxTablesRequest, root.CloudmersiveConvertApiClient.InsertDocxTablesResponse, root.CloudmersiveConvertApiClient.InsertXlsxWorksheetRequest, root.CloudmersiveConvertApiClient.InsertXlsxWorksheetResponse, root.CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersRequest, root.CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersResponse, root.CloudmersiveConvertApiClient.RemoveDocxPagesRequest, root.CloudmersiveConvertApiClient.RemovePptxSlidesRequest, root.CloudmersiveConvertApiClient.RemoveXlsxWorksheetRequest, root.CloudmersiveConvertApiClient.ReplaceStringRequest, root.CloudmersiveConvertApiClient.SetXlsxCellByIdentifierRequest, root.CloudmersiveConvertApiClient.SetXlsxCellByIdentifierResponse, root.CloudmersiveConvertApiClient.SetXlsxCellRequest, root.CloudmersiveConvertApiClient.SetXlsxCellResponse, root.CloudmersiveConvertApiClient.UpdateDocxTableCellRequest, root.CloudmersiveConvertApiClient.UpdateDocxTableCellResponse, root.CloudmersiveConvertApiClient.UpdateDocxTableRowRequest, root.CloudmersiveConvertApiClient.UpdateDocxTableRowResponse);
   }
-}(this, function(ApiClient, ClearXlsxCellRequest, ClearXlsxCellResponse, CreateBlankDocxRequest, CreateBlankDocxResponse, CreateBlankSpreadsheetRequest, CreateBlankSpreadsheetResponse, CreateSpreadsheetFromDataRequest, CreateSpreadsheetFromDataResponse, DeleteDocxTableRowRangeRequest, DeleteDocxTableRowRangeResponse, DeleteDocxTableRowRequest, DeleteDocxTableRowResponse, DocxInsertImageRequest, DocxInsertImageResponse, DocxRemoveObjectRequest, DocxRemoveObjectResponse, DocxSetFooterAddPageNumberRequest, DocxSetFooterRequest, DocxSetFooterResponse, DocxSetHeaderRequest, DocxSetHeaderResponse, FinishEditingRequest, GetDocxBodyRequest, GetDocxBodyResponse, GetDocxHeadersAndFootersRequest, GetDocxHeadersAndFootersResponse, GetDocxImagesRequest, GetDocxImagesResponse, GetDocxPagesRequest, GetDocxPagesResponse, GetDocxSectionsRequest, GetDocxSectionsResponse, GetDocxStylesRequest, GetDocxStylesResponse, GetDocxTableByIndexRequest, GetDocxTableByIndexResponse, GetDocxTableRowRequest, GetDocxTableRowResponse, GetDocxTablesRequest, GetDocxTablesResponse, GetXlsxCellByIdentifierRequest, GetXlsxCellByIdentifierResponse, GetXlsxCellRequest, GetXlsxCellResponse, GetXlsxColumnsRequest, GetXlsxColumnsResponse, GetXlsxImagesRequest, GetXlsxImagesResponse, GetXlsxRowsAndCellsRequest, GetXlsxRowsAndCellsResponse, GetXlsxStylesRequest, GetXlsxStylesResponse, GetXlsxWorksheetsRequest, GetXlsxWorksheetsResponse, InsertDocxInsertParagraphRequest, InsertDocxInsertParagraphResponse, InsertDocxTableRowRequest, InsertDocxTableRowResponse, InsertDocxTablesRequest, InsertDocxTablesResponse, InsertXlsxWorksheetRequest, InsertXlsxWorksheetResponse, RemoveDocxHeadersAndFootersRequest, RemoveDocxHeadersAndFootersResponse, RemoveDocxPagesRequest, RemovePptxSlidesRequest, RemoveXlsxWorksheetRequest, ReplaceStringRequest, SetXlsxCellByIdentifierRequest, SetXlsxCellByIdentifierResponse, SetXlsxCellRequest, SetXlsxCellResponse, UpdateDocxTableCellRequest, UpdateDocxTableCellResponse, UpdateDocxTableRowRequest, UpdateDocxTableRowResponse) {
+}(this, function(ApiClient, ClearXlsxCellRequest, ClearXlsxCellResponse, CreateBlankDocxRequest, CreateBlankDocxResponse, CreateBlankSpreadsheetRequest, CreateBlankSpreadsheetResponse, CreateSpreadsheetFromDataRequest, CreateSpreadsheetFromDataResponse, DeleteDocxTableRowRangeRequest, DeleteDocxTableRowRangeResponse, DeleteDocxTableRowRequest, DeleteDocxTableRowResponse, DocxInsertCommentOnParagraphRequest, DocxInsertImageRequest, DocxInsertImageResponse, DocxRemoveObjectRequest, DocxRemoveObjectResponse, DocxSetFooterAddPageNumberRequest, DocxSetFooterRequest, DocxSetFooterResponse, DocxSetHeaderRequest, DocxSetHeaderResponse, FinishEditingRequest, GetDocxBodyRequest, GetDocxBodyResponse, GetDocxCommentsHierarchicalResponse, GetDocxCommentsResponse, GetDocxGetCommentsHierarchicalRequest, GetDocxGetCommentsRequest, GetDocxHeadersAndFootersRequest, GetDocxHeadersAndFootersResponse, GetDocxImagesRequest, GetDocxImagesResponse, GetDocxPagesRequest, GetDocxPagesResponse, GetDocxSectionsRequest, GetDocxSectionsResponse, GetDocxStylesRequest, GetDocxStylesResponse, GetDocxTableByIndexRequest, GetDocxTableByIndexResponse, GetDocxTableRowRequest, GetDocxTableRowResponse, GetDocxTablesRequest, GetDocxTablesResponse, GetXlsxCellByIdentifierRequest, GetXlsxCellByIdentifierResponse, GetXlsxCellRequest, GetXlsxCellResponse, GetXlsxColumnsRequest, GetXlsxColumnsResponse, GetXlsxImagesRequest, GetXlsxImagesResponse, GetXlsxRowsAndCellsRequest, GetXlsxRowsAndCellsResponse, GetXlsxStylesRequest, GetXlsxStylesResponse, GetXlsxWorksheetsRequest, GetXlsxWorksheetsResponse, InsertDocxCommentOnParagraphResponse, InsertDocxInsertParagraphRequest, InsertDocxInsertParagraphResponse, InsertDocxTableRowRequest, InsertDocxTableRowResponse, InsertDocxTablesRequest, InsertDocxTablesResponse, InsertXlsxWorksheetRequest, InsertXlsxWorksheetResponse, RemoveDocxHeadersAndFootersRequest, RemoveDocxHeadersAndFootersResponse, RemoveDocxPagesRequest, RemovePptxSlidesRequest, RemoveXlsxWorksheetRequest, ReplaceStringRequest, SetXlsxCellByIdentifierRequest, SetXlsxCellByIdentifierResponse, SetXlsxCellRequest, SetXlsxCellResponse, UpdateDocxTableCellRequest, UpdateDocxTableCellResponse, UpdateDocxTableRowRequest, UpdateDocxTableRowResponse) {
   'use strict';
 
   /**
    * EditDocument service.
    * @module api/EditDocumentApi
-   * @version 2.3.5
+   * @version 2.3.6
    */
 
   /**
@@ -325,6 +325,100 @@
 
       return this.apiClient.callApi(
         '/convert/edit/docx/delete-table-row/range', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentDocxGetComments operation.
+     * @callback module:api/EditDocumentApi~editDocumentDocxGetCommentsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetDocxCommentsResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get comments from a Word DOCX document as a flat list
+     * Returns the comments and review annotations stored in the Word Document (DOCX) format file as a flattened list (not as a hierarchy of comments and replies).
+     * @param {module:model/GetDocxGetCommentsRequest} reqConfig Document input request
+     * @param {module:api/EditDocumentApi~editDocumentDocxGetCommentsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetDocxCommentsResponse}
+     */
+    this.editDocumentDocxGetComments = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentDocxGetComments");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = GetDocxCommentsResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/docx/get-comments/flat-list', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentDocxGetCommentsHierarchical operation.
+     * @callback module:api/EditDocumentApi~editDocumentDocxGetCommentsHierarchicalCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetDocxCommentsHierarchicalResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get comments from a Word DOCX document hierarchically
+     * Returns the comments and review annotations stored in the Word Document (DOCX) format file hierarchically, where reply comments are nested as children under top-level comments in the results returned.
+     * @param {module:model/GetDocxGetCommentsHierarchicalRequest} reqConfig Document input request
+     * @param {module:api/EditDocumentApi~editDocumentDocxGetCommentsHierarchicalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetDocxCommentsHierarchicalResponse}
+     */
+    this.editDocumentDocxGetCommentsHierarchical = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentDocxGetCommentsHierarchical");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = GetDocxCommentsHierarchicalResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/docx/get-comments/hierarchical', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -654,6 +748,53 @@
 
       return this.apiClient.callApi(
         '/convert/edit/docx/get-tables', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editDocumentDocxInsertCommentOnParagraph operation.
+     * @callback module:api/EditDocumentApi~editDocumentDocxInsertCommentOnParagraphCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InsertDocxCommentOnParagraphResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert a new comment into a Word DOCX document attached to a paragraph
+     * Adds a new comment into a Word DOCX document attached to a paragraph and returns the result.  Call Finish Editing on the output URL to complete the operation.
+     * @param {module:model/DocxInsertCommentOnParagraphRequest} reqConfig Document input request
+     * @param {module:api/EditDocumentApi~editDocumentDocxInsertCommentOnParagraphCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InsertDocxCommentOnParagraphResponse}
+     */
+    this.editDocumentDocxInsertCommentOnParagraph = function(reqConfig, callback) {
+      var postBody = reqConfig;
+
+      // verify the required parameter 'reqConfig' is set
+      if (reqConfig === undefined || reqConfig === null) {
+        throw new Error("Missing the required parameter 'reqConfig' when calling editDocumentDocxInsertCommentOnParagraph");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = InsertDocxCommentOnParagraphResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/docx/insert-comment/on/paragraph', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

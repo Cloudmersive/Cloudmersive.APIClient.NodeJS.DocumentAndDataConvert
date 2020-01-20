@@ -36,11 +36,12 @@
   /**
    * The DocxPage model module.
    * @module model/DocxPage
-   * @version 2.3.5
+   * @version 2.3.6
    */
 
   /**
    * Constructs a new <code>DocxPage</code>.
+   * One page in a Word Document DOCX
    * @alias module:model/DocxPage
    * @class
    */

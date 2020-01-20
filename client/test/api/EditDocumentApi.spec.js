@@ -110,6 +110,26 @@
         done();
       });
     });
+    describe('editDocumentDocxGetComments', function() {
+      it('should call editDocumentDocxGetComments successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxGetComments
+        //instance.editDocumentDocxGetComments(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxGetCommentsHierarchical', function() {
+      it('should call editDocumentDocxGetCommentsHierarchical successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxGetCommentsHierarchical
+        //instance.editDocumentDocxGetCommentsHierarchical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentDocxGetHeadersAndFooters', function() {
       it('should call editDocumentDocxGetHeadersAndFooters successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxGetHeadersAndFooters
@@ -174,6 +194,16 @@
       it('should call editDocumentDocxGetTables successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxGetTables
         //instance.editDocumentDocxGetTables(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxInsertCommentOnParagraph', function() {
+      it('should call editDocumentDocxInsertCommentOnParagraph successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxInsertCommentOnParagraph
+        //instance.editDocumentDocxInsertCommentOnParagraph(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

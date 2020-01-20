@@ -36,11 +36,12 @@
   /**
    * The GetDocxPagesResponse model module.
    * @module model/GetDocxPagesResponse
-   * @version 2.3.5
+   * @version 2.3.6
    */
 
   /**
    * Constructs a new <code>GetDocxPagesResponse</code>.
+   * Result of getting pages from a Word Document DOCX
    * @alias module:model/GetDocxPagesResponse
    * @class
    */
@@ -77,14 +78,17 @@
   }
 
   /**
+   * True if successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
   /**
+   * Pages in the document
    * @member {Array.<module:model/DocxPage>} Pages
    */
   exports.prototype['Pages'] = undefined;
   /**
+   * Count of pages
    * @member {Number} PageCount
    */
   exports.prototype['PageCount'] = undefined;
