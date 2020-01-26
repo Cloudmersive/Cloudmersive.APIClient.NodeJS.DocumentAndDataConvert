@@ -36,7 +36,7 @@
   /**
    * The UpdateDocxTableCellResponse model module.
    * @module model/UpdateDocxTableCellResponse
-   * @version 2.3.6
+   * @version 2.3.7
    */
 
   /**

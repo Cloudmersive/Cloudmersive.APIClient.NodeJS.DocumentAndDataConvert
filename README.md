@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.3.6
+- Package version: 2.3.7
 
 
 ## Installation
@@ -216,7 +216,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxSetHeader**](docs/EditDocumentApi.md#editDocumentDocxSetHeader) | **POST** /convert/edit/docx/set-header | Set the header in a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxUpdateTableCell**](docs/EditDocumentApi.md#editDocumentDocxUpdateTableCell) | **POST** /convert/edit/docx/update-table-cell | Update, set contents of a table cell in an existing table in a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxUpdateTableRow**](docs/EditDocumentApi.md#editDocumentDocxUpdateTableRow) | **POST** /convert/edit/docx/update-table-row | Update, set contents of a table row in an existing table in a Word DOCX document
-*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentFinishEditing**](docs/EditDocumentApi.md#editDocumentFinishEditing) | **POST** /convert/edit/finish-editing | Download result from document editing
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentFinishEditing**](docs/EditDocumentApi.md#editDocumentFinishEditing) | **POST** /convert/edit/finish-editing | Finish editing document, and download result from document editing
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentPptxDeleteSlides**](docs/EditDocumentApi.md#editDocumentPptxDeleteSlides) | **POST** /convert/edit/pptx/delete-slides | Delete, remove slides from a PowerPoint PPTX presentation document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentPptxReplace**](docs/EditDocumentApi.md#editDocumentPptxReplace) | **POST** /convert/edit/pptx/replace-all | Replace string in PowerPoint PPTX presentation
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxClearCellByIndex**](docs/EditDocumentApi.md#editDocumentXlsxClearCellByIndex) | **POST** /convert/edit/xlsx/clear-cell/by-index | Clear cell contents in an Excel XLSX spreadsheet, worksheet by index
@@ -251,6 +251,15 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfSetMetadata**](docs/EditPdfApi.md#editPdfSetMetadata) | **POST** /convert/edit/pdf/set-metadata | Sets PDF document metadata
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfSetPermissions**](docs/EditPdfApi.md#editPdfSetPermissions) | **POST** /convert/edit/pdf/encrypt/set-permissions | Encrypt, password-protect and set restricted permissions on a PDF
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfWatermarkText**](docs/EditPdfApi.md#editPdfWatermarkText) | **POST** /convert/edit/pdf/watermark/text | Add a text watermark to a PDF
+*CloudmersiveConvertApiClient.EditTextApi* | [**editTextBase64Decode**](docs/EditTextApi.md#editTextBase64Decode) | **POST** /convert/edit/text/encoding/base64/decode | Base 64 decode, convert base 64 string to binary content
+*CloudmersiveConvertApiClient.EditTextApi* | [**editTextBase64Detect**](docs/EditTextApi.md#editTextBase64Detect) | **POST** /convert/edit/text/encoding/base64/detect | Detect, check if text string is base 64 encoded
+*CloudmersiveConvertApiClient.EditTextApi* | [**editTextBase64Encode**](docs/EditTextApi.md#editTextBase64Encode) | **POST** /convert/edit/text/encoding/base64/encode | Base 64 encode, convert binary or file data to a text string
+*CloudmersiveConvertApiClient.EditTextApi* | [**editTextChangeLineEndings**](docs/EditTextApi.md#editTextChangeLineEndings) | **POST** /convert/edit/text/line-endings/change | Set, change line endings of a text file
+*CloudmersiveConvertApiClient.EditTextApi* | [**editTextDetectLineEndings**](docs/EditTextApi.md#editTextDetectLineEndings) | **POST** /convert/edit/text/line-endings/detect | Detect line endings of a text file
+*CloudmersiveConvertApiClient.EditTextApi* | [**editTextRemoveAllWhitespace**](docs/EditTextApi.md#editTextRemoveAllWhitespace) | **POST** /convert/edit/text/remove/whitespace/all | Remove whitespace from text string
+*CloudmersiveConvertApiClient.EditTextApi* | [**editTextRemoveHtml**](docs/EditTextApi.md#editTextRemoveHtml) | **POST** /convert/edit/text/remove/html | Remove HTML from text string
+*CloudmersiveConvertApiClient.EditTextApi* | [**editTextTextEncodingDetect**](docs/EditTextApi.md#editTextTextEncodingDetect) | **POST** /convert/edit/text/encoding/detect | Detect text encoding of file
+*CloudmersiveConvertApiClient.EditTextApi* | [**editTextTrimWhitespace**](docs/EditTextApi.md#editTextTrimWhitespace) | **POST** /convert/edit/text/remove/whitespace/trim | Trim leading and trailing whitespace from text string
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentDocx**](docs/MergeDocumentApi.md#mergeDocumentDocx) | **POST** /convert/merge/docx | Merge Two Word DOCX Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentDocxMulti**](docs/MergeDocumentApi.md#mergeDocumentDocxMulti) | **POST** /convert/merge/docx/multi | Merge Multple Word DOCX Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPdf**](docs/MergeDocumentApi.md#mergeDocumentPdf) | **POST** /convert/merge/pdf | Merge Two PDF Files Together
@@ -258,12 +267,15 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPng**](docs/MergeDocumentApi.md#mergeDocumentPng) | **POST** /convert/merge/png/vertical | Merge Multple PNG Files Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPptx**](docs/MergeDocumentApi.md#mergeDocumentPptx) | **POST** /convert/merge/pptx | Merge Two PowerPoint PPTX Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPptxMulti**](docs/MergeDocumentApi.md#mergeDocumentPptxMulti) | **POST** /convert/merge/pptx/multi | Merge Multple PowerPoint PPTX Together
+*CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentTxt**](docs/MergeDocumentApi.md#mergeDocumentTxt) | **POST** /convert/merge/txt | Merge Two Text (TXT) Files Together
+*CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentTxtMulti**](docs/MergeDocumentApi.md#mergeDocumentTxtMulti) | **POST** /convert/merge/txt/multi | Merge Multple Text (TXT) Files Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentXlsx**](docs/MergeDocumentApi.md#mergeDocumentXlsx) | **POST** /convert/merge/xlsx | Merge Two Excel XLSX Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentXlsxMulti**](docs/MergeDocumentApi.md#mergeDocumentXlsxMulti) | **POST** /convert/merge/xlsx/multi | Merge Multple Excel XLSX Together
 *CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentDocx**](docs/SplitDocumentApi.md#splitDocumentDocx) | **POST** /convert/split/docx | Split a single Word Document DOCX into Separate Documents by Page
 *CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentPdfByPage**](docs/SplitDocumentApi.md#splitDocumentPdfByPage) | **POST** /convert/split/pdf | Split a PDF file into separate PDF files, one per page
 *CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentPptx**](docs/SplitDocumentApi.md#splitDocumentPptx) | **POST** /convert/split/pptx | Split a single PowerPoint Presentation PPTX into Separate Slides
 *CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentTxtByLine**](docs/SplitDocumentApi.md#splitDocumentTxtByLine) | **POST** /convert/split/txt/by-line | Split a single Text file (txt) into lines
+*CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentTxtByString**](docs/SplitDocumentApi.md#splitDocumentTxtByString) | **POST** /convert/split/txt/by-string | Split a single Text file (txt) by a string delimiter
 *CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentXlsx**](docs/SplitDocumentApi.md#splitDocumentXlsx) | **POST** /convert/split/xlsx | Split a single Excel XLSX into Separate Worksheets
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentAutodetectValidation**](docs/ValidateDocumentApi.md#validateDocumentAutodetectValidation) | **POST** /convert/validate/autodetect | Autodetect content type and validate
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentDocxValidation**](docs/ValidateDocumentApi.md#validateDocumentDocxValidation) | **POST** /convert/validate/docx | Validate a Word document (DOCX)
@@ -283,6 +295,13 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.AutodetectDocumentValidationResult](docs/AutodetectDocumentValidationResult.md)
  - [CloudmersiveConvertApiClient.AutodetectGetInfoResult](docs/AutodetectGetInfoResult.md)
  - [CloudmersiveConvertApiClient.AutodetectToPngResult](docs/AutodetectToPngResult.md)
+ - [CloudmersiveConvertApiClient.Base64DecodeRequest](docs/Base64DecodeRequest.md)
+ - [CloudmersiveConvertApiClient.Base64DecodeResponse](docs/Base64DecodeResponse.md)
+ - [CloudmersiveConvertApiClient.Base64DetectRequest](docs/Base64DetectRequest.md)
+ - [CloudmersiveConvertApiClient.Base64DetectResponse](docs/Base64DetectResponse.md)
+ - [CloudmersiveConvertApiClient.Base64EncodeRequest](docs/Base64EncodeRequest.md)
+ - [CloudmersiveConvertApiClient.Base64EncodeResponse](docs/Base64EncodeResponse.md)
+ - [CloudmersiveConvertApiClient.ChangeLineEndingResponse](docs/ChangeLineEndingResponse.md)
  - [CloudmersiveConvertApiClient.ClearXlsxCellRequest](docs/ClearXlsxCellRequest.md)
  - [CloudmersiveConvertApiClient.ClearXlsxCellResponse](docs/ClearXlsxCellResponse.md)
  - [CloudmersiveConvertApiClient.ConvertedPngPage](docs/ConvertedPngPage.md)
@@ -296,6 +315,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.DeleteDocxTableRowRangeResponse](docs/DeleteDocxTableRowRangeResponse.md)
  - [CloudmersiveConvertApiClient.DeleteDocxTableRowRequest](docs/DeleteDocxTableRowRequest.md)
  - [CloudmersiveConvertApiClient.DeleteDocxTableRowResponse](docs/DeleteDocxTableRowResponse.md)
+ - [CloudmersiveConvertApiClient.DetectLineEndingsResponse](docs/DetectLineEndingsResponse.md)
  - [CloudmersiveConvertApiClient.DocumentValidationError](docs/DocumentValidationError.md)
  - [CloudmersiveConvertApiClient.DocumentValidationResult](docs/DocumentValidationResult.md)
  - [CloudmersiveConvertApiClient.DocxBody](docs/DocxBody.md)
@@ -398,7 +418,11 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersRequest](docs/RemoveDocxHeadersAndFootersRequest.md)
  - [CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersResponse](docs/RemoveDocxHeadersAndFootersResponse.md)
  - [CloudmersiveConvertApiClient.RemoveDocxPagesRequest](docs/RemoveDocxPagesRequest.md)
+ - [CloudmersiveConvertApiClient.RemoveHtmlFromTextRequest](docs/RemoveHtmlFromTextRequest.md)
+ - [CloudmersiveConvertApiClient.RemoveHtmlFromTextResponse](docs/RemoveHtmlFromTextResponse.md)
  - [CloudmersiveConvertApiClient.RemovePptxSlidesRequest](docs/RemovePptxSlidesRequest.md)
+ - [CloudmersiveConvertApiClient.RemoveWhitespaceFromTextRequest](docs/RemoveWhitespaceFromTextRequest.md)
+ - [CloudmersiveConvertApiClient.RemoveWhitespaceFromTextResponse](docs/RemoveWhitespaceFromTextResponse.md)
  - [CloudmersiveConvertApiClient.RemoveXlsxWorksheetRequest](docs/RemoveXlsxWorksheetRequest.md)
  - [CloudmersiveConvertApiClient.ReplaceStringRequest](docs/ReplaceStringRequest.md)
  - [CloudmersiveConvertApiClient.ScreenshotRequest](docs/ScreenshotRequest.md)
@@ -414,9 +438,12 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.SplitPdfResult](docs/SplitPdfResult.md)
  - [CloudmersiveConvertApiClient.SplitPptxPresentationResult](docs/SplitPptxPresentationResult.md)
  - [CloudmersiveConvertApiClient.SplitTextDocumentByLinesResult](docs/SplitTextDocumentByLinesResult.md)
+ - [CloudmersiveConvertApiClient.SplitTextDocumentByStringResult](docs/SplitTextDocumentByStringResult.md)
  - [CloudmersiveConvertApiClient.SplitXlsxWorksheetResult](docs/SplitXlsxWorksheetResult.md)
  - [CloudmersiveConvertApiClient.TextConversionResult](docs/TextConversionResult.md)
+ - [CloudmersiveConvertApiClient.TextDocumentElement](docs/TextDocumentElement.md)
  - [CloudmersiveConvertApiClient.TextDocumentLine](docs/TextDocumentLine.md)
+ - [CloudmersiveConvertApiClient.TextEncodingDetectResponse](docs/TextEncodingDetectResponse.md)
  - [CloudmersiveConvertApiClient.UpdateDocxTableCellRequest](docs/UpdateDocxTableCellRequest.md)
  - [CloudmersiveConvertApiClient.UpdateDocxTableCellResponse](docs/UpdateDocxTableCellResponse.md)
  - [CloudmersiveConvertApiClient.UpdateDocxTableRowRequest](docs/UpdateDocxTableRowRequest.md)

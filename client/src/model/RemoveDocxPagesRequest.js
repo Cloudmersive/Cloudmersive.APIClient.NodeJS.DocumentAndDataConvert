@@ -36,7 +36,7 @@
   /**
    * The RemoveDocxPagesRequest model module.
    * @module model/RemoveDocxPagesRequest
-   * @version 2.3.6
+   * @version 2.3.7
    */
 
   /**

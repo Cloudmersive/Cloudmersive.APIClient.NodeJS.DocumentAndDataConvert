@@ -11,6 +11,8 @@ Method | HTTP request | Description
 [**mergeDocumentPng**](MergeDocumentApi.md#mergeDocumentPng) | **POST** /convert/merge/png/vertical | Merge Multple PNG Files Together
 [**mergeDocumentPptx**](MergeDocumentApi.md#mergeDocumentPptx) | **POST** /convert/merge/pptx | Merge Two PowerPoint PPTX Together
 [**mergeDocumentPptxMulti**](MergeDocumentApi.md#mergeDocumentPptxMulti) | **POST** /convert/merge/pptx/multi | Merge Multple PowerPoint PPTX Together
+[**mergeDocumentTxt**](MergeDocumentApi.md#mergeDocumentTxt) | **POST** /convert/merge/txt | Merge Two Text (TXT) Files Together
+[**mergeDocumentTxtMulti**](MergeDocumentApi.md#mergeDocumentTxtMulti) | **POST** /convert/merge/txt/multi | Merge Multple Text (TXT) Files Together
 [**mergeDocumentXlsx**](MergeDocumentApi.md#mergeDocumentXlsx) | **POST** /convert/merge/xlsx | Merge Two Excel XLSX Together
 [**mergeDocumentXlsxMulti**](MergeDocumentApi.md#mergeDocumentXlsxMulti) | **POST** /convert/merge/xlsx/multi | Merge Multple Excel XLSX Together
 
@@ -431,6 +433,136 @@ var callback = function(error, data, response) {
   }
 };
 apiInstance.mergeDocumentPptxMulti(inputFile1, inputFile2, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile1** | **File**| First input file to perform the operation on. | 
+ **inputFile2** | **File**| Second input file to perform the operation on. | 
+ **inputFile3** | **File**| Third input file to perform the operation on. | [optional] 
+ **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional] 
+ **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional] 
+ **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional] 
+ **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional] 
+ **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional] 
+ **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional] 
+ **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional] 
+
+### Return type
+
+**&#39;Blob&#39;**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+<a name="mergeDocumentTxt"></a>
+# **mergeDocumentTxt**
+> Object mergeDocumentTxt(inputFile1, inputFile2)
+
+Merge Two Text (TXT) Files Together
+
+Combine two Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.MergeDocumentApi();
+
+var inputFile1 = "/path/to/file.txt"; // File | First input file to perform the operation on.
+
+var inputFile2 = "/path/to/file.txt"; // File | Second input file to perform the operation on (more than 2 can be supplied).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.mergeDocumentTxt(inputFile1, inputFile2, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile1** | **File**| First input file to perform the operation on. | 
+ **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+<a name="mergeDocumentTxtMulti"></a>
+# **mergeDocumentTxtMulti**
+> &#39;Blob&#39; mergeDocumentTxtMulti(inputFile1, inputFile2, opts)
+
+Merge Multple Text (TXT) Files Together
+
+Combine multiple Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.MergeDocumentApi();
+
+var inputFile1 = "/path/to/file.txt"; // File | First input file to perform the operation on.
+
+var inputFile2 = "/path/to/file.txt"; // File | Second input file to perform the operation on.
+
+var opts = { 
+  'inputFile3': "/path/to/file.txt", // File | Third input file to perform the operation on.
+  'inputFile4': "/path/to/file.txt", // File | Fourth input file to perform the operation on.
+  'inputFile5': "/path/to/file.txt", // File | Fifth input file to perform the operation on.
+  'inputFile6': "/path/to/file.txt", // File | Sixth input file to perform the operation on.
+  'inputFile7': "/path/to/file.txt", // File | Seventh input file to perform the operation on.
+  'inputFile8': "/path/to/file.txt", // File | Eighth input file to perform the operation on.
+  'inputFile9': "/path/to/file.txt", // File | Ninth input file to perform the operation on.
+  'inputFile10': "/path/to/file.txt" // File | Tenth input file to perform the operation on.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.mergeDocumentTxtMulti(inputFile1, inputFile2, opts, callback);
 ```
 
 ### Parameters

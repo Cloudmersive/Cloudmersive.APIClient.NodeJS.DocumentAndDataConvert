@@ -519,7 +519,7 @@ Name | Type | Description  | Notes
 
 <a name="convertDocumentDocxToTxt"></a>
 # **convertDocumentDocxToTxt**
-> TextConversionResult convertDocumentDocxToTxt(inputFile)
+> TextConversionResult convertDocumentDocxToTxt(inputFile, opts)
 
 Convert Word DOCX Document to Text (txt)
 
@@ -540,6 +540,9 @@ var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
+var opts = { 
+  'textFormattingMode': "textFormattingMode_example" // String | Optional; specify how whitespace should be handled when converting the document to text.  Possible values are 'preserveWhitespace' which will attempt to preserve whitespace in the document and relative positioning of text within the document, and 'minimizeWhitespace' which will not insert additional spaces into the document in most cases.  Default is 'minimizeWhitespace'.
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -548,7 +551,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.convertDocumentDocxToTxt(inputFile, callback);
+apiInstance.convertDocumentDocxToTxt(inputFile, opts, callback);
 ```
 
 ### Parameters
@@ -556,6 +559,7 @@ apiInstance.convertDocumentDocxToTxt(inputFile, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **File**| Input file to perform the operation on. | 
+ **textFormattingMode** | **String**| Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;minimizeWhitespace&#39;. | [optional] 
 
 ### Return type
 

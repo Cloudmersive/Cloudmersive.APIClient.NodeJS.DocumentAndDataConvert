@@ -120,6 +120,26 @@
         done();
       });
     });
+    describe('mergeDocumentTxt', function() {
+      it('should call mergeDocumentTxt successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentTxt
+        //instance.mergeDocumentTxt(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('mergeDocumentTxtMulti', function() {
+      it('should call mergeDocumentTxtMulti successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentTxtMulti
+        //instance.mergeDocumentTxtMulti(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('mergeDocumentXlsx', function() {
       it('should call mergeDocumentXlsx successfully', function(done) {
         //uncomment below and update the code to test mergeDocumentXlsx

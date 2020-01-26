@@ -36,7 +36,7 @@
   /**
    * The XlsxImage model module.
    * @module model/XlsxImage
-   * @version 2.3.6
+   * @version 2.3.7
    */
 
   /**

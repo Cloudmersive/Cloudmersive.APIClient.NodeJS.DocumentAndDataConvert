@@ -33,7 +33,7 @@
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.3.6
+   * @version 2.3.7
    */
 
   /**
@@ -495,10 +495,13 @@
      * Convert Word DOCX Document to Text (txt)
      * Convert Office Word Documents (docx) to text
      * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.textFormattingMode Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;minimizeWhitespace&#39;.
      * @param {module:api/ConvertDocumentApi~convertDocumentDocxToTxtCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/TextConversionResult}
      */
-    this.convertDocumentDocxToTxt = function(inputFile, callback) {
+    this.convertDocumentDocxToTxt = function(inputFile, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'inputFile' is set
@@ -514,6 +517,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'textFormattingMode': opts['textFormattingMode']
       };
       var formParams = {
         'inputFile': inputFile
