@@ -33,7 +33,7 @@
   /**
    * ConvertData service.
    * @module api/ConvertDataApi
-   * @version 2.3.7
+   * @version 2.3.8
    */
 
   /**
@@ -106,7 +106,7 @@
     /**
      * Convert JSON to XML conversion
      * Convert a JSON object into XML
-     * @param {Object} jsonObject 
+     * @param {Object} jsonObject Input JSON to convert to XML
      * @param {module:api/ConvertDataApi~convertDataJsonToXmlCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */

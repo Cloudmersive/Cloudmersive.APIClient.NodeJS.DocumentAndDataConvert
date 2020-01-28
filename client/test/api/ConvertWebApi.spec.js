@@ -90,16 +90,6 @@
         done();
       });
     });
-    describe('convertWebHtmlToTxt_0', function() {
-      it('should call convertWebHtmlToTxt_0 successfully', function(done) {
-        //uncomment below and update the code to test convertWebHtmlToTxt_0
-        //instance.convertWebHtmlToTxt_0(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('convertWebMdToHtml', function() {
       it('should call convertWebMdToHtml successfully', function(done) {
         //uncomment below and update the code to test convertWebMdToHtml
@@ -124,6 +114,16 @@
       it('should call convertWebUrlToScreenshot successfully', function(done) {
         //uncomment below and update the code to test convertWebUrlToScreenshot
         //instance.convertWebUrlToScreenshot(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertWebUrlToTxt', function() {
+      it('should call convertWebUrlToTxt successfully', function(done) {
+        //uncomment below and update the code to test convertWebUrlToTxt
+        //instance.convertWebUrlToTxt(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

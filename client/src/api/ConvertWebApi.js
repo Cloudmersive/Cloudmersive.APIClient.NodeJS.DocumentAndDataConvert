@@ -33,7 +33,7 @@
   /**
    * ConvertWeb service.
    * @module api/ConvertWebApi
-   * @version 2.3.7
+   * @version 2.3.8
    */
 
   /**
@@ -192,53 +192,6 @@
      * Callback function to receive the result of the convertWebHtmlToTxt operation.
      * @callback module:api/ConvertWebApi~convertWebHtmlToTxtCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/UrlToTextResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Convert website URL page to text (txt)
-     * Converts a website URL page into text (txt); extracts text from HTML
-     * @param {module:model/UrlToTextRequest} input HTML to Text request parameters
-     * @param {module:api/ConvertWebApi~convertWebHtmlToTxtCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/UrlToTextResponse}
-     */
-    this.convertWebHtmlToTxt = function(input, callback) {
-      var postBody = input;
-
-      // verify the required parameter 'input' is set
-      if (input === undefined || input === null) {
-        throw new Error("Missing the required parameter 'input' when calling convertWebHtmlToTxt");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['Apikey'];
-      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
-      var returnType = UrlToTextResponse;
-
-      return this.apiClient.callApi(
-        '/convert/web/url/to/txt', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the convertWebHtmlToTxt_0 operation.
-     * @callback module:api/ConvertWebApi~convertWebHtmlToTxt_0Callback
-     * @param {String} error Error message, if any.
      * @param {module:model/HtmlToTextResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
@@ -247,15 +200,15 @@
      * Convert HTML string to text (txt)
      * Converts an HTML string input into text (txt); extracts text from HTML
      * @param {module:model/HtmlToTextRequest} input HTML to Text request parameters
-     * @param {module:api/ConvertWebApi~convertWebHtmlToTxt_0Callback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ConvertWebApi~convertWebHtmlToTxtCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/HtmlToTextResponse}
      */
-    this.convertWebHtmlToTxt_0 = function(input, callback) {
+    this.convertWebHtmlToTxt = function(input, callback) {
       var postBody = input;
 
       // verify the required parameter 'input' is set
       if (input === undefined || input === null) {
-        throw new Error("Missing the required parameter 'input' when calling convertWebHtmlToTxt_0");
+        throw new Error("Missing the required parameter 'input' when calling convertWebHtmlToTxt");
       }
 
 
@@ -419,6 +372,53 @@
 
       return this.apiClient.callApi(
         '/convert/web/url/to/screenshot', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertWebUrlToTxt operation.
+     * @callback module:api/ConvertWebApi~convertWebUrlToTxtCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/UrlToTextResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert website URL page to text (txt)
+     * Converts a website URL page into text (txt); extracts text from HTML
+     * @param {module:model/UrlToTextRequest} input HTML to Text request parameters
+     * @param {module:api/ConvertWebApi~convertWebUrlToTxtCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/UrlToTextResponse}
+     */
+    this.convertWebUrlToTxt = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling convertWebUrlToTxt");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = UrlToTextResponse;
+
+      return this.apiClient.callApi(
+        '/convert/web/url/to/txt', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -36,7 +36,7 @@
   /**
    * The RemoveWhitespaceFromTextRequest model module.
    * @module model/RemoveWhitespaceFromTextRequest
-   * @version 2.3.7
+   * @version 2.3.8
    */
 
   /**

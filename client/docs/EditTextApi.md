@@ -9,8 +9,12 @@ Method | HTTP request | Description
 [**editTextBase64Encode**](EditTextApi.md#editTextBase64Encode) | **POST** /convert/edit/text/encoding/base64/encode | Base 64 encode, convert binary or file data to a text string
 [**editTextChangeLineEndings**](EditTextApi.md#editTextChangeLineEndings) | **POST** /convert/edit/text/line-endings/change | Set, change line endings of a text file
 [**editTextDetectLineEndings**](EditTextApi.md#editTextDetectLineEndings) | **POST** /convert/edit/text/line-endings/detect | Detect line endings of a text file
+[**editTextFindRegex**](EditTextApi.md#editTextFindRegex) | **POST** /convert/edit/text/find/regex | Find a regular expression regex in text input
+[**editTextFindSimple**](EditTextApi.md#editTextFindSimple) | **POST** /convert/edit/text/find/string | Find a string in text input
 [**editTextRemoveAllWhitespace**](EditTextApi.md#editTextRemoveAllWhitespace) | **POST** /convert/edit/text/remove/whitespace/all | Remove whitespace from text string
 [**editTextRemoveHtml**](EditTextApi.md#editTextRemoveHtml) | **POST** /convert/edit/text/remove/html | Remove HTML from text string
+[**editTextReplaceRegex**](EditTextApi.md#editTextReplaceRegex) | **POST** /convert/edit/text/replace/regex | Replace a string in text with a regex regular expression string
+[**editTextReplaceSimple**](EditTextApi.md#editTextReplaceSimple) | **POST** /convert/edit/text/replace/string | Replace a string in text with another string value
 [**editTextTextEncodingDetect**](EditTextApi.md#editTextTextEncodingDetect) | **POST** /convert/edit/text/encoding/detect | Detect text encoding of file
 [**editTextTrimWhitespace**](EditTextApi.md#editTextTrimWhitespace) | **POST** /convert/edit/text/remove/whitespace/trim | Trim leading and trailing whitespace from text string
 
@@ -36,7 +40,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditTextApi();
 
-var request = new CloudmersiveConvertApiClient.Base64DecodeRequest(); // Base64DecodeRequest | 
+var request = new CloudmersiveConvertApiClient.Base64DecodeRequest(); // Base64DecodeRequest | Input request
 
 
 var callback = function(error, data, response) {
@@ -53,7 +57,7 @@ apiInstance.editTextBase64Decode(request, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**Base64DecodeRequest**](Base64DecodeRequest.md)|  | 
+ **request** | [**Base64DecodeRequest**](Base64DecodeRequest.md)| Input request | 
 
 ### Return type
 
@@ -89,7 +93,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditTextApi();
 
-var request = new CloudmersiveConvertApiClient.Base64DetectRequest(); // Base64DetectRequest | 
+var request = new CloudmersiveConvertApiClient.Base64DetectRequest(); // Base64DetectRequest | Input request
 
 
 var callback = function(error, data, response) {
@@ -106,7 +110,7 @@ apiInstance.editTextBase64Detect(request, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**Base64DetectRequest**](Base64DetectRequest.md)|  | 
+ **request** | [**Base64DetectRequest**](Base64DetectRequest.md)| Input request | 
 
 ### Return type
 
@@ -142,7 +146,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditTextApi();
 
-var request = new CloudmersiveConvertApiClient.Base64EncodeRequest(); // Base64EncodeRequest | 
+var request = new CloudmersiveConvertApiClient.Base64EncodeRequest(); // Base64EncodeRequest | Input request
 
 
 var callback = function(error, data, response) {
@@ -159,7 +163,7 @@ apiInstance.editTextBase64Encode(request, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**Base64EncodeRequest**](Base64EncodeRequest.md)|  | 
+ **request** | [**Base64EncodeRequest**](Base64EncodeRequest.md)| Input request | 
 
 ### Return type
 
@@ -283,6 +287,112 @@ Name | Type | Description  | Notes
  - **Content-Type**: multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml
 
+<a name="editTextFindRegex"></a>
+# **editTextFindRegex**
+> FindStringRegexResponse editTextFindRegex(request)
+
+Find a regular expression regex in text input
+
+Find all occurrences of the input regular expression in the input content, and returns the matches
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditTextApi();
+
+var request = new CloudmersiveConvertApiClient.FindStringRegexRequest(); // FindStringRegexRequest | Input request
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editTextFindRegex(request, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**FindStringRegexRequest**](FindStringRegexRequest.md)| Input request | 
+
+### Return type
+
+[**FindStringRegexResponse**](FindStringRegexResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="editTextFindSimple"></a>
+# **editTextFindSimple**
+> FindStringSimpleResponse editTextFindSimple(request)
+
+Find a string in text input
+
+Finds all occurrences of the input string in the input content, and returns the matches
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditTextApi();
+
+var request = new CloudmersiveConvertApiClient.FindStringSimpleRequest(); // FindStringSimpleRequest | Input request
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editTextFindSimple(request, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**FindStringSimpleRequest**](FindStringSimpleRequest.md)| Input request | 
+
+### Return type
+
+[**FindStringSimpleResponse**](FindStringSimpleResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
 <a name="editTextRemoveAllWhitespace"></a>
 # **editTextRemoveAllWhitespace**
 > RemoveWhitespaceFromTextResponse editTextRemoveAllWhitespace(request)
@@ -304,7 +414,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditTextApi();
 
-var request = new CloudmersiveConvertApiClient.RemoveWhitespaceFromTextRequest(); // RemoveWhitespaceFromTextRequest | 
+var request = new CloudmersiveConvertApiClient.RemoveWhitespaceFromTextRequest(); // RemoveWhitespaceFromTextRequest | Input request
 
 
 var callback = function(error, data, response) {
@@ -321,7 +431,7 @@ apiInstance.editTextRemoveAllWhitespace(request, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**RemoveWhitespaceFromTextRequest**](RemoveWhitespaceFromTextRequest.md)|  | 
+ **request** | [**RemoveWhitespaceFromTextRequest**](RemoveWhitespaceFromTextRequest.md)| Input request | 
 
 ### Return type
 
@@ -357,7 +467,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditTextApi();
 
-var request = new CloudmersiveConvertApiClient.RemoveHtmlFromTextRequest(); // RemoveHtmlFromTextRequest | 
+var request = new CloudmersiveConvertApiClient.RemoveHtmlFromTextRequest(); // RemoveHtmlFromTextRequest | Input request
 
 
 var callback = function(error, data, response) {
@@ -374,11 +484,117 @@ apiInstance.editTextRemoveHtml(request, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**RemoveHtmlFromTextRequest**](RemoveHtmlFromTextRequest.md)|  | 
+ **request** | [**RemoveHtmlFromTextRequest**](RemoveHtmlFromTextRequest.md)| Input request | 
 
 ### Return type
 
 [**RemoveHtmlFromTextResponse**](RemoveHtmlFromTextResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="editTextReplaceRegex"></a>
+# **editTextReplaceRegex**
+> ReplaceStringRegexResponse editTextReplaceRegex(request)
+
+Replace a string in text with a regex regular expression string
+
+Replaces all occurrences of the input regular expression regex string in the input content, and returns the result
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditTextApi();
+
+var request = new CloudmersiveConvertApiClient.ReplaceStringRegexRequest(); // ReplaceStringRegexRequest | Input request
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editTextReplaceRegex(request, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**ReplaceStringRegexRequest**](ReplaceStringRegexRequest.md)| Input request | 
+
+### Return type
+
+[**ReplaceStringRegexResponse**](ReplaceStringRegexResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="editTextReplaceSimple"></a>
+# **editTextReplaceSimple**
+> ReplaceStringSimpleResponse editTextReplaceSimple(request)
+
+Replace a string in text with another string value
+
+Replaces all occurrences of the input string in the input content, and returns the result
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditTextApi();
+
+var request = new CloudmersiveConvertApiClient.ReplaceStringSimpleRequest(); // ReplaceStringSimpleRequest | Input request
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editTextReplaceSimple(request, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**ReplaceStringSimpleRequest**](ReplaceStringSimpleRequest.md)| Input request | 
+
+### Return type
+
+[**ReplaceStringSimpleResponse**](ReplaceStringSimpleResponse.md)
 
 ### Authorization
 
@@ -463,7 +679,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.EditTextApi();
 
-var request = new CloudmersiveConvertApiClient.RemoveWhitespaceFromTextRequest(); // RemoveWhitespaceFromTextRequest | 
+var request = new CloudmersiveConvertApiClient.RemoveWhitespaceFromTextRequest(); // RemoveWhitespaceFromTextRequest | Input request
 
 
 var callback = function(error, data, response) {
@@ -480,7 +696,7 @@ apiInstance.editTextTrimWhitespace(request, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**RemoveWhitespaceFromTextRequest**](RemoveWhitespaceFromTextRequest.md)|  | 
+ **request** | [**RemoveWhitespaceFromTextRequest**](RemoveWhitespaceFromTextRequest.md)| Input request | 
 
 ### Return type
 

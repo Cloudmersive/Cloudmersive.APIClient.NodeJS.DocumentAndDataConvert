@@ -100,6 +100,26 @@
         done();
       });
     });
+    describe('editTextFindRegex', function() {
+      it('should call editTextFindRegex successfully', function(done) {
+        //uncomment below and update the code to test editTextFindRegex
+        //instance.editTextFindRegex(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editTextFindSimple', function() {
+      it('should call editTextFindSimple successfully', function(done) {
+        //uncomment below and update the code to test editTextFindSimple
+        //instance.editTextFindSimple(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editTextRemoveAllWhitespace', function() {
       it('should call editTextRemoveAllWhitespace successfully', function(done) {
         //uncomment below and update the code to test editTextRemoveAllWhitespace
@@ -114,6 +134,26 @@
       it('should call editTextRemoveHtml successfully', function(done) {
         //uncomment below and update the code to test editTextRemoveHtml
         //instance.editTextRemoveHtml(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editTextReplaceRegex', function() {
+      it('should call editTextReplaceRegex successfully', function(done) {
+        //uncomment below and update the code to test editTextReplaceRegex
+        //instance.editTextReplaceRegex(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editTextReplaceSimple', function() {
+      it('should call editTextReplaceSimple successfully', function(done) {
+        //uncomment below and update the code to test editTextReplaceSimple
+        //instance.editTextReplaceSimple(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

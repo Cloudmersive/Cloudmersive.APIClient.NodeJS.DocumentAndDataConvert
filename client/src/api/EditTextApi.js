@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Base64DecodeRequest', 'model/Base64DecodeResponse', 'model/Base64DetectRequest', 'model/Base64DetectResponse', 'model/Base64EncodeRequest', 'model/Base64EncodeResponse', 'model/ChangeLineEndingResponse', 'model/DetectLineEndingsResponse', 'model/RemoveHtmlFromTextRequest', 'model/RemoveHtmlFromTextResponse', 'model/RemoveWhitespaceFromTextRequest', 'model/RemoveWhitespaceFromTextResponse', 'model/TextEncodingDetectResponse'], factory);
+    define(['ApiClient', 'model/Base64DecodeRequest', 'model/Base64DecodeResponse', 'model/Base64DetectRequest', 'model/Base64DetectResponse', 'model/Base64EncodeRequest', 'model/Base64EncodeResponse', 'model/ChangeLineEndingResponse', 'model/DetectLineEndingsResponse', 'model/FindStringRegexRequest', 'model/FindStringRegexResponse', 'model/FindStringSimpleRequest', 'model/FindStringSimpleResponse', 'model/RemoveHtmlFromTextRequest', 'model/RemoveHtmlFromTextResponse', 'model/RemoveWhitespaceFromTextRequest', 'model/RemoveWhitespaceFromTextResponse', 'model/ReplaceStringRegexRequest', 'model/ReplaceStringRegexResponse', 'model/ReplaceStringSimpleRequest', 'model/ReplaceStringSimpleResponse', 'model/TextEncodingDetectResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Base64DecodeRequest'), require('../model/Base64DecodeResponse'), require('../model/Base64DetectRequest'), require('../model/Base64DetectResponse'), require('../model/Base64EncodeRequest'), require('../model/Base64EncodeResponse'), require('../model/ChangeLineEndingResponse'), require('../model/DetectLineEndingsResponse'), require('../model/RemoveHtmlFromTextRequest'), require('../model/RemoveHtmlFromTextResponse'), require('../model/RemoveWhitespaceFromTextRequest'), require('../model/RemoveWhitespaceFromTextResponse'), require('../model/TextEncodingDetectResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/Base64DecodeRequest'), require('../model/Base64DecodeResponse'), require('../model/Base64DetectRequest'), require('../model/Base64DetectResponse'), require('../model/Base64EncodeRequest'), require('../model/Base64EncodeResponse'), require('../model/ChangeLineEndingResponse'), require('../model/DetectLineEndingsResponse'), require('../model/FindStringRegexRequest'), require('../model/FindStringRegexResponse'), require('../model/FindStringSimpleRequest'), require('../model/FindStringSimpleResponse'), require('../model/RemoveHtmlFromTextRequest'), require('../model/RemoveHtmlFromTextResponse'), require('../model/RemoveWhitespaceFromTextRequest'), require('../model/RemoveWhitespaceFromTextResponse'), require('../model/ReplaceStringRegexRequest'), require('../model/ReplaceStringRegexResponse'), require('../model/ReplaceStringSimpleRequest'), require('../model/ReplaceStringSimpleResponse'), require('../model/TextEncodingDetectResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.EditTextApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.Base64DecodeRequest, root.CloudmersiveConvertApiClient.Base64DecodeResponse, root.CloudmersiveConvertApiClient.Base64DetectRequest, root.CloudmersiveConvertApiClient.Base64DetectResponse, root.CloudmersiveConvertApiClient.Base64EncodeRequest, root.CloudmersiveConvertApiClient.Base64EncodeResponse, root.CloudmersiveConvertApiClient.ChangeLineEndingResponse, root.CloudmersiveConvertApiClient.DetectLineEndingsResponse, root.CloudmersiveConvertApiClient.RemoveHtmlFromTextRequest, root.CloudmersiveConvertApiClient.RemoveHtmlFromTextResponse, root.CloudmersiveConvertApiClient.RemoveWhitespaceFromTextRequest, root.CloudmersiveConvertApiClient.RemoveWhitespaceFromTextResponse, root.CloudmersiveConvertApiClient.TextEncodingDetectResponse);
+    root.CloudmersiveConvertApiClient.EditTextApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.Base64DecodeRequest, root.CloudmersiveConvertApiClient.Base64DecodeResponse, root.CloudmersiveConvertApiClient.Base64DetectRequest, root.CloudmersiveConvertApiClient.Base64DetectResponse, root.CloudmersiveConvertApiClient.Base64EncodeRequest, root.CloudmersiveConvertApiClient.Base64EncodeResponse, root.CloudmersiveConvertApiClient.ChangeLineEndingResponse, root.CloudmersiveConvertApiClient.DetectLineEndingsResponse, root.CloudmersiveConvertApiClient.FindStringRegexRequest, root.CloudmersiveConvertApiClient.FindStringRegexResponse, root.CloudmersiveConvertApiClient.FindStringSimpleRequest, root.CloudmersiveConvertApiClient.FindStringSimpleResponse, root.CloudmersiveConvertApiClient.RemoveHtmlFromTextRequest, root.CloudmersiveConvertApiClient.RemoveHtmlFromTextResponse, root.CloudmersiveConvertApiClient.RemoveWhitespaceFromTextRequest, root.CloudmersiveConvertApiClient.RemoveWhitespaceFromTextResponse, root.CloudmersiveConvertApiClient.ReplaceStringRegexRequest, root.CloudmersiveConvertApiClient.ReplaceStringRegexResponse, root.CloudmersiveConvertApiClient.ReplaceStringSimpleRequest, root.CloudmersiveConvertApiClient.ReplaceStringSimpleResponse, root.CloudmersiveConvertApiClient.TextEncodingDetectResponse);
   }
-}(this, function(ApiClient, Base64DecodeRequest, Base64DecodeResponse, Base64DetectRequest, Base64DetectResponse, Base64EncodeRequest, Base64EncodeResponse, ChangeLineEndingResponse, DetectLineEndingsResponse, RemoveHtmlFromTextRequest, RemoveHtmlFromTextResponse, RemoveWhitespaceFromTextRequest, RemoveWhitespaceFromTextResponse, TextEncodingDetectResponse) {
+}(this, function(ApiClient, Base64DecodeRequest, Base64DecodeResponse, Base64DetectRequest, Base64DetectResponse, Base64EncodeRequest, Base64EncodeResponse, ChangeLineEndingResponse, DetectLineEndingsResponse, FindStringRegexRequest, FindStringRegexResponse, FindStringSimpleRequest, FindStringSimpleResponse, RemoveHtmlFromTextRequest, RemoveHtmlFromTextResponse, RemoveWhitespaceFromTextRequest, RemoveWhitespaceFromTextResponse, ReplaceStringRegexRequest, ReplaceStringRegexResponse, ReplaceStringSimpleRequest, ReplaceStringSimpleResponse, TextEncodingDetectResponse) {
   'use strict';
 
   /**
    * EditText service.
    * @module api/EditTextApi
-   * @version 2.3.7
+   * @version 2.3.8
    */
 
   /**
@@ -58,7 +58,7 @@
     /**
      * Base 64 decode, convert base 64 string to binary content
      * Decodes / converts base 64 UTF-8 text string to binary content
-     * @param {module:model/Base64DecodeRequest} request 
+     * @param {module:model/Base64DecodeRequest} request Input request
      * @param {module:api/EditTextApi~editTextBase64DecodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Base64DecodeResponse}
      */
@@ -105,7 +105,7 @@
     /**
      * Detect, check if text string is base 64 encoded
      * Checks, detects if input string is base 64 encoded
-     * @param {module:model/Base64DetectRequest} request 
+     * @param {module:model/Base64DetectRequest} request Input request
      * @param {module:api/EditTextApi~editTextBase64DetectCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Base64DetectResponse}
      */
@@ -152,7 +152,7 @@
     /**
      * Base 64 encode, convert binary or file data to a text string
      * Encodes / converts binary or file data to a text string
-     * @param {module:model/Base64EncodeRequest} request 
+     * @param {module:model/Base64EncodeRequest} request Input request
      * @param {module:api/EditTextApi~editTextBase64EncodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Base64EncodeResponse}
      */
@@ -292,6 +292,100 @@
     }
 
     /**
+     * Callback function to receive the result of the editTextFindRegex operation.
+     * @callback module:api/EditTextApi~editTextFindRegexCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/FindStringRegexResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Find a regular expression regex in text input
+     * Find all occurrences of the input regular expression in the input content, and returns the matches
+     * @param {module:model/FindStringRegexRequest} request Input request
+     * @param {module:api/EditTextApi~editTextFindRegexCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/FindStringRegexResponse}
+     */
+    this.editTextFindRegex = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling editTextFindRegex");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = FindStringRegexResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/text/find/regex', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editTextFindSimple operation.
+     * @callback module:api/EditTextApi~editTextFindSimpleCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/FindStringSimpleResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Find a string in text input
+     * Finds all occurrences of the input string in the input content, and returns the matches
+     * @param {module:model/FindStringSimpleRequest} request Input request
+     * @param {module:api/EditTextApi~editTextFindSimpleCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/FindStringSimpleResponse}
+     */
+    this.editTextFindSimple = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling editTextFindSimple");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = FindStringSimpleResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/text/find/string', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the editTextRemoveAllWhitespace operation.
      * @callback module:api/EditTextApi~editTextRemoveAllWhitespaceCallback
      * @param {String} error Error message, if any.
@@ -302,7 +396,7 @@
     /**
      * Remove whitespace from text string
      * Removes all whitespace from text, leaving behind only non-whitespace characters.  Whitespace includes newlines, spaces and other whitespace characters.
-     * @param {module:model/RemoveWhitespaceFromTextRequest} request 
+     * @param {module:model/RemoveWhitespaceFromTextRequest} request Input request
      * @param {module:api/EditTextApi~editTextRemoveAllWhitespaceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/RemoveWhitespaceFromTextResponse}
      */
@@ -349,7 +443,7 @@
     /**
      * Remove HTML from text string
      * Removes HTML from text, leaving behind only text.  Formatted text will become plain text.  Important for protecting against HTML and Cross-Site-Scripting attacks.
-     * @param {module:model/RemoveHtmlFromTextRequest} request 
+     * @param {module:model/RemoveHtmlFromTextRequest} request Input request
      * @param {module:api/EditTextApi~editTextRemoveHtmlCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/RemoveHtmlFromTextResponse}
      */
@@ -380,6 +474,100 @@
 
       return this.apiClient.callApi(
         '/convert/edit/text/remove/html', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editTextReplaceRegex operation.
+     * @callback module:api/EditTextApi~editTextReplaceRegexCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ReplaceStringRegexResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Replace a string in text with a regex regular expression string
+     * Replaces all occurrences of the input regular expression regex string in the input content, and returns the result
+     * @param {module:model/ReplaceStringRegexRequest} request Input request
+     * @param {module:api/EditTextApi~editTextReplaceRegexCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ReplaceStringRegexResponse}
+     */
+    this.editTextReplaceRegex = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling editTextReplaceRegex");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = ReplaceStringRegexResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/text/replace/regex', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editTextReplaceSimple operation.
+     * @callback module:api/EditTextApi~editTextReplaceSimpleCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ReplaceStringSimpleResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Replace a string in text with another string value
+     * Replaces all occurrences of the input string in the input content, and returns the result
+     * @param {module:model/ReplaceStringSimpleRequest} request Input request
+     * @param {module:api/EditTextApi~editTextReplaceSimpleCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ReplaceStringSimpleResponse}
+     */
+    this.editTextReplaceSimple = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling editTextReplaceSimple");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = ReplaceStringSimpleResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/text/replace/string', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -444,7 +632,7 @@
     /**
      * Trim leading and trailing whitespace from text string
      * Trim leading and trailing whitespace from text, leaving behind a trimmed string.  Whitespace includes newlines, spaces and other whitespace characters.
-     * @param {module:model/RemoveWhitespaceFromTextRequest} request 
+     * @param {module:model/RemoveWhitespaceFromTextRequest} request Input request
      * @param {module:api/EditTextApi~editTextTrimWhitespaceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/RemoveWhitespaceFromTextResponse}
      */

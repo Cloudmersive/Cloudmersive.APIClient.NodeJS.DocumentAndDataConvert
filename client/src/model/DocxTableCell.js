@@ -36,7 +36,7 @@
   /**
    * The DocxTableCell model module.
    * @module model/DocxTableCell
-   * @version 2.3.7
+   * @version 2.3.8
    */
 
   /**

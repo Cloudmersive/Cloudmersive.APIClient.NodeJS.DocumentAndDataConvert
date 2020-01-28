@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.3.7
+- Package version: 2.3.8
 
 
 ## Installation
@@ -182,11 +182,11 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ConvertWebApi* | [**convertWebHtmlToDocx**](docs/ConvertWebApi.md#convertWebHtmlToDocx) | **POST** /convert/html/to/docx | Convert HTML to Word DOCX Document
 *CloudmersiveConvertApiClient.ConvertWebApi* | [**convertWebHtmlToPdf**](docs/ConvertWebApi.md#convertWebHtmlToPdf) | **POST** /convert/web/html/to/pdf | Convert HTML string to PDF
 *CloudmersiveConvertApiClient.ConvertWebApi* | [**convertWebHtmlToPng**](docs/ConvertWebApi.md#convertWebHtmlToPng) | **POST** /convert/web/html/to/png | Convert HTML string to PNG screenshot
-*CloudmersiveConvertApiClient.ConvertWebApi* | [**convertWebHtmlToTxt**](docs/ConvertWebApi.md#convertWebHtmlToTxt) | **POST** /convert/web/url/to/txt | Convert website URL page to text (txt)
-*CloudmersiveConvertApiClient.ConvertWebApi* | [**convertWebHtmlToTxt_0**](docs/ConvertWebApi.md#convertWebHtmlToTxt_0) | **POST** /convert/web/html/to/txt | Convert HTML string to text (txt)
+*CloudmersiveConvertApiClient.ConvertWebApi* | [**convertWebHtmlToTxt**](docs/ConvertWebApi.md#convertWebHtmlToTxt) | **POST** /convert/web/html/to/txt | Convert HTML string to text (txt)
 *CloudmersiveConvertApiClient.ConvertWebApi* | [**convertWebMdToHtml**](docs/ConvertWebApi.md#convertWebMdToHtml) | **POST** /convert/web/md/to/html | Convert Markdown to HTML
 *CloudmersiveConvertApiClient.ConvertWebApi* | [**convertWebUrlToPdf**](docs/ConvertWebApi.md#convertWebUrlToPdf) | **POST** /convert/web/url/to/pdf | Convert a URL to PDF
 *CloudmersiveConvertApiClient.ConvertWebApi* | [**convertWebUrlToScreenshot**](docs/ConvertWebApi.md#convertWebUrlToScreenshot) | **POST** /convert/web/url/to/screenshot | Take screenshot of URL
+*CloudmersiveConvertApiClient.ConvertWebApi* | [**convertWebUrlToTxt**](docs/ConvertWebApi.md#convertWebUrlToTxt) | **POST** /convert/web/url/to/txt | Convert website URL page to text (txt)
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentBeginEditing**](docs/EditDocumentApi.md#editDocumentBeginEditing) | **POST** /convert/edit/begin-editing | Begin editing a document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxBody**](docs/EditDocumentApi.md#editDocumentDocxBody) | **POST** /convert/edit/docx/get-body | Get body from a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxCreateBlankDocument**](docs/EditDocumentApi.md#editDocumentDocxCreateBlankDocument) | **POST** /convert/edit/docx/create/blank | Create a blank Word DOCX document
@@ -256,8 +256,12 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditTextApi* | [**editTextBase64Encode**](docs/EditTextApi.md#editTextBase64Encode) | **POST** /convert/edit/text/encoding/base64/encode | Base 64 encode, convert binary or file data to a text string
 *CloudmersiveConvertApiClient.EditTextApi* | [**editTextChangeLineEndings**](docs/EditTextApi.md#editTextChangeLineEndings) | **POST** /convert/edit/text/line-endings/change | Set, change line endings of a text file
 *CloudmersiveConvertApiClient.EditTextApi* | [**editTextDetectLineEndings**](docs/EditTextApi.md#editTextDetectLineEndings) | **POST** /convert/edit/text/line-endings/detect | Detect line endings of a text file
+*CloudmersiveConvertApiClient.EditTextApi* | [**editTextFindRegex**](docs/EditTextApi.md#editTextFindRegex) | **POST** /convert/edit/text/find/regex | Find a regular expression regex in text input
+*CloudmersiveConvertApiClient.EditTextApi* | [**editTextFindSimple**](docs/EditTextApi.md#editTextFindSimple) | **POST** /convert/edit/text/find/string | Find a string in text input
 *CloudmersiveConvertApiClient.EditTextApi* | [**editTextRemoveAllWhitespace**](docs/EditTextApi.md#editTextRemoveAllWhitespace) | **POST** /convert/edit/text/remove/whitespace/all | Remove whitespace from text string
 *CloudmersiveConvertApiClient.EditTextApi* | [**editTextRemoveHtml**](docs/EditTextApi.md#editTextRemoveHtml) | **POST** /convert/edit/text/remove/html | Remove HTML from text string
+*CloudmersiveConvertApiClient.EditTextApi* | [**editTextReplaceRegex**](docs/EditTextApi.md#editTextReplaceRegex) | **POST** /convert/edit/text/replace/regex | Replace a string in text with a regex regular expression string
+*CloudmersiveConvertApiClient.EditTextApi* | [**editTextReplaceSimple**](docs/EditTextApi.md#editTextReplaceSimple) | **POST** /convert/edit/text/replace/string | Replace a string in text with another string value
 *CloudmersiveConvertApiClient.EditTextApi* | [**editTextTextEncodingDetect**](docs/EditTextApi.md#editTextTextEncodingDetect) | **POST** /convert/edit/text/encoding/detect | Detect text encoding of file
 *CloudmersiveConvertApiClient.EditTextApi* | [**editTextTrimWhitespace**](docs/EditTextApi.md#editTextTrimWhitespace) | **POST** /convert/edit/text/remove/whitespace/trim | Trim leading and trailing whitespace from text string
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentDocx**](docs/MergeDocumentApi.md#mergeDocumentDocx) | **POST** /convert/merge/docx | Merge Two Word DOCX Together
@@ -286,6 +290,9 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentXlsxValidation**](docs/ValidateDocumentApi.md#validateDocumentXlsxValidation) | **POST** /convert/validate/xlsx | Validate a Excel document (XLSX)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentXmlValidation**](docs/ValidateDocumentApi.md#validateDocumentXmlValidation) | **POST** /convert/validate/xml | Validate an XML file
 *CloudmersiveConvertApiClient.ViewerToolsApi* | [**viewerToolsCreateSimple**](docs/ViewerToolsApi.md#viewerToolsCreateSimple) | **POST** /convert/viewer/create/web/simple | Create a web-based viewer
+*CloudmersiveConvertApiClient.ZipArchiveApi* | [**zipArchiveZipCreate**](docs/ZipArchiveApi.md#zipArchiveZipCreate) | **POST** /convert/archive/zip/create | Compress files to create a new zip archive
+*CloudmersiveConvertApiClient.ZipArchiveApi* | [**zipArchiveZipCreateAdvanced**](docs/ZipArchiveApi.md#zipArchiveZipCreateAdvanced) | **POST** /convert/archive/zip/create/advanced | Compress files and folders to create a new zip archive with advanced options
+*CloudmersiveConvertApiClient.ZipArchiveApi* | [**zipArchiveZipExtract**](docs/ZipArchiveApi.md#zipArchiveZipExtract) | **POST** /convert/archive/zip/extract | Extract, decompress files and folders from a zip archive
 
 
 ## Documentation for Models
@@ -311,6 +318,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.CreateBlankSpreadsheetResponse](docs/CreateBlankSpreadsheetResponse.md)
  - [CloudmersiveConvertApiClient.CreateSpreadsheetFromDataRequest](docs/CreateSpreadsheetFromDataRequest.md)
  - [CloudmersiveConvertApiClient.CreateSpreadsheetFromDataResponse](docs/CreateSpreadsheetFromDataResponse.md)
+ - [CloudmersiveConvertApiClient.CreateZipArchiveRequest](docs/CreateZipArchiveRequest.md)
  - [CloudmersiveConvertApiClient.DeleteDocxTableRowRangeRequest](docs/DeleteDocxTableRowRangeRequest.md)
  - [CloudmersiveConvertApiClient.DeleteDocxTableRowRangeResponse](docs/DeleteDocxTableRowRangeResponse.md)
  - [CloudmersiveConvertApiClient.DeleteDocxTableRowRequest](docs/DeleteDocxTableRowRequest.md)
@@ -347,6 +355,12 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.DocxText](docs/DocxText.md)
  - [CloudmersiveConvertApiClient.DocxTopLevelComment](docs/DocxTopLevelComment.md)
  - [CloudmersiveConvertApiClient.ExifValue](docs/ExifValue.md)
+ - [CloudmersiveConvertApiClient.FindRegexMatch](docs/FindRegexMatch.md)
+ - [CloudmersiveConvertApiClient.FindStringMatch](docs/FindStringMatch.md)
+ - [CloudmersiveConvertApiClient.FindStringRegexRequest](docs/FindStringRegexRequest.md)
+ - [CloudmersiveConvertApiClient.FindStringRegexResponse](docs/FindStringRegexResponse.md)
+ - [CloudmersiveConvertApiClient.FindStringSimpleRequest](docs/FindStringSimpleRequest.md)
+ - [CloudmersiveConvertApiClient.FindStringSimpleResponse](docs/FindStringSimpleResponse.md)
  - [CloudmersiveConvertApiClient.FinishEditingRequest](docs/FinishEditingRequest.md)
  - [CloudmersiveConvertApiClient.GetDocxBodyRequest](docs/GetDocxBodyRequest.md)
  - [CloudmersiveConvertApiClient.GetDocxBodyResponse](docs/GetDocxBodyResponse.md)
@@ -424,7 +438,11 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.RemoveWhitespaceFromTextRequest](docs/RemoveWhitespaceFromTextRequest.md)
  - [CloudmersiveConvertApiClient.RemoveWhitespaceFromTextResponse](docs/RemoveWhitespaceFromTextResponse.md)
  - [CloudmersiveConvertApiClient.RemoveXlsxWorksheetRequest](docs/RemoveXlsxWorksheetRequest.md)
+ - [CloudmersiveConvertApiClient.ReplaceStringRegexRequest](docs/ReplaceStringRegexRequest.md)
+ - [CloudmersiveConvertApiClient.ReplaceStringRegexResponse](docs/ReplaceStringRegexResponse.md)
  - [CloudmersiveConvertApiClient.ReplaceStringRequest](docs/ReplaceStringRequest.md)
+ - [CloudmersiveConvertApiClient.ReplaceStringSimpleRequest](docs/ReplaceStringSimpleRequest.md)
+ - [CloudmersiveConvertApiClient.ReplaceStringSimpleResponse](docs/ReplaceStringSimpleResponse.md)
  - [CloudmersiveConvertApiClient.ScreenshotRequest](docs/ScreenshotRequest.md)
  - [CloudmersiveConvertApiClient.SetFormFieldValue](docs/SetFormFieldValue.md)
  - [CloudmersiveConvertApiClient.SetPdfFormFieldsRequest](docs/SetPdfFormFieldsRequest.md)
@@ -466,6 +484,9 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.XmlRemoveWithXPathResult](docs/XmlRemoveWithXPathResult.md)
  - [CloudmersiveConvertApiClient.XmlReplaceWithXPathResult](docs/XmlReplaceWithXPathResult.md)
  - [CloudmersiveConvertApiClient.XmlSetValueWithXPathResult](docs/XmlSetValueWithXPathResult.md)
+ - [CloudmersiveConvertApiClient.ZipDirectory](docs/ZipDirectory.md)
+ - [CloudmersiveConvertApiClient.ZipExtractResponse](docs/ZipExtractResponse.md)
+ - [CloudmersiveConvertApiClient.ZipFile](docs/ZipFile.md)
 
 
 ## Documentation for Authorization

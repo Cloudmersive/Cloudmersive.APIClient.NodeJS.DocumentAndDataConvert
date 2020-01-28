@@ -95,7 +95,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.ConvertDataApi();
 
-var jsonObject = null; // Object | 
+var jsonObject = null; // Object | Input JSON to convert to XML
 
 
 var callback = function(error, data, response) {
@@ -112,7 +112,7 @@ apiInstance.convertDataJsonToXml(jsonObject, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jsonObject** | **Object**|  | 
+ **jsonObject** | **Object**| Input JSON to convert to XML | 
 
 ### Return type
 
