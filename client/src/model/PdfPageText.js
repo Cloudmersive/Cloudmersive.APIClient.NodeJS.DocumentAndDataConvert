@@ -36,7 +36,7 @@
   /**
    * The PdfPageText model module.
    * @module model/PdfPageText
-   * @version 2.3.8
+   * @version 2.3.9
    */
 
   /**

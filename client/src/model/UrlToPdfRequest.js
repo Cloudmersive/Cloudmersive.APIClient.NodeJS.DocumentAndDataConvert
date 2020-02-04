@@ -25,7 +25,7 @@
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ScreenshotRequest = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.UrlToPdfRequest = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The ScreenshotRequest model module.
-   * @module model/ScreenshotRequest
+   * The UrlToPdfRequest model module.
+   * @module model/UrlToPdfRequest
    * @version 2.3.9
    */
 
   /**
-   * Constructs a new <code>ScreenshotRequest</code>.
-   * Details of the screenshot request
-   * @alias module:model/ScreenshotRequest
+   * Constructs a new <code>UrlToPdfRequest</code>.
+   * Request to convert a URL to a PDF file
+   * @alias module:model/UrlToPdfRequest
    * @class
    */
   var exports = function() {
@@ -51,15 +51,14 @@
 
 
 
-
   };
 
   /**
-   * Constructs a <code>ScreenshotRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>UrlToPdfRequest</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ScreenshotRequest} obj Optional instance to populate.
-   * @return {module:model/ScreenshotRequest} The populated <code>ScreenshotRequest</code> instance.
+   * @param {module:model/UrlToPdfRequest} obj Optional instance to populate.
+   * @return {module:model/UrlToPdfRequest} The populated <code>UrlToPdfRequest</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -71,11 +70,8 @@
       if (data.hasOwnProperty('ExtraLoadingWait')) {
         obj['ExtraLoadingWait'] = ApiClient.convertToType(data['ExtraLoadingWait'], 'Number');
       }
-      if (data.hasOwnProperty('ScreenshotWidth')) {
-        obj['ScreenshotWidth'] = ApiClient.convertToType(data['ScreenshotWidth'], 'Number');
-      }
-      if (data.hasOwnProperty('ScreenshotHeight')) {
-        obj['ScreenshotHeight'] = ApiClient.convertToType(data['ScreenshotHeight'], 'Number');
+      if (data.hasOwnProperty('IncludeBackgroundGraphics')) {
+        obj['IncludeBackgroundGraphics'] = ApiClient.convertToType(data['IncludeBackgroundGraphics'], 'Boolean');
       }
     }
     return obj;
@@ -92,15 +88,10 @@
    */
   exports.prototype['ExtraLoadingWait'] = undefined;
   /**
-   * Optional: Width of the screenshot in pixels; supply 0 to default to 1280 x 1024
-   * @member {Number} ScreenshotWidth
+   * Optional: Set to true to include background graphics in the PDF, or false to not include.  Default is true.
+   * @member {Boolean} IncludeBackgroundGraphics
    */
-  exports.prototype['ScreenshotWidth'] = undefined;
-  /**
-   * Optional: Height of the screenshot in pixels; supply 0 to default to 1280 x 1024, supply -1 to measure the full screen height of the page and attempt to take a screen-height screenshot
-   * @member {Number} ScreenshotHeight
-   */
-  exports.prototype['ScreenshotHeight'] = undefined;
+  exports.prototype['IncludeBackgroundGraphics'] = undefined;
 
 
 

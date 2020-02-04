@@ -36,7 +36,7 @@
   /**
    * The GetDocxGetCommentsHierarchicalRequest model module.
    * @module model/GetDocxGetCommentsHierarchicalRequest
-   * @version 2.3.8
+   * @version 2.3.9
    */
 
   /**

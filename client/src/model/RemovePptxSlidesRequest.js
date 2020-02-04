@@ -36,7 +36,7 @@
   /**
    * The RemovePptxSlidesRequest model module.
    * @module model/RemovePptxSlidesRequest
-   * @version 2.3.8
+   * @version 2.3.9
    */
 
   /**

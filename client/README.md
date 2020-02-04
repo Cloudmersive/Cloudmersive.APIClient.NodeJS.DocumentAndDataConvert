@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.3.8
+- Package version: 2.3.9
 
 
 ## Installation
@@ -225,7 +225,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxDeleteWorksheet**](docs/EditDocumentApi.md#editDocumentXlsxDeleteWorksheet) | **POST** /convert/edit/xlsx/delete-worksheet | Delete, remove worksheet from an Excel XLSX spreadsheet document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetCellByIdentifier**](docs/EditDocumentApi.md#editDocumentXlsxGetCellByIdentifier) | **POST** /convert/edit/xlsx/get-cell/by-identifier | Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetCellByIndex**](docs/EditDocumentApi.md#editDocumentXlsxGetCellByIndex) | **POST** /convert/edit/xlsx/get-cell/by-index | Get cell from an Excel XLSX spreadsheet, worksheet by index
-*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetColumns**](docs/EditDocumentApi.md#editDocumentXlsxGetColumns) | **POST** /convert/edit/xlsx/get-columns | Get rows and cells from a Excel XLSX spreadsheet, worksheet
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetColumns**](docs/EditDocumentApi.md#editDocumentXlsxGetColumns) | **POST** /convert/edit/xlsx/get-columns | Get columns from a Excel XLSX spreadsheet, worksheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetImages**](docs/EditDocumentApi.md#editDocumentXlsxGetImages) | **POST** /convert/edit/xlsx/get-images | Get images from a Excel XLSX spreadsheet, worksheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetRowsAndCells**](docs/EditDocumentApi.md#editDocumentXlsxGetRowsAndCells) | **POST** /convert/edit/xlsx/get-rows-and-cells | Get rows and cells from a Excel XLSX spreadsheet, worksheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetStyles**](docs/EditDocumentApi.md#editDocumentXlsxGetStyles) | **POST** /convert/edit/xlsx/get-styles | Get styles from a Excel XLSX spreadsheet, worksheet
@@ -235,13 +235,13 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxSetCellByIndex**](docs/EditDocumentApi.md#editDocumentXlsxSetCellByIndex) | **POST** /convert/edit/xlsx/set-cell/by-index | Set, update cell contents in an Excel XLSX spreadsheet, worksheet by index
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfAddAnnotations**](docs/EditPdfApi.md#editPdfAddAnnotations) | **POST** /convert/edit/pdf/annotations/add-item | Add one or more PDF annotations, comments in the PDF document
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfDecrypt**](docs/EditPdfApi.md#editPdfDecrypt) | **POST** /convert/edit/pdf/decrypt | Decrypt and password-protect a PDF
-*CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfDeletePages**](docs/EditPdfApi.md#editPdfDeletePages) | **POST** /convert/edit/pdf/pages/delete | Remove / delete pages from a PDF document
+*CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfDeletePages**](docs/EditPdfApi.md#editPdfDeletePages) | **POST** /convert/edit/pdf/pages/delete | Remove, delete pages from a PDF document
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfEncrypt**](docs/EditPdfApi.md#editPdfEncrypt) | **POST** /convert/edit/pdf/encrypt | Encrypt and password-protect a PDF
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfGetAnnotations**](docs/EditPdfApi.md#editPdfGetAnnotations) | **POST** /convert/edit/pdf/annotations/list | Get PDF annotations, including comments in the document
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfGetFormFields**](docs/EditPdfApi.md#editPdfGetFormFields) | **POST** /convert/edit/pdf/form/get-fields | Gets PDF Form fields and values
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfGetMetadata**](docs/EditPdfApi.md#editPdfGetMetadata) | **POST** /convert/edit/pdf/get-metadata | Get PDF document metadata
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfGetPdfTextByPages**](docs/EditPdfApi.md#editPdfGetPdfTextByPages) | **POST** /convert/edit/pdf/pages/get-text | Get text in a PDF document by page
-*CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfInsertPages**](docs/EditPdfApi.md#editPdfInsertPages) | **POST** /convert/edit/pdf/pages/insert | Insert / copy pages from one PDF document into another
+*CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfInsertPages**](docs/EditPdfApi.md#editPdfInsertPages) | **POST** /convert/edit/pdf/pages/insert | Insert, copy pages from one PDF document into another
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfRasterize**](docs/EditPdfApi.md#editPdfRasterize) | **POST** /convert/edit/pdf/rasterize | Rasterize a PDF to an image-based PDF
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfRemoveAllAnnotations**](docs/EditPdfApi.md#editPdfRemoveAllAnnotations) | **POST** /convert/edit/pdf/annotations/remove-all | Remove all PDF annotations, including comments in the document
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfRemoveAnnotationItem**](docs/EditPdfApi.md#editPdfRemoveAnnotationItem) | **POST** /convert/edit/pdf/annotations/remove-item | Remove a specific PDF annotation, comment in the document
@@ -466,6 +466,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.UpdateDocxTableCellResponse](docs/UpdateDocxTableCellResponse.md)
  - [CloudmersiveConvertApiClient.UpdateDocxTableRowRequest](docs/UpdateDocxTableRowRequest.md)
  - [CloudmersiveConvertApiClient.UpdateDocxTableRowResponse](docs/UpdateDocxTableRowResponse.md)
+ - [CloudmersiveConvertApiClient.UrlToPdfRequest](docs/UrlToPdfRequest.md)
  - [CloudmersiveConvertApiClient.UrlToTextRequest](docs/UrlToTextRequest.md)
  - [CloudmersiveConvertApiClient.UrlToTextResponse](docs/UrlToTextResponse.md)
  - [CloudmersiveConvertApiClient.ViewerResponse](docs/ViewerResponse.md)

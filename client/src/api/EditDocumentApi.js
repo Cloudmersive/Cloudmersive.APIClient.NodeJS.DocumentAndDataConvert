@@ -33,7 +33,7 @@
   /**
    * EditDocument service.
    * @module api/EditDocumentApi
-   * @version 2.3.8
+   * @version 2.3.9
    */
 
   /**
@@ -1843,8 +1843,8 @@
      */
 
     /**
-     * Get rows and cells from a Excel XLSX spreadsheet, worksheet
-     * Returns the rows and cells defined in the Excel Spreadsheet worksheet
+     * Get columns from a Excel XLSX spreadsheet, worksheet
+     * Returns the columns defined in the Excel Spreadsheet worksheet
      * @param {module:model/GetXlsxColumnsRequest} input Document input request
      * @param {module:api/EditDocumentApi~editDocumentXlsxGetColumnsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetXlsxColumnsResponse}

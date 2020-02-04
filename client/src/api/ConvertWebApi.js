@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/HtmlMdResult', 'model/HtmlToOfficeRequest', 'model/HtmlToPdfRequest', 'model/HtmlToPngRequest', 'model/HtmlToTextRequest', 'model/HtmlToTextResponse', 'model/ScreenshotRequest', 'model/UrlToTextRequest', 'model/UrlToTextResponse'], factory);
+    define(['ApiClient', 'model/HtmlMdResult', 'model/HtmlToOfficeRequest', 'model/HtmlToPdfRequest', 'model/HtmlToPngRequest', 'model/HtmlToTextRequest', 'model/HtmlToTextResponse', 'model/ScreenshotRequest', 'model/UrlToPdfRequest', 'model/UrlToTextRequest', 'model/UrlToTextResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/HtmlMdResult'), require('../model/HtmlToOfficeRequest'), require('../model/HtmlToPdfRequest'), require('../model/HtmlToPngRequest'), require('../model/HtmlToTextRequest'), require('../model/HtmlToTextResponse'), require('../model/ScreenshotRequest'), require('../model/UrlToTextRequest'), require('../model/UrlToTextResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/HtmlMdResult'), require('../model/HtmlToOfficeRequest'), require('../model/HtmlToPdfRequest'), require('../model/HtmlToPngRequest'), require('../model/HtmlToTextRequest'), require('../model/HtmlToTextResponse'), require('../model/ScreenshotRequest'), require('../model/UrlToPdfRequest'), require('../model/UrlToTextRequest'), require('../model/UrlToTextResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ConvertWebApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.HtmlMdResult, root.CloudmersiveConvertApiClient.HtmlToOfficeRequest, root.CloudmersiveConvertApiClient.HtmlToPdfRequest, root.CloudmersiveConvertApiClient.HtmlToPngRequest, root.CloudmersiveConvertApiClient.HtmlToTextRequest, root.CloudmersiveConvertApiClient.HtmlToTextResponse, root.CloudmersiveConvertApiClient.ScreenshotRequest, root.CloudmersiveConvertApiClient.UrlToTextRequest, root.CloudmersiveConvertApiClient.UrlToTextResponse);
+    root.CloudmersiveConvertApiClient.ConvertWebApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.HtmlMdResult, root.CloudmersiveConvertApiClient.HtmlToOfficeRequest, root.CloudmersiveConvertApiClient.HtmlToPdfRequest, root.CloudmersiveConvertApiClient.HtmlToPngRequest, root.CloudmersiveConvertApiClient.HtmlToTextRequest, root.CloudmersiveConvertApiClient.HtmlToTextResponse, root.CloudmersiveConvertApiClient.ScreenshotRequest, root.CloudmersiveConvertApiClient.UrlToPdfRequest, root.CloudmersiveConvertApiClient.UrlToTextRequest, root.CloudmersiveConvertApiClient.UrlToTextResponse);
   }
-}(this, function(ApiClient, HtmlMdResult, HtmlToOfficeRequest, HtmlToPdfRequest, HtmlToPngRequest, HtmlToTextRequest, HtmlToTextResponse, ScreenshotRequest, UrlToTextRequest, UrlToTextResponse) {
+}(this, function(ApiClient, HtmlMdResult, HtmlToOfficeRequest, HtmlToPdfRequest, HtmlToPngRequest, HtmlToTextRequest, HtmlToTextResponse, ScreenshotRequest, UrlToPdfRequest, UrlToTextRequest, UrlToTextResponse) {
   'use strict';
 
   /**
    * ConvertWeb service.
    * @module api/ConvertWebApi
-   * @version 2.3.8
+   * @version 2.3.9
    */
 
   /**
@@ -294,7 +294,7 @@
     /**
      * Convert a URL to PDF
      * Fully renders a website and returns a PDF of the full page.  Javascript, HTML5, CSS and other advanced features are all supported.
-     * @param {module:model/ScreenshotRequest} input URL to PDF request parameters
+     * @param {module:model/UrlToPdfRequest} input URL to PDF request parameters
      * @param {module:api/ConvertWebApi~convertWebUrlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */

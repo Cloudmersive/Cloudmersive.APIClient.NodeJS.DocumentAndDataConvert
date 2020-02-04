@@ -36,7 +36,7 @@
   /**
    * The SetXlsxCellByIdentifierRequest model module.
    * @module model/SetXlsxCellByIdentifierRequest
-   * @version 2.3.8
+   * @version 2.3.9
    */
 
   /**

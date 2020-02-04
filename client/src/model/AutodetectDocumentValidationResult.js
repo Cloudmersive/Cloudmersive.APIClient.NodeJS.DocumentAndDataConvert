@@ -36,7 +36,7 @@
   /**
    * The AutodetectDocumentValidationResult model module.
    * @module model/AutodetectDocumentValidationResult
-   * @version 2.3.8
+   * @version 2.3.9
    */
 
   /**

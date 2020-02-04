@@ -33,7 +33,7 @@
   /**
    * EditPdf service.
    * @module api/EditPdfApi
-   * @version 2.3.8
+   * @version 2.3.9
    */
 
   /**
@@ -158,7 +158,7 @@
      */
 
     /**
-     * Remove / delete pages from a PDF document
+     * Remove, delete pages from a PDF document
      * Remove one or more pages from a PDF document
      * @param {File} inputFile Input file to perform the operation on.
      * @param {Number} pageStart Page number (1 based) to start deleting pages from (inclusive).
@@ -468,7 +468,7 @@
      */
 
     /**
-     * Insert / copy pages from one PDF document into another
+     * Insert, copy pages from one PDF document into another
      * Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
      * @param {File} sourceFile Source PDF file to copy pages from.
      * @param {File} destinationFile Destination PDF file to copy pages into.

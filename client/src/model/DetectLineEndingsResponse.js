@@ -36,7 +36,7 @@
   /**
    * The DetectLineEndingsResponse model module.
    * @module model/DetectLineEndingsResponse
-   * @version 2.3.8
+   * @version 2.3.9
    */
 
   /**

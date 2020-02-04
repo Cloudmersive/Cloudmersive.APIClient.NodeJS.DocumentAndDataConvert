@@ -300,7 +300,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.ConvertWebApi();
 
-var input = new CloudmersiveConvertApiClient.ScreenshotRequest(); // ScreenshotRequest | URL to PDF request parameters
+var input = new CloudmersiveConvertApiClient.UrlToPdfRequest(); // UrlToPdfRequest | URL to PDF request parameters
 
 
 var callback = function(error, data, response) {
@@ -317,7 +317,7 @@ apiInstance.convertWebUrlToPdf(input, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **input** | [**ScreenshotRequest**](ScreenshotRequest.md)| URL to PDF request parameters | 
+ **input** | [**UrlToPdfRequest**](UrlToPdfRequest.md)| URL to PDF request parameters | 
 
 ### Return type
 
