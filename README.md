@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.3.9
+- Package version: 2.4.0
 
 
 ## Installation
@@ -223,6 +223,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxCreateBlankSpreadsheet**](docs/EditDocumentApi.md#editDocumentXlsxCreateBlankSpreadsheet) | **POST** /convert/edit/xlsx/create/blank | Create a blank Excel XLSX spreadsheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxCreateSpreadsheetFromData**](docs/EditDocumentApi.md#editDocumentXlsxCreateSpreadsheetFromData) | **POST** /convert/edit/xlsx/create/from/data | Create a new Excel XLSX spreadsheet from column and row data
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxDeleteWorksheet**](docs/EditDocumentApi.md#editDocumentXlsxDeleteWorksheet) | **POST** /convert/edit/xlsx/delete-worksheet | Delete, remove worksheet from an Excel XLSX spreadsheet document
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxEnableSharedWorkbook**](docs/EditDocumentApi.md#editDocumentXlsxEnableSharedWorkbook) | **POST** /convert/edit/xlsx/configuration/enable-shared-workbook | Enable Shared Workbook (legacy) in Excel XLSX spreadsheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetCellByIdentifier**](docs/EditDocumentApi.md#editDocumentXlsxGetCellByIdentifier) | **POST** /convert/edit/xlsx/get-cell/by-identifier | Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetCellByIndex**](docs/EditDocumentApi.md#editDocumentXlsxGetCellByIndex) | **POST** /convert/edit/xlsx/get-cell/by-index | Get cell from an Excel XLSX spreadsheet, worksheet by index
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetColumns**](docs/EditDocumentApi.md#editDocumentXlsxGetColumns) | **POST** /convert/edit/xlsx/get-columns | Get columns from a Excel XLSX spreadsheet, worksheet
@@ -354,6 +355,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.DocxTemplateOperation](docs/DocxTemplateOperation.md)
  - [CloudmersiveConvertApiClient.DocxText](docs/DocxText.md)
  - [CloudmersiveConvertApiClient.DocxTopLevelComment](docs/DocxTopLevelComment.md)
+ - [CloudmersiveConvertApiClient.EnableSharedWorkbookRequest](docs/EnableSharedWorkbookRequest.md)
+ - [CloudmersiveConvertApiClient.EnableSharedWorkbookResponse](docs/EnableSharedWorkbookResponse.md)
  - [CloudmersiveConvertApiClient.ExifValue](docs/ExifValue.md)
  - [CloudmersiveConvertApiClient.FindRegexMatch](docs/FindRegexMatch.md)
  - [CloudmersiveConvertApiClient.FindStringMatch](docs/FindStringMatch.md)

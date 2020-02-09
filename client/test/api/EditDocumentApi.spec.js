@@ -410,6 +410,16 @@
         done();
       });
     });
+    describe('editDocumentXlsxEnableSharedWorkbook', function() {
+      it('should call editDocumentXlsxEnableSharedWorkbook successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxEnableSharedWorkbook
+        //instance.editDocumentXlsxEnableSharedWorkbook(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentXlsxGetCellByIdentifier', function() {
       it('should call editDocumentXlsxGetCellByIdentifier successfully', function(done) {
         //uncomment below and update the code to test editDocumentXlsxGetCellByIdentifier

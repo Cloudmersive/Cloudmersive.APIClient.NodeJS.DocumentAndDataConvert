@@ -36,12 +36,12 @@
   /**
    * The InsertXlsxWorksheetRequest model module.
    * @module model/InsertXlsxWorksheetRequest
-   * @version 2.3.9
+   * @version 2.4.0
    */
 
   /**
    * Constructs a new <code>InsertXlsxWorksheetRequest</code>.
-   * Input to a Get Worksheets request
+   * Input to a Insert Worksheets request
    * @alias module:model/InsertXlsxWorksheetRequest
    * @class
    */

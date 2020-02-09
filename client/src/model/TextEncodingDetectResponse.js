@@ -36,7 +36,7 @@
   /**
    * The TextEncodingDetectResponse model module.
    * @module model/TextEncodingDetectResponse
-   * @version 2.3.9
+   * @version 2.4.0
    */
 
   /**

@@ -36,12 +36,12 @@
   /**
    * The InsertXlsxWorksheetResponse model module.
    * @module model/InsertXlsxWorksheetResponse
-   * @version 2.3.9
+   * @version 2.4.0
    */
 
   /**
    * Constructs a new <code>InsertXlsxWorksheetResponse</code>.
-   * Result of running a Get-Worksheets command
+   * Result of running a insert worksheet command
    * @alias module:model/InsertXlsxWorksheetResponse
    * @class
    */

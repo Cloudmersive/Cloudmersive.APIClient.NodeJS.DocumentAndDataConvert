@@ -36,7 +36,7 @@
   /**
    * The XmlAddAttributeWithXPathResult model module.
    * @module model/XmlAddAttributeWithXPathResult
-   * @version 2.3.9
+   * @version 2.4.0
    */
 
   /**
