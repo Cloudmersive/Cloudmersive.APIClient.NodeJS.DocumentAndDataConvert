@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.4.0
+- Package version: 2.4.1
 
 
 ## Installation
@@ -223,6 +223,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxCreateBlankSpreadsheet**](docs/EditDocumentApi.md#editDocumentXlsxCreateBlankSpreadsheet) | **POST** /convert/edit/xlsx/create/blank | Create a blank Excel XLSX spreadsheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxCreateSpreadsheetFromData**](docs/EditDocumentApi.md#editDocumentXlsxCreateSpreadsheetFromData) | **POST** /convert/edit/xlsx/create/from/data | Create a new Excel XLSX spreadsheet from column and row data
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxDeleteWorksheet**](docs/EditDocumentApi.md#editDocumentXlsxDeleteWorksheet) | **POST** /convert/edit/xlsx/delete-worksheet | Delete, remove worksheet from an Excel XLSX spreadsheet document
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxDisableSharedWorkbook**](docs/EditDocumentApi.md#editDocumentXlsxDisableSharedWorkbook) | **POST** /convert/edit/xlsx/configuration/disable-shared-workbook | Disable Shared Workbook (legacy) in Excel XLSX spreadsheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxEnableSharedWorkbook**](docs/EditDocumentApi.md#editDocumentXlsxEnableSharedWorkbook) | **POST** /convert/edit/xlsx/configuration/enable-shared-workbook | Enable Shared Workbook (legacy) in Excel XLSX spreadsheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetCellByIdentifier**](docs/EditDocumentApi.md#editDocumentXlsxGetCellByIdentifier) | **POST** /convert/edit/xlsx/get-cell/by-identifier | Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetCellByIndex**](docs/EditDocumentApi.md#editDocumentXlsxGetCellByIndex) | **POST** /convert/edit/xlsx/get-cell/by-index | Get cell from an Excel XLSX spreadsheet, worksheet by index
@@ -325,6 +326,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.DeleteDocxTableRowRequest](docs/DeleteDocxTableRowRequest.md)
  - [CloudmersiveConvertApiClient.DeleteDocxTableRowResponse](docs/DeleteDocxTableRowResponse.md)
  - [CloudmersiveConvertApiClient.DetectLineEndingsResponse](docs/DetectLineEndingsResponse.md)
+ - [CloudmersiveConvertApiClient.DisableSharedWorkbookRequest](docs/DisableSharedWorkbookRequest.md)
+ - [CloudmersiveConvertApiClient.DisableSharedWorkbookResponse](docs/DisableSharedWorkbookResponse.md)
  - [CloudmersiveConvertApiClient.DocumentValidationError](docs/DocumentValidationError.md)
  - [CloudmersiveConvertApiClient.DocumentValidationResult](docs/DocumentValidationResult.md)
  - [CloudmersiveConvertApiClient.DocxBody](docs/DocxBody.md)

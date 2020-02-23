@@ -410,6 +410,16 @@
         done();
       });
     });
+    describe('editDocumentXlsxDisableSharedWorkbook', function() {
+      it('should call editDocumentXlsxDisableSharedWorkbook successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxDisableSharedWorkbook
+        //instance.editDocumentXlsxDisableSharedWorkbook(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentXlsxEnableSharedWorkbook', function() {
       it('should call editDocumentXlsxEnableSharedWorkbook successfully', function(done) {
         //uncomment below and update the code to test editDocumentXlsxEnableSharedWorkbook
