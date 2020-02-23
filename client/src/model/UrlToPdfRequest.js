@@ -36,7 +36,7 @@
   /**
    * The UrlToPdfRequest model module.
    * @module model/UrlToPdfRequest
-   * @version 2.4.1
+   * @version 2.4.2
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -73,6 +74,9 @@
       if (data.hasOwnProperty('IncludeBackgroundGraphics')) {
         obj['IncludeBackgroundGraphics'] = ApiClient.convertToType(data['IncludeBackgroundGraphics'], 'Boolean');
       }
+      if (data.hasOwnProperty('ScaleFactor')) {
+        obj['ScaleFactor'] = ApiClient.convertToType(data['ScaleFactor'], 'Number');
+      }
     }
     return obj;
   }
@@ -92,6 +96,11 @@
    * @member {Boolean} IncludeBackgroundGraphics
    */
   exports.prototype['IncludeBackgroundGraphics'] = undefined;
+  /**
+   * Optional: Set to 100 to scale at 100%, set to 50% to scale down to 50% scale, set to 200% to scale up to 200% scale, etc.  Default is 100%
+   * @member {Number} ScaleFactor
+   */
+  exports.prototype['ScaleFactor'] = undefined;
 
 
 

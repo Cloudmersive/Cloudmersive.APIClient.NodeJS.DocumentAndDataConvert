@@ -36,7 +36,7 @@
   /**
    * The DocxBody model module.
    * @module model/DocxBody
-   * @version 2.4.1
+   * @version 2.4.2
    */
 
   /**

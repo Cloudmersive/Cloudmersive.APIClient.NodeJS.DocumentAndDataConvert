@@ -74,6 +74,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property scaleFactor (base name: "ScaleFactor")', function() {
+      // uncomment below and update the code to test the property scaleFactor
+      //var instance = new CloudmersiveConvertApiClient.UrlToPdfRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

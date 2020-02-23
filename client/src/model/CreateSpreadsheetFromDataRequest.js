@@ -36,7 +36,7 @@
   /**
    * The CreateSpreadsheetFromDataRequest model module.
    * @module model/CreateSpreadsheetFromDataRequest
-   * @version 2.4.1
+   * @version 2.4.2
    */
 
   /**
