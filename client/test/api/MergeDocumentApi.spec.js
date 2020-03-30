@@ -100,6 +100,16 @@
         done();
       });
     });
+    describe('mergeDocumentPngMulti', function() {
+      it('should call mergeDocumentPngMulti successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentPngMulti
+        //instance.mergeDocumentPngMulti(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('mergeDocumentPptx', function() {
       it('should call mergeDocumentPptx successfully', function(done) {
         //uncomment below and update the code to test mergeDocumentPptx

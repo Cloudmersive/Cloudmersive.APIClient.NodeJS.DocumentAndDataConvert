@@ -68,6 +68,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property maximumPages (base name: "MaximumPages")', function() {
+      // uncomment below and update the code to test the property maximumPages
+      //var instance = new CloudmersiveConvertApiClient.GetDocxPagesRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

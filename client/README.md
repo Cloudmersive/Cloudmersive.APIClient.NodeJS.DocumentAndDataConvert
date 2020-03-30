@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.4.2
+- Package version: 2.4.3
 
 
 ## Installation
@@ -270,7 +270,8 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentDocxMulti**](docs/MergeDocumentApi.md#mergeDocumentDocxMulti) | **POST** /convert/merge/docx/multi | Merge Multple Word DOCX Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPdf**](docs/MergeDocumentApi.md#mergeDocumentPdf) | **POST** /convert/merge/pdf | Merge Two PDF Files Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPdfMulti**](docs/MergeDocumentApi.md#mergeDocumentPdfMulti) | **POST** /convert/merge/pdf/multi | Merge Multple PDF Files Together
-*CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPng**](docs/MergeDocumentApi.md#mergeDocumentPng) | **POST** /convert/merge/png/vertical | Merge Multple PNG Files Together
+*CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPng**](docs/MergeDocumentApi.md#mergeDocumentPng) | **POST** /convert/merge/png/vertical | Merge Two PNG Files Together
+*CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPngMulti**](docs/MergeDocumentApi.md#mergeDocumentPngMulti) | **POST** /convert/merge/png/vertical/multi | Merge Multple PNG Files Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPptx**](docs/MergeDocumentApi.md#mergeDocumentPptx) | **POST** /convert/merge/pptx | Merge Two PowerPoint PPTX Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPptxMulti**](docs/MergeDocumentApi.md#mergeDocumentPptxMulti) | **POST** /convert/merge/pptx/multi | Merge Multple PowerPoint PPTX Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentTxt**](docs/MergeDocumentApi.md#mergeDocumentTxt) | **POST** /convert/merge/txt | Merge Two Text (TXT) Files Together

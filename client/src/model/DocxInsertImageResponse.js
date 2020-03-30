@@ -36,7 +36,7 @@
   /**
    * The DocxInsertImageResponse model module.
    * @module model/DocxInsertImageResponse
-   * @version 2.4.2
+   * @version 2.4.3
    */
 
   /**

@@ -33,7 +33,7 @@
   /**
    * EditText service.
    * @module api/EditTextApi
-   * @version 2.4.2
+   * @version 2.4.3
    */
 
   /**

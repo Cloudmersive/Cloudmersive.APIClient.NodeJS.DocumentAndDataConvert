@@ -36,7 +36,7 @@
   /**
    * The HtmlTemplateApplicationRequest model module.
    * @module model/HtmlTemplateApplicationRequest
-   * @version 2.4.2
+   * @version 2.4.3
    */
 
   /**

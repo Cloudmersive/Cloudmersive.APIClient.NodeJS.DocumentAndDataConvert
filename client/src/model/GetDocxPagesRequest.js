@@ -36,7 +36,7 @@
   /**
    * The GetDocxPagesRequest model module.
    * @module model/GetDocxPagesRequest
-   * @version 2.4.2
+   * @version 2.4.3
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -69,6 +70,9 @@
       if (data.hasOwnProperty('InputFileUrl')) {
         obj['InputFileUrl'] = ApiClient.convertToType(data['InputFileUrl'], 'String');
       }
+      if (data.hasOwnProperty('MaximumPages')) {
+        obj['MaximumPages'] = ApiClient.convertToType(data['MaximumPages'], 'Number');
+      }
     }
     return obj;
   }
@@ -83,6 +87,11 @@
    * @member {String} InputFileUrl
    */
   exports.prototype['InputFileUrl'] = undefined;
+  /**
+   * Optional: Maximum number of pages to return; set to 0 or do not supply to return all pages
+   * @member {Number} MaximumPages
+   */
+  exports.prototype['MaximumPages'] = undefined;
 
 
 

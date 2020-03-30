@@ -414,7 +414,7 @@ Name | Type | Description  | Notes
 
 <a name="editPdfGetPdfTextByPages"></a>
 # **editPdfGetPdfTextByPages**
-> PdfTextByPageResult editPdfGetPdfTextByPages(inputFile)
+> PdfTextByPageResult editPdfGetPdfTextByPages(inputFile, opts)
 
 Get text in a PDF document by page
 
@@ -435,6 +435,9 @@ var apiInstance = new CloudmersiveConvertApiClient.EditPdfApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
+var opts = { 
+  'textFormattingMode': "textFormattingMode_example" // String | Optional; specify how whitespace should be handled when converting the document to text.  Possible values are 'preserveWhitespace' which will attempt to preserve whitespace in the document and relative positioning of text within the document, and 'minimizeWhitespace' which will not insert additional spaces into the document in most cases.  Default is 'preserveWhitespace'.
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -443,7 +446,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.editPdfGetPdfTextByPages(inputFile, callback);
+apiInstance.editPdfGetPdfTextByPages(inputFile, opts, callback);
 ```
 
 ### Parameters
@@ -451,6 +454,7 @@ apiInstance.editPdfGetPdfTextByPages(inputFile, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **File**| Input file to perform the operation on. | 
+ **textFormattingMode** | **String**| Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;. | [optional] 
 
 ### Return type
 

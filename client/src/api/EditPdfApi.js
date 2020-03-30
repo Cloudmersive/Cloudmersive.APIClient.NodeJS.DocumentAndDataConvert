@@ -33,7 +33,7 @@
   /**
    * EditPdf service.
    * @module api/EditPdfApi
-   * @version 2.4.2
+   * @version 2.4.3
    */
 
   /**
@@ -423,10 +423,13 @@
      * Get text in a PDF document by page
      * Gets the text in a PDF by page
      * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.textFormattingMode Optional; specify how whitespace should be handled when converting the document to text.  Possible values are &#39;preserveWhitespace&#39; which will attempt to preserve whitespace in the document and relative positioning of text within the document, and &#39;minimizeWhitespace&#39; which will not insert additional spaces into the document in most cases.  Default is &#39;preserveWhitespace&#39;.
      * @param {module:api/EditPdfApi~editPdfGetPdfTextByPagesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/PdfTextByPageResult}
      */
-    this.editPdfGetPdfTextByPages = function(inputFile, callback) {
+    this.editPdfGetPdfTextByPages = function(inputFile, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'inputFile' is set
@@ -442,6 +445,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'textFormattingMode': opts['textFormattingMode']
       };
       var formParams = {
         'inputFile': inputFile
