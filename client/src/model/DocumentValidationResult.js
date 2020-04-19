@@ -36,7 +36,7 @@
   /**
    * The DocumentValidationResult model module.
    * @module model/DocumentValidationResult
-   * @version 2.4.3
+   * @version 2.4.4
    */
 
   /**
@@ -47,6 +47,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -68,6 +69,9 @@
       if (data.hasOwnProperty('DocumentIsValid')) {
         obj['DocumentIsValid'] = ApiClient.convertToType(data['DocumentIsValid'], 'Boolean');
       }
+      if (data.hasOwnProperty('PasswordProtected')) {
+        obj['PasswordProtected'] = ApiClient.convertToType(data['PasswordProtected'], 'Boolean');
+      }
       if (data.hasOwnProperty('ErrorCount')) {
         obj['ErrorCount'] = ApiClient.convertToType(data['ErrorCount'], 'Number');
       }
@@ -86,6 +90,11 @@
    * @member {Boolean} DocumentIsValid
    */
   exports.prototype['DocumentIsValid'] = undefined;
+  /**
+   * True if the document is password protected, false otherwise
+   * @member {Boolean} PasswordProtected
+   */
+  exports.prototype['PasswordProtected'] = undefined;
   /**
    * Number of validation errors found in the document
    * @member {Number} ErrorCount

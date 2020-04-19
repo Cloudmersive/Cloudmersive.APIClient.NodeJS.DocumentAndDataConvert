@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.4.3
+- Package version: 2.4.4
 
 
 ## Installation
@@ -170,7 +170,8 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentXlsToCsv**](docs/ConvertDocumentApi.md#convertDocumentXlsToCsv) | **POST** /convert/xls/to/csv | Convert Excel XLS (97-03) Spreadsheet to CSV
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentXlsToPdf**](docs/ConvertDocumentApi.md#convertDocumentXlsToPdf) | **POST** /convert/xls/to/pdf | Convert Excel XLS (97-03) Spreadsheet to PDF
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentXlsToXlsx**](docs/ConvertDocumentApi.md#convertDocumentXlsToXlsx) | **POST** /convert/xls/to/xlsx | Convert Excel XLS (97-03) Spreadsheet to XLSX
-*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentXlsxToCsv**](docs/ConvertDocumentApi.md#convertDocumentXlsxToCsv) | **POST** /convert/xlsx/to/csv | Convert Excel XLSX Spreadsheet to CSV
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentXlsxToCsv**](docs/ConvertDocumentApi.md#convertDocumentXlsxToCsv) | **POST** /convert/xlsx/to/csv | Convert Excel XLSX Spreadsheet to CSV, Single Worksheet
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentXlsxToCsvMulti**](docs/ConvertDocumentApi.md#convertDocumentXlsxToCsvMulti) | **POST** /convert/xlsx/to/csv/multi | Convert Excel XLSX Spreadsheet to CSV, Multiple Worksheets
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentXlsxToPdf**](docs/ConvertDocumentApi.md#convertDocumentXlsxToPdf) | **POST** /convert/xlsx/to/pdf | Convert Excel XLSX Spreadsheet to PDF
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentXlsxToTxt**](docs/ConvertDocumentApi.md#convertDocumentXlsxToTxt) | **POST** /convert/xlsx/to/txt | Convert Excel XLSX Spreadsheet to Text (txt)
 *CloudmersiveConvertApiClient.ConvertImageApi* | [**convertImageGetImageInfo**](docs/ConvertImageApi.md#convertImageGetImageInfo) | **POST** /convert/image/get-info | Get information about an image
@@ -322,6 +323,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.CreateSpreadsheetFromDataRequest](docs/CreateSpreadsheetFromDataRequest.md)
  - [CloudmersiveConvertApiClient.CreateSpreadsheetFromDataResponse](docs/CreateSpreadsheetFromDataResponse.md)
  - [CloudmersiveConvertApiClient.CreateZipArchiveRequest](docs/CreateZipArchiveRequest.md)
+ - [CloudmersiveConvertApiClient.CsvCollection](docs/CsvCollection.md)
+ - [CloudmersiveConvertApiClient.CsvFileResult](docs/CsvFileResult.md)
  - [CloudmersiveConvertApiClient.DeleteDocxTableRowRangeRequest](docs/DeleteDocxTableRowRangeRequest.md)
  - [CloudmersiveConvertApiClient.DeleteDocxTableRowRangeResponse](docs/DeleteDocxTableRowRangeResponse.md)
  - [CloudmersiveConvertApiClient.DeleteDocxTableRowRequest](docs/DeleteDocxTableRowRequest.md)

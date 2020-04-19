@@ -33,7 +33,7 @@
   /**
    * ValidateDocument service.
    * @module api/ValidateDocumentApi
-   * @version 2.4.3
+   * @version 2.4.4
    */
 
   /**
@@ -249,7 +249,7 @@
 
     /**
      * Validate a PDF document file
-     * Validate a PDF document; if the document is not valid, identifies the errors in the document
+     * Validate a PDF document; if the document is not valid, identifies the errors in the document.  Also checks if the PDF is password protected.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ValidateDocumentApi~validateDocumentPdfValidationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DocumentValidationResult}

@@ -330,6 +330,16 @@
         done();
       });
     });
+    describe('convertDocumentXlsxToCsvMulti', function() {
+      it('should call convertDocumentXlsxToCsvMulti successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentXlsxToCsvMulti
+        //instance.convertDocumentXlsxToCsvMulti(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentXlsxToPdf', function() {
       it('should call convertDocumentXlsxToPdf successfully', function(done) {
         //uncomment below and update the code to test convertDocumentXlsxToPdf

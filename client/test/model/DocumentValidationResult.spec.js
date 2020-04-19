@@ -62,6 +62,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property passwordProtected (base name: "PasswordProtected")', function() {
+      // uncomment below and update the code to test the property passwordProtected
+      //var instance = new CloudmersiveConvertApiClient.DocumentValidationResult();
+      //expect(instance).to.be();
+    });
+
     it('should have the property errorCount (base name: "ErrorCount")', function() {
       // uncomment below and update the code to test the property errorCount
       //var instance = new CloudmersiveConvertApiClient.DocumentValidationResult();

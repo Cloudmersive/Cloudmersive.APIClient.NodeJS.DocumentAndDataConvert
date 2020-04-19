@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AutodetectGetInfoResult', 'model/AutodetectToPngResult', 'model/PdfToPngResult', 'model/TextConversionResult'], factory);
+    define(['ApiClient', 'model/AutodetectGetInfoResult', 'model/AutodetectToPngResult', 'model/CsvCollection', 'model/PdfToPngResult', 'model/TextConversionResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AutodetectGetInfoResult'), require('../model/AutodetectToPngResult'), require('../model/PdfToPngResult'), require('../model/TextConversionResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/AutodetectGetInfoResult'), require('../model/AutodetectToPngResult'), require('../model/CsvCollection'), require('../model/PdfToPngResult'), require('../model/TextConversionResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectGetInfoResult, root.CloudmersiveConvertApiClient.AutodetectToPngResult, root.CloudmersiveConvertApiClient.PdfToPngResult, root.CloudmersiveConvertApiClient.TextConversionResult);
+    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectGetInfoResult, root.CloudmersiveConvertApiClient.AutodetectToPngResult, root.CloudmersiveConvertApiClient.CsvCollection, root.CloudmersiveConvertApiClient.PdfToPngResult, root.CloudmersiveConvertApiClient.TextConversionResult);
   }
-}(this, function(ApiClient, AutodetectGetInfoResult, AutodetectToPngResult, PdfToPngResult, TextConversionResult) {
+}(this, function(ApiClient, AutodetectGetInfoResult, AutodetectToPngResult, CsvCollection, PdfToPngResult, TextConversionResult) {
   'use strict';
 
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.4.3
+   * @version 2.4.4
    */
 
   /**
@@ -1389,11 +1389,11 @@
      */
 
     /**
-     * Convert Excel XLSX Spreadsheet to CSV
-     * Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.
+     * Convert Excel XLSX Spreadsheet to CSV, Single Worksheet
+     * Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.  If the input file contains multiple worksheets, the first one is used.  If you wish to convert all of the worksheets (not just the first one), be sure to use the xlsx/to/csv/multi API.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.outputEncoding Optional, set the output text encoding for the result; possible values are UTF-8 and UTF-32.  Default is UTF-32.
+     * @param {String} opts.outputEncoding Optional, set the output text encoding for the result; possible values are UTF-8, ASCII and UTF-32.  Default is UTF-8.
      * @param {module:api/ConvertDocumentApi~convertDocumentXlsxToCsvCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */
@@ -1427,6 +1427,58 @@
 
       return this.apiClient.callApi(
         '/convert/xlsx/to/csv', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentXlsxToCsvMulti operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentXlsxToCsvMultiCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CsvCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Excel XLSX Spreadsheet to CSV, Multiple Worksheets
+     * Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format, with support for multiple worksheets.  Supports both XLSX and XLSB file Excel formats.  Returns multiple CSV files, one for each worksheet (tab) in the spreadsheet.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.outputEncoding Optional, set the output text encoding for the result; possible values are UTF-8, ASCII and UTF-32.  Default is UTF-8.
+     * @param {module:api/ConvertDocumentApi~convertDocumentXlsxToCsvMultiCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/CsvCollection}
+     */
+    this.convertDocumentXlsxToCsvMulti = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentXlsxToCsvMulti");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'outputEncoding': opts['outputEncoding']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = CsvCollection;
+
+      return this.apiClient.callApi(
+        '/convert/xlsx/to/csv/multi', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
