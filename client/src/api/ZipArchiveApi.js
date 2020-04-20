@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CreateZipArchiveRequest', 'model/ZipExtractResponse'], factory);
+    define(['ApiClient', 'model/CreateZipArchiveRequest', 'model/ZipEncryptionAdvancedRequest', 'model/ZipExtractResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CreateZipArchiveRequest'), require('../model/ZipExtractResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/CreateZipArchiveRequest'), require('../model/ZipEncryptionAdvancedRequest'), require('../model/ZipExtractResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ZipArchiveApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.CreateZipArchiveRequest, root.CloudmersiveConvertApiClient.ZipExtractResponse);
+    root.CloudmersiveConvertApiClient.ZipArchiveApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.CreateZipArchiveRequest, root.CloudmersiveConvertApiClient.ZipEncryptionAdvancedRequest, root.CloudmersiveConvertApiClient.ZipExtractResponse);
   }
-}(this, function(ApiClient, CreateZipArchiveRequest, ZipExtractResponse) {
+}(this, function(ApiClient, CreateZipArchiveRequest, ZipEncryptionAdvancedRequest, ZipExtractResponse) {
   'use strict';
 
   /**
    * ZipArchive service.
    * @module api/ZipArchiveApi
-   * @version 2.4.4
+   * @version 2.4.5
    */
 
   /**
@@ -51,18 +51,35 @@
      * Callback function to receive the result of the zipArchiveZipCreate operation.
      * @callback module:api/ZipArchiveApi~zipArchiveZipCreateCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {'Blob'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Compress files to create a new zip archive
      * Create a new zip archive by compressing input files.
+     * @param {File} inputFile1 First input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {File} opts.inputFile2 Second input file to perform the operation on.
+     * @param {File} opts.inputFile3 Third input file to perform the operation on.
+     * @param {File} opts.inputFile4 Fourth input file to perform the operation on.
+     * @param {File} opts.inputFile5 Fifth input file to perform the operation on.
+     * @param {File} opts.inputFile6 Sixth input file to perform the operation on.
+     * @param {File} opts.inputFile7 Seventh input file to perform the operation on.
+     * @param {File} opts.inputFile8 Eighth input file to perform the operation on.
+     * @param {File} opts.inputFile9 Ninth input file to perform the operation on.
+     * @param {File} opts.inputFile10 Tenth input file to perform the operation on.
      * @param {module:api/ZipArchiveApi~zipArchiveZipCreateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link 'Blob'}
      */
-    this.zipArchiveZipCreate = function(callback) {
+    this.zipArchiveZipCreate = function(inputFile1, opts, callback) {
+      opts = opts || {};
       var postBody = null;
+
+      // verify the required parameter 'inputFile1' is set
+      if (inputFile1 === undefined || inputFile1 === null) {
+        throw new Error("Missing the required parameter 'inputFile1' when calling zipArchiveZipCreate");
+      }
 
 
       var pathParams = {
@@ -74,12 +91,22 @@
       var headerParams = {
       };
       var formParams = {
+        'inputFile1': inputFile1,
+        'inputFile2': opts['inputFile2'],
+        'inputFile3': opts['inputFile3'],
+        'inputFile4': opts['inputFile4'],
+        'inputFile5': opts['inputFile5'],
+        'inputFile6': opts['inputFile6'],
+        'inputFile7': opts['inputFile7'],
+        'inputFile8': opts['inputFile8'],
+        'inputFile9': opts['inputFile9'],
+        'inputFile10': opts['inputFile10']
       };
 
       var authNames = ['Apikey'];
-      var contentTypes = [];
+      var contentTypes = ['multipart/form-data'];
       var accepts = ['application/octet-stream'];
-      var returnType = Object;
+      var returnType = 'Blob';
 
       return this.apiClient.callApi(
         '/convert/archive/zip/create', 'POST',
@@ -130,6 +157,108 @@
 
       return this.apiClient.callApi(
         '/convert/archive/zip/create/advanced', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the zipArchiveZipDecrypt operation.
+     * @callback module:api/ZipArchiveApi~zipArchiveZipDecryptCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Decrypt and remove password protection on a zip file
+     * Decrypts and removes password protection from an encrypted zip file with the specified password
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {String} zipPassword Required; Password for the input archive
+     * @param {module:api/ZipArchiveApi~zipArchiveZipDecryptCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.zipArchiveZipDecrypt = function(inputFile, zipPassword, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling zipArchiveZipDecrypt");
+      }
+
+      // verify the required parameter 'zipPassword' is set
+      if (zipPassword === undefined || zipPassword === null) {
+        throw new Error("Missing the required parameter 'zipPassword' when calling zipArchiveZipDecrypt");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'zipPassword': zipPassword
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/convert/archive/zip/decrypt', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the zipArchiveZipEncryptAdvanced operation.
+     * @callback module:api/ZipArchiveApi~zipArchiveZipEncryptAdvancedCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Encrypt and password protect a zip file
+     * Encrypts and password protects an existing zip file with the specified password and encryption algorithm
+     * @param {module:model/ZipEncryptionAdvancedRequest} encryptionRequest Encryption request
+     * @param {module:api/ZipArchiveApi~zipArchiveZipEncryptAdvancedCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.zipArchiveZipEncryptAdvanced = function(encryptionRequest, callback) {
+      var postBody = encryptionRequest;
+
+      // verify the required parameter 'encryptionRequest' is set
+      if (encryptionRequest === undefined || encryptionRequest === null) {
+        throw new Error("Missing the required parameter 'encryptionRequest' when calling zipArchiveZipEncryptAdvanced");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/convert/archive/zip/encrypt/advanced', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -6,12 +6,14 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**zipArchiveZipCreate**](ZipArchiveApi.md#zipArchiveZipCreate) | **POST** /convert/archive/zip/create | Compress files to create a new zip archive
 [**zipArchiveZipCreateAdvanced**](ZipArchiveApi.md#zipArchiveZipCreateAdvanced) | **POST** /convert/archive/zip/create/advanced | Compress files and folders to create a new zip archive with advanced options
+[**zipArchiveZipDecrypt**](ZipArchiveApi.md#zipArchiveZipDecrypt) | **POST** /convert/archive/zip/decrypt | Decrypt and remove password protection on a zip file
+[**zipArchiveZipEncryptAdvanced**](ZipArchiveApi.md#zipArchiveZipEncryptAdvanced) | **POST** /convert/archive/zip/encrypt/advanced | Encrypt and password protect a zip file
 [**zipArchiveZipExtract**](ZipArchiveApi.md#zipArchiveZipExtract) | **POST** /convert/archive/zip/extract | Extract, decompress files and folders from a zip archive
 
 
 <a name="zipArchiveZipCreate"></a>
 # **zipArchiveZipCreate**
-> Object zipArchiveZipCreate()
+> &#39;Blob&#39; zipArchiveZipCreate(inputFile1, opts)
 
 Compress files to create a new zip archive
 
@@ -30,6 +32,20 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.ZipArchiveApi();
 
+var inputFile1 = "/path/to/file.txt"; // File | First input file to perform the operation on.
+
+var opts = { 
+  'inputFile2': "/path/to/file.txt", // File | Second input file to perform the operation on.
+  'inputFile3': "/path/to/file.txt", // File | Third input file to perform the operation on.
+  'inputFile4': "/path/to/file.txt", // File | Fourth input file to perform the operation on.
+  'inputFile5': "/path/to/file.txt", // File | Fifth input file to perform the operation on.
+  'inputFile6': "/path/to/file.txt", // File | Sixth input file to perform the operation on.
+  'inputFile7': "/path/to/file.txt", // File | Seventh input file to perform the operation on.
+  'inputFile8': "/path/to/file.txt", // File | Eighth input file to perform the operation on.
+  'inputFile9': "/path/to/file.txt", // File | Ninth input file to perform the operation on.
+  'inputFile10': "/path/to/file.txt" // File | Tenth input file to perform the operation on.
+};
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -37,15 +53,27 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.zipArchiveZipCreate(callback);
+apiInstance.zipArchiveZipCreate(inputFile1, opts, callback);
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile1** | **File**| First input file to perform the operation on. | 
+ **inputFile2** | **File**| Second input file to perform the operation on. | [optional] 
+ **inputFile3** | **File**| Third input file to perform the operation on. | [optional] 
+ **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional] 
+ **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional] 
+ **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional] 
+ **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional] 
+ **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional] 
+ **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional] 
+ **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional] 
 
 ### Return type
 
-**Object**
+**&#39;Blob&#39;**
 
 ### Authorization
 
@@ -53,7 +81,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/octet-stream
 
 <a name="zipArchiveZipCreateAdvanced"></a>
@@ -108,6 +136,115 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/octet-stream
+
+<a name="zipArchiveZipDecrypt"></a>
+# **zipArchiveZipDecrypt**
+> Object zipArchiveZipDecrypt(inputFile, zipPassword)
+
+Decrypt and remove password protection on a zip file
+
+Decrypts and removes password protection from an encrypted zip file with the specified password
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.ZipArchiveApi();
+
+var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
+
+var zipPassword = "zipPassword_example"; // String | Required; Password for the input archive
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.zipArchiveZipDecrypt(inputFile, zipPassword, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Input file to perform the operation on. | 
+ **zipPassword** | **String**| Required; Password for the input archive | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="zipArchiveZipEncryptAdvanced"></a>
+# **zipArchiveZipEncryptAdvanced**
+> Object zipArchiveZipEncryptAdvanced(encryptionRequest)
+
+Encrypt and password protect a zip file
+
+Encrypts and password protects an existing zip file with the specified password and encryption algorithm
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.ZipArchiveApi();
+
+var encryptionRequest = new CloudmersiveConvertApiClient.ZipEncryptionAdvancedRequest(); // ZipEncryptionAdvancedRequest | Encryption request
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.zipArchiveZipEncryptAdvanced(encryptionRequest, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **encryptionRequest** | [**ZipEncryptionAdvancedRequest**](ZipEncryptionAdvancedRequest.md)| Encryption request | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="zipArchiveZipExtract"></a>
 # **zipArchiveZipExtract**

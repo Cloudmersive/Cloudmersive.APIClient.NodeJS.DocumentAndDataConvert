@@ -36,7 +36,7 @@
   /**
    * The DocxText model module.
    * @module model/DocxText
-   * @version 2.4.4
+   * @version 2.4.5
    */
 
   /**
@@ -83,7 +83,7 @@
    */
   exports.prototype['TextIndex'] = undefined;
   /**
-   * The Path of the location of this object; leave blank for new tables
+   * The Path of the location of this Text object; leave blank for creation
    * @member {String} Path
    */
   exports.prototype['Path'] = undefined;

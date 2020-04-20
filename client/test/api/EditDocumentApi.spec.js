@@ -110,6 +110,16 @@
         done();
       });
     });
+    describe('editDocumentDocxFindParagraph', function() {
+      it('should call editDocumentDocxFindParagraph successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxFindParagraph
+        //instance.editDocumentDocxFindParagraph(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentDocxGetComments', function() {
       it('should call editDocumentDocxGetComments successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxGetComments
@@ -284,6 +294,16 @@
       it('should call editDocumentDocxReplace successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxReplace
         //instance.editDocumentDocxReplace(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxReplaceParagraph', function() {
+      it('should call editDocumentDocxReplaceParagraph successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxReplaceParagraph
+        //instance.editDocumentDocxReplaceParagraph(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

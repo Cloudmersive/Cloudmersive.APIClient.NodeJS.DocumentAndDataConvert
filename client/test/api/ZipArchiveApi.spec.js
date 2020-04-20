@@ -70,6 +70,26 @@
         done();
       });
     });
+    describe('zipArchiveZipDecrypt', function() {
+      it('should call zipArchiveZipDecrypt successfully', function(done) {
+        //uncomment below and update the code to test zipArchiveZipDecrypt
+        //instance.zipArchiveZipDecrypt(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('zipArchiveZipEncryptAdvanced', function() {
+      it('should call zipArchiveZipEncryptAdvanced successfully', function(done) {
+        //uncomment below and update the code to test zipArchiveZipEncryptAdvanced
+        //instance.zipArchiveZipEncryptAdvanced(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('zipArchiveZipExtract', function() {
       it('should call zipArchiveZipExtract successfully', function(done) {
         //uncomment below and update the code to test zipArchiveZipExtract

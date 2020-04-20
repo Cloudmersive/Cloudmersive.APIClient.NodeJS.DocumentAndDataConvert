@@ -36,7 +36,7 @@
   /**
    * The DocxRun model module.
    * @module model/DocxRun
-   * @version 2.4.4
+   * @version 2.4.5
    */
 
   /**
@@ -103,7 +103,7 @@
    */
   exports.prototype['RunIndex'] = undefined;
   /**
-   * The Path of the location of this object; leave blank for new tables
+   * The Path of the location of this Run object; leave blank for creation
    * @member {String} Path
    */
   exports.prototype['Path'] = undefined;

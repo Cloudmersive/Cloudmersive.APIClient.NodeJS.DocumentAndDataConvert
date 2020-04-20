@@ -80,6 +80,16 @@
         done();
       });
     });
+    describe('validateDocumentGZipValidation', function() {
+      it('should call validateDocumentGZipValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentGZipValidation
+        //instance.validateDocumentGZipValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('validateDocumentJsonValidation', function() {
       it('should call validateDocumentJsonValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentJsonValidation
@@ -110,6 +120,26 @@
         done();
       });
     });
+    describe('validateDocumentRarValidation', function() {
+      it('should call validateDocumentRarValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentRarValidation
+        //instance.validateDocumentRarValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('validateDocumentTarValidation', function() {
+      it('should call validateDocumentTarValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentTarValidation
+        //instance.validateDocumentTarValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('validateDocumentXlsxValidation', function() {
       it('should call validateDocumentXlsxValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentXlsxValidation
@@ -124,6 +154,16 @@
       it('should call validateDocumentXmlValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentXmlValidation
         //instance.validateDocumentXmlValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('validateDocumentZipValidation', function() {
+      it('should call validateDocumentZipValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentZipValidation
+        //instance.validateDocumentZipValidation(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

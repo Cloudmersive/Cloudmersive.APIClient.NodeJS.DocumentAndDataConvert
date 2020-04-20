@@ -36,7 +36,7 @@
   /**
    * The DocxParagraph model module.
    * @module model/DocxParagraph
-   * @version 2.4.4
+   * @version 2.4.5
    */
 
   /**
@@ -87,7 +87,7 @@
    */
   exports.prototype['ParagraphIndex'] = undefined;
   /**
-   * The Path of the location of this object; leave blank for new tables
+   * The Path of the location of this Paragraph object; leave blank during creation
    * @member {String} Path
    */
   exports.prototype['Path'] = undefined;
