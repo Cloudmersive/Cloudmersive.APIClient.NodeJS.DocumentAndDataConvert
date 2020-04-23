@@ -33,7 +33,7 @@
   /**
    * ConvertData service.
    * @module api/ConvertDataApi
-   * @version 2.4.5
+   * @version 2.4.6
    */
 
   /**
@@ -59,10 +59,13 @@
      * Convert CSV to JSON conversion
      * Convert a CSV file to a JSON object array
      * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.columnNamesFromFirstRow Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure.
      * @param {module:api/ConvertDataApi~convertDataCsvToJsonCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
-    this.convertDataCsvToJson = function(inputFile, callback) {
+    this.convertDataCsvToJson = function(inputFile, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'inputFile' is set
@@ -78,6 +81,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'columnNamesFromFirstRow': opts['columnNamesFromFirstRow']
       };
       var formParams = {
         'inputFile': inputFile

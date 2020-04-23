@@ -60,6 +60,16 @@
         done();
       });
     });
+    describe('validateDocumentCsvValidation', function() {
+      it('should call validateDocumentCsvValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentCsvValidation
+        //instance.validateDocumentCsvValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('validateDocumentDocxValidation', function() {
       it('should call validateDocumentDocxValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentDocxValidation

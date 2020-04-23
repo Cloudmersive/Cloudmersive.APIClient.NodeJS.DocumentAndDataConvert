@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 <a name="convertDataCsvToJson"></a>
 # **convertDataCsvToJson**
-> Object convertDataCsvToJson(inputFile)
+> Object convertDataCsvToJson(inputFile, opts)
 
 Convert CSV to JSON conversion
 
@@ -44,6 +44,9 @@ var apiInstance = new CloudmersiveConvertApiClient.ConvertDataApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
+var opts = { 
+  'columnNamesFromFirstRow': true // Boolean | Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure.
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -52,7 +55,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.convertDataCsvToJson(inputFile, callback);
+apiInstance.convertDataCsvToJson(inputFile, opts, callback);
 ```
 
 ### Parameters
@@ -60,6 +63,7 @@ apiInstance.convertDataCsvToJson(inputFile, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **File**| Input file to perform the operation on. | 
+ **columnNamesFromFirstRow** | **Boolean**| Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure. | [optional] 
 
 ### Return type
 
