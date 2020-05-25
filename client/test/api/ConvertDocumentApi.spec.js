@@ -80,6 +80,26 @@
         done();
       });
     });
+    describe('convertDocumentAutodetectToThumbnail', function() {
+      it('should call convertDocumentAutodetectToThumbnail successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentAutodetectToThumbnail
+        //instance.convertDocumentAutodetectToThumbnail(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentAutodetectToThumbnailsAdvanced', function() {
+      it('should call convertDocumentAutodetectToThumbnailsAdvanced successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentAutodetectToThumbnailsAdvanced
+        //instance.convertDocumentAutodetectToThumbnailsAdvanced(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentAutodetectToTxt', function() {
       it('should call convertDocumentAutodetectToTxt successfully', function(done) {
         //uncomment below and update the code to test convertDocumentAutodetectToTxt
@@ -140,10 +160,60 @@
         done();
       });
     });
+    describe('convertDocumentDocxToPng', function() {
+      it('should call convertDocumentDocxToPng successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentDocxToPng
+        //instance.convertDocumentDocxToPng(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentDocxToTxt', function() {
       it('should call convertDocumentDocxToTxt successfully', function(done) {
         //uncomment below and update the code to test convertDocumentDocxToTxt
         //instance.convertDocumentDocxToTxt(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentEmlToHtml', function() {
+      it('should call convertDocumentEmlToHtml successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentEmlToHtml
+        //instance.convertDocumentEmlToHtml(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentEmlToPdf', function() {
+      it('should call convertDocumentEmlToPdf successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentEmlToPdf
+        //instance.convertDocumentEmlToPdf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentGetFileTypeIcon', function() {
+      it('should call convertDocumentGetFileTypeIcon successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentGetFileTypeIcon
+        //instance.convertDocumentGetFileTypeIcon(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentGetFileTypeIconAdvanced', function() {
+      it('should call convertDocumentGetFileTypeIconAdvanced successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentGetFileTypeIconAdvanced
+        //instance.convertDocumentGetFileTypeIconAdvanced(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -174,6 +244,26 @@
       it('should call convertDocumentHtmlToTxt successfully', function(done) {
         //uncomment below and update the code to test convertDocumentHtmlToTxt
         //instance.convertDocumentHtmlToTxt(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentMsgToHtml', function() {
+      it('should call convertDocumentMsgToHtml successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentMsgToHtml
+        //instance.convertDocumentMsgToHtml(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentMsgToPdf', function() {
+      it('should call convertDocumentMsgToPdf successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentMsgToPdf
+        //instance.convertDocumentMsgToPdf(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -280,6 +370,16 @@
         done();
       });
     });
+    describe('convertDocumentPptxToPng', function() {
+      it('should call convertDocumentPptxToPng successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentPptxToPng
+        //instance.convertDocumentPptxToPng(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentPptxToTxt', function() {
       it('should call convertDocumentPptxToTxt successfully', function(done) {
         //uncomment below and update the code to test convertDocumentPptxToTxt
@@ -344,6 +444,16 @@
       it('should call convertDocumentXlsxToPdf successfully', function(done) {
         //uncomment below and update the code to test convertDocumentXlsxToPdf
         //instance.convertDocumentXlsxToPdf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentXlsxToPng', function() {
+      it('should call convertDocumentXlsxToPng successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentXlsxToPng
+        //instance.convertDocumentXlsxToPng(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

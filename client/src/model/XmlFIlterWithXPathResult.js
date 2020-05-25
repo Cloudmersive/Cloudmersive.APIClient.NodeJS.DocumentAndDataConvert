@@ -36,7 +36,7 @@
   /**
    * The XmlFilterWithXPathResult model module.
    * @module model/XmlFilterWithXPathResult
-   * @version 2.4.6
+   * @version 2.4.7
    */
 
   /**

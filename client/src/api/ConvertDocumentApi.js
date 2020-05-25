@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AutodetectGetInfoResult', 'model/AutodetectToPngResult', 'model/CsvCollection', 'model/PdfToPngResult', 'model/TextConversionResult'], factory);
+    define(['ApiClient', 'model/AutodetectGetInfoResult', 'model/AutodetectToPngResult', 'model/AutodetectToThumbnailsResult', 'model/CsvCollection', 'model/DocxToPngResult', 'model/EmlToHtmlResult', 'model/GetFileTypeIconResult', 'model/MsgToHtmlResult', 'model/PdfToPngResult', 'model/PptxToPngResult', 'model/TextConversionResult', 'model/XlsxToPngResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AutodetectGetInfoResult'), require('../model/AutodetectToPngResult'), require('../model/CsvCollection'), require('../model/PdfToPngResult'), require('../model/TextConversionResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/AutodetectGetInfoResult'), require('../model/AutodetectToPngResult'), require('../model/AutodetectToThumbnailsResult'), require('../model/CsvCollection'), require('../model/DocxToPngResult'), require('../model/EmlToHtmlResult'), require('../model/GetFileTypeIconResult'), require('../model/MsgToHtmlResult'), require('../model/PdfToPngResult'), require('../model/PptxToPngResult'), require('../model/TextConversionResult'), require('../model/XlsxToPngResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectGetInfoResult, root.CloudmersiveConvertApiClient.AutodetectToPngResult, root.CloudmersiveConvertApiClient.CsvCollection, root.CloudmersiveConvertApiClient.PdfToPngResult, root.CloudmersiveConvertApiClient.TextConversionResult);
+    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectGetInfoResult, root.CloudmersiveConvertApiClient.AutodetectToPngResult, root.CloudmersiveConvertApiClient.AutodetectToThumbnailsResult, root.CloudmersiveConvertApiClient.CsvCollection, root.CloudmersiveConvertApiClient.DocxToPngResult, root.CloudmersiveConvertApiClient.EmlToHtmlResult, root.CloudmersiveConvertApiClient.GetFileTypeIconResult, root.CloudmersiveConvertApiClient.MsgToHtmlResult, root.CloudmersiveConvertApiClient.PdfToPngResult, root.CloudmersiveConvertApiClient.PptxToPngResult, root.CloudmersiveConvertApiClient.TextConversionResult, root.CloudmersiveConvertApiClient.XlsxToPngResult);
   }
-}(this, function(ApiClient, AutodetectGetInfoResult, AutodetectToPngResult, CsvCollection, PdfToPngResult, TextConversionResult) {
+}(this, function(ApiClient, AutodetectGetInfoResult, AutodetectToPngResult, AutodetectToThumbnailsResult, CsvCollection, DocxToPngResult, EmlToHtmlResult, GetFileTypeIconResult, MsgToHtmlResult, PdfToPngResult, PptxToPngResult, TextConversionResult, XlsxToPngResult) {
   'use strict';
 
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.4.6
+   * @version 2.4.7
    */
 
   /**
@@ -186,6 +186,120 @@
 
       return this.apiClient.callApi(
         '/convert/autodetect/to/png', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentAutodetectToThumbnail operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentAutodetectToThumbnailCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert File to Thumbnail Image
+     * Automatically detect file type and convert it to a PNG thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.maxWidth Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128.
+     * @param {Number} opts.maxHeight Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128.
+     * @param {String} opts.extension Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon.
+     * @param {module:api/ConvertDocumentApi~convertDocumentAutodetectToThumbnailCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.convertDocumentAutodetectToThumbnail = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentAutodetectToThumbnail");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'maxWidth': opts['maxWidth'],
+        'maxHeight': opts['maxHeight'],
+        'extension': opts['extension']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/autodetect/to/thumbnail', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentAutodetectToThumbnailsAdvanced operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentAutodetectToThumbnailsAdvancedCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/AutodetectToThumbnailsResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert File to Thumbnail Image Object
+     * Automatically detect file type and convert it to an array of PNG thumbnails, returned as an object. May specify the number of pages for multiple thumbnails; default is one thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.pages Optional; Specify how many pages of the document will be converted to thumbnails. Default is 1 page.
+     * @param {Number} opts.maxWidth Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128.
+     * @param {Number} opts.maxHeight Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128.
+     * @param {String} opts.extension Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon.
+     * @param {module:api/ConvertDocumentApi~convertDocumentAutodetectToThumbnailsAdvancedCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/AutodetectToThumbnailsResult}
+     */
+    this.convertDocumentAutodetectToThumbnailsAdvanced = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentAutodetectToThumbnailsAdvanced");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'pages': opts['pages'],
+        'maxWidth': opts['maxWidth'],
+        'maxHeight': opts['maxHeight'],
+        'extension': opts['extension']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = AutodetectToThumbnailsResult;
+
+      return this.apiClient.callApi(
+        '/convert/autodetect/to/thumbnail/advanced', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -484,6 +598,54 @@
     }
 
     /**
+     * Callback function to receive the result of the convertDocumentDocxToPng operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentDocxToPngCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DocxToPngResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert DOCX document to PNG image array
+     * Converts an Office Word Document (DOCX) file to an array of PNG images, one for each page.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentDocxToPngCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DocxToPngResult}
+     */
+    this.convertDocumentDocxToPng = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentDocxToPng");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = DocxToPngResult;
+
+      return this.apiClient.callApi(
+        '/convert/docx/to/png', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the convertDocumentDocxToTxt operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentDocxToTxtCallback
      * @param {String} error Error message, if any.
@@ -530,6 +692,216 @@
 
       return this.apiClient.callApi(
         '/convert/docx/to/txt', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentEmlToHtml operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentEmlToHtmlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/EmlToHtmlResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Email EML file to HTML string
+     * Convert Outlook Email EML file to HTML string and attachments. Supports images if they are base 64 inline.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.bodyOnly Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false.
+     * @param {Boolean} opts.includeAttachments Optional; If false, the response object will not include any attachment files from the input file. Default is true.
+     * @param {module:api/ConvertDocumentApi~convertDocumentEmlToHtmlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/EmlToHtmlResult}
+     */
+    this.convertDocumentEmlToHtml = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentEmlToHtml");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'bodyOnly': opts['bodyOnly'],
+        'includeAttachments': opts['includeAttachments']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = EmlToHtmlResult;
+
+      return this.apiClient.callApi(
+        '/convert/eml/to/html', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentEmlToPdf operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentEmlToPdfCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Email EML file to PDF document
+     * Convert Outlook Email EML file to PDF document. Supports images if they are base 64 inline.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.bodyOnly Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false.
+     * @param {module:api/ConvertDocumentApi~convertDocumentEmlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.convertDocumentEmlToPdf = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentEmlToPdf");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'bodyOnly': opts['bodyOnly']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/eml/to/pdf', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentGetFileTypeIcon operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentGetFileTypeIconCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get PNG icon file for the file extension
+     * Returns a PNG icon for the given file format extension as a file for download. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+     * @param {String} fileExtension Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.iconSize Optional; The desired width of the icon, preserving its aspect ratio.
+     * @param {module:api/ConvertDocumentApi~convertDocumentGetFileTypeIconCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.convertDocumentGetFileTypeIcon = function(fileExtension, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'fileExtension' is set
+      if (fileExtension === undefined || fileExtension === null) {
+        throw new Error("Missing the required parameter 'fileExtension' when calling convertDocumentGetFileTypeIcon");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'fileExtension': fileExtension,
+        'iconSize': opts['iconSize']
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/autodetect/get-icon', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentGetFileTypeIconAdvanced operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentGetFileTypeIconAdvancedCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetFileTypeIconResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get PNG icon byte array for the file extension
+     * Returns a PNG icon for the given file format extension directly as a byte array. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
+     * @param {String} fileExtension Required; The file extension to be used for the icon. Limited to 4 AlphaNumeric characters.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.iconSize Optional; The desired width of the icon, preserving its aspect ratio.
+     * @param {module:api/ConvertDocumentApi~convertDocumentGetFileTypeIconAdvancedCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetFileTypeIconResult}
+     */
+    this.convertDocumentGetFileTypeIconAdvanced = function(fileExtension, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'fileExtension' is set
+      if (fileExtension === undefined || fileExtension === null) {
+        throw new Error("Missing the required parameter 'fileExtension' when calling convertDocumentGetFileTypeIconAdvanced");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'fileExtension': fileExtension,
+        'iconSize': opts['iconSize']
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = GetFileTypeIconResult;
+
+      return this.apiClient.callApi(
+        '/convert/autodetect/get-icon-advanced', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -674,6 +1046,112 @@
 
       return this.apiClient.callApi(
         '/convert/html/to/txt', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentMsgToHtml operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentMsgToHtmlCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/MsgToHtmlResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Email MSG file to HTML string
+     * Convert Outlook Email MSG file to HTML string and attachments. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.bodyOnly Optional; If true, the HTML string will only include the body of the MSG. Other information such as subject will still be given as properties in the response object. Default is false.
+     * @param {Boolean} opts.includeAttachments Optional; If false, the response object will not include any attachment files from the input file. Default is true.
+     * @param {module:api/ConvertDocumentApi~convertDocumentMsgToHtmlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/MsgToHtmlResult}
+     */
+    this.convertDocumentMsgToHtml = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentMsgToHtml");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'bodyOnly': opts['bodyOnly'],
+        'includeAttachments': opts['includeAttachments']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = MsgToHtmlResult;
+
+      return this.apiClient.callApi(
+        '/convert/msg/to/html', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentMsgToPdf operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentMsgToPdfCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Email MSG file to PDF document
+     * Convert Outlook Email MSG file to PDF document. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.bodyOnly Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false.
+     * @param {module:api/ConvertDocumentApi~convertDocumentMsgToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.convertDocumentMsgToPdf = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentMsgToPdf");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'bodyOnly': opts['bodyOnly']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/msg/to/pdf', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1189,6 +1667,54 @@
     }
 
     /**
+     * Callback function to receive the result of the convertDocumentPptxToPng operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentPptxToPngCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PptxToPngResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert PowerPoint PPTX to PNG image array
+     * Converts a PowerPoint Presentation (PPTX) file to an array of PNG images, one for each page.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentPptxToPngCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/PptxToPngResult}
+     */
+    this.convertDocumentPptxToPng = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentPptxToPng");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = PptxToPngResult;
+
+      return this.apiClient.callApi(
+        '/convert/pptx/to/png', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the convertDocumentPptxToTxt operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentPptxToTxtCallback
      * @param {String} error Error message, if any.
@@ -1527,6 +2053,54 @@
 
       return this.apiClient.callApi(
         '/convert/xlsx/to/pdf', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentXlsxToPng operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentXlsxToPngCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/XlsxToPngResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Excel XLSX spreadsheet to PNG image array
+     * Converts an Excel Spreadsheet (XLSX) file to an array of PNG images, one for each page.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentXlsxToPngCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/XlsxToPngResult}
+     */
+    this.convertDocumentXlsxToPng = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentXlsxToPng");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = XlsxToPngResult;
+
+      return this.apiClient.callApi(
+        '/convert/xlsx/to/png', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

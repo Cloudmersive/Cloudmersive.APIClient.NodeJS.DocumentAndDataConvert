@@ -33,7 +33,7 @@
   /**
    * ValidateDocument service.
    * @module api/ValidateDocumentApi
-   * @version 2.4.6
+   * @version 2.4.7
    */
 
   /**
@@ -192,6 +192,54 @@
     }
 
     /**
+     * Callback function to receive the result of the validateDocumentEmlValidation operation.
+     * @callback module:api/ValidateDocumentApi~validateDocumentEmlValidationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DocumentValidationResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate if an EML file is executable
+     * Validate if an input file is an EML email file; if the document is not valid
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ValidateDocumentApi~validateDocumentEmlValidationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DocumentValidationResult}
+     */
+    this.validateDocumentEmlValidation = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling validateDocumentEmlValidation");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = DocumentValidationResult;
+
+      return this.apiClient.callApi(
+        '/convert/validate/eml', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the validateDocumentExecutableValidation operation.
      * @callback module:api/ValidateDocumentApi~validateDocumentExecutableValidationCallback
      * @param {String} error Error message, if any.
@@ -330,6 +378,54 @@
 
       return this.apiClient.callApi(
         '/convert/validate/json', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validateDocumentMsgValidation operation.
+     * @callback module:api/ValidateDocumentApi~validateDocumentMsgValidationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DocumentValidationResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate if an MSG file is executable
+     * Validate if an input file is an MSG email file; if the document is not valid
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ValidateDocumentApi~validateDocumentMsgValidationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DocumentValidationResult}
+     */
+    this.validateDocumentMsgValidation = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling validateDocumentMsgValidation");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = DocumentValidationResult;
+
+      return this.apiClient.callApi(
+        '/convert/validate/msg', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

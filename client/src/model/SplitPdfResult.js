@@ -36,7 +36,7 @@
   /**
    * The SplitPdfResult model module.
    * @module model/SplitPdfResult
-   * @version 2.4.6
+   * @version 2.4.7
    */
 
   /**

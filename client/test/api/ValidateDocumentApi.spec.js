@@ -80,6 +80,16 @@
         done();
       });
     });
+    describe('validateDocumentEmlValidation', function() {
+      it('should call validateDocumentEmlValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentEmlValidation
+        //instance.validateDocumentEmlValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('validateDocumentExecutableValidation', function() {
       it('should call validateDocumentExecutableValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentExecutableValidation
@@ -104,6 +114,16 @@
       it('should call validateDocumentJsonValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentJsonValidation
         //instance.validateDocumentJsonValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('validateDocumentMsgValidation', function() {
+      it('should call validateDocumentMsgValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentMsgValidation
+        //instance.validateDocumentMsgValidation(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
