@@ -36,7 +36,7 @@
   /**
    * The GetDocxCommentsResponse model module.
    * @module model/GetDocxCommentsResponse
-   * @version 2.4.7
+   * @version 2.4.8
    */
 
   /**

@@ -92,26 +92,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property bcc (base name: "Bcc")', function() {
-      // uncomment below and update the code to test the property bcc
-      //var instance = new CloudmersiveConvertApiClient.EmlToHtmlResult();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property receivedTime (base name: "ReceivedTime")', function() {
-      // uncomment below and update the code to test the property receivedTime
+    it('should have the property dateSent (base name: "DateSent")', function() {
+      // uncomment below and update the code to test the property dateSent
       //var instance = new CloudmersiveConvertApiClient.EmlToHtmlResult();
       //expect(instance).to.be();
     });
 
     it('should have the property subject (base name: "Subject")', function() {
       // uncomment below and update the code to test the property subject
-      //var instance = new CloudmersiveConvertApiClient.EmlToHtmlResult();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property organization (base name: "Organization")', function() {
-      // uncomment below and update the code to test the property organization
       //var instance = new CloudmersiveConvertApiClient.EmlToHtmlResult();
       //expect(instance).to.be();
     });

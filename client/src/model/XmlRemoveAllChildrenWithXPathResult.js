@@ -36,7 +36,7 @@
   /**
    * The XmlRemoveAllChildrenWithXPathResult model module.
    * @module model/XmlRemoveAllChildrenWithXPathResult
-   * @version 2.4.7
+   * @version 2.4.8
    */
 
   /**

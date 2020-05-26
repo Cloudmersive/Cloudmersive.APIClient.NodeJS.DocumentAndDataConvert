@@ -36,7 +36,7 @@
   /**
    * The SetXlsxCellRequest model module.
    * @module model/SetXlsxCellRequest
-   * @version 2.4.7
+   * @version 2.4.8
    */
 
   /**

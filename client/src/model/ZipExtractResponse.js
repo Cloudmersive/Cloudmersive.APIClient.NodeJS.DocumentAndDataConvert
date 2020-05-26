@@ -36,7 +36,7 @@
   /**
    * The ZipExtractResponse model module.
    * @module model/ZipExtractResponse
-   * @version 2.4.7
+   * @version 2.4.8
    */
 
   /**

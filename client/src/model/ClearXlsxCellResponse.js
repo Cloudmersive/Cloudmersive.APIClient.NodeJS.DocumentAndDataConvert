@@ -36,7 +36,7 @@
   /**
    * The ClearXlsxCellResponse model module.
    * @module model/ClearXlsxCellResponse
-   * @version 2.4.7
+   * @version 2.4.8
    */
 
   /**

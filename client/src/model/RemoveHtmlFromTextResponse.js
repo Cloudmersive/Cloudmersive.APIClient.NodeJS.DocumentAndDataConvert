@@ -36,7 +36,7 @@
   /**
    * The RemoveHtmlFromTextResponse model module.
    * @module model/RemoveHtmlFromTextResponse
-   * @version 2.4.7
+   * @version 2.4.8
    */
 
   /**

@@ -20,7 +20,7 @@ Method | HTTP request | Description
 [**convertDocumentEmlToHtml**](ConvertDocumentApi.md#convertDocumentEmlToHtml) | **POST** /convert/eml/to/html | Convert Email EML file to HTML string
 [**convertDocumentEmlToPdf**](ConvertDocumentApi.md#convertDocumentEmlToPdf) | **POST** /convert/eml/to/pdf | Convert Email EML file to PDF document
 [**convertDocumentGetFileTypeIcon**](ConvertDocumentApi.md#convertDocumentGetFileTypeIcon) | **POST** /convert/autodetect/get-icon | Get PNG icon file for the file extension
-[**convertDocumentGetFileTypeIconAdvanced**](ConvertDocumentApi.md#convertDocumentGetFileTypeIconAdvanced) | **POST** /convert/autodetect/get-icon-advanced | Get PNG icon byte array for the file extension
+[**convertDocumentGetFileTypeIconAdvanced**](ConvertDocumentApi.md#convertDocumentGetFileTypeIconAdvanced) | **POST** /convert/autodetect/get-icon/advanced | Get PNG icon byte array for the file extension
 [**convertDocumentHtmlToPdf**](ConvertDocumentApi.md#convertDocumentHtmlToPdf) | **POST** /convert/html/to/pdf | Convert HTML document file to PDF Document
 [**convertDocumentHtmlToPng**](ConvertDocumentApi.md#convertDocumentHtmlToPng) | **POST** /convert/html/to/png | Convert HTML document file to PNG image array
 [**convertDocumentHtmlToTxt**](ConvertDocumentApi.md#convertDocumentHtmlToTxt) | **POST** /convert/html/to/txt | HTML Document file to Text (txt)
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 <a name="convertDocumentAutodetectToThumbnail"></a>
 # **convertDocumentAutodetectToThumbnail**
-> Object convertDocumentAutodetectToThumbnail(inputFile, opts)
+> &#39;Blob&#39; convertDocumentAutodetectToThumbnail(inputFile, opts)
 
 Convert File to Thumbnail Image
 
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**&#39;Blob&#39;**
 
 ### Authorization
 
@@ -824,7 +824,7 @@ Name | Type | Description  | Notes
 
 <a name="convertDocumentEmlToPdf"></a>
 # **convertDocumentEmlToPdf**
-> Object convertDocumentEmlToPdf(inputFile, opts)
+> &#39;Blob&#39; convertDocumentEmlToPdf(inputFile, opts)
 
 Convert Email EML file to PDF document
 
@@ -868,7 +868,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**&#39;Blob&#39;**
 
 ### Authorization
 
@@ -881,7 +881,7 @@ Name | Type | Description  | Notes
 
 <a name="convertDocumentGetFileTypeIcon"></a>
 # **convertDocumentGetFileTypeIcon**
-> Object convertDocumentGetFileTypeIcon(fileExtension, opts)
+> &#39;Blob&#39; convertDocumentGetFileTypeIcon(fileExtension, opts)
 
 Get PNG icon file for the file extension
 
@@ -925,7 +925,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**&#39;Blob&#39;**
 
 ### Authorization
 
@@ -1213,7 +1213,7 @@ Name | Type | Description  | Notes
 
 <a name="convertDocumentMsgToPdf"></a>
 # **convertDocumentMsgToPdf**
-> Object convertDocumentMsgToPdf(inputFile, opts)
+> &#39;Blob&#39; convertDocumentMsgToPdf(inputFile, opts)
 
 Convert Email MSG file to PDF document
 
@@ -1257,7 +1257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**&#39;Blob&#39;**
 
 ### Authorization
 

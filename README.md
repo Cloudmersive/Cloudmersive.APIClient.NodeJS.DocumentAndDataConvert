@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.4.7
+- Package version: 2.4.8
 
 
 ## Installation
@@ -159,7 +159,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentEmlToHtml**](docs/ConvertDocumentApi.md#convertDocumentEmlToHtml) | **POST** /convert/eml/to/html | Convert Email EML file to HTML string
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentEmlToPdf**](docs/ConvertDocumentApi.md#convertDocumentEmlToPdf) | **POST** /convert/eml/to/pdf | Convert Email EML file to PDF document
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentGetFileTypeIcon**](docs/ConvertDocumentApi.md#convertDocumentGetFileTypeIcon) | **POST** /convert/autodetect/get-icon | Get PNG icon file for the file extension
-*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentGetFileTypeIconAdvanced**](docs/ConvertDocumentApi.md#convertDocumentGetFileTypeIconAdvanced) | **POST** /convert/autodetect/get-icon-advanced | Get PNG icon byte array for the file extension
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentGetFileTypeIconAdvanced**](docs/ConvertDocumentApi.md#convertDocumentGetFileTypeIconAdvanced) | **POST** /convert/autodetect/get-icon/advanced | Get PNG icon byte array for the file extension
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentHtmlToPdf**](docs/ConvertDocumentApi.md#convertDocumentHtmlToPdf) | **POST** /convert/html/to/pdf | Convert HTML document file to PDF Document
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentHtmlToPng**](docs/ConvertDocumentApi.md#convertDocumentHtmlToPng) | **POST** /convert/html/to/png | Convert HTML document file to PNG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentHtmlToTxt**](docs/ConvertDocumentApi.md#convertDocumentHtmlToTxt) | **POST** /convert/html/to/txt | HTML Document file to Text (txt)

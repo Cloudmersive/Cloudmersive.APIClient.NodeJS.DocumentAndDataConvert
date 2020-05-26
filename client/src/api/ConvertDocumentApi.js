@@ -33,7 +33,7 @@
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.4.7
+   * @version 2.4.8
    */
 
   /**
@@ -195,7 +195,7 @@
      * Callback function to receive the result of the convertDocumentAutodetectToThumbnail operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentAutodetectToThumbnailCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {'Blob'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -208,7 +208,7 @@
      * @param {Number} opts.maxHeight Optional; Maximum height of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128.
      * @param {String} opts.extension Optional; Specify the file extension of the inputFile. This will improve the response time in most cases. Also allows unsupported files without extensions to still return a corresponding generic icon.
      * @param {module:api/ConvertDocumentApi~convertDocumentAutodetectToThumbnailCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link 'Blob'}
      */
     this.convertDocumentAutodetectToThumbnail = function(inputFile, opts, callback) {
       opts = opts || {};
@@ -755,7 +755,7 @@
      * Callback function to receive the result of the convertDocumentEmlToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentEmlToPdfCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {'Blob'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -766,7 +766,7 @@
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.bodyOnly Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false.
      * @param {module:api/ConvertDocumentApi~convertDocumentEmlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link 'Blob'}
      */
     this.convertDocumentEmlToPdf = function(inputFile, opts, callback) {
       opts = opts || {};
@@ -807,7 +807,7 @@
      * Callback function to receive the result of the convertDocumentGetFileTypeIcon operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentGetFileTypeIconCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {'Blob'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -818,7 +818,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.iconSize Optional; The desired width of the icon, preserving its aspect ratio.
      * @param {module:api/ConvertDocumentApi~convertDocumentGetFileTypeIconCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link 'Blob'}
      */
     this.convertDocumentGetFileTypeIcon = function(fileExtension, opts, callback) {
       opts = opts || {};
@@ -901,7 +901,7 @@
       var returnType = GetFileTypeIconResult;
 
       return this.apiClient.callApi(
-        '/convert/autodetect/get-icon-advanced', 'POST',
+        '/convert/autodetect/get-icon/advanced', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1109,7 +1109,7 @@
      * Callback function to receive the result of the convertDocumentMsgToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentMsgToPdfCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {'Blob'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -1120,7 +1120,7 @@
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.bodyOnly Optional; If true, the HTML string will only include the body of the email. Other information such as subject will still be given as properties in the response object. Default is false.
      * @param {module:api/ConvertDocumentApi~convertDocumentMsgToPdfCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link 'Blob'}
      */
     this.convertDocumentMsgToPdf = function(inputFile, opts, callback) {
       opts = opts || {};

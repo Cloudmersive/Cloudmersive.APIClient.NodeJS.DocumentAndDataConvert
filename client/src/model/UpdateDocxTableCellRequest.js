@@ -36,7 +36,7 @@
   /**
    * The UpdateDocxTableCellRequest model module.
    * @module model/UpdateDocxTableCellRequest
-   * @version 2.4.7
+   * @version 2.4.8
    */
 
   /**

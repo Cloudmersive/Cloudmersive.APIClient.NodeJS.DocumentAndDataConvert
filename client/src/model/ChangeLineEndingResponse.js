@@ -36,7 +36,7 @@
   /**
    * The ChangeLineEndingResponse model module.
    * @module model/ChangeLineEndingResponse
-   * @version 2.4.7
+   * @version 2.4.8
    */
 
   /**

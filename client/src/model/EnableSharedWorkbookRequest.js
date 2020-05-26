@@ -36,7 +36,7 @@
   /**
    * The EnableSharedWorkbookRequest model module.
    * @module model/EnableSharedWorkbookRequest
-   * @version 2.4.7
+   * @version 2.4.8
    */
 
   /**

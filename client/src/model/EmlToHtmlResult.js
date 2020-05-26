@@ -36,7 +36,7 @@
   /**
    * The EmlToHtmlResult model module.
    * @module model/EmlToHtmlResult
-   * @version 2.4.7
+   * @version 2.4.8
    */
 
   /**
@@ -47,8 +47,6 @@
    */
   var exports = function() {
     var _this = this;
-
-
 
 
 
@@ -90,17 +88,11 @@
       if (data.hasOwnProperty('Cc')) {
         obj['Cc'] = ApiClient.convertToType(data['Cc'], 'String');
       }
-      if (data.hasOwnProperty('Bcc')) {
-        obj['Bcc'] = ApiClient.convertToType(data['Bcc'], 'String');
-      }
-      if (data.hasOwnProperty('ReceivedTime')) {
-        obj['ReceivedTime'] = ApiClient.convertToType(data['ReceivedTime'], 'String');
+      if (data.hasOwnProperty('DateSent')) {
+        obj['DateSent'] = ApiClient.convertToType(data['DateSent'], 'String');
       }
       if (data.hasOwnProperty('Subject')) {
         obj['Subject'] = ApiClient.convertToType(data['Subject'], 'String');
-      }
-      if (data.hasOwnProperty('Organization')) {
-        obj['Organization'] = ApiClient.convertToType(data['Organization'], 'String');
       }
       if (data.hasOwnProperty('Attachments')) {
         obj['Attachments'] = ApiClient.convertToType(data['Attachments'], [EmlAttachment]);
@@ -140,25 +132,15 @@
    */
   exports.prototype['Cc'] = undefined;
   /**
-   * The BCC recipients of the EML file's email
-   * @member {String} Bcc
+   * The date and time that the EML file's email was sent
+   * @member {String} DateSent
    */
-  exports.prototype['Bcc'] = undefined;
-  /**
-   * The time that the EML file's email was received
-   * @member {String} ReceivedTime
-   */
-  exports.prototype['ReceivedTime'] = undefined;
+  exports.prototype['DateSent'] = undefined;
   /**
    * The subject of the EML file's email
    * @member {String} Subject
    */
   exports.prototype['Subject'] = undefined;
-  /**
-   * The Organization of the EML file's email
-   * @member {String} Organization
-   */
-  exports.prototype['Organization'] = undefined;
   /**
    * List of all attachments for the EML file
    * @member {Array.<module:model/EmlAttachment>} Attachments
