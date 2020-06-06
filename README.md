@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.4.8
+- Package version: 2.4.9
 
 
 ## Installation
@@ -233,7 +233,9 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentFinishEditing**](docs/EditDocumentApi.md#editDocumentFinishEditing) | **POST** /convert/edit/finish-editing | Finish editing document, and download result from document editing
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentPptxDeleteSlides**](docs/EditDocumentApi.md#editDocumentPptxDeleteSlides) | **POST** /convert/edit/pptx/delete-slides | Delete, remove slides from a PowerPoint PPTX presentation document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentPptxReplace**](docs/EditDocumentApi.md#editDocumentPptxReplace) | **POST** /convert/edit/pptx/replace-all | Replace string in PowerPoint PPTX presentation
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxAppendRow**](docs/EditDocumentApi.md#editDocumentXlsxAppendRow) | **POST** /convert/edit/xlsx/append-row | Append row to a Excel XLSX spreadsheet, worksheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxClearCellByIndex**](docs/EditDocumentApi.md#editDocumentXlsxClearCellByIndex) | **POST** /convert/edit/xlsx/clear-cell/by-index | Clear cell contents in an Excel XLSX spreadsheet, worksheet by index
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxClearRow**](docs/EditDocumentApi.md#editDocumentXlsxClearRow) | **POST** /convert/edit/xlsx/clear-row | Clear row from a Excel XLSX spreadsheet, worksheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxCreateBlankSpreadsheet**](docs/EditDocumentApi.md#editDocumentXlsxCreateBlankSpreadsheet) | **POST** /convert/edit/xlsx/create/blank | Create a blank Excel XLSX spreadsheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxCreateSpreadsheetFromData**](docs/EditDocumentApi.md#editDocumentXlsxCreateSpreadsheetFromData) | **POST** /convert/edit/xlsx/create/from/data | Create a new Excel XLSX spreadsheet from column and row data
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxDeleteWorksheet**](docs/EditDocumentApi.md#editDocumentXlsxDeleteWorksheet) | **POST** /convert/edit/xlsx/delete-worksheet | Delete, remove worksheet from an Excel XLSX spreadsheet document
@@ -244,9 +246,11 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetColumns**](docs/EditDocumentApi.md#editDocumentXlsxGetColumns) | **POST** /convert/edit/xlsx/get-columns | Get columns from a Excel XLSX spreadsheet, worksheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetImages**](docs/EditDocumentApi.md#editDocumentXlsxGetImages) | **POST** /convert/edit/xlsx/get-images | Get images from a Excel XLSX spreadsheet, worksheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetRowsAndCells**](docs/EditDocumentApi.md#editDocumentXlsxGetRowsAndCells) | **POST** /convert/edit/xlsx/get-rows-and-cells | Get rows and cells from a Excel XLSX spreadsheet, worksheet
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetSpecificRow**](docs/EditDocumentApi.md#editDocumentXlsxGetSpecificRow) | **POST** /convert/edit/xlsx/get-specific-row | Get a specific row from a Excel XLSX spreadsheet, worksheet by path
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetStyles**](docs/EditDocumentApi.md#editDocumentXlsxGetStyles) | **POST** /convert/edit/xlsx/get-styles | Get styles from a Excel XLSX spreadsheet, worksheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxGetWorksheets**](docs/EditDocumentApi.md#editDocumentXlsxGetWorksheets) | **POST** /convert/edit/xlsx/get-worksheets | Get worksheets from a Excel XLSX spreadsheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxInsertWorksheet**](docs/EditDocumentApi.md#editDocumentXlsxInsertWorksheet) | **POST** /convert/edit/xlsx/insert-worksheet | Insert a new worksheet into an Excel XLSX spreadsheet
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxRenameWorksheet**](docs/EditDocumentApi.md#editDocumentXlsxRenameWorksheet) | **POST** /convert/edit/xlsx/rename-worksheet | Rename a specific worksheet in a Excel XLSX spreadsheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxSetCellByIdentifier**](docs/EditDocumentApi.md#editDocumentXlsxSetCellByIdentifier) | **POST** /convert/edit/xlsx/set-cell/by-identifier | Set, update cell contents in an Excel XLSX spreadsheet, worksheet by cell identifier
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxSetCellByIndex**](docs/EditDocumentApi.md#editDocumentXlsxSetCellByIndex) | **POST** /convert/edit/xlsx/set-cell/by-index | Set, update cell contents in an Excel XLSX spreadsheet, worksheet by index
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfAddAnnotations**](docs/EditPdfApi.md#editPdfAddAnnotations) | **POST** /convert/edit/pdf/annotations/add-item | Add one or more PDF annotations, comments in the PDF document
@@ -325,6 +329,8 @@ Class | Method | HTTP request | Description
 
  - [CloudmersiveConvertApiClient.AddPdfAnnotationRequest](docs/AddPdfAnnotationRequest.md)
  - [CloudmersiveConvertApiClient.AlternateFileFormatCandidate](docs/AlternateFileFormatCandidate.md)
+ - [CloudmersiveConvertApiClient.AppendXlsxRowRequest](docs/AppendXlsxRowRequest.md)
+ - [CloudmersiveConvertApiClient.AppendXlsxRowResponse](docs/AppendXlsxRowResponse.md)
  - [CloudmersiveConvertApiClient.AutodetectDocumentValidationResult](docs/AutodetectDocumentValidationResult.md)
  - [CloudmersiveConvertApiClient.AutodetectGetInfoResult](docs/AutodetectGetInfoResult.md)
  - [CloudmersiveConvertApiClient.AutodetectToPngResult](docs/AutodetectToPngResult.md)
@@ -338,6 +344,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.ChangeLineEndingResponse](docs/ChangeLineEndingResponse.md)
  - [CloudmersiveConvertApiClient.ClearXlsxCellRequest](docs/ClearXlsxCellRequest.md)
  - [CloudmersiveConvertApiClient.ClearXlsxCellResponse](docs/ClearXlsxCellResponse.md)
+ - [CloudmersiveConvertApiClient.ClearXlsxRowRequest](docs/ClearXlsxRowRequest.md)
+ - [CloudmersiveConvertApiClient.ClearXlsxRowResponse](docs/ClearXlsxRowResponse.md)
  - [CloudmersiveConvertApiClient.ConvertedPngPage](docs/ConvertedPngPage.md)
  - [CloudmersiveConvertApiClient.CreateBlankDocxRequest](docs/CreateBlankDocxRequest.md)
  - [CloudmersiveConvertApiClient.CreateBlankDocxResponse](docs/CreateBlankDocxResponse.md)
@@ -435,6 +443,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.GetXlsxImagesResponse](docs/GetXlsxImagesResponse.md)
  - [CloudmersiveConvertApiClient.GetXlsxRowsAndCellsRequest](docs/GetXlsxRowsAndCellsRequest.md)
  - [CloudmersiveConvertApiClient.GetXlsxRowsAndCellsResponse](docs/GetXlsxRowsAndCellsResponse.md)
+ - [CloudmersiveConvertApiClient.GetXlsxSpecificRowRequest](docs/GetXlsxSpecificRowRequest.md)
+ - [CloudmersiveConvertApiClient.GetXlsxSpecificRowResponse](docs/GetXlsxSpecificRowResponse.md)
  - [CloudmersiveConvertApiClient.GetXlsxStylesRequest](docs/GetXlsxStylesRequest.md)
  - [CloudmersiveConvertApiClient.GetXlsxStylesResponse](docs/GetXlsxStylesResponse.md)
  - [CloudmersiveConvertApiClient.GetXlsxWorksheetsRequest](docs/GetXlsxWorksheetsRequest.md)
@@ -480,6 +490,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.RemoveWhitespaceFromTextRequest](docs/RemoveWhitespaceFromTextRequest.md)
  - [CloudmersiveConvertApiClient.RemoveWhitespaceFromTextResponse](docs/RemoveWhitespaceFromTextResponse.md)
  - [CloudmersiveConvertApiClient.RemoveXlsxWorksheetRequest](docs/RemoveXlsxWorksheetRequest.md)
+ - [CloudmersiveConvertApiClient.RenameXlsxWorksheetRequest](docs/RenameXlsxWorksheetRequest.md)
+ - [CloudmersiveConvertApiClient.RenameXlsxWorksheetResponse](docs/RenameXlsxWorksheetResponse.md)
  - [CloudmersiveConvertApiClient.ReplaceDocxParagraphRequest](docs/ReplaceDocxParagraphRequest.md)
  - [CloudmersiveConvertApiClient.ReplaceDocxParagraphResponse](docs/ReplaceDocxParagraphResponse.md)
  - [CloudmersiveConvertApiClient.ReplaceStringRegexRequest](docs/ReplaceStringRegexRequest.md)

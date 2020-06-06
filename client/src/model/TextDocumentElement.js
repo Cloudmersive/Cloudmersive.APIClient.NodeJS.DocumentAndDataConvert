@@ -36,7 +36,7 @@
   /**
    * The TextDocumentElement model module.
    * @module model/TextDocumentElement
-   * @version 2.4.8
+   * @version 2.4.9
    */
 
   /**

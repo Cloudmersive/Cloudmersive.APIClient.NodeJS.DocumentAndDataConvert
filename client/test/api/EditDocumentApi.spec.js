@@ -390,10 +390,30 @@
         done();
       });
     });
+    describe('editDocumentXlsxAppendRow', function() {
+      it('should call editDocumentXlsxAppendRow successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxAppendRow
+        //instance.editDocumentXlsxAppendRow(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentXlsxClearCellByIndex', function() {
       it('should call editDocumentXlsxClearCellByIndex successfully', function(done) {
         //uncomment below and update the code to test editDocumentXlsxClearCellByIndex
         //instance.editDocumentXlsxClearCellByIndex(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentXlsxClearRow', function() {
+      it('should call editDocumentXlsxClearRow successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxClearRow
+        //instance.editDocumentXlsxClearRow(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -500,6 +520,16 @@
         done();
       });
     });
+    describe('editDocumentXlsxGetSpecificRow', function() {
+      it('should call editDocumentXlsxGetSpecificRow successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxGetSpecificRow
+        //instance.editDocumentXlsxGetSpecificRow(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentXlsxGetStyles', function() {
       it('should call editDocumentXlsxGetStyles successfully', function(done) {
         //uncomment below and update the code to test editDocumentXlsxGetStyles
@@ -524,6 +554,16 @@
       it('should call editDocumentXlsxInsertWorksheet successfully', function(done) {
         //uncomment below and update the code to test editDocumentXlsxInsertWorksheet
         //instance.editDocumentXlsxInsertWorksheet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentXlsxRenameWorksheet', function() {
+      it('should call editDocumentXlsxRenameWorksheet successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxRenameWorksheet
+        //instance.editDocumentXlsxRenameWorksheet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

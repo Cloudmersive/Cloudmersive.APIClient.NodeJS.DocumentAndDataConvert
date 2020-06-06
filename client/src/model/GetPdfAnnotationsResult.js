@@ -36,7 +36,7 @@
   /**
    * The GetPdfAnnotationsResult model module.
    * @module model/GetPdfAnnotationsResult
-   * @version 2.4.8
+   * @version 2.4.9
    */
 
   /**

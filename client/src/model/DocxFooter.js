@@ -36,7 +36,7 @@
   /**
    * The DocxFooter model module.
    * @module model/DocxFooter
-   * @version 2.4.8
+   * @version 2.4.9
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The PdfMetadata model module.
    * @module model/PdfMetadata
-   * @version 2.4.8
+   * @version 2.4.9
    */
 
   /**

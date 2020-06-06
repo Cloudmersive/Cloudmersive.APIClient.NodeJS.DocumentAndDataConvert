@@ -36,7 +36,7 @@
   /**
    * The SplitPptxPresentationResult model module.
    * @module model/SplitPptxPresentationResult
-   * @version 2.4.8
+   * @version 2.4.9
    */
 
   /**
