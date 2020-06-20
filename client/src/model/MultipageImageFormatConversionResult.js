@@ -36,7 +36,7 @@
   /**
    * The MultipageImageFormatConversionResult model module.
    * @module model/MultipageImageFormatConversionResult
-   * @version 2.4.9
+   * @version 2.5.0
    */
 
   /**

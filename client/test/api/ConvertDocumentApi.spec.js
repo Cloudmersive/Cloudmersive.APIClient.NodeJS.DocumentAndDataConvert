@@ -250,6 +250,16 @@
         done();
       });
     });
+    describe('convertDocumentKeynoteToPdf', function() {
+      it('should call convertDocumentKeynoteToPdf successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentKeynoteToPdf
+        //instance.convertDocumentKeynoteToPdf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentMsgToHtml', function() {
       it('should call convertDocumentMsgToHtml successfully', function(done) {
         //uncomment below and update the code to test convertDocumentMsgToHtml
@@ -264,6 +274,46 @@
       it('should call convertDocumentMsgToPdf successfully', function(done) {
         //uncomment below and update the code to test convertDocumentMsgToPdf
         //instance.convertDocumentMsgToPdf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentOdpToPdf', function() {
+      it('should call convertDocumentOdpToPdf successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentOdpToPdf
+        //instance.convertDocumentOdpToPdf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentOdsToPdf', function() {
+      it('should call convertDocumentOdsToPdf successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentOdsToPdf
+        //instance.convertDocumentOdsToPdf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentOdtToDocx', function() {
+      it('should call convertDocumentOdtToDocx successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentOdtToDocx
+        //instance.convertDocumentOdtToDocx(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentOdtToPdf', function() {
+      it('should call convertDocumentOdtToPdf successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentOdtToPdf
+        //instance.convertDocumentOdtToPdf(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -384,6 +434,16 @@
       it('should call convertDocumentPptxToTxt successfully', function(done) {
         //uncomment below and update the code to test convertDocumentPptxToTxt
         //instance.convertDocumentPptxToTxt(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentRtfToPdf', function() {
+      it('should call convertDocumentRtfToPdf successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentRtfToPdf
+        //instance.convertDocumentRtfToPdf(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
