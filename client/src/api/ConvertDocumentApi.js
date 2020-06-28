@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AutodetectGetInfoResult', 'model/AutodetectToPngResult', 'model/AutodetectToThumbnailsResult', 'model/CsvCollection', 'model/DocxToPngResult', 'model/EmlToHtmlResult', 'model/GetFileTypeIconResult', 'model/MsgToHtmlResult', 'model/PdfToPngResult', 'model/PptxToPngResult', 'model/TextConversionResult', 'model/XlsxToPngResult'], factory);
+    define(['ApiClient', 'model/AutodetectGetInfoResult', 'model/AutodetectToJpgResult', 'model/AutodetectToPngResult', 'model/AutodetectToThumbnailsResult', 'model/CsvCollection', 'model/DocxToJpgResult', 'model/DocxToPngResult', 'model/EmlToHtmlResult', 'model/EmlToJpgResult', 'model/EmlToPngResult', 'model/GetFileTypeIconResult', 'model/KeynoteToJpgResult', 'model/KeynoteToPngResult', 'model/MsgToHtmlResult', 'model/MsgToJpgResult', 'model/MsgToPngResult', 'model/OdpToJpgResult', 'model/OdpToPngResult', 'model/OdsToJpgResult', 'model/OdsToPngResult', 'model/OdtToJpgResult', 'model/OdtToPngResult', 'model/PdfToPngResult', 'model/PptxToPngResult', 'model/RtfToJpgResult', 'model/RtfToPngResult', 'model/TextConversionResult', 'model/XlsxToPngResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AutodetectGetInfoResult'), require('../model/AutodetectToPngResult'), require('../model/AutodetectToThumbnailsResult'), require('../model/CsvCollection'), require('../model/DocxToPngResult'), require('../model/EmlToHtmlResult'), require('../model/GetFileTypeIconResult'), require('../model/MsgToHtmlResult'), require('../model/PdfToPngResult'), require('../model/PptxToPngResult'), require('../model/TextConversionResult'), require('../model/XlsxToPngResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/AutodetectGetInfoResult'), require('../model/AutodetectToJpgResult'), require('../model/AutodetectToPngResult'), require('../model/AutodetectToThumbnailsResult'), require('../model/CsvCollection'), require('../model/DocxToJpgResult'), require('../model/DocxToPngResult'), require('../model/EmlToHtmlResult'), require('../model/EmlToJpgResult'), require('../model/EmlToPngResult'), require('../model/GetFileTypeIconResult'), require('../model/KeynoteToJpgResult'), require('../model/KeynoteToPngResult'), require('../model/MsgToHtmlResult'), require('../model/MsgToJpgResult'), require('../model/MsgToPngResult'), require('../model/OdpToJpgResult'), require('../model/OdpToPngResult'), require('../model/OdsToJpgResult'), require('../model/OdsToPngResult'), require('../model/OdtToJpgResult'), require('../model/OdtToPngResult'), require('../model/PdfToPngResult'), require('../model/PptxToPngResult'), require('../model/RtfToJpgResult'), require('../model/RtfToPngResult'), require('../model/TextConversionResult'), require('../model/XlsxToPngResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectGetInfoResult, root.CloudmersiveConvertApiClient.AutodetectToPngResult, root.CloudmersiveConvertApiClient.AutodetectToThumbnailsResult, root.CloudmersiveConvertApiClient.CsvCollection, root.CloudmersiveConvertApiClient.DocxToPngResult, root.CloudmersiveConvertApiClient.EmlToHtmlResult, root.CloudmersiveConvertApiClient.GetFileTypeIconResult, root.CloudmersiveConvertApiClient.MsgToHtmlResult, root.CloudmersiveConvertApiClient.PdfToPngResult, root.CloudmersiveConvertApiClient.PptxToPngResult, root.CloudmersiveConvertApiClient.TextConversionResult, root.CloudmersiveConvertApiClient.XlsxToPngResult);
+    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectGetInfoResult, root.CloudmersiveConvertApiClient.AutodetectToJpgResult, root.CloudmersiveConvertApiClient.AutodetectToPngResult, root.CloudmersiveConvertApiClient.AutodetectToThumbnailsResult, root.CloudmersiveConvertApiClient.CsvCollection, root.CloudmersiveConvertApiClient.DocxToJpgResult, root.CloudmersiveConvertApiClient.DocxToPngResult, root.CloudmersiveConvertApiClient.EmlToHtmlResult, root.CloudmersiveConvertApiClient.EmlToJpgResult, root.CloudmersiveConvertApiClient.EmlToPngResult, root.CloudmersiveConvertApiClient.GetFileTypeIconResult, root.CloudmersiveConvertApiClient.KeynoteToJpgResult, root.CloudmersiveConvertApiClient.KeynoteToPngResult, root.CloudmersiveConvertApiClient.MsgToHtmlResult, root.CloudmersiveConvertApiClient.MsgToJpgResult, root.CloudmersiveConvertApiClient.MsgToPngResult, root.CloudmersiveConvertApiClient.OdpToJpgResult, root.CloudmersiveConvertApiClient.OdpToPngResult, root.CloudmersiveConvertApiClient.OdsToJpgResult, root.CloudmersiveConvertApiClient.OdsToPngResult, root.CloudmersiveConvertApiClient.OdtToJpgResult, root.CloudmersiveConvertApiClient.OdtToPngResult, root.CloudmersiveConvertApiClient.PdfToPngResult, root.CloudmersiveConvertApiClient.PptxToPngResult, root.CloudmersiveConvertApiClient.RtfToJpgResult, root.CloudmersiveConvertApiClient.RtfToPngResult, root.CloudmersiveConvertApiClient.TextConversionResult, root.CloudmersiveConvertApiClient.XlsxToPngResult);
   }
-}(this, function(ApiClient, AutodetectGetInfoResult, AutodetectToPngResult, AutodetectToThumbnailsResult, CsvCollection, DocxToPngResult, EmlToHtmlResult, GetFileTypeIconResult, MsgToHtmlResult, PdfToPngResult, PptxToPngResult, TextConversionResult, XlsxToPngResult) {
+}(this, function(ApiClient, AutodetectGetInfoResult, AutodetectToJpgResult, AutodetectToPngResult, AutodetectToThumbnailsResult, CsvCollection, DocxToJpgResult, DocxToPngResult, EmlToHtmlResult, EmlToJpgResult, EmlToPngResult, GetFileTypeIconResult, KeynoteToJpgResult, KeynoteToPngResult, MsgToHtmlResult, MsgToJpgResult, MsgToPngResult, OdpToJpgResult, OdpToPngResult, OdsToJpgResult, OdsToPngResult, OdtToJpgResult, OdtToPngResult, PdfToPngResult, PptxToPngResult, RtfToJpgResult, RtfToPngResult, TextConversionResult, XlsxToPngResult) {
   'use strict';
 
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.5.0
+   * @version 2.5.1
    */
 
   /**
@@ -90,6 +90,58 @@
 
       return this.apiClient.callApi(
         '/convert/autodetect/get-info', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentAutodetectToJpg operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentAutodetectToJpgCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/AutodetectToJpgResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Document to JPG/JPEG image array
+     * Automatically detect file type and convert it to an array of JPG/JPEG Images.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Customize image quality using quality header.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.quality Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75.
+     * @param {module:api/ConvertDocumentApi~convertDocumentAutodetectToJpgCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/AutodetectToJpgResult}
+     */
+    this.convertDocumentAutodetectToJpg = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentAutodetectToJpg");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'quality': opts['quality']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = AutodetectToJpgResult;
+
+      return this.apiClient.callApi(
+        '/convert/autodetect/to/jpg', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -201,7 +253,7 @@
 
     /**
      * Convert File to Thumbnail Image
-     * Automatically detect file type and convert it to a PNG thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+     * Automatically detect file type and convert it to a PNG thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats. Maximum thumbnail size is 2048x2048.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.maxWidth Optional; Maximum width of the output thumbnail - final image will be as large as possible while less than or equal to this width. Default is 128.
@@ -257,7 +309,7 @@
 
     /**
      * Convert File to Thumbnail Image Object
-     * Automatically detect file type and convert it to an array of PNG thumbnails, returned as an object. May specify the number of pages for multiple thumbnails; default is one thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats.
+     * Automatically detect file type and convert it to an array of PNG thumbnails, returned as an object. May specify the number of pages for multiple thumbnails; default is one thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats. Maximum thumbnail size is 2048x2048.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.pages Optional; Specify how many pages of the document will be converted to thumbnails. Default is 1 page.
@@ -550,6 +602,106 @@
     }
 
     /**
+     * Callback function to receive the result of the convertDocumentDocxToHtml operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentDocxToHtmlCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Word DOCX Document to HTML Document
+     * Convert Office Word Document (DOCX) to HTML Document
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentDocxToHtmlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDocumentDocxToHtml = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentDocxToHtml");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/docx/to/html', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentDocxToJpg operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentDocxToJpgCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DocxToJpgResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Word DOCX Document to JPG/JPEG image array
+     * Converts an Office Word Document (DOCX) to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.quality Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75.
+     * @param {module:api/ConvertDocumentApi~convertDocumentDocxToJpgCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DocxToJpgResult}
+     */
+    this.convertDocumentDocxToJpg = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentDocxToJpg");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'quality': opts['quality']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = DocxToJpgResult;
+
+      return this.apiClient.callApi(
+        '/convert/docx/to/jpg', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the convertDocumentDocxToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentDocxToPdfCallback
      * @param {String} error Error message, if any.
@@ -606,7 +758,7 @@
      */
 
     /**
-     * Convert DOCX document to PNG image array
+     * Convert Word DOCX Document to PNG image array
      * Converts an Office Word Document (DOCX) file to an array of PNG images, one for each page.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentDocxToPngCallback} callback The callback function, accepting three arguments: error, data, response
@@ -640,6 +792,54 @@
 
       return this.apiClient.callApi(
         '/convert/docx/to/png', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentDocxToRtf operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentDocxToRtfCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Word DOCX Document to RTF
+     * Convert an Office Word Document (DOCX) to Rich Text Format Document (RTF)
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentDocxToRtfCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDocumentDocxToRtf = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentDocxToRtf");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/docx/to/rtf', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -752,6 +952,58 @@
     }
 
     /**
+     * Callback function to receive the result of the convertDocumentEmlToJpg operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentEmlToJpgCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/EmlToJpgResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Email EML file to JPG/JPEG image array
+     * Converts an Outlook Email File (EML) to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.quality Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75.
+     * @param {module:api/ConvertDocumentApi~convertDocumentEmlToJpgCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/EmlToJpgResult}
+     */
+    this.convertDocumentEmlToJpg = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentEmlToJpg");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'quality': opts['quality']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = EmlToJpgResult;
+
+      return this.apiClient.callApi(
+        '/convert/eml/to/jpg', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the convertDocumentEmlToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentEmlToPdfCallback
      * @param {String} error Error message, if any.
@@ -798,6 +1050,54 @@
 
       return this.apiClient.callApi(
         '/convert/eml/to/pdf', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentEmlToPng operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentEmlToPngCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/EmlToPngResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Email EML file to PNG image array
+     * Converts an Outlook Email File (EML) to an array of PNG images, one for each page.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentEmlToPngCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/EmlToPngResult}
+     */
+    this.convertDocumentEmlToPng = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentEmlToPng");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = EmlToPngResult;
+
+      return this.apiClient.callApi(
+        '/convert/eml/to/png', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1052,6 +1352,58 @@
     }
 
     /**
+     * Callback function to receive the result of the convertDocumentKeynoteToJpg operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentKeynoteToJpgCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/KeynoteToJpgResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Keynote Presentation (KEY) to JPG/JPEG image array
+     * Converts a Mac Keynote Presentation (KEY) to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.quality Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75.
+     * @param {module:api/ConvertDocumentApi~convertDocumentKeynoteToJpgCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/KeynoteToJpgResult}
+     */
+    this.convertDocumentKeynoteToJpg = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentKeynoteToJpg");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'quality': opts['quality']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = KeynoteToJpgResult;
+
+      return this.apiClient.callApi(
+        '/convert/key/to/jpg', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the convertDocumentKeynoteToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentKeynoteToPdfCallback
      * @param {String} error Error message, if any.
@@ -1093,7 +1445,103 @@
       var returnType = 'Blob';
 
       return this.apiClient.callApi(
-        '/convert/keynote/to/pdf', 'POST',
+        '/convert/key/to/pdf', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentKeynoteToPng operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentKeynoteToPngCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/KeynoteToPngResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Keynote Presentation (KEY) to PNG image array
+     * Converts a Mac Keynote Presentation (KEY) to an array of PNG images, one for each page.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentKeynoteToPngCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/KeynoteToPngResult}
+     */
+    this.convertDocumentKeynoteToPng = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentKeynoteToPng");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = KeynoteToPngResult;
+
+      return this.apiClient.callApi(
+        '/convert/key/to/png', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentKeynoteToPptx operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentKeynoteToPptxCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Keynote Presentation (KEY) to PPTX
+     * Convert Mac Keynote Presentation (KEY) to PowerPoint Presentation (PPTX)
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentKeynoteToPptxCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDocumentKeynoteToPptx = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentKeynoteToPptx");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/key/to/pptx', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1154,6 +1602,58 @@
     }
 
     /**
+     * Callback function to receive the result of the convertDocumentMsgToJpg operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentMsgToJpgCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/MsgToJpgResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Email MSG file to JPG/JPEG image array
+     * Converts an Outlook Message File (MSG) to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.quality Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75.
+     * @param {module:api/ConvertDocumentApi~convertDocumentMsgToJpgCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/MsgToJpgResult}
+     */
+    this.convertDocumentMsgToJpg = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentMsgToJpg");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'quality': opts['quality']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = MsgToJpgResult;
+
+      return this.apiClient.callApi(
+        '/convert/msg/to/jpg', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the convertDocumentMsgToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentMsgToPdfCallback
      * @param {String} error Error message, if any.
@@ -1206,6 +1706,106 @@
     }
 
     /**
+     * Callback function to receive the result of the convertDocumentMsgToPng operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentMsgToPngCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/MsgToPngResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Email MSG file to PNG image array
+     * Converts an Outlook Email Message File (MSG) to an array of PNG images, one for each page.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentMsgToPngCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/MsgToPngResult}
+     */
+    this.convertDocumentMsgToPng = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentMsgToPng");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = MsgToPngResult;
+
+      return this.apiClient.callApi(
+        '/convert/msg/to/png', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentOdpToJpg operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentOdpToJpgCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/OdpToJpgResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert ODP Presentation to JPG/JPEG image array
+     * Converts an Open Document Presentation (ODP) to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.quality Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75.
+     * @param {module:api/ConvertDocumentApi~convertDocumentOdpToJpgCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/OdpToJpgResult}
+     */
+    this.convertDocumentOdpToJpg = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentOdpToJpg");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'quality': opts['quality']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = OdpToJpgResult;
+
+      return this.apiClient.callApi(
+        '/convert/odp/to/jpg', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the convertDocumentOdpToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentOdpToPdfCallback
      * @param {String} error Error message, if any.
@@ -1214,7 +1814,7 @@
      */
 
     /**
-     * Convert Office Open Document Presentation ODP to PDF
+     * Convert ODP Presentation to PDF
      * Convert Office Open Document Presentation (ODP) to standard PDF
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentOdpToPdfCallback} callback The callback function, accepting three arguments: error, data, response
@@ -1254,6 +1854,154 @@
     }
 
     /**
+     * Callback function to receive the result of the convertDocumentOdpToPng operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentOdpToPngCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/OdpToPngResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert ODP Presentation to PNG image array
+     * Converts an Office Open Document Presentation (ODP) to an array of PNG images, one for each page.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentOdpToPngCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/OdpToPngResult}
+     */
+    this.convertDocumentOdpToPng = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentOdpToPng");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = OdpToPngResult;
+
+      return this.apiClient.callApi(
+        '/convert/odp/to/png', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentOdpToPptx operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentOdpToPptxCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert ODP Presentation to PPTX
+     * Convert Office Open Document Presentation (ODP) to PowerPoint Presentation (PPTX)
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentOdpToPptxCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDocumentOdpToPptx = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentOdpToPptx");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/odp/to/pptx', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentOdsToJpg operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentOdsToJpgCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/OdsToJpgResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert ODS Spreadsheet to JPG/JPEG image array
+     * Converts an Open Document Spreadsheet (ODS) to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.quality Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75.
+     * @param {module:api/ConvertDocumentApi~convertDocumentOdsToJpgCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/OdsToJpgResult}
+     */
+    this.convertDocumentOdsToJpg = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentOdsToJpg");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'quality': opts['quality']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = OdsToJpgResult;
+
+      return this.apiClient.callApi(
+        '/convert/ods/to/jpg', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the convertDocumentOdsToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentOdsToPdfCallback
      * @param {String} error Error message, if any.
@@ -1262,7 +2010,7 @@
      */
 
     /**
-     * Convert Office Open Document Spreadsheet ODS to PDF
+     * Convert ODS Spreadsheet to PDF
      * Convert Office Open Document Spreadsheet (ODS) to standard PDF
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentOdsToPdfCallback} callback The callback function, accepting three arguments: error, data, response
@@ -1302,6 +2050,102 @@
     }
 
     /**
+     * Callback function to receive the result of the convertDocumentOdsToPng operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentOdsToPngCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/OdsToPngResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert ODS Spreadsheet to PNG image array
+     * Converts an Office Open Document Spreadsheet (ODS) to an array of PNG images, one for each page.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentOdsToPngCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/OdsToPngResult}
+     */
+    this.convertDocumentOdsToPng = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentOdsToPng");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = OdsToPngResult;
+
+      return this.apiClient.callApi(
+        '/convert/ods/to/png', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentOdsToXlsx operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentOdsToXlsxCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert ODS Spreadsheet to XLSX
+     * Convert Office Open Document Spreadsheet (ODS) to Excel Spreadsheet (XLSX)
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentOdsToXlsxCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDocumentOdsToXlsx = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentOdsToXlsx");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/ods/to/xlsx', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the convertDocumentOdtToDocx operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentOdtToDocxCallback
      * @param {String} error Error message, if any.
@@ -1310,7 +2154,7 @@
      */
 
     /**
-     * Convert Office Open Document ODT to Word DOCX
+     * Convert ODT Text File to Word DOCX
      * Convert Office Open Document Text File (ODT) to Word DOCX Document
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentOdtToDocxCallback} callback The callback function, accepting three arguments: error, data, response
@@ -1350,6 +2194,58 @@
     }
 
     /**
+     * Callback function to receive the result of the convertDocumentOdtToJpg operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentOdtToJpgCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/OdtToJpgResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert ODT Text File to JPG/JPEG image array
+     * Converts an Open Document Text File (ODT) to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.quality Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75.
+     * @param {module:api/ConvertDocumentApi~convertDocumentOdtToJpgCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/OdtToJpgResult}
+     */
+    this.convertDocumentOdtToJpg = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentOdtToJpg");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'quality': opts['quality']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = OdtToJpgResult;
+
+      return this.apiClient.callApi(
+        '/convert/odt/to/jpg', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the convertDocumentOdtToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentOdtToPdfCallback
      * @param {String} error Error message, if any.
@@ -1358,7 +2254,7 @@
      */
 
     /**
-     * Convert Office Open Document ODT to PDF
+     * Convert ODT Text File to PDF
      * Convert Office Open Document Text File (ODT) to standard PDF
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentOdtToPdfCallback} callback The callback function, accepting three arguments: error, data, response
@@ -1392,6 +2288,54 @@
 
       return this.apiClient.callApi(
         '/convert/odt/to/pdf', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentOdtToPng operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentOdtToPngCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/OdtToPngResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert ODT Text File to PNG image array
+     * Converts an Office Open Document Text File (ODT) to an array of PNG images, one for each page.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentOdtToPngCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/OdtToPngResult}
+     */
+    this.convertDocumentOdtToPng = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentOdtToPng");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = OdtToPngResult;
+
+      return this.apiClient.callApi(
+        '/convert/odt/to/png', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -2003,6 +2947,154 @@
     }
 
     /**
+     * Callback function to receive the result of the convertDocumentRtfToDocx operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentRtfToDocxCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Rich Text Format RTF to DOCX Document
+     * Convert Rich Text Format Document (RTF) to Word DOCX Document
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentRtfToDocxCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDocumentRtfToDocx = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentRtfToDocx");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/rtf/to/docx', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentRtfToHtml operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentRtfToHtmlCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Rich Text Format RTF to HTML Document
+     * Convert Rich Text Format Document (RTF) to HTML Document
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentRtfToHtmlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDocumentRtfToHtml = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentRtfToHtml");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/rtf/to/html', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentRtfToJpg operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentRtfToJpgCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/RtfToJpgResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Rich Text Format RTF to JPG/JPEG image array
+     * Converts a Rich Text Format Document (RTF) to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.quality Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75.
+     * @param {module:api/ConvertDocumentApi~convertDocumentRtfToJpgCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/RtfToJpgResult}
+     */
+    this.convertDocumentRtfToJpg = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentRtfToJpg");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'quality': opts['quality']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = RtfToJpgResult;
+
+      return this.apiClient.callApi(
+        '/convert/rtf/to/jpg', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the convertDocumentRtfToPdf operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentRtfToPdfCallback
      * @param {String} error Error message, if any.
@@ -2045,6 +3137,54 @@
 
       return this.apiClient.callApi(
         '/convert/rtf/to/pdf', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentRtfToPng operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentRtfToPngCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/RtfToPngResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Rich Text Format RTF to PNG image array
+     * Converts a Rich Text Format Document (RTF) to an array of PNG images, one for each page.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentRtfToPngCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/RtfToPngResult}
+     */
+    this.convertDocumentRtfToPng = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentRtfToPng");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = RtfToPngResult;
+
+      return this.apiClient.callApi(
+        '/convert/rtf/to/png', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -36,7 +36,7 @@
   /**
    * The DocxStyle model module.
    * @module model/DocxStyle
-   * @version 2.5.0
+   * @version 2.5.1
    */
 
   /**

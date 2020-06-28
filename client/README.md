@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.5.0
+- Package version: 2.5.1
 
 
 ## Installation
@@ -144,6 +144,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlToJson**](docs/ConvertDataApi.md#convertDataXmlToJson) | **POST** /convert/xml/to/json | Convert XML to JSON conversion
 *CloudmersiveConvertApiClient.ConvertDataApi* | [**convertDataXmlTransformWithXsltToXml**](docs/ConvertDataApi.md#convertDataXmlTransformWithXsltToXml) | **POST** /convert/xml/transform/xslt/to/xml | Transform XML document file with XSLT into a new XML document
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectGetInfo**](docs/ConvertDocumentApi.md#convertDocumentAutodetectGetInfo) | **POST** /convert/autodetect/get-info | Get document type information
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectToJpg**](docs/ConvertDocumentApi.md#convertDocumentAutodetectToJpg) | **POST** /convert/autodetect/to/jpg | Convert Document to JPG/JPEG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectToPdf**](docs/ConvertDocumentApi.md#convertDocumentAutodetectToPdf) | **POST** /convert/autodetect/to/pdf | Convert Document to PDF
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectToPngArray**](docs/ConvertDocumentApi.md#convertDocumentAutodetectToPngArray) | **POST** /convert/autodetect/to/png | Convert Document to PNG array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectToThumbnail**](docs/ConvertDocumentApi.md#convertDocumentAutodetectToThumbnail) | **POST** /convert/autodetect/to/thumbnail | Convert File to Thumbnail Image
@@ -153,23 +154,41 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentDocToDocx**](docs/ConvertDocumentApi.md#convertDocumentDocToDocx) | **POST** /convert/doc/to/docx | Convert Word DOC (97-03) Document to DOCX
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentDocToPdf**](docs/ConvertDocumentApi.md#convertDocumentDocToPdf) | **POST** /convert/doc/to/pdf | Convert Word DOC (97-03) Document to PDF
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentDocToTxt**](docs/ConvertDocumentApi.md#convertDocumentDocToTxt) | **POST** /convert/doc/to/txt | Convert Word DOC (97-03) Document to Text (txt)
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentDocxToHtml**](docs/ConvertDocumentApi.md#convertDocumentDocxToHtml) | **POST** /convert/docx/to/html | Convert Word DOCX Document to HTML Document
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentDocxToJpg**](docs/ConvertDocumentApi.md#convertDocumentDocxToJpg) | **POST** /convert/docx/to/jpg | Convert Word DOCX Document to JPG/JPEG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentDocxToPdf**](docs/ConvertDocumentApi.md#convertDocumentDocxToPdf) | **POST** /convert/docx/to/pdf | Convert Word DOCX Document to PDF
-*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentDocxToPng**](docs/ConvertDocumentApi.md#convertDocumentDocxToPng) | **POST** /convert/docx/to/png | Convert DOCX document to PNG image array
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentDocxToPng**](docs/ConvertDocumentApi.md#convertDocumentDocxToPng) | **POST** /convert/docx/to/png | Convert Word DOCX Document to PNG image array
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentDocxToRtf**](docs/ConvertDocumentApi.md#convertDocumentDocxToRtf) | **POST** /convert/docx/to/rtf | Convert Word DOCX Document to RTF
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentDocxToTxt**](docs/ConvertDocumentApi.md#convertDocumentDocxToTxt) | **POST** /convert/docx/to/txt | Convert Word DOCX Document to Text (txt)
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentEmlToHtml**](docs/ConvertDocumentApi.md#convertDocumentEmlToHtml) | **POST** /convert/eml/to/html | Convert Email EML file to HTML string
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentEmlToJpg**](docs/ConvertDocumentApi.md#convertDocumentEmlToJpg) | **POST** /convert/eml/to/jpg | Convert Email EML file to JPG/JPEG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentEmlToPdf**](docs/ConvertDocumentApi.md#convertDocumentEmlToPdf) | **POST** /convert/eml/to/pdf | Convert Email EML file to PDF document
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentEmlToPng**](docs/ConvertDocumentApi.md#convertDocumentEmlToPng) | **POST** /convert/eml/to/png | Convert Email EML file to PNG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentGetFileTypeIcon**](docs/ConvertDocumentApi.md#convertDocumentGetFileTypeIcon) | **POST** /convert/autodetect/get-icon | Get PNG icon file for the file extension
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentGetFileTypeIconAdvanced**](docs/ConvertDocumentApi.md#convertDocumentGetFileTypeIconAdvanced) | **POST** /convert/autodetect/get-icon/advanced | Get PNG icon byte array for the file extension
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentHtmlToPdf**](docs/ConvertDocumentApi.md#convertDocumentHtmlToPdf) | **POST** /convert/html/to/pdf | Convert HTML document file to PDF Document
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentHtmlToPng**](docs/ConvertDocumentApi.md#convertDocumentHtmlToPng) | **POST** /convert/html/to/png | Convert HTML document file to PNG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentHtmlToTxt**](docs/ConvertDocumentApi.md#convertDocumentHtmlToTxt) | **POST** /convert/html/to/txt | HTML Document file to Text (txt)
-*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentKeynoteToPdf**](docs/ConvertDocumentApi.md#convertDocumentKeynoteToPdf) | **POST** /convert/keynote/to/pdf | Convert Keynote Presentation (KEY) to PDF
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentKeynoteToJpg**](docs/ConvertDocumentApi.md#convertDocumentKeynoteToJpg) | **POST** /convert/key/to/jpg | Convert Keynote Presentation (KEY) to JPG/JPEG image array
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentKeynoteToPdf**](docs/ConvertDocumentApi.md#convertDocumentKeynoteToPdf) | **POST** /convert/key/to/pdf | Convert Keynote Presentation (KEY) to PDF
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentKeynoteToPng**](docs/ConvertDocumentApi.md#convertDocumentKeynoteToPng) | **POST** /convert/key/to/png | Convert Keynote Presentation (KEY) to PNG image array
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentKeynoteToPptx**](docs/ConvertDocumentApi.md#convertDocumentKeynoteToPptx) | **POST** /convert/key/to/pptx | Convert Keynote Presentation (KEY) to PPTX
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentMsgToHtml**](docs/ConvertDocumentApi.md#convertDocumentMsgToHtml) | **POST** /convert/msg/to/html | Convert Email MSG file to HTML string
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentMsgToJpg**](docs/ConvertDocumentApi.md#convertDocumentMsgToJpg) | **POST** /convert/msg/to/jpg | Convert Email MSG file to JPG/JPEG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentMsgToPdf**](docs/ConvertDocumentApi.md#convertDocumentMsgToPdf) | **POST** /convert/msg/to/pdf | Convert Email MSG file to PDF document
-*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdpToPdf**](docs/ConvertDocumentApi.md#convertDocumentOdpToPdf) | **POST** /convert/odp/to/pdf | Convert Office Open Document Presentation ODP to PDF
-*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdsToPdf**](docs/ConvertDocumentApi.md#convertDocumentOdsToPdf) | **POST** /convert/ods/to/pdf | Convert Office Open Document Spreadsheet ODS to PDF
-*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdtToDocx**](docs/ConvertDocumentApi.md#convertDocumentOdtToDocx) | **POST** /convert/odt/to/docx | Convert Office Open Document ODT to Word DOCX
-*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdtToPdf**](docs/ConvertDocumentApi.md#convertDocumentOdtToPdf) | **POST** /convert/odt/to/pdf | Convert Office Open Document ODT to PDF
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentMsgToPng**](docs/ConvertDocumentApi.md#convertDocumentMsgToPng) | **POST** /convert/msg/to/png | Convert Email MSG file to PNG image array
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdpToJpg**](docs/ConvertDocumentApi.md#convertDocumentOdpToJpg) | **POST** /convert/odp/to/jpg | Convert ODP Presentation to JPG/JPEG image array
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdpToPdf**](docs/ConvertDocumentApi.md#convertDocumentOdpToPdf) | **POST** /convert/odp/to/pdf | Convert ODP Presentation to PDF
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdpToPng**](docs/ConvertDocumentApi.md#convertDocumentOdpToPng) | **POST** /convert/odp/to/png | Convert ODP Presentation to PNG image array
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdpToPptx**](docs/ConvertDocumentApi.md#convertDocumentOdpToPptx) | **POST** /convert/odp/to/pptx | Convert ODP Presentation to PPTX
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdsToJpg**](docs/ConvertDocumentApi.md#convertDocumentOdsToJpg) | **POST** /convert/ods/to/jpg | Convert ODS Spreadsheet to JPG/JPEG image array
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdsToPdf**](docs/ConvertDocumentApi.md#convertDocumentOdsToPdf) | **POST** /convert/ods/to/pdf | Convert ODS Spreadsheet to PDF
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdsToPng**](docs/ConvertDocumentApi.md#convertDocumentOdsToPng) | **POST** /convert/ods/to/png | Convert ODS Spreadsheet to PNG image array
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdsToXlsx**](docs/ConvertDocumentApi.md#convertDocumentOdsToXlsx) | **POST** /convert/ods/to/xlsx | Convert ODS Spreadsheet to XLSX
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdtToDocx**](docs/ConvertDocumentApi.md#convertDocumentOdtToDocx) | **POST** /convert/odt/to/docx | Convert ODT Text File to Word DOCX
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdtToJpg**](docs/ConvertDocumentApi.md#convertDocumentOdtToJpg) | **POST** /convert/odt/to/jpg | Convert ODT Text File to JPG/JPEG image array
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdtToPdf**](docs/ConvertDocumentApi.md#convertDocumentOdtToPdf) | **POST** /convert/odt/to/pdf | Convert ODT Text File to PDF
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdtToPng**](docs/ConvertDocumentApi.md#convertDocumentOdtToPng) | **POST** /convert/odt/to/png | Convert ODT Text File to PNG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToDocx**](docs/ConvertDocumentApi.md#convertDocumentPdfToDocx) | **POST** /convert/pdf/to/docx | Convert PDF to Word DOCX Document
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToDocxRasterize**](docs/ConvertDocumentApi.md#convertDocumentPdfToDocxRasterize) | **POST** /convert/pdf/to/docx/rasterize | Convert PDF to Word DOCX Document based on rasterized version of the PDF
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToPngArray**](docs/ConvertDocumentApi.md#convertDocumentPdfToPngArray) | **POST** /convert/pdf/to/png | Convert PDF to PNG Image Array
@@ -182,7 +201,11 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPptxToPdf**](docs/ConvertDocumentApi.md#convertDocumentPptxToPdf) | **POST** /convert/pptx/to/pdf | Convert PowerPoint PPTX Presentation to PDF
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPptxToPng**](docs/ConvertDocumentApi.md#convertDocumentPptxToPng) | **POST** /convert/pptx/to/png | Convert PowerPoint PPTX to PNG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPptxToTxt**](docs/ConvertDocumentApi.md#convertDocumentPptxToTxt) | **POST** /convert/pptx/to/txt | Convert PowerPoint PPTX Presentation to Text (txt)
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentRtfToDocx**](docs/ConvertDocumentApi.md#convertDocumentRtfToDocx) | **POST** /convert/rtf/to/docx | Convert Rich Text Format RTF to DOCX Document
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentRtfToHtml**](docs/ConvertDocumentApi.md#convertDocumentRtfToHtml) | **POST** /convert/rtf/to/html | Convert Rich Text Format RTF to HTML Document
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentRtfToJpg**](docs/ConvertDocumentApi.md#convertDocumentRtfToJpg) | **POST** /convert/rtf/to/jpg | Convert Rich Text Format RTF to JPG/JPEG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentRtfToPdf**](docs/ConvertDocumentApi.md#convertDocumentRtfToPdf) | **POST** /convert/rtf/to/pdf | Convert Rich Text Format RTF to PDF
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentRtfToPng**](docs/ConvertDocumentApi.md#convertDocumentRtfToPng) | **POST** /convert/rtf/to/png | Convert Rich Text Format RTF to PNG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentXlsToCsv**](docs/ConvertDocumentApi.md#convertDocumentXlsToCsv) | **POST** /convert/xls/to/csv | Convert Excel XLS (97-03) Spreadsheet to CSV
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentXlsToPdf**](docs/ConvertDocumentApi.md#convertDocumentXlsToPdf) | **POST** /convert/xls/to/pdf | Convert Excel XLS (97-03) Spreadsheet to PDF
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentXlsToXlsx**](docs/ConvertDocumentApi.md#convertDocumentXlsToXlsx) | **POST** /convert/xls/to/xlsx | Convert Excel XLS (97-03) Spreadsheet to XLSX
@@ -339,6 +362,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.AppendXlsxRowResponse](docs/AppendXlsxRowResponse.md)
  - [CloudmersiveConvertApiClient.AutodetectDocumentValidationResult](docs/AutodetectDocumentValidationResult.md)
  - [CloudmersiveConvertApiClient.AutodetectGetInfoResult](docs/AutodetectGetInfoResult.md)
+ - [CloudmersiveConvertApiClient.AutodetectToJpgResult](docs/AutodetectToJpgResult.md)
  - [CloudmersiveConvertApiClient.AutodetectToPngResult](docs/AutodetectToPngResult.md)
  - [CloudmersiveConvertApiClient.AutodetectToThumbnailsResult](docs/AutodetectToThumbnailsResult.md)
  - [CloudmersiveConvertApiClient.Base64DecodeRequest](docs/Base64DecodeRequest.md)
@@ -352,6 +376,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.ClearXlsxCellResponse](docs/ClearXlsxCellResponse.md)
  - [CloudmersiveConvertApiClient.ClearXlsxRowRequest](docs/ClearXlsxRowRequest.md)
  - [CloudmersiveConvertApiClient.ClearXlsxRowResponse](docs/ClearXlsxRowResponse.md)
+ - [CloudmersiveConvertApiClient.ConvertedJpgPage](docs/ConvertedJpgPage.md)
  - [CloudmersiveConvertApiClient.ConvertedPngPage](docs/ConvertedPngPage.md)
  - [CloudmersiveConvertApiClient.CreateBlankDocxRequest](docs/CreateBlankDocxRequest.md)
  - [CloudmersiveConvertApiClient.CreateBlankDocxResponse](docs/CreateBlankDocxResponse.md)
@@ -398,10 +423,13 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.DocxTemplateApplicationRequest](docs/DocxTemplateApplicationRequest.md)
  - [CloudmersiveConvertApiClient.DocxTemplateOperation](docs/DocxTemplateOperation.md)
  - [CloudmersiveConvertApiClient.DocxText](docs/DocxText.md)
+ - [CloudmersiveConvertApiClient.DocxToJpgResult](docs/DocxToJpgResult.md)
  - [CloudmersiveConvertApiClient.DocxToPngResult](docs/DocxToPngResult.md)
  - [CloudmersiveConvertApiClient.DocxTopLevelComment](docs/DocxTopLevelComment.md)
  - [CloudmersiveConvertApiClient.EmlAttachment](docs/EmlAttachment.md)
  - [CloudmersiveConvertApiClient.EmlToHtmlResult](docs/EmlToHtmlResult.md)
+ - [CloudmersiveConvertApiClient.EmlToJpgResult](docs/EmlToJpgResult.md)
+ - [CloudmersiveConvertApiClient.EmlToPngResult](docs/EmlToPngResult.md)
  - [CloudmersiveConvertApiClient.EnableSharedWorkbookRequest](docs/EnableSharedWorkbookRequest.md)
  - [CloudmersiveConvertApiClient.EnableSharedWorkbookResponse](docs/EnableSharedWorkbookResponse.md)
  - [CloudmersiveConvertApiClient.ExifValue](docs/ExifValue.md)
@@ -473,9 +501,19 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.InsertDocxTablesResponse](docs/InsertDocxTablesResponse.md)
  - [CloudmersiveConvertApiClient.InsertXlsxWorksheetRequest](docs/InsertXlsxWorksheetRequest.md)
  - [CloudmersiveConvertApiClient.InsertXlsxWorksheetResponse](docs/InsertXlsxWorksheetResponse.md)
+ - [CloudmersiveConvertApiClient.KeynoteToJpgResult](docs/KeynoteToJpgResult.md)
+ - [CloudmersiveConvertApiClient.KeynoteToPngResult](docs/KeynoteToPngResult.md)
  - [CloudmersiveConvertApiClient.MsgAttachment](docs/MsgAttachment.md)
  - [CloudmersiveConvertApiClient.MsgToHtmlResult](docs/MsgToHtmlResult.md)
+ - [CloudmersiveConvertApiClient.MsgToJpgResult](docs/MsgToJpgResult.md)
+ - [CloudmersiveConvertApiClient.MsgToPngResult](docs/MsgToPngResult.md)
  - [CloudmersiveConvertApiClient.MultipageImageFormatConversionResult](docs/MultipageImageFormatConversionResult.md)
+ - [CloudmersiveConvertApiClient.OdpToJpgResult](docs/OdpToJpgResult.md)
+ - [CloudmersiveConvertApiClient.OdpToPngResult](docs/OdpToPngResult.md)
+ - [CloudmersiveConvertApiClient.OdsToJpgResult](docs/OdsToJpgResult.md)
+ - [CloudmersiveConvertApiClient.OdsToPngResult](docs/OdsToPngResult.md)
+ - [CloudmersiveConvertApiClient.OdtToJpgResult](docs/OdtToJpgResult.md)
+ - [CloudmersiveConvertApiClient.OdtToPngResult](docs/OdtToPngResult.md)
  - [CloudmersiveConvertApiClient.PageConversionResult](docs/PageConversionResult.md)
  - [CloudmersiveConvertApiClient.PdfAnnotation](docs/PdfAnnotation.md)
  - [CloudmersiveConvertApiClient.PdfDocument](docs/PdfDocument.md)
@@ -505,6 +543,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.ReplaceStringRequest](docs/ReplaceStringRequest.md)
  - [CloudmersiveConvertApiClient.ReplaceStringSimpleRequest](docs/ReplaceStringSimpleRequest.md)
  - [CloudmersiveConvertApiClient.ReplaceStringSimpleResponse](docs/ReplaceStringSimpleResponse.md)
+ - [CloudmersiveConvertApiClient.RtfToJpgResult](docs/RtfToJpgResult.md)
+ - [CloudmersiveConvertApiClient.RtfToPngResult](docs/RtfToPngResult.md)
  - [CloudmersiveConvertApiClient.ScreenshotRequest](docs/ScreenshotRequest.md)
  - [CloudmersiveConvertApiClient.SetFormFieldValue](docs/SetFormFieldValue.md)
  - [CloudmersiveConvertApiClient.SetPdfFormFieldsRequest](docs/SetPdfFormFieldsRequest.md)
