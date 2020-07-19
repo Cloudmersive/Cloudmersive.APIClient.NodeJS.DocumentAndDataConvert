@@ -36,7 +36,7 @@
   /**
    * The SetPdfMetadataRequest model module.
    * @module model/SetPdfMetadataRequest
-   * @version 2.5.1
+   * @version 2.5.2
    */
 
   /**

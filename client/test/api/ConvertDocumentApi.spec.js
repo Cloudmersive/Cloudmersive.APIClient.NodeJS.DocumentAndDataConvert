@@ -530,6 +530,16 @@
         done();
       });
     });
+    describe('convertDocumentPdfToJpg', function() {
+      it('should call convertDocumentPdfToJpg successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentPdfToJpg
+        //instance.convertDocumentPdfToJpg(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentPdfToPngArray', function() {
       it('should call convertDocumentPdfToPngArray successfully', function(done) {
         //uncomment below and update the code to test convertDocumentPdfToPngArray

@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.5.1
+- Package version: 2.5.2
 
 
 ## Installation
@@ -191,6 +191,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentOdtToPng**](docs/ConvertDocumentApi.md#convertDocumentOdtToPng) | **POST** /convert/odt/to/png | Convert ODT Text File to PNG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToDocx**](docs/ConvertDocumentApi.md#convertDocumentPdfToDocx) | **POST** /convert/pdf/to/docx | Convert PDF to Word DOCX Document
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToDocxRasterize**](docs/ConvertDocumentApi.md#convertDocumentPdfToDocxRasterize) | **POST** /convert/pdf/to/docx/rasterize | Convert PDF to Word DOCX Document based on rasterized version of the PDF
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToJpg**](docs/ConvertDocumentApi.md#convertDocumentPdfToJpg) | **POST** /convert/pdf/to/jpg | Convert PDF to JPG/JPEG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToPngArray**](docs/ConvertDocumentApi.md#convertDocumentPdfToPngArray) | **POST** /convert/pdf/to/png | Convert PDF to PNG Image Array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToPngSingle**](docs/ConvertDocumentApi.md#convertDocumentPdfToPngSingle) | **POST** /convert/pdf/to/png/merge-single | Convert PDF to Single PNG image
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToPptx**](docs/ConvertDocumentApi.md#convertDocumentPdfToPptx) | **POST** /convert/pdf/to/pptx | Convert PDF to PowerPoint PPTX Presentation
@@ -522,6 +523,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.PdfMetadata](docs/PdfMetadata.md)
  - [CloudmersiveConvertApiClient.PdfPageText](docs/PdfPageText.md)
  - [CloudmersiveConvertApiClient.PdfTextByPageResult](docs/PdfTextByPageResult.md)
+ - [CloudmersiveConvertApiClient.PdfToJpgResult](docs/PdfToJpgResult.md)
  - [CloudmersiveConvertApiClient.PdfToPngResult](docs/PdfToPngResult.md)
  - [CloudmersiveConvertApiClient.PptxToPngResult](docs/PptxToPngResult.md)
  - [CloudmersiveConvertApiClient.PresentationResult](docs/PresentationResult.md)

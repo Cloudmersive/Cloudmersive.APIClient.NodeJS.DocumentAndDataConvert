@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AutodetectGetInfoResult', 'model/AutodetectToJpgResult', 'model/AutodetectToPngResult', 'model/AutodetectToThumbnailsResult', 'model/CsvCollection', 'model/DocxToJpgResult', 'model/DocxToPngResult', 'model/EmlToHtmlResult', 'model/EmlToJpgResult', 'model/EmlToPngResult', 'model/GetFileTypeIconResult', 'model/KeynoteToJpgResult', 'model/KeynoteToPngResult', 'model/MsgToHtmlResult', 'model/MsgToJpgResult', 'model/MsgToPngResult', 'model/OdpToJpgResult', 'model/OdpToPngResult', 'model/OdsToJpgResult', 'model/OdsToPngResult', 'model/OdtToJpgResult', 'model/OdtToPngResult', 'model/PdfToPngResult', 'model/PptxToPngResult', 'model/RtfToJpgResult', 'model/RtfToPngResult', 'model/TextConversionResult', 'model/XlsxToPngResult'], factory);
+    define(['ApiClient', 'model/AutodetectGetInfoResult', 'model/AutodetectToJpgResult', 'model/AutodetectToPngResult', 'model/AutodetectToThumbnailsResult', 'model/CsvCollection', 'model/DocxToJpgResult', 'model/DocxToPngResult', 'model/EmlToHtmlResult', 'model/EmlToJpgResult', 'model/EmlToPngResult', 'model/GetFileTypeIconResult', 'model/KeynoteToJpgResult', 'model/KeynoteToPngResult', 'model/MsgToHtmlResult', 'model/MsgToJpgResult', 'model/MsgToPngResult', 'model/OdpToJpgResult', 'model/OdpToPngResult', 'model/OdsToJpgResult', 'model/OdsToPngResult', 'model/OdtToJpgResult', 'model/OdtToPngResult', 'model/PdfToJpgResult', 'model/PdfToPngResult', 'model/PptxToPngResult', 'model/RtfToJpgResult', 'model/RtfToPngResult', 'model/TextConversionResult', 'model/XlsxToPngResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AutodetectGetInfoResult'), require('../model/AutodetectToJpgResult'), require('../model/AutodetectToPngResult'), require('../model/AutodetectToThumbnailsResult'), require('../model/CsvCollection'), require('../model/DocxToJpgResult'), require('../model/DocxToPngResult'), require('../model/EmlToHtmlResult'), require('../model/EmlToJpgResult'), require('../model/EmlToPngResult'), require('../model/GetFileTypeIconResult'), require('../model/KeynoteToJpgResult'), require('../model/KeynoteToPngResult'), require('../model/MsgToHtmlResult'), require('../model/MsgToJpgResult'), require('../model/MsgToPngResult'), require('../model/OdpToJpgResult'), require('../model/OdpToPngResult'), require('../model/OdsToJpgResult'), require('../model/OdsToPngResult'), require('../model/OdtToJpgResult'), require('../model/OdtToPngResult'), require('../model/PdfToPngResult'), require('../model/PptxToPngResult'), require('../model/RtfToJpgResult'), require('../model/RtfToPngResult'), require('../model/TextConversionResult'), require('../model/XlsxToPngResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/AutodetectGetInfoResult'), require('../model/AutodetectToJpgResult'), require('../model/AutodetectToPngResult'), require('../model/AutodetectToThumbnailsResult'), require('../model/CsvCollection'), require('../model/DocxToJpgResult'), require('../model/DocxToPngResult'), require('../model/EmlToHtmlResult'), require('../model/EmlToJpgResult'), require('../model/EmlToPngResult'), require('../model/GetFileTypeIconResult'), require('../model/KeynoteToJpgResult'), require('../model/KeynoteToPngResult'), require('../model/MsgToHtmlResult'), require('../model/MsgToJpgResult'), require('../model/MsgToPngResult'), require('../model/OdpToJpgResult'), require('../model/OdpToPngResult'), require('../model/OdsToJpgResult'), require('../model/OdsToPngResult'), require('../model/OdtToJpgResult'), require('../model/OdtToPngResult'), require('../model/PdfToJpgResult'), require('../model/PdfToPngResult'), require('../model/PptxToPngResult'), require('../model/RtfToJpgResult'), require('../model/RtfToPngResult'), require('../model/TextConversionResult'), require('../model/XlsxToPngResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectGetInfoResult, root.CloudmersiveConvertApiClient.AutodetectToJpgResult, root.CloudmersiveConvertApiClient.AutodetectToPngResult, root.CloudmersiveConvertApiClient.AutodetectToThumbnailsResult, root.CloudmersiveConvertApiClient.CsvCollection, root.CloudmersiveConvertApiClient.DocxToJpgResult, root.CloudmersiveConvertApiClient.DocxToPngResult, root.CloudmersiveConvertApiClient.EmlToHtmlResult, root.CloudmersiveConvertApiClient.EmlToJpgResult, root.CloudmersiveConvertApiClient.EmlToPngResult, root.CloudmersiveConvertApiClient.GetFileTypeIconResult, root.CloudmersiveConvertApiClient.KeynoteToJpgResult, root.CloudmersiveConvertApiClient.KeynoteToPngResult, root.CloudmersiveConvertApiClient.MsgToHtmlResult, root.CloudmersiveConvertApiClient.MsgToJpgResult, root.CloudmersiveConvertApiClient.MsgToPngResult, root.CloudmersiveConvertApiClient.OdpToJpgResult, root.CloudmersiveConvertApiClient.OdpToPngResult, root.CloudmersiveConvertApiClient.OdsToJpgResult, root.CloudmersiveConvertApiClient.OdsToPngResult, root.CloudmersiveConvertApiClient.OdtToJpgResult, root.CloudmersiveConvertApiClient.OdtToPngResult, root.CloudmersiveConvertApiClient.PdfToPngResult, root.CloudmersiveConvertApiClient.PptxToPngResult, root.CloudmersiveConvertApiClient.RtfToJpgResult, root.CloudmersiveConvertApiClient.RtfToPngResult, root.CloudmersiveConvertApiClient.TextConversionResult, root.CloudmersiveConvertApiClient.XlsxToPngResult);
+    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectGetInfoResult, root.CloudmersiveConvertApiClient.AutodetectToJpgResult, root.CloudmersiveConvertApiClient.AutodetectToPngResult, root.CloudmersiveConvertApiClient.AutodetectToThumbnailsResult, root.CloudmersiveConvertApiClient.CsvCollection, root.CloudmersiveConvertApiClient.DocxToJpgResult, root.CloudmersiveConvertApiClient.DocxToPngResult, root.CloudmersiveConvertApiClient.EmlToHtmlResult, root.CloudmersiveConvertApiClient.EmlToJpgResult, root.CloudmersiveConvertApiClient.EmlToPngResult, root.CloudmersiveConvertApiClient.GetFileTypeIconResult, root.CloudmersiveConvertApiClient.KeynoteToJpgResult, root.CloudmersiveConvertApiClient.KeynoteToPngResult, root.CloudmersiveConvertApiClient.MsgToHtmlResult, root.CloudmersiveConvertApiClient.MsgToJpgResult, root.CloudmersiveConvertApiClient.MsgToPngResult, root.CloudmersiveConvertApiClient.OdpToJpgResult, root.CloudmersiveConvertApiClient.OdpToPngResult, root.CloudmersiveConvertApiClient.OdsToJpgResult, root.CloudmersiveConvertApiClient.OdsToPngResult, root.CloudmersiveConvertApiClient.OdtToJpgResult, root.CloudmersiveConvertApiClient.OdtToPngResult, root.CloudmersiveConvertApiClient.PdfToJpgResult, root.CloudmersiveConvertApiClient.PdfToPngResult, root.CloudmersiveConvertApiClient.PptxToPngResult, root.CloudmersiveConvertApiClient.RtfToJpgResult, root.CloudmersiveConvertApiClient.RtfToPngResult, root.CloudmersiveConvertApiClient.TextConversionResult, root.CloudmersiveConvertApiClient.XlsxToPngResult);
   }
-}(this, function(ApiClient, AutodetectGetInfoResult, AutodetectToJpgResult, AutodetectToPngResult, AutodetectToThumbnailsResult, CsvCollection, DocxToJpgResult, DocxToPngResult, EmlToHtmlResult, EmlToJpgResult, EmlToPngResult, GetFileTypeIconResult, KeynoteToJpgResult, KeynoteToPngResult, MsgToHtmlResult, MsgToJpgResult, MsgToPngResult, OdpToJpgResult, OdpToPngResult, OdsToJpgResult, OdsToPngResult, OdtToJpgResult, OdtToPngResult, PdfToPngResult, PptxToPngResult, RtfToJpgResult, RtfToPngResult, TextConversionResult, XlsxToPngResult) {
+}(this, function(ApiClient, AutodetectGetInfoResult, AutodetectToJpgResult, AutodetectToPngResult, AutodetectToThumbnailsResult, CsvCollection, DocxToJpgResult, DocxToPngResult, EmlToHtmlResult, EmlToJpgResult, EmlToPngResult, GetFileTypeIconResult, KeynoteToJpgResult, KeynoteToPngResult, MsgToHtmlResult, MsgToJpgResult, MsgToPngResult, OdpToJpgResult, OdpToPngResult, OdsToJpgResult, OdsToPngResult, OdtToJpgResult, OdtToPngResult, PdfToJpgResult, PdfToPngResult, PptxToPngResult, RtfToJpgResult, RtfToPngResult, TextConversionResult, XlsxToPngResult) {
   'use strict';
 
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.5.1
+   * @version 2.5.2
    */
 
   /**
@@ -2432,6 +2432,58 @@
 
       return this.apiClient.callApi(
         '/convert/pdf/to/docx/rasterize', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentPdfToJpg operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentPdfToJpgCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PdfToJpgResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert PDF to JPG/JPEG image array
+     * Converts a PDF Document to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.quality Optional; Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75. Default value is 75.
+     * @param {module:api/ConvertDocumentApi~convertDocumentPdfToJpgCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/PdfToJpgResult}
+     */
+    this.convertDocumentPdfToJpg = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentPdfToJpg");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'quality': opts['quality']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = PdfToJpgResult;
+
+      return this.apiClient.callApi(
+        '/convert/pdf/to/jpg', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

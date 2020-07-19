@@ -35,7 +35,7 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.ConvertWebApi();
 
-var inputRequest = new CloudmersiveConvertApiClient.HtmlToOfficeRequest(); // HtmlToOfficeRequest | HTL input to convert to DOCX
+var inputRequest = new CloudmersiveConvertApiClient.HtmlToOfficeRequest(); // HtmlToOfficeRequest | HTML input to convert to DOCX
 
 
 var callback = function(error, data, response) {
@@ -52,7 +52,7 @@ apiInstance.convertWebHtmlToDocx(inputRequest, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inputRequest** | [**HtmlToOfficeRequest**](HtmlToOfficeRequest.md)| HTL input to convert to DOCX | 
+ **inputRequest** | [**HtmlToOfficeRequest**](HtmlToOfficeRequest.md)| HTML input to convert to DOCX | 
 
 ### Return type
 

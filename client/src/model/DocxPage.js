@@ -36,7 +36,7 @@
   /**
    * The DocxPage model module.
    * @module model/DocxPage
-   * @version 2.5.1
+   * @version 2.5.2
    */
 
   /**

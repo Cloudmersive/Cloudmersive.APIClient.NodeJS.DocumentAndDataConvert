@@ -16,33 +16,33 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DocxTable'], factory);
+    define(['ApiClient', 'model/ConvertedJpgPage'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./DocxTable'));
+    module.exports = factory(require('../ApiClient'), require('./ConvertedJpgPage'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.GetDocxTablesResponse = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.DocxTable);
+    root.CloudmersiveConvertApiClient.PdfToJpgResult = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.ConvertedJpgPage);
   }
-}(this, function(ApiClient, DocxTable) {
+}(this, function(ApiClient, ConvertedJpgPage) {
   'use strict';
 
 
 
 
   /**
-   * The GetDocxTablesResponse model module.
-   * @module model/GetDocxTablesResponse
+   * The PdfToJpgResult model module.
+   * @module model/PdfToJpgResult
    * @version 2.5.2
    */
 
   /**
-   * Constructs a new <code>GetDocxTablesResponse</code>.
-   * Result of running a Get-Tables command
-   * @alias module:model/GetDocxTablesResponse
+   * Constructs a new <code>PdfToJpgResult</code>.
+   * Result of converting a PDF input to a JPG array
+   * @alias module:model/PdfToJpgResult
    * @class
    */
   var exports = function() {
@@ -53,11 +53,11 @@
   };
 
   /**
-   * Constructs a <code>GetDocxTablesResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PdfToJpgResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GetDocxTablesResponse} obj Optional instance to populate.
-   * @return {module:model/GetDocxTablesResponse} The populated <code>GetDocxTablesResponse</code> instance.
+   * @param {module:model/PdfToJpgResult} obj Optional instance to populate.
+   * @return {module:model/PdfToJpgResult} The populated <code>PdfToJpgResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -66,23 +66,23 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
-      if (data.hasOwnProperty('Tables')) {
-        obj['Tables'] = ApiClient.convertToType(data['Tables'], [DocxTable]);
+      if (data.hasOwnProperty('JpgResultPages')) {
+        obj['JpgResultPages'] = ApiClient.convertToType(data['JpgResultPages'], [ConvertedJpgPage]);
       }
     }
     return obj;
   }
 
   /**
-   * True if successful, false otherwise
+   * True if the operation was successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * Tables in the DOCX file
-   * @member {Array.<module:model/DocxTable>} Tables
+   * Array of converted pages
+   * @member {Array.<module:model/ConvertedJpgPage>} JpgResultPages
    */
-  exports.prototype['Tables'] = undefined;
+  exports.prototype['JpgResultPages'] = undefined;
 
 
 

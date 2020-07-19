@@ -33,7 +33,7 @@
   /**
    * ConvertWeb service.
    * @module api/ConvertWebApi
-   * @version 2.5.1
+   * @version 2.5.2
    */
 
   /**
@@ -58,7 +58,7 @@
     /**
      * Convert HTML to Word DOCX Document
      * Convert HTML to Office Word Document (DOCX) format
-     * @param {module:model/HtmlToOfficeRequest} inputRequest HTL input to convert to DOCX
+     * @param {module:model/HtmlToOfficeRequest} inputRequest HTML input to convert to DOCX
      * @param {module:api/ConvertWebApi~convertWebHtmlToDocxCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */

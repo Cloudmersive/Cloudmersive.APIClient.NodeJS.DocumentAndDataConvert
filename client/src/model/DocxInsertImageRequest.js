@@ -36,7 +36,7 @@
   /**
    * The DocxInsertImageRequest model module.
    * @module model/DocxInsertImageRequest
-   * @version 2.5.1
+   * @version 2.5.2
    */
 
   /**
