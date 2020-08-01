@@ -36,7 +36,7 @@
   /**
    * The UrlToTextRequest model module.
    * @module model/UrlToTextRequest
-   * @version 2.5.2
+   * @version 2.5.3
    */
 
   /**

@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 <a name="convertWebHtmlToPng"></a>
 # **convertWebHtmlToPng**
-> Object convertWebHtmlToPng(input)
+> &#39;Blob&#39; convertWebHtmlToPng(input)
 
 Convert HTML string to PNG screenshot
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**&#39;Blob&#39;**
 
 ### Authorization
 

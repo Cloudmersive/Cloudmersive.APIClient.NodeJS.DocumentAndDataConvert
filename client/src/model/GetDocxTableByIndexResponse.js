@@ -36,7 +36,7 @@
   /**
    * The GetDocxTableByIndexResponse model module.
    * @module model/GetDocxTableByIndexResponse
-   * @version 2.5.2
+   * @version 2.5.3
    */
 
   /**

@@ -33,7 +33,7 @@
   /**
    * ConvertWeb service.
    * @module api/ConvertWebApi
-   * @version 2.5.2
+   * @version 2.5.3
    */
 
   /**
@@ -145,7 +145,7 @@
      * Callback function to receive the result of the convertWebHtmlToPng operation.
      * @callback module:api/ConvertWebApi~convertWebHtmlToPngCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {'Blob'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -154,7 +154,7 @@
      * Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
      * @param {module:model/HtmlToPngRequest} input HTML to PNG request parameters
      * @param {module:api/ConvertWebApi~convertWebHtmlToPngCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link 'Blob'}
      */
     this.convertWebHtmlToPng = function(input, callback) {
       var postBody = input;

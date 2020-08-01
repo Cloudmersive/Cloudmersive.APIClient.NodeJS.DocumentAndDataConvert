@@ -68,6 +68,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property includeBackgroundGraphics (base name: "IncludeBackgroundGraphics")', function() {
+      // uncomment below and update the code to test the property includeBackgroundGraphics
+      //var instance = new CloudmersiveConvertApiClient.HtmlToPdfRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property scaleFactor (base name: "ScaleFactor")', function() {
+      // uncomment below and update the code to test the property scaleFactor
+      //var instance = new CloudmersiveConvertApiClient.HtmlToPdfRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

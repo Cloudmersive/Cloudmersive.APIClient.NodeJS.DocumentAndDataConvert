@@ -36,7 +36,7 @@
   /**
    * The ScreenshotRequest model module.
    * @module model/ScreenshotRequest
-   * @version 2.5.2
+   * @version 2.5.3
    */
 
   /**
@@ -87,7 +87,7 @@
    */
   exports.prototype['Url'] = undefined;
   /**
-   * Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites.  Provide a value of 0 for the default of 5000 milliseconds (5 seconds)
+   * Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites.  Provide a value of 0 for the default of 5000 milliseconds (5 seconds). Maximum is 20000 milliseconds (20 seconds).
    * @member {Number} ExtraLoadingWait
    */
   exports.prototype['ExtraLoadingWait'] = undefined;

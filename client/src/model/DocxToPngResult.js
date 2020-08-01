@@ -36,7 +36,7 @@
   /**
    * The DocxToPngResult model module.
    * @module model/DocxToPngResult
-   * @version 2.5.2
+   * @version 2.5.3
    */
 
   /**

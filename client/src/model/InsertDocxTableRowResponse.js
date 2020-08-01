@@ -36,7 +36,7 @@
   /**
    * The InsertDocxTableRowResponse model module.
    * @module model/InsertDocxTableRowResponse
-   * @version 2.5.2
+   * @version 2.5.3
    */
 
   /**

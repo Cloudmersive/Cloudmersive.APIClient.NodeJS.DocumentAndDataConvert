@@ -36,7 +36,7 @@
   /**
    * The EmlToHtmlResult model module.
    * @module model/EmlToHtmlResult
-   * @version 2.5.2
+   * @version 2.5.3
    */
 
   /**

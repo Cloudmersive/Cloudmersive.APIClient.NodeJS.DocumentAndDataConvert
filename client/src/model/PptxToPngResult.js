@@ -36,7 +36,7 @@
   /**
    * The PptxToPngResult model module.
    * @module model/PptxToPngResult
-   * @version 2.5.2
+   * @version 2.5.3
    */
 
   /**

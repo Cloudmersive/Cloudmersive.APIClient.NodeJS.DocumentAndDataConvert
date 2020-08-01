@@ -36,7 +36,7 @@
   /**
    * The DocxToJpgResult model module.
    * @module model/DocxToJpgResult
-   * @version 2.5.2
+   * @version 2.5.3
    */
 
   /**

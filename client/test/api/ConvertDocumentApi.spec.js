@@ -120,6 +120,36 @@
         done();
       });
     });
+    describe('convertDocumentCsvMultiToXlsx', function() {
+      it('should call convertDocumentCsvMultiToXlsx successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentCsvMultiToXlsx
+        //instance.convertDocumentCsvMultiToXlsx(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentCsvToHtml', function() {
+      it('should call convertDocumentCsvToHtml successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentCsvToHtml
+        //instance.convertDocumentCsvToHtml(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentCsvToPdf', function() {
+      it('should call convertDocumentCsvToPdf successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentCsvToPdf
+        //instance.convertDocumentCsvToPdf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentCsvToXlsx', function() {
       it('should call convertDocumentCsvToXlsx successfully', function(done) {
         //uncomment below and update the code to test convertDocumentCsvToXlsx
@@ -734,6 +764,16 @@
       it('should call convertDocumentXlsxToCsvMulti successfully', function(done) {
         //uncomment below and update the code to test convertDocumentXlsxToCsvMulti
         //instance.convertDocumentXlsxToCsvMulti(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentXlsxToHtml', function() {
+      it('should call convertDocumentXlsxToHtml successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentXlsxToHtml
+        //instance.convertDocumentXlsxToHtml(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -33,7 +33,7 @@
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.5.2
+   * @version 2.5.3
    */
 
   /**
@@ -404,6 +404,177 @@
 
       return this.apiClient.callApi(
         '/convert/autodetect/to/txt', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentCsvMultiToXlsx operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentCsvMultiToXlsxCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Multiple CSV Files into a Single XLSX Spreadsheet
+     * Convert multiple Comma-Separated Values (CSV) files into a single Excel XLSX Spreadsheet, with one worksheet corresponding to each CSV file.
+     * @param {File} inputFile1 First input file to perform the operation on.
+     * @param {File} inputFile2 Second input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {File} opts.inputFile3 Third input file to perform the operation on.
+     * @param {File} opts.inputFile4 Fourth input file to perform the operation on.
+     * @param {File} opts.inputFile5 Fifth input file to perform the operation on.
+     * @param {File} opts.inputFile6 Sixth input file to perform the operation on.
+     * @param {File} opts.inputFile7 Seventh input file to perform the operation on.
+     * @param {File} opts.inputFile8 Eighth input file to perform the operation on.
+     * @param {File} opts.inputFile9 Ninth input file to perform the operation on.
+     * @param {File} opts.inputFile10 Tenth input file to perform the operation on.
+     * @param {String} opts.worksheetNames Optional; Specify the name of each CSV&#39;s worksheet in order, separated with commas (e.g. \&quot;worksheet1,worksheet2,worksheet3\&quot;). Defaults to the names of the input CSV files. Recommended when inputting the files directly, without file names.
+     * @param {module:api/ConvertDocumentApi~convertDocumentCsvMultiToXlsxCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDocumentCsvMultiToXlsx = function(inputFile1, inputFile2, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile1' is set
+      if (inputFile1 === undefined || inputFile1 === null) {
+        throw new Error("Missing the required parameter 'inputFile1' when calling convertDocumentCsvMultiToXlsx");
+      }
+
+      // verify the required parameter 'inputFile2' is set
+      if (inputFile2 === undefined || inputFile2 === null) {
+        throw new Error("Missing the required parameter 'inputFile2' when calling convertDocumentCsvMultiToXlsx");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'worksheetNames': opts['worksheetNames']
+      };
+      var formParams = {
+        'inputFile1': inputFile1,
+        'inputFile2': inputFile2,
+        'inputFile3': opts['inputFile3'],
+        'inputFile4': opts['inputFile4'],
+        'inputFile5': opts['inputFile5'],
+        'inputFile6': opts['inputFile6'],
+        'inputFile7': opts['inputFile7'],
+        'inputFile8': opts['inputFile8'],
+        'inputFile9': opts['inputFile9'],
+        'inputFile10': opts['inputFile10']
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/csv/multi/to/xlsx', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentCsvToHtml operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentCsvToHtmlCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert CSV to HTML document
+     * Convert Comma-Separated Values (CSV) file to HTML document.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentCsvToHtmlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDocumentCsvToHtml = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentCsvToHtml");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/csv/to/html', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentCsvToPdf operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentCsvToPdfCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert CSV to PDF document
+     * Convert Comma-Separated Values (CSV) file to PDF document.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentCsvToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDocumentCsvToPdf = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentCsvToPdf");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/csv/to/pdf', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1219,10 +1390,14 @@
      * Convert HTML document file to PDF Document
      * Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
      * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.includeBackgroundGraphics Optional: Set to true to include background graphics in the PDF, or false to not include.  Default is true.
+     * @param {Number} opts.scaleFactor Optional: Set to 100 to scale at 100%, set to 50% to scale down to 50% scale, set to 200% to scale up to 200% scale, etc.  Default is 100%. Maximum is 1000%.
      * @param {module:api/ConvertDocumentApi~convertDocumentHtmlToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */
-    this.convertDocumentHtmlToPdf = function(inputFile, callback) {
+    this.convertDocumentHtmlToPdf = function(inputFile, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'inputFile' is set
@@ -1238,6 +1413,8 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'includeBackgroundGraphics': opts['includeBackgroundGraphics'],
+        'scaleFactor': opts['scaleFactor']
       };
       var formParams = {
         'inputFile': inputFile
@@ -3485,6 +3662,54 @@
 
       return this.apiClient.callApi(
         '/convert/xlsx/to/csv/multi', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentXlsxToHtml operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentXlsxToHtmlCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Excel XLSX Spreadsheet to HTML Document
+     * Convert Office Excel Spreadsheet (XLSX) to HTML Document.  Converts all worksheets to HTML.  Supports both XLSX and XLSB Excel file formats.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentXlsxToHtmlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDocumentXlsxToHtml = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentXlsxToHtml");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/xlsx/to/html', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

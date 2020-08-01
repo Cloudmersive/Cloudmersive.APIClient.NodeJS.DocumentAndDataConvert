@@ -36,7 +36,7 @@
   /**
    * The FindStringRegexRequest model module.
    * @module model/FindStringRegexRequest
-   * @version 2.5.2
+   * @version 2.5.3
    */
 
   /**

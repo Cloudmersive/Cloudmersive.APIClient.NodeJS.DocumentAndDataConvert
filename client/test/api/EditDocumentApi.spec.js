@@ -300,6 +300,16 @@
         done();
       });
     });
+    describe('editDocumentDocxReplaceMulti', function() {
+      it('should call editDocumentDocxReplaceMulti successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxReplaceMulti
+        //instance.editDocumentDocxReplaceMulti(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentDocxReplaceParagraph', function() {
       it('should call editDocumentDocxReplaceParagraph successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxReplaceParagraph
