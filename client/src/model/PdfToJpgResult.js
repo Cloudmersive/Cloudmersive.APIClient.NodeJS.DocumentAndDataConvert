@@ -36,7 +36,7 @@
   /**
    * The PdfToJpgResult model module.
    * @module model/PdfToJpgResult
-   * @version 2.5.3
+   * @version 2.5.4
    */
 
   /**

@@ -33,7 +33,7 @@
   /**
    * EditPdf service.
    * @module api/EditPdfApi
-   * @version 2.5.3
+   * @version 2.5.4
    */
 
   /**
@@ -685,6 +685,61 @@
 
       return this.apiClient.callApi(
         '/convert/edit/pdf/annotations/remove-item', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editPdfResize operation.
+     * @callback module:api/EditPdfApi~editPdfResizeCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Change PDF Document&#39;s Paper Size
+     * Resizes a PDF document&#39;s paper size.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {String} paperSize The desired paper size for the resized PDF document. Size ranges from A7 (smallest) to A0 (largest).
+     * @param {module:api/EditPdfApi~editPdfResizeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.editPdfResize = function(inputFile, paperSize, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling editPdfResize");
+      }
+
+      // verify the required parameter 'paperSize' is set
+      if (paperSize === undefined || paperSize === null) {
+        throw new Error("Missing the required parameter 'paperSize' when calling editPdfResize");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'paperSize': paperSize
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/resize', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

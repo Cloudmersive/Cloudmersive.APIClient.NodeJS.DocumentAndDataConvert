@@ -33,7 +33,7 @@
   /**
    * EditHtml service.
    * @module api/EditHtmlApi
-   * @version 2.5.3
+   * @version 2.5.4
    */
 
   /**
@@ -61,8 +61,9 @@
      * @param {String} headingText The text content to be used in the header.
      * @param {Object} opts Optional parameters
      * @param {File} opts.inputFile Optional: Input file to perform the operation on.
-     * @param {String} opts.inputFileUrl Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
-     * @param {Number} opts.headingSize Optional: The heading size number. Default is 1.
+     * @param {String} opts.inputFileUrl Optional: URL of a file to operate on as input.
+     * @param {Number} opts.headingSize Optional: The heading size number. Default is 1. Accepts values between 1 and 6.
+     * @param {String} opts.cssStyle Optional: The CSS style for the heading.
      * @param {module:api/EditHtmlApi~editHtmlHtmlAppendHeadingCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */
@@ -85,7 +86,8 @@
       var headerParams = {
         'inputFileUrl': opts['inputFileUrl'],
         'headingText': headingText,
-        'headingSize': opts['headingSize']
+        'headingSize': opts['headingSize'],
+        'cssStyle': opts['cssStyle']
       };
       var formParams = {
         'inputFile': opts['inputFile']
@@ -117,7 +119,7 @@
      * @param {String} imageUrl The URL for the image.
      * @param {Object} opts Optional parameters
      * @param {File} opts.inputFile Optional: Input file to perform the operation on.
-     * @param {String} opts.inputFileUrl Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
+     * @param {String} opts.inputFileUrl Optional: URL of a file to operate on as input.
      * @param {String} opts.cssStyle Optional: CSS style for the image.
      * @param {module:api/EditHtmlApi~editHtmlHtmlAppendImageFromUrlCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
@@ -172,11 +174,11 @@
      * Appends a base64 inline image to the end of an HTML document from an input file or URL.
      * @param {Object} opts Optional parameters
      * @param {File} opts.inputFile Optional: Input file to perform the operation on.
-     * @param {String} opts.inputFileUrl Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
+     * @param {String} opts.inputFileUrl Optional: URL of a file to operate on as input.
      * @param {File} opts.imageFile Optional: Image file to be appended as base64 inline image.
      * @param {String} opts.imageUrl Optional: Image URL to be appended as base64 inline image.
      * @param {String} opts.cssStyle Optional: CSS style for the image.
-     * @param {String} opts.imageExtension Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading a file directly, such as with a byte array. If no extension can be determined, will default to JPG.
+     * @param {String} opts.imageExtension Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading an imageFile directly, instead of using imageUrl. If no extension can be determined, will default to JPG.
      * @param {module:api/EditHtmlApi~editHtmlHtmlAppendImageInlineCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */
@@ -203,7 +205,7 @@
       };
 
       var authNames = ['Apikey'];
-      var contentTypes = [];
+      var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = 'Blob';
 
@@ -228,7 +230,8 @@
      * @param {String} paragraphText The text content to be used in the paragraph.
      * @param {Object} opts Optional parameters
      * @param {File} opts.inputFile Optional: Input file to perform the operation on.
-     * @param {String} opts.inputFileUrl Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API (part of EditDocumentApi) to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
+     * @param {String} opts.inputFileUrl Optional: URL of a file to operate on as input.
+     * @param {String} opts.cssStyle Optional: The CSS style for the paragraph.
      * @param {module:api/EditHtmlApi~editHtmlHtmlAppendParagraphCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */
@@ -250,7 +253,8 @@
       };
       var headerParams = {
         'inputFileUrl': opts['inputFileUrl'],
-        'paragraphText': paragraphText
+        'paragraphText': paragraphText,
+        'cssStyle': opts['cssStyle']
       };
       var formParams = {
         'inputFile': opts['inputFile']
@@ -263,6 +267,59 @@
 
       return this.apiClient.callApi(
         '/convert/edit/html/append/paragraph', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editHtmlHtmlCreateBlankDocument operation.
+     * @callback module:api/EditHtmlApi~editHtmlHtmlCreateBlankDocumentCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a Blank HTML Document
+     * Returns a blank HTML Document format file.  The file is blank, with no contents by default.  Use the optional input parameters to add various starting elements.  Use additional editing commands such as Append Header, Append Paragraph or Append Image from URL to populate the document.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.title Optional: The title of the HTML document
+     * @param {String} opts.cssUrl Optional: A CSS style URL to be added to the document.
+     * @param {String} opts.cssInline Optional: An inline CSS style to be added to the document.
+     * @param {String} opts.javascriptUrl Optional: Javascript URL to be added to the document.
+     * @param {String} opts.javascriptInline Optional: Inline Javascript to be added to the document.
+     * @param {module:api/EditHtmlApi~editHtmlHtmlCreateBlankDocumentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.editHtmlHtmlCreateBlankDocument = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'title': opts['title'],
+        'cssUrl': opts['cssUrl'],
+        'cssInline': opts['cssInline'],
+        'javascriptUrl': opts['javascriptUrl'],
+        'javascriptInline': opts['javascriptInline']
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/html/create/blank', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

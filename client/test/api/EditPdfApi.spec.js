@@ -170,6 +170,16 @@
         done();
       });
     });
+    describe('editPdfResize', function() {
+      it('should call editPdfResize successfully', function(done) {
+        //uncomment below and update the code to test editPdfResize
+        //instance.editPdfResize(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editPdfRotateAllPages', function() {
       it('should call editPdfRotateAllPages successfully', function(done) {
         //uncomment below and update the code to test editPdfRotateAllPages

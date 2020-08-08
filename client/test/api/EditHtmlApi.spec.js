@@ -90,6 +90,16 @@
         done();
       });
     });
+    describe('editHtmlHtmlCreateBlankDocument', function() {
+      it('should call editHtmlHtmlCreateBlankDocument successfully', function(done) {
+        //uncomment below and update the code to test editHtmlHtmlCreateBlankDocument
+        //instance.editHtmlHtmlCreateBlankDocument(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));
