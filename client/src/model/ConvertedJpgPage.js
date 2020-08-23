@@ -36,7 +36,7 @@
   /**
    * The ConvertedJpgPage model module.
    * @module model/ConvertedJpgPage
-   * @version 2.5.4
+   * @version 2.5.5
    */
 
   /**

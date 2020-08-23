@@ -60,6 +60,16 @@
         done();
       });
     });
+    describe('editDocumentDocxAcceptAllTrackChanges', function() {
+      it('should call editDocumentDocxAcceptAllTrackChanges successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxAcceptAllTrackChanges
+        //instance.editDocumentDocxAcceptAllTrackChanges(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentDocxBody', function() {
       it('should call editDocumentDocxBody successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxBody
@@ -104,6 +114,26 @@
       it('should call editDocumentDocxDeleteTableRowRange successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxDeleteTableRowRange
         //instance.editDocumentDocxDeleteTableRowRange(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxDisableTrackChanges', function() {
+      it('should call editDocumentDocxDisableTrackChanges successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxDisableTrackChanges
+        //instance.editDocumentDocxDisableTrackChanges(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxEnableTrackChanges', function() {
+      it('should call editDocumentDocxEnableTrackChanges successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxEnableTrackChanges
+        //instance.editDocumentDocxEnableTrackChanges(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -264,6 +294,16 @@
       it('should call editDocumentDocxPages successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxPages
         //instance.editDocumentDocxPages(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxRemoveAllComments', function() {
+      it('should call editDocumentDocxRemoveAllComments successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxRemoveAllComments
+        //instance.editDocumentDocxRemoveAllComments(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

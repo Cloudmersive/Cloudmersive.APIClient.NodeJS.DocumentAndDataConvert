@@ -33,7 +33,7 @@
   /**
    * EditPdf service.
    * @module api/EditPdfApi
-   * @version 2.5.4
+   * @version 2.5.5
    */
 
   /**
