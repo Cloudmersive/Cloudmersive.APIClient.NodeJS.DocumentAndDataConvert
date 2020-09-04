@@ -36,7 +36,7 @@
   /**
    * The TextDocumentLine model module.
    * @module model/TextDocumentLine
-   * @version 2.5.5
+   * @version 2.5.6
    */
 
   /**

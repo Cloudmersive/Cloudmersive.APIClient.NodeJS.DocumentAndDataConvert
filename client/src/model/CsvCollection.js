@@ -36,7 +36,7 @@
   /**
    * The CsvCollection model module.
    * @module model/CsvCollection
-   * @version 2.5.5
+   * @version 2.5.6
    */
 
   /**

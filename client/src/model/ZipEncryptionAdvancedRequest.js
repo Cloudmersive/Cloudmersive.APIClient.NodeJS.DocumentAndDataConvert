@@ -36,7 +36,7 @@
   /**
    * The ZipEncryptionAdvancedRequest model module.
    * @module model/ZipEncryptionAdvancedRequest
-   * @version 2.5.5
+   * @version 2.5.6
    */
 
   /**

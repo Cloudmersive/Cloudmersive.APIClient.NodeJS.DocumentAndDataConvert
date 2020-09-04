@@ -1,5 +1,6 @@
 ﻿{
 
   "projectName" : "cloudmersive-convert-api-client",
-  "projectVersion": "2.5.5"
+  "projectVersion": "2.5.6",
+  "licenseName": "apache-2"
 }  

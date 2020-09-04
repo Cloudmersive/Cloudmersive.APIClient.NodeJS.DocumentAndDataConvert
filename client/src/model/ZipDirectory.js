@@ -36,7 +36,7 @@
   /**
    * The ZipDirectory model module.
    * @module model/ZipDirectory
-   * @version 2.5.5
+   * @version 2.5.6
    */
 
   /**

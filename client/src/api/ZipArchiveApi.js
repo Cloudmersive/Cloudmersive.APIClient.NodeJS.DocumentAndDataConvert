@@ -33,7 +33,7 @@
   /**
    * ZipArchive service.
    * @module api/ZipArchiveApi
-   * @version 2.5.5
+   * @version 2.5.6
    */
 
   /**

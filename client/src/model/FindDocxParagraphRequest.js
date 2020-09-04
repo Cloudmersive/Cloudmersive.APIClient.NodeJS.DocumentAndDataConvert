@@ -36,7 +36,7 @@
   /**
    * The FindDocxParagraphRequest model module.
    * @module model/FindDocxParagraphRequest
-   * @version 2.5.5
+   * @version 2.5.6
    */
 
   /**
