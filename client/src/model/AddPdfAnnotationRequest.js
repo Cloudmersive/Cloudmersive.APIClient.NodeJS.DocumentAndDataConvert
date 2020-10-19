@@ -36,7 +36,7 @@
   /**
    * The AddPdfAnnotationRequest model module.
    * @module model/AddPdfAnnotationRequest
-   * @version 2.5.6
+   * @version 2.5.7
    */
 
   /**

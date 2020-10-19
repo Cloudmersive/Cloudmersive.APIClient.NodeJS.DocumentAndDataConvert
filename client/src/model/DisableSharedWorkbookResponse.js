@@ -36,7 +36,7 @@
   /**
    * The DisableSharedWorkbookResponse model module.
    * @module model/DisableSharedWorkbookResponse
-   * @version 2.5.6
+   * @version 2.5.7
    */
 
   /**

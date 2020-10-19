@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.5.6
+- Package version: 2.5.7
 
 
 ## Installation
@@ -355,6 +355,8 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentEmlValidation**](docs/ValidateDocumentApi.md#validateDocumentEmlValidation) | **POST** /convert/validate/eml | Validate if an EML file is executable
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentExecutableValidation**](docs/ValidateDocumentApi.md#validateDocumentExecutableValidation) | **POST** /convert/validate/executable | Validate if a file is executable
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentGZipValidation**](docs/ValidateDocumentApi.md#validateDocumentGZipValidation) | **POST** /convert/validate/gzip | Validate a GZip Archive file (gzip or gz)
+*CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentHtmlValidation**](docs/ValidateDocumentApi.md#validateDocumentHtmlValidation) | **POST** /convert/validate/html | Validate an HTML file
+*CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentImageValidation**](docs/ValidateDocumentApi.md#validateDocumentImageValidation) | **POST** /convert/validate/image | Validate an Image File
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentJsonValidation**](docs/ValidateDocumentApi.md#validateDocumentJsonValidation) | **POST** /convert/validate/json | Validate a JSON file
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentMsgValidation**](docs/ValidateDocumentApi.md#validateDocumentMsgValidation) | **POST** /convert/validate/msg | Validate if an MSG file is executable
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentPdfValidation**](docs/ValidateDocumentApi.md#validateDocumentPdfValidation) | **POST** /convert/validate/pdf | Validate a PDF document file
@@ -367,6 +369,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ViewerToolsApi* | [**viewerToolsCreateSimple**](docs/ViewerToolsApi.md#viewerToolsCreateSimple) | **POST** /convert/viewer/create/web/simple | Create a web-based viewer
 *CloudmersiveConvertApiClient.ZipArchiveApi* | [**zipArchiveZipCreate**](docs/ZipArchiveApi.md#zipArchiveZipCreate) | **POST** /convert/archive/zip/create | Compress files to create a new zip archive
 *CloudmersiveConvertApiClient.ZipArchiveApi* | [**zipArchiveZipCreateAdvanced**](docs/ZipArchiveApi.md#zipArchiveZipCreateAdvanced) | **POST** /convert/archive/zip/create/advanced | Compress files and folders to create a new zip archive with advanced options
+*CloudmersiveConvertApiClient.ZipArchiveApi* | [**zipArchiveZipCreateEncrypted**](docs/ZipArchiveApi.md#zipArchiveZipCreateEncrypted) | **POST** /convert/archive/zip/create/encrypted | Compress files to create a new, encrypted and password-protected zip archive
 *CloudmersiveConvertApiClient.ZipArchiveApi* | [**zipArchiveZipDecrypt**](docs/ZipArchiveApi.md#zipArchiveZipDecrypt) | **POST** /convert/archive/zip/decrypt | Decrypt and remove password protection on a zip file
 *CloudmersiveConvertApiClient.ZipArchiveApi* | [**zipArchiveZipEncryptAdvanced**](docs/ZipArchiveApi.md#zipArchiveZipEncryptAdvanced) | **POST** /convert/archive/zip/encrypt/advanced | Encrypt and password protect a zip file
 *CloudmersiveConvertApiClient.ZipArchiveApi* | [**zipArchiveZipExtract**](docs/ZipArchiveApi.md#zipArchiveZipExtract) | **POST** /convert/archive/zip/extract | Extract, decompress files and folders from a zip archive

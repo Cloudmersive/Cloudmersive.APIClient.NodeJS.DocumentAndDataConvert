@@ -36,7 +36,7 @@
   /**
    * The DocxComment model module.
    * @module model/DocxComment
-   * @version 2.5.6
+   * @version 2.5.7
    */
 
   /**

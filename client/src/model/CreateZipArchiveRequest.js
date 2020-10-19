@@ -36,7 +36,7 @@
   /**
    * The CreateZipArchiveRequest model module.
    * @module model/CreateZipArchiveRequest
-   * @version 2.5.6
+   * @version 2.5.7
    */
 
   /**

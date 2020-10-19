@@ -36,7 +36,7 @@
   /**
    * The MsgToJpgResult model module.
    * @module model/MsgToJpgResult
-   * @version 2.5.6
+   * @version 2.5.7
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The HtmlToPngRequest model module.
    * @module model/HtmlToPngRequest
-   * @version 2.5.6
+   * @version 2.5.7
    */
 
   /**

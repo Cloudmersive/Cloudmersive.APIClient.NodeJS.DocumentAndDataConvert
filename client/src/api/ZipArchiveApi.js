@@ -33,7 +33,7 @@
   /**
    * ZipArchive service.
    * @module api/ZipArchiveApi
-   * @version 2.5.6
+   * @version 2.5.7
    */
 
   /**
@@ -157,6 +157,83 @@
 
       return this.apiClient.callApi(
         '/convert/archive/zip/create/advanced', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the zipArchiveZipCreateEncrypted operation.
+     * @callback module:api/ZipArchiveApi~zipArchiveZipCreateEncryptedCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Compress files to create a new, encrypted and password-protected zip archive
+     * Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip.
+     * @param {String} password Password to place on the Zip file; the longer the password, the more secure
+     * @param {File} inputFile1 First input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.encryptionAlgorithm Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256.
+     * @param {File} opts.inputFile2 Second input file to perform the operation on.
+     * @param {File} opts.inputFile3 Third input file to perform the operation on.
+     * @param {File} opts.inputFile4 Fourth input file to perform the operation on.
+     * @param {File} opts.inputFile5 Fifth input file to perform the operation on.
+     * @param {File} opts.inputFile6 Sixth input file to perform the operation on.
+     * @param {File} opts.inputFile7 Seventh input file to perform the operation on.
+     * @param {File} opts.inputFile8 Eighth input file to perform the operation on.
+     * @param {File} opts.inputFile9 Ninth input file to perform the operation on.
+     * @param {File} opts.inputFile10 Tenth input file to perform the operation on.
+     * @param {module:api/ZipArchiveApi~zipArchiveZipCreateEncryptedCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.zipArchiveZipCreateEncrypted = function(password, inputFile1, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'password' is set
+      if (password === undefined || password === null) {
+        throw new Error("Missing the required parameter 'password' when calling zipArchiveZipCreateEncrypted");
+      }
+
+      // verify the required parameter 'inputFile1' is set
+      if (inputFile1 === undefined || inputFile1 === null) {
+        throw new Error("Missing the required parameter 'inputFile1' when calling zipArchiveZipCreateEncrypted");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'password': password,
+        'encryptionAlgorithm': opts['encryptionAlgorithm']
+      };
+      var formParams = {
+        'inputFile1': inputFile1,
+        'inputFile2': opts['inputFile2'],
+        'inputFile3': opts['inputFile3'],
+        'inputFile4': opts['inputFile4'],
+        'inputFile5': opts['inputFile5'],
+        'inputFile6': opts['inputFile6'],
+        'inputFile7': opts['inputFile7'],
+        'inputFile8': opts['inputFile8'],
+        'inputFile9': opts['inputFile9'],
+        'inputFile10': opts['inputFile10']
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/archive/zip/create/encrypted', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

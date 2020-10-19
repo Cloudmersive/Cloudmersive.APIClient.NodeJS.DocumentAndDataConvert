@@ -36,7 +36,7 @@
   /**
    * The XlsxWorksheet model module.
    * @module model/XlsxWorksheet
-   * @version 2.5.6
+   * @version 2.5.7
    */
 
   /**

@@ -110,6 +110,26 @@
         done();
       });
     });
+    describe('validateDocumentHtmlValidation', function() {
+      it('should call validateDocumentHtmlValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentHtmlValidation
+        //instance.validateDocumentHtmlValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('validateDocumentImageValidation', function() {
+      it('should call validateDocumentImageValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentImageValidation
+        //instance.validateDocumentImageValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('validateDocumentJsonValidation', function() {
       it('should call validateDocumentJsonValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentJsonValidation

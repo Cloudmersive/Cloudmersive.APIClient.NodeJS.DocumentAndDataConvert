@@ -33,7 +33,7 @@
   /**
    * ValidateDocument service.
    * @module api/ValidateDocumentApi
-   * @version 2.5.6
+   * @version 2.5.7
    */
 
   /**
@@ -330,6 +330,102 @@
 
       return this.apiClient.callApi(
         '/convert/validate/gzip', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validateDocumentHtmlValidation operation.
+     * @callback module:api/ValidateDocumentApi~validateDocumentHtmlValidationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DocumentValidationResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate an HTML file
+     * Validate an HTML document file; if the document is not valid, identifies the errors in the document
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ValidateDocumentApi~validateDocumentHtmlValidationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DocumentValidationResult}
+     */
+    this.validateDocumentHtmlValidation = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling validateDocumentHtmlValidation");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = DocumentValidationResult;
+
+      return this.apiClient.callApi(
+        '/convert/validate/html', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validateDocumentImageValidation operation.
+     * @callback module:api/ValidateDocumentApi~validateDocumentImageValidationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DocumentValidationResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate an Image File
+     * Validate an image file; if the document is not valid, identifies the errors in the document.  Formats supported include AAI, ART, ARW, AVS, BPG, BMP, BMP2, BMP3, BRF, CALS, CGM, CIN, CMYK, CMYKA, CR2, CRW, CUR, CUT, DCM, DCR, DCX, DDS, DIB, DJVU, DNG, DOT, DPX, EMF, EPDF, EPI, EPS, EPS2, EPS3, EPSF, EPSI, EPT, EXR, FAX, FIG, FITS, FPX, GIF, GPLT, GRAY, HDR, HEIC, HPGL, HRZ, ICO, ISOBRL, ISBRL6, JBIG, JNG, JP2, JPT, J2C, J2K, JPEG/JPG, JXR, MAT, MONO, MNG, M2V, MRW, MTV, NEF, ORF, OTB, P7, PALM, PAM, PBM, PCD, PCDS, PCL, PCX, PDF, PEF, PES, PFA, PFB, PFM, PGM, PICON, PICT, PIX, PNG, PNG8, PNG00, PNG24, PNG32, PNG48, PNG64, PNM, PPM, PSB, PSD, PTIF, PWB, RAD, RAF, RGB, RGBA, RGF, RLA, RLE, SCT, SFW, SGI, SID, SUN, SVG, TGA, TIFF, TIM, UIL, VIFF, VICAR, VBMP, WDP, WEBP, WPG, X, XBM, XCF, XPM, XWD, X3F, YCbCr, YCbCrA, YUV.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ValidateDocumentApi~validateDocumentImageValidationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DocumentValidationResult}
+     */
+    this.validateDocumentImageValidation = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling validateDocumentImageValidation");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = DocumentValidationResult;
+
+      return this.apiClient.callApi(
+        '/convert/validate/image', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

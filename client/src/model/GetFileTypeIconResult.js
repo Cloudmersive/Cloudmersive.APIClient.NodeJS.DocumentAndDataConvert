@@ -36,7 +36,7 @@
   /**
    * The GetFileTypeIconResult model module.
    * @module model/GetFileTypeIconResult
-   * @version 2.5.6
+   * @version 2.5.7
    */
 
   /**
