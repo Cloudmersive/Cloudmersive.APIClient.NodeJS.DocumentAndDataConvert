@@ -36,7 +36,7 @@
   /**
    * The MultiReplaceStringRequest model module.
    * @module model/MultiReplaceStringRequest
-   * @version 2.5.7
+   * @version 2.5.8
    */
 
   /**

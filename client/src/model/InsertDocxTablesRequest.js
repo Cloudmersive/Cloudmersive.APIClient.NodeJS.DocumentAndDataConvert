@@ -36,7 +36,7 @@
   /**
    * The InsertDocxTablesRequest model module.
    * @module model/InsertDocxTablesRequest
-   * @version 2.5.7
+   * @version 2.5.8
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The DeleteDocxTableRowRangeRequest model module.
    * @module model/DeleteDocxTableRowRangeRequest
-   * @version 2.5.7
+   * @version 2.5.8
    */
 
   /**

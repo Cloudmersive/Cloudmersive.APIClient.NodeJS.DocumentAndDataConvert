@@ -36,7 +36,7 @@
   /**
    * The PdfAnnotation model module.
    * @module model/PdfAnnotation
-   * @version 2.5.7
+   * @version 2.5.8
    */
 
   /**

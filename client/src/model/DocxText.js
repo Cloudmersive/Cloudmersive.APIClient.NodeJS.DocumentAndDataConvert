@@ -36,7 +36,7 @@
   /**
    * The DocxText model module.
    * @module model/DocxText
-   * @version 2.5.7
+   * @version 2.5.8
    */
 
   /**

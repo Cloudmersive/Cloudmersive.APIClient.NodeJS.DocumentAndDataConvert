@@ -36,7 +36,7 @@
   /**
    * The MsgToPngResult model module.
    * @module model/MsgToPngResult
-   * @version 2.5.7
+   * @version 2.5.8
    */
 
   /**

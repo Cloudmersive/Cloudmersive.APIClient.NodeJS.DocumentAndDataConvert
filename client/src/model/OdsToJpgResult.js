@@ -36,7 +36,7 @@
   /**
    * The OdsToJpgResult model module.
    * @module model/OdsToJpgResult
-   * @version 2.5.7
+   * @version 2.5.8
    */
 
   /**

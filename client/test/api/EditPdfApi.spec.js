@@ -60,6 +60,16 @@
         done();
       });
     });
+    describe('editPdfConvertToPdfA', function() {
+      it('should call editPdfConvertToPdfA successfully', function(done) {
+        //uncomment below and update the code to test editPdfConvertToPdfA
+        //instance.editPdfConvertToPdfA(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editPdfDecrypt', function() {
       it('should call editPdfDecrypt successfully', function(done) {
         //uncomment below and update the code to test editPdfDecrypt
@@ -140,10 +150,30 @@
         done();
       });
     });
+    describe('editPdfLinearize', function() {
+      it('should call editPdfLinearize successfully', function(done) {
+        //uncomment below and update the code to test editPdfLinearize
+        //instance.editPdfLinearize(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editPdfRasterize', function() {
       it('should call editPdfRasterize successfully', function(done) {
         //uncomment below and update the code to test editPdfRasterize
         //instance.editPdfRasterize(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editPdfReduceFileSize', function() {
+      it('should call editPdfReduceFileSize successfully', function(done) {
+        //uncomment below and update the code to test editPdfReduceFileSize
+        //instance.editPdfReduceFileSize(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -36,7 +36,7 @@
   /**
    * The PdfTextByPageResult model module.
    * @module model/PdfTextByPageResult
-   * @version 2.5.7
+   * @version 2.5.8
    */
 
   /**

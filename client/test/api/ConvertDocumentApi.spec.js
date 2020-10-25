@@ -190,6 +190,16 @@
         done();
       });
     });
+    describe('convertDocumentDocxToDoc', function() {
+      it('should call convertDocumentDocxToDoc successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentDocxToDoc
+        //instance.convertDocumentDocxToDoc(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentDocxToHtml', function() {
       it('should call convertDocumentDocxToHtml successfully', function(done) {
         //uncomment below and update the code to test convertDocumentDocxToHtml
@@ -660,6 +670,16 @@
         done();
       });
     });
+    describe('convertDocumentPptxToPpt', function() {
+      it('should call convertDocumentPptxToPpt successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentPptxToPpt
+        //instance.convertDocumentPptxToPpt(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentPptxToTxt', function() {
       it('should call convertDocumentPptxToTxt successfully', function(done) {
         //uncomment below and update the code to test convertDocumentPptxToTxt
@@ -804,6 +824,16 @@
       it('should call convertDocumentXlsxToTxt successfully', function(done) {
         //uncomment below and update the code to test convertDocumentXlsxToTxt
         //instance.convertDocumentXlsxToTxt(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentXlsxToXls', function() {
+      it('should call convertDocumentXlsxToXls successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentXlsxToXls
+        //instance.convertDocumentXlsxToXls(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

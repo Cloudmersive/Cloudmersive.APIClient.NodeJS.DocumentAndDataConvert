@@ -60,6 +60,16 @@
         done();
       });
     });
+    describe('convertDataCsvToXml', function() {
+      it('should call convertDataCsvToXml successfully', function(done) {
+        //uncomment below and update the code to test convertDataCsvToXml
+        //instance.convertDataCsvToXml(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDataJsonToXml', function() {
       it('should call convertDataJsonToXml successfully', function(done) {
         //uncomment below and update the code to test convertDataJsonToXml
@@ -84,6 +94,16 @@
       it('should call convertDataXlsxToJson successfully', function(done) {
         //uncomment below and update the code to test convertDataXlsxToJson
         //instance.convertDataXlsxToJson(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDataXlsxToXml', function() {
+      it('should call convertDataXlsxToXml successfully', function(done) {
+        //uncomment below and update the code to test convertDataXlsxToXml
+        //instance.convertDataXlsxToXml(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

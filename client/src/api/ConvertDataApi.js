@@ -33,7 +33,7 @@
   /**
    * ConvertData service.
    * @module api/ConvertDataApi
-   * @version 2.5.7
+   * @version 2.5.8
    */
 
   /**
@@ -94,6 +94,58 @@
 
       return this.apiClient.callApi(
         '/convert/csv/to/json', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDataCsvToXml operation.
+     * @callback module:api/ConvertDataApi~convertDataCsvToXmlCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert CSV to XML conversion
+     * Convert a CSV file to a XML file
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.columnNamesFromFirstRow Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure.
+     * @param {module:api/ConvertDataApi~convertDataCsvToXmlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDataCsvToXml = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDataCsvToXml");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'columnNamesFromFirstRow': opts['columnNamesFromFirstRow']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/csv/to/xml', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -198,7 +250,7 @@
      * Callback function to receive the result of the convertDataXlsxToJson operation.
      * @callback module:api/ConvertDataApi~convertDataXlsxToJsonCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {'Blob'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -207,7 +259,7 @@
      * Convert an Excel XLSX file to a JSON object array
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDataApi~convertDataXlsxToJsonCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link 'Blob'}
      */
     this.convertDataXlsxToJson = function(inputFile, callback) {
       var postBody = null;
@@ -232,11 +284,59 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/json'];
-      var returnType = Object;
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
 
       return this.apiClient.callApi(
         '/convert/xlsx/to/json', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDataXlsxToXml operation.
+     * @callback module:api/ConvertDataApi~convertDataXlsxToXmlCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Excel XLSX to XML conversion
+     * Convert an Excel XLSX file to a XML file
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDataApi~convertDataXlsxToXmlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDataXlsxToXml = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDataXlsxToXml");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/xlsx/to/xml', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
