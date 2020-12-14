@@ -33,7 +33,7 @@
   /**
    * EditHtml service.
    * @module api/EditHtmlApi
-   * @version 2.5.8
+   * @version 2.5.9
    */
 
   /**

@@ -33,7 +33,7 @@
   /**
    * ViewerTools service.
    * @module api/ViewerToolsApi
-   * @version 2.5.8
+   * @version 2.5.9
    */
 
   /**
@@ -59,10 +59,14 @@
      * Create a web-based viewer
      * Creates an HTML embed code for a simple web-based viewer of a document; supports Office document types and PDF.
      * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.width Optional; width of the output viewer in pixels
+     * @param {Number} opts.height Optional; height of the output viewer in pixels
      * @param {module:api/ViewerToolsApi~viewerToolsCreateSimpleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ViewerResponse}
      */
-    this.viewerToolsCreateSimple = function(inputFile, callback) {
+    this.viewerToolsCreateSimple = function(inputFile, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'inputFile' is set
@@ -78,6 +82,8 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'width': opts['width'],
+        'height': opts['height']
       };
       var formParams = {
         'inputFile': inputFile

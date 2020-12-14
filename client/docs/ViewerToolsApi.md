@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="viewerToolsCreateSimple"></a>
 # **viewerToolsCreateSimple**
-> ViewerResponse viewerToolsCreateSimple(inputFile)
+> ViewerResponse viewerToolsCreateSimple(inputFile, opts)
 
 Create a web-based viewer
 
@@ -30,6 +30,10 @@ var apiInstance = new CloudmersiveConvertApiClient.ViewerToolsApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
+var opts = { 
+  'width': 56, // Number | Optional; width of the output viewer in pixels
+  'height': 56 // Number | Optional; height of the output viewer in pixels
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -38,7 +42,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.viewerToolsCreateSimple(inputFile, callback);
+apiInstance.viewerToolsCreateSimple(inputFile, opts, callback);
 ```
 
 ### Parameters
@@ -46,6 +50,8 @@ apiInstance.viewerToolsCreateSimple(inputFile, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **File**| Input file to perform the operation on. | 
+ **width** | **Number**| Optional; width of the output viewer in pixels | [optional] 
+ **height** | **Number**| Optional; height of the output viewer in pixels | [optional] 
 
 ### Return type
 

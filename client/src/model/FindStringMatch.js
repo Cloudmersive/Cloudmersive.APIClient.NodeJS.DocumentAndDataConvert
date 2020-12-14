@@ -36,7 +36,7 @@
   /**
    * The FindStringMatch model module.
    * @module model/FindStringMatch
-   * @version 2.5.8
+   * @version 2.5.9
    */
 
   /**

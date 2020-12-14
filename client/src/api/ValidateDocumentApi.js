@@ -33,7 +33,7 @@
   /**
    * ValidateDocument service.
    * @module api/ValidateDocumentApi
-   * @version 2.5.8
+   * @version 2.5.9
    */
 
   /**
@@ -714,6 +714,54 @@
 
       return this.apiClient.callApi(
         '/convert/validate/tar', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validateDocumentTxtValidation operation.
+     * @callback module:api/ValidateDocumentApi~validateDocumentTxtValidationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DocumentValidationResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate an TXT file
+     * Validate an TXT document file; if the document is not valid, identifies the errors in the document
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ValidateDocumentApi~validateDocumentTxtValidationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DocumentValidationResult}
+     */
+    this.validateDocumentTxtValidation = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling validateDocumentTxtValidation");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = DocumentValidationResult;
+
+      return this.apiClient.callApi(
+        '/convert/validate/txt', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

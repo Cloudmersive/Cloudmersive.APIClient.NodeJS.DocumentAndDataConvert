@@ -190,6 +190,16 @@
         done();
       });
     });
+    describe('validateDocumentTxtValidation', function() {
+      it('should call validateDocumentTxtValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentTxtValidation
+        //instance.validateDocumentTxtValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('validateDocumentXlsxValidation', function() {
       it('should call validateDocumentXlsxValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentXlsxValidation

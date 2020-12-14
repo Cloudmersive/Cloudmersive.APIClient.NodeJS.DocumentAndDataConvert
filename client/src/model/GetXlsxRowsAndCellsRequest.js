@@ -36,7 +36,7 @@
   /**
    * The GetXlsxRowsAndCellsRequest model module.
    * @module model/GetXlsxRowsAndCellsRequest
-   * @version 2.5.8
+   * @version 2.5.9
    */
 
   /**

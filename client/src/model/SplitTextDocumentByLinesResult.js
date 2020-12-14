@@ -36,7 +36,7 @@
   /**
    * The SplitTextDocumentByLinesResult model module.
    * @module model/SplitTextDocumentByLinesResult
-   * @version 2.5.8
+   * @version 2.5.9
    */
 
   /**
