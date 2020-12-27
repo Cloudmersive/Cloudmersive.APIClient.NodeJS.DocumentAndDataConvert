@@ -36,7 +36,7 @@
   /**
    * The XmlReplaceWithXPathResult model module.
    * @module model/XmlReplaceWithXPathResult
-   * @version 2.5.9
+   * @version 2.6.0
    */
 
   /**

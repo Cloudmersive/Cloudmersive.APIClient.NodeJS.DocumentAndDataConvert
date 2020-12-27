@@ -36,7 +36,7 @@
   /**
    * The CreateSpreadsheetFromDataResponse model module.
    * @module model/CreateSpreadsheetFromDataResponse
-   * @version 2.5.9
+   * @version 2.6.0
    */
 
   /**

@@ -190,6 +190,16 @@
         done();
       });
     });
+    describe('editDocumentDocxGetMetadataProperties', function() {
+      it('should call editDocumentDocxGetMetadataProperties successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxGetMetadataProperties
+        //instance.editDocumentDocxGetMetadataProperties(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentDocxGetSections', function() {
       it('should call editDocumentDocxGetSections successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxGetSections
@@ -354,6 +364,16 @@
       it('should call editDocumentDocxReplaceParagraph successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxReplaceParagraph
         //instance.editDocumentDocxReplaceParagraph(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxSetCustomMetadataProperties', function() {
+      it('should call editDocumentDocxSetCustomMetadataProperties successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxSetCustomMetadataProperties
+        //instance.editDocumentDocxSetCustomMetadataProperties(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

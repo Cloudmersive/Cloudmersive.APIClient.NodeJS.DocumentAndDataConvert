@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.5.9
+- Package version: 2.6.0
 
 
 ## Installation
@@ -252,6 +252,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetCommentsHierarchical**](docs/EditDocumentApi.md#editDocumentDocxGetCommentsHierarchical) | **POST** /convert/edit/docx/get-comments/hierarchical | Get comments from a Word DOCX document hierarchically
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetHeadersAndFooters**](docs/EditDocumentApi.md#editDocumentDocxGetHeadersAndFooters) | **POST** /convert/edit/docx/get-headers-and-footers | Get content of a footer from a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetImages**](docs/EditDocumentApi.md#editDocumentDocxGetImages) | **POST** /convert/edit/docx/get-images | Get images from a Word DOCX document
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetMetadataProperties**](docs/EditDocumentApi.md#editDocumentDocxGetMetadataProperties) | **POST** /convert/edit/docx/get-metadata | Get all metadata properties in Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetSections**](docs/EditDocumentApi.md#editDocumentDocxGetSections) | **POST** /convert/edit/docx/get-sections | Get sections from a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetStyles**](docs/EditDocumentApi.md#editDocumentDocxGetStyles) | **POST** /convert/edit/docx/get-styles | Get styles from a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxGetTableByIndex**](docs/EditDocumentApi.md#editDocumentDocxGetTableByIndex) | **POST** /convert/edit/docx/get-table/by-index | Get a specific table by index in a Word DOCX document
@@ -269,6 +270,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxReplace**](docs/EditDocumentApi.md#editDocumentDocxReplace) | **POST** /convert/edit/docx/replace-all | Replace string in Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxReplaceMulti**](docs/EditDocumentApi.md#editDocumentDocxReplaceMulti) | **POST** /convert/edit/docx/replace-all/multi | Replace multiple strings in Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxReplaceParagraph**](docs/EditDocumentApi.md#editDocumentDocxReplaceParagraph) | **POST** /convert/edit/docx/replace/paragraph | Replace matching paragraphs in a Word DOCX document
+*CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxSetCustomMetadataProperties**](docs/EditDocumentApi.md#editDocumentDocxSetCustomMetadataProperties) | **POST** /convert/edit/docx/set-metadata/custom-property | Set custom property metadata properties in Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxSetFooter**](docs/EditDocumentApi.md#editDocumentDocxSetFooter) | **POST** /convert/edit/docx/set-footer | Set the footer in a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxSetFooterAddPageNumber**](docs/EditDocumentApi.md#editDocumentDocxSetFooterAddPageNumber) | **POST** /convert/edit/docx/set-footer/add-page-number | Add page number to footer in a Word DOCX document
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentDocxSetHeader**](docs/EditDocumentApi.md#editDocumentDocxSetHeader) | **POST** /convert/edit/docx/set-header | Set the header in a Word DOCX document
@@ -435,12 +437,14 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.DocxInsertCommentOnParagraphRequest](docs/DocxInsertCommentOnParagraphRequest.md)
  - [CloudmersiveConvertApiClient.DocxInsertImageRequest](docs/DocxInsertImageRequest.md)
  - [CloudmersiveConvertApiClient.DocxInsertImageResponse](docs/DocxInsertImageResponse.md)
+ - [CloudmersiveConvertApiClient.DocxMetadataCustomProperty](docs/DocxMetadataCustomProperty.md)
  - [CloudmersiveConvertApiClient.DocxPage](docs/DocxPage.md)
  - [CloudmersiveConvertApiClient.DocxParagraph](docs/DocxParagraph.md)
  - [CloudmersiveConvertApiClient.DocxRemoveObjectRequest](docs/DocxRemoveObjectRequest.md)
  - [CloudmersiveConvertApiClient.DocxRemoveObjectResponse](docs/DocxRemoveObjectResponse.md)
  - [CloudmersiveConvertApiClient.DocxRun](docs/DocxRun.md)
  - [CloudmersiveConvertApiClient.DocxSection](docs/DocxSection.md)
+ - [CloudmersiveConvertApiClient.DocxSetCustomMetadataPropertiesRequest](docs/DocxSetCustomMetadataPropertiesRequest.md)
  - [CloudmersiveConvertApiClient.DocxSetFooterAddPageNumberRequest](docs/DocxSetFooterAddPageNumberRequest.md)
  - [CloudmersiveConvertApiClient.DocxSetFooterRequest](docs/DocxSetFooterRequest.md)
  - [CloudmersiveConvertApiClient.DocxSetFooterResponse](docs/DocxSetFooterResponse.md)
@@ -482,6 +486,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.GetDocxHeadersAndFootersResponse](docs/GetDocxHeadersAndFootersResponse.md)
  - [CloudmersiveConvertApiClient.GetDocxImagesRequest](docs/GetDocxImagesRequest.md)
  - [CloudmersiveConvertApiClient.GetDocxImagesResponse](docs/GetDocxImagesResponse.md)
+ - [CloudmersiveConvertApiClient.GetDocxMetadataPropertiesResponse](docs/GetDocxMetadataPropertiesResponse.md)
  - [CloudmersiveConvertApiClient.GetDocxPagesRequest](docs/GetDocxPagesRequest.md)
  - [CloudmersiveConvertApiClient.GetDocxPagesResponse](docs/GetDocxPagesResponse.md)
  - [CloudmersiveConvertApiClient.GetDocxSectionsRequest](docs/GetDocxSectionsRequest.md)
