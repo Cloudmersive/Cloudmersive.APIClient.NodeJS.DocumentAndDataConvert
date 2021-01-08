@@ -36,7 +36,7 @@
   /**
    * The DocxMetadataCustomProperty model module.
    * @module model/DocxMetadataCustomProperty
-   * @version 2.6.0
+   * @version 2.6.1
    */
 
   /**

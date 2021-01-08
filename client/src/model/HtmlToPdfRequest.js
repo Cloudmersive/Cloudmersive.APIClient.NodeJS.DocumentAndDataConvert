@@ -36,7 +36,7 @@
   /**
    * The HtmlToPdfRequest model module.
    * @module model/HtmlToPdfRequest
-   * @version 2.6.0
+   * @version 2.6.1
    */
 
   /**

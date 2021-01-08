@@ -36,7 +36,7 @@
   /**
    * The ClearXlsxRowRequest model module.
    * @module model/ClearXlsxRowRequest
-   * @version 2.6.0
+   * @version 2.6.1
    */
 
   /**

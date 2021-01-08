@@ -36,7 +36,7 @@
   /**
    * The GetXlsxWorksheetsRequest model module.
    * @module model/GetXlsxWorksheetsRequest
-   * @version 2.6.0
+   * @version 2.6.1
    */
 
   /**

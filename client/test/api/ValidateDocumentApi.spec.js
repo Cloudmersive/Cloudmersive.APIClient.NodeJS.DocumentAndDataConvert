@@ -130,6 +130,16 @@
         done();
       });
     });
+    describe('validateDocumentJpgValidation', function() {
+      it('should call validateDocumentJpgValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentJpgValidation
+        //instance.validateDocumentJpgValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('validateDocumentJsonValidation', function() {
       it('should call validateDocumentJsonValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentJsonValidation
@@ -154,6 +164,16 @@
       it('should call validateDocumentPdfValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentPdfValidation
         //instance.validateDocumentPdfValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('validateDocumentPngValidation', function() {
+      it('should call validateDocumentPngValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentPngValidation
+        //instance.validateDocumentPngValidation(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
