@@ -33,7 +33,7 @@
   /**
    * MergeDocument service.
    * @module api/MergeDocumentApi
-   * @version 2.6.1
+   * @version 2.6.2
    */
 
   /**
@@ -170,6 +170,134 @@
 
       return this.apiClient.callApi(
         '/convert/merge/docx/multi', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the mergeDocumentHtml operation.
+     * @callback module:api/MergeDocumentApi~mergeDocumentHtmlCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Merge Two HTML (HTM) Files Together
+     * Combine two HTML (.HTM) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
+     * @param {File} inputFile1 First input file to perform the operation on.
+     * @param {File} inputFile2 Second input file to perform the operation on (more than 2 can be supplied).
+     * @param {module:api/MergeDocumentApi~mergeDocumentHtmlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.mergeDocumentHtml = function(inputFile1, inputFile2, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile1' is set
+      if (inputFile1 === undefined || inputFile1 === null) {
+        throw new Error("Missing the required parameter 'inputFile1' when calling mergeDocumentHtml");
+      }
+
+      // verify the required parameter 'inputFile2' is set
+      if (inputFile2 === undefined || inputFile2 === null) {
+        throw new Error("Missing the required parameter 'inputFile2' when calling mergeDocumentHtml");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile1': inputFile1,
+        'inputFile2': inputFile2
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/convert/merge/html', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the mergeDocumentHtmlMulti operation.
+     * @callback module:api/MergeDocumentApi~mergeDocumentHtmlMultiCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Merge Multple HTML (HTM) Files Together
+     * Combine multiple HTML (.HTM) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
+     * @param {File} inputFile1 First input file to perform the operation on.
+     * @param {File} inputFile2 Second input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {File} opts.inputFile3 Third input file to perform the operation on.
+     * @param {File} opts.inputFile4 Fourth input file to perform the operation on.
+     * @param {File} opts.inputFile5 Fifth input file to perform the operation on.
+     * @param {File} opts.inputFile6 Sixth input file to perform the operation on.
+     * @param {File} opts.inputFile7 Seventh input file to perform the operation on.
+     * @param {File} opts.inputFile8 Eighth input file to perform the operation on.
+     * @param {File} opts.inputFile9 Ninth input file to perform the operation on.
+     * @param {File} opts.inputFile10 Tenth input file to perform the operation on.
+     * @param {module:api/MergeDocumentApi~mergeDocumentHtmlMultiCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.mergeDocumentHtmlMulti = function(inputFile1, inputFile2, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile1' is set
+      if (inputFile1 === undefined || inputFile1 === null) {
+        throw new Error("Missing the required parameter 'inputFile1' when calling mergeDocumentHtmlMulti");
+      }
+
+      // verify the required parameter 'inputFile2' is set
+      if (inputFile2 === undefined || inputFile2 === null) {
+        throw new Error("Missing the required parameter 'inputFile2' when calling mergeDocumentHtmlMulti");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile1': inputFile1,
+        'inputFile2': inputFile2,
+        'inputFile3': opts['inputFile3'],
+        'inputFile4': opts['inputFile4'],
+        'inputFile5': opts['inputFile5'],
+        'inputFile6': opts['inputFile6'],
+        'inputFile7': opts['inputFile7'],
+        'inputFile8': opts['inputFile8'],
+        'inputFile9': opts['inputFile9'],
+        'inputFile10': opts['inputFile10']
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/merge/html/multi', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

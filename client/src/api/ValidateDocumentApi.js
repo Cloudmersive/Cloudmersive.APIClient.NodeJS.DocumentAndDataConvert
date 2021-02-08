@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AutodetectDocumentValidationResult', 'model/DocumentValidationResult'], factory);
+    define(['ApiClient', 'model/AutodetectDocumentValidationResult', 'model/DocumentValidationResult', 'model/HtmlSsrfThreatCheckResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AutodetectDocumentValidationResult'), require('../model/DocumentValidationResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/AutodetectDocumentValidationResult'), require('../model/DocumentValidationResult'), require('../model/HtmlSsrfThreatCheckResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ValidateDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectDocumentValidationResult, root.CloudmersiveConvertApiClient.DocumentValidationResult);
+    root.CloudmersiveConvertApiClient.ValidateDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectDocumentValidationResult, root.CloudmersiveConvertApiClient.DocumentValidationResult, root.CloudmersiveConvertApiClient.HtmlSsrfThreatCheckResult);
   }
-}(this, function(ApiClient, AutodetectDocumentValidationResult, DocumentValidationResult) {
+}(this, function(ApiClient, AutodetectDocumentValidationResult, DocumentValidationResult, HtmlSsrfThreatCheckResult) {
   'use strict';
 
   /**
    * ValidateDocument service.
    * @module api/ValidateDocumentApi
-   * @version 2.6.1
+   * @version 2.6.2
    */
 
   /**
@@ -330,6 +330,54 @@
 
       return this.apiClient.callApi(
         '/convert/validate/gzip', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validateDocumentHtmlSsrfValidation operation.
+     * @callback module:api/ValidateDocumentApi~validateDocumentHtmlSsrfValidationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/HtmlSsrfThreatCheckResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate an HTML file and checks for SSRF threats
+     * Validate an HTML document file and checks for SSRF (Server-side Request Forgery) threats in the file; if the document is not valid, identifies the errors in the document
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ValidateDocumentApi~validateDocumentHtmlSsrfValidationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/HtmlSsrfThreatCheckResult}
+     */
+    this.validateDocumentHtmlSsrfValidation = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling validateDocumentHtmlSsrfValidation");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = HtmlSsrfThreatCheckResult;
+
+      return this.apiClient.callApi(
+        '/convert/validate/html/ssrf-threat-check', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

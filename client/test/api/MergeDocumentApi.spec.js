@@ -70,6 +70,26 @@
         done();
       });
     });
+    describe('mergeDocumentHtml', function() {
+      it('should call mergeDocumentHtml successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentHtml
+        //instance.mergeDocumentHtml(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('mergeDocumentHtmlMulti', function() {
+      it('should call mergeDocumentHtmlMulti successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentHtmlMulti
+        //instance.mergeDocumentHtmlMulti(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('mergeDocumentPdf', function() {
       it('should call mergeDocumentPdf successfully', function(done) {
         //uncomment below and update the code to test mergeDocumentPdf

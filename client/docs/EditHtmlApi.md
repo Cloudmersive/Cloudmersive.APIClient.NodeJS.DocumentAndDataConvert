@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**editHtmlHtmlAppendImageInline**](EditHtmlApi.md#editHtmlHtmlAppendImageInline) | **POST** /convert/edit/html/append/image/inline | Append a Base64 Inline Image to an HTML Document
 [**editHtmlHtmlAppendParagraph**](EditHtmlApi.md#editHtmlHtmlAppendParagraph) | **POST** /convert/edit/html/append/paragraph | Append a Paragraph to an HTML Document
 [**editHtmlHtmlCreateBlankDocument**](EditHtmlApi.md#editHtmlHtmlCreateBlankDocument) | **POST** /convert/edit/html/create/blank | Create a Blank HTML Document
+[**editHtmlHtmlGetLinks**](EditHtmlApi.md#editHtmlHtmlGetLinks) | **POST** /convert/edit/html/extract/links | Extract resolved link URLs from HTML File
 
 
 <a name="editHtmlHtmlAppendHeading"></a>
@@ -312,6 +313,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 **&#39;Blob&#39;**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="editHtmlHtmlGetLinks"></a>
+# **editHtmlHtmlGetLinks**
+> HtmlGetLinksResponse editHtmlHtmlGetLinks(opts)
+
+Extract resolved link URLs from HTML File
+
+Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditHtmlApi();
+
+var opts = { 
+  'inputFile': "/path/to/file.txt", // File | Optional: Input file to perform the operation on.
+  'inputFileUrl': "inputFileUrl_example", // String | Optional: URL of a file to operate on as input.
+  'baseUrl': "baseUrl_example" // String | Optional: Base URL of the page, such as https://mydomain.com
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editHtmlHtmlGetLinks(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] 
+ **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] 
+ **baseUrl** | **String**| Optional: Base URL of the page, such as https://mydomain.com | [optional] 
+
+### Return type
+
+[**HtmlGetLinksResponse**](HtmlGetLinksResponse.md)
 
 ### Authorization
 

@@ -36,7 +36,7 @@
   /**
    * The FindStringSimpleResponse model module.
    * @module model/FindStringSimpleResponse
-   * @version 2.6.1
+   * @version 2.6.2
    */
 
   /**

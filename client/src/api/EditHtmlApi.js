@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/HtmlGetLinksResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('../model/HtmlGetLinksResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.EditHtmlApi = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.EditHtmlApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.HtmlGetLinksResponse);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, HtmlGetLinksResponse) {
   'use strict';
 
   /**
    * EditHtml service.
    * @module api/EditHtmlApi
-   * @version 2.6.1
+   * @version 2.6.2
    */
 
   /**
@@ -320,6 +320,55 @@
 
       return this.apiClient.callApi(
         '/convert/edit/html/create/blank', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editHtmlHtmlGetLinks operation.
+     * @callback module:api/EditHtmlApi~editHtmlHtmlGetLinksCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/HtmlGetLinksResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Extract resolved link URLs from HTML File
+     * Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
+     * @param {Object} opts Optional parameters
+     * @param {File} opts.inputFile Optional: Input file to perform the operation on.
+     * @param {String} opts.inputFileUrl Optional: URL of a file to operate on as input.
+     * @param {String} opts.baseUrl Optional: Base URL of the page, such as https://mydomain.com
+     * @param {module:api/EditHtmlApi~editHtmlHtmlGetLinksCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/HtmlGetLinksResponse}
+     */
+    this.editHtmlHtmlGetLinks = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'inputFileUrl': opts['inputFileUrl'],
+        'baseUrl': opts['baseUrl']
+      };
+      var formParams = {
+        'inputFile': opts['inputFile']
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = HtmlGetLinksResponse;
+
+      return this.apiClient.callApi(
+        '/convert/edit/html/extract/links', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -110,6 +110,16 @@
         done();
       });
     });
+    describe('validateDocumentHtmlSsrfValidation', function() {
+      it('should call validateDocumentHtmlSsrfValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentHtmlSsrfValidation
+        //instance.validateDocumentHtmlSsrfValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('validateDocumentHtmlValidation', function() {
       it('should call validateDocumentHtmlValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentHtmlValidation

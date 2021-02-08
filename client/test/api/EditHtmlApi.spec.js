@@ -100,6 +100,16 @@
         done();
       });
     });
+    describe('editHtmlHtmlGetLinks', function() {
+      it('should call editHtmlHtmlGetLinks successfully', function(done) {
+        //uncomment below and update the code to test editHtmlHtmlGetLinks
+        //instance.editHtmlHtmlGetLinks(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

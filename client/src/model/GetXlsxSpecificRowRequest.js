@@ -36,7 +36,7 @@
   /**
    * The GetXlsxSpecificRowRequest model module.
    * @module model/GetXlsxSpecificRowRequest
-   * @version 2.6.1
+   * @version 2.6.2
    */
 
   /**

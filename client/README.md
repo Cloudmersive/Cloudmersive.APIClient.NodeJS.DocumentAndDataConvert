@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.6.1
+- Package version: 2.6.2
 
 
 ## Installation
@@ -304,6 +304,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlAppendImageInline**](docs/EditHtmlApi.md#editHtmlHtmlAppendImageInline) | **POST** /convert/edit/html/append/image/inline | Append a Base64 Inline Image to an HTML Document
 *CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlAppendParagraph**](docs/EditHtmlApi.md#editHtmlHtmlAppendParagraph) | **POST** /convert/edit/html/append/paragraph | Append a Paragraph to an HTML Document
 *CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlCreateBlankDocument**](docs/EditHtmlApi.md#editHtmlHtmlCreateBlankDocument) | **POST** /convert/edit/html/create/blank | Create a Blank HTML Document
+*CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlGetLinks**](docs/EditHtmlApi.md#editHtmlHtmlGetLinks) | **POST** /convert/edit/html/extract/links | Extract resolved link URLs from HTML File
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfAddAnnotations**](docs/EditPdfApi.md#editPdfAddAnnotations) | **POST** /convert/edit/pdf/annotations/add-item | Add one or more PDF annotations, comments in the PDF document
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfConvertToPdfA**](docs/EditPdfApi.md#editPdfConvertToPdfA) | **POST** /convert/edit/pdf/optimize/pdf-a | Convert a PDF file to PDF/A
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfDecrypt**](docs/EditPdfApi.md#editPdfDecrypt) | **POST** /convert/edit/pdf/decrypt | Decrypt and password-protect a PDF
@@ -341,6 +342,8 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditTextApi* | [**editTextTrimWhitespace**](docs/EditTextApi.md#editTextTrimWhitespace) | **POST** /convert/edit/text/remove/whitespace/trim | Trim leading and trailing whitespace from text string
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentDocx**](docs/MergeDocumentApi.md#mergeDocumentDocx) | **POST** /convert/merge/docx | Merge Two Word DOCX Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentDocxMulti**](docs/MergeDocumentApi.md#mergeDocumentDocxMulti) | **POST** /convert/merge/docx/multi | Merge Multple Word DOCX Together
+*CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentHtml**](docs/MergeDocumentApi.md#mergeDocumentHtml) | **POST** /convert/merge/html | Merge Two HTML (HTM) Files Together
+*CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentHtmlMulti**](docs/MergeDocumentApi.md#mergeDocumentHtmlMulti) | **POST** /convert/merge/html/multi | Merge Multple HTML (HTM) Files Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPdf**](docs/MergeDocumentApi.md#mergeDocumentPdf) | **POST** /convert/merge/pdf | Merge Two PDF Files Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPdfMulti**](docs/MergeDocumentApi.md#mergeDocumentPdfMulti) | **POST** /convert/merge/pdf/multi | Merge Multple PDF Files Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPng**](docs/MergeDocumentApi.md#mergeDocumentPng) | **POST** /convert/merge/png/vertical | Merge Two PNG Files Together
@@ -365,6 +368,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentEmlValidation**](docs/ValidateDocumentApi.md#validateDocumentEmlValidation) | **POST** /convert/validate/eml | Validate if an EML file is executable
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentExecutableValidation**](docs/ValidateDocumentApi.md#validateDocumentExecutableValidation) | **POST** /convert/validate/executable | Validate if a file is executable
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentGZipValidation**](docs/ValidateDocumentApi.md#validateDocumentGZipValidation) | **POST** /convert/validate/gzip | Validate a GZip Archive file (gzip or gz)
+*CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentHtmlSsrfValidation**](docs/ValidateDocumentApi.md#validateDocumentHtmlSsrfValidation) | **POST** /convert/validate/html/ssrf-threat-check | Validate an HTML file and checks for SSRF threats
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentHtmlValidation**](docs/ValidateDocumentApi.md#validateDocumentHtmlValidation) | **POST** /convert/validate/html | Validate an HTML file
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentImageValidation**](docs/ValidateDocumentApi.md#validateDocumentImageValidation) | **POST** /convert/validate/image | Validate an Image File
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentJpgValidation**](docs/ValidateDocumentApi.md#validateDocumentJpgValidation) | **POST** /convert/validate/jpg | Validate a JPG File
@@ -520,10 +524,14 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.GetXlsxStylesResponse](docs/GetXlsxStylesResponse.md)
  - [CloudmersiveConvertApiClient.GetXlsxWorksheetsRequest](docs/GetXlsxWorksheetsRequest.md)
  - [CloudmersiveConvertApiClient.GetXlsxWorksheetsResponse](docs/GetXlsxWorksheetsResponse.md)
+ - [CloudmersiveConvertApiClient.HtmlGetLinksResponse](docs/HtmlGetLinksResponse.md)
+ - [CloudmersiveConvertApiClient.HtmlHyperlink](docs/HtmlHyperlink.md)
  - [CloudmersiveConvertApiClient.HtmlMdResult](docs/HtmlMdResult.md)
+ - [CloudmersiveConvertApiClient.HtmlSsrfThreatCheckResult](docs/HtmlSsrfThreatCheckResult.md)
  - [CloudmersiveConvertApiClient.HtmlTemplateApplicationRequest](docs/HtmlTemplateApplicationRequest.md)
  - [CloudmersiveConvertApiClient.HtmlTemplateApplicationResponse](docs/HtmlTemplateApplicationResponse.md)
  - [CloudmersiveConvertApiClient.HtmlTemplateOperation](docs/HtmlTemplateOperation.md)
+ - [CloudmersiveConvertApiClient.HtmlThreatLink](docs/HtmlThreatLink.md)
  - [CloudmersiveConvertApiClient.HtmlToOfficeRequest](docs/HtmlToOfficeRequest.md)
  - [CloudmersiveConvertApiClient.HtmlToPdfRequest](docs/HtmlToPdfRequest.md)
  - [CloudmersiveConvertApiClient.HtmlToPngRequest](docs/HtmlToPngRequest.md)
