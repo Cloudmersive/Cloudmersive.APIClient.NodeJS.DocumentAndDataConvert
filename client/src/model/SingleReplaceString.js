@@ -36,7 +36,7 @@
   /**
    * The SingleReplaceString model module.
    * @module model/SingleReplaceString
-   * @version 2.6.2
+   * @version 2.6.3
    */
 
   /**

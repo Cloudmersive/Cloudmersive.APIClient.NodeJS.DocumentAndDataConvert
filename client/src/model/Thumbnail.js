@@ -36,7 +36,7 @@
   /**
    * The Thumbnail model module.
    * @module model/Thumbnail
-   * @version 2.6.2
+   * @version 2.6.3
    */
 
   /**

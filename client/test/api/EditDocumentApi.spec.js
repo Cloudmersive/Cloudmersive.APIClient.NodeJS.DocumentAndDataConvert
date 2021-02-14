@@ -190,6 +190,16 @@
         done();
       });
     });
+    describe('editDocumentDocxGetMacroInformation', function() {
+      it('should call editDocumentDocxGetMacroInformation successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxGetMacroInformation
+        //instance.editDocumentDocxGetMacroInformation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentDocxGetMetadataProperties', function() {
       it('should call editDocumentDocxGetMetadataProperties successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxGetMetadataProperties
@@ -450,6 +460,16 @@
         done();
       });
     });
+    describe('editDocumentPptxGetMacroInformation', function() {
+      it('should call editDocumentPptxGetMacroInformation successfully', function(done) {
+        //uncomment below and update the code to test editDocumentPptxGetMacroInformation
+        //instance.editDocumentPptxGetMacroInformation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentPptxReplace', function() {
       it('should call editDocumentPptxReplace successfully', function(done) {
         //uncomment below and update the code to test editDocumentPptxReplace
@@ -574,6 +594,16 @@
       it('should call editDocumentXlsxGetImages successfully', function(done) {
         //uncomment below and update the code to test editDocumentXlsxGetImages
         //instance.editDocumentXlsxGetImages(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentXlsxGetMacroInformation', function() {
+      it('should call editDocumentXlsxGetMacroInformation successfully', function(done) {
+        //uncomment below and update the code to test editDocumentXlsxGetMacroInformation
+        //instance.editDocumentXlsxGetMacroInformation(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

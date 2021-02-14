@@ -16,33 +16,33 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ConvertedJpgPage'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ConvertedJpgPage'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.KeynoteToJpgResult = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.ConvertedJpgPage);
+    root.CloudmersiveConvertApiClient.GetMacrosResponse = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
-}(this, function(ApiClient, ConvertedJpgPage) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
 
   /**
-   * The KeynoteToJpgResult model module.
-   * @module model/KeynoteToJpgResult
+   * The GetMacrosResponse model module.
+   * @module model/GetMacrosResponse
    * @version 2.6.3
    */
 
   /**
-   * Constructs a new <code>KeynoteToJpgResult</code>.
-   * Result of converting a Keynote input to a JPG array
-   * @alias module:model/KeynoteToJpgResult
+   * Constructs a new <code>GetMacrosResponse</code>.
+   * Result of running a Get Macro Information command
+   * @alias module:model/GetMacrosResponse
    * @class
    */
   var exports = function() {
@@ -53,11 +53,11 @@
   };
 
   /**
-   * Constructs a <code>KeynoteToJpgResult</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GetMacrosResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/KeynoteToJpgResult} obj Optional instance to populate.
-   * @return {module:model/KeynoteToJpgResult} The populated <code>KeynoteToJpgResult</code> instance.
+   * @param {module:model/GetMacrosResponse} obj Optional instance to populate.
+   * @return {module:model/GetMacrosResponse} The populated <code>GetMacrosResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -66,23 +66,23 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
-      if (data.hasOwnProperty('JpgResultPages')) {
-        obj['JpgResultPages'] = ApiClient.convertToType(data['JpgResultPages'], [ConvertedJpgPage]);
+      if (data.hasOwnProperty('ContainsVbaMacros')) {
+        obj['ContainsVbaMacros'] = ApiClient.convertToType(data['ContainsVbaMacros'], 'Boolean');
       }
     }
     return obj;
   }
 
   /**
-   * True if the operation was successful, false otherwise
+   * True if successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
   /**
-   * Array of converted pages
-   * @member {Array.<module:model/ConvertedJpgPage>} JpgResultPages
+   * True if the document contains VBA macros, false otherwise
+   * @member {Boolean} ContainsVbaMacros
    */
-  exports.prototype['JpgResultPages'] = undefined;
+  exports.prototype['ContainsVbaMacros'] = undefined;
 
 
 
