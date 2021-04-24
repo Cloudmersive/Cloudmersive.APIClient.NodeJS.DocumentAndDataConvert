@@ -36,7 +36,7 @@
   /**
    * The GetMacrosResponse model module.
    * @module model/GetMacrosResponse
-   * @version 2.6.3
+   * @version 2.6.4
    */
 
   /**

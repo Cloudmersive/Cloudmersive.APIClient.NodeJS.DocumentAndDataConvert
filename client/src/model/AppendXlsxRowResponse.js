@@ -36,7 +36,7 @@
   /**
    * The AppendXlsxRowResponse model module.
    * @module model/AppendXlsxRowResponse
-   * @version 2.6.3
+   * @version 2.6.4
    */
 
   /**

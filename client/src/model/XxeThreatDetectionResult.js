@@ -25,7 +25,7 @@
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ViewerResponse = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.XxeThreatDetectionResult = factory(root.CloudmersiveConvertApiClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The ViewerResponse model module.
-   * @module model/ViewerResponse
+   * The XxeThreatDetectionResult model module.
+   * @module model/XxeThreatDetectionResult
    * @version 2.6.4
    */
 
   /**
-   * Constructs a new <code>ViewerResponse</code>.
-   * Result of creating a viewer
-   * @alias module:model/ViewerResponse
+   * Constructs a new <code>XxeThreatDetectionResult</code>.
+   * Result of performing an XXE threat detection operation
+   * @alias module:model/XxeThreatDetectionResult
    * @class
    */
   var exports = function() {
@@ -53,34 +53,36 @@
   };
 
   /**
-   * Constructs a <code>ViewerResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>XxeThreatDetectionResult</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ViewerResponse} obj Optional instance to populate.
-   * @return {module:model/ViewerResponse} The populated <code>ViewerResponse</code> instance.
+   * @param {module:model/XxeThreatDetectionResult} obj Optional instance to populate.
+   * @return {module:model/XxeThreatDetectionResult} The populated <code>XxeThreatDetectionResult</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('HtmlEmbed')) {
-        obj['HtmlEmbed'] = ApiClient.convertToType(data['HtmlEmbed'], 'String');
-      }
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
+      }
+      if (data.hasOwnProperty('ContainsXxeThreat')) {
+        obj['ContainsXxeThreat'] = ApiClient.convertToType(data['ContainsXxeThreat'], 'Boolean');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} HtmlEmbed
-   */
-  exports.prototype['HtmlEmbed'] = undefined;
-  /**
+   * True if the operation was successful, false otherwise
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
+  /**
+   * True if the XML input contains XXE threats, false otherwise
+   * @member {Boolean} ContainsXxeThreat
+   */
+  exports.prototype['ContainsXxeThreat'] = undefined;
 
 
 

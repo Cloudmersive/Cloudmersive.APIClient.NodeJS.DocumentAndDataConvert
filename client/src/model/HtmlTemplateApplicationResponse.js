@@ -36,7 +36,7 @@
   /**
    * The HtmlTemplateApplicationResponse model module.
    * @module model/HtmlTemplateApplicationResponse
-   * @version 2.6.3
+   * @version 2.6.4
    */
 
   /**

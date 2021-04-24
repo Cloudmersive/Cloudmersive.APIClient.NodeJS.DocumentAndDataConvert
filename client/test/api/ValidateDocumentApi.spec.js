@@ -250,6 +250,16 @@
         done();
       });
     });
+    describe('validateDocumentXmlXxeThreatValidation', function() {
+      it('should call validateDocumentXmlXxeThreatValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentXmlXxeThreatValidation
+        //instance.validateDocumentXmlXxeThreatValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('validateDocumentZipValidation', function() {
       it('should call validateDocumentZipValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentZipValidation

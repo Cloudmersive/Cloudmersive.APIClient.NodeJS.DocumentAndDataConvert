@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.6.3
+- Package version: 2.6.4
 
 
 ## Installation
@@ -385,11 +385,13 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentTxtValidation**](docs/ValidateDocumentApi.md#validateDocumentTxtValidation) | **POST** /convert/validate/txt | Validate an TXT file
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentXlsxValidation**](docs/ValidateDocumentApi.md#validateDocumentXlsxValidation) | **POST** /convert/validate/xlsx | Validate a Excel document (XLSX)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentXmlValidation**](docs/ValidateDocumentApi.md#validateDocumentXmlValidation) | **POST** /convert/validate/xml | Validate an XML file
+*CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentXmlXxeThreatValidation**](docs/ValidateDocumentApi.md#validateDocumentXmlXxeThreatValidation) | **POST** /convert/validate/xml/xxe-threats | Validate an XML file for XML External Entity (XXE) threats
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentZipValidation**](docs/ValidateDocumentApi.md#validateDocumentZipValidation) | **POST** /convert/validate/zip | Validate a Zip Archive file (zip)
 *CloudmersiveConvertApiClient.ViewerToolsApi* | [**viewerToolsCreateSimple**](docs/ViewerToolsApi.md#viewerToolsCreateSimple) | **POST** /convert/viewer/create/web/simple | Create a web-based viewer
 *CloudmersiveConvertApiClient.ZipArchiveApi* | [**zipArchiveZipCreate**](docs/ZipArchiveApi.md#zipArchiveZipCreate) | **POST** /convert/archive/zip/create | Compress files to create a new zip archive
 *CloudmersiveConvertApiClient.ZipArchiveApi* | [**zipArchiveZipCreateAdvanced**](docs/ZipArchiveApi.md#zipArchiveZipCreateAdvanced) | **POST** /convert/archive/zip/create/advanced | Compress files and folders to create a new zip archive with advanced options
 *CloudmersiveConvertApiClient.ZipArchiveApi* | [**zipArchiveZipCreateEncrypted**](docs/ZipArchiveApi.md#zipArchiveZipCreateEncrypted) | **POST** /convert/archive/zip/create/encrypted | Compress files to create a new, encrypted and password-protected zip archive
+*CloudmersiveConvertApiClient.ZipArchiveApi* | [**zipArchiveZipCreateQuarantine**](docs/ZipArchiveApi.md#zipArchiveZipCreateQuarantine) | **POST** /convert/archive/zip/create/quarantine | Create an encrypted zip file to quarantine a dangerous file
 *CloudmersiveConvertApiClient.ZipArchiveApi* | [**zipArchiveZipDecrypt**](docs/ZipArchiveApi.md#zipArchiveZipDecrypt) | **POST** /convert/archive/zip/decrypt | Decrypt and remove password protection on a zip file
 *CloudmersiveConvertApiClient.ZipArchiveApi* | [**zipArchiveZipEncryptAdvanced**](docs/ZipArchiveApi.md#zipArchiveZipEncryptAdvanced) | **POST** /convert/archive/zip/encrypt/advanced | Encrypt and password protect a zip file
 *CloudmersiveConvertApiClient.ZipArchiveApi* | [**zipArchiveZipExtract**](docs/ZipArchiveApi.md#zipArchiveZipExtract) | **POST** /convert/archive/zip/extract | Extract, decompress files and folders from a zip archive
@@ -641,6 +643,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.XmlRemoveWithXPathResult](docs/XmlRemoveWithXPathResult.md)
  - [CloudmersiveConvertApiClient.XmlReplaceWithXPathResult](docs/XmlReplaceWithXPathResult.md)
  - [CloudmersiveConvertApiClient.XmlSetValueWithXPathResult](docs/XmlSetValueWithXPathResult.md)
+ - [CloudmersiveConvertApiClient.XxeThreatDetectionResult](docs/XxeThreatDetectionResult.md)
  - [CloudmersiveConvertApiClient.ZipDirectory](docs/ZipDirectory.md)
  - [CloudmersiveConvertApiClient.ZipEncryptionAdvancedRequest](docs/ZipEncryptionAdvancedRequest.md)
  - [CloudmersiveConvertApiClient.ZipExtractResponse](docs/ZipExtractResponse.md)

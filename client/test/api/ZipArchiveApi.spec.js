@@ -80,6 +80,16 @@
         done();
       });
     });
+    describe('zipArchiveZipCreateQuarantine', function() {
+      it('should call zipArchiveZipCreateQuarantine successfully', function(done) {
+        //uncomment below and update the code to test zipArchiveZipCreateQuarantine
+        //instance.zipArchiveZipCreateQuarantine(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('zipArchiveZipDecrypt', function() {
       it('should call zipArchiveZipDecrypt successfully', function(done) {
         //uncomment below and update the code to test zipArchiveZipDecrypt

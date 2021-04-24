@@ -36,7 +36,7 @@
   /**
    * The KeynoteToPngResult model module.
    * @module model/KeynoteToPngResult
-   * @version 2.6.3
+   * @version 2.6.4
    */
 
   /**

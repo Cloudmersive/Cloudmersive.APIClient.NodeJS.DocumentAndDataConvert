@@ -33,7 +33,7 @@
   /**
    * ZipArchive service.
    * @module api/ZipArchiveApi
-   * @version 2.6.3
+   * @version 2.6.4
    */
 
   /**
@@ -234,6 +234,47 @@
 
       return this.apiClient.callApi(
         '/convert/archive/zip/create/encrypted', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the zipArchiveZipCreateQuarantine operation.
+     * @callback module:api/ZipArchiveApi~zipArchiveZipCreateQuarantineCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create an encrypted zip file to quarantine a dangerous file
+     * Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip, for the purposes of quarantining the underlyikng file.
+     * @param {module:api/ZipArchiveApi~zipArchiveZipCreateQuarantineCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.zipArchiveZipCreateQuarantine = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/octet-stream'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/convert/archive/zip/create/quarantine', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
