@@ -36,7 +36,7 @@
   /**
    * The DisableSharedWorkbookRequest model module.
    * @module model/DisableSharedWorkbookRequest
-   * @version 2.6.4
+   * @version 2.6.5
    */
 
   /**

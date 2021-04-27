@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 <a name="zipArchiveZipCreateQuarantine"></a>
 # **zipArchiveZipCreateQuarantine**
-> Object zipArchiveZipCreateQuarantine()
+> Object zipArchiveZipCreateQuarantine(password, inputFile1, opts)
 
 Create an encrypted zip file to quarantine a dangerous file
 
@@ -238,6 +238,14 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.ZipArchiveApi();
 
+var password = "password_example"; // String | Password to place on the Zip file; the longer the password, the more secure
+
+var inputFile1 = "/path/to/file.txt"; // File | First input file to perform the operation on.
+
+var opts = { 
+  'encryptionAlgorithm': "encryptionAlgorithm_example" // String | Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256.
+};
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -245,11 +253,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.zipArchiveZipCreateQuarantine(callback);
+apiInstance.zipArchiveZipCreateQuarantine(password, inputFile1, opts, callback);
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **password** | **String**| Password to place on the Zip file; the longer the password, the more secure | 
+ **inputFile1** | **File**| First input file to perform the operation on. | 
+ **encryptionAlgorithm** | **String**| Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. | [optional] 
 
 ### Return type
 

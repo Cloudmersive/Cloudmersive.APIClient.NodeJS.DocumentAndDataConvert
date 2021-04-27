@@ -36,7 +36,7 @@
   /**
    * The AutodetectToThumbnailsResult model module.
    * @module model/AutodetectToThumbnailsResult
-   * @version 2.6.4
+   * @version 2.6.5
    */
 
   /**

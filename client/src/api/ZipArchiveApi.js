@@ -33,7 +33,7 @@
   /**
    * ZipArchive service.
    * @module api/ZipArchiveApi
-   * @version 2.6.4
+   * @version 2.6.5
    */
 
   /**
@@ -250,11 +250,26 @@
     /**
      * Create an encrypted zip file to quarantine a dangerous file
      * Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip, for the purposes of quarantining the underlyikng file.
+     * @param {String} password Password to place on the Zip file; the longer the password, the more secure
+     * @param {File} inputFile1 First input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.encryptionAlgorithm Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256.
      * @param {module:api/ZipArchiveApi~zipArchiveZipCreateQuarantineCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
-    this.zipArchiveZipCreateQuarantine = function(callback) {
+    this.zipArchiveZipCreateQuarantine = function(password, inputFile1, opts, callback) {
+      opts = opts || {};
       var postBody = null;
+
+      // verify the required parameter 'password' is set
+      if (password === undefined || password === null) {
+        throw new Error("Missing the required parameter 'password' when calling zipArchiveZipCreateQuarantine");
+      }
+
+      // verify the required parameter 'inputFile1' is set
+      if (inputFile1 === undefined || inputFile1 === null) {
+        throw new Error("Missing the required parameter 'inputFile1' when calling zipArchiveZipCreateQuarantine");
+      }
 
 
       var pathParams = {
@@ -264,8 +279,11 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'password': password,
+        'encryptionAlgorithm': opts['encryptionAlgorithm']
       };
       var formParams = {
+        'inputFile1': inputFile1
       };
 
       var authNames = ['Apikey'];
