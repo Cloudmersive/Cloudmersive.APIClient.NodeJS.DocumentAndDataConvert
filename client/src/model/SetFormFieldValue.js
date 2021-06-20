@@ -36,7 +36,7 @@
   /**
    * The SetFormFieldValue model module.
    * @module model/SetFormFieldValue
-   * @version 2.6.5
+   * @version 2.6.6
    */
 
   /**

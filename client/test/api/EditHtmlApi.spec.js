@@ -50,6 +50,16 @@
   }
 
   describe('EditHtmlApi', function() {
+    describe('editHtmlHtmlAppendHeaderTag', function() {
+      it('should call editHtmlHtmlAppendHeaderTag successfully', function(done) {
+        //uncomment below and update the code to test editHtmlHtmlAppendHeaderTag
+        //instance.editHtmlHtmlAppendHeaderTag(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editHtmlHtmlAppendHeading', function() {
       it('should call editHtmlHtmlAppendHeading successfully', function(done) {
         //uncomment below and update the code to test editHtmlHtmlAppendHeading
@@ -100,10 +110,70 @@
         done();
       });
     });
+    describe('editHtmlHtmlGetLanguage', function() {
+      it('should call editHtmlHtmlGetLanguage successfully', function(done) {
+        //uncomment below and update the code to test editHtmlHtmlGetLanguage
+        //instance.editHtmlHtmlGetLanguage(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editHtmlHtmlGetLinks', function() {
       it('should call editHtmlHtmlGetLinks successfully', function(done) {
         //uncomment below and update the code to test editHtmlHtmlGetLinks
         //instance.editHtmlHtmlGetLinks(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editHtmlHtmlGetRelCanonical', function() {
+      it('should call editHtmlHtmlGetRelCanonical successfully', function(done) {
+        //uncomment below and update the code to test editHtmlHtmlGetRelCanonical
+        //instance.editHtmlHtmlGetRelCanonical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editHtmlHtmlGetSitemap', function() {
+      it('should call editHtmlHtmlGetSitemap successfully', function(done) {
+        //uncomment below and update the code to test editHtmlHtmlGetSitemap
+        //instance.editHtmlHtmlGetSitemap(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editHtmlHtmlSetLanguage', function() {
+      it('should call editHtmlHtmlSetLanguage successfully', function(done) {
+        //uncomment below and update the code to test editHtmlHtmlSetLanguage
+        //instance.editHtmlHtmlSetLanguage(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editHtmlHtmlSetRelCanonical', function() {
+      it('should call editHtmlHtmlSetRelCanonical successfully', function(done) {
+        //uncomment below and update the code to test editHtmlHtmlSetRelCanonical
+        //instance.editHtmlHtmlSetRelCanonical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editHtmlHtmlSetSitemapUrl', function() {
+      it('should call editHtmlHtmlSetSitemapUrl successfully', function(done) {
+        //uncomment below and update the code to test editHtmlHtmlSetSitemapUrl
+        //instance.editHtmlHtmlSetSitemapUrl(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

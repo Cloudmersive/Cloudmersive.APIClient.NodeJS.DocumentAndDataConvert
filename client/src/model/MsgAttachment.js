@@ -36,7 +36,7 @@
   /**
    * The MsgAttachment model module.
    * @module model/MsgAttachment
-   * @version 2.6.5
+   * @version 2.6.6
    */
 
   /**

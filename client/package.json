@@ -1,6 +1,6 @@
 {
   "name": "cloudmersive-convert-api-client",
-  "version": "2.6.5",
+  "version": "2.6.6",
   "description": "Convert_API_lets_you_effortlessly_convert_file_formats_and_types_",
   "license": "Apache-2.0",
   "main": "src/index.js",

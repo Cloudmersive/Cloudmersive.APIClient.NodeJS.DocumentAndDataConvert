@@ -36,7 +36,7 @@
   /**
    * The Base64DetectResponse model module.
    * @module model/Base64DetectResponse
-   * @version 2.6.5
+   * @version 2.6.6
    */
 
   /**

@@ -33,7 +33,7 @@
   /**
    * MergeDocument service.
    * @module api/MergeDocumentApi
-   * @version 2.6.5
+   * @version 2.6.6
    */
 
   /**
@@ -179,7 +179,7 @@
      * Callback function to receive the result of the mergeDocumentHtml operation.
      * @callback module:api/MergeDocumentApi~mergeDocumentHtmlCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {'Blob'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -189,7 +189,7 @@
      * @param {File} inputFile1 First input file to perform the operation on.
      * @param {File} inputFile2 Second input file to perform the operation on (more than 2 can be supplied).
      * @param {module:api/MergeDocumentApi~mergeDocumentHtmlCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link 'Blob'}
      */
     this.mergeDocumentHtml = function(inputFile1, inputFile2, callback) {
       var postBody = null;
@@ -221,7 +221,7 @@
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/octet-stream'];
-      var returnType = Object;
+      var returnType = 'Blob';
 
       return this.apiClient.callApi(
         '/convert/merge/html', 'POST',

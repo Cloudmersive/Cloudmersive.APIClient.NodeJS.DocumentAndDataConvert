@@ -33,7 +33,7 @@
   /**
    * EditPdf service.
    * @module api/EditPdfApi
-   * @version 2.6.5
+   * @version 2.6.6
    */
 
   /**
@@ -699,10 +699,13 @@
      * Reduce the file size and optimize a PDF
      * Reduces the file size and optimizes the content of a PDF to minimize its file size.
      * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.quality Quality level for the images in the PDF, ranging from 0.0 (low quality) to 1.0 (high quality); default is 0.3
      * @param {module:api/EditPdfApi~editPdfReduceFileSizeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */
-    this.editPdfReduceFileSize = function(inputFile, callback) {
+    this.editPdfReduceFileSize = function(inputFile, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'inputFile' is set
@@ -718,6 +721,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'quality': opts['quality']
       };
       var formParams = {
         'inputFile': inputFile

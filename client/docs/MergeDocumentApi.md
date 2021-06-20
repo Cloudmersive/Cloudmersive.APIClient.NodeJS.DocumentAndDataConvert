@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 <a name="mergeDocumentHtml"></a>
 # **mergeDocumentHtml**
-> Object mergeDocumentHtml(inputFile1, inputFile2)
+> &#39;Blob&#39; mergeDocumentHtml(inputFile1, inputFile2)
 
 Merge Two HTML (HTM) Files Together
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**&#39;Blob&#39;**
 
 ### Authorization
 

@@ -36,7 +36,7 @@
   /**
    * The ReplaceStringSimpleResponse model module.
    * @module model/ReplaceStringSimpleResponse
-   * @version 2.6.5
+   * @version 2.6.6
    */
 
   /**

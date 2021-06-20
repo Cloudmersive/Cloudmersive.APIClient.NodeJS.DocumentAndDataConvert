@@ -33,7 +33,7 @@
   /**
    * TransformDocument service.
    * @module api/TransformDocumentApi
-   * @version 2.6.5
+   * @version 2.6.6
    */
 
   /**

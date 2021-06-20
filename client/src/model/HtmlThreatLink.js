@@ -36,7 +36,7 @@
   /**
    * The HtmlThreatLink model module.
    * @module model/HtmlThreatLink
-   * @version 2.6.5
+   * @version 2.6.6
    */
 
   /**

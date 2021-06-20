@@ -36,7 +36,7 @@
   /**
    * The UrlToPdfRequest model module.
    * @module model/UrlToPdfRequest
-   * @version 2.6.5
+   * @version 2.6.6
    */
 
   /**

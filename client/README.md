@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.6.5
+- Package version: 2.6.6
 
 
 ## Installation
@@ -302,12 +302,19 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxRenameWorksheet**](docs/EditDocumentApi.md#editDocumentXlsxRenameWorksheet) | **POST** /convert/edit/xlsx/rename-worksheet | Rename a specific worksheet in a Excel XLSX spreadsheet
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxSetCellByIdentifier**](docs/EditDocumentApi.md#editDocumentXlsxSetCellByIdentifier) | **POST** /convert/edit/xlsx/set-cell/by-identifier | Set, update cell contents in an Excel XLSX spreadsheet, worksheet by cell identifier
 *CloudmersiveConvertApiClient.EditDocumentApi* | [**editDocumentXlsxSetCellByIndex**](docs/EditDocumentApi.md#editDocumentXlsxSetCellByIndex) | **POST** /convert/edit/xlsx/set-cell/by-index | Set, update cell contents in an Excel XLSX spreadsheet, worksheet by index
+*CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlAppendHeaderTag**](docs/EditHtmlApi.md#editHtmlHtmlAppendHeaderTag) | **POST** /convert/edit/html/head/append/tag | Append an HTML tag to the HEAD section of an HTML Document
 *CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlAppendHeading**](docs/EditHtmlApi.md#editHtmlHtmlAppendHeading) | **POST** /convert/edit/html/append/heading | Append a Heading to an HTML Document
 *CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlAppendImageFromUrl**](docs/EditHtmlApi.md#editHtmlHtmlAppendImageFromUrl) | **POST** /convert/edit/html/append/image/from-url | Append an Image to an HTML Document from a URL
 *CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlAppendImageInline**](docs/EditHtmlApi.md#editHtmlHtmlAppendImageInline) | **POST** /convert/edit/html/append/image/inline | Append a Base64 Inline Image to an HTML Document
 *CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlAppendParagraph**](docs/EditHtmlApi.md#editHtmlHtmlAppendParagraph) | **POST** /convert/edit/html/append/paragraph | Append a Paragraph to an HTML Document
 *CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlCreateBlankDocument**](docs/EditHtmlApi.md#editHtmlHtmlCreateBlankDocument) | **POST** /convert/edit/html/create/blank | Create a Blank HTML Document
+*CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlGetLanguage**](docs/EditHtmlApi.md#editHtmlHtmlGetLanguage) | **POST** /convert/edit/html/head/get/language | Gets the language for the HTML document
 *CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlGetLinks**](docs/EditHtmlApi.md#editHtmlHtmlGetLinks) | **POST** /convert/edit/html/extract/links | Extract resolved link URLs from HTML File
+*CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlGetRelCanonical**](docs/EditHtmlApi.md#editHtmlHtmlGetRelCanonical) | **POST** /convert/edit/html/head/get/rel-canonical-url | Gets the rel canonical URL for the HTML document
+*CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlGetSitemap**](docs/EditHtmlApi.md#editHtmlHtmlGetSitemap) | **POST** /convert/edit/html/head/get/sitemap-url | Gets the sitemap URL for the HTML document
+*CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlSetLanguage**](docs/EditHtmlApi.md#editHtmlHtmlSetLanguage) | **POST** /convert/edit/html/head/set/language | Sets the language for the HTML document
+*CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlSetRelCanonical**](docs/EditHtmlApi.md#editHtmlHtmlSetRelCanonical) | **POST** /convert/edit/html/head/set/rel-canonical-url | Sets the rel canonical URL for the HTML document
+*CloudmersiveConvertApiClient.EditHtmlApi* | [**editHtmlHtmlSetSitemapUrl**](docs/EditHtmlApi.md#editHtmlHtmlSetSitemapUrl) | **POST** /convert/edit/html/head/set/sitemap-url | Sets the sitemap URL for the HTML document
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfAddAnnotations**](docs/EditPdfApi.md#editPdfAddAnnotations) | **POST** /convert/edit/pdf/annotations/add-item | Add one or more PDF annotations, comments in the PDF document
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfConvertToPdfA**](docs/EditPdfApi.md#editPdfConvertToPdfA) | **POST** /convert/edit/pdf/optimize/pdf-a | Convert a PDF file to PDF/A
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfDecrypt**](docs/EditPdfApi.md#editPdfDecrypt) | **POST** /convert/edit/pdf/decrypt | Decrypt and password-protect a PDF
@@ -530,7 +537,10 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.GetXlsxStylesResponse](docs/GetXlsxStylesResponse.md)
  - [CloudmersiveConvertApiClient.GetXlsxWorksheetsRequest](docs/GetXlsxWorksheetsRequest.md)
  - [CloudmersiveConvertApiClient.GetXlsxWorksheetsResponse](docs/GetXlsxWorksheetsResponse.md)
+ - [CloudmersiveConvertApiClient.HtmlGetLanguageResult](docs/HtmlGetLanguageResult.md)
  - [CloudmersiveConvertApiClient.HtmlGetLinksResponse](docs/HtmlGetLinksResponse.md)
+ - [CloudmersiveConvertApiClient.HtmlGetRelCanonicalUrlResult](docs/HtmlGetRelCanonicalUrlResult.md)
+ - [CloudmersiveConvertApiClient.HtmlGetSitemapUrlResult](docs/HtmlGetSitemapUrlResult.md)
  - [CloudmersiveConvertApiClient.HtmlHyperlink](docs/HtmlHyperlink.md)
  - [CloudmersiveConvertApiClient.HtmlMdResult](docs/HtmlMdResult.md)
  - [CloudmersiveConvertApiClient.HtmlSsrfThreatCheckResult](docs/HtmlSsrfThreatCheckResult.md)

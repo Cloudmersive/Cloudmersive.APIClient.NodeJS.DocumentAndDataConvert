@@ -4,13 +4,79 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**editHtmlHtmlAppendHeaderTag**](EditHtmlApi.md#editHtmlHtmlAppendHeaderTag) | **POST** /convert/edit/html/head/append/tag | Append an HTML tag to the HEAD section of an HTML Document
 [**editHtmlHtmlAppendHeading**](EditHtmlApi.md#editHtmlHtmlAppendHeading) | **POST** /convert/edit/html/append/heading | Append a Heading to an HTML Document
 [**editHtmlHtmlAppendImageFromUrl**](EditHtmlApi.md#editHtmlHtmlAppendImageFromUrl) | **POST** /convert/edit/html/append/image/from-url | Append an Image to an HTML Document from a URL
 [**editHtmlHtmlAppendImageInline**](EditHtmlApi.md#editHtmlHtmlAppendImageInline) | **POST** /convert/edit/html/append/image/inline | Append a Base64 Inline Image to an HTML Document
 [**editHtmlHtmlAppendParagraph**](EditHtmlApi.md#editHtmlHtmlAppendParagraph) | **POST** /convert/edit/html/append/paragraph | Append a Paragraph to an HTML Document
 [**editHtmlHtmlCreateBlankDocument**](EditHtmlApi.md#editHtmlHtmlCreateBlankDocument) | **POST** /convert/edit/html/create/blank | Create a Blank HTML Document
+[**editHtmlHtmlGetLanguage**](EditHtmlApi.md#editHtmlHtmlGetLanguage) | **POST** /convert/edit/html/head/get/language | Gets the language for the HTML document
 [**editHtmlHtmlGetLinks**](EditHtmlApi.md#editHtmlHtmlGetLinks) | **POST** /convert/edit/html/extract/links | Extract resolved link URLs from HTML File
+[**editHtmlHtmlGetRelCanonical**](EditHtmlApi.md#editHtmlHtmlGetRelCanonical) | **POST** /convert/edit/html/head/get/rel-canonical-url | Gets the rel canonical URL for the HTML document
+[**editHtmlHtmlGetSitemap**](EditHtmlApi.md#editHtmlHtmlGetSitemap) | **POST** /convert/edit/html/head/get/sitemap-url | Gets the sitemap URL for the HTML document
+[**editHtmlHtmlSetLanguage**](EditHtmlApi.md#editHtmlHtmlSetLanguage) | **POST** /convert/edit/html/head/set/language | Sets the language for the HTML document
+[**editHtmlHtmlSetRelCanonical**](EditHtmlApi.md#editHtmlHtmlSetRelCanonical) | **POST** /convert/edit/html/head/set/rel-canonical-url | Sets the rel canonical URL for the HTML document
+[**editHtmlHtmlSetSitemapUrl**](EditHtmlApi.md#editHtmlHtmlSetSitemapUrl) | **POST** /convert/edit/html/head/set/sitemap-url | Sets the sitemap URL for the HTML document
 
+
+<a name="editHtmlHtmlAppendHeaderTag"></a>
+# **editHtmlHtmlAppendHeaderTag**
+> &#39;Blob&#39; editHtmlHtmlAppendHeaderTag(htmlTag, opts)
+
+Append an HTML tag to the HEAD section of an HTML Document
+
+Appends an HTML tag to the HEAD section of an HTML document.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditHtmlApi();
+
+var htmlTag = "htmlTag_example"; // String | The HTML tag to append.
+
+var opts = { 
+  'inputFile': "/path/to/file.txt", // File | Optional: Input file to perform the operation on.
+  'inputFileUrl': "inputFileUrl_example" // String | Optional: URL of a file to operate on as input.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editHtmlHtmlAppendHeaderTag(htmlTag, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **htmlTag** | **String**| The HTML tag to append. | 
+ **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] 
+ **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] 
+
+### Return type
+
+**&#39;Blob&#39;**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="editHtmlHtmlAppendHeading"></a>
 # **editHtmlHtmlAppendHeading**
@@ -323,6 +389,62 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
+<a name="editHtmlHtmlGetLanguage"></a>
+# **editHtmlHtmlGetLanguage**
+> HtmlGetLanguageResult editHtmlHtmlGetLanguage(opts)
+
+Gets the language for the HTML document
+
+Retrieves the language code (e.g. \&quot;en\&quot; or \&quot;de\&quot;) of an HTML document.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditHtmlApi();
+
+var opts = { 
+  'inputFile': "/path/to/file.txt", // File | Optional: Input file to perform the operation on.
+  'inputFileUrl': "inputFileUrl_example" // String | Optional: URL of a file to operate on as input.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editHtmlHtmlGetLanguage(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] 
+ **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] 
+
+### Return type
+
+[**HtmlGetLanguageResult**](HtmlGetLanguageResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
 <a name="editHtmlHtmlGetLinks"></a>
 # **editHtmlHtmlGetLinks**
 > HtmlGetLinksResponse editHtmlHtmlGetLinks(opts)
@@ -371,6 +493,295 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**HtmlGetLinksResponse**](HtmlGetLinksResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="editHtmlHtmlGetRelCanonical"></a>
+# **editHtmlHtmlGetRelCanonical**
+> HtmlGetRelCanonicalUrlResult editHtmlHtmlGetRelCanonical(opts)
+
+Gets the rel canonical URL for the HTML document
+
+Gets the rel canonical URL of an HTML document.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditHtmlApi();
+
+var opts = { 
+  'inputFile': "/path/to/file.txt", // File | Optional: Input file to perform the operation on.
+  'inputFileUrl': "inputFileUrl_example" // String | Optional: URL of a file to operate on as input.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editHtmlHtmlGetRelCanonical(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] 
+ **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] 
+
+### Return type
+
+[**HtmlGetRelCanonicalUrlResult**](HtmlGetRelCanonicalUrlResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="editHtmlHtmlGetSitemap"></a>
+# **editHtmlHtmlGetSitemap**
+> HtmlGetSitemapUrlResult editHtmlHtmlGetSitemap(opts)
+
+Gets the sitemap URL for the HTML document
+
+Gets the sitemap link URL of an HTML document.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditHtmlApi();
+
+var opts = { 
+  'inputFile': "/path/to/file.txt", // File | Optional: Input file to perform the operation on.
+  'inputFileUrl': "inputFileUrl_example" // String | Optional: URL of a file to operate on as input.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editHtmlHtmlGetSitemap(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] 
+ **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] 
+
+### Return type
+
+[**HtmlGetSitemapUrlResult**](HtmlGetSitemapUrlResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="editHtmlHtmlSetLanguage"></a>
+# **editHtmlHtmlSetLanguage**
+> &#39;Blob&#39; editHtmlHtmlSetLanguage(languageCode, opts)
+
+Sets the language for the HTML document
+
+Sets the language code of an HTML document.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditHtmlApi();
+
+var languageCode = "languageCode_example"; // String | The HTML langauge code to set.
+
+var opts = { 
+  'inputFile': "/path/to/file.txt", // File | Optional: Input file to perform the operation on.
+  'inputFileUrl': "inputFileUrl_example" // String | Optional: URL of a file to operate on as input.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editHtmlHtmlSetLanguage(languageCode, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **languageCode** | **String**| The HTML langauge code to set. | 
+ **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] 
+ **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] 
+
+### Return type
+
+**&#39;Blob&#39;**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="editHtmlHtmlSetRelCanonical"></a>
+# **editHtmlHtmlSetRelCanonical**
+> &#39;Blob&#39; editHtmlHtmlSetRelCanonical(canonicalUrl, opts)
+
+Sets the rel canonical URL for the HTML document
+
+Sets the rel canonical URL of an HTML document.  This is useful for telling search engines and other indexers which pages are duplicates of eachother; any pages with the rel&#x3D;canonical tag will be treated as duplicates of the canonical URL.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditHtmlApi();
+
+var canonicalUrl = "canonicalUrl_example"; // String | The HTML canonical URL to set.
+
+var opts = { 
+  'inputFile': "/path/to/file.txt", // File | Optional: Input file to perform the operation on.
+  'inputFileUrl': "inputFileUrl_example" // String | Optional: URL of a file to operate on as input.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editHtmlHtmlSetRelCanonical(canonicalUrl, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **canonicalUrl** | **String**| The HTML canonical URL to set. | 
+ **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] 
+ **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] 
+
+### Return type
+
+**&#39;Blob&#39;**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="editHtmlHtmlSetSitemapUrl"></a>
+# **editHtmlHtmlSetSitemapUrl**
+> &#39;Blob&#39; editHtmlHtmlSetSitemapUrl(sitemapUrl, opts)
+
+Sets the sitemap URL for the HTML document
+
+Sets the sitemap URL of an HTML document.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditHtmlApi();
+
+var sitemapUrl = "sitemapUrl_example"; // String | The HTML sitemap URL to set.
+
+var opts = { 
+  'inputFile': "/path/to/file.txt", // File | Optional: Input file to perform the operation on.
+  'inputFileUrl': "inputFileUrl_example" // String | Optional: URL of a file to operate on as input.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editHtmlHtmlSetSitemapUrl(sitemapUrl, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sitemapUrl** | **String**| The HTML sitemap URL to set. | 
+ **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] 
+ **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] 
+
+### Return type
+
+**&#39;Blob&#39;**
 
 ### Authorization
 

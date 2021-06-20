@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/HtmlGetLinksResponse'], factory);
+    define(['ApiClient', 'model/HtmlGetLanguageResult', 'model/HtmlGetLinksResponse', 'model/HtmlGetRelCanonicalUrlResult', 'model/HtmlGetSitemapUrlResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/HtmlGetLinksResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/HtmlGetLanguageResult'), require('../model/HtmlGetLinksResponse'), require('../model/HtmlGetRelCanonicalUrlResult'), require('../model/HtmlGetSitemapUrlResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.EditHtmlApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.HtmlGetLinksResponse);
+    root.CloudmersiveConvertApiClient.EditHtmlApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.HtmlGetLanguageResult, root.CloudmersiveConvertApiClient.HtmlGetLinksResponse, root.CloudmersiveConvertApiClient.HtmlGetRelCanonicalUrlResult, root.CloudmersiveConvertApiClient.HtmlGetSitemapUrlResult);
   }
-}(this, function(ApiClient, HtmlGetLinksResponse) {
+}(this, function(ApiClient, HtmlGetLanguageResult, HtmlGetLinksResponse, HtmlGetRelCanonicalUrlResult, HtmlGetSitemapUrlResult) {
   'use strict';
 
   /**
    * EditHtml service.
    * @module api/EditHtmlApi
-   * @version 2.6.5
+   * @version 2.6.6
    */
 
   /**
@@ -46,6 +46,60 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the editHtmlHtmlAppendHeaderTag operation.
+     * @callback module:api/EditHtmlApi~editHtmlHtmlAppendHeaderTagCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Append an HTML tag to the HEAD section of an HTML Document
+     * Appends an HTML tag to the HEAD section of an HTML document.
+     * @param {String} htmlTag The HTML tag to append.
+     * @param {Object} opts Optional parameters
+     * @param {File} opts.inputFile Optional: Input file to perform the operation on.
+     * @param {String} opts.inputFileUrl Optional: URL of a file to operate on as input.
+     * @param {module:api/EditHtmlApi~editHtmlHtmlAppendHeaderTagCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.editHtmlHtmlAppendHeaderTag = function(htmlTag, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'htmlTag' is set
+      if (htmlTag === undefined || htmlTag === null) {
+        throw new Error("Missing the required parameter 'htmlTag' when calling editHtmlHtmlAppendHeaderTag");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'inputFileUrl': opts['inputFileUrl'],
+        'htmlTag': htmlTag
+      };
+      var formParams = {
+        'inputFile': opts['inputFile']
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/html/head/append/tag', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the editHtmlHtmlAppendHeading operation.
@@ -326,6 +380,53 @@
     }
 
     /**
+     * Callback function to receive the result of the editHtmlHtmlGetLanguage operation.
+     * @callback module:api/EditHtmlApi~editHtmlHtmlGetLanguageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/HtmlGetLanguageResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets the language for the HTML document
+     * Retrieves the language code (e.g. \&quot;en\&quot; or \&quot;de\&quot;) of an HTML document.
+     * @param {Object} opts Optional parameters
+     * @param {File} opts.inputFile Optional: Input file to perform the operation on.
+     * @param {String} opts.inputFileUrl Optional: URL of a file to operate on as input.
+     * @param {module:api/EditHtmlApi~editHtmlHtmlGetLanguageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/HtmlGetLanguageResult}
+     */
+    this.editHtmlHtmlGetLanguage = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'inputFileUrl': opts['inputFileUrl']
+      };
+      var formParams = {
+        'inputFile': opts['inputFile']
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = HtmlGetLanguageResult;
+
+      return this.apiClient.callApi(
+        '/convert/edit/html/head/get/language', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the editHtmlHtmlGetLinks operation.
      * @callback module:api/EditHtmlApi~editHtmlHtmlGetLinksCallback
      * @param {String} error Error message, if any.
@@ -369,6 +470,262 @@
 
       return this.apiClient.callApi(
         '/convert/edit/html/extract/links', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editHtmlHtmlGetRelCanonical operation.
+     * @callback module:api/EditHtmlApi~editHtmlHtmlGetRelCanonicalCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/HtmlGetRelCanonicalUrlResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets the rel canonical URL for the HTML document
+     * Gets the rel canonical URL of an HTML document.
+     * @param {Object} opts Optional parameters
+     * @param {File} opts.inputFile Optional: Input file to perform the operation on.
+     * @param {String} opts.inputFileUrl Optional: URL of a file to operate on as input.
+     * @param {module:api/EditHtmlApi~editHtmlHtmlGetRelCanonicalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/HtmlGetRelCanonicalUrlResult}
+     */
+    this.editHtmlHtmlGetRelCanonical = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'inputFileUrl': opts['inputFileUrl']
+      };
+      var formParams = {
+        'inputFile': opts['inputFile']
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = HtmlGetRelCanonicalUrlResult;
+
+      return this.apiClient.callApi(
+        '/convert/edit/html/head/get/rel-canonical-url', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editHtmlHtmlGetSitemap operation.
+     * @callback module:api/EditHtmlApi~editHtmlHtmlGetSitemapCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/HtmlGetSitemapUrlResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Gets the sitemap URL for the HTML document
+     * Gets the sitemap link URL of an HTML document.
+     * @param {Object} opts Optional parameters
+     * @param {File} opts.inputFile Optional: Input file to perform the operation on.
+     * @param {String} opts.inputFileUrl Optional: URL of a file to operate on as input.
+     * @param {module:api/EditHtmlApi~editHtmlHtmlGetSitemapCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/HtmlGetSitemapUrlResult}
+     */
+    this.editHtmlHtmlGetSitemap = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'inputFileUrl': opts['inputFileUrl']
+      };
+      var formParams = {
+        'inputFile': opts['inputFile']
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = HtmlGetSitemapUrlResult;
+
+      return this.apiClient.callApi(
+        '/convert/edit/html/head/get/sitemap-url', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editHtmlHtmlSetLanguage operation.
+     * @callback module:api/EditHtmlApi~editHtmlHtmlSetLanguageCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Sets the language for the HTML document
+     * Sets the language code of an HTML document.
+     * @param {String} languageCode The HTML langauge code to set.
+     * @param {Object} opts Optional parameters
+     * @param {File} opts.inputFile Optional: Input file to perform the operation on.
+     * @param {String} opts.inputFileUrl Optional: URL of a file to operate on as input.
+     * @param {module:api/EditHtmlApi~editHtmlHtmlSetLanguageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.editHtmlHtmlSetLanguage = function(languageCode, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'languageCode' is set
+      if (languageCode === undefined || languageCode === null) {
+        throw new Error("Missing the required parameter 'languageCode' when calling editHtmlHtmlSetLanguage");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'inputFileUrl': opts['inputFileUrl'],
+        'languageCode': languageCode
+      };
+      var formParams = {
+        'inputFile': opts['inputFile']
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/html/head/set/language', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editHtmlHtmlSetRelCanonical operation.
+     * @callback module:api/EditHtmlApi~editHtmlHtmlSetRelCanonicalCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Sets the rel canonical URL for the HTML document
+     * Sets the rel canonical URL of an HTML document.  This is useful for telling search engines and other indexers which pages are duplicates of eachother; any pages with the rel&#x3D;canonical tag will be treated as duplicates of the canonical URL.
+     * @param {String} canonicalUrl The HTML canonical URL to set.
+     * @param {Object} opts Optional parameters
+     * @param {File} opts.inputFile Optional: Input file to perform the operation on.
+     * @param {String} opts.inputFileUrl Optional: URL of a file to operate on as input.
+     * @param {module:api/EditHtmlApi~editHtmlHtmlSetRelCanonicalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.editHtmlHtmlSetRelCanonical = function(canonicalUrl, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'canonicalUrl' is set
+      if (canonicalUrl === undefined || canonicalUrl === null) {
+        throw new Error("Missing the required parameter 'canonicalUrl' when calling editHtmlHtmlSetRelCanonical");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'inputFileUrl': opts['inputFileUrl'],
+        'canonicalUrl': canonicalUrl
+      };
+      var formParams = {
+        'inputFile': opts['inputFile']
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/html/head/set/rel-canonical-url', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editHtmlHtmlSetSitemapUrl operation.
+     * @callback module:api/EditHtmlApi~editHtmlHtmlSetSitemapUrlCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Sets the sitemap URL for the HTML document
+     * Sets the sitemap URL of an HTML document.
+     * @param {String} sitemapUrl The HTML sitemap URL to set.
+     * @param {Object} opts Optional parameters
+     * @param {File} opts.inputFile Optional: Input file to perform the operation on.
+     * @param {String} opts.inputFileUrl Optional: URL of a file to operate on as input.
+     * @param {module:api/EditHtmlApi~editHtmlHtmlSetSitemapUrlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.editHtmlHtmlSetSitemapUrl = function(sitemapUrl, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'sitemapUrl' is set
+      if (sitemapUrl === undefined || sitemapUrl === null) {
+        throw new Error("Missing the required parameter 'sitemapUrl' when calling editHtmlHtmlSetSitemapUrl");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'inputFileUrl': opts['inputFileUrl'],
+        'sitemapUrl': sitemapUrl
+      };
+      var formParams = {
+        'inputFile': opts['inputFile']
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/html/head/set/sitemap-url', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

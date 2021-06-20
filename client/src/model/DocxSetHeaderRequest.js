@@ -36,7 +36,7 @@
   /**
    * The DocxSetHeaderRequest model module.
    * @module model/DocxSetHeaderRequest
-   * @version 2.6.5
+   * @version 2.6.6
    */
 
   /**

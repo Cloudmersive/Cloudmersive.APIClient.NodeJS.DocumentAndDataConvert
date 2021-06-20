@@ -36,7 +36,7 @@
   /**
    * The CsvFileResult model module.
    * @module model/CsvFileResult
-   * @version 2.6.5
+   * @version 2.6.6
    */
 
   /**

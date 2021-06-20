@@ -703,7 +703,7 @@ Name | Type | Description  | Notes
 
 <a name="editPdfReduceFileSize"></a>
 # **editPdfReduceFileSize**
-> &#39;Blob&#39; editPdfReduceFileSize(inputFile)
+> &#39;Blob&#39; editPdfReduceFileSize(inputFile, opts)
 
 Reduce the file size and optimize a PDF
 
@@ -724,6 +724,9 @@ var apiInstance = new CloudmersiveConvertApiClient.EditPdfApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
+var opts = { 
+  'quality': 8.14 // Number | Quality level for the images in the PDF, ranging from 0.0 (low quality) to 1.0 (high quality); default is 0.3
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -732,7 +735,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.editPdfReduceFileSize(inputFile, callback);
+apiInstance.editPdfReduceFileSize(inputFile, opts, callback);
 ```
 
 ### Parameters
@@ -740,6 +743,7 @@ apiInstance.editPdfReduceFileSize(inputFile, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **File**| Input file to perform the operation on. | 
+ **quality** | **Number**| Quality level for the images in the PDF, ranging from 0.0 (low quality) to 1.0 (high quality); default is 0.3 | [optional] 
 
 ### Return type
 
