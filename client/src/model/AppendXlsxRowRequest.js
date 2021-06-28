@@ -36,7 +36,7 @@
   /**
    * The AppendXlsxRowRequest model module.
    * @module model/AppendXlsxRowRequest
-   * @version 2.6.6
+   * @version 2.6.7
    */
 
   /**

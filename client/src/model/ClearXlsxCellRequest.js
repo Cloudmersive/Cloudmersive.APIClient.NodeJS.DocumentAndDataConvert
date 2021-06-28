@@ -36,7 +36,7 @@
   /**
    * The ClearXlsxCellRequest model module.
    * @module model/ClearXlsxCellRequest
-   * @version 2.6.6
+   * @version 2.6.7
    */
 
   /**

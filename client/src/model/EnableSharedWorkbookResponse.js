@@ -36,7 +36,7 @@
   /**
    * The EnableSharedWorkbookResponse model module.
    * @module model/EnableSharedWorkbookResponse
-   * @version 2.6.6
+   * @version 2.6.7
    */
 
   /**

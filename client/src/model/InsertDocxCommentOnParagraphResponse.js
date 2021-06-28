@@ -36,7 +36,7 @@
   /**
    * The InsertDocxCommentOnParagraphResponse model module.
    * @module model/InsertDocxCommentOnParagraphResponse
-   * @version 2.6.6
+   * @version 2.6.7
    */
 
   /**

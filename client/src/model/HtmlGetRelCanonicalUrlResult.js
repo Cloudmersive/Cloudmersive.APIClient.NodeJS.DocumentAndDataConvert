@@ -36,7 +36,7 @@
   /**
    * The HtmlGetRelCanonicalUrlResult model module.
    * @module model/HtmlGetRelCanonicalUrlResult
-   * @version 2.6.6
+   * @version 2.6.7
    */
 
   /**

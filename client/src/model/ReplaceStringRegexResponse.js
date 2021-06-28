@@ -36,7 +36,7 @@
   /**
    * The ReplaceStringRegexResponse model module.
    * @module model/ReplaceStringRegexResponse
-   * @version 2.6.6
+   * @version 2.6.7
    */
 
   /**

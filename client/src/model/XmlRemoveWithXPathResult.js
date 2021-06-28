@@ -36,7 +36,7 @@
   /**
    * The XmlRemoveWithXPathResult model module.
    * @module model/XmlRemoveWithXPathResult
-   * @version 2.6.6
+   * @version 2.6.7
    */
 
   /**

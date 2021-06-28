@@ -36,7 +36,7 @@
   /**
    * The OdpToPngResult model module.
    * @module model/OdpToPngResult
-   * @version 2.6.6
+   * @version 2.6.7
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The InsertXlsxWorksheetResponse model module.
    * @module model/InsertXlsxWorksheetResponse
-   * @version 2.6.6
+   * @version 2.6.7
    */
 
   /**
