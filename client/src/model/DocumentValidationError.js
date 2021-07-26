@@ -36,7 +36,7 @@
   /**
    * The DocumentValidationError model module.
    * @module model/DocumentValidationError
-   * @version 2.6.7
+   * @version 2.6.8
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The HtmlSsrfThreatCheckResult model module.
    * @module model/HtmlSsrfThreatCheckResult
-   * @version 2.6.7
+   * @version 2.6.8
    */
 
   /**

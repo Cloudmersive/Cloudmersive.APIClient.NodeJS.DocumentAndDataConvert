@@ -36,7 +36,7 @@
   /**
    * The RenameXlsxWorksheetRequest model module.
    * @module model/RenameXlsxWorksheetRequest
-   * @version 2.6.7
+   * @version 2.6.8
    */
 
   /**

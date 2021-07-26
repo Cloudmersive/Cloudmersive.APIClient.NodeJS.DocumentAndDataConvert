@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/DocxTableTableFillRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('../model/DocxTableTableFillRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.TransformDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.TransformDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.DocxTableTableFillRequest);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, DocxTableTableFillRequest) {
   'use strict';
 
   /**
    * TransformDocument service.
    * @module api/TransformDocumentApi
-   * @version 2.6.7
+   * @version 2.6.8
    */
 
   /**
@@ -105,6 +105,53 @@
 
       return this.apiClient.callApi(
         '/convert/transform/docx/replace-all', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the transformDocumentDocxTableFillIn operation.
+     * @callback module:api/TransformDocumentApi~transformDocumentDocxTableFillInCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Fill in data in a table in a Word DOCX document
+     * Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
+     * @param {module:model/DocxTableTableFillRequest} request 
+     * @param {module:api/TransformDocumentApi~transformDocumentDocxTableFillInCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.transformDocumentDocxTableFillIn = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling transformDocumentDocxTableFillIn");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/transform/docx/table/fill/data', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

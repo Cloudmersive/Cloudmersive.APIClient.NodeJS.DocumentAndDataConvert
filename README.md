@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.6.7
+- Package version: 2.6.8
 
 
 ## Installation
@@ -371,6 +371,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentTxtByString**](docs/SplitDocumentApi.md#splitDocumentTxtByString) | **POST** /convert/split/txt/by-string | Split a single Text file (txt) by a string delimiter
 *CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentXlsx**](docs/SplitDocumentApi.md#splitDocumentXlsx) | **POST** /convert/split/xlsx | Split a single Excel XLSX into Separate Worksheets
 *CloudmersiveConvertApiClient.TransformDocumentApi* | [**transformDocumentDocxReplace**](docs/TransformDocumentApi.md#transformDocumentDocxReplace) | **POST** /convert/transform/docx/replace-all | Replace string in Word DOCX document
+*CloudmersiveConvertApiClient.TransformDocumentApi* | [**transformDocumentDocxTableFillIn**](docs/TransformDocumentApi.md#transformDocumentDocxTableFillIn) | **POST** /convert/transform/docx/table/fill/data | Fill in data in a table in a Word DOCX document
 *CloudmersiveConvertApiClient.TransformDocumentApi* | [**transformDocumentPptxReplace**](docs/TransformDocumentApi.md#transformDocumentPptxReplace) | **POST** /convert/transform/pptx/replace-all | Replace string in PowerPoint PPTX presentation
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentAutodetectValidation**](docs/ValidateDocumentApi.md#validateDocumentAutodetectValidation) | **POST** /convert/validate/autodetect | Autodetect content type and validate
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentCsvValidation**](docs/ValidateDocumentApi.md#validateDocumentCsvValidation) | **POST** /convert/validate/csv | Validate a CSV file document (CSV)
@@ -472,6 +473,9 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.DocxTable](docs/DocxTable.md)
  - [CloudmersiveConvertApiClient.DocxTableCell](docs/DocxTableCell.md)
  - [CloudmersiveConvertApiClient.DocxTableRow](docs/DocxTableRow.md)
+ - [CloudmersiveConvertApiClient.DocxTableTableFillRequest](docs/DocxTableTableFillRequest.md)
+ - [CloudmersiveConvertApiClient.DocxTableTableFillTableCell](docs/DocxTableTableFillTableCell.md)
+ - [CloudmersiveConvertApiClient.DocxTableTableFillTableRow](docs/DocxTableTableFillTableRow.md)
  - [CloudmersiveConvertApiClient.DocxTemplateApplicationRequest](docs/DocxTemplateApplicationRequest.md)
  - [CloudmersiveConvertApiClient.DocxTemplateOperation](docs/DocxTemplateOperation.md)
  - [CloudmersiveConvertApiClient.DocxText](docs/DocxText.md)

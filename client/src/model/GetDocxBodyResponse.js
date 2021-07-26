@@ -36,7 +36,7 @@
   /**
    * The GetDocxBodyResponse model module.
    * @module model/GetDocxBodyResponse
-   * @version 2.6.7
+   * @version 2.6.8
    */
 
   /**

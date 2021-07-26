@@ -36,7 +36,7 @@
   /**
    * The EmlAttachment model module.
    * @module model/EmlAttachment
-   * @version 2.6.7
+   * @version 2.6.8
    */
 
   /**

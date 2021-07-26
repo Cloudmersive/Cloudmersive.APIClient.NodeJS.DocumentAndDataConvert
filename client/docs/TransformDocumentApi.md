@@ -5,6 +5,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**transformDocumentDocxReplace**](TransformDocumentApi.md#transformDocumentDocxReplace) | **POST** /convert/transform/docx/replace-all | Replace string in Word DOCX document
+[**transformDocumentDocxTableFillIn**](TransformDocumentApi.md#transformDocumentDocxTableFillIn) | **POST** /convert/transform/docx/table/fill/data | Fill in data in a table in a Word DOCX document
 [**transformDocumentPptxReplace**](TransformDocumentApi.md#transformDocumentPptxReplace) | **POST** /convert/transform/pptx/replace-all | Replace string in PowerPoint PPTX presentation
 
 
@@ -70,6 +71,59 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/octet-stream
+
+<a name="transformDocumentDocxTableFillIn"></a>
+# **transformDocumentDocxTableFillIn**
+> &#39;Blob&#39; transformDocumentDocxTableFillIn(request)
+
+Fill in data in a table in a Word DOCX document
+
+Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.TransformDocumentApi();
+
+var request = new CloudmersiveConvertApiClient.DocxTableTableFillRequest(); // DocxTableTableFillRequest | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.transformDocumentDocxTableFillIn(request, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**DocxTableTableFillRequest**](DocxTableTableFillRequest.md)|  | 
+
+### Return type
+
+**&#39;Blob&#39;**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/octet-stream
 
 <a name="transformDocumentPptxReplace"></a>
