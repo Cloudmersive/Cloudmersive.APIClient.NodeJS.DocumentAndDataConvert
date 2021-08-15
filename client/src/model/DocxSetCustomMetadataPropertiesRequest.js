@@ -36,7 +36,7 @@
   /**
    * The DocxSetCustomMetadataPropertiesRequest model module.
    * @module model/DocxSetCustomMetadataPropertiesRequest
-   * @version 2.6.8
+   * @version 2.6.9
    */
 
   /**
