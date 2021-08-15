@@ -36,7 +36,7 @@
   /**
    * The GetDocxMetadataPropertiesResponse model module.
    * @module model/GetDocxMetadataPropertiesResponse
-   * @version 2.6.8
+   * @version 2.6.7
    */
 
   /**

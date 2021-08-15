@@ -60,10 +60,30 @@
         done();
       });
     });
+    describe('transformDocumentDocxReplaceEditSession', function() {
+      it('should call transformDocumentDocxReplaceEditSession successfully', function(done) {
+        //uncomment below and update the code to test transformDocumentDocxReplaceEditSession
+        //instance.transformDocumentDocxReplaceEditSession(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('transformDocumentDocxTableFillIn', function() {
       it('should call transformDocumentDocxTableFillIn successfully', function(done) {
         //uncomment below and update the code to test transformDocumentDocxTableFillIn
         //instance.transformDocumentDocxTableFillIn(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('transformDocumentDocxTableFillInEditSession', function() {
+      it('should call transformDocumentDocxTableFillInEditSession successfully', function(done) {
+        //uncomment below and update the code to test transformDocumentDocxTableFillInEditSession
+        //instance.transformDocumentDocxTableFillInEditSession(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

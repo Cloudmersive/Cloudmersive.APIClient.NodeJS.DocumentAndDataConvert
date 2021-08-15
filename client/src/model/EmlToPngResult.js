@@ -36,7 +36,7 @@
   /**
    * The EmlToPngResult model module.
    * @module model/EmlToPngResult
-   * @version 2.6.8
+   * @version 2.6.7
    */
 
   /**
