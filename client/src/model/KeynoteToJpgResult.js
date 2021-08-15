@@ -36,7 +36,7 @@
   /**
    * The KeynoteToJpgResult model module.
    * @module model/KeynoteToJpgResult
-   * @version 2.6.7
+   * @version 2.6.8
    */
 
   /**

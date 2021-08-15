@@ -36,7 +36,7 @@
   /**
    * The DocumentTransformEditSession model module.
    * @module model/DocumentTransformEditSession
-   * @version 2.6.7
+   * @version 2.6.8
    */
 
   /**

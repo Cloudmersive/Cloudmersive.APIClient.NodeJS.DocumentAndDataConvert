@@ -36,7 +36,7 @@
   /**
    * The HtmlGetLinksResponse model module.
    * @module model/HtmlGetLinksResponse
-   * @version 2.6.7
+   * @version 2.6.8
    */
 
   /**

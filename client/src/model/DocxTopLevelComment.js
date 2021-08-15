@@ -36,7 +36,7 @@
   /**
    * The DocxTopLevelComment model module.
    * @module model/DocxTopLevelComment
-   * @version 2.6.7
+   * @version 2.6.8
    */
 
   /**

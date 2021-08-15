@@ -36,7 +36,7 @@
   /**
    * The OdpToJpgResult model module.
    * @module model/OdpToJpgResult
-   * @version 2.6.7
+   * @version 2.6.8
    */
 
   /**
