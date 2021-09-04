@@ -36,7 +36,7 @@
   /**
    * The RemoveHtmlFromTextRequest model module.
    * @module model/RemoveHtmlFromTextRequest
-   * @version 2.6.9
+   * @version 2.7.0
    */
 
   /**

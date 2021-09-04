@@ -36,7 +36,7 @@
   /**
    * The EmlToJpgResult model module.
    * @module model/EmlToJpgResult
-   * @version 2.6.9
+   * @version 2.7.0
    */
 
   /**

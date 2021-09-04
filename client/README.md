@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.6.9
+- Package version: 2.7.0
 
 
 ## Installation
@@ -375,6 +375,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.TransformDocumentApi* | [**transformDocumentDocxReplaceEditSession**](docs/TransformDocumentApi.md#transformDocumentDocxReplaceEditSession) | **POST** /convert/transform/docx/replace-all/edit-session | Replace string in Word DOCX document, return edit session
 *CloudmersiveConvertApiClient.TransformDocumentApi* | [**transformDocumentDocxTableFillIn**](docs/TransformDocumentApi.md#transformDocumentDocxTableFillIn) | **POST** /convert/transform/docx/table/fill/data | Fill in data in a table in a Word DOCX document, return result
 *CloudmersiveConvertApiClient.TransformDocumentApi* | [**transformDocumentDocxTableFillInEditSession**](docs/TransformDocumentApi.md#transformDocumentDocxTableFillInEditSession) | **POST** /convert/transform/docx/table/fill/data/edit-session | Fill in data in a table in a Word DOCX document, return edit session
+*CloudmersiveConvertApiClient.TransformDocumentApi* | [**transformDocumentDocxTableFillInMulti**](docs/TransformDocumentApi.md#transformDocumentDocxTableFillInMulti) | **POST** /convert/transform/docx/table/fill/data/multi | Fill in data in multiple tables in a Word DOCX document, return result
 *CloudmersiveConvertApiClient.TransformDocumentApi* | [**transformDocumentPptxReplace**](docs/TransformDocumentApi.md#transformDocumentPptxReplace) | **POST** /convert/transform/pptx/replace-all | Replace string in PowerPoint PPTX presentation, return result
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentAutodetectValidation**](docs/ValidateDocumentApi.md#validateDocumentAutodetectValidation) | **POST** /convert/validate/autodetect | Autodetect content type and validate
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentCsvValidation**](docs/ValidateDocumentApi.md#validateDocumentCsvValidation) | **POST** /convert/validate/csv | Validate a CSV file document (CSV)
@@ -478,6 +479,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.DocxTable](docs/DocxTable.md)
  - [CloudmersiveConvertApiClient.DocxTableCell](docs/DocxTableCell.md)
  - [CloudmersiveConvertApiClient.DocxTableRow](docs/DocxTableRow.md)
+ - [CloudmersiveConvertApiClient.DocxTableSingleTableFill](docs/DocxTableSingleTableFill.md)
+ - [CloudmersiveConvertApiClient.DocxTableTableFillMultiRequest](docs/DocxTableTableFillMultiRequest.md)
  - [CloudmersiveConvertApiClient.DocxTableTableFillRequest](docs/DocxTableTableFillRequest.md)
  - [CloudmersiveConvertApiClient.DocxTableTableFillTableCell](docs/DocxTableTableFillTableCell.md)
  - [CloudmersiveConvertApiClient.DocxTableTableFillTableRow](docs/DocxTableTableFillTableRow.md)

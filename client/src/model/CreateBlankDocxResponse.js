@@ -36,7 +36,7 @@
   /**
    * The CreateBlankDocxResponse model module.
    * @module model/CreateBlankDocxResponse
-   * @version 2.6.9
+   * @version 2.7.0
    */
 
   /**

@@ -90,6 +90,16 @@
         done();
       });
     });
+    describe('transformDocumentDocxTableFillInMulti', function() {
+      it('should call transformDocumentDocxTableFillInMulti successfully', function(done) {
+        //uncomment below and update the code to test transformDocumentDocxTableFillInMulti
+        //instance.transformDocumentDocxTableFillInMulti(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('transformDocumentPptxReplace', function() {
       it('should call transformDocumentPptxReplace successfully', function(done) {
         //uncomment below and update the code to test transformDocumentPptxReplace

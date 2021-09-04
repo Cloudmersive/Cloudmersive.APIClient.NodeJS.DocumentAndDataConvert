@@ -36,7 +36,7 @@
   /**
    * The DocumentEditingEditSession model module.
    * @module model/DocumentEditingEditSession
-   * @version 2.6.9
+   * @version 2.7.0
    */
 
   /**

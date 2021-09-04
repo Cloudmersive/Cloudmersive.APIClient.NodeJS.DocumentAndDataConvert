@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DocumentTransformEditSession', 'model/DocxTableTableFillRequest'], factory);
+    define(['ApiClient', 'model/DocumentTransformEditSession', 'model/DocxTableTableFillMultiRequest', 'model/DocxTableTableFillRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/DocumentTransformEditSession'), require('../model/DocxTableTableFillRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/DocumentTransformEditSession'), require('../model/DocxTableTableFillMultiRequest'), require('../model/DocxTableTableFillRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.TransformDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.DocumentTransformEditSession, root.CloudmersiveConvertApiClient.DocxTableTableFillRequest);
+    root.CloudmersiveConvertApiClient.TransformDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.DocumentTransformEditSession, root.CloudmersiveConvertApiClient.DocxTableTableFillMultiRequest, root.CloudmersiveConvertApiClient.DocxTableTableFillRequest);
   }
-}(this, function(ApiClient, DocumentTransformEditSession, DocxTableTableFillRequest) {
+}(this, function(ApiClient, DocumentTransformEditSession, DocxTableTableFillMultiRequest, DocxTableTableFillRequest) {
   'use strict';
 
   /**
    * TransformDocument service.
    * @module api/TransformDocumentApi
-   * @version 2.6.9
+   * @version 2.7.0
    */
 
   /**
@@ -262,6 +262,53 @@
 
       return this.apiClient.callApi(
         '/convert/transform/docx/table/fill/data/edit-session', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the transformDocumentDocxTableFillInMulti operation.
+     * @callback module:api/TransformDocumentApi~transformDocumentDocxTableFillInMultiCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Fill in data in multiple tables in a Word DOCX document, return result
+     * Replace placeholder rows in multiple tables in an Office Word Document (docx) using one or more templates
+     * @param {module:model/DocxTableTableFillMultiRequest} request 
+     * @param {module:api/TransformDocumentApi~transformDocumentDocxTableFillInMultiCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.transformDocumentDocxTableFillInMulti = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling transformDocumentDocxTableFillInMulti");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/convert/transform/docx/table/fill/data/multi', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

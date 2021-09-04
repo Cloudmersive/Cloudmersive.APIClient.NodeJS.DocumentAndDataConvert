@@ -36,7 +36,7 @@
   /**
    * The PdfToPngResult model module.
    * @module model/PdfToPngResult
-   * @version 2.6.9
+   * @version 2.7.0
    */
 
   /**
