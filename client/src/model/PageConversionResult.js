@@ -36,7 +36,7 @@
   /**
    * The PageConversionResult model module.
    * @module model/PageConversionResult
-   * @version 2.7.0
+   * @version 2.7.1
    */
 
   /**

@@ -170,6 +170,26 @@
         done();
       });
     });
+    describe('editDocumentDocxGetContentControls', function() {
+      it('should call editDocumentDocxGetContentControls successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxGetContentControls
+        //instance.editDocumentDocxGetContentControls(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxGetFormFields', function() {
+      it('should call editDocumentDocxGetFormFields successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxGetFormFields
+        //instance.editDocumentDocxGetFormFields(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editDocumentDocxGetHeadersAndFooters', function() {
       it('should call editDocumentDocxGetHeadersAndFooters successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxGetHeadersAndFooters
@@ -414,6 +434,16 @@
       it('should call editDocumentDocxSetFooterAddPageNumber successfully', function(done) {
         //uncomment below and update the code to test editDocumentDocxSetFooterAddPageNumber
         //instance.editDocumentDocxSetFooterAddPageNumber(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editDocumentDocxSetFormFields', function() {
+      it('should call editDocumentDocxSetFormFields successfully', function(done) {
+        //uncomment below and update the code to test editDocumentDocxSetFormFields
+        //instance.editDocumentDocxSetFormFields(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

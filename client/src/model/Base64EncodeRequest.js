@@ -36,7 +36,7 @@
   /**
    * The Base64EncodeRequest model module.
    * @module model/Base64EncodeRequest
-   * @version 2.7.0
+   * @version 2.7.1
    */
 
   /**
