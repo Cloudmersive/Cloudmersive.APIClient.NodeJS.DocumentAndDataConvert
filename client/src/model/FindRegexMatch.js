@@ -36,7 +36,7 @@
   /**
    * The FindRegexMatch model module.
    * @module model/FindRegexMatch
-   * @version 2.7.1
+   * @version 2.7.2
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The HandlebarFormField model module.
    * @module model/HandlebarFormField
-   * @version 2.7.1
+   * @version 2.7.2
    */
 
   /**

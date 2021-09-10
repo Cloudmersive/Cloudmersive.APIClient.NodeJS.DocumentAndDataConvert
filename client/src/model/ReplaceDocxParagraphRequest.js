@@ -36,7 +36,7 @@
   /**
    * The ReplaceDocxParagraphRequest model module.
    * @module model/ReplaceDocxParagraphRequest
-   * @version 2.7.1
+   * @version 2.7.2
    */
 
   /**

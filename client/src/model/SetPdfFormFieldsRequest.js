@@ -36,7 +36,7 @@
   /**
    * The SetPdfFormFieldsRequest model module.
    * @module model/SetPdfFormFieldsRequest
-   * @version 2.7.1
+   * @version 2.7.2
    */
 
   /**

@@ -33,7 +33,7 @@
   /**
    * CompareDocument service.
    * @module api/CompareDocumentApi
-   * @version 2.7.1
+   * @version 2.7.2
    */
 
   /**

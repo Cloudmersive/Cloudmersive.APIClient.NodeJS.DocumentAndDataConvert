@@ -248,7 +248,7 @@ Name | Type | Description  | Notes
 
 <a name="transformDocumentDocxTableFillInMulti"></a>
 # **transformDocumentDocxTableFillInMulti**
-> Object transformDocumentDocxTableFillInMulti(request)
+> &#39;Blob&#39; transformDocumentDocxTableFillInMulti(request)
 
 Fill in data in multiple tables in a Word DOCX document, return result
 
@@ -288,7 +288,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**&#39;Blob&#39;**
 
 ### Authorization
 
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/octet-stream
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="transformDocumentPptxReplace"></a>
 # **transformDocumentPptxReplace**

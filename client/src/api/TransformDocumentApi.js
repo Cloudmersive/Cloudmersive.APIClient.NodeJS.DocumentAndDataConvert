@@ -33,7 +33,7 @@
   /**
    * TransformDocument service.
    * @module api/TransformDocumentApi
-   * @version 2.7.1
+   * @version 2.7.2
    */
 
   /**
@@ -271,7 +271,7 @@
      * Callback function to receive the result of the transformDocumentDocxTableFillInMulti operation.
      * @callback module:api/TransformDocumentApi~transformDocumentDocxTableFillInMultiCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {'Blob'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -280,7 +280,7 @@
      * Replace placeholder rows in multiple tables in an Office Word Document (docx) using one or more templates
      * @param {module:model/DocxTableTableFillMultiRequest} request 
      * @param {module:api/TransformDocumentApi~transformDocumentDocxTableFillInMultiCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link 'Blob'}
      */
     this.transformDocumentDocxTableFillInMulti = function(request, callback) {
       var postBody = request;
@@ -304,8 +304,8 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
-      var accepts = ['application/octet-stream'];
-      var returnType = Object;
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = 'Blob';
 
       return this.apiClient.callApi(
         '/convert/transform/docx/table/fill/data/multi', 'POST',

@@ -36,7 +36,7 @@
   /**
    * The DocxTableSingleTableFill model module.
    * @module model/DocxTableSingleTableFill
-   * @version 2.7.1
+   * @version 2.7.2
    */
 
   /**

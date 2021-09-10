@@ -36,7 +36,7 @@
   /**
    * The GetDocxGetFormFieldsResponse model module.
    * @module model/GetDocxGetFormFieldsResponse
-   * @version 2.7.1
+   * @version 2.7.2
    */
 
   /**

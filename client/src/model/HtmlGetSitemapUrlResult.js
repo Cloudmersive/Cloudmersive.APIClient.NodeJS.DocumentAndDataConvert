@@ -36,7 +36,7 @@
   /**
    * The HtmlGetSitemapUrlResult model module.
    * @module model/HtmlGetSitemapUrlResult
-   * @version 2.7.1
+   * @version 2.7.2
    */
 
   /**

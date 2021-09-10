@@ -36,7 +36,7 @@
   /**
    * The DocxTableTableFillRequest model module.
    * @module model/DocxTableTableFillRequest
-   * @version 2.7.1
+   * @version 2.7.2
    */
 
   /**

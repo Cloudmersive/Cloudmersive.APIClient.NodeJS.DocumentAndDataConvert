@@ -36,7 +36,7 @@
   /**
    * The RtfToJpgResult model module.
    * @module model/RtfToJpgResult
-   * @version 2.7.1
+   * @version 2.7.2
    */
 
   /**

@@ -33,7 +33,7 @@
   /**
    * SplitDocument service.
    * @module api/SplitDocumentApi
-   * @version 2.7.1
+   * @version 2.7.2
    */
 
   /**
