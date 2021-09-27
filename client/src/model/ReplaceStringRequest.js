@@ -36,7 +36,7 @@
   /**
    * The ReplaceStringRequest model module.
    * @module model/ReplaceStringRequest
-   * @version 2.7.2
+   * @version 2.7.3
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The MsgToHtmlResult model module.
    * @module model/MsgToHtmlResult
-   * @version 2.7.2
+   * @version 2.7.3
    */
 
   /**

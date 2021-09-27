@@ -36,7 +36,7 @@
   /**
    * The HtmlGetLanguageResult model module.
    * @module model/HtmlGetLanguageResult
-   * @version 2.7.2
+   * @version 2.7.3
    */
 
   /**

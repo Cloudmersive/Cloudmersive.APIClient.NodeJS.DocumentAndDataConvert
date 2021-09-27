@@ -36,7 +36,7 @@
   /**
    * The HtmlHyperlink model module.
    * @module model/HtmlHyperlink
-   * @version 2.7.2
+   * @version 2.7.3
    */
 
   /**

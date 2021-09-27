@@ -36,7 +36,7 @@
   /**
    * The RemoveWhitespaceFromTextResponse model module.
    * @module model/RemoveWhitespaceFromTextResponse
-   * @version 2.7.2
+   * @version 2.7.3
    */
 
   /**

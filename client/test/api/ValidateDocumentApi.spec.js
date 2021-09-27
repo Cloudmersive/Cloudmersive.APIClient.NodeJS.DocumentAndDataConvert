@@ -70,6 +70,16 @@
         done();
       });
     });
+    describe('validateDocumentDocValidation', function() {
+      it('should call validateDocumentDocValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentDocValidation
+        //instance.validateDocumentDocValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('validateDocumentDocxValidation', function() {
       it('should call validateDocumentDocxValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentDocxValidation
@@ -190,6 +200,16 @@
         done();
       });
     });
+    describe('validateDocumentPptValidation', function() {
+      it('should call validateDocumentPptValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentPptValidation
+        //instance.validateDocumentPptValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('validateDocumentPptxValidation', function() {
       it('should call validateDocumentPptxValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentPptxValidation
@@ -210,6 +230,16 @@
         done();
       });
     });
+    describe('validateDocumentRtfValidation', function() {
+      it('should call validateDocumentRtfValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentRtfValidation
+        //instance.validateDocumentRtfValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('validateDocumentTarValidation', function() {
       it('should call validateDocumentTarValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentTarValidation
@@ -224,6 +254,16 @@
       it('should call validateDocumentTxtValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentTxtValidation
         //instance.validateDocumentTxtValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('validateDocumentXlsValidation', function() {
+      it('should call validateDocumentXlsValidation successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentXlsValidation
+        //instance.validateDocumentXlsValidation(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

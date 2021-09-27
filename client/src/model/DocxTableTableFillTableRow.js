@@ -36,7 +36,7 @@
   /**
    * The DocxTableTableFillTableRow model module.
    * @module model/DocxTableTableFillTableRow
-   * @version 2.7.2
+   * @version 2.7.3
    */
 
   /**

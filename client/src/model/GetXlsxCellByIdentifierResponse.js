@@ -36,7 +36,7 @@
   /**
    * The GetXlsxCellByIdentifierResponse model module.
    * @module model/GetXlsxCellByIdentifierResponse
-   * @version 2.7.2
+   * @version 2.7.3
    */
 
   /**

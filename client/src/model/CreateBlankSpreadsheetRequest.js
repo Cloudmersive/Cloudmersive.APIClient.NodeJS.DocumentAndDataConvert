@@ -36,7 +36,7 @@
   /**
    * The CreateBlankSpreadsheetRequest model module.
    * @module model/CreateBlankSpreadsheetRequest
-   * @version 2.7.2
+   * @version 2.7.3
    */
 
   /**

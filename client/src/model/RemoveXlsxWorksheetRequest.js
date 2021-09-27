@@ -36,7 +36,7 @@
   /**
    * The RemoveXlsxWorksheetRequest model module.
    * @module model/RemoveXlsxWorksheetRequest
-   * @version 2.7.2
+   * @version 2.7.3
    */
 
   /**

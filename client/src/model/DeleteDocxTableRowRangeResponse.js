@@ -36,7 +36,7 @@
   /**
    * The DeleteDocxTableRowRangeResponse model module.
    * @module model/DeleteDocxTableRowRangeResponse
-   * @version 2.7.2
+   * @version 2.7.3
    */
 
   /**

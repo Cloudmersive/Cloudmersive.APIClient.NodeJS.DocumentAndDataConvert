@@ -36,7 +36,7 @@
   /**
    * The XlsxToPngResult model module.
    * @module model/XlsxToPngResult
-   * @version 2.7.2
+   * @version 2.7.3
    */
 
   /**

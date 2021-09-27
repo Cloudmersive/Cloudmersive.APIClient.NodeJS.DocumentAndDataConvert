@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.7.2
+- Package version: 2.7.3
 
 
 ## Installation
@@ -382,6 +382,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.TransformDocumentApi* | [**transformDocumentPptxReplace**](docs/TransformDocumentApi.md#transformDocumentPptxReplace) | **POST** /convert/transform/pptx/replace-all | Replace string in PowerPoint PPTX presentation, return result
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentAutodetectValidation**](docs/ValidateDocumentApi.md#validateDocumentAutodetectValidation) | **POST** /convert/validate/autodetect | Autodetect content type and validate
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentCsvValidation**](docs/ValidateDocumentApi.md#validateDocumentCsvValidation) | **POST** /convert/validate/csv | Validate a CSV file document (CSV)
+*CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentDocValidation**](docs/ValidateDocumentApi.md#validateDocumentDocValidation) | **POST** /convert/validate/doc | Validate a Word 97-2003 Legacy document (DOC)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentDocxValidation**](docs/ValidateDocumentApi.md#validateDocumentDocxValidation) | **POST** /convert/validate/docx | Validate a Word document (DOCX)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentEmlValidation**](docs/ValidateDocumentApi.md#validateDocumentEmlValidation) | **POST** /convert/validate/eml | Validate if an EML file is executable
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentExecutableValidation**](docs/ValidateDocumentApi.md#validateDocumentExecutableValidation) | **POST** /convert/validate/executable | Validate if a file is executable
@@ -394,10 +395,13 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentMsgValidation**](docs/ValidateDocumentApi.md#validateDocumentMsgValidation) | **POST** /convert/validate/msg | Validate if an MSG file is executable
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentPdfValidation**](docs/ValidateDocumentApi.md#validateDocumentPdfValidation) | **POST** /convert/validate/pdf | Validate a PDF document file
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentPngValidation**](docs/ValidateDocumentApi.md#validateDocumentPngValidation) | **POST** /convert/validate/png | Validate a PNG File
+*CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentPptValidation**](docs/ValidateDocumentApi.md#validateDocumentPptValidation) | **POST** /convert/validate/ppt | Validate a PowerPoint 97-2003 Legacy presentation (PPT)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentPptxValidation**](docs/ValidateDocumentApi.md#validateDocumentPptxValidation) | **POST** /convert/validate/pptx | Validate a PowerPoint presentation (PPTX)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentRarValidation**](docs/ValidateDocumentApi.md#validateDocumentRarValidation) | **POST** /convert/validate/rar | Validate a RAR Archive file (RAR)
+*CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentRtfValidation**](docs/ValidateDocumentApi.md#validateDocumentRtfValidation) | **POST** /convert/validate/rtf | Validate a Rich Text Format document (RTF)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentTarValidation**](docs/ValidateDocumentApi.md#validateDocumentTarValidation) | **POST** /convert/validate/tar | Validate a TAR Tarball Archive file (TAR)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentTxtValidation**](docs/ValidateDocumentApi.md#validateDocumentTxtValidation) | **POST** /convert/validate/txt | Validate an TXT file
+*CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentXlsValidation**](docs/ValidateDocumentApi.md#validateDocumentXlsValidation) | **POST** /convert/validate/xls | Validate a Excel 97-2003 Legacy spreadsheet (XLS)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentXlsxValidation**](docs/ValidateDocumentApi.md#validateDocumentXlsxValidation) | **POST** /convert/validate/xlsx | Validate a Excel document (XLSX)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentXmlValidation**](docs/ValidateDocumentApi.md#validateDocumentXmlValidation) | **POST** /convert/validate/xml | Validate an XML file
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentXmlXxeThreatValidation**](docs/ValidateDocumentApi.md#validateDocumentXmlXxeThreatValidation) | **POST** /convert/validate/xml/xxe-threats | Validate an XML file for XML External Entity (XXE) threats

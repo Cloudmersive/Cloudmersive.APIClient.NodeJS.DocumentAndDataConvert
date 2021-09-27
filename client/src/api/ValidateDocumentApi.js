@@ -33,7 +33,7 @@
   /**
    * ValidateDocument service.
    * @module api/ValidateDocumentApi
-   * @version 2.7.2
+   * @version 2.7.3
    */
 
   /**
@@ -138,6 +138,54 @@
 
       return this.apiClient.callApi(
         '/convert/validate/csv', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validateDocumentDocValidation operation.
+     * @callback module:api/ValidateDocumentApi~validateDocumentDocValidationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DocumentValidationResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate a Word 97-2003 Legacy document (DOC)
+     * Validate a Word 97-2003 Legacy document (DOC)
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ValidateDocumentApi~validateDocumentDocValidationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DocumentValidationResult}
+     */
+    this.validateDocumentDocValidation = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling validateDocumentDocValidation");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = DocumentValidationResult;
+
+      return this.apiClient.callApi(
+        '/convert/validate/doc', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -720,6 +768,54 @@
     }
 
     /**
+     * Callback function to receive the result of the validateDocumentPptValidation operation.
+     * @callback module:api/ValidateDocumentApi~validateDocumentPptValidationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DocumentValidationResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+     * Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ValidateDocumentApi~validateDocumentPptValidationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DocumentValidationResult}
+     */
+    this.validateDocumentPptValidation = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling validateDocumentPptValidation");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = DocumentValidationResult;
+
+      return this.apiClient.callApi(
+        '/convert/validate/ppt', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the validateDocumentPptxValidation operation.
      * @callback module:api/ValidateDocumentApi~validateDocumentPptxValidationCallback
      * @param {String} error Error message, if any.
@@ -816,6 +912,54 @@
     }
 
     /**
+     * Callback function to receive the result of the validateDocumentRtfValidation operation.
+     * @callback module:api/ValidateDocumentApi~validateDocumentRtfValidationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DocumentValidationResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate a Rich Text Format document (RTF)
+     * Validate a Rich Text Format document (RTF)
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ValidateDocumentApi~validateDocumentRtfValidationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DocumentValidationResult}
+     */
+    this.validateDocumentRtfValidation = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling validateDocumentRtfValidation");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = DocumentValidationResult;
+
+      return this.apiClient.callApi(
+        '/convert/validate/rtf', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the validateDocumentTarValidation operation.
      * @callback module:api/ValidateDocumentApi~validateDocumentTarValidationCallback
      * @param {String} error Error message, if any.
@@ -906,6 +1050,54 @@
 
       return this.apiClient.callApi(
         '/convert/validate/txt', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validateDocumentXlsValidation operation.
+     * @callback module:api/ValidateDocumentApi~validateDocumentXlsValidationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DocumentValidationResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+     * Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ValidateDocumentApi~validateDocumentXlsValidationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DocumentValidationResult}
+     */
+    this.validateDocumentXlsValidation = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling validateDocumentXlsValidation");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = DocumentValidationResult;
+
+      return this.apiClient.callApi(
+        '/convert/validate/xls', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

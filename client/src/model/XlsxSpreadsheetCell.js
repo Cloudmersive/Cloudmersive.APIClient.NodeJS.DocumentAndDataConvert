@@ -36,7 +36,7 @@
   /**
    * The XlsxSpreadsheetCell model module.
    * @module model/XlsxSpreadsheetCell
-   * @version 2.7.2
+   * @version 2.7.3
    */
 
   /**
