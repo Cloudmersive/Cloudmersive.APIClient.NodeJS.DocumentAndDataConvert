@@ -36,7 +36,7 @@
   /**
    * The ZipFile model module.
    * @module model/ZipFile
-   * @version 2.7.3
+   * @version 2.7.4
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The DocxSetFormFieldsRequest model module.
    * @module model/DocxSetFormFieldsRequest
-   * @version 2.7.3
+   * @version 2.7.4
    */
 
   /**

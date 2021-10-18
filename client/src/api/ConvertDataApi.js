@@ -33,7 +33,7 @@
   /**
    * ConvertData service.
    * @module api/ConvertDataApi
-   * @version 2.7.3
+   * @version 2.7.4
    */
 
   /**
@@ -152,6 +152,54 @@
     }
 
     /**
+     * Callback function to receive the result of the convertDataJsonStringToXml operation.
+     * @callback module:api/ConvertDataApi~convertDataJsonStringToXmlCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert JSON String to XML conversion
+     * Convert a JSON object into XML
+     * @param {String} jsonString Input JSON String to convert to XML
+     * @param {module:api/ConvertDataApi~convertDataJsonStringToXmlCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.convertDataJsonStringToXml = function(jsonString, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'jsonString' is set
+      if (jsonString === undefined || jsonString === null) {
+        throw new Error("Missing the required parameter 'jsonString' when calling convertDataJsonStringToXml");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'JsonString': jsonString,
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/xml'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/convert/json-string/to/xml', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the convertDataJsonToXml operation.
      * @callback module:api/ConvertDataApi~convertDataJsonToXmlCallback
      * @param {String} error Error message, if any.
@@ -160,9 +208,9 @@
      */
 
     /**
-     * Convert JSON to XML conversion
+     * Convert JSON Object to XML conversion
      * Convert a JSON object into XML
-     * @param {Object} jsonObject Input JSON to convert to XML
+     * @param {Object} jsonObject Input JSON Object to convert to XML
      * @param {module:api/ConvertDataApi~convertDataJsonToXmlCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */

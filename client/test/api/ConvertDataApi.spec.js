@@ -70,6 +70,16 @@
         done();
       });
     });
+    describe('convertDataJsonStringToXml', function() {
+      it('should call convertDataJsonStringToXml successfully', function(done) {
+        //uncomment below and update the code to test convertDataJsonStringToXml
+        //instance.convertDataJsonStringToXml(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDataJsonToXml', function() {
       it('should call convertDataJsonToXml successfully', function(done) {
         //uncomment below and update the code to test convertDataJsonToXml
