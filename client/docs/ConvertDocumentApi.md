@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**convertDocumentAutodetectGetInfo**](ConvertDocumentApi.md#convertDocumentAutodetectGetInfo) | **POST** /convert/autodetect/get-info | Get document type information
 [**convertDocumentAutodetectToJpg**](ConvertDocumentApi.md#convertDocumentAutodetectToJpg) | **POST** /convert/autodetect/to/jpg | Convert Document to JPG/JPEG image array
 [**convertDocumentAutodetectToPdf**](ConvertDocumentApi.md#convertDocumentAutodetectToPdf) | **POST** /convert/autodetect/to/pdf | Convert Document to PDF
+[**convertDocumentAutodetectToPdfBatchJob**](ConvertDocumentApi.md#convertDocumentAutodetectToPdfBatchJob) | **POST** /convert/autodetect/to/pdf/batch-job | Convert Document to PDF as Batch Job
 [**convertDocumentAutodetectToPngArray**](ConvertDocumentApi.md#convertDocumentAutodetectToPngArray) | **POST** /convert/autodetect/to/png | Convert Document to PNG array
 [**convertDocumentAutodetectToThumbnail**](ConvertDocumentApi.md#convertDocumentAutodetectToThumbnail) | **POST** /convert/autodetect/to/thumbnail | Convert File to Thumbnail Image
 [**convertDocumentAutodetectToThumbnailsAdvanced**](ConvertDocumentApi.md#convertDocumentAutodetectToThumbnailsAdvanced) | **POST** /convert/autodetect/to/thumbnail/advanced | Convert File to Thumbnail Image Object
@@ -29,6 +30,7 @@ Method | HTTP request | Description
 [**convertDocumentEmlToJpg**](ConvertDocumentApi.md#convertDocumentEmlToJpg) | **POST** /convert/eml/to/jpg | Convert Email EML file to JPG/JPEG image array
 [**convertDocumentEmlToPdf**](ConvertDocumentApi.md#convertDocumentEmlToPdf) | **POST** /convert/eml/to/pdf | Convert Email EML file to PDF document
 [**convertDocumentEmlToPng**](ConvertDocumentApi.md#convertDocumentEmlToPng) | **POST** /convert/eml/to/png | Convert Email EML file to PNG image array
+[**convertDocumentGetAsyncJobStatus**](ConvertDocumentApi.md#convertDocumentGetAsyncJobStatus) | **GET** /convert/batch-job/status | Get the status and result of a Convert Document Batch Job
 [**convertDocumentGetFileTypeIcon**](ConvertDocumentApi.md#convertDocumentGetFileTypeIcon) | **POST** /convert/autodetect/get-icon | Get PNG icon file for the file extension
 [**convertDocumentGetFileTypeIconAdvanced**](ConvertDocumentApi.md#convertDocumentGetFileTypeIconAdvanced) | **POST** /convert/autodetect/get-icon/advanced | Get PNG icon byte array for the file extension
 [**convertDocumentHtmlToPdf**](ConvertDocumentApi.md#convertDocumentHtmlToPdf) | **POST** /convert/html/to/pdf | Convert HTML document file to PDF Document
@@ -58,10 +60,13 @@ Method | HTTP request | Description
 [**convertDocumentPdfToDocxRasterize**](ConvertDocumentApi.md#convertDocumentPdfToDocxRasterize) | **POST** /convert/pdf/to/docx/rasterize | Convert PDF to Word DOCX Document based on rasterized version of the PDF
 [**convertDocumentPdfToJpg**](ConvertDocumentApi.md#convertDocumentPdfToJpg) | **POST** /convert/pdf/to/jpg | Convert PDF to JPG/JPEG image array
 [**convertDocumentPdfToPngArray**](ConvertDocumentApi.md#convertDocumentPdfToPngArray) | **POST** /convert/pdf/to/png | Convert PDF to PNG Image Array
+[**convertDocumentPdfToPngArrayDirect**](ConvertDocumentApi.md#convertDocumentPdfToPngArrayDirect) | **POST** /convert/pdf/to/png/direct | Convert PDF to PNG Image Array (Direct)
 [**convertDocumentPdfToPngSingle**](ConvertDocumentApi.md#convertDocumentPdfToPngSingle) | **POST** /convert/pdf/to/png/merge-single | Convert PDF to Single PNG image
 [**convertDocumentPdfToPptx**](ConvertDocumentApi.md#convertDocumentPdfToPptx) | **POST** /convert/pdf/to/pptx | Convert PDF to PowerPoint PPTX Presentation
+[**convertDocumentPdfToTiff**](ConvertDocumentApi.md#convertDocumentPdfToTiff) | **POST** /convert/pdf/to/tiff | Convert PDF to TIFF image
 [**convertDocumentPdfToTxt**](ConvertDocumentApi.md#convertDocumentPdfToTxt) | **POST** /convert/pdf/to/txt | Convert PDF Document to Text (txt)
 [**convertDocumentPngArrayToPdf**](ConvertDocumentApi.md#convertDocumentPngArrayToPdf) | **POST** /convert/png/to/pdf | Convert PNG Array to PDF
+[**convertDocumentPngArrayToPdfFlattenTransparency**](ConvertDocumentApi.md#convertDocumentPngArrayToPdfFlattenTransparency) | **POST** /convert/png/to/pdf/remove-transparency | Convert PNG Array to PDF and remove transparency
 [**convertDocumentPptToPdf**](ConvertDocumentApi.md#convertDocumentPptToPdf) | **POST** /convert/ppt/to/pdf | Convert PowerPoint PPT (97-03) Presentation to PDF
 [**convertDocumentPptToPptx**](ConvertDocumentApi.md#convertDocumentPptToPptx) | **POST** /convert/ppt/to/pptx | Convert PowerPoint PPT (97-03) Presentation to PPTX
 [**convertDocumentPptxToPdf**](ConvertDocumentApi.md#convertDocumentPptxToPdf) | **POST** /convert/pptx/to/pdf | Convert PowerPoint PPTX Presentation to PDF
@@ -73,6 +78,7 @@ Method | HTTP request | Description
 [**convertDocumentRtfToJpg**](ConvertDocumentApi.md#convertDocumentRtfToJpg) | **POST** /convert/rtf/to/jpg | Convert Rich Text Format RTF to JPG/JPEG image array
 [**convertDocumentRtfToPdf**](ConvertDocumentApi.md#convertDocumentRtfToPdf) | **POST** /convert/rtf/to/pdf | Convert Rich Text Format RTF to PDF
 [**convertDocumentRtfToPng**](ConvertDocumentApi.md#convertDocumentRtfToPng) | **POST** /convert/rtf/to/png | Convert Rich Text Format RTF to PNG image array
+[**convertDocumentTxtToPdf**](ConvertDocumentApi.md#convertDocumentTxtToPdf) | **POST** /convert/txt/to/pdf | Convert TXT text file to PDF Document
 [**convertDocumentXlsToCsv**](ConvertDocumentApi.md#convertDocumentXlsToCsv) | **POST** /convert/xls/to/csv | Convert Excel XLS (97-03) Spreadsheet to CSV
 [**convertDocumentXlsToPdf**](ConvertDocumentApi.md#convertDocumentXlsToPdf) | **POST** /convert/xls/to/pdf | Convert Excel XLS (97-03) Spreadsheet to PDF
 [**convertDocumentXlsToXlsx**](ConvertDocumentApi.md#convertDocumentXlsToXlsx) | **POST** /convert/xls/to/xlsx | Convert Excel XLS (97-03) Spreadsheet to XLSX
@@ -201,7 +207,7 @@ Name | Type | Description  | Notes
 
 Convert Document to PDF
 
-Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files.
+Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, text files, and even multi-page TIFF files.
 
 ### Example
 ```javascript
@@ -238,6 +244,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 **&#39;Blob&#39;**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+<a name="convertDocumentAutodetectToPdfBatchJob"></a>
+# **convertDocumentAutodetectToPdfBatchJob**
+> ConvertDocumentBatchJobCreateResult convertDocumentAutodetectToPdfBatchJob(inputFile)
+
+Convert Document to PDF as Batch Job
+
+Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, text files, and even multi-page TIFF files.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
+
+var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.convertDocumentAutodetectToPdfBatchJob(inputFile, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Input file to perform the operation on. | 
+
+### Return type
+
+[**ConvertDocumentBatchJobCreateResult**](ConvertDocumentBatchJobCreateResult.md)
 
 ### Authorization
 
@@ -1479,6 +1538,59 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="convertDocumentGetAsyncJobStatus"></a>
+# **convertDocumentGetAsyncJobStatus**
+> ConvertDocumentJobStatusResult convertDocumentGetAsyncJobStatus(asyncJobID)
+
+Get the status and result of a Convert Document Batch Job
+
+Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
+
+var asyncJobID = "asyncJobID_example"; // String | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.convertDocumentGetAsyncJobStatus(asyncJobID, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **asyncJobID** | **String**|  | 
+
+### Return type
+
+[**ConvertDocumentJobStatusResult**](ConvertDocumentJobStatusResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="convertDocumentGetFileTypeIcon"></a>
@@ -3015,11 +3127,11 @@ Name | Type | Description  | Notes
 
 <a name="convertDocumentPdfToPngArray"></a>
 # **convertDocumentPdfToPngArray**
-> PdfToPngResult convertDocumentPdfToPngArray(inputFile)
+> PdfToPngResult convertDocumentPdfToPngArray(inputFile, opts)
 
 Convert PDF to PNG Image Array
 
-Convert PDF document to PNG array, one image per page.
+Convert PDF document to PNG array, one image per page.  Returns PNG images as temporary expiring URLs.
 
 ### Example
 ```javascript
@@ -3036,6 +3148,9 @@ var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
+var opts = { 
+  'dpi': 56 // Number | Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud.
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -3044,7 +3159,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.convertDocumentPdfToPngArray(inputFile, callback);
+apiInstance.convertDocumentPdfToPngArray(inputFile, opts, callback);
 ```
 
 ### Parameters
@@ -3052,10 +3167,68 @@ apiInstance.convertDocumentPdfToPngArray(inputFile, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **File**| Input file to perform the operation on. | 
+ **dpi** | **Number**| Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. | [optional] 
 
 ### Return type
 
 [**PdfToPngResult**](PdfToPngResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+<a name="convertDocumentPdfToPngArrayDirect"></a>
+# **convertDocumentPdfToPngArrayDirect**
+> PdfToPngDirectResult convertDocumentPdfToPngArrayDirect(inputFile, opts)
+
+Convert PDF to PNG Image Array (Direct)
+
+Convert PDF document to PNG array, one image per page.  Returns PNG images directly in the response objects.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
+
+var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
+
+var opts = { 
+  'dpi': 56 // Number | Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.convertDocumentPdfToPngArrayDirect(inputFile, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Input file to perform the operation on. | 
+ **dpi** | **Number**| Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. | [optional] 
+
+### Return type
+
+[**PdfToPngDirectResult**](PdfToPngDirectResult.md)
 
 ### Authorization
 
@@ -3171,6 +3344,65 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: multipart/form-data
  - **Accept**: application/octet-stream
+
+<a name="convertDocumentPdfToTiff"></a>
+# **convertDocumentPdfToTiff**
+> &#39;Blob&#39; convertDocumentPdfToTiff(inputFile, opts)
+
+Convert PDF to TIFF image
+
+Converts a PDF Document to a TIFF image.  If the PDF contains multiple pages, these pages will be represented as separate pages within the output TIFF image.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
+
+var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
+
+var opts = { 
+  'dpi': 56, // Number | Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud.
+  'lzwCompression': true // Boolean | Optional; Enables LZW compression to reduce the size of the output image.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.convertDocumentPdfToTiff(inputFile, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Input file to perform the operation on. | 
+ **dpi** | **Number**| Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. | [optional] 
+ **lzwCompression** | **Boolean**| Optional; Enables LZW compression to reduce the size of the output image. | [optional] 
+
+### Return type
+
+**&#39;Blob&#39;**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="convertDocumentPdfToTxt"></a>
 # **convertDocumentPdfToTxt**
@@ -3301,6 +3533,53 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+<a name="convertDocumentPngArrayToPdfFlattenTransparency"></a>
+# **convertDocumentPngArrayToPdfFlattenTransparency**
+> Object convertDocumentPngArrayToPdfFlattenTransparency()
+
+Convert PNG Array to PDF and remove transparency
+
+Convert an array of PNG images, remove transparency in source images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.convertDocumentPngArrayToPdfFlattenTransparency(callback);
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
 <a name="convertDocumentPptToPdf"></a>
@@ -3517,7 +3796,7 @@ Name | Type | Description  | Notes
 
 <a name="convertDocumentPptxToPpt"></a>
 # **convertDocumentPptxToPpt**
-> Object convertDocumentPptxToPpt()
+> &#39;Blob&#39; convertDocumentPptxToPpt(inputFile)
 
 Convert PowerPoint PPTX presentation to Legacy PowerPoint PPT (97-03)
 
@@ -3536,6 +3815,9 @@ Apikey.apiKey = 'YOUR API KEY';
 
 var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
 
+var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
+
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -3543,15 +3825,18 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.convertDocumentPptxToPpt(callback);
+apiInstance.convertDocumentPptxToPpt(inputFile, callback);
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Input file to perform the operation on. | 
 
 ### Return type
 
-**Object**
+**&#39;Blob&#39;**
 
 ### Authorization
 
@@ -3559,7 +3844,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/octet-stream
 
 <a name="convertDocumentPptxToTxt"></a>
@@ -3884,6 +4169,63 @@ Name | Type | Description  | Notes
  - **Content-Type**: multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml
 
+<a name="convertDocumentTxtToPdf"></a>
+# **convertDocumentTxtToPdf**
+> &#39;Blob&#39; convertDocumentTxtToPdf(inputFile, opts)
+
+Convert TXT text file to PDF Document
+
+Convert simple text files to PDF.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.ConvertDocumentApi();
+
+var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
+
+var opts = { 
+  'scaleFactor': 56 // Number | Optional: Set to 100 to scale at 100%, set to 50% to scale down to 50% scale, set to 200% to scale up to 200% scale, etc.  Default is 100%. Maximum is 1000%.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.convertDocumentTxtToPdf(inputFile, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Input file to perform the operation on. | 
+ **scaleFactor** | **Number**| Optional: Set to 100 to scale at 100%, set to 50% to scale down to 50% scale, set to 200% to scale up to 200% scale, etc.  Default is 100%. Maximum is 1000%. | [optional] 
+
+### Return type
+
+**&#39;Blob&#39;**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
 <a name="convertDocumentXlsToCsv"></a>
 # **convertDocumentXlsToCsv**
 > &#39;Blob&#39; convertDocumentXlsToCsv(inputFile)
@@ -4098,7 +4440,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: application/octet-stream
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="convertDocumentXlsxToCsvMulti"></a>
 # **convertDocumentXlsxToCsvMulti**

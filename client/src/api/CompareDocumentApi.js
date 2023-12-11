@@ -33,7 +33,7 @@
   /**
    * CompareDocument service.
    * @module api/CompareDocumentApi
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**
@@ -60,10 +60,13 @@
      * Compare two Office Word Documents (docx) files and highlight the differences
      * @param {File} inputFile1 First input file to perform the operation on.
      * @param {File} inputFile2 Second input file to perform the operation on (more than 2 can be supplied).
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.autorepair Optional; automatically repair input documents that have errors (default is true)
      * @param {module:api/CompareDocumentApi~compareDocumentDocxCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */
-    this.compareDocumentDocx = function(inputFile1, inputFile2, callback) {
+    this.compareDocumentDocx = function(inputFile1, inputFile2, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'inputFile1' is set
@@ -84,6 +87,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'autorepair': opts['autorepair']
       };
       var formParams = {
         'inputFile1': inputFile1,

@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AddPdfAnnotationRequest', 'model/GetPdfAnnotationsResult', 'model/PdfFormFields', 'model/PdfMetadata', 'model/PdfTextByPageResult', 'model/SetPdfFormFieldsRequest', 'model/SetPdfMetadataRequest'], factory);
+    define(['ApiClient', 'model/AddPdfAnnotationRequest', 'model/EditPdfBatchJobCreateResult', 'model/EditPdfJobStatusResult', 'model/GetPdfAnnotationsResult', 'model/PdfFormFields', 'model/PdfMetadata', 'model/PdfTextByPageResult', 'model/SetPdfFormFieldsRequest', 'model/SetPdfMetadataRequest'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AddPdfAnnotationRequest'), require('../model/GetPdfAnnotationsResult'), require('../model/PdfFormFields'), require('../model/PdfMetadata'), require('../model/PdfTextByPageResult'), require('../model/SetPdfFormFieldsRequest'), require('../model/SetPdfMetadataRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/AddPdfAnnotationRequest'), require('../model/EditPdfBatchJobCreateResult'), require('../model/EditPdfJobStatusResult'), require('../model/GetPdfAnnotationsResult'), require('../model/PdfFormFields'), require('../model/PdfMetadata'), require('../model/PdfTextByPageResult'), require('../model/SetPdfFormFieldsRequest'), require('../model/SetPdfMetadataRequest'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.EditPdfApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AddPdfAnnotationRequest, root.CloudmersiveConvertApiClient.GetPdfAnnotationsResult, root.CloudmersiveConvertApiClient.PdfFormFields, root.CloudmersiveConvertApiClient.PdfMetadata, root.CloudmersiveConvertApiClient.PdfTextByPageResult, root.CloudmersiveConvertApiClient.SetPdfFormFieldsRequest, root.CloudmersiveConvertApiClient.SetPdfMetadataRequest);
+    root.CloudmersiveConvertApiClient.EditPdfApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AddPdfAnnotationRequest, root.CloudmersiveConvertApiClient.EditPdfBatchJobCreateResult, root.CloudmersiveConvertApiClient.EditPdfJobStatusResult, root.CloudmersiveConvertApiClient.GetPdfAnnotationsResult, root.CloudmersiveConvertApiClient.PdfFormFields, root.CloudmersiveConvertApiClient.PdfMetadata, root.CloudmersiveConvertApiClient.PdfTextByPageResult, root.CloudmersiveConvertApiClient.SetPdfFormFieldsRequest, root.CloudmersiveConvertApiClient.SetPdfMetadataRequest);
   }
-}(this, function(ApiClient, AddPdfAnnotationRequest, GetPdfAnnotationsResult, PdfFormFields, PdfMetadata, PdfTextByPageResult, SetPdfFormFieldsRequest, SetPdfMetadataRequest) {
+}(this, function(ApiClient, AddPdfAnnotationRequest, EditPdfBatchJobCreateResult, EditPdfJobStatusResult, GetPdfAnnotationsResult, PdfFormFields, PdfMetadata, PdfTextByPageResult, SetPdfFormFieldsRequest, SetPdfMetadataRequest) {
   'use strict';
 
   /**
    * EditPdf service.
    * @module api/EditPdfApi
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**
@@ -264,6 +264,68 @@
     }
 
     /**
+     * Callback function to receive the result of the editPdfDeletePagesBatchJob operation.
+     * @callback module:api/EditPdfApi~editPdfDeletePagesBatchJobCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/EditPdfBatchJobCreateResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Remove, delete pages from a PDF document as Batch Job
+     * Remove one or more pages from a PDF document.  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Number} pageStart Page number (1 based) to start deleting pages from (inclusive).
+     * @param {Number} pageEnd Page number (1 based) to stop deleting pages from (inclusive).
+     * @param {module:api/EditPdfApi~editPdfDeletePagesBatchJobCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/EditPdfBatchJobCreateResult}
+     */
+    this.editPdfDeletePagesBatchJob = function(inputFile, pageStart, pageEnd, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling editPdfDeletePagesBatchJob");
+      }
+
+      // verify the required parameter 'pageStart' is set
+      if (pageStart === undefined || pageStart === null) {
+        throw new Error("Missing the required parameter 'pageStart' when calling editPdfDeletePagesBatchJob");
+      }
+
+      // verify the required parameter 'pageEnd' is set
+      if (pageEnd === undefined || pageEnd === null) {
+        throw new Error("Missing the required parameter 'pageEnd' when calling editPdfDeletePagesBatchJob");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'pageStart': pageStart,
+        'pageEnd': pageEnd
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = EditPdfBatchJobCreateResult;
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/pages/delete/batch-job', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the editPdfEncrypt operation.
      * @callback module:api/EditPdfApi~editPdfEncryptCallback
      * @param {String} error Error message, if any.
@@ -362,6 +424,54 @@
 
       return this.apiClient.callApi(
         '/convert/edit/pdf/annotations/list', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editPdfGetAsyncJobStatus operation.
+     * @callback module:api/EditPdfApi~editPdfGetAsyncJobStatusCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/EditPdfJobStatusResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the status and result of a PDF Batch Job
+     * Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     * @param {String} asyncJobID 
+     * @param {module:api/EditPdfApi~editPdfGetAsyncJobStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/EditPdfJobStatusResult}
+     */
+    this.editPdfGetAsyncJobStatus = function(asyncJobID, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'asyncJobID' is set
+      if (asyncJobID === undefined || asyncJobID === null) {
+        throw new Error("Missing the required parameter 'asyncJobID' when calling editPdfGetAsyncJobStatus");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'AsyncJobID': asyncJobID,
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = EditPdfJobStatusResult;
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/batch-job/status', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -592,6 +702,82 @@
     }
 
     /**
+     * Callback function to receive the result of the editPdfInsertPagesBatchJob operation.
+     * @callback module:api/EditPdfApi~editPdfInsertPagesBatchJobCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/EditPdfBatchJobCreateResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Insert, copy pages from one PDF document into another as a batch job
+     * Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+     * @param {File} sourceFile Source PDF file to copy pages from.
+     * @param {File} destinationFile Destination PDF file to copy pages into.
+     * @param {Number} pageStartSource Page number (1 based) to start copying pages from (inclusive) in the Source file.
+     * @param {Number} pageEndSource Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.
+     * @param {Number} pageInsertBeforeDesitnation Page number (1 based) to insert the pages before in the Destination file.
+     * @param {module:api/EditPdfApi~editPdfInsertPagesBatchJobCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/EditPdfBatchJobCreateResult}
+     */
+    this.editPdfInsertPagesBatchJob = function(sourceFile, destinationFile, pageStartSource, pageEndSource, pageInsertBeforeDesitnation, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'sourceFile' is set
+      if (sourceFile === undefined || sourceFile === null) {
+        throw new Error("Missing the required parameter 'sourceFile' when calling editPdfInsertPagesBatchJob");
+      }
+
+      // verify the required parameter 'destinationFile' is set
+      if (destinationFile === undefined || destinationFile === null) {
+        throw new Error("Missing the required parameter 'destinationFile' when calling editPdfInsertPagesBatchJob");
+      }
+
+      // verify the required parameter 'pageStartSource' is set
+      if (pageStartSource === undefined || pageStartSource === null) {
+        throw new Error("Missing the required parameter 'pageStartSource' when calling editPdfInsertPagesBatchJob");
+      }
+
+      // verify the required parameter 'pageEndSource' is set
+      if (pageEndSource === undefined || pageEndSource === null) {
+        throw new Error("Missing the required parameter 'pageEndSource' when calling editPdfInsertPagesBatchJob");
+      }
+
+      // verify the required parameter 'pageInsertBeforeDesitnation' is set
+      if (pageInsertBeforeDesitnation === undefined || pageInsertBeforeDesitnation === null) {
+        throw new Error("Missing the required parameter 'pageInsertBeforeDesitnation' when calling editPdfInsertPagesBatchJob");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'pageStartSource': pageStartSource,
+        'pageEndSource': pageEndSource,
+        'pageInsertBeforeDesitnation': pageInsertBeforeDesitnation
+      };
+      var formParams = {
+        'sourceFile': sourceFile,
+        'destinationFile': destinationFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = EditPdfBatchJobCreateResult;
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/pages/insert/batch-job', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the editPdfLinearize operation.
      * @callback module:api/EditPdfApi~editPdfLinearizeCallback
      * @param {String} error Error message, if any.
@@ -651,15 +837,67 @@
      * Rasterize a PDF to an image-based PDF
      * Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
      * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.dpi Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud.
      * @param {module:api/EditPdfApi~editPdfRasterizeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */
-    this.editPdfRasterize = function(inputFile, callback) {
+    this.editPdfRasterize = function(inputFile, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'inputFile' is set
       if (inputFile === undefined || inputFile === null) {
         throw new Error("Missing the required parameter 'inputFile' when calling editPdfRasterize");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'dpi': opts['dpi']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/edit/pdf/rasterize', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editPdfRasterizeBatchJob operation.
+     * @callback module:api/EditPdfApi~editPdfRasterizeBatchJobCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/EditPdfBatchJobCreateResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Rasterize a PDF to an image-based PDF as Batch Job
+     * Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/EditPdfApi~editPdfRasterizeBatchJobCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/EditPdfBatchJobCreateResult}
+     */
+    this.editPdfRasterizeBatchJob = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling editPdfRasterizeBatchJob");
       }
 
 
@@ -678,10 +916,10 @@
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/octet-stream'];
-      var returnType = 'Blob';
+      var returnType = EditPdfBatchJobCreateResult;
 
       return this.apiClient.callApi(
-        '/convert/edit/pdf/rasterize', 'POST',
+        '/convert/edit/pdf/rasterize/batch-job', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

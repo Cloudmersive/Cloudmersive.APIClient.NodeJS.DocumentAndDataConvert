@@ -36,7 +36,7 @@
   /**
    * The GetDocxContentControlsResponse model module.
    * @module model/GetDocxContentControlsResponse
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**

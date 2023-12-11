@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SplitDocxDocumentResult', 'model/SplitPdfResult', 'model/SplitPptxPresentationResult', 'model/SplitTextDocumentByLinesResult', 'model/SplitTextDocumentByStringResult', 'model/SplitXlsxWorksheetResult'], factory);
+    define(['ApiClient', 'model/JobStatusResult', 'model/PptxSplitAdvancedRequest', 'model/PptxSplitAdvancedResponse', 'model/SplitBatchJobCreateResult', 'model/SplitDocxDocumentResult', 'model/SplitPdfResult', 'model/SplitPptxPresentationResult', 'model/SplitTextDocumentByLinesResult', 'model/SplitTextDocumentByStringResult', 'model/SplitXlsxWorksheetResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/SplitDocxDocumentResult'), require('../model/SplitPdfResult'), require('../model/SplitPptxPresentationResult'), require('../model/SplitTextDocumentByLinesResult'), require('../model/SplitTextDocumentByStringResult'), require('../model/SplitXlsxWorksheetResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/JobStatusResult'), require('../model/PptxSplitAdvancedRequest'), require('../model/PptxSplitAdvancedResponse'), require('../model/SplitBatchJobCreateResult'), require('../model/SplitDocxDocumentResult'), require('../model/SplitPdfResult'), require('../model/SplitPptxPresentationResult'), require('../model/SplitTextDocumentByLinesResult'), require('../model/SplitTextDocumentByStringResult'), require('../model/SplitXlsxWorksheetResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.SplitDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.SplitDocxDocumentResult, root.CloudmersiveConvertApiClient.SplitPdfResult, root.CloudmersiveConvertApiClient.SplitPptxPresentationResult, root.CloudmersiveConvertApiClient.SplitTextDocumentByLinesResult, root.CloudmersiveConvertApiClient.SplitTextDocumentByStringResult, root.CloudmersiveConvertApiClient.SplitXlsxWorksheetResult);
+    root.CloudmersiveConvertApiClient.SplitDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.JobStatusResult, root.CloudmersiveConvertApiClient.PptxSplitAdvancedRequest, root.CloudmersiveConvertApiClient.PptxSplitAdvancedResponse, root.CloudmersiveConvertApiClient.SplitBatchJobCreateResult, root.CloudmersiveConvertApiClient.SplitDocxDocumentResult, root.CloudmersiveConvertApiClient.SplitPdfResult, root.CloudmersiveConvertApiClient.SplitPptxPresentationResult, root.CloudmersiveConvertApiClient.SplitTextDocumentByLinesResult, root.CloudmersiveConvertApiClient.SplitTextDocumentByStringResult, root.CloudmersiveConvertApiClient.SplitXlsxWorksheetResult);
   }
-}(this, function(ApiClient, SplitDocxDocumentResult, SplitPdfResult, SplitPptxPresentationResult, SplitTextDocumentByLinesResult, SplitTextDocumentByStringResult, SplitXlsxWorksheetResult) {
+}(this, function(ApiClient, JobStatusResult, PptxSplitAdvancedRequest, PptxSplitAdvancedResponse, SplitBatchJobCreateResult, SplitDocxDocumentResult, SplitPdfResult, SplitPptxPresentationResult, SplitTextDocumentByLinesResult, SplitTextDocumentByStringResult, SplitXlsxWorksheetResult) {
   'use strict';
 
   /**
    * SplitDocument service.
    * @module api/SplitDocumentApi
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**
@@ -46,6 +46,58 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the splitDocumentBatchJobCreate operation.
+     * @callback module:api/SplitDocumentApi~splitDocumentBatchJobCreateCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/SplitBatchJobCreateResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Split a single Document into Separate Documents by Page as a Batch Job
+     * Split a Document (PPTX supported), comprised of multiple pages into separate files, with each containing exactly one page.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API automatically detects the document type and then performs the split by using the document type-specific API needed to perform the split.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.returnDocumentContents Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true.
+     * @param {module:api/SplitDocumentApi~splitDocumentBatchJobCreateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SplitBatchJobCreateResult}
+     */
+    this.splitDocumentBatchJobCreate = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling splitDocumentBatchJobCreate");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'returnDocumentContents': opts['returnDocumentContents']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = SplitBatchJobCreateResult;
+
+      return this.apiClient.callApi(
+        '/convert/split/batch-job/create', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the splitDocumentDocx operation.
@@ -94,6 +146,54 @@
 
       return this.apiClient.callApi(
         '/convert/split/docx', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the splitDocumentGetAsyncJobStatus operation.
+     * @callback module:api/SplitDocumentApi~splitDocumentGetAsyncJobStatusCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/JobStatusResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the status and result of a Split Document Batch Job
+     * Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     * @param {String} asyncJobID 
+     * @param {module:api/SplitDocumentApi~splitDocumentGetAsyncJobStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/JobStatusResult}
+     */
+    this.splitDocumentGetAsyncJobStatus = function(asyncJobID, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'asyncJobID' is set
+      if (asyncJobID === undefined || asyncJobID === null) {
+        throw new Error("Missing the required parameter 'asyncJobID' when calling splitDocumentGetAsyncJobStatus");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'AsyncJobID': asyncJobID,
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = JobStatusResult;
+
+      return this.apiClient.callApi(
+        '/convert/split/batch-job/status', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -198,6 +298,53 @@
 
       return this.apiClient.callApi(
         '/convert/split/pptx', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the splitDocumentPptxAdvanced operation.
+     * @callback module:api/SplitDocumentApi~splitDocumentPptxAdvancedCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PptxSplitAdvancedResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Split a single PowerPoint Presentation PPTX into Separate Presentations
+     * Split a PowerPoint PPTX Presentation, comprised of multiple slides into separate PowerPoint PPTX presentations of customizeable size.
+     * @param {module:model/PptxSplitAdvancedRequest} request 
+     * @param {module:api/SplitDocumentApi~splitDocumentPptxAdvancedCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/PptxSplitAdvancedResponse}
+     */
+    this.splitDocumentPptxAdvanced = function(request, callback) {
+      var postBody = request;
+
+      // verify the required parameter 'request' is set
+      if (request === undefined || request === null) {
+        throw new Error("Missing the required parameter 'request' when calling splitDocumentPptxAdvanced");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = PptxSplitAdvancedResponse;
+
+      return this.apiClient.callApi(
+        '/convert/split/pptx/advanced', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

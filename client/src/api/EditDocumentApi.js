@@ -33,7 +33,7 @@
   /**
    * EditDocument service.
    * @module api/EditDocumentApi
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**
@@ -107,10 +107,13 @@
      * Accept all tracked changes, revisions in a Word DOCX document
      * Accepts all tracked changes and revisions in a Word DOCX document.  This will accept all pending changes in the document when tracked changes is turned on.  Track changes will remain on (if it is on) after this oepration is completed.
      * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.autorepair Optional; automatically repair input documents that have errors (default is true)
      * @param {module:api/EditDocumentApi~editDocumentDocxAcceptAllTrackChangesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
      */
-    this.editDocumentDocxAcceptAllTrackChanges = function(inputFile, callback) {
+    this.editDocumentDocxAcceptAllTrackChanges = function(inputFile, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'inputFile' is set
@@ -126,6 +129,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'autorepair': opts['autorepair']
       };
       var formParams = {
         'inputFile': inputFile

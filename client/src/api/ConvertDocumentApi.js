@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AutodetectGetInfoResult', 'model/AutodetectToJpgResult', 'model/AutodetectToPngResult', 'model/AutodetectToThumbnailsResult', 'model/CsvCollection', 'model/DocxToJpgResult', 'model/DocxToPngResult', 'model/EmlToHtmlResult', 'model/EmlToJpgResult', 'model/EmlToPngResult', 'model/GetFileTypeIconResult', 'model/KeynoteToJpgResult', 'model/KeynoteToPngResult', 'model/MsgToHtmlResult', 'model/MsgToJpgResult', 'model/MsgToPngResult', 'model/OdpToJpgResult', 'model/OdpToPngResult', 'model/OdsToJpgResult', 'model/OdsToPngResult', 'model/OdtToJpgResult', 'model/OdtToPngResult', 'model/PdfToJpgResult', 'model/PdfToPngResult', 'model/PptxToPngResult', 'model/RtfToJpgResult', 'model/RtfToPngResult', 'model/TextConversionResult', 'model/XlsxToPngResult'], factory);
+    define(['ApiClient', 'model/AutodetectGetInfoResult', 'model/AutodetectToJpgResult', 'model/AutodetectToPngResult', 'model/AutodetectToThumbnailsResult', 'model/ConvertDocumentBatchJobCreateResult', 'model/ConvertDocumentJobStatusResult', 'model/CsvCollection', 'model/DocxToJpgResult', 'model/DocxToPngResult', 'model/EmlToHtmlResult', 'model/EmlToJpgResult', 'model/EmlToPngResult', 'model/GetFileTypeIconResult', 'model/KeynoteToJpgResult', 'model/KeynoteToPngResult', 'model/MsgToHtmlResult', 'model/MsgToJpgResult', 'model/MsgToPngResult', 'model/OdpToJpgResult', 'model/OdpToPngResult', 'model/OdsToJpgResult', 'model/OdsToPngResult', 'model/OdtToJpgResult', 'model/OdtToPngResult', 'model/PdfToJpgResult', 'model/PdfToPngDirectResult', 'model/PdfToPngResult', 'model/PptxToPngResult', 'model/RtfToJpgResult', 'model/RtfToPngResult', 'model/TextConversionResult', 'model/XlsxToPngResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/AutodetectGetInfoResult'), require('../model/AutodetectToJpgResult'), require('../model/AutodetectToPngResult'), require('../model/AutodetectToThumbnailsResult'), require('../model/CsvCollection'), require('../model/DocxToJpgResult'), require('../model/DocxToPngResult'), require('../model/EmlToHtmlResult'), require('../model/EmlToJpgResult'), require('../model/EmlToPngResult'), require('../model/GetFileTypeIconResult'), require('../model/KeynoteToJpgResult'), require('../model/KeynoteToPngResult'), require('../model/MsgToHtmlResult'), require('../model/MsgToJpgResult'), require('../model/MsgToPngResult'), require('../model/OdpToJpgResult'), require('../model/OdpToPngResult'), require('../model/OdsToJpgResult'), require('../model/OdsToPngResult'), require('../model/OdtToJpgResult'), require('../model/OdtToPngResult'), require('../model/PdfToJpgResult'), require('../model/PdfToPngResult'), require('../model/PptxToPngResult'), require('../model/RtfToJpgResult'), require('../model/RtfToPngResult'), require('../model/TextConversionResult'), require('../model/XlsxToPngResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/AutodetectGetInfoResult'), require('../model/AutodetectToJpgResult'), require('../model/AutodetectToPngResult'), require('../model/AutodetectToThumbnailsResult'), require('../model/ConvertDocumentBatchJobCreateResult'), require('../model/ConvertDocumentJobStatusResult'), require('../model/CsvCollection'), require('../model/DocxToJpgResult'), require('../model/DocxToPngResult'), require('../model/EmlToHtmlResult'), require('../model/EmlToJpgResult'), require('../model/EmlToPngResult'), require('../model/GetFileTypeIconResult'), require('../model/KeynoteToJpgResult'), require('../model/KeynoteToPngResult'), require('../model/MsgToHtmlResult'), require('../model/MsgToJpgResult'), require('../model/MsgToPngResult'), require('../model/OdpToJpgResult'), require('../model/OdpToPngResult'), require('../model/OdsToJpgResult'), require('../model/OdsToPngResult'), require('../model/OdtToJpgResult'), require('../model/OdtToPngResult'), require('../model/PdfToJpgResult'), require('../model/PdfToPngDirectResult'), require('../model/PdfToPngResult'), require('../model/PptxToPngResult'), require('../model/RtfToJpgResult'), require('../model/RtfToPngResult'), require('../model/TextConversionResult'), require('../model/XlsxToPngResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectGetInfoResult, root.CloudmersiveConvertApiClient.AutodetectToJpgResult, root.CloudmersiveConvertApiClient.AutodetectToPngResult, root.CloudmersiveConvertApiClient.AutodetectToThumbnailsResult, root.CloudmersiveConvertApiClient.CsvCollection, root.CloudmersiveConvertApiClient.DocxToJpgResult, root.CloudmersiveConvertApiClient.DocxToPngResult, root.CloudmersiveConvertApiClient.EmlToHtmlResult, root.CloudmersiveConvertApiClient.EmlToJpgResult, root.CloudmersiveConvertApiClient.EmlToPngResult, root.CloudmersiveConvertApiClient.GetFileTypeIconResult, root.CloudmersiveConvertApiClient.KeynoteToJpgResult, root.CloudmersiveConvertApiClient.KeynoteToPngResult, root.CloudmersiveConvertApiClient.MsgToHtmlResult, root.CloudmersiveConvertApiClient.MsgToJpgResult, root.CloudmersiveConvertApiClient.MsgToPngResult, root.CloudmersiveConvertApiClient.OdpToJpgResult, root.CloudmersiveConvertApiClient.OdpToPngResult, root.CloudmersiveConvertApiClient.OdsToJpgResult, root.CloudmersiveConvertApiClient.OdsToPngResult, root.CloudmersiveConvertApiClient.OdtToJpgResult, root.CloudmersiveConvertApiClient.OdtToPngResult, root.CloudmersiveConvertApiClient.PdfToJpgResult, root.CloudmersiveConvertApiClient.PdfToPngResult, root.CloudmersiveConvertApiClient.PptxToPngResult, root.CloudmersiveConvertApiClient.RtfToJpgResult, root.CloudmersiveConvertApiClient.RtfToPngResult, root.CloudmersiveConvertApiClient.TextConversionResult, root.CloudmersiveConvertApiClient.XlsxToPngResult);
+    root.CloudmersiveConvertApiClient.ConvertDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.AutodetectGetInfoResult, root.CloudmersiveConvertApiClient.AutodetectToJpgResult, root.CloudmersiveConvertApiClient.AutodetectToPngResult, root.CloudmersiveConvertApiClient.AutodetectToThumbnailsResult, root.CloudmersiveConvertApiClient.ConvertDocumentBatchJobCreateResult, root.CloudmersiveConvertApiClient.ConvertDocumentJobStatusResult, root.CloudmersiveConvertApiClient.CsvCollection, root.CloudmersiveConvertApiClient.DocxToJpgResult, root.CloudmersiveConvertApiClient.DocxToPngResult, root.CloudmersiveConvertApiClient.EmlToHtmlResult, root.CloudmersiveConvertApiClient.EmlToJpgResult, root.CloudmersiveConvertApiClient.EmlToPngResult, root.CloudmersiveConvertApiClient.GetFileTypeIconResult, root.CloudmersiveConvertApiClient.KeynoteToJpgResult, root.CloudmersiveConvertApiClient.KeynoteToPngResult, root.CloudmersiveConvertApiClient.MsgToHtmlResult, root.CloudmersiveConvertApiClient.MsgToJpgResult, root.CloudmersiveConvertApiClient.MsgToPngResult, root.CloudmersiveConvertApiClient.OdpToJpgResult, root.CloudmersiveConvertApiClient.OdpToPngResult, root.CloudmersiveConvertApiClient.OdsToJpgResult, root.CloudmersiveConvertApiClient.OdsToPngResult, root.CloudmersiveConvertApiClient.OdtToJpgResult, root.CloudmersiveConvertApiClient.OdtToPngResult, root.CloudmersiveConvertApiClient.PdfToJpgResult, root.CloudmersiveConvertApiClient.PdfToPngDirectResult, root.CloudmersiveConvertApiClient.PdfToPngResult, root.CloudmersiveConvertApiClient.PptxToPngResult, root.CloudmersiveConvertApiClient.RtfToJpgResult, root.CloudmersiveConvertApiClient.RtfToPngResult, root.CloudmersiveConvertApiClient.TextConversionResult, root.CloudmersiveConvertApiClient.XlsxToPngResult);
   }
-}(this, function(ApiClient, AutodetectGetInfoResult, AutodetectToJpgResult, AutodetectToPngResult, AutodetectToThumbnailsResult, CsvCollection, DocxToJpgResult, DocxToPngResult, EmlToHtmlResult, EmlToJpgResult, EmlToPngResult, GetFileTypeIconResult, KeynoteToJpgResult, KeynoteToPngResult, MsgToHtmlResult, MsgToJpgResult, MsgToPngResult, OdpToJpgResult, OdpToPngResult, OdsToJpgResult, OdsToPngResult, OdtToJpgResult, OdtToPngResult, PdfToJpgResult, PdfToPngResult, PptxToPngResult, RtfToJpgResult, RtfToPngResult, TextConversionResult, XlsxToPngResult) {
+}(this, function(ApiClient, AutodetectGetInfoResult, AutodetectToJpgResult, AutodetectToPngResult, AutodetectToThumbnailsResult, ConvertDocumentBatchJobCreateResult, ConvertDocumentJobStatusResult, CsvCollection, DocxToJpgResult, DocxToPngResult, EmlToHtmlResult, EmlToJpgResult, EmlToPngResult, GetFileTypeIconResult, KeynoteToJpgResult, KeynoteToPngResult, MsgToHtmlResult, MsgToJpgResult, MsgToPngResult, OdpToJpgResult, OdpToPngResult, OdsToJpgResult, OdsToPngResult, OdtToJpgResult, OdtToPngResult, PdfToJpgResult, PdfToPngDirectResult, PdfToPngResult, PptxToPngResult, RtfToJpgResult, RtfToPngResult, TextConversionResult, XlsxToPngResult) {
   'use strict';
 
   /**
    * ConvertDocument service.
    * @module api/ConvertDocumentApi
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**
@@ -157,7 +157,7 @@
 
     /**
      * Convert Document to PDF
-     * Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files.
+     * Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, text files, and even multi-page TIFF files.
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentAutodetectToPdfCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Blob'}
@@ -190,6 +190,54 @@
 
       return this.apiClient.callApi(
         '/convert/autodetect/to/pdf', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentAutodetectToPdfBatchJob operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentAutodetectToPdfBatchJobCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ConvertDocumentBatchJobCreateResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert Document to PDF as Batch Job
+     * Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, text files, and even multi-page TIFF files.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ConvertDocumentApi~convertDocumentAutodetectToPdfBatchJobCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ConvertDocumentBatchJobCreateResult}
+     */
+    this.convertDocumentAutodetectToPdfBatchJob = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentAutodetectToPdfBatchJob");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = ConvertDocumentBatchJobCreateResult;
+
+      return this.apiClient.callApi(
+        '/convert/autodetect/to/pdf/batch-job', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1317,6 +1365,54 @@
 
       return this.apiClient.callApi(
         '/convert/eml/to/png', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentGetAsyncJobStatus operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentGetAsyncJobStatusCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ConvertDocumentJobStatusResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the status and result of a Convert Document Batch Job
+     * Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     * @param {String} asyncJobID 
+     * @param {module:api/ConvertDocumentApi~convertDocumentGetAsyncJobStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ConvertDocumentJobStatusResult}
+     */
+    this.convertDocumentGetAsyncJobStatus = function(asyncJobID, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'asyncJobID' is set
+      if (asyncJobID === undefined || asyncJobID === null) {
+        throw new Error("Missing the required parameter 'asyncJobID' when calling convertDocumentGetAsyncJobStatus");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'AsyncJobID': asyncJobID,
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = ConvertDocumentJobStatusResult;
+
+      return this.apiClient.callApi(
+        '/convert/batch-job/status', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -2724,12 +2820,15 @@
 
     /**
      * Convert PDF to PNG Image Array
-     * Convert PDF document to PNG array, one image per page.
+     * Convert PDF document to PNG array, one image per page.  Returns PNG images as temporary expiring URLs.
      * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.dpi Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud.
      * @param {module:api/ConvertDocumentApi~convertDocumentPdfToPngArrayCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/PdfToPngResult}
      */
-    this.convertDocumentPdfToPngArray = function(inputFile, callback) {
+    this.convertDocumentPdfToPngArray = function(inputFile, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'inputFile' is set
@@ -2745,6 +2844,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'dpi': opts['dpi']
       };
       var formParams = {
         'inputFile': inputFile
@@ -2757,6 +2857,58 @@
 
       return this.apiClient.callApi(
         '/convert/pdf/to/png', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentPdfToPngArrayDirect operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentPdfToPngArrayDirectCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/PdfToPngDirectResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert PDF to PNG Image Array (Direct)
+     * Convert PDF document to PNG array, one image per page.  Returns PNG images directly in the response objects.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.dpi Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud.
+     * @param {module:api/ConvertDocumentApi~convertDocumentPdfToPngArrayDirectCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/PdfToPngDirectResult}
+     */
+    this.convertDocumentPdfToPngArrayDirect = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentPdfToPngArrayDirect");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'dpi': opts['dpi']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = PdfToPngDirectResult;
+
+      return this.apiClient.callApi(
+        '/convert/pdf/to/png/direct', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -2853,6 +3005,60 @@
 
       return this.apiClient.callApi(
         '/convert/pdf/to/pptx', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentPdfToTiff operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentPdfToTiffCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert PDF to TIFF image
+     * Converts a PDF Document to a TIFF image.  If the PDF contains multiple pages, these pages will be represented as separate pages within the output TIFF image.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.dpi Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud.
+     * @param {Boolean} opts.lzwCompression Optional; Enables LZW compression to reduce the size of the output image.
+     * @param {module:api/ConvertDocumentApi~convertDocumentPdfToTiffCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDocumentPdfToTiff = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentPdfToTiff");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'dpi': opts['dpi'],
+        'lzwCompression': opts['lzwCompression']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/pdf/to/tiff', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -2978,6 +3184,47 @@
 
       return this.apiClient.callApi(
         '/convert/png/to/pdf', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the convertDocumentPngArrayToPdfFlattenTransparency operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentPngArrayToPdfFlattenTransparencyCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert PNG Array to PDF and remove transparency
+     * Convert an array of PNG images, remove transparency in source images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+     * @param {module:api/ConvertDocumentApi~convertDocumentPngArrayToPdfFlattenTransparencyCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.convertDocumentPngArrayToPdfFlattenTransparency = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/png/to/pdf/remove-transparency', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -3179,18 +3426,24 @@
      * Callback function to receive the result of the convertDocumentPptxToPpt operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentPptxToPptCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {'Blob'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Convert PowerPoint PPTX presentation to Legacy PowerPoint PPT (97-03)
      * Convert/downgrade modern Office PowerPoint PPTX Presentation to the legacy PowerPoint PPT (97-2003 Format) format
+     * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ConvertDocumentApi~convertDocumentPptxToPptCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link 'Blob'}
      */
-    this.convertDocumentPptxToPpt = function(callback) {
+    this.convertDocumentPptxToPpt = function(inputFile, callback) {
       var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentPptxToPpt");
+      }
 
 
       var pathParams = {
@@ -3202,10 +3455,11 @@
       var headerParams = {
       };
       var formParams = {
+        'inputFile': inputFile
       };
 
       var authNames = ['Apikey'];
-      var contentTypes = [];
+      var contentTypes = ['multipart/form-data'];
       var accepts = ['application/octet-stream'];
       var returnType = 'Blob';
 
@@ -3509,6 +3763,58 @@
     }
 
     /**
+     * Callback function to receive the result of the convertDocumentTxtToPdf operation.
+     * @callback module:api/ConvertDocumentApi~convertDocumentTxtToPdfCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Convert TXT text file to PDF Document
+     * Convert simple text files to PDF.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.scaleFactor Optional: Set to 100 to scale at 100%, set to 50% to scale down to 50% scale, set to 200% to scale up to 200% scale, etc.  Default is 100%. Maximum is 1000%.
+     * @param {module:api/ConvertDocumentApi~convertDocumentTxtToPdfCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.convertDocumentTxtToPdf = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling convertDocumentTxtToPdf");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'scaleFactor': opts['scaleFactor']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/octet-stream'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/txt/to/pdf', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the convertDocumentXlsToCsv operation.
      * @callback module:api/ConvertDocumentApi~convertDocumentXlsToCsvCallback
      * @param {String} error Error message, if any.
@@ -3694,7 +4000,7 @@
 
       var authNames = ['Apikey'];
       var contentTypes = ['multipart/form-data'];
-      var accepts = ['application/octet-stream'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
       var returnType = 'Blob';
 
       return this.apiClient.callApi(

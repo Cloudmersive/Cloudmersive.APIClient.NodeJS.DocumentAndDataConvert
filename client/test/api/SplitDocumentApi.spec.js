@@ -50,10 +50,30 @@
   }
 
   describe('SplitDocumentApi', function() {
+    describe('splitDocumentBatchJobCreate', function() {
+      it('should call splitDocumentBatchJobCreate successfully', function(done) {
+        //uncomment below and update the code to test splitDocumentBatchJobCreate
+        //instance.splitDocumentBatchJobCreate(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('splitDocumentDocx', function() {
       it('should call splitDocumentDocx successfully', function(done) {
         //uncomment below and update the code to test splitDocumentDocx
         //instance.splitDocumentDocx(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('splitDocumentGetAsyncJobStatus', function() {
+      it('should call splitDocumentGetAsyncJobStatus successfully', function(done) {
+        //uncomment below and update the code to test splitDocumentGetAsyncJobStatus
+        //instance.splitDocumentGetAsyncJobStatus(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -74,6 +94,16 @@
       it('should call splitDocumentPptx successfully', function(done) {
         //uncomment below and update the code to test splitDocumentPptx
         //instance.splitDocumentPptx(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('splitDocumentPptxAdvanced', function() {
+      it('should call splitDocumentPptxAdvanced successfully', function(done) {
+        //uncomment below and update the code to test splitDocumentPptxAdvanced
+        //instance.splitDocumentPptxAdvanced(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

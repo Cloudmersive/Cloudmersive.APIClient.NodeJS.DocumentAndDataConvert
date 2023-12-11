@@ -5,7 +5,7 @@ Convert API lets you effortlessly convert file formats and types.
 [Cloudmersive Document and Data Conversion API](https://www.cloudmersive.com/convert-api) provides advanced document conversion, editing and generation capabilities.
 
 - API version: v1
-- Package version: 2.7.4
+- Package version: 2.8.0
 
 
 ## Installation
@@ -109,6 +109,9 @@ var inputFile1 = "/path/to/file.txt"; // {File} First input file to perform the 
 
 var inputFile2 = "/path/to/file.txt"; // {File} Second input file to perform the operation on (more than 2 can be supplied).
 
+var opts = { 
+  'autorepair': true // {Boolean} Optional; automatically repair input documents that have errors (default is true)
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -117,7 +120,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.compareDocumentDocx(inputFile1, inputFile2, callback);
+api.compareDocumentDocx(inputFile1, inputFile2, opts, callback);
 
 ```
 
@@ -149,6 +152,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectGetInfo**](docs/ConvertDocumentApi.md#convertDocumentAutodetectGetInfo) | **POST** /convert/autodetect/get-info | Get document type information
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectToJpg**](docs/ConvertDocumentApi.md#convertDocumentAutodetectToJpg) | **POST** /convert/autodetect/to/jpg | Convert Document to JPG/JPEG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectToPdf**](docs/ConvertDocumentApi.md#convertDocumentAutodetectToPdf) | **POST** /convert/autodetect/to/pdf | Convert Document to PDF
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectToPdfBatchJob**](docs/ConvertDocumentApi.md#convertDocumentAutodetectToPdfBatchJob) | **POST** /convert/autodetect/to/pdf/batch-job | Convert Document to PDF as Batch Job
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectToPngArray**](docs/ConvertDocumentApi.md#convertDocumentAutodetectToPngArray) | **POST** /convert/autodetect/to/png | Convert Document to PNG array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectToThumbnail**](docs/ConvertDocumentApi.md#convertDocumentAutodetectToThumbnail) | **POST** /convert/autodetect/to/thumbnail | Convert File to Thumbnail Image
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentAutodetectToThumbnailsAdvanced**](docs/ConvertDocumentApi.md#convertDocumentAutodetectToThumbnailsAdvanced) | **POST** /convert/autodetect/to/thumbnail/advanced | Convert File to Thumbnail Image Object
@@ -171,6 +175,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentEmlToJpg**](docs/ConvertDocumentApi.md#convertDocumentEmlToJpg) | **POST** /convert/eml/to/jpg | Convert Email EML file to JPG/JPEG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentEmlToPdf**](docs/ConvertDocumentApi.md#convertDocumentEmlToPdf) | **POST** /convert/eml/to/pdf | Convert Email EML file to PDF document
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentEmlToPng**](docs/ConvertDocumentApi.md#convertDocumentEmlToPng) | **POST** /convert/eml/to/png | Convert Email EML file to PNG image array
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentGetAsyncJobStatus**](docs/ConvertDocumentApi.md#convertDocumentGetAsyncJobStatus) | **GET** /convert/batch-job/status | Get the status and result of a Convert Document Batch Job
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentGetFileTypeIcon**](docs/ConvertDocumentApi.md#convertDocumentGetFileTypeIcon) | **POST** /convert/autodetect/get-icon | Get PNG icon file for the file extension
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentGetFileTypeIconAdvanced**](docs/ConvertDocumentApi.md#convertDocumentGetFileTypeIconAdvanced) | **POST** /convert/autodetect/get-icon/advanced | Get PNG icon byte array for the file extension
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentHtmlToPdf**](docs/ConvertDocumentApi.md#convertDocumentHtmlToPdf) | **POST** /convert/html/to/pdf | Convert HTML document file to PDF Document
@@ -200,10 +205,13 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToDocxRasterize**](docs/ConvertDocumentApi.md#convertDocumentPdfToDocxRasterize) | **POST** /convert/pdf/to/docx/rasterize | Convert PDF to Word DOCX Document based on rasterized version of the PDF
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToJpg**](docs/ConvertDocumentApi.md#convertDocumentPdfToJpg) | **POST** /convert/pdf/to/jpg | Convert PDF to JPG/JPEG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToPngArray**](docs/ConvertDocumentApi.md#convertDocumentPdfToPngArray) | **POST** /convert/pdf/to/png | Convert PDF to PNG Image Array
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToPngArrayDirect**](docs/ConvertDocumentApi.md#convertDocumentPdfToPngArrayDirect) | **POST** /convert/pdf/to/png/direct | Convert PDF to PNG Image Array (Direct)
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToPngSingle**](docs/ConvertDocumentApi.md#convertDocumentPdfToPngSingle) | **POST** /convert/pdf/to/png/merge-single | Convert PDF to Single PNG image
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToPptx**](docs/ConvertDocumentApi.md#convertDocumentPdfToPptx) | **POST** /convert/pdf/to/pptx | Convert PDF to PowerPoint PPTX Presentation
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToTiff**](docs/ConvertDocumentApi.md#convertDocumentPdfToTiff) | **POST** /convert/pdf/to/tiff | Convert PDF to TIFF image
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPdfToTxt**](docs/ConvertDocumentApi.md#convertDocumentPdfToTxt) | **POST** /convert/pdf/to/txt | Convert PDF Document to Text (txt)
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPngArrayToPdf**](docs/ConvertDocumentApi.md#convertDocumentPngArrayToPdf) | **POST** /convert/png/to/pdf | Convert PNG Array to PDF
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPngArrayToPdfFlattenTransparency**](docs/ConvertDocumentApi.md#convertDocumentPngArrayToPdfFlattenTransparency) | **POST** /convert/png/to/pdf/remove-transparency | Convert PNG Array to PDF and remove transparency
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPptToPdf**](docs/ConvertDocumentApi.md#convertDocumentPptToPdf) | **POST** /convert/ppt/to/pdf | Convert PowerPoint PPT (97-03) Presentation to PDF
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPptToPptx**](docs/ConvertDocumentApi.md#convertDocumentPptToPptx) | **POST** /convert/ppt/to/pptx | Convert PowerPoint PPT (97-03) Presentation to PPTX
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentPptxToPdf**](docs/ConvertDocumentApi.md#convertDocumentPptxToPdf) | **POST** /convert/pptx/to/pdf | Convert PowerPoint PPTX Presentation to PDF
@@ -215,6 +223,7 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentRtfToJpg**](docs/ConvertDocumentApi.md#convertDocumentRtfToJpg) | **POST** /convert/rtf/to/jpg | Convert Rich Text Format RTF to JPG/JPEG image array
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentRtfToPdf**](docs/ConvertDocumentApi.md#convertDocumentRtfToPdf) | **POST** /convert/rtf/to/pdf | Convert Rich Text Format RTF to PDF
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentRtfToPng**](docs/ConvertDocumentApi.md#convertDocumentRtfToPng) | **POST** /convert/rtf/to/png | Convert Rich Text Format RTF to PNG image array
+*CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentTxtToPdf**](docs/ConvertDocumentApi.md#convertDocumentTxtToPdf) | **POST** /convert/txt/to/pdf | Convert TXT text file to PDF Document
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentXlsToCsv**](docs/ConvertDocumentApi.md#convertDocumentXlsToCsv) | **POST** /convert/xls/to/csv | Convert Excel XLS (97-03) Spreadsheet to CSV
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentXlsToPdf**](docs/ConvertDocumentApi.md#convertDocumentXlsToPdf) | **POST** /convert/xls/to/pdf | Convert Excel XLS (97-03) Spreadsheet to PDF
 *CloudmersiveConvertApiClient.ConvertDocumentApi* | [**convertDocumentXlsToXlsx**](docs/ConvertDocumentApi.md#convertDocumentXlsToXlsx) | **POST** /convert/xls/to/xlsx | Convert Excel XLS (97-03) Spreadsheet to XLSX
@@ -324,14 +333,18 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfConvertToPdfA**](docs/EditPdfApi.md#editPdfConvertToPdfA) | **POST** /convert/edit/pdf/optimize/pdf-a | Convert a PDF file to PDF/A
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfDecrypt**](docs/EditPdfApi.md#editPdfDecrypt) | **POST** /convert/edit/pdf/decrypt | Decrypt and password-protect a PDF
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfDeletePages**](docs/EditPdfApi.md#editPdfDeletePages) | **POST** /convert/edit/pdf/pages/delete | Remove, delete pages from a PDF document
+*CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfDeletePagesBatchJob**](docs/EditPdfApi.md#editPdfDeletePagesBatchJob) | **POST** /convert/edit/pdf/pages/delete/batch-job | Remove, delete pages from a PDF document as Batch Job
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfEncrypt**](docs/EditPdfApi.md#editPdfEncrypt) | **POST** /convert/edit/pdf/encrypt | Encrypt and password-protect a PDF
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfGetAnnotations**](docs/EditPdfApi.md#editPdfGetAnnotations) | **POST** /convert/edit/pdf/annotations/list | Get PDF annotations, including comments in the document
+*CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfGetAsyncJobStatus**](docs/EditPdfApi.md#editPdfGetAsyncJobStatus) | **GET** /convert/edit/pdf/batch-job/status | Get the status and result of a PDF Batch Job
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfGetFormFields**](docs/EditPdfApi.md#editPdfGetFormFields) | **POST** /convert/edit/pdf/form/get-fields | Gets PDF Form fields and values
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfGetMetadata**](docs/EditPdfApi.md#editPdfGetMetadata) | **POST** /convert/edit/pdf/get-metadata | Get PDF document metadata
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfGetPdfTextByPages**](docs/EditPdfApi.md#editPdfGetPdfTextByPages) | **POST** /convert/edit/pdf/pages/get-text | Get text in a PDF document by page
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfInsertPages**](docs/EditPdfApi.md#editPdfInsertPages) | **POST** /convert/edit/pdf/pages/insert | Insert, copy pages from one PDF document into another
+*CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfInsertPagesBatchJob**](docs/EditPdfApi.md#editPdfInsertPagesBatchJob) | **POST** /convert/edit/pdf/pages/insert/batch-job | Insert, copy pages from one PDF document into another as a batch job
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfLinearize**](docs/EditPdfApi.md#editPdfLinearize) | **POST** /convert/edit/pdf/optimize/linearize | Linearize and optimize a PDF for streaming download
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfRasterize**](docs/EditPdfApi.md#editPdfRasterize) | **POST** /convert/edit/pdf/rasterize | Rasterize a PDF to an image-based PDF
+*CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfRasterizeBatchJob**](docs/EditPdfApi.md#editPdfRasterizeBatchJob) | **POST** /convert/edit/pdf/rasterize/batch-job | Rasterize a PDF to an image-based PDF as Batch Job
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfReduceFileSize**](docs/EditPdfApi.md#editPdfReduceFileSize) | **POST** /convert/edit/pdf/optimize/reduce-file-size | Reduce the file size and optimize a PDF
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfRemoveAllAnnotations**](docs/EditPdfApi.md#editPdfRemoveAllAnnotations) | **POST** /convert/edit/pdf/annotations/remove-all | Remove all PDF annotations, including comments in the document
 *CloudmersiveConvertApiClient.EditPdfApi* | [**editPdfRemoveAnnotationItem**](docs/EditPdfApi.md#editPdfRemoveAnnotationItem) | **POST** /convert/edit/pdf/annotations/remove-item | Remove a specific PDF annotation, comment in the document
@@ -355,23 +368,34 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.EditTextApi* | [**editTextReplaceSimple**](docs/EditTextApi.md#editTextReplaceSimple) | **POST** /convert/edit/text/replace/string | Replace a string in text with another string value
 *CloudmersiveConvertApiClient.EditTextApi* | [**editTextTextEncodingDetect**](docs/EditTextApi.md#editTextTextEncodingDetect) | **POST** /convert/edit/text/encoding/detect | Detect text encoding of file
 *CloudmersiveConvertApiClient.EditTextApi* | [**editTextTrimWhitespace**](docs/EditTextApi.md#editTextTrimWhitespace) | **POST** /convert/edit/text/remove/whitespace/trim | Trim leading and trailing whitespace from text string
+*CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentBatchJobCreate**](docs/MergeDocumentApi.md#mergeDocumentBatchJobCreate) | **POST** /convert/merge/batch-job/create | Merge an array of Documents into a Single Document by Page as a Batch Job
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentDocx**](docs/MergeDocumentApi.md#mergeDocumentDocx) | **POST** /convert/merge/docx | Merge Two Word DOCX Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentDocxMulti**](docs/MergeDocumentApi.md#mergeDocumentDocxMulti) | **POST** /convert/merge/docx/multi | Merge Multple Word DOCX Together
+*CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentDocxMultiArray**](docs/MergeDocumentApi.md#mergeDocumentDocxMultiArray) | **POST** /convert/merge/docx/multi/array | Merge Multple Word DOCX Together from an array
+*CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentGetAsyncJobStatus**](docs/MergeDocumentApi.md#mergeDocumentGetAsyncJobStatus) | **GET** /convert/merge/batch-job/status | Get the status and result of a Merge Document Batch Job
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentHtml**](docs/MergeDocumentApi.md#mergeDocumentHtml) | **POST** /convert/merge/html | Merge Two HTML (HTM) Files Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentHtmlMulti**](docs/MergeDocumentApi.md#mergeDocumentHtmlMulti) | **POST** /convert/merge/html/multi | Merge Multple HTML (HTM) Files Together
+*CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentHtmlMultiArray**](docs/MergeDocumentApi.md#mergeDocumentHtmlMultiArray) | **POST** /convert/merge/html/multi/array | Merge Multple HTML (HTM) Files Together from an array
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPdf**](docs/MergeDocumentApi.md#mergeDocumentPdf) | **POST** /convert/merge/pdf | Merge Two PDF Files Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPdfMulti**](docs/MergeDocumentApi.md#mergeDocumentPdfMulti) | **POST** /convert/merge/pdf/multi | Merge Multple PDF Files Together
+*CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPdfMultiArray**](docs/MergeDocumentApi.md#mergeDocumentPdfMultiArray) | **POST** /convert/merge/pdf/multi/array | Merge Multple PDF Files Together from an array
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPng**](docs/MergeDocumentApi.md#mergeDocumentPng) | **POST** /convert/merge/png/vertical | Merge Two PNG Files Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPngMulti**](docs/MergeDocumentApi.md#mergeDocumentPngMulti) | **POST** /convert/merge/png/vertical/multi | Merge Multple PNG Files Together
+*CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPngMultiArray**](docs/MergeDocumentApi.md#mergeDocumentPngMultiArray) | **POST** /convert/merge/png/vertical/multi/array | Merge Multple PNG Files Together from an array
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPptx**](docs/MergeDocumentApi.md#mergeDocumentPptx) | **POST** /convert/merge/pptx | Merge Two PowerPoint PPTX Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPptxMulti**](docs/MergeDocumentApi.md#mergeDocumentPptxMulti) | **POST** /convert/merge/pptx/multi | Merge Multple PowerPoint PPTX Together
+*CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentPptxMultiArray**](docs/MergeDocumentApi.md#mergeDocumentPptxMultiArray) | **POST** /convert/merge/pptx/multi/array | Merge Multple PowerPoint PPTX Together from an array
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentTxt**](docs/MergeDocumentApi.md#mergeDocumentTxt) | **POST** /convert/merge/txt | Merge Two Text (TXT) Files Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentTxtMulti**](docs/MergeDocumentApi.md#mergeDocumentTxtMulti) | **POST** /convert/merge/txt/multi | Merge Multple Text (TXT) Files Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentXlsx**](docs/MergeDocumentApi.md#mergeDocumentXlsx) | **POST** /convert/merge/xlsx | Merge Two Excel XLSX Together
 *CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentXlsxMulti**](docs/MergeDocumentApi.md#mergeDocumentXlsxMulti) | **POST** /convert/merge/xlsx/multi | Merge Multple Excel XLSX Together
+*CloudmersiveConvertApiClient.MergeDocumentApi* | [**mergeDocumentXlsxMultiArray**](docs/MergeDocumentApi.md#mergeDocumentXlsxMultiArray) | **POST** /convert/merge/xlsx/multi/array | Merge Multple Excel XLSX Together from an Array
+*CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentBatchJobCreate**](docs/SplitDocumentApi.md#splitDocumentBatchJobCreate) | **POST** /convert/split/batch-job/create | Split a single Document into Separate Documents by Page as a Batch Job
 *CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentDocx**](docs/SplitDocumentApi.md#splitDocumentDocx) | **POST** /convert/split/docx | Split a single Word Document DOCX into Separate Documents by Page
+*CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentGetAsyncJobStatus**](docs/SplitDocumentApi.md#splitDocumentGetAsyncJobStatus) | **GET** /convert/split/batch-job/status | Get the status and result of a Split Document Batch Job
 *CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentPdfByPage**](docs/SplitDocumentApi.md#splitDocumentPdfByPage) | **POST** /convert/split/pdf | Split a PDF file into separate PDF files, one per page
 *CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentPptx**](docs/SplitDocumentApi.md#splitDocumentPptx) | **POST** /convert/split/pptx | Split a single PowerPoint Presentation PPTX into Separate Slides
+*CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentPptxAdvanced**](docs/SplitDocumentApi.md#splitDocumentPptxAdvanced) | **POST** /convert/split/pptx/advanced | Split a single PowerPoint Presentation PPTX into Separate Presentations
 *CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentTxtByLine**](docs/SplitDocumentApi.md#splitDocumentTxtByLine) | **POST** /convert/split/txt/by-line | Split a single Text file (txt) into lines
 *CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentTxtByString**](docs/SplitDocumentApi.md#splitDocumentTxtByString) | **POST** /convert/split/txt/by-string | Split a single Text file (txt) by a string delimiter
 *CloudmersiveConvertApiClient.SplitDocumentApi* | [**splitDocumentXlsx**](docs/SplitDocumentApi.md#splitDocumentXlsx) | **POST** /convert/split/xlsx | Split a single Excel XLSX into Separate Worksheets
@@ -384,8 +408,9 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentAutodetectValidation**](docs/ValidateDocumentApi.md#validateDocumentAutodetectValidation) | **POST** /convert/validate/autodetect | Autodetect content type and validate
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentCsvValidation**](docs/ValidateDocumentApi.md#validateDocumentCsvValidation) | **POST** /convert/validate/csv | Validate a CSV file document (CSV)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentDocValidation**](docs/ValidateDocumentApi.md#validateDocumentDocValidation) | **POST** /convert/validate/doc | Validate a Word 97-2003 Legacy document (DOC)
+*CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentDocxRepair**](docs/ValidateDocumentApi.md#validateDocumentDocxRepair) | **POST** /convert/validate/docx/repair | Repair a Word document (DOCX) that contains errors
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentDocxValidation**](docs/ValidateDocumentApi.md#validateDocumentDocxValidation) | **POST** /convert/validate/docx | Validate a Word document (DOCX)
-*CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentEmlValidation**](docs/ValidateDocumentApi.md#validateDocumentEmlValidation) | **POST** /convert/validate/eml | Validate if an EML file is executable
+*CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentEmlValidation**](docs/ValidateDocumentApi.md#validateDocumentEmlValidation) | **POST** /convert/validate/eml | Validate if input file is a valid EML file
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentExecutableValidation**](docs/ValidateDocumentApi.md#validateDocumentExecutableValidation) | **POST** /convert/validate/executable | Validate if a file is executable
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentGZipValidation**](docs/ValidateDocumentApi.md#validateDocumentGZipValidation) | **POST** /convert/validate/gzip | Validate a GZip Archive file (gzip or gz)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentHtmlSsrfValidation**](docs/ValidateDocumentApi.md#validateDocumentHtmlSsrfValidation) | **POST** /convert/validate/html/ssrf-threat-check | Validate an HTML file and checks for SSRF threats
@@ -393,16 +418,18 @@ Class | Method | HTTP request | Description
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentImageValidation**](docs/ValidateDocumentApi.md#validateDocumentImageValidation) | **POST** /convert/validate/image | Validate an Image File
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentJpgValidation**](docs/ValidateDocumentApi.md#validateDocumentJpgValidation) | **POST** /convert/validate/jpg | Validate a JPG File
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentJsonValidation**](docs/ValidateDocumentApi.md#validateDocumentJsonValidation) | **POST** /convert/validate/json | Validate a JSON file
-*CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentMsgValidation**](docs/ValidateDocumentApi.md#validateDocumentMsgValidation) | **POST** /convert/validate/msg | Validate if an MSG file is executable
+*CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentMsgValidation**](docs/ValidateDocumentApi.md#validateDocumentMsgValidation) | **POST** /convert/validate/msg | Validate if input file is a valid MSG file
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentPdfValidation**](docs/ValidateDocumentApi.md#validateDocumentPdfValidation) | **POST** /convert/validate/pdf | Validate a PDF document file
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentPngValidation**](docs/ValidateDocumentApi.md#validateDocumentPngValidation) | **POST** /convert/validate/png | Validate a PNG File
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentPptValidation**](docs/ValidateDocumentApi.md#validateDocumentPptValidation) | **POST** /convert/validate/ppt | Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+*CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentPptxRepair**](docs/ValidateDocumentApi.md#validateDocumentPptxRepair) | **POST** /convert/validate/pptx/repair | Repair a PowerPoint presentation (PPTX) that contains errors
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentPptxValidation**](docs/ValidateDocumentApi.md#validateDocumentPptxValidation) | **POST** /convert/validate/pptx | Validate a PowerPoint presentation (PPTX)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentRarValidation**](docs/ValidateDocumentApi.md#validateDocumentRarValidation) | **POST** /convert/validate/rar | Validate a RAR Archive file (RAR)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentRtfValidation**](docs/ValidateDocumentApi.md#validateDocumentRtfValidation) | **POST** /convert/validate/rtf | Validate a Rich Text Format document (RTF)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentTarValidation**](docs/ValidateDocumentApi.md#validateDocumentTarValidation) | **POST** /convert/validate/tar | Validate a TAR Tarball Archive file (TAR)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentTxtValidation**](docs/ValidateDocumentApi.md#validateDocumentTxtValidation) | **POST** /convert/validate/txt | Validate an TXT file
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentXlsValidation**](docs/ValidateDocumentApi.md#validateDocumentXlsValidation) | **POST** /convert/validate/xls | Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+*CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentXlsxRepair**](docs/ValidateDocumentApi.md#validateDocumentXlsxRepair) | **POST** /convert/validate/xlsx/repair | Repair an Excel spreadsheet (XLSX) that contains errors
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentXlsxValidation**](docs/ValidateDocumentApi.md#validateDocumentXlsxValidation) | **POST** /convert/validate/xlsx | Validate a Excel document (XLSX)
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentXmlValidation**](docs/ValidateDocumentApi.md#validateDocumentXmlValidation) | **POST** /convert/validate/xml | Validate an XML file
 *CloudmersiveConvertApiClient.ValidateDocumentApi* | [**validateDocumentXmlXxeThreatValidation**](docs/ValidateDocumentApi.md#validateDocumentXmlXxeThreatValidation) | **POST** /convert/validate/xml/xxe-threats | Validate an XML file for XML External Entity (XXE) threats
@@ -439,7 +466,10 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.ClearXlsxCellResponse](docs/ClearXlsxCellResponse.md)
  - [CloudmersiveConvertApiClient.ClearXlsxRowRequest](docs/ClearXlsxRowRequest.md)
  - [CloudmersiveConvertApiClient.ClearXlsxRowResponse](docs/ClearXlsxRowResponse.md)
+ - [CloudmersiveConvertApiClient.ConvertDocumentBatchJobCreateResult](docs/ConvertDocumentBatchJobCreateResult.md)
+ - [CloudmersiveConvertApiClient.ConvertDocumentJobStatusResult](docs/ConvertDocumentJobStatusResult.md)
  - [CloudmersiveConvertApiClient.ConvertedJpgPage](docs/ConvertedJpgPage.md)
+ - [CloudmersiveConvertApiClient.ConvertedPngDirectPage](docs/ConvertedPngDirectPage.md)
  - [CloudmersiveConvertApiClient.ConvertedPngPage](docs/ConvertedPngPage.md)
  - [CloudmersiveConvertApiClient.CreateBlankDocxRequest](docs/CreateBlankDocxRequest.md)
  - [CloudmersiveConvertApiClient.CreateBlankDocxResponse](docs/CreateBlankDocxResponse.md)
@@ -457,7 +487,9 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.DetectLineEndingsResponse](docs/DetectLineEndingsResponse.md)
  - [CloudmersiveConvertApiClient.DisableSharedWorkbookRequest](docs/DisableSharedWorkbookRequest.md)
  - [CloudmersiveConvertApiClient.DisableSharedWorkbookResponse](docs/DisableSharedWorkbookResponse.md)
+ - [CloudmersiveConvertApiClient.DocumentArrayInput](docs/DocumentArrayInput.md)
  - [CloudmersiveConvertApiClient.DocumentEditingEditSession](docs/DocumentEditingEditSession.md)
+ - [CloudmersiveConvertApiClient.DocumentItem](docs/DocumentItem.md)
  - [CloudmersiveConvertApiClient.DocumentTransformEditSession](docs/DocumentTransformEditSession.md)
  - [CloudmersiveConvertApiClient.DocumentValidationError](docs/DocumentValidationError.md)
  - [CloudmersiveConvertApiClient.DocumentValidationResult](docs/DocumentValidationResult.md)
@@ -500,6 +532,8 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.DocxToJpgResult](docs/DocxToJpgResult.md)
  - [CloudmersiveConvertApiClient.DocxToPngResult](docs/DocxToPngResult.md)
  - [CloudmersiveConvertApiClient.DocxTopLevelComment](docs/DocxTopLevelComment.md)
+ - [CloudmersiveConvertApiClient.EditPdfBatchJobCreateResult](docs/EditPdfBatchJobCreateResult.md)
+ - [CloudmersiveConvertApiClient.EditPdfJobStatusResult](docs/EditPdfJobStatusResult.md)
  - [CloudmersiveConvertApiClient.EmlAttachment](docs/EmlAttachment.md)
  - [CloudmersiveConvertApiClient.EmlToHtmlResult](docs/EmlToHtmlResult.md)
  - [CloudmersiveConvertApiClient.EmlToJpgResult](docs/EmlToJpgResult.md)
@@ -588,8 +622,11 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.InsertDocxTablesResponse](docs/InsertDocxTablesResponse.md)
  - [CloudmersiveConvertApiClient.InsertXlsxWorksheetRequest](docs/InsertXlsxWorksheetRequest.md)
  - [CloudmersiveConvertApiClient.InsertXlsxWorksheetResponse](docs/InsertXlsxWorksheetResponse.md)
+ - [CloudmersiveConvertApiClient.JobStatusResult](docs/JobStatusResult.md)
  - [CloudmersiveConvertApiClient.KeynoteToJpgResult](docs/KeynoteToJpgResult.md)
  - [CloudmersiveConvertApiClient.KeynoteToPngResult](docs/KeynoteToPngResult.md)
+ - [CloudmersiveConvertApiClient.MergeBatchJobCreateResult](docs/MergeBatchJobCreateResult.md)
+ - [CloudmersiveConvertApiClient.MergeJobStatusResult](docs/MergeJobStatusResult.md)
  - [CloudmersiveConvertApiClient.MsgAttachment](docs/MsgAttachment.md)
  - [CloudmersiveConvertApiClient.MsgToHtmlResult](docs/MsgToHtmlResult.md)
  - [CloudmersiveConvertApiClient.MsgToJpgResult](docs/MsgToJpgResult.md)
@@ -611,8 +648,12 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.PdfPageText](docs/PdfPageText.md)
  - [CloudmersiveConvertApiClient.PdfTextByPageResult](docs/PdfTextByPageResult.md)
  - [CloudmersiveConvertApiClient.PdfToJpgResult](docs/PdfToJpgResult.md)
+ - [CloudmersiveConvertApiClient.PdfToPngDirectResult](docs/PdfToPngDirectResult.md)
  - [CloudmersiveConvertApiClient.PdfToPngResult](docs/PdfToPngResult.md)
+ - [CloudmersiveConvertApiClient.PptxSplitAdvancedRequest](docs/PptxSplitAdvancedRequest.md)
+ - [CloudmersiveConvertApiClient.PptxSplitAdvancedResponse](docs/PptxSplitAdvancedResponse.md)
  - [CloudmersiveConvertApiClient.PptxToPngResult](docs/PptxToPngResult.md)
+ - [CloudmersiveConvertApiClient.PresentationAdvancedResult](docs/PresentationAdvancedResult.md)
  - [CloudmersiveConvertApiClient.PresentationResult](docs/PresentationResult.md)
  - [CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersRequest](docs/RemoveDocxHeadersAndFootersRequest.md)
  - [CloudmersiveConvertApiClient.RemoveDocxHeadersAndFootersResponse](docs/RemoveDocxHeadersAndFootersResponse.md)
@@ -643,6 +684,7 @@ Class | Method | HTTP request | Description
  - [CloudmersiveConvertApiClient.SetXlsxCellRequest](docs/SetXlsxCellRequest.md)
  - [CloudmersiveConvertApiClient.SetXlsxCellResponse](docs/SetXlsxCellResponse.md)
  - [CloudmersiveConvertApiClient.SingleReplaceString](docs/SingleReplaceString.md)
+ - [CloudmersiveConvertApiClient.SplitBatchJobCreateResult](docs/SplitBatchJobCreateResult.md)
  - [CloudmersiveConvertApiClient.SplitDocumentResult](docs/SplitDocumentResult.md)
  - [CloudmersiveConvertApiClient.SplitDocxDocumentResult](docs/SplitDocxDocumentResult.md)
  - [CloudmersiveConvertApiClient.SplitPdfResult](docs/SplitPdfResult.md)

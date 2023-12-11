@@ -36,7 +36,7 @@
   /**
    * The RtfToPngResult model module.
    * @module model/RtfToPngResult
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**

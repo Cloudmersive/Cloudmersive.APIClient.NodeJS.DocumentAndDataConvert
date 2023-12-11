@@ -36,7 +36,7 @@
   /**
    * The HtmlMdResult model module.
    * @module model/HtmlMdResult
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**

@@ -36,12 +36,12 @@
   /**
    * The PresentationResult model module.
    * @module model/PresentationResult
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**
    * Constructs a new <code>PresentationResult</code>.
-   * A single Excel XLSX file corresponding to one worksheet (tab) in the original spreadsheet
+   * A single PowerPoint PPTX file corresponding to one slide in the original presentation
    * @alias module:model/PresentationResult
    * @class
    */

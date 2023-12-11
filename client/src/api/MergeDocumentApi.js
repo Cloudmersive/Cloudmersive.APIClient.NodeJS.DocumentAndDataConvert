@@ -16,24 +16,24 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/DocumentArrayInput', 'model/MergeBatchJobCreateResult', 'model/MergeJobStatusResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('../model/DocumentArrayInput'), require('../model/MergeBatchJobCreateResult'), require('../model/MergeJobStatusResult'));
   } else {
     // Browser globals (root is window)
     if (!root.CloudmersiveConvertApiClient) {
       root.CloudmersiveConvertApiClient = {};
     }
-    root.CloudmersiveConvertApiClient.MergeDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient);
+    root.CloudmersiveConvertApiClient.MergeDocumentApi = factory(root.CloudmersiveConvertApiClient.ApiClient, root.CloudmersiveConvertApiClient.DocumentArrayInput, root.CloudmersiveConvertApiClient.MergeBatchJobCreateResult, root.CloudmersiveConvertApiClient.MergeJobStatusResult);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, DocumentArrayInput, MergeBatchJobCreateResult, MergeJobStatusResult) {
   'use strict';
 
   /**
    * MergeDocument service.
    * @module api/MergeDocumentApi
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**
@@ -46,6 +46,53 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the mergeDocumentBatchJobCreate operation.
+     * @callback module:api/MergeDocumentApi~mergeDocumentBatchJobCreateCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/MergeBatchJobCreateResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Merge an array of Documents into a Single Document by Page as a Batch Job
+     * Merge an array of Documents (PDF supported), into a single document.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API automatically detects the document type and then performs the split by using the document type-specific API needed to perform the split.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     * @param {module:model/DocumentArrayInput} input 
+     * @param {module:api/MergeDocumentApi~mergeDocumentBatchJobCreateCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/MergeBatchJobCreateResult}
+     */
+    this.mergeDocumentBatchJobCreate = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling mergeDocumentBatchJobCreate");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = MergeBatchJobCreateResult;
+
+      return this.apiClient.callApi(
+        '/convert/merge/batch-job/create', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the mergeDocumentDocx operation.
@@ -170,6 +217,101 @@
 
       return this.apiClient.callApi(
         '/convert/merge/docx/multi', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the mergeDocumentDocxMultiArray operation.
+     * @callback module:api/MergeDocumentApi~mergeDocumentDocxMultiArrayCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Merge Multple Word DOCX Together from an array
+     * Combine multiple Office Word Documents (docx), stored in an array, into one single Office Word document
+     * @param {module:model/DocumentArrayInput} input Array of input files
+     * @param {module:api/MergeDocumentApi~mergeDocumentDocxMultiArrayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.mergeDocumentDocxMultiArray = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling mergeDocumentDocxMultiArray");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/convert/merge/docx/multi/array', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the mergeDocumentGetAsyncJobStatus operation.
+     * @callback module:api/MergeDocumentApi~mergeDocumentGetAsyncJobStatusCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/MergeJobStatusResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the status and result of a Merge Document Batch Job
+     * Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     * @param {String} asyncJobID 
+     * @param {module:api/MergeDocumentApi~mergeDocumentGetAsyncJobStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/MergeJobStatusResult}
+     */
+    this.mergeDocumentGetAsyncJobStatus = function(asyncJobID, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'asyncJobID' is set
+      if (asyncJobID === undefined || asyncJobID === null) {
+        throw new Error("Missing the required parameter 'asyncJobID' when calling mergeDocumentGetAsyncJobStatus");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'AsyncJobID': asyncJobID,
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = MergeJobStatusResult;
+
+      return this.apiClient.callApi(
+        '/convert/merge/batch-job/status', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -304,6 +446,53 @@
     }
 
     /**
+     * Callback function to receive the result of the mergeDocumentHtmlMultiArray operation.
+     * @callback module:api/MergeDocumentApi~mergeDocumentHtmlMultiArrayCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Merge Multple HTML (HTM) Files Together from an array
+     * Combine multiple HTML (.HTM) files, from an array, into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
+     * @param {module:model/DocumentArrayInput} input Array of input files
+     * @param {module:api/MergeDocumentApi~mergeDocumentHtmlMultiArrayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.mergeDocumentHtmlMultiArray = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling mergeDocumentHtmlMultiArray");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/convert/merge/html/multi/array', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the mergeDocumentPdf operation.
      * @callback module:api/MergeDocumentApi~mergeDocumentPdfCallback
      * @param {String} error Error message, if any.
@@ -426,6 +615,53 @@
 
       return this.apiClient.callApi(
         '/convert/merge/pdf/multi', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the mergeDocumentPdfMultiArray operation.
+     * @callback module:api/MergeDocumentApi~mergeDocumentPdfMultiArrayCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Merge Multple PDF Files Together from an array
+     * Combine multiple PDF files (pdf), as an array, into a single PDF document, preserving the order of the input documents in the combined document
+     * @param {module:model/DocumentArrayInput} input Array of input files
+     * @param {module:api/MergeDocumentApi~mergeDocumentPdfMultiArrayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.mergeDocumentPdfMultiArray = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling mergeDocumentPdfMultiArray");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/convert/merge/pdf/multi/array', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -560,6 +796,53 @@
     }
 
     /**
+     * Callback function to receive the result of the mergeDocumentPngMultiArray operation.
+     * @callback module:api/MergeDocumentApi~mergeDocumentPngMultiArrayCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Merge Multple PNG Files Together from an array
+     * Combine multiple PNG files, from an array, into a single PNG document, preserving the order of the input documents in the combined document by stacking them vertically
+     * @param {module:model/DocumentArrayInput} input Array of input files
+     * @param {module:api/MergeDocumentApi~mergeDocumentPngMultiArrayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.mergeDocumentPngMultiArray = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling mergeDocumentPngMultiArray");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/convert/merge/png/vertical/multi/array', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the mergeDocumentPptx operation.
      * @callback module:api/MergeDocumentApi~mergeDocumentPptxCallback
      * @param {String} error Error message, if any.
@@ -682,6 +965,53 @@
 
       return this.apiClient.callApi(
         '/convert/merge/pptx/multi', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the mergeDocumentPptxMultiArray operation.
+     * @callback module:api/MergeDocumentApi~mergeDocumentPptxMultiArrayCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Merge Multple PowerPoint PPTX Together from an array
+     * Combine multiple Office PowerPoint presentations (pptx), from an array, into one single Office PowerPoint presentation
+     * @param {module:model/DocumentArrayInput} input Array of input files
+     * @param {module:api/MergeDocumentApi~mergeDocumentPptxMultiArrayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.mergeDocumentPptxMultiArray = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling mergeDocumentPptxMultiArray");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/convert/merge/pptx/multi/array', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -938,6 +1268,53 @@
 
       return this.apiClient.callApi(
         '/convert/merge/xlsx/multi', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the mergeDocumentXlsxMultiArray operation.
+     * @callback module:api/MergeDocumentApi~mergeDocumentXlsxMultiArrayCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Merge Multple Excel XLSX Together from an Array
+     * Combine multiple Office Excel spreadsheets (xlsx), as an array, into a single Office Excel spreadsheet
+     * @param {module:model/DocumentArrayInput} input Array of input files
+     * @param {module:api/MergeDocumentApi~mergeDocumentXlsxMultiArrayCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    this.mergeDocumentXlsxMultiArray = function(input, callback) {
+      var postBody = input;
+
+      // verify the required parameter 'input' is set
+      if (input === undefined || input === null) {
+        throw new Error("Missing the required parameter 'input' when calling mergeDocumentXlsxMultiArray");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'];
+      var accepts = ['application/octet-stream'];
+      var returnType = Object;
+
+      return this.apiClient.callApi(
+        '/convert/merge/xlsx/multi/array', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

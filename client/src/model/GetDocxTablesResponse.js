@@ -36,7 +36,7 @@
   /**
    * The GetDocxTablesResponse model module.
    * @module model/GetDocxTablesResponse
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**

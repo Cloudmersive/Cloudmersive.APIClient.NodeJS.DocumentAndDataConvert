@@ -8,14 +8,18 @@ Method | HTTP request | Description
 [**editPdfConvertToPdfA**](EditPdfApi.md#editPdfConvertToPdfA) | **POST** /convert/edit/pdf/optimize/pdf-a | Convert a PDF file to PDF/A
 [**editPdfDecrypt**](EditPdfApi.md#editPdfDecrypt) | **POST** /convert/edit/pdf/decrypt | Decrypt and password-protect a PDF
 [**editPdfDeletePages**](EditPdfApi.md#editPdfDeletePages) | **POST** /convert/edit/pdf/pages/delete | Remove, delete pages from a PDF document
+[**editPdfDeletePagesBatchJob**](EditPdfApi.md#editPdfDeletePagesBatchJob) | **POST** /convert/edit/pdf/pages/delete/batch-job | Remove, delete pages from a PDF document as Batch Job
 [**editPdfEncrypt**](EditPdfApi.md#editPdfEncrypt) | **POST** /convert/edit/pdf/encrypt | Encrypt and password-protect a PDF
 [**editPdfGetAnnotations**](EditPdfApi.md#editPdfGetAnnotations) | **POST** /convert/edit/pdf/annotations/list | Get PDF annotations, including comments in the document
+[**editPdfGetAsyncJobStatus**](EditPdfApi.md#editPdfGetAsyncJobStatus) | **GET** /convert/edit/pdf/batch-job/status | Get the status and result of a PDF Batch Job
 [**editPdfGetFormFields**](EditPdfApi.md#editPdfGetFormFields) | **POST** /convert/edit/pdf/form/get-fields | Gets PDF Form fields and values
 [**editPdfGetMetadata**](EditPdfApi.md#editPdfGetMetadata) | **POST** /convert/edit/pdf/get-metadata | Get PDF document metadata
 [**editPdfGetPdfTextByPages**](EditPdfApi.md#editPdfGetPdfTextByPages) | **POST** /convert/edit/pdf/pages/get-text | Get text in a PDF document by page
 [**editPdfInsertPages**](EditPdfApi.md#editPdfInsertPages) | **POST** /convert/edit/pdf/pages/insert | Insert, copy pages from one PDF document into another
+[**editPdfInsertPagesBatchJob**](EditPdfApi.md#editPdfInsertPagesBatchJob) | **POST** /convert/edit/pdf/pages/insert/batch-job | Insert, copy pages from one PDF document into another as a batch job
 [**editPdfLinearize**](EditPdfApi.md#editPdfLinearize) | **POST** /convert/edit/pdf/optimize/linearize | Linearize and optimize a PDF for streaming download
 [**editPdfRasterize**](EditPdfApi.md#editPdfRasterize) | **POST** /convert/edit/pdf/rasterize | Rasterize a PDF to an image-based PDF
+[**editPdfRasterizeBatchJob**](EditPdfApi.md#editPdfRasterizeBatchJob) | **POST** /convert/edit/pdf/rasterize/batch-job | Rasterize a PDF to an image-based PDF as Batch Job
 [**editPdfReduceFileSize**](EditPdfApi.md#editPdfReduceFileSize) | **POST** /convert/edit/pdf/optimize/reduce-file-size | Reduce the file size and optimize a PDF
 [**editPdfRemoveAllAnnotations**](EditPdfApi.md#editPdfRemoveAllAnnotations) | **POST** /convert/edit/pdf/annotations/remove-all | Remove all PDF annotations, including comments in the document
 [**editPdfRemoveAnnotationItem**](EditPdfApi.md#editPdfRemoveAnnotationItem) | **POST** /convert/edit/pdf/annotations/remove-item | Remove a specific PDF annotation, comment in the document
@@ -253,6 +257,65 @@ Name | Type | Description  | Notes
  - **Content-Type**: multipart/form-data
  - **Accept**: application/octet-stream
 
+<a name="editPdfDeletePagesBatchJob"></a>
+# **editPdfDeletePagesBatchJob**
+> EditPdfBatchJobCreateResult editPdfDeletePagesBatchJob(inputFile, pageStart, pageEnd)
+
+Remove, delete pages from a PDF document as Batch Job
+
+Remove one or more pages from a PDF document.  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditPdfApi();
+
+var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
+
+var pageStart = 56; // Number | Page number (1 based) to start deleting pages from (inclusive).
+
+var pageEnd = 56; // Number | Page number (1 based) to stop deleting pages from (inclusive).
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editPdfDeletePagesBatchJob(inputFile, pageStart, pageEnd, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Input file to perform the operation on. | 
+ **pageStart** | **Number**| Page number (1 based) to start deleting pages from (inclusive). | 
+ **pageEnd** | **Number**| Page number (1 based) to stop deleting pages from (inclusive). | 
+
+### Return type
+
+[**EditPdfBatchJobCreateResult**](EditPdfBatchJobCreateResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
 <a name="editPdfEncrypt"></a>
 # **editPdfEncrypt**
 > &#39;Blob&#39; editPdfEncrypt(inputFile, opts)
@@ -366,6 +429,59 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: multipart/form-data
  - **Accept**: application/octet-stream
+
+<a name="editPdfGetAsyncJobStatus"></a>
+# **editPdfGetAsyncJobStatus**
+> EditPdfJobStatusResult editPdfGetAsyncJobStatus(asyncJobID)
+
+Get the status and result of a PDF Batch Job
+
+Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditPdfApi();
+
+var asyncJobID = "asyncJobID_example"; // String | 
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editPdfGetAsyncJobStatus(asyncJobID, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **asyncJobID** | **String**|  | 
+
+### Return type
+
+[**EditPdfJobStatusResult**](EditPdfJobStatusResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml
 
 <a name="editPdfGetFormFields"></a>
 # **editPdfGetFormFields**
@@ -595,6 +711,71 @@ Name | Type | Description  | Notes
  - **Content-Type**: multipart/form-data
  - **Accept**: application/octet-stream
 
+<a name="editPdfInsertPagesBatchJob"></a>
+# **editPdfInsertPagesBatchJob**
+> EditPdfBatchJobCreateResult editPdfInsertPagesBatchJob(sourceFile, destinationFile, pageStartSource, pageEndSource, pageInsertBeforeDesitnation)
+
+Insert, copy pages from one PDF document into another as a batch job
+
+Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditPdfApi();
+
+var sourceFile = "/path/to/file.txt"; // File | Source PDF file to copy pages from.
+
+var destinationFile = "/path/to/file.txt"; // File | Destination PDF file to copy pages into.
+
+var pageStartSource = 56; // Number | Page number (1 based) to start copying pages from (inclusive) in the Source file.
+
+var pageEndSource = 56; // Number | Page number (1 based) to stop copying pages pages from (inclusive) in the Source file.
+
+var pageInsertBeforeDesitnation = 56; // Number | Page number (1 based) to insert the pages before in the Destination file.
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editPdfInsertPagesBatchJob(sourceFile, destinationFile, pageStartSource, pageEndSource, pageInsertBeforeDesitnation, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sourceFile** | **File**| Source PDF file to copy pages from. | 
+ **destinationFile** | **File**| Destination PDF file to copy pages into. | 
+ **pageStartSource** | **Number**| Page number (1 based) to start copying pages from (inclusive) in the Source file. | 
+ **pageEndSource** | **Number**| Page number (1 based) to stop copying pages pages from (inclusive) in the Source file. | 
+ **pageInsertBeforeDesitnation** | **Number**| Page number (1 based) to insert the pages before in the Destination file. | 
+
+### Return type
+
+[**EditPdfBatchJobCreateResult**](EditPdfBatchJobCreateResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
 <a name="editPdfLinearize"></a>
 # **editPdfLinearize**
 > &#39;Blob&#39; editPdfLinearize(inputFile)
@@ -650,9 +831,66 @@ Name | Type | Description  | Notes
 
 <a name="editPdfRasterize"></a>
 # **editPdfRasterize**
-> &#39;Blob&#39; editPdfRasterize(inputFile)
+> &#39;Blob&#39; editPdfRasterize(inputFile, opts)
 
 Rasterize a PDF to an image-based PDF
+
+Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
+
+### Example
+```javascript
+var CloudmersiveConvertApiClient = require('cloudmersive-convert-api-client');
+var defaultClient = CloudmersiveConvertApiClient.ApiClient.instance;
+
+// Configure API key authorization: Apikey
+var Apikey = defaultClient.authentications['Apikey'];
+Apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new CloudmersiveConvertApiClient.EditPdfApi();
+
+var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
+
+var opts = { 
+  'dpi': 56 // Number | Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.editPdfRasterize(inputFile, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile** | **File**| Input file to perform the operation on. | 
+ **dpi** | **Number**| Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. | [optional] 
+
+### Return type
+
+**&#39;Blob&#39;**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+<a name="editPdfRasterizeBatchJob"></a>
+# **editPdfRasterizeBatchJob**
+> EditPdfBatchJobCreateResult editPdfRasterizeBatchJob(inputFile)
+
+Rasterize a PDF to an image-based PDF as Batch Job
 
 Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
 
@@ -679,7 +917,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.editPdfRasterize(inputFile, callback);
+apiInstance.editPdfRasterizeBatchJob(inputFile, callback);
 ```
 
 ### Parameters
@@ -690,7 +928,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**&#39;Blob&#39;**
+[**EditPdfBatchJobCreateResult**](EditPdfBatchJobCreateResult.md)
 
 ### Authorization
 

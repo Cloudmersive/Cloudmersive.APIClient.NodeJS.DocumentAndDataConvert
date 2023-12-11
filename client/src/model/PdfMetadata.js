@@ -36,7 +36,7 @@
   /**
    * The PdfMetadata model module.
    * @module model/PdfMetadata
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**
@@ -47,6 +47,8 @@
    */
   var exports = function() {
     var _this = this;
+
+
 
 
 
@@ -73,6 +75,9 @@
       if (data.hasOwnProperty('Successful')) {
         obj['Successful'] = ApiClient.convertToType(data['Successful'], 'Boolean');
       }
+      if (data.hasOwnProperty('ErrorDetails')) {
+        obj['ErrorDetails'] = ApiClient.convertToType(data['ErrorDetails'], 'String');
+      }
       if (data.hasOwnProperty('Title')) {
         obj['Title'] = ApiClient.convertToType(data['Title'], 'String');
       }
@@ -97,6 +102,9 @@
       if (data.hasOwnProperty('PageCount')) {
         obj['PageCount'] = ApiClient.convertToType(data['PageCount'], 'Number');
       }
+      if (data.hasOwnProperty('Encrypted')) {
+        obj['Encrypted'] = ApiClient.convertToType(data['Encrypted'], 'Boolean');
+      }
     }
     return obj;
   }
@@ -106,6 +114,11 @@
    * @member {Boolean} Successful
    */
   exports.prototype['Successful'] = undefined;
+  /**
+   * Details of any errors if the operation was unsucessful
+   * @member {String} ErrorDetails
+   */
+  exports.prototype['ErrorDetails'] = undefined;
   /**
    * Title of the document
    * @member {String} Title
@@ -146,6 +159,11 @@
    * @member {Number} PageCount
    */
   exports.prototype['PageCount'] = undefined;
+  /**
+   * True if the PDF document is encrypted, false otherwise
+   * @member {Boolean} Encrypted
+   */
+  exports.prototype['Encrypted'] = undefined;
 
 
 

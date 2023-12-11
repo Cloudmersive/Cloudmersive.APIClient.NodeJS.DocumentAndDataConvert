@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="compareDocumentDocx"></a>
 # **compareDocumentDocx**
-> &#39;Blob&#39; compareDocumentDocx(inputFile1, inputFile2)
+> &#39;Blob&#39; compareDocumentDocx(inputFile1, inputFile2, opts)
 
 Compare Two Word DOCX
 
@@ -32,6 +32,9 @@ var inputFile1 = "/path/to/file.txt"; // File | First input file to perform the 
 
 var inputFile2 = "/path/to/file.txt"; // File | Second input file to perform the operation on (more than 2 can be supplied).
 
+var opts = { 
+  'autorepair': true // Boolean | Optional; automatically repair input documents that have errors (default is true)
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -40,7 +43,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.compareDocumentDocx(inputFile1, inputFile2, callback);
+apiInstance.compareDocumentDocx(inputFile1, inputFile2, opts, callback);
 ```
 
 ### Parameters
@@ -49,6 +52,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile1** | **File**| First input file to perform the operation on. | 
  **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). | 
+ **autorepair** | **Boolean**| Optional; automatically repair input documents that have errors (default is true) | [optional] 
 
 ### Return type
 

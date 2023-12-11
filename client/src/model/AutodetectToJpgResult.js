@@ -36,7 +36,7 @@
   /**
    * The AutodetectToJpgResult model module.
    * @module model/AutodetectToJpgResult
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The InsertDocxTableRowRequest model module.
    * @module model/InsertDocxTableRowRequest
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**

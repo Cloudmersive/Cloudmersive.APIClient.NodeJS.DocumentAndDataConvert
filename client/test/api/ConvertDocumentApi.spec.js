@@ -80,6 +80,16 @@
         done();
       });
     });
+    describe('convertDocumentAutodetectToPdfBatchJob', function() {
+      it('should call convertDocumentAutodetectToPdfBatchJob successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentAutodetectToPdfBatchJob
+        //instance.convertDocumentAutodetectToPdfBatchJob(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentAutodetectToPngArray', function() {
       it('should call convertDocumentAutodetectToPngArray successfully', function(done) {
         //uncomment below and update the code to test convertDocumentAutodetectToPngArray
@@ -294,6 +304,16 @@
       it('should call convertDocumentEmlToPng successfully', function(done) {
         //uncomment below and update the code to test convertDocumentEmlToPng
         //instance.convertDocumentEmlToPng(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentGetAsyncJobStatus', function() {
+      it('should call convertDocumentGetAsyncJobStatus successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentGetAsyncJobStatus
+        //instance.convertDocumentGetAsyncJobStatus(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -590,6 +610,16 @@
         done();
       });
     });
+    describe('convertDocumentPdfToPngArrayDirect', function() {
+      it('should call convertDocumentPdfToPngArrayDirect successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentPdfToPngArrayDirect
+        //instance.convertDocumentPdfToPngArrayDirect(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentPdfToPngSingle', function() {
       it('should call convertDocumentPdfToPngSingle successfully', function(done) {
         //uncomment below and update the code to test convertDocumentPdfToPngSingle
@@ -610,6 +640,16 @@
         done();
       });
     });
+    describe('convertDocumentPdfToTiff', function() {
+      it('should call convertDocumentPdfToTiff successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentPdfToTiff
+        //instance.convertDocumentPdfToTiff(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('convertDocumentPdfToTxt', function() {
       it('should call convertDocumentPdfToTxt successfully', function(done) {
         //uncomment below and update the code to test convertDocumentPdfToTxt
@@ -624,6 +664,16 @@
       it('should call convertDocumentPngArrayToPdf successfully', function(done) {
         //uncomment below and update the code to test convertDocumentPngArrayToPdf
         //instance.convertDocumentPngArrayToPdf(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentPngArrayToPdfFlattenTransparency', function() {
+      it('should call convertDocumentPngArrayToPdfFlattenTransparency successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentPngArrayToPdfFlattenTransparency
+        //instance.convertDocumentPngArrayToPdfFlattenTransparency(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -734,6 +784,16 @@
       it('should call convertDocumentRtfToPng successfully', function(done) {
         //uncomment below and update the code to test convertDocumentRtfToPng
         //instance.convertDocumentRtfToPng(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('convertDocumentTxtToPdf', function() {
+      it('should call convertDocumentTxtToPdf successfully', function(done) {
+        //uncomment below and update the code to test convertDocumentTxtToPdf
+        //instance.convertDocumentTxtToPdf(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

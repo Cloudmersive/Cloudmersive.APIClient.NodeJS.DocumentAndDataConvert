@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 <a name="editDocumentDocxAcceptAllTrackChanges"></a>
 # **editDocumentDocxAcceptAllTrackChanges**
-> &#39;Blob&#39; editDocumentDocxAcceptAllTrackChanges(inputFile)
+> &#39;Blob&#39; editDocumentDocxAcceptAllTrackChanges(inputFile, opts)
 
 Accept all tracked changes, revisions in a Word DOCX document
 
@@ -150,6 +150,9 @@ var apiInstance = new CloudmersiveConvertApiClient.EditDocumentApi();
 
 var inputFile = "/path/to/file.txt"; // File | Input file to perform the operation on.
 
+var opts = { 
+  'autorepair': true // Boolean | Optional; automatically repair input documents that have errors (default is true)
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -158,7 +161,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.editDocumentDocxAcceptAllTrackChanges(inputFile, callback);
+apiInstance.editDocumentDocxAcceptAllTrackChanges(inputFile, opts, callback);
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ apiInstance.editDocumentDocxAcceptAllTrackChanges(inputFile, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inputFile** | **File**| Input file to perform the operation on. | 
+ **autorepair** | **Boolean**| Optional; automatically repair input documents that have errors (default is true) | [optional] 
 
 ### Return type
 

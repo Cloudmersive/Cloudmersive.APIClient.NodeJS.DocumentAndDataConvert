@@ -36,7 +36,7 @@
   /**
    * The DocxContentControl model module.
    * @module model/DocxContentControl
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**

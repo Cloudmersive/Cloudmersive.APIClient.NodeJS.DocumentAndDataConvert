@@ -36,7 +36,7 @@
   /**
    * The GetDocxImagesRequest model module.
    * @module model/GetDocxImagesRequest
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**

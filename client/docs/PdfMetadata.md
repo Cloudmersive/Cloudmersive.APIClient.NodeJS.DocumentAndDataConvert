@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **successful** | **Boolean** | True if the operation was successful, false otherwise | [optional] 
+**errorDetails** | **String** | Details of any errors if the operation was unsucessful | [optional] 
 **title** | **String** | Title of the document | [optional] 
 **keywords** | **String** | Keywords of the document | [optional] 
 **subject** | **String** | Subject of the document | [optional] 
@@ -12,5 +13,6 @@ Name | Type | Description | Notes
 **dateModified** | **Date** | The timestamp that the document was last modified, if available, null if not available | [optional] 
 **dateCreated** | **Date** | The timestamp that the document was created, if available, null if not available | [optional] 
 **pageCount** | **Number** | The number of pages in the document | [optional] 
+**encrypted** | **Boolean** | True if the PDF document is encrypted, false otherwise | [optional] 
 
 

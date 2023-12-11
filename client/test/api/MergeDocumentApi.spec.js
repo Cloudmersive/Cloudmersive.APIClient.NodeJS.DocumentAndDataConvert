@@ -50,6 +50,16 @@
   }
 
   describe('MergeDocumentApi', function() {
+    describe('mergeDocumentBatchJobCreate', function() {
+      it('should call mergeDocumentBatchJobCreate successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentBatchJobCreate
+        //instance.mergeDocumentBatchJobCreate(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('mergeDocumentDocx', function() {
       it('should call mergeDocumentDocx successfully', function(done) {
         //uncomment below and update the code to test mergeDocumentDocx
@@ -64,6 +74,26 @@
       it('should call mergeDocumentDocxMulti successfully', function(done) {
         //uncomment below and update the code to test mergeDocumentDocxMulti
         //instance.mergeDocumentDocxMulti(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('mergeDocumentDocxMultiArray', function() {
+      it('should call mergeDocumentDocxMultiArray successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentDocxMultiArray
+        //instance.mergeDocumentDocxMultiArray(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('mergeDocumentGetAsyncJobStatus', function() {
+      it('should call mergeDocumentGetAsyncJobStatus successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentGetAsyncJobStatus
+        //instance.mergeDocumentGetAsyncJobStatus(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -90,6 +120,16 @@
         done();
       });
     });
+    describe('mergeDocumentHtmlMultiArray', function() {
+      it('should call mergeDocumentHtmlMultiArray successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentHtmlMultiArray
+        //instance.mergeDocumentHtmlMultiArray(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('mergeDocumentPdf', function() {
       it('should call mergeDocumentPdf successfully', function(done) {
         //uncomment below and update the code to test mergeDocumentPdf
@@ -104,6 +144,16 @@
       it('should call mergeDocumentPdfMulti successfully', function(done) {
         //uncomment below and update the code to test mergeDocumentPdfMulti
         //instance.mergeDocumentPdfMulti(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('mergeDocumentPdfMultiArray', function() {
+      it('should call mergeDocumentPdfMultiArray successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentPdfMultiArray
+        //instance.mergeDocumentPdfMultiArray(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -130,6 +180,16 @@
         done();
       });
     });
+    describe('mergeDocumentPngMultiArray', function() {
+      it('should call mergeDocumentPngMultiArray successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentPngMultiArray
+        //instance.mergeDocumentPngMultiArray(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('mergeDocumentPptx', function() {
       it('should call mergeDocumentPptx successfully', function(done) {
         //uncomment below and update the code to test mergeDocumentPptx
@@ -144,6 +204,16 @@
       it('should call mergeDocumentPptxMulti successfully', function(done) {
         //uncomment below and update the code to test mergeDocumentPptxMulti
         //instance.mergeDocumentPptxMulti(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('mergeDocumentPptxMultiArray', function() {
+      it('should call mergeDocumentPptxMultiArray successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentPptxMultiArray
+        //instance.mergeDocumentPptxMultiArray(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -184,6 +254,16 @@
       it('should call mergeDocumentXlsxMulti successfully', function(done) {
         //uncomment below and update the code to test mergeDocumentXlsxMulti
         //instance.mergeDocumentXlsxMulti(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('mergeDocumentXlsxMultiArray', function() {
+      it('should call mergeDocumentXlsxMultiArray successfully', function(done) {
+        //uncomment below and update the code to test mergeDocumentXlsxMultiArray
+        //instance.mergeDocumentXlsxMultiArray(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

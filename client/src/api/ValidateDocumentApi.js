@@ -33,7 +33,7 @@
   /**
    * ValidateDocument service.
    * @module api/ValidateDocumentApi
-   * @version 2.7.4
+   * @version 2.8.0
    */
 
   /**
@@ -192,6 +192,58 @@
     }
 
     /**
+     * Callback function to receive the result of the validateDocumentDocxRepair operation.
+     * @callback module:api/ValidateDocumentApi~validateDocumentDocxRepairCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Repair a Word document (DOCX) that contains errors
+     * Repair a Word document (DOCX) that contains errors or corruption, if possible.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.repairMode Optional; Set to advanced to apply the most advanced repair mode, basic for basic repair mode.  Default is advanced.
+     * @param {module:api/ValidateDocumentApi~validateDocumentDocxRepairCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.validateDocumentDocxRepair = function(inputFile, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling validateDocumentDocxRepair");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'repairMode': opts['repairMode']
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/validate/docx/repair', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the validateDocumentDocxValidation operation.
      * @callback module:api/ValidateDocumentApi~validateDocumentDocxValidationCallback
      * @param {String} error Error message, if any.
@@ -248,7 +300,7 @@
      */
 
     /**
-     * Validate if an EML file is executable
+     * Validate if input file is a valid EML file
      * Validate if an input file is an EML email file; if the document is not valid
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ValidateDocumentApi~validateDocumentEmlValidationCallback} callback The callback function, accepting three arguments: error, data, response
@@ -632,7 +684,7 @@
      */
 
     /**
-     * Validate if an MSG file is executable
+     * Validate if input file is a valid MSG file
      * Validate if an input file is an MSG email file; if the document is not valid
      * @param {File} inputFile Input file to perform the operation on.
      * @param {module:api/ValidateDocumentApi~validateDocumentMsgValidationCallback} callback The callback function, accepting three arguments: error, data, response
@@ -810,6 +862,54 @@
 
       return this.apiClient.callApi(
         '/convert/validate/ppt', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validateDocumentPptxRepair operation.
+     * @callback module:api/ValidateDocumentApi~validateDocumentPptxRepairCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Repair a PowerPoint presentation (PPTX) that contains errors
+     * Repair a PowerPoint presentation document (PPTX) that contains errors or corruption, if possible.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ValidateDocumentApi~validateDocumentPptxRepairCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.validateDocumentPptxRepair = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling validateDocumentPptxRepair");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/validate/pptx/repair', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -1098,6 +1198,54 @@
 
       return this.apiClient.callApi(
         '/convert/validate/xls', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the validateDocumentXlsxRepair operation.
+     * @callback module:api/ValidateDocumentApi~validateDocumentXlsxRepairCallback
+     * @param {String} error Error message, if any.
+     * @param {'Blob'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Repair an Excel spreadsheet (XLSX) that contains errors
+     * Repair an Excel spreadsheet document (XLSX) that contains errors or corruption, if possible.
+     * @param {File} inputFile Input file to perform the operation on.
+     * @param {module:api/ValidateDocumentApi~validateDocumentXlsxRepairCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Blob'}
+     */
+    this.validateDocumentXlsxRepair = function(inputFile, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'inputFile' is set
+      if (inputFile === undefined || inputFile === null) {
+        throw new Error("Missing the required parameter 'inputFile' when calling validateDocumentXlsxRepair");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'inputFile': inputFile
+      };
+
+      var authNames = ['Apikey'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json', 'text/json', 'application/xml', 'text/xml'];
+      var returnType = 'Blob';
+
+      return this.apiClient.callApi(
+        '/convert/validate/xlsx/repair', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

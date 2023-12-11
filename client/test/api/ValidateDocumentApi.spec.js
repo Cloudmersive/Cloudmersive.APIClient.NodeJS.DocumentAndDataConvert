@@ -80,6 +80,16 @@
         done();
       });
     });
+    describe('validateDocumentDocxRepair', function() {
+      it('should call validateDocumentDocxRepair successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentDocxRepair
+        //instance.validateDocumentDocxRepair(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('validateDocumentDocxValidation', function() {
       it('should call validateDocumentDocxValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentDocxValidation
@@ -210,6 +220,16 @@
         done();
       });
     });
+    describe('validateDocumentPptxRepair', function() {
+      it('should call validateDocumentPptxRepair successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentPptxRepair
+        //instance.validateDocumentPptxRepair(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('validateDocumentPptxValidation', function() {
       it('should call validateDocumentPptxValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentPptxValidation
@@ -264,6 +284,16 @@
       it('should call validateDocumentXlsValidation successfully', function(done) {
         //uncomment below and update the code to test validateDocumentXlsValidation
         //instance.validateDocumentXlsValidation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('validateDocumentXlsxRepair', function() {
+      it('should call validateDocumentXlsxRepair successfully', function(done) {
+        //uncomment below and update the code to test validateDocumentXlsxRepair
+        //instance.validateDocumentXlsxRepair(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

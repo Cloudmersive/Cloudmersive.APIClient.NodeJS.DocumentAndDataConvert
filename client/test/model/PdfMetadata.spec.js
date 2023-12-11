@@ -62,6 +62,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property errorDetails (base name: "ErrorDetails")', function() {
+      // uncomment below and update the code to test the property errorDetails
+      //var instance = new CloudmersiveConvertApiClient.PdfMetadata();
+      //expect(instance).to.be();
+    });
+
     it('should have the property title (base name: "Title")', function() {
       // uncomment below and update the code to test the property title
       //var instance = new CloudmersiveConvertApiClient.PdfMetadata();
@@ -106,6 +112,12 @@
 
     it('should have the property pageCount (base name: "PageCount")', function() {
       // uncomment below and update the code to test the property pageCount
+      //var instance = new CloudmersiveConvertApiClient.PdfMetadata();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property encrypted (base name: "Encrypted")', function() {
+      // uncomment below and update the code to test the property encrypted
       //var instance = new CloudmersiveConvertApiClient.PdfMetadata();
       //expect(instance).to.be();
     });

@@ -90,6 +90,16 @@
         done();
       });
     });
+    describe('editPdfDeletePagesBatchJob', function() {
+      it('should call editPdfDeletePagesBatchJob successfully', function(done) {
+        //uncomment below and update the code to test editPdfDeletePagesBatchJob
+        //instance.editPdfDeletePagesBatchJob(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editPdfEncrypt', function() {
       it('should call editPdfEncrypt successfully', function(done) {
         //uncomment below and update the code to test editPdfEncrypt
@@ -104,6 +114,16 @@
       it('should call editPdfGetAnnotations successfully', function(done) {
         //uncomment below and update the code to test editPdfGetAnnotations
         //instance.editPdfGetAnnotations(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editPdfGetAsyncJobStatus', function() {
+      it('should call editPdfGetAsyncJobStatus successfully', function(done) {
+        //uncomment below and update the code to test editPdfGetAsyncJobStatus
+        //instance.editPdfGetAsyncJobStatus(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -150,6 +170,16 @@
         done();
       });
     });
+    describe('editPdfInsertPagesBatchJob', function() {
+      it('should call editPdfInsertPagesBatchJob successfully', function(done) {
+        //uncomment below and update the code to test editPdfInsertPagesBatchJob
+        //instance.editPdfInsertPagesBatchJob(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editPdfLinearize', function() {
       it('should call editPdfLinearize successfully', function(done) {
         //uncomment below and update the code to test editPdfLinearize
@@ -164,6 +194,16 @@
       it('should call editPdfRasterize successfully', function(done) {
         //uncomment below and update the code to test editPdfRasterize
         //instance.editPdfRasterize(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editPdfRasterizeBatchJob', function() {
+      it('should call editPdfRasterizeBatchJob successfully', function(done) {
+        //uncomment below and update the code to test editPdfRasterizeBatchJob
+        //instance.editPdfRasterizeBatchJob(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
